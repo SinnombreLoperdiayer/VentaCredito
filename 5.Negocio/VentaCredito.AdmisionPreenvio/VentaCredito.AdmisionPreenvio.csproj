@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CB6B15D-EAB4-4B1E-83A0-75CFBA6BE116}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VentaCredito.AdmisionPreenvio</RootNamespace>
+    <AssemblyName>VentaCredito.AdmisionPreenvio</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmisionPreenvioNegocio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\6.Datos\VentaCredito.AdmisionPreenvio.Datos\VentaCredito.AdmisionPreenvio.Datos.csproj">
+      <Project>{d3513096-ba40-4c13-b3cd-28776d71e839}</Project>
+      <Name>VentaCredito.AdmisionPreenvio.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\6.Datos\VentaCredito.Clientes.Datos\VentaCredito.Clientes.Datos.csproj">
+      <Project>{1afb8281-4410-44c8-a81d-56920be92d23}</Project>
+      <Name>VentaCredito.Clientes.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\6.Datos\VentaCredito.Tarifas.Datos\VentaCredito.Tarifas.Datos.csproj">
+      <Project>{94DC2F61-2BD3-45AB-AA07-16076F07BD64}</Project>
+      <Name>VentaCredito.Tarifas.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\7.Comun\VentaCredito.Clientes.Comun\VentaCredito.Clientes.Comun.csproj">
+      <Project>{13c7b025-bb93-49d3-a1c2-dbc8d26eef4b}</Project>
+      <Name>VentaCredito.Clientes.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\8.Transversal\VentaCredito.Transversal\VentaCredito.Transversal.csproj">
+      <Project>{04ca6cf5-e809-438f-95ae-9340a8c15983}</Project>
+      <Name>VentaCredito.Transversal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VentaCredito.Geolocalizacion\VentaCredito.GeolocalizacionNegocio.csproj">
+      <Project>{8221898d-a303-4567-a066-ced54dd77e8e}</Project>
+      <Name>VentaCredito.GeolocalizacionNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VentaCredito.LocalidadesNegocio\VentaCredito.LocalidadesNegocio.csproj">
+      <Project>{A220AD28-5BC9-40C5-A22D-6643CC8FD0D9}</Project>
+      <Name>VentaCredito.LocalidadesNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\VentaCredito.Parametros.Negocio\VentaCredito.Parametros.Negocio.csproj">
+      <Project>{ef938292-eba2-4eba-bcf2-f8723dd9bc6c}</Project>
+      <Name>VentaCredito.Parametros.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VentaCredito.Negocio\VentaCredito.Negocio.csproj">
+      <Project>{6215D2FA-A774-42F5-8D19-3960026522E6}</Project>
+      <Name>VentaCredito.Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VentaCredito.Seguridad\VentaCredito.Seguridad.csproj">
+      <Project>{d55e5799-77a6-4463-8fa6-8da6a4455bb8}</Project>
+      <Name>VentaCredito.Seguridad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core">
+      <Version>5.2.7</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="RestSharp">
+      <Version>105.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="Servidor.ParametrosFW">
+      <Version>1.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

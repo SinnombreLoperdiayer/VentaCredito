@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EX_000" xml:space="preserve">
+    <value>Mensaje de error {0} no se encuentra configurado.</value>
+  </data>
+  <data name="EX_001" xml:space="preserve">
+    <value>Ya existe una lista de precios con tarifa plena, estado activa y fecha vigente en el sistema.</value>
+    <comment>Cuando ya existe una lista de precios con tarifa plena, estado activa y fecha vigente en el sistema.</comment>
+  </data>
+  <data name="EX_002" xml:space="preserve">
+    <value>El valor de la prima de seguro debe estar entre 0% - 100%.</value>
+    <comment>Cuando la prima de seguro del servicio de la lista de precio no está en el rango correcto.</comment>
+  </data>
+  <data name="EX_003" xml:space="preserve">
+    <value>La fecha Inicial debe ser mayor o igual a la fecha actual y la fecha final debe ser mayor que la inicial.</value>
+    <comment>Cuando la fecha inicial de la adición de  listas de precio no cumple con el rango requerido.</comment>
+  </data>
+  <data name="EX_004" xml:space="preserve">
+    <value>La fecha final debe ser mayor que la fecha inicial.</value>
+    <comment>Cuando la fecha final es mayor que la fecha inicial.</comment>
+  </data>
+  <data name="EX_005" xml:space="preserve">
+    <value>El identificador interno del servicio no fue definido correctamente.</value>
+    <comment>Cuando el identificador interno del servicio no se pudo obtener.</comment>
+  </data>
+  <data name="EX_006" xml:space="preserve">
+    <value>El valor a cobrar no se encuentra en ningún rango de precios</value>
+    <comment>Cuando el valor no se encuentra configurado en la tabla preciorango_tar  </comment>
+  </data>
+  <data name="EX_007" xml:space="preserve">
+    <value>El valor total no es valido</value>
+    <comment>Cuando el valor total es menos a la sumatoria de impuestos mas servicios</comment>
+  </data>
+  <data name="EX_008" xml:space="preserve">
+    <value>El Trayecto no existe para ese servicio</value>
+    <comment>Cuando el trayecto no existe para un servicio.</comment>
+  </data>
+  <data name="EX_009" xml:space="preserve">
+    <value>El trayecto no se encuentra configurado</value>
+    <comment>Cuando el trayecto no existe</comment>
+  </data>
+  <data name="EX_010" xml:space="preserve">
+    <value>No existe precio para la excepción de trayecto del servicio.</value>
+    <comment>Cuando no existe precio para la excepción de trayecto del servicio.</comment>
+  </data>
+  <data name="EX_011" xml:space="preserve">
+    <value>El trayecto no esta configurado para el servicio seleccionado.</value>
+    <comment>Cuando no existe precio para el trayecto del servicio.</comment>
+  </data>
+  <data name="EX_012" xml:space="preserve">
+    <value>No existe precio.</value>
+    <comment>Cuando no existe precio.</comment>
+  </data>
+  <data name="EX_013" xml:space="preserve">
+    <value>El valor contra pago no está dentro de un rango.</value>
+    <comment>Cuando el valor contra pago no está dentro de un rango.</comment>
+  </data>
+  <data name="EX_014" xml:space="preserve">
+    <value>El kilo inicial no ha sido configurado.</value>
+    <comment>Cuando el kilo inicial no ha sido configurado.</comment>
+  </data>
+  <data name="EX_015" xml:space="preserve">
+    <value>El trayecto no existe para el cliente crédito.</value>
+    <comment>Cuando el trayecto no existe para el cliente crédito.</comment>
+  </data>
+  <data name="EX_016" xml:space="preserve">
+    <value>La localidad de origen y destino ya tienen un tipo trayecto y tipo subtrayecto asignado.</value>
+    <comment>Cuando la localidad de origen y destino ya tienen un tipo trayecto y tipo subtrayecto asignado.</comment>
+  </data>
+  <data name="EX_017" xml:space="preserve">
+    <value>La localidad de origen y destino del recíproco ya tienen un tipo trayecto y tipo subtrayecto asignado.</value>
+    <comment>Cuando La localidad de origen y destino del recíproco ya tienen un tipo trayecto y tipo subtrayecto asignado.</comment>
+  </data>
+  <data name="EX_018" xml:space="preserve">
+    <value>No existe una lista de precios vigente válida.</value>
+    <comment>Cuando la lista de precios plena vigente no está configurada o no esta vigente</comment>
+  </data>
+  <data name="EX_019" xml:space="preserve">
+    <value>Hay mas de una lista de precios plena vigente, no se puede calcular precios y parámetros de la lista de precios.</value>
+  </data>
+  <data name="EX_020" xml:space="preserve">
+    <value>El servicio no se encuentra en la lista de precios.</value>
+  </data>
+  <data name="EX_021" xml:space="preserve">
+    <value>No se encuentran configurados los rangos de precios para el servicio en la lista de precios.</value>
+  </data>
+  <data name="EX_022" xml:space="preserve">
+    <value>No existe una prima de seguro para la lista de precio y servicio. </value>
+    <comment>Cuando No existe una prima de seguro para la lista de precio y servicio.</comment>
+  </data>
+  <data name="EX_023" xml:space="preserve">
+    <value>El valor mínimo declarado no corresponde con el configurado para el peso del envío.</value>
+    <comment>Cuando el peso no se encuentra dentro de un rango.</comment>
+  </data>
+  <data name="EX_024" xml:space="preserve">
+    <value>El valor declarado es menor que el valor mínimo declarado.</value>
+    <comment>Cuando el valor declarado es menor que el valor mínimo declarado.</comment>
+  </data>
+  <data name="EX_025" xml:space="preserve">
+    <value>El valor declarado es mayor que el valor máximo declarado.</value>
+    <comment>Cuadno el valor declarado es mayor que el valor máximo declarado.</comment>
+  </data>
+  <data name="EX_026" xml:space="preserve">
+    <value>No está configurado un concepto de caja para el servicio</value>
+    <comment>No existe un concepto de caja configurado para el servicio</comment>
+  </data>
+  <data name="EX_027" xml:space="preserve">
+    <value>El Valor Adicional Rapi Radicado no está asignado al servicio actual.</value>
+    <comment>Cuano rapi radicado no está asignado</comment>
+  </data>
+  <data name="EX_028" xml:space="preserve">
+    <value>El servicio actual no tiene precio configurado.</value>
+    <comment>Cuando El servicio actual no tiene precio configurado.</comment>
+  </data>
+  <data name="EX_029" xml:space="preserve">
+    <value>El valor a cobrar no se encuentra en ningún rango de precios</value>
+    <comment>El valor a cobrar no se encuentra en ningún rango de precios</comment>
+  </data>
+  <data name="EX_030" xml:space="preserve">
+    <value>Debe configurar el servicio de mensajería para la lista de precios</value>
+    <comment>Configura el servicio de mensajeria para la lista de precios</comment>
+  </data>
+  <data name="EX_031" xml:space="preserve">
+    <value>La lista de precios de Komprech no está configurada apropiadamente</value>
+  </data>
+  <data name="EX_032" xml:space="preserve">
+    <value>El servicio pasado como parámetro no es válido</value>
+  </data>
+  <data name="EX_033" xml:space="preserve">
+    <value>La ruta no está establecida o no se encuentra disponible en el momento</value>
+  </data>
+  <data name="EX_034" xml:space="preserve">
+    <value>Error creando la lista de precios</value>
+  </data>
+  <data name="EX_035" xml:space="preserve">
+    <value>Tipo de Cuenta Externa No Existe</value>
+    <comment>Tipo de Cuenta Externa No Existe</comment>
+  </data>
+  <data name="EX_036" xml:space="preserve">
+    <value>La tarifa Contra Pago no está parametrizada correctamente</value>
+    <comment>La tarifa Contra Pago no está parametrizada correctamente</comment>
+  </data>
+</root>

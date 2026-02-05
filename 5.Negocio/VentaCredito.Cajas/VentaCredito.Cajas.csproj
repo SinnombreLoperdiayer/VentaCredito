@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{508A2E2D-AD6B-40C2-A454-9A0C55304DF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VentaCredito.Cajas</RootNamespace>
+    <AssemblyName>VentaCredito.Cajas</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CO.Servidor.Integraciones, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CO.Servidor.Integraciones.1.0.0.2\lib\net48\CO.Servidor.Integraciones.dll</HintPath>
+    </Reference>
+    <Reference Include="CO.Servidor.Servicios.ContratoDatos, Version=1.0.7249.17605, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CO.Servidor.Servicios.ContratoDatos.1.0.1.1006\lib\net48\CO.Servidor.Servicios.ContratoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFramework.Servidor.Comun, Version=1.0.7236.20770, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NFramework.Servidor.Comun.1.0.2\lib\net48\NFramework.Servidor.Comun.dll</HintPath>
+    </Reference>
+    <Reference Include="NFramework.Servidor.Excepciones, Version=1.0.7236.27387, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NFramework.Servidor.Excepciones.1.0.2\lib\net48\NFramework.Servidor.Excepciones.dll</HintPath>
+    </Reference>
+    <Reference Include="NFramework.Servidor.Servicios.ContratoDatos, Version=1.0.7235.26450, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NFramework.Servidor.Servicios.ContratoDatos.1.0.2\lib\net452\NFramework.Servidor.Servicios.ContratoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Servicios.Entidades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Servicios.Entidades.1.0.8\lib\net452\Servicios.Entidades.dll</HintPath>
+    </Reference>
+    <Reference Include="Servidor.Dominio.Comun, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Servidor.Dominio.Comun.1.0.3\lib\net48\Servidor.Dominio.Comun.dll</HintPath>
+    </Reference>
+    <Reference Include="Servidor.Parametros.Datos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Servidor.ParametrosFW.1.0.3\lib\net452\Servidor.Parametros.Datos.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Servidor.ParametrosFW, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Servidor.ParametrosFW.1.0.3\lib\net452\Servidor.ParametrosFW.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CAApertura.cs" />
+    <Compile Include="CajaFinaciera\CACajaCasaMatriz.cs" />
+    <Compile Include="CajaVenta\CACaja.cs" />
+    <Compile Include="CajaVenta\CATransaccionCaja.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\6.Datos\VentaCredito.Cajas.Datos\VentaCredito.Cajas.Datos.csproj">
+      <Project>{AD13817F-6BBC-4E84-884C-1E8544577E87}</Project>
+      <Name>VentaCredito.Cajas.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\7.Comun\VentaCredito.Cajas.Comun\VentaCredito.Cajas.Comun.csproj">
+      <Project>{662F3476-CD67-4D33-8EB6-B7D4253D2D0C}</Project>
+      <Name>VentaCredito.Cajas.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\8.Transversal\VentaCredito.Transversal\VentaCredito.Transversal.csproj">
+      <Project>{04CA6CF5-E809-438F-95AE-9340A8C15983}</Project>
+      <Name>VentaCredito.Transversal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VentaCredito.Tarifas\VentaCredito.Tarifas.csproj">
+      <Project>{67AD81B7-9232-4F21-B4D8-2615715A473A}</Project>
+      <Name>VentaCredito.Tarifas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

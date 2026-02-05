@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04CA6CF5-E809-438F-95AE-9340A8C15983}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VentaCredito.Transversal</RootNamespace>
+    <AssemblyName>VentaCredito.Transversal</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NFramework.Servidor.Comun, Version=1.0.6964.27725, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NFramework.Servidor.Comun.1.0.0\lib\net452\NFramework.Servidor.Comun.dll</HintPath>
+    </Reference>
+    <Reference Include="NFramework.Servidor.Servicios.ContratoDatos, Version=1.0.6964.28832, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NFramework.Servidor.Servicios.ContratoDatos.1.0.0\lib\net452\NFramework.Servidor.Servicios.ContratoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Servicios.Entidades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Servicios.Entidades.1.0.8\lib\net452\Servicios.Entidades.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autenticacion.cs" />
+    <Compile Include="Const\CacheConst.cs" />
+    <Compile Include="ContextoSitio.cs" />
+    <Compile Include="Entidades\AdmisionEnvioRequest.cs" />
+    <Compile Include="Entidades\AdmisionEnvioResponse.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\ClienteCreditoVC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\DestinatarioFrecuente_CLI.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\DestinatarioVC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\EstadoGuia_MEN.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\FAFacturaManualAlCarrito.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\Geolocalizacion.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\Localidad_PAR.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\MotivoDevolucionGuia_MEN.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\NotificacionPE.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\PAZonaDificilAcceso.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\PreenvioAdmisionCL.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\PUCentroServiciosDC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\RapiradicadoPE.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\RemitenteVC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\RequestGeomultizonaVC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\RequestImpresionPreguia.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\RequestPreAdmisionPortalCli.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\RequestPreAdmisionWrapperCV.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\RequestRecogidas.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\ResponseImpresionPreguia.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\ResponsePreAdmisionWrapper.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\ResponseRecogidas.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\RGRecogidasCL.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TAFormaPago.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TAFormaPagoServicio.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TAImpuestosDC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TAPrecioCargaDC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TAPrecioMensajeriaDC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TAPreciosAgrupadosDC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TAPrecioServicioDC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TAServicioDC.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\TATarifasContraPago.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\VerificacionContenido_ADM.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\ZNTurnoOperacion.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\ZNOperacionRecogida.cs" />
+    <Compile Include="Entidades\ADTransmisionNotificacion.cs" />
+    <Compile Include="Entidades\Clientes\EstadoGuiaCLI_MEN.cs" />
+    <Compile Include="Entidades\Clientes\MensajeEstadoDos.cs" />
+    <Compile Include="Entidades\Clientes\RequestCLCredito.cs" />
+    <Compile Include="Entidades\Clientes\RequestEstadosGuia_CLI.cs" />
+    <Compile Include="Entidades\Clientes\ResponseEstadosGuia_CLI.cs" />
+    <Compile Include="Entidades\Clientes\ResponseToken.cs" />
+    <Compile Include="Entidades\Clientes\Servicios_SEG.cs" />
+    <Compile Include="Entidades\Clientes\ServicioUsuario.cs" />
+    <Compile Include="Entidades\Clientes\SucursalCliente_CLI.cs" />
+    <Compile Include="Entidades\Clientes\UsuarioIntegracion.cs" />
+    <Compile Include="Entidades\Destinatario.cs" />
+    <Compile Include="Entidades\DetalleTracking.cs" />
+    <Compile Include="Entidades\EnumTipoNotificacion.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\HorarioServicioAgil.cs" />
+    <Compile Include="Entidades\LocalidadesCLI.cs" />
+    <Compile Include="Entidades\NotificacionTracking.cs" />
+    <Compile Include="Entidades\Parametros\TAValorPesoDeclaradoDC.cs" />
+    <Compile Include="Entidades\Planilla\CAMovimientoConsolidadoDCIntegra.cs" />
+    <Compile Include="Entidades\Planilla\CAReservaPrecintoConsolidado.cs" />
+    <Compile Include="Entidades\Planilla\CentroServicioPlanilla.cs" />
+    <Compile Include="Entidades\Planilla\ConsultaMensajero.cs" />
+    <Compile Include="Entidades\Planilla\GuiasConsolidadas.cs" />
+    <Compile Include="Entidades\Planilla\LogMovimientoPrecintoPUAIntegra.cs" />
+    <Compile Include="Entidades\Planilla\MensajeroPlanilla.cs" />
+    <Compile Include="Entidades\Planilla\MensajeroRecogida.cs" />
+    <Compile Include="Entidades\Planilla\NovedadConsolidado.cs" />
+    <Compile Include="Entidades\Planilla\OUAsignacionDC.cs" />
+    <Compile Include="Entidades\Planilla\Persona_Huella_AUT.cs" />
+    <Compile Include="Entidades\Planilla\PlanillaRecoleccionImpresionRequest.cs" />
+    <Compile Include="Entidades\Planilla\PlanillaRecoleccionPreenviosResponse.cs" />
+    <Compile Include="Entidades\Planilla\PlanillaRecoleccionPreenviosRequest.cs" />
+    <Compile Include="Entidades\Planilla\RequestPlanilla.cs" />
+    <Compile Include="Entidades\Planilla\ResponsePlanilla.cs" />
+    <Compile Include="Entidades\Planilla\RGDatosRecogidaCentroServicioDC.cs" />
+    <Compile Include="Entidades\RespuestaToken.cs" />
+    <Compile Include="Entidades\Tracking.cs" />
+    <Compile Include="Enumerables\EnumEstadoRegistro.cs" />
+    <Compile Include="Enumerables\EnumMensajeCentroAcopio.cs" />
+    <Compile Include="Enumerables\EnumTipoMovimientoConsolidado.cs" />
+    <Compile Include="Enumerables\EnumTipoMovimientoPrecinto.cs" />
+    <Compile Include="Enumerables\EnumTipoNovedades.cs" />
+    <Compile Include="IMockedService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades\AdministradorArchivos.cs" />
+    <Compile Include="Utilidades\LogTraza.cs" />
+    <Compile Include="Utilidades\ServicioREST.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C67BFB4-9E90-47F5-8077-C741F5CBA17A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VentaCredito.Planilla</RootNamespace>
+    <AssemblyName>VentaCredito.Planilla</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CO.Servidor.Servicios.ContratoDatos, Version=1.0.7795.19227, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CO.Servidor.Servicios.ContratoDatos.1.0.2\lib\net40\CO.Servidor.Servicios.ContratoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Servidor.Comun, Version=1.0.7669.17842, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Framework.Servidor.Comun.1.0.75.1117\lib\net40\Framework.Servidor.Comun.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Servidor.Servicios.ContratoDatos, Version=1.0.76.1115, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Framework.Servidor.Servicios.ContratoDatos.1.0.0.1\lib\net40\Framework.Servidor.Servicios.ContratoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.WPF45, Version=4.2.30.23246, Culture=neutral, PublicKeyToken=0e27b6f8be9b2ef7, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\net45\GalaSoft.MvvmLight.Extras.WPF45.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.WPF45, Version=4.2.30.23246, Culture=neutral, PublicKeyToken=eabbf6a5f5af5004, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\net45\GalaSoft.MvvmLight.WPF45.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NFramework.Servidor.Comun, Version=1.0.6964.27725, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NFramework.Servidor.Comun.1.0.0\lib\net452\NFramework.Servidor.Comun.dll</HintPath>
+    </Reference>
+    <Reference Include="NFramework.Servidor.Servicios.ContratoDatos, Version=1.0.6964.28832, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NFramework.Servidor.Servicios.ContratoDatos.1.0.0\lib\net452\NFramework.Servidor.Servicios.ContratoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Servicios.Entidades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Servicios.Entidades.1.0.8\lib\net452\Servicios.Entidades.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.DataVisualization.3.5.50211.1\lib\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.4.2.30.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlanillaNegocio.cs" />
+    <Compile Include="Interfaces\IPlanillaNegocio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\5.Negocio\VentaCredito.Clientes\VentaCredito.Clientes.csproj">
+      <Project>{2E648A97-E2B1-4C75-88DA-EE01E93345EB}</Project>
+      <Name>VentaCredito.Clientes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\6.Datos\VentaCredito.Clientes.Datos\VentaCredito.Clientes.Datos.csproj">
+      <Project>{1AFB8281-4410-44C8-A81D-56920BE92D23}</Project>
+      <Name>VentaCredito.Clientes.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\8.Transversal\VentaCredito.Transversal\VentaCredito.Transversal.csproj">
+      <Project>{04ca6cf5-e809-438f-95ae-9340a8c15983}</Project>
+      <Name>VentaCredito.Transversal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VentaCredito.Planilla.Datos\VentaCredito.Planilla.Datos.csproj">
+      <Project>{3fb44f7d-e36e-4e55-bc6c-be6e0b8d7402}</Project>
+      <Name>VentaCredito.Planilla.Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
