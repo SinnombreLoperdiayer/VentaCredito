@@ -128,6 +128,8 @@ namespace VentaCredito.AdmisionPreenvio
                 });
             }
 
+            Negocio.Parametros.Instancia.ValidarRestriccionTipoEntregaServicioAgil(admision.IdServicio, admision.IdTipoEntrega);
+
             if (!LocalidadesNegocio.LocalidadesNegocio.Instancia.ConsultarSubtipoCentroServiciosPorLocalidad(admision.Destinatario.IdLocalidad, Convert.ToInt32(admision.IdTipoEntrega)))
             {
                 throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.PreconditionFailed)
