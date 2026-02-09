@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.Suministros.PreImpresion.ImplementacionTipo.SUImpresionSumGestion">
+    <Position X="8.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAQAAAAAAARAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>PreImpresion\ImplementacionTipo\SUImpresionSumGestion.cs</FileName>
+      <NewMemberFileName>PreImpresion\ImplementacionTipo\SUImpresionSumSucursal.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Suministros.PreImpresion.ImplementacionTipo.SUImpresionSumMensajero">
+    <Position X="5.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAQAAAAAAAQAAAAAAAQAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>PreImpresion\ImplementacionTipo\SUImpresionSumMensajero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Suministros.PreImpresion.ImplementacionTipo.SUImpresionSumCentroServicio">
+    <Position X="11.75" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAUAAAAAAAQAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>PreImpresion\ImplementacionTipo\SUImpresionSumCentroServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Suministros.PreImpresion.ImplementacionBusqueda.SUBusquedaRACOL">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>PreImpresion\ImplementacionBusqueda\SUBusquedaRACOL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Suministros.PreImpresion.SUImpresionBase">
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>PreImpresion\SUImpresionBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Suministros.PreImpresion.SUImpresionTipo">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PreImpresion\SUImpresionTipo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Suministros.PreImpresion.SUPreImpresion">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAEAAAIAAAAgA=</HashCode>
+      <FileName>PreImpresion\SUPreImpresion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Suministros.PreImpresion.ImplementacionTipo.SUImpresionSumSucursal">
+    <Position X="15" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAQAAAAAgAQAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>PreImpresion\ImplementacionTipo\SUImpresionSumSucursal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

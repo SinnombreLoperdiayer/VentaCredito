@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUSuministro">
+    <Position X="6.75" Y="1.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAASQAgAAAAACSAgQAAIggCBAQiAAAEAAIAAEQBIgAA=</HashCode>
+      <FileName>Suministros\SUSuministro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUCategoriaSuministro" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Suministros\SUCategoriaSuministro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUConsumoSuministroDC" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAECAAQAAAAAAAAAAAAAAAAAAAAAAIBAAAAIAAA=</HashCode>
+      <FileName>Suministros\SUConsumoSuministroDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUGrupoSuministrosDC" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAgAABAAAAAAAACAAAEwAAAAA=</HashCode>
+      <FileName>Suministros\SUGrupoSuministrosDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUNumeradorPrefijo" Collapsed="true">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAEkAABAACAAAEAgAAEgABIAAA=</HashCode>
+      <FileName>Suministros\SUNumeradorPrefijo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUPropietarioGuia" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQgAAAAAAAAAIACAgAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Suministros\SUPropietarioGuia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SURango" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAEAIAAAAA=</HashCode>
+      <FileName>Suministros\SURango.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SURemisionSuministroDC" Collapsed="true">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAASAAAEAAAAAEBAAAQAAAAAAIAAAAAAAABQEA=</HashCode>
+      <FileName>Suministros\SURemisionSuministroDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUTrasladoSuministroDC" Collapsed="true">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAECAAAAAAAAAAAAAAAAAAAAAAAAAIAAAARYIAA=</HashCode>
+      <FileName>Suministros\SUTrasladoSuministroDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUEnumCategoria" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAACAAgAAAAAAAAAAA0AAAAAAAAAAAAAA=</HashCode>
+      <FileName>Suministros\SUEnumCategoria.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUEnumEstadoConsumo">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Suministros\SUEnumEstadoConsumo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUEnumGrupoSuministroDC" Collapsed="true">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAEAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Suministros\SUEnumGrupoSuministroDC.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUEnumPropietarioGuia" Collapsed="true">
+    <Position X="0.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAABCAAACAAAQAA=</HashCode>
+      <FileName>Suministros\SUEnumPropietarioGuia.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CO.Servidor.Servicios.ContratoDatos.Suministros.SUEnumSuministro" Collapsed="true">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEBoIAagAAApOAhAAIAACACCChAAIgEAcJMKEAAAQA=</HashCode>
+      <FileName>Suministros\SUEnumSuministro.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

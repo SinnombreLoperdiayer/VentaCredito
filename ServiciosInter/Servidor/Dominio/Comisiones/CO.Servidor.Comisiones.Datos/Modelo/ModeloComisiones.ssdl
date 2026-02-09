@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloComisiones.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloComisionesStoreContainer">
+    <EntitySet Name="Agencia_PUA" EntityType="ModeloComisiones.Store.Agencia_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroLogistico_PUA" EntityType="ModeloComisiones.Store.CentroLogistico_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicioComiFija_COM" EntityType="ModeloComisiones.Store.CentroServicioComiFija_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicioComiFijaHist_COM" EntityType="ModeloComisiones.Store.CentroServicioComiFijaHist_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicios_PUA" EntityType="ModeloComisiones.Store.CentroServicios_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicioServicio_PUA" EntityType="ModeloComisiones.Store.CentroServicioServicio_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicioServicioDia_PUA" EntityType="ModeloComisiones.Store.CentroServicioServicioDia_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicioServicioHist_PUA" EntityType="ModeloComisiones.Store.CentroServicioServicioHist_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicioSrvComi_COM" EntityType="ModeloComisiones.Store.CentroServicioSrvComi_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicioSrvComiHist_COM" EntityType="ModeloComisiones.Store.CentroServicioSrvComiHist_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicioSrvDescuento_COM" EntityType="ModeloComisiones.Store.CentroServicioSrvDescuento_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroSrvAdministComiHist_COM" EntityType="ModeloComisiones.Store.CentroSrvAdministComiHist_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroSrvComiFijaContrato_COM" EntityType="ModeloComisiones.Store.CentroSrvComiFijaContrato_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroSrvComiFijaContrHist_COM" EntityType="ModeloComisiones.Store.CentroSrvComiFijaContrHist_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroSrvSrvDescuentoHist_COM" EntityType="ModeloComisiones.Store.CentroSrvSrvDescuentoHist_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroSvcAdministradoComi_COM" EntityType="ModeloComisiones.Store.CentroSvcAdministradoComi_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Dia_PAR" EntityType="ModeloComisiones.Store.Dia_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LiquidacionComisiones_COM" EntityType="ModeloComisiones.Store.LiquidacionComisiones_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PuntoServicio_PUA" EntityType="ModeloComisiones.Store.PuntoServicio_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoComision_COM" EntityType="ModeloComisiones.Store.TipoComision_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoComisionFija_COM" EntityType="ModeloComisiones.Store.TipoComisionFija_COM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AgenciasDeCentroLogistico_VPUA" EntityType="ModeloComisiones.Store.AgenciasDeCentroLogistico_VPUA" store:Type="Views" store:Schema="dbo" store:Name="AgenciasDeCentroLogistico_VPUA">
+      <DefiningQuery>SELECT 
+      [AgenciasDeCentroLogistico_VPUA].[AGE_IdAgencia] AS [AGE_IdAgencia], 
+      [AgenciasDeCentroLogistico_VPUA].[AGE_IdCentroLogistico] AS [AGE_IdCentroLogistico], 
+      [AgenciasDeCentroLogistico_VPUA].[AGE_IdTipoAgencia] AS [AGE_IdTipoAgencia], 
+      [AgenciasDeCentroLogistico_VPUA].[CES_Nombre] AS [CES_Nombre], 
+      [AgenciasDeCentroLogistico_VPUA].[CES_Direccion] AS [CES_Direccion], 
+      [AgenciasDeCentroLogistico_VPUA].[LOC_Nombre] AS [LOC_Nombre], 
+      [AgenciasDeCentroLogistico_VPUA].[CES_Estado] AS [CES_Estado], 
+      [AgenciasDeCentroLogistico_VPUA].[CES_Telefono1] AS [CES_Telefono1], 
+      [AgenciasDeCentroLogistico_VPUA].[LOC_IdLocalidad] AS [LOC_IdLocalidad]
+      FROM [dbo].[AgenciasDeCentroLogistico_VPUA] AS [AgenciasDeCentroLogistico_VPUA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CentroLogisDeRegionalAdmi_VPUA" EntityType="ModeloComisiones.Store.CentroLogisDeRegionalAdmi_VPUA" store:Type="Views" store:Schema="dbo" store:Name="CentroLogisDeRegionalAdmi_VPUA">
+      <DefiningQuery>SELECT 
+      [CentroLogisDeRegionalAdmi_VPUA].[REA_IdRegionalAdm] AS [REA_IdRegionalAdm], 
+      [CentroLogisDeRegionalAdmi_VPUA].[REA_Descripcion] AS [REA_Descripcion], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Direccion] AS [CES_Direccion], 
+      [CentroLogisDeRegionalAdmi_VPUA].[LOC_Nombre] AS [LOC_Nombre], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Nombre] AS [CES_Nombre], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Estado] AS [CES_Estado], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CEL_IdCentroLogistico] AS [CEL_IdCentroLogistico]
+      FROM [dbo].[CentroLogisDeRegionalAdmi_VPUA] AS [CentroLogisDeRegionalAdmi_VPUA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CentroServicioComiFijas_VCOM" EntityType="ModeloComisiones.Store.CentroServicioComiFijas_VCOM" store:Type="Views" store:Schema="dbo" store:Name="CentroServicioComiFijas_VCOM">
+      <DefiningQuery>SELECT 
+      [CentroServicioComiFijas_VCOM].[TCF_IdTipoComisionFija] AS [TCF_IdTipoComisionFija], 
+      [CentroServicioComiFijas_VCOM].[TCF_Descripcion] AS [TCF_Descripcion], 
+      [CentroServicioComiFijas_VCOM].[CSD_IdCentroServicios] AS [CSD_IdCentroServicios], 
+      [CentroServicioComiFijas_VCOM].[CSD_IdTipoComisionFija] AS [CSD_IdTipoComisionFija], 
+      [CentroServicioComiFijas_VCOM].[CSD_Descripcion] AS [CSD_Descripcion], 
+      [CentroServicioComiFijas_VCOM].[CSD_Valor] AS [CSD_Valor], 
+      [CentroServicioComiFijas_VCOM].[CSD_FechaInicio] AS [CSD_FechaInicio], 
+      [CentroServicioComiFijas_VCOM].[CSD_Estado] AS [CSD_Estado]
+      FROM [dbo].[CentroServicioComiFijas_VCOM] AS [CentroServicioComiFijas_VCOM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CentroServiciosSrvUniNeg_VCOM" EntityType="ModeloComisiones.Store.CentroServiciosSrvUniNeg_VCOM" store:Type="Views" store:Schema="dbo" store:Name="CentroServiciosSrvUniNeg_VCOM">
+      <DefiningQuery>SELECT 
+      [CentroServiciosSrvUniNeg_VCOM].[UNE_Nombre] AS [UNE_Nombre], 
+      [CentroServiciosSrvUniNeg_VCOM].[UNE_IdUnidad] AS [UNE_IdUnidad], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_IdServicio] AS [SER_IdServicio], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_Nombre] AS [SER_Nombre], 
+      [CentroServiciosSrvUniNeg_VCOM].[CSS_IdCentroServicioServicio] AS [CSS_IdCentroServicioServicio], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_Descripcion] AS [SER_Descripcion], 
+      [CentroServiciosSrvUniNeg_VCOM].[UNE_Descripcion] AS [UNE_Descripcion], 
+      [CentroServiciosSrvUniNeg_VCOM].[CSS_IdCentroServicios] AS [CSS_IdCentroServicios], 
+      [CentroServiciosSrvUniNeg_VCOM].[CSS_Estado] AS [CSS_Estado], 
+      [CentroServiciosSrvUniNeg_VCOM].[CSS_IdServicio] AS [CSS_IdServicio], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_IdUnidadNegocio] AS [SER_IdUnidadNegocio], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_IdCuentaExterna] AS [SER_IdCuentaExterna], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_HoraInicioVenta] AS [SER_HoraInicioVenta], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_HoraFinVenta] AS [SER_HoraFinVenta], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_IdentificadorInterno] AS [SER_IdentificadorInterno], 
+      [CentroServiciosSrvUniNeg_VCOM].[SER_AplicaRetenciones] AS [SER_AplicaRetenciones], 
+      [CentroServiciosSrvUniNeg_VCOM].[CSS_FechaInicioVenta] AS [CSS_FechaInicioVenta]
+      FROM [dbo].[CentroServiciosSrvUniNeg_VCOM] AS [CentroServiciosSrvUniNeg_VCOM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CentroSvcComiFijaContrato_VCOM" EntityType="ModeloComisiones.Store.CentroSvcComiFijaContrato_VCOM" store:Type="Views" store:Schema="dbo" store:Name="CentroSvcComiFijaContrato_VCOM">
+      <DefiningQuery>SELECT 
+      [CentroSvcComiFijaContrato_VCOM].[TCF_IdTipoComisionFija] AS [TCF_IdTipoComisionFija], 
+      [CentroSvcComiFijaContrato_VCOM].[TCF_Descripcion] AS [TCF_Descripcion], 
+      [CentroSvcComiFijaContrato_VCOM].[CCC_IdCentroSrvComFijaContrato] AS [CCC_IdCentroSrvComFijaContrato], 
+      [CentroSvcComiFijaContrato_VCOM].[CCC_IdCentroServicios] AS [CCC_IdCentroServicios], 
+      [CentroSvcComiFijaContrato_VCOM].[CCC_IdTipoComisionFija] AS [CCC_IdTipoComisionFija], 
+      [CentroSvcComiFijaContrato_VCOM].[CCC_IdContrato] AS [CCC_IdContrato], 
+      [CentroSvcComiFijaContrato_VCOM].[CCC_Descripcion] AS [CCC_Descripcion], 
+      [CentroSvcComiFijaContrato_VCOM].[CCC_Valor] AS [CCC_Valor], 
+      [CentroSvcComiFijaContrato_VCOM].[CCC_FechaInicio] AS [CCC_FechaInicio], 
+      [CentroSvcComiFijaContrato_VCOM].[CCC_Estado] AS [CCC_Estado], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_IdContrato] AS [CON_IdContrato], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_NumeroContrato] AS [CON_NumeroContrato], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_NombreContrato] AS [CON_NombreContrato], 
+      [CentroSvcComiFijaContrato_VCOM].[CLI_RazonSocial] AS [CLI_RazonSocial], 
+      [CentroSvcComiFijaContrato_VCOM].[CLI_IdCliente] AS [CLI_IdCliente], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_ClienteCredito] AS [CON_ClienteCredito], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_NombreInterventor] AS [CON_NombreInterventor], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_CiudadInterventor] AS [CON_CiudadInterventor], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_TelefonoInterventor] AS [CON_TelefonoInterventor], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_NombreGestorPago] AS [CON_NombreGestorPago], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_CiudadGestorPago] AS [CON_CiudadGestorPago], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_TelefonoGestorPago] AS [CON_TelefonoGestorPago], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_ObjetoContrato] AS [CON_ObjetoContrato], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_FechaInicio] AS [CON_FechaInicio], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_FechaFin] AS [CON_FechaFin], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_ValorContrato] AS [CON_ValorContrato], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_PorcentajeAviso] AS [CON_PorcentajeAviso], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_PresupuestoMensual] AS [CON_PresupuestoMensual], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_ListaPrecios] AS [CON_ListaPrecios], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_EjecutivoCuenta] AS [CON_EjecutivoCuenta], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_SupervisorCuenta] AS [CON_SupervisorCuenta], 
+      [CentroSvcComiFijaContrato_VCOM].[CON_NumeroAsignacionPresupuest] AS [CON_NumeroAsignacionPresupuest]
+      FROM [dbo].[CentroSvcComiFijaContrato_VCOM] AS [CentroSvcComiFijaContrato_VCOM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ComisionesServicioCenSrv_VCOM" EntityType="ModeloComisiones.Store.ComisionesServicioCenSrv_VCOM" store:Type="Views" store:Schema="dbo" store:Name="ComisionesServicioCenSrv_VCOM">
+      <DefiningQuery>SELECT 
+      [ComisionesServicioCenSrv_VCOM].[UNE_Nombre] AS [UNE_Nombre], 
+      [ComisionesServicioCenSrv_VCOM].[UNE_IdUnidad] AS [UNE_IdUnidad], 
+      [ComisionesServicioCenSrv_VCOM].[SER_IdServicio] AS [SER_IdServicio], 
+      [ComisionesServicioCenSrv_VCOM].[SER_Nombre] AS [SER_Nombre], 
+      [ComisionesServicioCenSrv_VCOM].[CSC_Valor] AS [CSC_Valor], 
+      [ComisionesServicioCenSrv_VCOM].[CSC_Porcentaje] AS [CSC_Porcentaje], 
+      [ComisionesServicioCenSrv_VCOM].[TCO_IdTipoComision] AS [TCO_IdTipoComision], 
+      [ComisionesServicioCenSrv_VCOM].[TCO_Descripcion] AS [TCO_Descripcion], 
+      [ComisionesServicioCenSrv_VCOM].[CSS_IdCentroServicioServicio] AS [CSS_IdCentroServicioServicio], 
+      [ComisionesServicioCenSrv_VCOM].[SER_Descripcion] AS [SER_Descripcion], 
+      [ComisionesServicioCenSrv_VCOM].[UNE_Descripcion] AS [UNE_Descripcion], 
+      [ComisionesServicioCenSrv_VCOM].[CSS_IdCentroServicios] AS [CSS_IdCentroServicios], 
+      [ComisionesServicioCenSrv_VCOM].[CSS_Estado] AS [CSS_Estado], 
+      [ComisionesServicioCenSrv_VCOM].[CSS_IdServicio] AS [CSS_IdServicio], 
+      [ComisionesServicioCenSrv_VCOM].[SER_IdUnidadNegocio] AS [SER_IdUnidadNegocio], 
+      [ComisionesServicioCenSrv_VCOM].[SER_IdCuentaExterna] AS [SER_IdCuentaExterna], 
+      [ComisionesServicioCenSrv_VCOM].[SER_HoraInicioVenta] AS [SER_HoraInicioVenta], 
+      [ComisionesServicioCenSrv_VCOM].[SER_HoraFinVenta] AS [SER_HoraFinVenta], 
+      [ComisionesServicioCenSrv_VCOM].[SER_IdentificadorInterno] AS [SER_IdentificadorInterno], 
+      [ComisionesServicioCenSrv_VCOM].[SER_AplicaRetenciones] AS [SER_AplicaRetenciones], 
+      [ComisionesServicioCenSrv_VCOM].[CSS_FechaInicioVenta] AS [CSS_FechaInicioVenta], 
+      [ComisionesServicioCenSrv_VCOM].[CSC_IdCentroServicioServicio] AS [CSC_IdCentroServicioServicio], 
+      [ComisionesServicioCenSrv_VCOM].[CSC_IdTipoComision] AS [CSC_IdTipoComision]
+      FROM [dbo].[ComisionesServicioCenSrv_VCOM] AS [ComisionesServicioCenSrv_VCOM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ComisionFijaCentroServicios_COM" EntityType="ModeloComisiones.Store.ComisionFijaCentroServicios_COM" store:Type="Views" store:Schema="dbo" store:Name="ComisionFijaCentroServicios_COM">
+      <DefiningQuery>SELECT 
+      [ComisionFijaCentroServicios_COM].[CSD_IdCentroServicios] AS [CSD_IdCentroServicios], 
+      [ComisionFijaCentroServicios_COM].[CSD_IdTipoComisionFija] AS [CSD_IdTipoComisionFija], 
+      [ComisionFijaCentroServicios_COM].[TCF_Descripcion] AS [TCF_Descripcion], 
+      [ComisionFijaCentroServicios_COM].[CSD_Descripcion] AS [CSD_Descripcion], 
+      [ComisionFijaCentroServicios_COM].[CSD_Valor] AS [CSD_Valor], 
+      [ComisionFijaCentroServicios_COM].[CSD_FechaInicio] AS [CSD_FechaInicio], 
+      [ComisionFijaCentroServicios_COM].[CSD_Estado] AS [CSD_Estado]
+      FROM [dbo].[ComisionFijaCentroServicios_COM] AS [ComisionFijaCentroServicios_COM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ComisionFijaCentroSvcContrato_COM" EntityType="ModeloComisiones.Store.ComisionFijaCentroSvcContrato_COM" store:Type="Views" store:Schema="dbo" store:Name="ComisionFijaCentroSvcContrato_COM">
+      <DefiningQuery>SELECT 
+      [ComisionFijaCentroSvcContrato_COM].[CCC_IdTipoComisionFija] AS [CCC_IdTipoComisionFija], 
+      [ComisionFijaCentroSvcContrato_COM].[TCF_Descripcion] AS [TCF_Descripcion], 
+      [ComisionFijaCentroSvcContrato_COM].[CCC_IdContrato] AS [CCC_IdContrato], 
+      [ComisionFijaCentroSvcContrato_COM].[CCC_Estado] AS [CCC_Estado], 
+      [ComisionFijaCentroSvcContrato_COM].[CCC_FechaInicio] AS [CCC_FechaInicio], 
+      [ComisionFijaCentroSvcContrato_COM].[CON_FechaFin] AS [CON_FechaFin], 
+      [ComisionFijaCentroSvcContrato_COM].[CCC_IdCentroServicios] AS [CCC_IdCentroServicios], 
+      [ComisionFijaCentroSvcContrato_COM].[CCC_Valor] AS [CCC_Valor]
+      FROM [dbo].[ComisionFijaCentroSvcContrato_COM] AS [ComisionFijaCentroSvcContrato_COM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ComisionSrvCentroSrvAdmin_VCOM" EntityType="ModeloComisiones.Store.ComisionSrvCentroSrvAdmin_VCOM" store:Type="Views" store:Schema="dbo" store:Name="ComisionSrvCentroSrvAdmin_VCOM">
+      <DefiningQuery>SELECT 
+      [ComisionSrvCentroSrvAdmin_VCOM].[UNE_Nombre] AS [UNE_Nombre], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[UNE_IdUnidad] AS [UNE_IdUnidad], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[SER_IdServicio] AS [SER_IdServicio], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[SER_Nombre] AS [SER_Nombre], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[TCO_IdTipoComision] AS [TCO_IdTipoComision], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[TCO_Descripcion] AS [TCO_Descripcion], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSS_IdCentroServicioServicio] AS [CSS_IdCentroServicioServicio], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[SER_Descripcion] AS [SER_Descripcion], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[UNE_Descripcion] AS [UNE_Descripcion], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSS_IdCentroServicios] AS [CSS_IdCentroServicios], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSS_Estado] AS [CSS_Estado], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSS_IdServicio] AS [CSS_IdServicio], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSA_IdCentroSvcAdministrado] AS [CSA_IdCentroSvcAdministrado], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSA_IdCentroServicioServicio] AS [CSA_IdCentroServicioServicio], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSA_IdAgencia] AS [CSA_IdAgencia], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSA_IdTipoComision] AS [CSA_IdTipoComision], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSA_ValorComision] AS [CSA_ValorComision], 
+      [ComisionSrvCentroSrvAdmin_VCOM].[CSA_PorcentajeComision] AS [CSA_PorcentajeComision]
+      FROM [dbo].[ComisionSrvCentroSrvAdmin_VCOM] AS [ComisionSrvCentroSrvAdmin_VCOM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DescuentosServicioCenSrv_VCOM" EntityType="ModeloComisiones.Store.DescuentosServicioCenSrv_VCOM" store:Type="Views" store:Schema="dbo" store:Name="DescuentosServicioCenSrv_VCOM">
+      <DefiningQuery>SELECT 
+      [DescuentosServicioCenSrv_VCOM].[CSS_IdCentroServicioServicio] AS [CSS_IdCentroServicioServicio], 
+      [DescuentosServicioCenSrv_VCOM].[CSS_IdCentroServicios] AS [CSS_IdCentroServicios], 
+      [DescuentosServicioCenSrv_VCOM].[CSS_Estado] AS [CSS_Estado], 
+      [DescuentosServicioCenSrv_VCOM].[CSS_IdServicio] AS [CSS_IdServicio], 
+      [DescuentosServicioCenSrv_VCOM].[CSS_FechaInicioVenta] AS [CSS_FechaInicioVenta], 
+      [DescuentosServicioCenSrv_VCOM].[TDE_IdTipoDescuento] AS [TDE_IdTipoDescuento], 
+      [DescuentosServicioCenSrv_VCOM].[TDE_Descripcion] AS [TDE_Descripcion], 
+      [DescuentosServicioCenSrv_VCOM].[CSD_IdCentroServiSrvDescuento] AS [CSD_IdCentroServiSrvDescuento], 
+      [DescuentosServicioCenSrv_VCOM].[CSD_IdCentroServicioServicio] AS [CSD_IdCentroServicioServicio], 
+      [DescuentosServicioCenSrv_VCOM].[CSD_IdTipoDescuento] AS [CSD_IdTipoDescuento], 
+      [DescuentosServicioCenSrv_VCOM].[CSD_ValorCriterioPenalizacion] AS [CSD_ValorCriterioPenalizacion], 
+      [DescuentosServicioCenSrv_VCOM].[CSD_ValorDescuento] AS [CSD_ValorDescuento], 
+      [DescuentosServicioCenSrv_VCOM].[CSD_PorcentajeDescuento] AS [CSD_PorcentajeDescuento], 
+      [DescuentosServicioCenSrv_VCOM].[CSD_Descripcion] AS [CSD_Descripcion]
+      FROM [dbo].[DescuentosServicioCenSrv_VCOM] AS [DescuentosServicioCenSrv_VCOM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PuntosDeAgencia_VPUA" EntityType="ModeloComisiones.Store.PuntosDeAgencia_VPUA" store:Type="Views" store:Schema="dbo" store:Name="PuntosDeAgencia_VPUA">
+      <DefiningQuery>SELECT 
+      [PuntosDeAgencia_VPUA].[CES_IdCentroServicios] AS [CES_IdCentroServicios], 
+      [PuntosDeAgencia_VPUA].[CES_Tipo] AS [CES_Tipo], 
+      [PuntosDeAgencia_VPUA].[PUS_IdAgencia] AS [PUS_IdAgencia], 
+      [PuntosDeAgencia_VPUA].[CES_Nombre] AS [CES_Nombre], 
+      [PuntosDeAgencia_VPUA].[CES_Direccion] AS [CES_Direccion], 
+      [PuntosDeAgencia_VPUA].[LOC_Nombre] AS [LOC_Nombre], 
+      [PuntosDeAgencia_VPUA].[CES_Estado] AS [CES_Estado], 
+      [PuntosDeAgencia_VPUA].[NombreAgencia] AS [NombreAgencia]
+      FROM [dbo].[PuntosDeAgencia_VPUA] AS [PuntosDeAgencia_VPUA]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Agencia_PUA_CentroLogistico_PUA" Association="ModeloComisiones.Store.FK_Agencia_PUA_CentroLogistico_PUA">
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agencia_PUA_PuntoAtencion_PUA" Association="ModeloComisiones.Store.FK_Agencia_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroLogistico_PUA_PuntoAtencion_PUA" Association="ModeloComisiones.Store.FK_CentroLogistico_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioAdministrado_COM_Agencia_PUA" Association="ModeloComisiones.Store.FK_CentroServicioAdministrado_COM_Agencia_PUA">
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+      <End Role="CentroSvcAdministradoComi_COM" EntitySet="CentroSvcAdministradoComi_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioAdministrado_COM_CentroServicioServicio_PUA" Association="ModeloComisiones.Store.FK_CentroServicioAdministrado_COM_CentroServicioServicio_PUA">
+      <End Role="CentroServicioServicio_PUA" EntitySet="CentroServicioServicio_PUA" />
+      <End Role="CentroSvcAdministradoComi_COM" EntitySet="CentroSvcAdministradoComi_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioComiFija_COM_CentroServicios_PUA" Association="ModeloComisiones.Store.FK_CentroServicioComiFija_COM_CentroServicios_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="CentroServicioComiFija_COM" EntitySet="CentroServicioComiFija_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioComiFija_COM_TipoComisionFija_COM" Association="ModeloComisiones.Store.FK_CentroServicioComiFija_COM_TipoComisionFija_COM">
+      <End Role="TipoComisionFija_COM" EntitySet="TipoComisionFija_COM" />
+      <End Role="CentroServicioComiFija_COM" EntitySet="CentroServicioComiFija_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioServicio_PUA_CentroServicios_PUA" Association="ModeloComisiones.Store.FK_CentroServicioServicio_PUA_CentroServicios_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="CentroServicioServicio_PUA" EntitySet="CentroServicioServicio_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioServicioDia_PUA_CentroServicioServicio_PUA" Association="ModeloComisiones.Store.FK_CentroServicioServicioDia_PUA_CentroServicioServicio_PUA">
+      <End Role="CentroServicioServicio_PUA" EntitySet="CentroServicioServicio_PUA" />
+      <End Role="CentroServicioServicioDia_PUA" EntitySet="CentroServicioServicioDia_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioServicioDia_PUA_Dia_PAR" Association="ModeloComisiones.Store.FK_CentroServicioServicioDia_PUA_Dia_PAR">
+      <End Role="Dia_PAR" EntitySet="Dia_PAR" />
+      <End Role="CentroServicioServicioDia_PUA" EntitySet="CentroServicioServicioDia_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioSrvComi_COM_CentroServicioServicio_PUA" Association="ModeloComisiones.Store.FK_CentroServicioSrvComi_COM_CentroServicioServicio_PUA">
+      <End Role="CentroServicioServicio_PUA" EntitySet="CentroServicioServicio_PUA" />
+      <End Role="CentroServicioSrvComi_COM" EntitySet="CentroServicioSrvComi_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioSrvComi_COM_TipoComision_COM1" Association="ModeloComisiones.Store.FK_CentroServicioSrvComi_COM_TipoComision_COM1">
+      <End Role="TipoComision_COM" EntitySet="TipoComision_COM" />
+      <End Role="CentroServicioSrvComi_COM" EntitySet="CentroServicioSrvComi_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicioSrvDescuento_COM_CentroServicioServicio_PUA" Association="ModeloComisiones.Store.FK_CentroServicioSrvDescuento_COM_CentroServicioServicio_PUA">
+      <End Role="CentroServicioServicio_PUA" EntitySet="CentroServicioServicio_PUA" />
+      <End Role="CentroServicioSrvDescuento_COM" EntitySet="CentroServicioSrvDescuento_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroSrvComiFijaContrato_COM_CentroServicios_PUA" Association="ModeloComisiones.Store.FK_CentroSrvComiFijaContrato_COM_CentroServicios_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="CentroSrvComiFijaContrato_COM" EntitySet="CentroSrvComiFijaContrato_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroSrvComiFijaContrato_COM_TipoComisionFija_COM" Association="ModeloComisiones.Store.FK_CentroSrvComiFijaContrato_COM_TipoComisionFija_COM">
+      <End Role="TipoComisionFija_COM" EntitySet="TipoComisionFija_COM" />
+      <End Role="CentroSrvComiFijaContrato_COM" EntitySet="CentroSrvComiFijaContrato_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroSvcAdministradoComi_COM_TipoComision_COM" Association="ModeloComisiones.Store.FK_CentroSvcAdministradoComi_COM_TipoComision_COM">
+      <End Role="TipoComision_COM" EntitySet="TipoComision_COM" />
+      <End Role="CentroSvcAdministradoComi_COM" EntitySet="CentroSvcAdministradoComi_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LiquidacionComisiones_COM_TipoComision_COM" Association="ModeloComisiones.Store.FK_LiquidacionComisiones_COM_TipoComision_COM">
+      <End Role="TipoComision_COM" EntitySet="TipoComision_COM" />
+      <End Role="LiquidacionComisiones_COM" EntitySet="LiquidacionComisiones_COM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PuntoServicio_PUA_Agencia_PUA" Association="ModeloComisiones.Store.FK_PuntoServicio_PUA_Agencia_PUA">
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+      <End Role="PuntoServicio_PUA" EntitySet="PuntoServicio_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PuntoServicio_PUA_PuntoAtencion_PUA" Association="ModeloComisiones.Store.FK_PuntoServicio_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="PuntoServicio_PUA" EntitySet="PuntoServicio_PUA" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Agencia_PUA">
+    <Key>
+      <PropertyRef Name="AGE_IdAgencia" />
+    </Key>
+    <Property Name="AGE_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="AGE_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="AGE_IdTipoAgencia" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="AGE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="AGE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroLogistico_PUA">
+    <Key>
+      <PropertyRef Name="CEL_IdCentroLogistico" />
+    </Key>
+    <Property Name="CEL_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="CEL_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="CEL_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CEL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicioComiFija_COM">
+    <Key>
+      <PropertyRef Name="CSD_IdCentroServicios" />
+      <PropertyRef Name="CSD_IdTipoComisionFija" />
+    </Key>
+    <Property Name="CSD_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSD_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="CSD_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CSD_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicioComiFijaHist_COM">
+    <Key>
+      <PropertyRef Name="CSD_IdAuditoria" />
+    </Key>
+    <Property Name="CSD_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSD_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSD_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="CSD_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CSD_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CSD_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CSD_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CSD_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicios_PUA">
+    <Key>
+      <PropertyRef Name="CES_IdCentroServicios" />
+    </Key>
+    <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CES_Tipo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CES_IdPropietario" Type="int" Nullable="false" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Telefono2" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Fax" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Barrio" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdMunicipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_IdPersonaResponsable" Type="bigint" Nullable="false" />
+    <Property Name="CES_Latitud" Type="numeric" Scale="4" />
+    <Property Name="CES_Longitud" Type="numeric" Scale="4" />
+    <Property Name="CES_Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_Sistematizada" Type="bit" />
+    <Property Name="CES_IdCentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdTipoPropiedad" Type="smallint" Nullable="false" />
+    <Property Name="CES_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_VolumenMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_AdmiteFormaPagoAlCobro" Type="bit" Nullable="false" />
+    <Property Name="CES_VendePrepago" Type="bit" Nullable="false" />
+    <Property Name="CES_ClasGirosPorIngresos" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_PuedeRecibirGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_PuedePagarGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_TopeMaximoPorGiros" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_TopeMaximoPorPagos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_BaseInicialCaja" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CES_CodigoBodega" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdClasificadorCanalVenta" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CentroServicioServicio_PUA">
+    <Key>
+      <PropertyRef Name="CSS_IdCentroServicioServicio" />
+    </Key>
+    <Property Name="CSS_IdCentroServicioServicio" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="CSS_FechaInicioVenta" Type="datetime" Nullable="false" />
+    <Property Name="CSS_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicioServicioDia_PUA">
+    <Key>
+      <PropertyRef Name="CSD_IdCentroSrvSrvDia" />
+    </Key>
+    <Property Name="CSD_IdCentroSrvSrvDia" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSD_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSD_IdDia" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSD_HoraInicial" Type="datetime" Nullable="false" />
+    <Property Name="CSD_HoraFinal" Type="datetime" Nullable="false" />
+    <Property Name="CSD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSD_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="CentroServicioServicioHist_PUA">
+    <Key>
+      <PropertyRef Name="CSS_IdAuditoria" />
+    </Key>
+    <Property Name="CSS_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSS_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="CSS_FechaInicioVenta" Type="datetime" Nullable="false" />
+    <Property Name="CSS_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CCS_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CSS_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CSS_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicioSrvComi_COM">
+    <Key>
+      <PropertyRef Name="CSC_IdCentroServicioServicio" />
+      <PropertyRef Name="CSC_IdTipoComision" />
+    </Key>
+    <Property Name="CSC_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSC_IdTipoComision" Type="smallint" Nullable="false" />
+    <Property Name="CSC_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSC_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicioSrvComiHist_COM">
+    <Key>
+      <PropertyRef Name="CSC_IdAuditoria" />
+    </Key>
+    <Property Name="CSC_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSC_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSC_IdTipoComision" Type="smallint" Nullable="false" />
+    <Property Name="CSC_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSC_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CCS_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CCS_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CCS_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicioSrvDescuento_COM">
+    <Key>
+      <PropertyRef Name="CSD_IdCentroServiSrvDescuento" />
+    </Key>
+    <Property Name="CSD_IdCentroServiSrvDescuento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSD_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSD_IdTipoDescuento" Type="smallint" Nullable="false" />
+    <Property Name="CSD_ValorCriterioPenalizacion" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_ValorDescuento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_PorcentajeDescuento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSD_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="CentroSrvAdministComiHist_COM">
+    <Key>
+      <PropertyRef Name="CSA_IdAuditoria" />
+    </Key>
+    <Property Name="CSA_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSA_IdCentroSvcAdministrado" Type="bigint" Nullable="false" />
+    <Property Name="CSA_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSA_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="CSA_IdTipoComision" Type="smallint" Nullable="false" />
+    <Property Name="CSA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSA_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CSA_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CSA_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CSA_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroSrvComiFijaContrato_COM">
+    <Key>
+      <PropertyRef Name="CCC_IdCentroSrvComFijaContrato" />
+    </Key>
+    <Property Name="CCC_IdCentroSrvComFijaContrato" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CCC_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CCC_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="CCC_IdContrato" Type="int" Nullable="false" />
+    <Property Name="CCC_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CCC_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCC_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CCC_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroSrvComiFijaContrHist_COM">
+    <Key>
+      <PropertyRef Name="CCC_IdAuditoria" />
+    </Key>
+    <Property Name="CCC_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CCC_IdCentroSrvComFijaContrato" Type="bigint" Nullable="false" />
+    <Property Name="CCC_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CCC_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="CCC_IdContrato" Type="int" Nullable="false" />
+    <Property Name="CCC_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CCC_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCC_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CCC_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CCC_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CCC_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CCC_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroSrvSrvDescuentoHist_COM">
+    <Key>
+      <PropertyRef Name="CSD_IdAuditoria" />
+    </Key>
+    <Property Name="CSD_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSD_IdCentroServiSrvDescuento" Type="int" Nullable="false" />
+    <Property Name="CSD_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSD_IdTipoDescuento" Type="smallint" Nullable="false" />
+    <Property Name="CSD_ValorCriterioPenalizacion" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_ValorDescuento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_PorcentajeDescuento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSD_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CSD_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CSD_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroSvcAdministradoComi_COM">
+    <Key>
+      <PropertyRef Name="CSA_IdCentroSvcAdministrado" />
+    </Key>
+    <Property Name="CSA_IdCentroSvcAdministrado" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSA_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSA_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="CSA_IdTipoComision" Type="smallint" Nullable="false" />
+    <Property Name="CSA_ValorComision" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSA_PorcentajeComision" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Dia_PAR">
+    <Key>
+      <PropertyRef Name="DIA_IdDia" />
+    </Key>
+    <Property Name="DIA_IdDia" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="DIA_NombreDia" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="DIA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DIA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="LiquidacionComisiones_COM">
+    <Key>
+      <PropertyRef Name="LIC_IdLiquidacionComision" />
+    </Key>
+    <Property Name="LIC_IdLiquidacionComision" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LIC_NumeroOperacion" Type="bigint" Nullable="false" />
+    <Property Name="LIC_IdServicio" Type="int" Nullable="false" />
+    <Property Name="LIC_IdTipoComision" Type="smallint" Nullable="false" />
+    <Property Name="LIC_IdCentroServiciosVenta" Type="bigint" Nullable="false" />
+    <Property Name="LIC_NombreCentroServiciosVenta" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="LIC_IdCentroServiosResponsable" Type="bigint" Nullable="false" />
+    <Property Name="LIC_NombreCtroSvcsResponsable" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="LIC_ValorBaseComision" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LIC_ComisionVenta" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LIC_ValorFijoComisionVenta" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LIC_PorcentajeComisionVenta" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LIC_ComisionResponsable" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LIC_ValorFijoComisionResponsable" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LIC_PorcentajeComisionResponsable" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LIC_FechaProduccion" Type="datetime" Nullable="false" />
+    <Property Name="LIC_NumeroProduccion" Type="bigint" />
+    <Property Name="LIC_EstaAprobada" Type="bit" Nullable="false" />
+    <Property Name="LIC_NumeroProduccionResponsabl" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LIC_FechaProduccionResponsable" Type="datetime" Nullable="false" />
+    <Property Name="LIC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LIC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LIC_EsRegistroValido" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PuntoServicio_PUA">
+    <Key>
+      <PropertyRef Name="PUS_IdPuntoServicio" />
+    </Key>
+    <Property Name="PUS_IdPuntoServicio" Type="bigint" Nullable="false" />
+    <Property Name="PUS_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="PUS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PUS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoComision_COM">
+    <Key>
+      <PropertyRef Name="TCO_IdTipoComision" />
+    </Key>
+    <Property Name="TCO_IdTipoComision" Type="smallint" Nullable="false" />
+    <Property Name="TCO_Descripcion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="TCO_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TCO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoComisionFija_COM">
+    <Key>
+      <PropertyRef Name="TCF_IdTipoComisionFija" />
+    </Key>
+    <Property Name="TCF_IdTipoComisionFija" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TCF_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TCF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TCF_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.AgenciasDeCentroLogistico_VPUA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AgenciasDeCentroLogistico_VPUA">
+    <Key>
+      <PropertyRef Name="AGE_IdAgencia" />
+      <PropertyRef Name="AGE_IdCentroLogistico" />
+      <PropertyRef Name="AGE_IdTipoAgencia" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="LOC_IdLocalidad" />
+    </Key>
+    <Property Name="AGE_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="AGE_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="AGE_IdTipoAgencia" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.CentroLogisDeRegionalAdmi_VPUA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CentroLogisDeRegionalAdmi_VPUA">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CEL_IdCentroLogistico" />
+    </Key>
+    <Property Name="REA_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CEL_IdCentroLogistico" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.CentroServicioComiFijas_VCOM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CentroServicioComiFijas_VCOM">
+    <Key>
+      <PropertyRef Name="TCF_IdTipoComisionFija" />
+      <PropertyRef Name="TCF_Descripcion" />
+      <PropertyRef Name="CSD_IdCentroServicios" />
+      <PropertyRef Name="CSD_IdTipoComisionFija" />
+      <PropertyRef Name="CSD_Descripcion" />
+      <PropertyRef Name="CSD_Valor" />
+      <PropertyRef Name="CSD_FechaInicio" />
+      <PropertyRef Name="CSD_Estado" />
+    </Key>
+    <Property Name="TCF_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="TCF_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSD_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="CSD_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CSD_Estado" Type="char" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.CentroServiciosSrvUniNeg_VCOM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CentroServiciosSrvUniNeg_VCOM">
+    <Key>
+      <PropertyRef Name="UNE_Nombre" />
+      <PropertyRef Name="UNE_IdUnidad" />
+      <PropertyRef Name="SER_IdServicio" />
+      <PropertyRef Name="SER_Nombre" />
+      <PropertyRef Name="CSS_IdCentroServicioServicio" />
+      <PropertyRef Name="SER_Descripcion" />
+      <PropertyRef Name="UNE_Descripcion" />
+      <PropertyRef Name="CSS_IdCentroServicios" />
+      <PropertyRef Name="CSS_Estado" />
+      <PropertyRef Name="CSS_IdServicio" />
+      <PropertyRef Name="SER_IdUnidadNegocio" />
+      <PropertyRef Name="SER_HoraInicioVenta" />
+      <PropertyRef Name="SER_HoraFinVenta" />
+      <PropertyRef Name="SER_IdentificadorInterno" />
+      <PropertyRef Name="SER_AplicaRetenciones" />
+      <PropertyRef Name="CSS_FechaInicioVenta" />
+    </Key>
+    <Property Name="UNE_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="UNE_IdUnidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SER_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SER_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSS_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="SER_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UNE_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CSS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSS_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SER_IdUnidadNegocio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SER_IdCuentaExterna" Type="smallint" />
+    <Property Name="SER_HoraInicioVenta" Type="datetime" Nullable="false" />
+    <Property Name="SER_HoraFinVenta" Type="datetime" Nullable="false" />
+    <Property Name="SER_IdentificadorInterno" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="SER_AplicaRetenciones" Type="bit" Nullable="false" />
+    <Property Name="CSS_FechaInicioVenta" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.CentroSvcComiFijaContrato_VCOM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CentroSvcComiFijaContrato_VCOM">
+    <Key>
+      <PropertyRef Name="TCF_IdTipoComisionFija" />
+      <PropertyRef Name="TCF_Descripcion" />
+      <PropertyRef Name="CCC_IdCentroSrvComFijaContrato" />
+      <PropertyRef Name="CCC_IdCentroServicios" />
+      <PropertyRef Name="CCC_IdTipoComisionFija" />
+      <PropertyRef Name="CCC_IdContrato" />
+      <PropertyRef Name="CCC_Descripcion" />
+      <PropertyRef Name="CCC_Valor" />
+      <PropertyRef Name="CCC_FechaInicio" />
+      <PropertyRef Name="CCC_Estado" />
+      <PropertyRef Name="CON_IdContrato" />
+      <PropertyRef Name="CON_NumeroContrato" />
+      <PropertyRef Name="CON_NombreContrato" />
+      <PropertyRef Name="CLI_RazonSocial" />
+      <PropertyRef Name="CLI_IdCliente" />
+      <PropertyRef Name="CON_ClienteCredito" />
+      <PropertyRef Name="CON_NombreInterventor" />
+      <PropertyRef Name="CON_CiudadInterventor" />
+      <PropertyRef Name="CON_TelefonoInterventor" />
+      <PropertyRef Name="CON_NombreGestorPago" />
+      <PropertyRef Name="CON_CiudadGestorPago" />
+      <PropertyRef Name="CON_TelefonoGestorPago" />
+      <PropertyRef Name="CON_ObjetoContrato" />
+      <PropertyRef Name="CON_FechaInicio" />
+      <PropertyRef Name="CON_FechaFin" />
+      <PropertyRef Name="CON_ValorContrato" />
+      <PropertyRef Name="CON_PorcentajeAviso" />
+      <PropertyRef Name="CON_PresupuestoMensual" />
+      <PropertyRef Name="CON_ListaPrecios" />
+      <PropertyRef Name="CON_EjecutivoCuenta" />
+      <PropertyRef Name="CON_SupervisorCuenta" />
+      <PropertyRef Name="CON_NumeroAsignacionPresupuest" />
+    </Key>
+    <Property Name="TCF_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="TCF_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CCC_IdCentroSrvComFijaContrato" Type="bigint" Nullable="false" />
+    <Property Name="CCC_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CCC_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="CCC_IdContrato" Type="int" Nullable="false" />
+    <Property Name="CCC_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CCC_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCC_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CCC_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CON_IdContrato" Type="int" Nullable="false" />
+    <Property Name="CON_NumeroContrato" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CON_NombreContrato" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CLI_RazonSocial" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CLI_IdCliente" Type="int" Nullable="false" />
+    <Property Name="CON_ClienteCredito" Type="int" Nullable="false" />
+    <Property Name="CON_NombreInterventor" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CON_CiudadInterventor" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CON_TelefonoInterventor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CON_NombreGestorPago" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CON_CiudadGestorPago" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CON_TelefonoGestorPago" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CON_ObjetoContrato" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CON_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CON_FechaFin" Type="datetime" Nullable="false" />
+    <Property Name="CON_ValorContrato" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CON_PorcentajeAviso" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CON_PresupuestoMensual" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CON_ListaPrecios" Type="int" Nullable="false" />
+    <Property Name="CON_EjecutivoCuenta" Type="bigint" Nullable="false" />
+    <Property Name="CON_SupervisorCuenta" Type="bigint" Nullable="false" />
+    <Property Name="CON_NumeroAsignacionPresupuest" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.ComisionesServicioCenSrv_VCOM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ComisionesServicioCenSrv_VCOM">
+    <Key>
+      <PropertyRef Name="UNE_Nombre" />
+      <PropertyRef Name="UNE_IdUnidad" />
+      <PropertyRef Name="SER_IdServicio" />
+      <PropertyRef Name="SER_Nombre" />
+      <PropertyRef Name="CSC_Valor" />
+      <PropertyRef Name="CSC_Porcentaje" />
+      <PropertyRef Name="TCO_IdTipoComision" />
+      <PropertyRef Name="TCO_Descripcion" />
+      <PropertyRef Name="CSS_IdCentroServicioServicio" />
+      <PropertyRef Name="SER_Descripcion" />
+      <PropertyRef Name="UNE_Descripcion" />
+      <PropertyRef Name="CSS_IdCentroServicios" />
+      <PropertyRef Name="CSS_Estado" />
+      <PropertyRef Name="CSS_IdServicio" />
+      <PropertyRef Name="SER_IdUnidadNegocio" />
+      <PropertyRef Name="SER_HoraInicioVenta" />
+      <PropertyRef Name="SER_HoraFinVenta" />
+      <PropertyRef Name="SER_IdentificadorInterno" />
+      <PropertyRef Name="SER_AplicaRetenciones" />
+      <PropertyRef Name="CSS_FechaInicioVenta" />
+      <PropertyRef Name="CSC_IdCentroServicioServicio" />
+      <PropertyRef Name="CSC_IdTipoComision" />
+    </Key>
+    <Property Name="UNE_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="UNE_IdUnidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SER_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SER_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSC_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSC_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="TCO_IdTipoComision" Type="smallint" Nullable="false" />
+    <Property Name="TCO_Descripcion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CSS_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="SER_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UNE_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CSS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSS_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SER_IdUnidadNegocio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SER_IdCuentaExterna" Type="smallint" />
+    <Property Name="SER_HoraInicioVenta" Type="datetime" Nullable="false" />
+    <Property Name="SER_HoraFinVenta" Type="datetime" Nullable="false" />
+    <Property Name="SER_IdentificadorInterno" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="SER_AplicaRetenciones" Type="bit" Nullable="false" />
+    <Property Name="CSS_FechaInicioVenta" Type="datetime" Nullable="false" />
+    <Property Name="CSC_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSC_IdTipoComision" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.ComisionFijaCentroServicios_COM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ComisionFijaCentroServicios_COM">
+    <Key>
+      <PropertyRef Name="CSD_IdCentroServicios" />
+      <PropertyRef Name="CSD_IdTipoComisionFija" />
+      <PropertyRef Name="TCF_Descripcion" />
+      <PropertyRef Name="CSD_Descripcion" />
+      <PropertyRef Name="CSD_Valor" />
+      <PropertyRef Name="CSD_FechaInicio" />
+      <PropertyRef Name="CSD_Estado" />
+    </Key>
+    <Property Name="CSD_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSD_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="TCF_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CSD_Estado" Type="char" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.ComisionFijaCentroSvcContrato_COM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ComisionFijaCentroSvcContrato_COM">
+    <Key>
+      <PropertyRef Name="CCC_IdTipoComisionFija" />
+      <PropertyRef Name="TCF_Descripcion" />
+      <PropertyRef Name="CCC_IdContrato" />
+      <PropertyRef Name="CCC_Estado" />
+      <PropertyRef Name="CCC_FechaInicio" />
+      <PropertyRef Name="CON_FechaFin" />
+      <PropertyRef Name="CCC_IdCentroServicios" />
+      <PropertyRef Name="CCC_Valor" />
+    </Key>
+    <Property Name="CCC_IdTipoComisionFija" Type="smallint" Nullable="false" />
+    <Property Name="TCF_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CCC_IdContrato" Type="int" Nullable="false" />
+    <Property Name="CCC_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CCC_FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="CON_FechaFin" Type="datetime" Nullable="false" />
+    <Property Name="CCC_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CCC_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.ComisionSrvCentroSrvAdmin_VCOM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ComisionSrvCentroSrvAdmin_VCOM">
+    <Key>
+      <PropertyRef Name="UNE_Nombre" />
+      <PropertyRef Name="UNE_IdUnidad" />
+      <PropertyRef Name="SER_IdServicio" />
+      <PropertyRef Name="SER_Nombre" />
+      <PropertyRef Name="CSS_IdCentroServicioServicio" />
+      <PropertyRef Name="SER_Descripcion" />
+      <PropertyRef Name="UNE_Descripcion" />
+      <PropertyRef Name="CSS_IdCentroServicios" />
+      <PropertyRef Name="CSS_Estado" />
+      <PropertyRef Name="CSS_IdServicio" />
+    </Key>
+    <Property Name="UNE_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="UNE_IdUnidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SER_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SER_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TCO_IdTipoComision" Type="smallint" />
+    <Property Name="TCO_Descripcion" Type="varchar" MaxLength="10" />
+    <Property Name="CSS_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="SER_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UNE_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CSS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSS_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="CSA_IdCentroSvcAdministrado" Type="bigint" />
+    <Property Name="CSA_IdCentroServicioServicio" Type="bigint" />
+    <Property Name="CSA_IdAgencia" Type="bigint" />
+    <Property Name="CSA_IdTipoComision" Type="smallint" />
+    <Property Name="CSA_ValorComision" Type="numeric" Precision="16" Scale="4" />
+    <Property Name="CSA_PorcentajeComision" Type="numeric" Precision="16" Scale="4" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.DescuentosServicioCenSrv_VCOM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="DescuentosServicioCenSrv_VCOM">
+    <Key>
+      <PropertyRef Name="CSS_IdCentroServicioServicio" />
+      <PropertyRef Name="CSS_IdCentroServicios" />
+      <PropertyRef Name="CSS_Estado" />
+      <PropertyRef Name="CSS_IdServicio" />
+      <PropertyRef Name="CSS_FechaInicioVenta" />
+      <PropertyRef Name="TDE_IdTipoDescuento" />
+      <PropertyRef Name="TDE_Descripcion" />
+      <PropertyRef Name="CSD_IdCentroServiSrvDescuento" />
+      <PropertyRef Name="CSD_IdCentroServicioServicio" />
+      <PropertyRef Name="CSD_IdTipoDescuento" />
+      <PropertyRef Name="CSD_ValorCriterioPenalizacion" />
+      <PropertyRef Name="CSD_ValorDescuento" />
+      <PropertyRef Name="CSD_PorcentajeDescuento" />
+      <PropertyRef Name="CSD_Descripcion" />
+    </Key>
+    <Property Name="CSS_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CSS_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CSS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="CSS_FechaInicioVenta" Type="datetime" Nullable="false" />
+    <Property Name="TDE_IdTipoDescuento" Type="smallint" Nullable="false" />
+    <Property Name="TDE_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSD_IdCentroServiSrvDescuento" Type="int" Nullable="false" />
+    <Property Name="CSD_IdCentroServicioServicio" Type="bigint" Nullable="false" />
+    <Property Name="CSD_IdTipoDescuento" Type="smallint" Nullable="false" />
+    <Property Name="CSD_ValorCriterioPenalizacion" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_ValorDescuento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_PorcentajeDescuento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CSD_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.PuntosDeAgencia_VPUA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PuntosDeAgencia_VPUA">
+    <Key>
+      <PropertyRef Name="CES_IdCentroServicios" />
+      <PropertyRef Name="CES_Tipo" />
+      <PropertyRef Name="PUS_IdAgencia" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="NombreAgencia" />
+    </Key>
+    <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CES_Tipo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PUS_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="NombreAgencia" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <Association Name="FK_Agencia_PUA_CentroLogistico_PUA">
+    <End Role="CentroLogistico_PUA" Type="ModeloComisiones.Store.CentroLogistico_PUA" Multiplicity="1" />
+    <End Role="Agencia_PUA" Type="ModeloComisiones.Store.Agencia_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdCentroLogistico" />
+      </Principal>
+      <Dependent Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdCentroLogistico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agencia_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloComisiones.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="Agencia_PUA" Type="ModeloComisiones.Store.Agencia_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdAgencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroLogistico_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloComisiones.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="CentroLogistico_PUA" Type="ModeloComisiones.Store.CentroLogistico_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdCentroLogistico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioAdministrado_COM_Agencia_PUA">
+    <End Role="Agencia_PUA" Type="ModeloComisiones.Store.Agencia_PUA" Multiplicity="1" />
+    <End Role="CentroSvcAdministradoComi_COM" Type="ModeloComisiones.Store.CentroSvcAdministradoComi_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdAgencia" />
+      </Principal>
+      <Dependent Role="CentroSvcAdministradoComi_COM">
+        <PropertyRef Name="CSA_IdAgencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioAdministrado_COM_CentroServicioServicio_PUA">
+    <End Role="CentroServicioServicio_PUA" Type="ModeloComisiones.Store.CentroServicioServicio_PUA" Multiplicity="1" />
+    <End Role="CentroSvcAdministradoComi_COM" Type="ModeloComisiones.Store.CentroSvcAdministradoComi_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicioServicio_PUA">
+        <PropertyRef Name="CSS_IdCentroServicioServicio" />
+      </Principal>
+      <Dependent Role="CentroSvcAdministradoComi_COM">
+        <PropertyRef Name="CSA_IdCentroServicioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioComiFija_COM_CentroServicios_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloComisiones.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="CentroServicioComiFija_COM" Type="ModeloComisiones.Store.CentroServicioComiFija_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="CentroServicioComiFija_COM">
+        <PropertyRef Name="CSD_IdCentroServicios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioComiFija_COM_TipoComisionFija_COM">
+    <End Role="TipoComisionFija_COM" Type="ModeloComisiones.Store.TipoComisionFija_COM" Multiplicity="1" />
+    <End Role="CentroServicioComiFija_COM" Type="ModeloComisiones.Store.CentroServicioComiFija_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoComisionFija_COM">
+        <PropertyRef Name="TCF_IdTipoComisionFija" />
+      </Principal>
+      <Dependent Role="CentroServicioComiFija_COM">
+        <PropertyRef Name="CSD_IdTipoComisionFija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioServicio_PUA_CentroServicios_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloComisiones.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="CentroServicioServicio_PUA" Type="ModeloComisiones.Store.CentroServicioServicio_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="CentroServicioServicio_PUA">
+        <PropertyRef Name="CSS_IdCentroServicios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioServicioDia_PUA_CentroServicioServicio_PUA">
+    <End Role="CentroServicioServicio_PUA" Type="ModeloComisiones.Store.CentroServicioServicio_PUA" Multiplicity="1" />
+    <End Role="CentroServicioServicioDia_PUA" Type="ModeloComisiones.Store.CentroServicioServicioDia_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicioServicio_PUA">
+        <PropertyRef Name="CSS_IdCentroServicioServicio" />
+      </Principal>
+      <Dependent Role="CentroServicioServicioDia_PUA">
+        <PropertyRef Name="CSD_IdCentroServicioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioServicioDia_PUA_Dia_PAR">
+    <End Role="Dia_PAR" Type="ModeloComisiones.Store.Dia_PAR" Multiplicity="1" />
+    <End Role="CentroServicioServicioDia_PUA" Type="ModeloComisiones.Store.CentroServicioServicioDia_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dia_PAR">
+        <PropertyRef Name="DIA_IdDia" />
+      </Principal>
+      <Dependent Role="CentroServicioServicioDia_PUA">
+        <PropertyRef Name="CSD_IdDia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioSrvComi_COM_CentroServicioServicio_PUA">
+    <End Role="CentroServicioServicio_PUA" Type="ModeloComisiones.Store.CentroServicioServicio_PUA" Multiplicity="1" />
+    <End Role="CentroServicioSrvComi_COM" Type="ModeloComisiones.Store.CentroServicioSrvComi_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicioServicio_PUA">
+        <PropertyRef Name="CSS_IdCentroServicioServicio" />
+      </Principal>
+      <Dependent Role="CentroServicioSrvComi_COM">
+        <PropertyRef Name="CSC_IdCentroServicioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioSrvComi_COM_TipoComision_COM1">
+    <End Role="TipoComision_COM" Type="ModeloComisiones.Store.TipoComision_COM" Multiplicity="1" />
+    <End Role="CentroServicioSrvComi_COM" Type="ModeloComisiones.Store.CentroServicioSrvComi_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoComision_COM">
+        <PropertyRef Name="TCO_IdTipoComision" />
+      </Principal>
+      <Dependent Role="CentroServicioSrvComi_COM">
+        <PropertyRef Name="CSC_IdTipoComision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicioSrvDescuento_COM_CentroServicioServicio_PUA">
+    <End Role="CentroServicioServicio_PUA" Type="ModeloComisiones.Store.CentroServicioServicio_PUA" Multiplicity="1" />
+    <End Role="CentroServicioSrvDescuento_COM" Type="ModeloComisiones.Store.CentroServicioSrvDescuento_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicioServicio_PUA">
+        <PropertyRef Name="CSS_IdCentroServicioServicio" />
+      </Principal>
+      <Dependent Role="CentroServicioSrvDescuento_COM">
+        <PropertyRef Name="CSD_IdCentroServicioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroSrvComiFijaContrato_COM_CentroServicios_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloComisiones.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="CentroSrvComiFijaContrato_COM" Type="ModeloComisiones.Store.CentroSrvComiFijaContrato_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="CentroSrvComiFijaContrato_COM">
+        <PropertyRef Name="CCC_IdCentroServicios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroSrvComiFijaContrato_COM_TipoComisionFija_COM">
+    <End Role="TipoComisionFija_COM" Type="ModeloComisiones.Store.TipoComisionFija_COM" Multiplicity="1" />
+    <End Role="CentroSrvComiFijaContrato_COM" Type="ModeloComisiones.Store.CentroSrvComiFijaContrato_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoComisionFija_COM">
+        <PropertyRef Name="TCF_IdTipoComisionFija" />
+      </Principal>
+      <Dependent Role="CentroSrvComiFijaContrato_COM">
+        <PropertyRef Name="CCC_IdTipoComisionFija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroSvcAdministradoComi_COM_TipoComision_COM">
+    <End Role="TipoComision_COM" Type="ModeloComisiones.Store.TipoComision_COM" Multiplicity="1" />
+    <End Role="CentroSvcAdministradoComi_COM" Type="ModeloComisiones.Store.CentroSvcAdministradoComi_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoComision_COM">
+        <PropertyRef Name="TCO_IdTipoComision" />
+      </Principal>
+      <Dependent Role="CentroSvcAdministradoComi_COM">
+        <PropertyRef Name="CSA_IdTipoComision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LiquidacionComisiones_COM_TipoComision_COM">
+    <End Role="TipoComision_COM" Type="ModeloComisiones.Store.TipoComision_COM" Multiplicity="1" />
+    <End Role="LiquidacionComisiones_COM" Type="ModeloComisiones.Store.LiquidacionComisiones_COM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoComision_COM">
+        <PropertyRef Name="TCO_IdTipoComision" />
+      </Principal>
+      <Dependent Role="LiquidacionComisiones_COM">
+        <PropertyRef Name="LIC_IdTipoComision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PuntoServicio_PUA_Agencia_PUA">
+    <End Role="Agencia_PUA" Type="ModeloComisiones.Store.Agencia_PUA" Multiplicity="1" />
+    <End Role="PuntoServicio_PUA" Type="ModeloComisiones.Store.PuntoServicio_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdAgencia" />
+      </Principal>
+      <Dependent Role="PuntoServicio_PUA">
+        <PropertyRef Name="PUS_IdAgencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PuntoServicio_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloComisiones.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="PuntoServicio_PUA" Type="ModeloComisiones.Store.PuntoServicio_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="PuntoServicio_PUA">
+        <PropertyRef Name="PUS_IdPuntoServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paInsertarLiquidacionComision_COM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LIC_NumeroOperacion" Type="bigint" Mode="In" />
+    <Parameter Name="LIC_IdServicio" Type="int" Mode="In" />
+    <Parameter Name="LIC_IdTipoComision" Type="smallint" Mode="In" />
+    <Parameter Name="LIC_IdCentroServiciosVenta" Type="bigint" Mode="In" />
+    <Parameter Name="LIC_NombreCentroServiciosVenta" Type="varchar" Mode="In" />
+    <Parameter Name="LIC_IdCentroServiosResponsable" Type="bigint" Mode="In" />
+    <Parameter Name="LIC_NombreCtroSvcsResponsable" Type="varchar" Mode="In" />
+    <Parameter Name="LIC_ValorBaseComision" Type="numeric" Mode="In" />
+    <Parameter Name="LIC_ComisionVenta" Type="numeric" Mode="In" />
+    <Parameter Name="LIC_ValorFijoComisionVenta" Type="numeric" Mode="In" />
+    <Parameter Name="LIC_PorcentajeComisionVenta" Type="numeric" Mode="In" />
+    <Parameter Name="LIC_ComisionResponsable" Type="numeric" Mode="In" />
+    <Parameter Name="LIC_ValorFijoComisionResponsable" Type="numeric" Mode="In" />
+    <Parameter Name="LIC_PorcentajeComisionResponsable" Type="numeric" Mode="In" />
+    <Parameter Name="LIC_FechaProduccion" Type="datetime" Mode="In" />
+    <Parameter Name="LIC_NumeroProduccion" Type="bigint" Mode="In" />
+    <Parameter Name="LIC_EstaAprobada" Type="bit" Mode="In" />
+    <Parameter Name="LIC_NumeroProduccionResponsabl" Type="varchar" Mode="In" />
+    <Parameter Name="LIC_FechaProduccionResponsable" Type="datetime" Mode="In" />
+    <Parameter Name="LIC_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="LIC_CreadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="LIC_EsRegistroValido" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paObtenerComCenSerServicio_COM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCentroServicio" Type="bigint" Mode="In" />
+    <Parameter Name="servicio" Type="int" Mode="In" />
+    <Parameter Name="tipoComision" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerComiAdmonCentroSvc_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPuntoCentro" Type="bigint" Mode="In" />
+    <Parameter Name="idServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerComiCentroServicio_COM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCentroServicio" Type="bigint" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+    <Parameter Name="tipoComision" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerComisionRealizadaPuntoYResponsable_COM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroDocumento" Type="bigint" Mode="In" />
+  </Function>
+</Schema>

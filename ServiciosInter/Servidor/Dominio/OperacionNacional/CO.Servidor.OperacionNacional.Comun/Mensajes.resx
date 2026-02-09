@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EX_000" xml:space="preserve">
+    <value>Mensaje de error {0} no se encuentra configurado.</value>
+  </data>
+  <data name="EX_001" xml:space="preserve">
+    <value>No se pudo crear el consolidado</value>
+  </data>
+  <data name="EX_002" xml:space="preserve">
+    <value>No se pudo agregar el envio al consolidado</value>
+  </data>
+  <data name="EX_003" xml:space="preserve">
+    <value>La guia ya fue manifestada como una guia consolidada</value>
+  </data>
+  <data name="EX_004" xml:space="preserve">
+    <value>No se pudo agregar la guia suelta</value>
+    <comment>Error cuando no se pudo insertar una guia suelta</comment>
+  </data>
+  <data name="EX_005" xml:space="preserve">
+    <value>La guia no se a ingresado al centro de acopio</value>
+    <comment>Error cuando no se encuentra la guia en el centro de acopio de una ciudad</comment>
+  </data>
+  <data name="EX_006" xml:space="preserve">
+    <value>No se pudo crear el motivo de eliminación de la guia. \n  La guia no fue eliminada del manifiesto.</value>
+    <comment>Error cuando no se puede crear el motivo de eliminacion de una guia de un manifiesto</comment>
+  </data>
+  <data name="EX_007" xml:space="preserve">
+    <value>No se pudo crear el manifiesto.</value>
+    <comment>Error cuando no se puede crear un manifiesto</comment>
+  </data>
+  <data name="EX_008" xml:space="preserve">
+    <value>La guia ya fue manifestada como una guia suelta</value>
+  </data>
+  <data name="EX_009" xml:space="preserve">
+    <value>La ciudad de destino de la guia no pertenece a la ruta</value>
+  </data>
+  <data name="EX_010" xml:space="preserve">
+    <value>La ciudad de destino de la guia, no pertenece a la ciudad que se esta manifestando ni a su area de influencia</value>
+  </data>
+  <data name="EX_011" xml:space="preserve">
+    <value>El vehiculo no ha realizado ingreso a la agencia.</value>
+    <comment>Error cuando el vehiculo no ha realizado ingreso a la agencia</comment>
+  </data>
+  <data name="EX_012" xml:space="preserve">
+    <value>La ciudad de ingreso no pertenece a la ruta o a las estaciones de la ruta</value>
+    <comment>Error cuando la ciudad del ingreso no esta en la ruta</comment>
+  </data>
+  <data name="EX_013" xml:space="preserve">
+    <value>No se pudo consultar los estados del empaque.</value>
+    <comment>Error cuando no se puede obtener la lista de estados de empaque</comment>
+  </data>
+  <data name="EX_014" xml:space="preserve">
+    <value>No se pudo crear el ingreso a la agencia del operativo</value>
+    <comment>Error al crear el ingreso del operativo a la agencia</comment>
+  </data>
+  <data name="EX_015" xml:space="preserve">
+    <value>Ciudad de origen del consolidado: {0}, numero de precinto de despacho: {1}, numero de precinto de llagada: {2}, Novedad {3}  </value>
+    <comment>Comentarios de la falla por difrencia en el número del precinto</comment>
+  </data>
+  <data name="EX_016" xml:space="preserve">
+    <value>Número de guía: {0}, novedad: {1}, Ciudad de origen: {2}</value>
+    <comment>Comentarios de la falla por estado del empaque sin bolsa de seguridad</comment>
+  </data>
+  <data name="EX_017" xml:space="preserve">
+    <value>No se encuentra ninguna ruta ni conductor asociado a la placa.</value>
+    <comment>Error cuando No se encuentra ninguna ruta ni conductor asociado a la placa.</comment>
+  </data>
+  <data name="EX_018" xml:space="preserve">
+    <value>No se puede realizar  {0} del vehículo:  {1} en la Agencia {2}, ya que este ya fue realizado.</value>
+    <comment>El sistema valida que el registro a seleccionar (Llegada, Salida) no sea igual al ultimo registro ingresado para el mismo Vehículo</comment>
+  </data>
+  <data name="EX_019" xml:space="preserve">
+    <value>Núm guía: {0}, peso admisión: {1}, peso ingreso {2}, punto origen: {3}, punto destino:{4}</value>
+    <comment>Comentarios para la falla por diferencia de peso</comment>
+  </data>
+  <data name="EX_020" xml:space="preserve">
+    <value>El envío ingresado no es un envío tránsito</value>
+    <comment>Error para los envios ingresados en la seccion de envios transitos</comment>
+  </data>
+  <data name="EX_021" xml:space="preserve">
+    <value>El número de guía interna no está manifestado al vehículo ingresado</value>
+    <comment>Error para los envios transitos que no estan manifestados</comment>
+  </data>
+  <data name="EX_022" xml:space="preserve">
+    <value>El envío ya fue ingresado a centro de acopio</value>
+    <comment>Error cuando el envio ya se ingreso en centro acopio</comment>
+  </data>
+  <data name="EX_023" xml:space="preserve">
+    <value>No se puede cambiar la guía {0}, del estado {1} al estado {2}</value>
+    <comment>Error cuando no se puede cambiar el estado de la guia</comment>
+  </data>
+  <data name="EX_024" xml:space="preserve">
+    <value>No existe ningún consolidado con ese número de guía interna.</value>
+    <comment>No existe ningún consolidado con ese número de guía interna.</comment>
+  </data>
+  <data name="EX_025" xml:space="preserve">
+    <value>La ciudad destino del envio tiene configurada una ruta, realice el descargue por Ingreso por ruta</value>
+    <comment>Error cuando la ciudad destino del envio tiene configurada una ruta</comment>
+  </data>
+  <data name="EX_026" xml:space="preserve">
+    <value>No se pudo consultar el manifiesto. Revise la asignacion de vehiculo al manifiesto </value>
+    <comment>Error al consultar un manifiesto</comment>
+  </data>
+  <data name="EX_027" xml:space="preserve">
+    <value>La guía no se encuentra dentro de un centro de acopio</value>
+    <comment>La guía no se encuentra dentro de un centro de acopio</comment>
+  </data>
+  <data name="EX_028" xml:space="preserve">
+    <value>La guía {0}, no es una guía interna</value>
+    <comment>Mensaje de error para las guias que no son internas</comment>
+  </data>
+  <data name="EX_029" xml:space="preserve">
+    <value>No se puede volver a abrir el manifiesto.</value>
+  </data>
+  <data name="EX_030" xml:space="preserve">
+    <value>No se pueden obtener los datos del conductor</value>
+  </data>
+  <data name="EX_031" xml:space="preserve">
+    <value>No se pueden obtener los datos del vehiculo</value>
+  </data>
+  <data name="EX_032" xml:space="preserve">
+    <value>Manifiesto sin vehiculo configurado</value>
+  </data>
+  <data name="EX_033" xml:space="preserve">
+    <value>Guía interna {0}, no aprovisionada</value>
+    <comment>Error cuando una guía interna no esta aprovisionada</comment>
+  </data>
+  <data name="EX_034" xml:space="preserve">
+    <value>No existe un ingreso a la agencia</value>
+    <comment>Indica si no hay un ingreso operativo agencia creado</comment>
+  </data>
+  <data name="EX_035" xml:space="preserve">
+    <value>No se pudo obtener información del destino de la guía o de la ciudad manifestada.</value>
+    <comment>Indica que no se pudo obtener información del destino de la guía o de la ciudad manifestada.</comment>
+  </data>
+  <data name="EX_036" xml:space="preserve">
+    <value>La guía no se puede manifestar, porque el destino de la guía esta antes que la estación a la que se esta manifestando</value>
+    <comment>Indica que la guía no se puede manifestar, porque el destino de la guía esta antes que la estación a la que se esta manifestando</comment>
+  </data>
+  <data name="EX_037" xml:space="preserve">
+    <value>La guía no se puede manifestar, porque al destino de la guía no se puede llegar desde la agencia manifestada.</value>
+    <comment>Indica que la guía no se puede manifestar, porque al destino de la guía no se puede llegar desde la agencia manifestada.</comment>
+  </data>
+  <data name="EX_038" xml:space="preserve">
+    <value>Indica que el parametro que esta buscando no existe</value>
+  </data>
+  <data name="EX_039" xml:space="preserve">
+    <value>El Ingreso a centro de acopio fue cerrado anteriormente.</value>
+  </data>
+  <data name="EX_040" xml:space="preserve">
+    <value>No se puede encontrar el consolidado, por favor revise los parametros de bisqueda</value>
+  </data>
+  <data name="EX_041" xml:space="preserve">
+    <value>La guia no existe</value>
+  </data>
+  <data name="EX_042" xml:space="preserve">
+    <value>Error al cambiar estado de la guía</value>
+  </data>
+  <data name="EX_043" xml:space="preserve">
+    <value>El envío se de debe ingresar por ingreso a centro de acopio urbano</value>
+  </data>
+  <data name="EX_044" xml:space="preserve">
+    <value>El contenedor o la tula {0} ya fué manifestado.</value>
+  </data>
+  <data name="EX_045" xml:space="preserve">
+    <value>La guía ya fué ingresada al centro de acopio</value>
+  </data>
+  <data name="EX_046" xml:space="preserve">
+    <value>La Tula/Consolidado no esta activo o no pertenece a la ciudad</value>
+  </data>
+  <data name="EX_047" xml:space="preserve">
+    <value>La Tula/Consolidado ya esta siendo utilizado en otro proceso</value>
+  </data>
+  <data name="EX_048" xml:space="preserve">
+    <value>El vehículo está asignado a uno o varios manifiestos abiertos {0}</value>
+  </data>
+  <data name="EX_049" xml:space="preserve">
+    <value>El número de  tula o consolidado no existe.</value>
+  </data>
+  <data name="IN_001" xml:space="preserve">
+    <value>el Ingreso</value>
+    <comment>Indica que ingreso un transportador</comment>
+  </data>
+  <data name="IN_002" xml:space="preserve">
+    <value>la Salida</value>
+    <comment>Indica que salio un transportador</comment>
+  </data>
+</root>

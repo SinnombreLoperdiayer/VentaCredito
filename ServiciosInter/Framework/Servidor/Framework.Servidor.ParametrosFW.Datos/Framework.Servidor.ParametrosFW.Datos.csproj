@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5AB9D9BA-56EC-4CDB-9F7B-4EC3F1C05DCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.Servidor.ParametrosFW.Datos</RootNamespace>
+    <AssemblyName>Framework.Servidor.ParametrosFW.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MapperRepositorio.cs" />
+    <Compile Include="Modelo\AbreviaturasDireccion.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ArchivosFramework.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Banco_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CalendarioFestivos_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Cargo_SEG.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CondicionOperadorPostaHist_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CondicionOperadorPostal_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CondicionOperadorPostal_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConsecutivoPorCol_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConsecutivosGlobales_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DestinatariosAlerta_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Dia_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EstadoActivoInactivo_VFRM.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EstadoEmpaque_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GrupoAlerta_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ListaNegra_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LocalidadEnZona_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LocalidadEnZona_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidades_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidad_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MedioTransporte_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MenuCapacitacion_VER.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Mes_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloParametros.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloParametros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloParametros.Context.Extensions.cs">
+      <DependentUpon>ModeloParametros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloParametros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MotivoEstados_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MunicipioRegionalAdm_PUA.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Ocupacion_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\OperadorPostalZonaHist_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\OperadorPostalZona_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\OperadorPostal_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PApaConsecutivoGlobal.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PApaConsecutivoPorCol.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ParametrosAdmisionesHist_MEN.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ParametrosAdmisiones_MEN.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ParametrosFramework.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Parentesto_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaExterna_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInternaCargoCenSer_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInternaCargoRegional_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInternaHistorico_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInterna_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaResponsableLegal_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaResponsableServicio_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Plantilla_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ResponsableLegal_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ResponsableServicio_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Semana_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoActividadEconomica_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoAlertaDestinatarios_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoAlerta_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoConsecutivo_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoCuentaBanco_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoDocumentoBanco_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoIdentificacion_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoListaNegra_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoLocalidad_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoRegimenContributivo_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoSectorCliente_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoSegmentoMercado_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoSociedad_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoZona_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UnidadMedida_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\VariacionesDireccion.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ZonaDeLocalidadLocalidad_VPAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ZonaDeLocalidad_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Zona_PAR.cs">
+      <DependentUpon>ModeloParametros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PARepositorio.cs" />
+    <Compile Include="Modelo\ModeloParametros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloParametros.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PARepositorioAudit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Modelo\ModeloParametros.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloParametros.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo\ModeloParametros.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloParametros.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Modelo\ModeloParametros.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloParametros.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servidor\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{e9d4dc9f-7dfc-4ee7-88ef-78f5688aed71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace CO.Servidor.LogisticaInversa.Comun
+{
+    public enum EnumMotivoGuiaRaps
+    {
+        FALSO_MOTIVO_DEVOLUCION = 27,
+        A_PETICION_DEL_REMITENTE = 142,
+        ACCIDENTE = 117,
+        AVERIADO = 131,
+        BLOQUEO_DE_CALLES_CRUDO_INVIERNO_MANIFESTACION_ORDEN_PUBLICO = 118,
+        CAMBIAR_NUEVA_DIRECCION_DE_ENTREGA = 136,
+        CAMBIO_DE_DOMICILIO = 124,
+        CONTENIDO_INCOMPLETO_HURTO = 132,
+        DESTINATARIO_DESCONOCIDO = 129,
+        DIRECCION_INCOMPLETA = 126,
+        DIRECCION_NO_EXISTE = 127,
+        ENVIO_CRUZADO_TROCADO = 140,
+        FALLECIDO = 125,
+        FUERA_DE_ZONA = 116,
+        HUELGA = 119,
+        HURTO = 139,
+        INCAUTADO = 138,
+        INMUEBLE_DESHABITADO = 123,
+        NO_CORRESPONDE_LA_CIUDAD_DESTINO = 128,
+        NO_PAGARON_EL_ALCOBRO = 133,
+        NO_PAGARON_PRODUCTO_CONTRAPAGO = 134,
+        RESIDENTE_AUSENTE = 121,
+        RESIDENTE_AUSENTE_NO_ALCANZO_EL_MENSAJERO = 122,
+        SE_NEGO_A_RECIBIR = 130,
+        VACACIONES = 120,
+
+
+    }
+}

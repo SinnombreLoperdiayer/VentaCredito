@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC2C7B64-F47B-4983-AD5E-F64E93543B15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.ExploradorGiros.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.ExploradorGiros.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GIRepositorioExploradorGiros.cs" />
+    <Compile Include="Modelo\AdmisionGiros_GIR.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GestionGiroTelemercadeo_GIR.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GIpaObtenerGiroAdicionales.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GIpaObtenerGiroImpuestos.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GIpaObtenerGiroPeatonConvenio.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GIpaObtenerGiroPeatonPeaton.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\HistoricoEstadosGiro_GIR.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloExploradorGiros.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloExploradorGiros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloExploradorGiros.Context.Extensions.cs">
+      <DependentUpon>ModeloExploradorGiros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloExploradorGiros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloExploradorGiros.Designer.cs">
+      <DependentUpon>ModeloExploradorGiros.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Modelo\ModeloExploradorGiros.Views.cs" />
+    <Compile Include="Modelo\paGenerarReporteUIAFGirosRS_GIR.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGiroExplorador_GIR.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGiroInfoPago_GIR_Result.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ResultadoTelemercadeoGiro_GIR.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoGiro_GIR.cs">
+      <DependentUpon>ModeloExploradorGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Servicios\Servidor.Servicios.Contratos\CO.Servidor.Servicios.Contratos.csproj">
+      <Project>{8A2CF99A-65A5-43D5-B95B-D0A232E1A941}</Project>
+      <Name>CO.Servidor.Servicios.Contratos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Comun\CO.Servidor.Dominio.Comun.Middleware\CO.Servidor.Dominio.Comun.Middleware.csproj">
+      <Project>{826B7134-398B-474F-9C60-3F433F0441F1}</Project>
+      <Name>CO.Servidor.Dominio.Comun.Middleware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512C6601-1C3C-455A-A91A-10906C2F2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CO.Servidor.GestionGiros.Comun\CO.Servidor.GestionGiros.Comun.csproj">
+      <Project>{C60195CA-714F-46BF-A4D1-595397A8F7C3}</Project>
+      <Name>CO.Servidor.GestionGiros.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Modelo\ModeloExploradorGiros.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloExploradorGiros.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EntityDeploy>
+    <None Include="Modelo\ModeloExploradorGiros.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloExploradorGiros.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloExploradorGiros.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloExploradorGiros.msl" />
+    <EmbeddedResource Include="Modelo\ModeloExploradorGiros.ssdl" />
+    <None Include="Modelo\ModeloExploradorGiros.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloExploradorGiros.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloExploradorGiros.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloExploradorGiros.csdl" "/inmsl:$(TargetDir)Modelo/ModeloExploradorGiros.msl" "/outviews:$(ProjectDir)Modelo/ModeloExploradorGiros.Views.cs"
+
+XCOPY  "$(TargetDir)Modelo/ModeloExploradorGiros.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloExploradorGiros.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloExploradorGiros.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY  "$(TargetDir)Modelo/ModeloExploradorGiros.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloExploradorGiros.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloExploradorGiros.msl" "$(ProjectDir)Modelo" /F /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

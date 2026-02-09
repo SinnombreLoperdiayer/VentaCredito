@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EstadosGuiaModelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EstadosGuiaModeloStoreContainer">
+    <EntitySet Name="CambioFechaEntrega_MEN" EntityType="EstadosGuiaModelo.Store.CambioFechaEntrega_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadoGuia_MEN" EntityType="EstadosGuiaModelo.Store.EstadoGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadoGuiaTraza_MEN" EntityType="EstadosGuiaModelo.Store.EstadoGuiaTraza_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoGuia_MEN" EntityType="EstadosGuiaModelo.Store.MotivoGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoGuiaCRC_MEN" EntityType="EstadosGuiaModelo.Store.MotivoGuiaCRC_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoGuiaTransicionEstado_MEN" EntityType="EstadosGuiaModelo.Store.MotivoGuiaTransicionEstado_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PredecesoresEstadoGuia_MEN" EntityType="EstadosGuiaModelo.Store.PredecesoresEstadoGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEvidenciaDevolucion_MEN" EntityType="EstadosGuiaModelo.Store.TipoEvidenciaDevolucion_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoMotivoGuia_MEN" EntityType="EstadosGuiaModelo.Store.TipoMotivoGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoNovedad_MEN" EntityType="EstadosGuiaModelo.Store.TipoNovedad_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoNovedadGuia_MEN" EntityType="EstadosGuiaModelo.Store.TipoNovedadGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_MotivoGuia_MEN_MotivoGuiaCRC_MEN" Association="EstadosGuiaModelo.Store.FK_MotivoGuia_MEN_MotivoGuiaCRC_MEN">
+      <End Role="MotivoGuiaCRC_MEN" EntitySet="MotivoGuiaCRC_MEN" />
+      <End Role="MotivoGuia_MEN" EntitySet="MotivoGuia_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotivoGuia_MEN_TipoMotivoGuia_MEN" Association="EstadosGuiaModelo.Store.FK_MotivoGuia_MEN_TipoMotivoGuia_MEN">
+      <End Role="TipoMotivoGuia_MEN" EntitySet="TipoMotivoGuia_MEN" />
+      <End Role="MotivoGuia_MEN" EntitySet="MotivoGuia_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN" Association="EstadosGuiaModelo.Store.FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN">
+      <End Role="EstadoGuia_MEN" EntitySet="EstadoGuia_MEN" />
+      <End Role="MotivoGuiaTransicionEstado_MEN" EntitySet="MotivoGuiaTransicionEstado_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN1" Association="EstadosGuiaModelo.Store.FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN1">
+      <End Role="EstadoGuia_MEN" EntitySet="EstadoGuia_MEN" />
+      <End Role="MotivoGuiaTransicionEstado_MEN" EntitySet="MotivoGuiaTransicionEstado_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotivoGuiaTranscionEstado_MEN_MotivoGuia_MEN" Association="EstadosGuiaModelo.Store.FK_MotivoGuiaTranscionEstado_MEN_MotivoGuia_MEN">
+      <End Role="MotivoGuia_MEN" EntitySet="MotivoGuia_MEN" />
+      <End Role="MotivoGuiaTransicionEstado_MEN" EntitySet="MotivoGuiaTransicionEstado_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PredecesoresEstadoGuia_MEN_EstadoGuia_MEN" Association="EstadosGuiaModelo.Store.FK_PredecesoresEstadoGuia_MEN_EstadoGuia_MEN">
+      <End Role="EstadoGuia_MEN" EntitySet="EstadoGuia_MEN" />
+      <End Role="PredecesoresEstadoGuia_MEN" EntitySet="PredecesoresEstadoGuia_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PredecesoresEstadoGuia_MEN_EstadoGuia_MEN1" Association="EstadosGuiaModelo.Store.FK_PredecesoresEstadoGuia_MEN_EstadoGuia_MEN1">
+      <End Role="EstadoGuia_MEN" EntitySet="EstadoGuia_MEN" />
+      <End Role="PredecesoresEstadoGuia_MEN" EntitySet="PredecesoresEstadoGuia_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoNovedadGuia_MEN_TipoNovedad_MEN" Association="EstadosGuiaModelo.Store.FK_TipoNovedadGuia_MEN_TipoNovedad_MEN">
+      <End Role="TipoNovedad_MEN" EntitySet="TipoNovedad_MEN" />
+      <End Role="TipoNovedadGuia_MEN" EntitySet="TipoNovedadGuia_MEN" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CambioFechaEntrega_MEN">
+    <Key>
+      <PropertyRef Name="CFE_IdCambioFechaEntrega" />
+    </Key>
+    <Property Name="CFE_IdCambioFechaEntrega" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CFE_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="CFE_TiempoAfectacion" Type="smallint" Nullable="false" />
+    <Property Name="CFE_FechaEntregaInicial" Type="datetime" Nullable="false" />
+    <Property Name="CFE_FechaEntregaFinal" Type="datetime" Nullable="false" />
+    <Property Name="CFE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CFE_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadoGuia_MEN">
+    <Key>
+      <PropertyRef Name="ESG_IdEstadoGuia" />
+    </Key>
+    <Property Name="ESG_IdEstadoGuia" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESG_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ESG_EsVisible" Type="bit" Nullable="false" />
+    <Property Name="ESG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ESG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ESG_PermiteDevolver" Type="bit" />
+  </EntityType>
+  <EntityType Name="EstadoGuiaTraza_MEN">
+    <Key>
+      <PropertyRef Name="EGT_IdEstadoGuiaLog" />
+    </Key>
+    <Property Name="EGT_IdEstadoGuiaLog" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EGT_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="EGT_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="EGT_IdEstadoGuia" Type="smallint" Nullable="false" />
+    <Property Name="EGT_DescripcionEstado" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="EGT_EsVisible" Type="bit" Nullable="false" />
+    <Property Name="EGT_Observacion" Type="varchar" MaxLength="250" />
+    <Property Name="EGT_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="EGT_NombreLocalidad" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="EGT_IdModulo" Type="nchar" MaxLength="10" />
+    <Property Name="EGT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="EGT_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MotivoGuia_MEN">
+    <Key>
+      <PropertyRef Name="MOG_IdMotivoGuia" />
+    </Key>
+    <Property Name="MOG_IdMotivoGuia" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MOG_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MOG_IdTipoMotivoGuia" Type="smallint" Nullable="false" />
+    <Property Name="MOG_EsVisible" Type="bit" Nullable="false" />
+    <Property Name="MOG_SeReporta" Type="bit" Nullable="false" />
+    <Property Name="MOG_SolicitaEscaneo" Type="bit" Nullable="false" />
+    <Property Name="MOG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MOG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MOG_IdMotivoGuiaCRC" Type="smallint" Nullable="false" />
+    <Property Name="MOG_CausaSupervision" Type="bit" Nullable="false" />
+    <Property Name="MOG_NombreAssembly" Type="varchar" MaxLength="100" />
+    <Property Name="MOG_Namespace" Type="varchar" MaxLength="100" />
+    <Property Name="MOG_NombreClase" Type="varchar" MaxLength="50" />
+    <Property Name="MOG_TiempoAfectacion" Type="int" />
+  </EntityType>
+  <EntityType Name="MotivoGuiaCRC_MEN">
+    <Key>
+      <PropertyRef Name="MGC_IdMotivoGuiaCRC" />
+    </Key>
+    <Property Name="MGC_IdMotivoGuiaCRC" Type="smallint" Nullable="false" />
+    <Property Name="MGC_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MGC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MGC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MotivoGuiaTransicionEstado_MEN">
+    <Key>
+      <PropertyRef Name="MGT_IdMotivoGuiaTransicionEsta" />
+    </Key>
+    <Property Name="MGT_IdMotivoGuiaTransicionEsta" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MGT_IdMotivoGuia" Type="smallint" Nullable="false" />
+    <Property Name="MGT_IdEstadoGuiaDesde" Type="smallint" Nullable="false" />
+    <Property Name="MGT_IdEstadoGuiaHasta" Type="smallint" Nullable="false" />
+    <Property Name="MGT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MGT_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PredecesoresEstadoGuia_MEN">
+    <Key>
+      <PropertyRef Name="PEG_IdEstadoGuia" />
+      <PropertyRef Name="PEG_IdEstadoGuiaPredecesor" />
+    </Key>
+    <Property Name="PEG_IdEstadoGuia" Type="smallint" Nullable="false" />
+    <Property Name="PEG_IdEstadoGuiaPredecesor" Type="smallint" Nullable="false" />
+    <Property Name="PEG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PEG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoEvidenciaDevolucion_MEN">
+    <Key>
+      <PropertyRef Name="TIV_IdTipoEvidenciaDevolucion" />
+    </Key>
+    <Property Name="TIV_IdTipoEvidenciaDevolucion" Type="smallint" Nullable="false" />
+    <Property Name="TIV_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TIV_IdSuministro" Type="int" Nullable="false" />
+    <Property Name="TIV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIV_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoMotivoGuia_MEN">
+    <Key>
+      <PropertyRef Name="TMG_IdTipoMotivoGuia" />
+    </Key>
+    <Property Name="TMG_IdTipoMotivoGuia" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TMG_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TMG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TMG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoNovedad_MEN">
+    <Key>
+      <PropertyRef Name="TNV_IdTipoNovedad" />
+    </Key>
+    <Property Name="TNV_IdTipoNovedad" Type="smallint" Nullable="false" />
+    <Property Name="TNV_Descripcion" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="TNV_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TNV_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoNovedadGuia_MEN">
+    <Key>
+      <PropertyRef Name="TNG_IdTipoNovedadGuia" />
+    </Key>
+    <Property Name="TNG_IdTipoNovedadGuia" Type="smallint" Nullable="false" />
+    <Property Name="TNG_IdTipoNovedad" Type="smallint" Nullable="false" />
+    <Property Name="TNG_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TNG_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TNG_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TNG_TiempoAfectacion" Type="smallint" Nullable="false" />
+    <Property Name="TNG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TNG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_MotivoGuia_MEN_MotivoGuiaCRC_MEN">
+    <End Role="MotivoGuiaCRC_MEN" Type="EstadosGuiaModelo.Store.MotivoGuiaCRC_MEN" Multiplicity="1" />
+    <End Role="MotivoGuia_MEN" Type="EstadosGuiaModelo.Store.MotivoGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MotivoGuiaCRC_MEN">
+        <PropertyRef Name="MGC_IdMotivoGuiaCRC" />
+      </Principal>
+      <Dependent Role="MotivoGuia_MEN">
+        <PropertyRef Name="MOG_IdMotivoGuiaCRC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotivoGuia_MEN_TipoMotivoGuia_MEN">
+    <End Role="TipoMotivoGuia_MEN" Type="EstadosGuiaModelo.Store.TipoMotivoGuia_MEN" Multiplicity="1" />
+    <End Role="MotivoGuia_MEN" Type="EstadosGuiaModelo.Store.MotivoGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMotivoGuia_MEN">
+        <PropertyRef Name="TMG_IdTipoMotivoGuia" />
+      </Principal>
+      <Dependent Role="MotivoGuia_MEN">
+        <PropertyRef Name="MOG_IdTipoMotivoGuia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN">
+    <End Role="EstadoGuia_MEN" Type="EstadosGuiaModelo.Store.EstadoGuia_MEN" Multiplicity="1" />
+    <End Role="MotivoGuiaTransicionEstado_MEN" Type="EstadosGuiaModelo.Store.MotivoGuiaTransicionEstado_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoGuia_MEN">
+        <PropertyRef Name="ESG_IdEstadoGuia" />
+      </Principal>
+      <Dependent Role="MotivoGuiaTransicionEstado_MEN">
+        <PropertyRef Name="MGT_IdEstadoGuiaDesde" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN1">
+    <End Role="EstadoGuia_MEN" Type="EstadosGuiaModelo.Store.EstadoGuia_MEN" Multiplicity="1" />
+    <End Role="MotivoGuiaTransicionEstado_MEN" Type="EstadosGuiaModelo.Store.MotivoGuiaTransicionEstado_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoGuia_MEN">
+        <PropertyRef Name="ESG_IdEstadoGuia" />
+      </Principal>
+      <Dependent Role="MotivoGuiaTransicionEstado_MEN">
+        <PropertyRef Name="MGT_IdEstadoGuiaHasta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotivoGuiaTranscionEstado_MEN_MotivoGuia_MEN">
+    <End Role="MotivoGuia_MEN" Type="EstadosGuiaModelo.Store.MotivoGuia_MEN" Multiplicity="1" />
+    <End Role="MotivoGuiaTransicionEstado_MEN" Type="EstadosGuiaModelo.Store.MotivoGuiaTransicionEstado_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MotivoGuia_MEN">
+        <PropertyRef Name="MOG_IdMotivoGuia" />
+      </Principal>
+      <Dependent Role="MotivoGuiaTransicionEstado_MEN">
+        <PropertyRef Name="MGT_IdMotivoGuia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PredecesoresEstadoGuia_MEN_EstadoGuia_MEN">
+    <End Role="EstadoGuia_MEN" Type="EstadosGuiaModelo.Store.EstadoGuia_MEN" Multiplicity="1" />
+    <End Role="PredecesoresEstadoGuia_MEN" Type="EstadosGuiaModelo.Store.PredecesoresEstadoGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoGuia_MEN">
+        <PropertyRef Name="ESG_IdEstadoGuia" />
+      </Principal>
+      <Dependent Role="PredecesoresEstadoGuia_MEN">
+        <PropertyRef Name="PEG_IdEstadoGuia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PredecesoresEstadoGuia_MEN_EstadoGuia_MEN1">
+    <End Role="EstadoGuia_MEN" Type="EstadosGuiaModelo.Store.EstadoGuia_MEN" Multiplicity="1" />
+    <End Role="PredecesoresEstadoGuia_MEN" Type="EstadosGuiaModelo.Store.PredecesoresEstadoGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoGuia_MEN">
+        <PropertyRef Name="ESG_IdEstadoGuia" />
+      </Principal>
+      <Dependent Role="PredecesoresEstadoGuia_MEN">
+        <PropertyRef Name="PEG_IdEstadoGuiaPredecesor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoNovedadGuia_MEN_TipoNovedad_MEN">
+    <End Role="TipoNovedad_MEN" Type="EstadosGuiaModelo.Store.TipoNovedad_MEN" Multiplicity="1" />
+    <End Role="TipoNovedadGuia_MEN" Type="EstadosGuiaModelo.Store.TipoNovedadGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoNovedad_MEN">
+        <PropertyRef Name="TNV_IdTipoNovedad" />
+      </Principal>
+      <Dependent Role="TipoNovedadGuia_MEN">
+        <PropertyRef Name="TNG_IdTipoNovedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

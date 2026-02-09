@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EX_000" xml:space="preserve">
+    <value>Mensaje de error {0} no se encuentra configurado.</value>
+  </data>
+  <data name="EX_001" xml:space="preserve">
+    <value>El número del giro no se encuentra asociado a ninguna Agencia</value>
+    <comment>Cuando El número del giro no se encuentra asociado a ninguna Agencia en sus suministros de rangos de numero de giros para las agencias manuales</comment>
+  </data>
+  <data name="EX_002" xml:space="preserve">
+    <value>El número de giro ya fue creado con anterioridad en el sistema.</value>
+    <comment>Cuando el número del giro existe en el sistema</comment>
+  </data>
+  <data name="EX_003" xml:space="preserve">
+    <value>El cliente ha superado el monto máximo a enviar en un día</value>
+    <comment>Cuando el cliente ha superao el monto maximo a enviar en un dia</comment>
+  </data>
+  <data name="EX_004" xml:space="preserve">
+    <value>No se puede crear el número de giro Automaticamente</value>
+    <comment>Cuando existen errores al crear el numero de giro en suministros</comment>
+  </data>
+  <data name="EX_005" xml:space="preserve">
+    <value>Para poder realizar el giro es obligatorio el Formato de declaración voluntaria de fondos</value>
+    <comment>Cuando el giro supera un monto parametrizado en ParametrosGiros_GIR -&gt; VALORMAXIMODECLARACIONFONDOS</comment>
+  </data>
+  <data name="EX_006" xml:space="preserve">
+    <value>El giro no se puede pagar ya que  posee solicitudes Activas de modificación.</value>
+    <comment>Cuando el giro se quiere pagar pero tiene solicitudes activas</comment>
+  </data>
+  <data name="EX_007" xml:space="preserve">
+    <value>El giro no se puede pagar, no esta Activo</value>
+    <comment>Error cuando el estado no esta activo, "se encuentra en estado pagado o reservado"</comment>
+  </data>
+  <data name="EX_008" xml:space="preserve">
+    <value>El giro no existe ó no aparece para pago en este punto.</value>
+    <comment>Cuando no se encuentra el giro por numero de giro</comment>
+  </data>
+  <data name="EX_009" xml:space="preserve">
+    <value>El giro no se pudo realizar, Por favor intente nuevamente</value>
+    <comment>Cuando se consulta el giro y este no esta pagado</comment>
+  </data>
+  <data name="EX_010" xml:space="preserve">
+    <value>El pago no existe</value>
+    <comment>No se encontro ningun pago</comment>
+  </data>
+  <data name="EX_011" xml:space="preserve">
+    <value>No se encontró ningún giro con los criterios de búsqueda.</value>
+    <comment>Error No se encontró ningún giro con los criterios de búsqueda.</comment>
+  </data>
+  <data name="EX_012" xml:space="preserve">
+    <value>Giro ya Transmitido a Agencia</value>
+    <comment>Mensaje de Giro ya transmitido a agencia.</comment>
+  </data>
+  <data name="EX_013" xml:space="preserve">
+    <value>El número de giro {0} no puede ser admitido por este centro de servicio. Verifique que la guía pertenezca al punto de servicio autenticado o que esté autenticado como el RACOL al que pertenece el centro de servicio propietario de la guía</value>
+  </data>
+  <data name="IN_001" xml:space="preserve">
+    <value>Declaración Voluntaria de Fondos</value>
+    <comment>Escribe en la tabla ArchivosGiros_GIR el nombre del adjunto</comment>
+  </data>
+  <data name="IN_002" xml:space="preserve">
+    <value>Descripción Declaración Voluntaria de Fondos</value>
+    <comment>Escribe en la tabla ArchivosGiros_GIR la descripción del adjunto</comment>
+  </data>
+  <data name="IN_003" xml:space="preserve">
+    <value>Cedula del destinatario</value>
+    <comment>Escribe en la tabla ArchivosGiros_GIR el nombre del adjunto </comment>
+  </data>
+  <data name="IN_004" xml:space="preserve">
+    <value>Descripción Cedula del destinatario</value>
+    <comment>Escribe en la tabla ArchivosGiros_GIR la descripción del adjunto</comment>
+  </data>
+  <data name="IN_005" xml:space="preserve">
+    <value>Autorización de Pago</value>
+    <comment>Documento de Autorización del pago</comment>
+  </data>
+  <data name="IN_006" xml:space="preserve">
+    <value>Descripción Autorización de Pago</value>
+    <comment>Descripción Domento de Autorización del pago</comment>
+  </data>
+  <data name="IN_007" xml:space="preserve">
+    <value>Certificado Empresarial</value>
+    <comment>Documento Certificado Empresarial</comment>
+  </data>
+  <data name="IN_008" xml:space="preserve">
+    <value>DescripciónCertificado Empresarial</value>
+    <comment>DescripciónCertificado Empresarial</comment>
+  </data>
+</root>

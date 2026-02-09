@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F032F371-FC0E-413E-B61C-B94F9F45CFC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.CentroAcopio.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.CentroAcopio.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CARepositorioCentroAcopio.cs" />
+    <Compile Include="CARepositorioTulasContenedores.cs" />
+    <Compile Include="Mapper\CARepositorioMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{fc12ef72-b64e-483f-a5af-a928ce4aa0e8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{e9d4dc9f-7dfc-4ee7-88ef-78f5688aed71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{e50a742b-e1ec-4c8a-9d74-cc52c11a4b12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OperacionNacional\CO.Servidor.OperacionNacional\CO.Servidor.OperacionNacional.csproj">
+      <Project>{1EA5AB98-72AA-4CF4-BCD4-FBC9787D2F9D}</Project>
+      <Name>CO.Servidor.OperacionNacional</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

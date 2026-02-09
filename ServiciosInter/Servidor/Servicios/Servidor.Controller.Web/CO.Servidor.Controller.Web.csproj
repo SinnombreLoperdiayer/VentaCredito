@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7036754-022C-4755-AD86-7B7EDE402522}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.Controller.Web</RootNamespace>
+    <AssemblyName>CO.Servidor.Controller.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SilverlightApplicationList>{7CDDDDF8-1173-4EAF-A595-4192A2D92953}|..\..\Cliente\Silverlight\Cliente.Controller\CO.Cliente.Controller.csproj|ClientBin|True,{971AA5D7-BE2C-4086-BF87-7387F67FD7A2}|..\..\Framework\Framework.Cliente.Administracion\Framework.Cliente.Administracion.csproj|ClientBin|False,{974B7BF8-0E1D-4AA9-836B-03D510949B0F}|..\..\Cliente\Silverlight\Tarifas\CO.Cliente.AdministracionTarifas\CO.Cliente.AdministracionTarifas.csproj|ClientBin|False,{3521F06A-5D57-4AB0-830D-283C1AB1BE4D}|..\..\Cliente\Silverlight\CentroServicios\CO.Cliente.AdministracionCentroServicios\CO.Cliente.AdministracionCentroServicios.csproj|ClientBin|False,{91C3DA29-4F50-4178-8735-2F0FF7818600}|..\..\Cliente\Silverlight\Admisiones\Giros\CO.Cliente.Admision.Giros\CO.Cliente.Admision.Giros.csproj|ClientBin|False,{08CC1AF1-466A-4659-AA19-2A548A1D73F9}|..\..\Cliente\Silverlight\Clientes\CO.Cliente.Clientes\CO.Cliente.AdministracionClientes.csproj|ClientBin|False,{AD03EA67-7A18-4CDD-90C4-DD069EA805A3}|..\..\Cliente\Silverlight\Admisiones\Mensajeria\CO.Cliente.Admisiones.Mensajeria\CO.Cliente.Admisiones.Mensajeria.csproj|ClientBin|False,{EA866F3E-3A45-45BE-A456-C90253CECB38}|..\..\Framework\Framework.Cliente.ParametrosGenerales\Framework.Cliente.ParametrosGenerales.csproj|ClientBin|False,{FA5E577B-2B34-48B1-A6AA-47CB53DEC468}|..\..\Cliente\Silverlight\GestionGiros\CO.Cliente.GestionGiros\CO.Cliente.GestionGiros.csproj|ClientBin|False,{0BA16543-1B3A-4826-B41A-039968235BE5}|..\..\Cliente\Silverlight\OperacionUrbana\CO.Cliente.OperacionUrbana\CO.Cliente.OperacionUrbana.csproj|ClientBin|False,{7AD77260-C9DB-4823-8556-16970EBB78F4}|..\..\Cliente\Silverlight\Comisiones\CO.Cliente.Comisiones\CO.Cliente.Comisiones.csproj|ClientBin|False,{50B475F5-0ADC-4520-B6E9-BCF12F9B58CD}|..\..\Cliente\Silverlight\Rutas\CO.Cliente.Rutas\CO.Cliente.Rutas.csproj|ClientBin|False,{C00391B5-A369-4A53-8424-CB2E1993FA9D}|..\..\Cliente\Silverlight\OperacionNacional\CO.Cliente.OperacionNacional\CO.Cliente.OperacionNacional.csproj|ClientBin|False,{DD8DEA82-3463-438D-9AEB-88AA5123AF23}|..\..\Cliente\Silverlight\Cajas\CO.Cliente.Cajas\CO.Cliente.Cajas.csproj|ClientBin|False,{ED05B0CA-514B-4905-8E98-1A88CE1540FA}|..\..\Cliente\Silverlight\LogisticaInversa\CO.Cliente.LogisticaInversa\CO.Cliente.LogisticaInversa.csproj|ClientBin|False,{BD288924-9B5B-4D6F-9A00-88D6DEB4C43F}|..\..\Cliente\Silverlight\ParametrosOperacion\CO.Cliente.ParametrosOperacion\CO.Cliente.ParametrosOperacion.csproj|ClientBin|False,{49F113D5-481C-4FAF-8943-1E6596C3983F}|..\..\Cliente\Silverlight\ControlCuentas\CO.Cliente.ControlCuentas\CO.Cliente.ControlCuentas.csproj|ClientBin|False,{7761191A-A3B2-4E8B-B2DC-E5321DBD8C69}|..\..\Cliente\Silverlight\LogisticaInversa\CO.Cliente.LogisticaInversa.DigitalizacionArchivo\CO.Cliente.LogisticaInversa.DigitalizacionArchivo.csproj|ClientBin|False,{19FC8CA3-FB23-4774-A3BC-AF5F987EFDD3}|..\..\Cliente\Silverlight\GestionGiros\PagosManuales\CO.Cliente.GestionGiros.PagosManual\CO.Cliente.GestionGiros.PagosManual.csproj|ClientBin|False,{C8928B39-4F95-42A8-AA09-D88C9411ADEA}|..\..\Cliente\Silverlight\LogisticaInversa\CO.Cliente.LogisticaInversa.Telemercadeo\CO.Cliente.LogisticaInversa.Telemercadeo.csproj|ClientBin|False,{533CB616-83F2-4742-9663-8D1015798ADF}|..\..\Cliente\Silverlight\Facturacion\CO.Cliente.Facturacion\CO.Cliente.Facturacion.csproj|ClientBin|False,{C2A99BEF-7288-44E0-B9E5-822567204B4D}|..\..\Cliente\Silverlight\CO.Cliente.Inicial\CO.Cliente.Inicial.csproj|ClientBin|False,{C4B09FBF-E9A9-40F7-8305-94F0CD368373}|..\..\Cliente\Silverlight\GestionCajas\CO.Cliente.GestionCajas\CO.Cliente.GestionCajas.csproj|ClientBin|False,{7FA9E8B7-D643-4982-98B7-21D5A6A0497D}|..\CO.Cliente.LogisticaInversa.Notificaciones\CO.Cliente.LogisticaInversa.Notificaciones.csproj|ClientBin|False,{41966E8F-F188-4636-B6D8-44716AF6F77F}|..\..\Cliente\Silverlight\GestionGiros\ConfiguracionGiros\CO.Cliente.GestionGiros.ConfiguracionGiros\CO.Cliente.GestionGiros.ConfiguracionGiros.csproj|ClientBin|False,{565AE68D-E279-40A0-90F4-F96E857DA890}|..\..\Cliente\Silverlight\Suministros\CO.Cliente.Suministros\CO.Cliente.Suministros.csproj|ClientBin|False,{A5214126-D4C4-437B-B7C5-42C461E09693}|..\..\Cliente\Silverlight\Areas\CO.Cliente.Areas\CO.Cliente.Areas.csproj|ClientBin|False,{DCDB48FD-2A13-4484-B4B8-668059C39626}|..\..\Cliente\Silverlight\Produccion\CO.Cliente.Produccion\CO.Cliente.Produccion.csproj|ClientBin|False,{36519476-30C2-4FBB-9812-5DED68596778}|..\..\Cliente\Silverlight\ServicioalCliente\CO.Cliente.ServicioalCliente\CO.Cliente.ServicioalCliente.csproj|ClientBin|False,{097ECB87-D6D8-4742-91D3-7AE1438C4A94}|..\..\..\..\ClienteSilverlight\Cliente\Silverlight\ServicioalCliente\CO.Cliente.ServicioalCliente.Comun\CO.Cliente.ServicioalCliente.Comun.csproj|ClientBin|False</SilverlightApplicationList>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Framework.Servidor.Archivo">
+      <HintPath>..\..\..\Framework\Servidor\Framework.Servidor.Archivo\bin\Debug\Framework.Servidor.Archivo.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Servidor.Comun">
+      <HintPath>..\..\..\Framework\Servidor\Framework.Servidor.Archivo\bin\Debug\Framework.Servidor.Comun.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Servidor.Excepciones">
+      <HintPath>..\..\..\Framework\Servidor\Framework.Servidor.Archivo\bin\Debug\Framework.Servidor.Excepciones.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Servidor.Seguridad">
+      <HintPath>..\..\..\Framework\Servidor\Framework.Servidor.Seguridad\bin\Debug\Framework.Servidor.Seguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Servidor.Servicios.ContratoDatos">
+      <HintPath>..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\bin\Debug\Framework.Servidor.Servicios.ContratoDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework.Servidor.Servicios.Contratos">
+      <HintPath>..\..\..\Framework\Servidor\Framework.Servidor.Servicios.Contratos\bin\Debug\Framework.Servidor.Servicios.Contratos.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="zxing, Version=0.16.2.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ZXing.Net.0.16.2\lib\net40\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.2.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ZXing.Net.0.16.2\lib\net40\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientAccessPolicy.xml" />
+    <Content Include="ClientBin\CO.Cliente.AdministracionCentroServicios.xap" />
+    <Content Include="ClientBin\CO.Cliente.AdministracionClientes.xap" />
+    <Content Include="ClientBin\CO.Cliente.AdministracionTarifas.xap" />
+    <Content Include="ClientBin\CO.Cliente.Admisiones.Giros.xap" />
+    <Content Include="ClientBin\CO.Cliente.Admisiones.Mensajeria.xap" />
+    <Content Include="ClientBin\CO.Cliente.Areas.xap" />
+    <Content Include="ClientBin\CO.Cliente.Cajas.xap" />
+    <Content Include="ClientBin\CO.Cliente.Comisiones.xap" />
+    <Content Include="ClientBin\CO.Cliente.ControlCuentas.xap" />
+    <Content Include="ClientBin\CO.Cliente.Facturacion.xap" />
+    <Content Include="ClientBin\CO.Cliente.GestionCajas.xap" />
+    <Content Include="ClientBin\CO.Cliente.GestionGiros.xap" />
+    <Content Include="ClientBin\CO.Cliente.Inicial.xap" />
+    <Content Include="ClientBin\CO.Cliente.LogisticaInversa.DigitalizacionArchivo.xap" />
+    <Content Include="ClientBin\CO.Cliente.LogisticaInversa.Notificaciones.xap" />
+    <Content Include="ClientBin\CO.Cliente.LogisticaInversa.PruebasEntrega.xap" />
+    <Content Include="ClientBin\CO.Cliente.LogisticaInversa.Telemercadeo.xap" />
+    <Content Include="ClientBin\CO.Cliente.OperacionNacional.xap" />
+    <Content Include="ClientBin\CO.Cliente.OperacionUrbana.xap" />
+    <Content Include="ClientBin\CO.Cliente.ParametrosOperacion.xap" />
+    <Content Include="ClientBin\CO.Cliente.Produccion.xap" />
+    <Content Include="ClientBin\CO.Cliente.Rutas.xap" />
+    <Content Include="ClientBin\CO.Cliente.ServicioalCliente.Comun.xap" />
+    <Content Include="ClientBin\CO.Cliente.ServicioalCliente.xap" />
+    <Content Include="ClientBin\CO.Cliente.Suministros.xap" />
+    <Content Include="ClientBin\Framework.Cliente.Administracion.xap" />
+    <Content Include="ClientBin\Framework.Cliente.ParametrosGenerales.xap" />
+    <Content Include="ClientBin\Images\actualizar.png" />
+    <Content Include="ClientBin\Images\add.png" />
+    <Content Include="ClientBin\Images\agenda.png" />
+    <Content Include="ClientBin\Images\airp.png" />
+    <Content Include="ClientBin\Images\alert.png" />
+    <Content Include="ClientBin\Images\asignar.png" />
+    <Content Include="ClientBin\Images\asignarporagenda.png" />
+    <Content Include="ClientBin\Images\back.png" />
+    <Content Include="ClientBin\Images\base.jpg" />
+    <Content Include="ClientBin\Images\basePrincipal.jpg" />
+    <Content Include="ClientBin\Images\borrar.png" />
+    <Content Include="ClientBin\Images\buscar.png" />
+    <Content Include="ClientBin\Images\Buzon.png" />
+    <Content Include="ClientBin\Images\caja.png" />
+    <Content Include="ClientBin\Images\cancelar.png" />
+    <Content Include="ClientBin\Images\Capacitece.png" />
+    <Content Include="ClientBin\Images\cerrar.png" />
+    <Content Include="ClientBin\Images\clientes.png" />
+    <Content Include="ClientBin\Images\configurar.png" />
+    <Content Include="ClientBin\Images\controlcuentas1.png" />
+    <Content Include="ClientBin\Images\controlcuentas2.png" />
+    <Content Include="ClientBin\Images\custodia.jpg" />
+    <Content Include="ClientBin\Images\custodia.png" />
+    <Content Include="ClientBin\Images\devolucion1.png" />
+    <Content Include="ClientBin\Images\devolucion2.png" />
+    <Content Include="ClientBin\Images\drive.png" />
+    <Content Include="ClientBin\Images\editar.png" />
+    <Content Include="ClientBin\Images\escaner.png" />
+    <Content Include="ClientBin\Images\exc_tra.png" />
+    <Content Include="ClientBin\Images\folder.png" />
+    <Content Include="ClientBin\Images\gestion.png" />
+    <Content Include="ClientBin\Images\gestion1.png" />
+    <Content Include="ClientBin\Images\gestioncajas.png" />
+    <Content Include="ClientBin\Images\guardar.png" />
+    <Content Include="ClientBin\Images\GuiaInterna.png" />
+    <Content Include="ClientBin\Images\header1.jpg" />
+    <Content Include="ClientBin\Images\Home.png" />
+    <Content Include="ClientBin\Images\imprimir.png" />
+    <Content Include="ClientBin\Images\kompadre1.png" />
+    <Content Include="ClientBin\Images\kompadre2.png" />
+    <Content Include="ClientBin\Images\kompadre3.png" />
+    <Content Include="ClientBin\Images\launch2x.png" />
+    <Content Include="ClientBin\Images\login2x.png" />
+    <Content Include="ClientBin\Images\logo.jpg" />
+    <Content Include="ClientBin\Images\LogoInterSinBordes.png" />
+    <Content Include="ClientBin\Images\lupa.png" />
+    <Content Include="ClientBin\Images\mas.png" />
+    <Content Include="ClientBin\Images\mc.png" />
+    <Content Include="ClientBin\Images\money.png" />
+    <Content Include="ClientBin\Images\navegar_der.png" />
+    <Content Include="ClientBin\Images\navegar_izq.png" />
+    <Content Include="ClientBin\Images\notificaciones.png" />
+    <Content Include="ClientBin\Images\nuevo.png" />
+    <Content Include="ClientBin\Images\ok.png" />
+    <Content Include="ClientBin\Images\Opnacional.png" />
+    <Content Include="ClientBin\Images\paper1.png" />
+    <Content Include="ClientBin\Images\paper2.jpg" />
+    <Content Include="ClientBin\Images\parametrosg.png" />
+    <Content Include="ClientBin\Images\personal.png" />
+    <Content Include="ClientBin\Images\proveedores.png" />
+    <Content Include="ClientBin\Images\pruebaentrega.png" />
+    <Content Include="ClientBin\Images\puntosatencion.png" />
+    <Content Include="ClientBin\Images\reasignar.png" />
+    <Content Include="ClientBin\Images\remove.png" />
+    <Content Include="ClientBin\Images\rotar_der.png" />
+    <Content Include="ClientBin\Images\rotar_izq.png" />
+    <Content Include="ClientBin\Images\rutas1.png" />
+    <Content Include="ClientBin\Images\rutas2.png" />
+    <Content Include="ClientBin\Images\salir.png" />
+    <Content Include="ClientBin\Images\seguridad.png" />
+    <Content Include="ClientBin\Images\seleccion.png" />
+    <Content Include="ClientBin\Images\ServicioCliente.png" />
+    <Content Include="ClientBin\Images\sobre1.png" />
+    <Content Include="ClientBin\Images\suministros.png" />
+    <Content Include="ClientBin\Images\tareagestion.png" />
+    <Content Include="ClientBin\Images\tarifarios.png" />
+    <Content Include="ClientBin\Images\tiempo.png" />
+    <Content Include="ClientBin\Images\trayecto.png" />
+    <Content Include="ClientBin\Images\vault1.png" />
+    <Content Include="ClientBin\Images\vaultt2.png" />
+    <Content Include="ClientBin\Images\welcome.png" />
+    <Content Include="CO.Cliente.ServicioalCliente.ComunTestPage.aspx" />
+    <Content Include="CO.Cliente.ServicioalCliente.ComunTestPage.html" />
+    <Content Include="CO.Cliente.ServicioalClienteTestPage.aspx" />
+    <Content Include="CO.Cliente.ServicioalClienteTestPage.html" />
+    <Content Include="DynamicWebTWAINPlugIn.exe" />
+    <Content Include="favicon.ico" />
+    <Content Include="Images\Close.png" />
+    <Content Include="Images\salir.png" />
+    <Content Include="index.html" />
+    <Content Include="Crossdomain.xml" />
+    <Content Include="DynamicWebTWAIN.cab" />
+    <Content Include="DynamicWebTWAINx64.cab" />
+    <Content Include="mantenimiento.html" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\Silverlight.js" />
+    <Content Include="Scripts\TwainScript.js" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\XAPHandler.cs" />
+    <Compile Include="CargadorArchivos\FileUpload.ashx.cs">
+      <DependentUpon>FileUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportingService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CargadorArchivos\FileUpload.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DynamicWebTwain.xpi" />
+    <Content Include="DynamicWebTwain.lpk" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Debug.pubxml" />
+    <None Include="Properties\PublishProfiles\Release.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Servidor\Framework.Servidor.Servicios.Implementacion\Framework.Servidor.Servicios.Implementacion.csproj">
+      <Project>{21dda99d-aac9-4200-bb0e-19108aca7477}</Project>
+      <Name>Framework.Servidor.Servicios.Implementacion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11649</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost/CO.Servidor.Controller.Web</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

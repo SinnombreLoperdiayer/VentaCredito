@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAFacturaClienteDC">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAACAgAAAQQIIAAAAgABwAAAGAABQSgAAAABRFAICI=</HashCode>
+      <FileName>Facturacion\FAFacturaClienteDC.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ConceptosFactura" />
+      <Property Name="DeduccionesFactura" />
+      <Property Name="DescuentosFactura" />
+      <Property Name="EstadosFactura" />
+      <Property Name="NotasFactura" />
+      <Property Name="DetalleOperaciones" />
+      <Property Name="RetencionesFactura" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAConceptoFacturaDC" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAEAQIAoAAAAEAgAAQAAAgAAQAAwAAAAIBAAAAA=</HashCode>
+      <FileName>Facturacion\FAConceptoFacturaDC.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ImpuestosConcepto" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAFacturaClienteAutDC" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAggIAAAABAAAgAAAAAAAAAAAABAAAgAAAAgAAAoAQ=</HashCode>
+      <FileName>Facturacion\FAFacturaClienteAutDC.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sucursales" />
+      <Property Name="Servicios" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FADeduccionFacturaDC" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAACAAgAASABAJAAAAAgAAAAAAAgAAA=</HashCode>
+      <FileName>Facturacion\FADeduccionFacturaDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FADescuentoFacturaDC" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACgAAQEEAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Facturacion\FADescuentoFacturaDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAEstadoFacturaDC" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAACgAAQAEAAAAAAAgAAAAAAAAAAg=</HashCode>
+      <FileName>Facturacion\FAEstadoFacturaDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAExclusionProgramacionDC" Collapsed="true">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAAAAAAAAAAAAAAQAAAAQAEAAAAAAAgABAAAAQAAAA=</HashCode>
+      <FileName>Facturacion\FAExclusionProgramacionDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAImpuestoConceptoDC">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAACAAAAAQABAAAAQAAgAAgAAIAAAAA=</HashCode>
+      <FileName>Facturacion\FAImpuestoConceptoDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAMotivoAnulacionDC" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Facturacion\FAMotivoAnulacionDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FANotaFacturaDC" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAgAAQAEAAAAAAAgABAAAIAAAAA=</HashCode>
+      <FileName>Facturacion\FANotaFacturaDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAProgramacionFacturaDC" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgAAQACAAAAAABAQAAEAAQAAACAAABAgABEABBAAJAA=</HashCode>
+      <FileName>Facturacion\FAProgramacionFacturaDC.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ExclusionesProgramacion" />
+      <Property Name="ConceptosProgramados" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAConceptoProgramadoDC" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAFAAIAoAgAAEAAAAQAAAgAAQAAgABAAIAAAAAA=</HashCode>
+      <FileName>Facturacion\FAConceptoProgramadoDC.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Impuestos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAImpConceptoProgramado">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAACAAAAAQABAAAAQAAgAAgAAIAAAAA=</HashCode>
+      <FileName>Facturacion\FAImpConceptoProgramado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FAOperacionFacturadaDC">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAAAEAAAAAAABEAAAAAAAAEAAAAAAAAAAAEhAAAAAA=</HashCode>
+      <FileName>Facturacion\FAOperacionFacturadaDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Clientes.CLSucursalDC" Collapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAgiCQAAAEAECABgAgAASAIAAAAAAAABkAAAwA=</HashCode>
+      <FileName>Clientes\CLSucursalDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Tarifas.TAServicioDC" Collapsed="true">
+    <Position X="0.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAEAIAAABAgBAACgAABAgQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tarifas\Servicios\TAServicioDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Facturacion.FARetencionFacturaDC" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgCAAgAAAABAIABSAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Facturacion\FARetencionFacturaDC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

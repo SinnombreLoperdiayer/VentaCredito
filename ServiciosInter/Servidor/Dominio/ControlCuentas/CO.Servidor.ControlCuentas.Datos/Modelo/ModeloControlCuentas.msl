@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloControlCuentasStoreContainer" CdmEntityContainer="DesModeloControlCuentas">
+    <EntitySetMapping Name="TipoOperacion_CCU">
+      <EntityTypeMapping TypeName="ModeloControlCuentas.TipoOperacion_CCU">
+        <MappingFragment StoreEntitySet="TipoOperacion_CCU">
+          <ScalarProperty Name="TOP_IdTipoOperacion" ColumnName="TOP_IdTipoOperacion" />
+          <ScalarProperty Name="TOP_Descripcion" ColumnName="TOP_Descripcion" />
+          <ScalarProperty Name="TOP_FechaGrabacion" ColumnName="TOP_FechaGrabacion" />
+          <ScalarProperty Name="TOP_CreadoPor" ColumnName="TOP_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGiroAlmacen_CCU" FunctionName="ModeloControlCuentas.Store.paObtenerGiroAlmacen_CCU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloControlCuentas.paObtenerGiroAlmacen">
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+          <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+          <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+          <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+          <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+          <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+          <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+          <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+          <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+          <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+          <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+          <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+          <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+          <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+          <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+          <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+          <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+          <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+          <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+          <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+          <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+          <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+          <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+          <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+          <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+          <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+          <ScalarProperty Name="ADG_CreadoPor" ColumnName="ADG_CreadoPor" />
+          <ScalarProperty Name="AAC_IdAlmacenControCuentas" ColumnName="AAC_IdAlmacenControCuentas" />
+          <ScalarProperty Name="AAC_IdTipoOperacion" ColumnName="AAC_IdTipoOperacion" />
+          <ScalarProperty Name="AAC_Caja" ColumnName="AAC_Caja" />
+          <ScalarProperty Name="AAC_Lote" ColumnName="AAC_Lote" />
+          <ScalarProperty Name="AAC_Posicion" ColumnName="AAC_Posicion" />
+          <ScalarProperty Name="ESG_Estado" ColumnName="ESG_Estado" />
+          <ScalarProperty Name="ADG_IdEstadosGiro" ColumnName="ADG_IdEstadosGiro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerMovCajaAlmacen_CCU" FunctionName="ModeloControlCuentas.Store.paObtenerMovCajaAlmacen_CCU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloControlCuentas.paObtenerMovCajaAlmacen">
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+          <ScalarProperty Name="RVF_DescripcionFormaPago" ColumnName="RVF_DescripcionFormaPago" />
+          <ScalarProperty Name="RVF_Valor" ColumnName="RVF_Valor" />
+          <ScalarProperty Name="RVF_FechaGrabacion" ColumnName="RVF_FechaGrabacion" />
+          <ScalarProperty Name="COC_Nombre" ColumnName="COC_Nombre" />
+          <ScalarProperty Name="AAC_IdAlmacenControCuentas" ColumnName="AAC_IdAlmacenControCuentas" />
+          <ScalarProperty Name="AAC_IdTipoOperacion" ColumnName="AAC_IdTipoOperacion" />
+          <ScalarProperty Name="AAC_Caja" ColumnName="AAC_Caja" />
+          <ScalarProperty Name="AAC_Lote" ColumnName="AAC_Lote" />
+          <ScalarProperty Name="AAC_Posicion" ColumnName="AAC_Posicion" />
+          <ScalarProperty Name="AAC_IdOperacion" ColumnName="AAC_IdOperacion" />
+          <ScalarProperty Name="RTC_IdCentroServiciosVenta" ColumnName="RTC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="RTC_NombreCentroServiciosVenta" ColumnName="RTC_NombreCentroServiciosVenta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPagoGiroAlmacen_CCU" FunctionName="ModeloControlCuentas.Store.paObtenerPagoGiroAlmacen_CCU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloControlCuentas.paObtenerPagoGiroAlmacen">
+          <ScalarProperty Name="PAG_IdAdmisionGiro" ColumnName="PAG_IdAdmisionGiro" />
+          <ScalarProperty Name="PAG_IdComprobantePago" ColumnName="PAG_IdComprobantePago" />
+          <ScalarProperty Name="PAG_PagoAutorizadoPeaton" ColumnName="PAG_PagoAutorizadoPeaton" />
+          <ScalarProperty Name="PAG_PagoAutorizadoEmpresarial" ColumnName="PAG_PagoAutorizadoEmpresarial" />
+          <ScalarProperty Name="PAG_PagoAutomatico" ColumnName="PAG_PagoAutomatico" />
+          <ScalarProperty Name="PAG_IdCentroServiciosPagador" ColumnName="PAG_IdCentroServiciosPagador" />
+          <ScalarProperty Name="PAG_NombreCentroServicios" ColumnName="PAG_NombreCentroServicios" />
+          <ScalarProperty Name="PAG_ValorPagado" ColumnName="PAG_ValorPagado" />
+          <ScalarProperty Name="PAG_IdCobrador" ColumnName="PAG_IdCobrador" />
+          <ScalarProperty Name="PAG_TipoIdCobrador" ColumnName="PAG_TipoIdCobrador" />
+          <ScalarProperty Name="PAG_NombreCobrador" ColumnName="PAG_NombreCobrador" />
+          <ScalarProperty Name="PAG_Apellido1Cobrador" ColumnName="PAG_Apellido1Cobrador" />
+          <ScalarProperty Name="PAG_Apellido2Cobrador" ColumnName="PAG_Apellido2Cobrador" />
+          <ScalarProperty Name="PAG_TelefonoCobrador" ColumnName="PAG_TelefonoCobrador" />
+          <ScalarProperty Name="PAG_DireccionCobrador" ColumnName="PAG_DireccionCobrador" />
+          <ScalarProperty Name="PAG_EmailCobrador" ColumnName="PAG_EmailCobrador" />
+          <ScalarProperty Name="PAG_OcupacionCobrador" ColumnName="PAG_OcupacionCobrador" />
+          <ScalarProperty Name="PAG_Observaciones" ColumnName="PAG_Observaciones" />
+          <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+          <ScalarProperty Name="PAG_CreadoPor" ColumnName="PAG_CreadoPor" />
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+          <ScalarProperty Name="AAC_IdAlmacenControCuentas" ColumnName="AAC_IdAlmacenControCuentas" />
+          <ScalarProperty Name="AAC_IdOperacion" ColumnName="AAC_IdOperacion" />
+          <ScalarProperty Name="AAC_IdTipoOperacion" ColumnName="AAC_IdTipoOperacion" />
+          <ScalarProperty Name="AAC_Caja" ColumnName="AAC_Caja" />
+          <ScalarProperty Name="AAC_Posicion" ColumnName="AAC_Posicion" />
+          <ScalarProperty Name="AAC_Lote" ColumnName="AAC_Lote" />
+          <ScalarProperty Name="ADG_PrefijoIdGiro" ColumnName="ADG_PrefijoIdGiro" />
+          <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+          <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+          <ScalarProperty Name="ADG_GuidDeChequeo" ColumnName="ADG_GuidDeChequeo" />
+          <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+          <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+          <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+          <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+          <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+          <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+          <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+          <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+          <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+          <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+          <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+          <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+          <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+          <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+          <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+          <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+          <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+          <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+          <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+          <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+          <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+          <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+          <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerOtrosMovCaja_CCU" FunctionName="ModeloControlCuentas.Store.paObtenerOtrosMovCaja_CCU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloControlCuentas.paObtenerOtrosMovCaja_CCU_Result">
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+          <ScalarProperty Name="RVF_DescripcionFormaPago" ColumnName="RVF_DescripcionFormaPago" />
+          <ScalarProperty Name="RVF_Valor" ColumnName="RVF_Valor" />
+          <ScalarProperty Name="RVF_FechaGrabacion" ColumnName="RVF_FechaGrabacion" />
+          <ScalarProperty Name="COC_Nombre" ColumnName="COC_Nombre" />
+          <ScalarProperty Name="AAC_IdAlmacenControCuentas" ColumnName="AAC_IdAlmacenControCuentas" />
+          <ScalarProperty Name="AAC_IdTipoOperacion" ColumnName="AAC_IdTipoOperacion" />
+          <ScalarProperty Name="AAC_Caja" ColumnName="AAC_Caja" />
+          <ScalarProperty Name="AAC_Lote" ColumnName="AAC_Lote" />
+          <ScalarProperty Name="AAC_Posicion" ColumnName="AAC_Posicion" />
+          <ScalarProperty Name="AAC_IdOperacion" ColumnName="AAC_IdOperacion" />
+          <ScalarProperty Name="RTC_IdCentroServiciosVenta" ColumnName="RTC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="RTC_NombreCentroServiciosVenta" ColumnName="RTC_NombreCentroServiciosVenta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AlmacenControlCuentas_CCU">
+      <EntityTypeMapping TypeName="ModeloControlCuentas.AlmacenControlCuentas_CCU">
+        <MappingFragment StoreEntitySet="AlmacenControlCuentas_CCU">
+          <ScalarProperty Name="AAC_CreadoPor" ColumnName="AAC_CreadoPor" />
+          <ScalarProperty Name="AAC_FechaGrabacion" ColumnName="AAC_FechaGrabacion" />
+          <ScalarProperty Name="AAC_Posicion" ColumnName="AAC_Posicion" />
+          <ScalarProperty Name="AAC_Lote" ColumnName="AAC_Lote" />
+          <ScalarProperty Name="AAC_Caja" ColumnName="AAC_Caja" />
+          <ScalarProperty Name="AAC_IdTipoOperacion" ColumnName="AAC_IdTipoOperacion" />
+          <ScalarProperty Name="AAC_IdOperacion" ColumnName="AAC_IdOperacion" />
+          <ScalarProperty Name="AAC_IdRacol" ColumnName="AAC_IdRacol" />
+          <ScalarProperty Name="AAC_IdAlmacenControCuentas" ColumnName="AAC_IdAlmacenControCuentas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGuiaMenAlmacen_CCU" FunctionName="ModeloControlCuentas.Store.paObtenerGuiaMenAlmacen_CCU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloControlCuentas.paObtenerGuiaMenAlmacen_CCU_Result">
+          <ScalarProperty Name="ADM_IdAdminisionMensajeria" ColumnName="ADM_IdAdminisionMensajeria" />
+          <ScalarProperty Name="ADM_IdMensajero" ColumnName="ADM_IdMensajero" />
+          <ScalarProperty Name="ADM_FechaAdmision" ColumnName="ADM_FechaAdmision" />
+          <ScalarProperty Name="ADM_IdCentroServicioOrigen" ColumnName="ADM_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_NumeroGuia" ColumnName="ADM_NumeroGuia" />
+          <ScalarProperty Name="ADM_NombreCentroServicioOrigen" ColumnName="ADM_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_IdCentroServicioDestino" ColumnName="ADM_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADM_NombreCentroServicioDestino" ColumnName="ADM_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADM_Peso" ColumnName="ADM_Peso" />
+          <ScalarProperty Name="ADM_EsPesoVolumetrico" ColumnName="ADM_EsPesoVolumetrico" />
+          <ScalarProperty Name="ADM_PesoLiqMasa" ColumnName="ADM_PesoLiqMasa" />
+          <ScalarProperty Name="ADM_PesoLiqVolumetrico" ColumnName="ADM_PesoLiqVolumetrico" />
+          <ScalarProperty Name="ADM_IdRemitente" ColumnName="ADM_IdRemitente" />
+          <ScalarProperty Name="ADM_NombreRemitente" ColumnName="ADM_NombreRemitente" />
+          <ScalarProperty Name="ADM_IdDestinatario" ColumnName="ADM_IdDestinatario" />
+          <ScalarProperty Name="ADM_NombreDestinatario" ColumnName="ADM_NombreDestinatario" />
+          <ScalarProperty Name="ADM_ValorTotal" ColumnName="ADM_ValorTotal" />
+          <ScalarProperty Name="ADM_ValorTotalImpuestos" ColumnName="ADM_ValorTotalImpuestos" />
+          <ScalarProperty Name="ADM_ValorTotalRetenciones" ColumnName="ADM_ValorTotalRetenciones" />
+          <ScalarProperty Name="ADM_ValorPrimaSeguro" ColumnName="ADM_ValorPrimaSeguro" />
+          <ScalarProperty Name="ADM_ValorEmpaque" ColumnName="ADM_ValorEmpaque" />
+          <ScalarProperty Name="ADM_ValorAdicionales" ColumnName="ADM_ValorAdicionales" />
+          <ScalarProperty Name="ADM_ValorDeclarado" ColumnName="ADM_ValorDeclarado" />
+          <ScalarProperty Name="ADM_ValorAdmision" ColumnName="ADM_ValorAdmision" />
+          <ScalarProperty Name="AAC_IdOperacion" ColumnName="AAC_IdOperacion" />
+          <ScalarProperty Name="AAC_IdAlmacenControCuentas" ColumnName="AAC_IdAlmacenControCuentas" />
+          <ScalarProperty Name="AAC_IdTipoOperacion" ColumnName="AAC_IdTipoOperacion" />
+          <ScalarProperty Name="AAC_Caja" ColumnName="AAC_Caja" />
+          <ScalarProperty Name="AAC_Lote" ColumnName="AAC_Lote" />
+          <ScalarProperty Name="AAC_Posicion" ColumnName="AAC_Posicion" />
+          <ScalarProperty Name="TOP_Descripcion" ColumnName="TOP_Descripcion" />
+          <ScalarProperty Name="FormasPago" ColumnName="FormasPago" />
+          <ScalarProperty Name="IdsFormasPago" ColumnName="IdsFormasPago" />
+          <ScalarProperty Name="CiudadDestino" ColumnName="CiudadDestino" />
+          <ScalarProperty Name="ADM_NombreServicio" ColumnName="ADM_NombreServicio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGuiaMenAlmacenCliente_CCU" FunctionName="ModeloControlCuentas.Store.paObtenerGuiaMenAlmacenCliente_CCU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloControlCuentas.paObtenerGuiaMenAlmacenCliente_CCU_Result">
+          <ScalarProperty Name="ADM_IdAdminisionMensajeria" ColumnName="ADM_IdAdminisionMensajeria" />
+          <ScalarProperty Name="ADM_IdMensajero" ColumnName="ADM_IdMensajero" />
+          <ScalarProperty Name="ADM_FechaAdmision" ColumnName="ADM_FechaAdmision" />
+          <ScalarProperty Name="ADM_IdCentroServicioOrigen" ColumnName="ADM_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_NumeroGuia" ColumnName="ADM_NumeroGuia" />
+          <ScalarProperty Name="ADM_NombreCentroServicioOrigen" ColumnName="ADM_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_IdCentroServicioDestino" ColumnName="ADM_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADM_NombreCentroServicioDestino" ColumnName="ADM_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADM_Peso" ColumnName="ADM_Peso" />
+          <ScalarProperty Name="ADM_EsPesoVolumetrico" ColumnName="ADM_EsPesoVolumetrico" />
+          <ScalarProperty Name="ADM_PesoLiqMasa" ColumnName="ADM_PesoLiqMasa" />
+          <ScalarProperty Name="ADM_PesoLiqVolumetrico" ColumnName="ADM_PesoLiqVolumetrico" />
+          <ScalarProperty Name="ADM_IdRemitente" ColumnName="ADM_IdRemitente" />
+          <ScalarProperty Name="ADM_NombreRemitente" ColumnName="ADM_NombreRemitente" />
+          <ScalarProperty Name="ADM_IdDestinatario" ColumnName="ADM_IdDestinatario" />
+          <ScalarProperty Name="ADM_NombreDestinatario" ColumnName="ADM_NombreDestinatario" />
+          <ScalarProperty Name="ADM_ValorTotal" ColumnName="ADM_ValorTotal" />
+          <ScalarProperty Name="ADM_ValorTotalImpuestos" ColumnName="ADM_ValorTotalImpuestos" />
+          <ScalarProperty Name="ADM_ValorTotalRetenciones" ColumnName="ADM_ValorTotalRetenciones" />
+          <ScalarProperty Name="ADM_ValorPrimaSeguro" ColumnName="ADM_ValorPrimaSeguro" />
+          <ScalarProperty Name="ADM_ValorEmpaque" ColumnName="ADM_ValorEmpaque" />
+          <ScalarProperty Name="ADM_ValorAdicionales" ColumnName="ADM_ValorAdicionales" />
+          <ScalarProperty Name="ADM_ValorDeclarado" ColumnName="ADM_ValorDeclarado" />
+          <ScalarProperty Name="ADM_ValorAdmision" ColumnName="ADM_ValorAdmision" />
+          <ScalarProperty Name="AAC_IdOperacion" ColumnName="AAC_IdOperacion" />
+          <ScalarProperty Name="AAC_IdAlmacenControCuentas" ColumnName="AAC_IdAlmacenControCuentas" />
+          <ScalarProperty Name="AAC_IdTipoOperacion" ColumnName="AAC_IdTipoOperacion" />
+          <ScalarProperty Name="AAC_Caja" ColumnName="AAC_Caja" />
+          <ScalarProperty Name="AAC_Lote" ColumnName="AAC_Lote" />
+          <ScalarProperty Name="AAC_Posicion" ColumnName="AAC_Posicion" />
+          <ScalarProperty Name="TOP_Descripcion" ColumnName="TOP_Descripcion" />
+          <ScalarProperty Name="FormasPago" ColumnName="FormasPago" />
+          <ScalarProperty Name="IdsFormasPago" ColumnName="IdsFormasPago" />
+          <ScalarProperty Name="CiudadDestino" ColumnName="CiudadDestino" />
+          <ScalarProperty Name="ADM_NombreServicio" ColumnName="ADM_NombreServicio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCambioFPAlCobroCredito_CCU" FunctionName="ModeloControlCuentas.Store.paCambioFPAlCobroCredito_CCU" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,2181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloCaja" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ModeloCajas" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CategoriaConceptoCaja_CAJ" EntityType="ModeloCaja.CategoriaConceptoCaja_CAJ" />
+    <EntitySet Name="ConceptoCajaImpuesto_CAJ" EntityType="ModeloCaja.ConceptoCajaImpuesto_CAJ" />
+    <EntitySet Name="RegistroTrasnClienteCredit_CAJ" EntityType="ModeloCaja.RegistroTrasnClienteCredit_CAJ" />
+    <EntitySet Name="RegistroVentaFormaPago_CAJ" EntityType="ModeloCaja.RegistroVentaFormaPago_CAJ" />
+    <FunctionImport Name="paCrearRegClienteCredito_CAJ">
+      <Parameter Name="idRegistroVenta" Mode="In" Type="Int64" />
+      <Parameter Name="idCliente" Mode="In" Type="Int32" />
+      <Parameter Name="nombreCliente" Mode="In" Type="String" />
+      <Parameter Name="nit" Mode="In" Type="String" />
+      <Parameter Name="idContrato" Mode="In" Type="Int32" />
+      <Parameter Name="numeroContrato" Mode="In" Type="String" />
+      <Parameter Name="idSucursal" Mode="In" Type="Int32" />
+      <Parameter Name="nombreSucursal" Mode="In" Type="String" />
+      <Parameter Name="creadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paCrearRegTransFormasPago_CAJ">
+      <Parameter Name="idRegistroVenta" Mode="In" Type="Int64" />
+      <Parameter Name="idFormaPago" Mode="In" Type="Int16" />
+      <Parameter Name="descripcionFormaPago" Mode="In" Type="String" />
+      <Parameter Name="valor" Mode="In" Type="Decimal" />
+      <Parameter Name="numeroAsociado" Mode="In" Type="String" />
+      <Parameter Name="campo1" Mode="In" Type="String" />
+      <Parameter Name="campo2" Mode="In" Type="String" />
+      <Parameter Name="creadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ReporteDineroPuntoAgencia_CAJ" EntityType="ModeloCaja.ReporteDineroPuntoAgencia_CAJ" />
+    <EntitySet Name="TipoObsPuntoAgencia_CAJ" EntityType="ModeloCaja.TipoObsPuntoAgencia_CAJ" />
+    <AssociationSet Name="FK_ReporteDineroPuntoAgencia_CAJ_TipoObsPuntoAgencia_CAJ" Association="ModeloCaja.FK_ReporteDineroPuntoAgencia_CAJ_TipoObsPuntoAgencia_CAJ">
+      <End Role="TipoObsPuntoAgencia_CAJ" EntitySet="TipoObsPuntoAgencia_CAJ" />
+      <End Role="ReporteDineroPuntoAgencia_CAJ" EntitySet="ReporteDineroPuntoAgencia_CAJ" />
+    </AssociationSet>
+    <EntitySet Name="PinPrepago_CAJ" EntityType="ModeloCaja.PinPrepago_CAJ" />
+    <EntitySet Name="RegistroTransaccionesCaja_CAJ" EntityType="ModeloCaja.RegistroTransaccionesCaja_CAJ" />
+    <AssociationSet Name="FK_RegistroVentaClienteCredit_CAJ_RegistroVenta_CAJ" Association="ModeloCaja.FK_RegistroVentaClienteCredit_CAJ_RegistroVenta_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="RegistroTrasnClienteCredit_CAJ" EntitySet="RegistroTrasnClienteCredit_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroVentaFormaPago_CAJ_RegistroVenta_CAJ" Association="ModeloCaja.FK_RegistroVentaFormaPago_CAJ_RegistroVenta_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="RegistroVentaFormaPago_CAJ" EntitySet="RegistroVentaFormaPago_CAJ" />
+    </AssociationSet>
+    <EntitySet Name="CentroSvcCentroSvcMov_CAJ" EntityType="ModeloCaja.CentroSvcCentroSvcMov_CAJ" />
+    <AssociationSet Name="FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ" Association="ModeloCaja.FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="CentroSvcCentroSvcMov_CAJ" EntitySet="CentroSvcCentroSvcMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1" Association="ModeloCaja.FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="CentroSvcCentroSvcMov_CAJ" EntitySet="CentroSvcCentroSvcMov_CAJ" />
+    </AssociationSet>
+    <EntitySet Name="ResumenCajaCentroServ_CAJ" EntityType="ModeloCaja.ResumenCajaCentroServ_CAJ" />
+    <EntitySet Name="ConceptoCajaCategoria_CAJ" EntityType="ModeloCaja.ConceptoCajaCategoria_CAJ" />
+    <AssociationSet Name="FK_ConceptoCajaCategoria_CAJ_CategoriaConceptoCaja_CAJ" Association="ModeloCaja.FK_ConceptoCajaCategoria_CAJ_CategoriaConceptoCaja_CAJ">
+      <End Role="CategoriaConceptoCaja_CAJ" EntitySet="CategoriaConceptoCaja_CAJ" />
+      <End Role="ConceptoCajaCategoria_CAJ" EntitySet="ConceptoCajaCategoria_CAJ" />
+    </AssociationSet>
+    <EntitySet Name="DuplaConceptoCaja_CAJ" EntityType="ModeloCaja.DuplaConceptoCaja_CAJ" />
+    <EntitySet Name="ParametrosCajas_CAJ" EntityType="ModeloCaja.ParametrosCajas_CAJ" />
+    <FunctionImport Name="paObtenerRegVentaPinPrepag_CAJ" ReturnType="Collection(ModeloCaja.RegVentaPinPrepag_CAJ)">
+      <Parameter Name="pinPrepago" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="RegistroTransacDetalleImpuesto_CAJ" EntityType="ModeloCaja.RegistroTransacDetalleImpuesto_CAJ" />
+    <FunctionImport Name="paObtenerSaldoActualCaja_CAJ" ReturnType="Collection(Decimal)">
+      <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="ConceptoCajaRetencion_CAJ" EntityType="ModeloCaja.ConceptoCajaRetencion_CAJ" />
+    <EntitySet Name="RegistroTranscDetalleRetencion_CAJ" EntityType="ModeloCaja.RegistroTranscDetalleRetencion_CAJ" />
+    <FunctionImport Name="paCrearRegTransRetenciones_CAJ">
+      <Parameter Name="RTR_IdRegTransDtllCaja" Mode="In" Type="Int64" />
+      <Parameter Name="RTR_IdRetencion" Mode="In" Type="Int16" />
+      <Parameter Name="RTR_DescripcionRetencion" Mode="In" Type="String" />
+      <Parameter Name="RTR_ValorFijo" Mode="In" Type="Decimal" />
+      <Parameter Name="RTR_TarifaPorcentual" Mode="In" Type="Decimal" />
+      <Parameter Name="RTR_Base" Mode="In" Type="Decimal" />
+      <Parameter Name="RTR_Valor" Mode="In" Type="Decimal" />
+      <Parameter Name="RTR_CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paCrearRegTransImpuestos_CAJ">
+      <Parameter Name="RTI_IdRegTransDtllCaja" Mode="In" Type="Int64" />
+      <Parameter Name="RTI_IdImpuesto" Mode="In" Type="Int16" />
+      <Parameter Name="RTI_DescripcionImpuesto" Mode="In" Type="String" />
+      <Parameter Name="RTI_ValorConfigurado" Mode="In" Type="Decimal" />
+      <Parameter Name="RTI_IdCuentaExterna" Mode="In" Type="Int16" />
+      <Parameter Name="RTI_Valor" Mode="In" Type="Decimal" />
+      <Parameter Name="RTI_CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerRegFormaPago_CAJ" ReturnType="Collection(ModeloCaja.paObtenerRegFormaPagoRS_CAJ)">
+      <Parameter Name="IdRegistroTransaccion" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerRegistroTrans_CAJ" ReturnType="Collection(ModeloCaja.paObtenerRegistroTransRS_CAJ)">
+      <Parameter Name="IdRegistroTransaccion" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="AperturaCajaCasaMatriz_CAJ" EntityType="ModeloCaja.AperturaCajaCasaMatriz_CAJ" />
+    <EntitySet Name="CierreCajaCasaMatriz_CAJ" EntityType="ModeloCaja.CierreCajaCasaMatriz_CAJ" />
+    <EntitySet Name="CajaBancoOperacionNacionalMov_CAJ" EntityType="ModeloCaja.CajaBancoOperacionNacionalMov_CAJ" />
+    <EntitySet Name="CajaCasaMatrizBancoMov_CAJ" EntityType="ModeloCaja.CajaCasaMatrizBancoMov_CAJ" />
+    <EntitySet Name="CajaCasaMatrizCentroSvcMov_CAJ" EntityType="ModeloCaja.CajaCasaMatrizCentroSvcMov_CAJ" />
+    <EntitySet Name="CajaCasaMatrizOperacionNacionalMov_CAJ" EntityType="ModeloCaja.CajaCasaMatrizOperacionNacionalMov_CAJ" />
+    <EntitySet Name="CajaCentroSvcOperacionNacionalMov_CAJ" EntityType="ModeloCaja.CajaCentroSvcOperacionNacionalMov_CAJ" />
+    <AssociationSet Name="FK_CajaEmpresaCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1" Association="ModeloCaja.FK_CajaEmpresaCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="CajaCasaMatrizCentroSvcMov_CAJ" EntitySet="CajaCasaMatrizCentroSvcMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaCentroSvcOperacionNacionalMov_CAJ_RegistroTransaccionesCaja_CAJ" Association="ModeloCaja.FK_CajaCentroSvcOperacionNacionalMov_CAJ_RegistroTransaccionesCaja_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="CajaCentroSvcOperacionNacionalMov_CAJ" EntitySet="CajaCentroSvcOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <EntitySet Name="BancoCentroServiciosMov_CAJ" EntityType="ModeloCaja.BancoCentroServiciosMov_CAJ" />
+    <AssociationSet Name="FK_BancoCentroServiciosMov_CAJ_RegistroTransaccionesCaja_CAJ" Association="ModeloCaja.FK_BancoCentroServiciosMov_CAJ_RegistroTransaccionesCaja_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="BancoCentroServiciosMov_CAJ" EntitySet="BancoCentroServiciosMov_CAJ" />
+    </AssociationSet>
+    <FunctionImport Name="paObtenerComisionesVentasApertura_CAJ" ReturnType="Collection(ModeloCaja.ComisionesVentasApertura_CAJ)">
+      <Parameter Name="IdAperturaCaja" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerResumenCajas_CAJ" ReturnType="Collection(ModeloCaja.ResumenCajas_CAJ)">
+      <Parameter Name="idPuntoAtencion" Mode="In" Type="Int64" />
+      <Parameter Name="idFormaPago" Mode="In" Type="Int16" />
+      <Parameter Name="operador" Mode="In" Type="String" />
+      <Parameter Name="idApertura" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paActualizarNumCompRegTransDet">
+      <Parameter Name="RTD_IdRegistroTransDetalleCaja" Mode="In" Type="Int64" />
+      <Parameter Name="RTD_NumeroComprobante" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerRegTransDetallePorCentroServicio_CAJ" ReturnType="Collection(ModeloCaja.CARegTransDetallePorCentroServicio)">
+      <Parameter Name="NumeroGuia" Mode="In" Type="Int64" />
+      <Parameter Name="IdConceptoCaja" Mode="In" Type="Int32" />
+      <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="CuentaExterna_PAR" EntityType="ModeloCaja.CuentaExterna_PAR" />
+    <EntitySet Name="CentroServiciosReporteDinero_PUA" EntityType="ModeloCaja.CentroServiciosReporteDinero_PUA" />
+    <EntitySet Name="AperturaCaja_CAJ" EntityType="ModeloCaja.AperturaCaja_CAJ" />
+    <EntitySet Name="AperturaCajaCentroServicios_CAJ" EntityType="ModeloCaja.AperturaCajaCentroServicios_CAJ" />
+    <EntitySet Name="CierreCaja_CAJ" EntityType="ModeloCaja.CierreCaja_CAJ" />
+    <AssociationSet Name="FK_AperturaCajaCasaMatriz_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.FK_AperturaCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="AperturaCajaCasaMatriz_CAJ" EntitySet="AperturaCajaCasaMatriz_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AperturaCajaCentroServicios_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.FK_AperturaCajaCentroServicios_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="AperturaCajaCentroServicios_CAJ" EntitySet="AperturaCajaCentroServicios_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CierreCaja_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.FK_CierreCaja_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="CierreCaja_CAJ" EntitySet="CierreCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CierreCajaCasaMatriz_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.FK_CierreCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="CierreCajaCasaMatriz_CAJ" EntitySet="CierreCajaCasaMatriz_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroVenta_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.FK_RegistroVenta_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+    </AssociationSet>
+    <EntitySet Name="CierreCajaGestion_VCAJ" EntityType="ModeloCaja.CierreCajaGestion_VCAJ" />
+    <FunctionImport Name="paObtenerCierreCajaCentroServicios_CAJ" ReturnType="Collection(ModeloCaja.paObtenerCierreCajaCentroServiciosRS_CAJ)">
+      <Parameter Name="CodigoUsuario" Mode="In" Type="Int64" />
+      <Parameter Name="IdCentroServicio" Mode="In" Type="Int64" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+      <Parameter Name="IncluirFiltroFecha" Mode="In" Type="Boolean" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="RegistroTransacDetalleCaja_CAJ" EntityType="ModeloCaja.RegistroTransacDetalleCaja_CAJ" />
+    <AssociationSet Name="FK_RegistroVentaDetalle_CAJ_RegistroVenta_CAJ" Association="ModeloCaja.FK_RegistroVentaDetalle_CAJ_RegistroVenta_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroTransacDetalleImpuesto_CAJ_RegistroTransacDetalleCaja_CAJ" Association="ModeloCaja.FK_RegistroTransacDetalleImpuesto_CAJ_RegistroTransacDetalleCaja_CAJ">
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+      <End Role="RegistroTransacDetalleImpuesto_CAJ" EntitySet="RegistroTransacDetalleImpuesto_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroTranscDetalleRetencion_CAJ_RegistroTransacDetalleCaja_CAJ" Association="ModeloCaja.FK_RegistroTranscDetalleRetencion_CAJ_RegistroTransacDetalleCaja_CAJ">
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+      <End Role="RegistroTranscDetalleRetencion_CAJ" EntitySet="RegistroTranscDetalleRetencion_CAJ" />
+    </AssociationSet>
+    <FunctionImport Name="paCerrarAperturasCasaMatriz_CAJ">
+      <Parameter Name="IdCasaMatriz" Mode="In" Type="Int16" />
+      <Parameter Name="CodigoUsuario" Mode="In" Type="Int64" />
+      <Parameter Name="CraeadoPor" Mode="In" Type="String" />
+      <Parameter Name="IdRacol" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerResumeCierrePunto_CAJ" ReturnType="Collection(ModeloCaja.ResumeCierrePunto_CAJ)">
+      <Parameter Name="idPuntoCentro" Mode="In" Type="Int64" />
+      <Parameter Name="idCierrepuntoAsociado" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerDineroReportPunto_CAJ" ReturnType="Collection(ModeloCaja.DineroReportPunto_CAJ)">
+      <Parameter Name="IdAgencia" Mode="In" Type="Int64" />
+      <Parameter Name="FiltroCodPunto" Mode="In" Type="String" />
+      <Parameter Name="FiltroIdMensajero" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="CierreCajaUsuarioCierre_VCAJ" EntityType="ModeloCaja.CierreCajaUsuarioCierre_VCAJ" />
+    <EntitySet Name="ResumenRecoleccionDineroPuntos_VCAJ" EntityType="ModeloCaja.ResumenRecoleccionDineroPuntos_VCAJ" />
+    <FunctionImport Name="paObtenerResumenCajaPorFormaPago_CAJ" ReturnType="Collection(ModeloCaja.ResumenCajaPorFormaPago_CAJ)">
+      <Parameter Name="idAperturaCaja" Mode="In" Type="Int64" />
+      <Parameter Name="idCierreAsociado" Mode="In" Type="Int64" />
+      <Parameter Name="idPuntoCentro" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerResumenTransccionesConcepto_CAJ" ReturnType="Collection(ModeloCaja.CAResumenTransccionesConcepto_CAJ)">
+      <Parameter Name="idApertura" Mode="In" Type="Int64" />
+      <Parameter Name="idCierreAsociado" Mode="In" Type="Int64" />
+      <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="BaseGestionCajas_CAJ" EntityType="ModeloCaja.BaseGestionCajas_CAJ" />
+    <EntitySet Name="OperacionCajaOperacionNacional_CAJ" EntityType="ModeloCaja.OperacionCajaOperacionNacional_CAJ" />
+    <AssociationSet Name="FK_OperacionCajaOperacionNacional_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.FK_OperacionCajaOperacionNacional_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" Association="ModeloCaja.FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+      <End Role="CajaBancoOperacionNacionalMov_CAJ" EntitySet="CajaBancoOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" Association="ModeloCaja.FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+      <End Role="CajaCasaMatrizOperacionNacionalMov_CAJ" EntitySet="CajaCasaMatrizOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaCentroSvcOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" Association="ModeloCaja.FK_CajaCentroSvcOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+      <End Role="CajaCentroSvcOperacionNacionalMov_CAJ" EntitySet="CajaCentroSvcOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <EntitySet Name="OperacionCajaCasaMatriz_CAJ" EntityType="ModeloCaja.OperacionCajaCasaMatriz_CAJ" />
+    <AssociationSet Name="FK_OperacionCajaCasaMatriz_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.FK_OperacionCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaEmpresaBancoMov_CAJ_CajaEmpresa_CAJ" Association="ModeloCaja.FK_CajaEmpresaBancoMov_CAJ_CajaEmpresa_CAJ">
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+      <End Role="CajaCasaMatrizBancoMov_CAJ" EntitySet="CajaCasaMatrizBancoMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaEmpresaCentroSvcMov_CAJ_CajaEmpresa_CAJ" Association="ModeloCaja.FK_CajaEmpresaCentroSvcMov_CAJ_CajaEmpresa_CAJ">
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+      <End Role="CajaCasaMatrizCentroSvcMov_CAJ" EntitySet="CajaCasaMatrizCentroSvcMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaCasaMatriz_CAJ" Association="ModeloCaja.FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaCasaMatriz_CAJ">
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+      <End Role="CajaCasaMatrizOperacionNacionalMov_CAJ" EntitySet="CajaCasaMatrizOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <FunctionImport Name="paObtenerRegTransDetalle_CAJ" ReturnType="Collection(ModeloCaja.paObtenerRegTransDetalle_CAJ_Result)">
+      <Parameter Name="NumeroGuia" Mode="In" Type="Int64" />
+      <Parameter Name="IdConceptoCaja" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerInfoCierreCaja_CAJ" ReturnType="Collection(ModeloCaja.ObtenerInfoCierreCaja_CAJ)">
+      <Parameter Name="idAperturaCaja" Mode="In" Type="Int64" />
+      <Parameter Name="idFormaPago" Mode="In" Type="Int16" />
+      <Parameter Name="operadorFormaPago" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="RegTranDetCajaAdicional_CAJ" EntityType="ModeloCaja.RegTranDetCajaAdicional_CAJ" />
+    <AssociationSet Name="FK_RegTranDetCajaAdicional_CAJ_RegistroTransacDetalleCaja_CAJ" Association="ModeloCaja.FK_RegTranDetCajaAdicional_CAJ_RegistroTransacDetalleCaja_CAJ">
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+      <End Role="RegTranDetCajaAdicional_CAJ" EntitySet="RegTranDetCajaAdicional_CAJ" />
+    </AssociationSet>
+    <FunctionImport Name="paCrearRegTransCajaDetlleAdicional_CAJ">
+      <Parameter Name="idRegistroDetalleTranscaccion" Mode="In" Type="Int64" />
+      <Parameter Name="idSucursal" Mode="In" Type="Int32" />
+      <Parameter Name="Adicional1" Mode="In" Type="String" />
+      <Parameter Name="Adicional2" Mode="In" Type="String" />
+      <Parameter Name="Adicional3" Mode="In" Type="String" />
+      <Parameter Name="creadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="CajasDisponibles_PUA" EntityType="ModeloCaja.CajasDisponibles_PUA" />
+    <EntitySet Name="CierreCentroServicios_CAJ" EntityType="ModeloCaja.CierreCentroServicios_CAJ" />
+    <EntitySet Name="RecoleccionDineroPuntos_CAJ" EntityType="ModeloCaja.RecoleccionDineroPuntos_CAJ" />
+    <AssociationSet Name="FK_RecoleccionDineroPuntos_CAJ_CierreCentroServicios_CAJ" Association="ModeloCaja.FK_RecoleccionDineroPuntos_CAJ_CierreCentroServicios_CAJ">
+      <End Role="CierreCentroServicios_CAJ" EntitySet="CierreCentroServicios_CAJ" />
+      <End Role="RecoleccionDineroPuntos_CAJ" EntitySet="RecoleccionDineroPuntos_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReporteDineroPuntoAgencia_CAJ_RecoleccionDineroPuntos_CAJ" Association="ModeloCaja.FK_ReporteDineroPuntoAgencia_CAJ_RecoleccionDineroPuntos_CAJ">
+      <End Role="RecoleccionDineroPuntos_CAJ" EntitySet="RecoleccionDineroPuntos_CAJ" />
+      <End Role="ReporteDineroPuntoAgencia_CAJ" EntitySet="ReporteDineroPuntoAgencia_CAJ" />
+    </AssociationSet>
+    <FunctionImport Name="paObtenerAlCobrosSinCancelar_MEN" ReturnType="Collection(ModeloCaja.paObtenerAlCobrosSinCancelar_MEN)">
+      <Parameter Name="IdCentroSvc" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paAperturaCajasEnCero">
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="CuentaMensajero_CAJ" EntityType="ModeloCaja.CuentaMensajero_CAJ" />
+    <FunctionImport Name="paObtUltAperCaj0NoCerrada_CAJ" ReturnType="Collection(Int64)">
+      <Parameter Name="idPuntoCentro" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paCrearRegistroTransCaja_CAJ" ReturnType="Collection(ModeloCaja.paCrearRegistroTransCaja_CAJ_Result)">
+      <Parameter Name="RTC_Usuario" Mode="In" Type="String" />
+      <Parameter Name="RTC_IdAperturaCaja" Mode="In" Type="Int64" />
+      <Parameter Name="RTC_IdCentroServiciosVenta" Mode="In" Type="Int64" />
+      <Parameter Name="RTC_NombreCentroServiciosVenta" Mode="In" Type="String" />
+      <Parameter Name="RTC_IdCentroServiciosResponsable" Mode="In" Type="Int64" />
+      <Parameter Name="RTC_NombreCtroSvcsResponsable" Mode="In" Type="String" />
+      <Parameter Name="RTC_ValorTotal" Mode="In" Type="Decimal" />
+      <Parameter Name="RTC_TotalImpuestos" Mode="In" Type="Decimal" />
+      <Parameter Name="RTC_TotalRetenciones" Mode="In" Type="Decimal" />
+      <Parameter Name="RTC_TipoDatosAdicionales" Mode="In" Type="String" />
+      <Parameter Name="RTC_CreadoPor" Mode="In" Type="String" />
+      <Parameter Name="RTC_FechaGrabacion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paCrearRegTransCajaDetalle_CAJ" ReturnType="Collection(ModeloCaja.paCrearRegTransCajaDetalle_CAJ_Result)">
+      <Parameter Name="idRegistroTranscaccion" Mode="In" Type="Int64" />
+      <Parameter Name="idConceptoCaja" Mode="In" Type="Int32" />
+      <Parameter Name="nombreConcepto" Mode="In" Type="String" />
+      <Parameter Name="conceptoEsIngreso" Mode="In" Type="Boolean" />
+      <Parameter Name="cantidad" Mode="In" Type="Int16" />
+      <Parameter Name="valorServicio" Mode="In" Type="Decimal" />
+      <Parameter Name="valoresAdicionales" Mode="In" Type="Decimal" />
+      <Parameter Name="valorTercero" Mode="In" Type="Decimal" />
+      <Parameter Name="valorImpuestos" Mode="In" Type="Decimal" />
+      <Parameter Name="valorRetenciones" Mode="In" Type="Decimal" />
+      <Parameter Name="valorPrimaSeguros" Mode="In" Type="Decimal" />
+      <Parameter Name="valorDeclarado" Mode="In" Type="Decimal" />
+      <Parameter Name="numero" Mode="In" Type="Int64" />
+      <Parameter Name="idCuentaExterna" Mode="In" Type="Int16" />
+      <Parameter Name="numeroFactura" Mode="In" Type="String" />
+      <Parameter Name="estadoFacturacion" Mode="In" Type="String" />
+      <Parameter Name="fechaFacturacion" Mode="In" Type="DateTime" />
+      <Parameter Name="observacion" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="numeroComprobante" Mode="In" Type="String" />
+      <Parameter Name="creadoPor" Mode="In" Type="String" />
+      <Parameter Name="minDate" Mode="In" Type="DateTime" />
+      <Parameter Name="CentroServicios" Mode="In" Type="Int64" />
+      <Parameter Name="ValorEfectivo" Mode="In" Type="Decimal" />
+      <Parameter Name="RTC_FechaGrabacion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerResumeCtaMensajer_CAJ" ReturnType="Collection(ModeloCaja.paObtenerResumeCtaMensajer_CAJ_Result)">
+      <Parameter Name="idMensajero" Mode="In" Type="Int64" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerReportesMensajero_CAJ" ReturnType="Collection(ModeloCaja.paObtenerReportesMensajero_CAJ_Result)">
+      <Parameter Name="IdMensajero" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paRecalcularSaldosFinales_CAJ">
+      <Parameter Name="IdCierreCS" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paValidarCierreAutomatico_CAJ">
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paCerrarCentroServicio_CAJ" ReturnType="Collection(ModeloCaja.paCerrarCentroServicio_CAJ_Result)">
+      <Parameter Name="IdCentroServicios" Mode="In" Type="Int64" />
+      <Parameter Name="Automatico" Mode="In" Type="Boolean" />
+      <Parameter Name="CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerClientePropOper_CAJ" ReturnType="Collection(ModeloCaja.ClienteOperacion_CAJ)">
+      <Parameter Name="IdOperacionDesde" Mode="In" Type="Int64" />
+      <Parameter Name="IdOperacionHasta" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="AperturaCasaMatriz_VCAJ" EntityType="ModeloCaja.AperturaCasaMatriz_VCAJ" />
+    <EntitySet Name="AperturaCentroServicos_VCAJ" EntityType="ModeloCaja.AperturaCentroServicos_VCAJ" />
+    <FunctionImport Name="paObtenerEnviMenjAlCobro_CAJ" ReturnType="Collection(ModeloCaja.paObtenerEnviMenjAlCobro_CAJ_Result)">
+      <Parameter Name="idMensajero" Mode="In" Type="Int64" />
+      <Parameter Name="idComprobante" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="ConceptoCaja_CAJ" EntityType="ModeloCaja.ConceptoCaja_CAJ" />
+    <AssociationSet Name="FK_CajaEmpresa_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_CajaEmpresa_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCaja_CAJ_CuentaExterna_PAR" Association="ModeloCaja.FK_ConceptoCaja_CAJ_CuentaExterna_PAR">
+      <End Role="CuentaExterna_PAR" EntitySet="CuentaExterna_PAR" />
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCajaCategoria_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_ConceptoCajaCategoria_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="ConceptoCajaCategoria_CAJ" EntitySet="ConceptoCajaCategoria_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCajaImpuesto_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_ConceptoCajaImpuesto_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="ConceptoCajaImpuesto_CAJ" EntitySet="ConceptoCajaImpuesto_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCajaRetencion_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_ConceptoCajaRetencion_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="ConceptoCajaRetencion_CAJ" EntitySet="ConceptoCajaRetencion_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaMensajero_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_CuentaMensajero_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="CuentaMensajero_CAJ" EntitySet="CuentaMensajero_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="DuplaConceptoCaja_CAJ" EntitySet="DuplaConceptoCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ1" Association="ModeloCaja.FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ1">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="DuplaConceptoCaja_CAJ" EntitySet="DuplaConceptoCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionCajaOperacionNacional_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_OperacionCajaOperacionNacional_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroVentaDetalle_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_RegistroVentaDetalle_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+    </AssociationSet>
+    <EntitySet Name="CategConceptoCaja_VCAJ" EntityType="ModeloCaja.CategConceptoCaja_VCAJ" />
+    <EntitySet Name="ConceptoCajaHist_CAJ" EntityType="ModeloCaja.ConceptoCajaHist_CAJ" />
+    <FunctionImport Name="paObtenerCajasCerradasXCSFecha_CAJ" ReturnType="Collection(ModeloCaja.paObtenerCajasCerradasXCSFecha_CAJ_Result)">
+      <Parameter Name="IdCS" Mode="In" Type="Int64" />
+      <Parameter Name="FechaDesde" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaHasta" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="OperacionCajaBanco_CAJ" EntityType="ModeloCaja.OperacionCajaBanco_CAJ" />
+    <AssociationSet Name="FK_OperacionCajaBanco_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.FK_OperacionCajaBanco_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BancoCentroServiciosMov_CAJ_CajaBanco_CAJ" Association="ModeloCaja.FK_BancoCentroServiciosMov_CAJ_CajaBanco_CAJ">
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+      <End Role="BancoCentroServiciosMov_CAJ" EntitySet="BancoCentroServiciosMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaBanco_CAJ" Association="ModeloCaja.FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaBanco_CAJ">
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+      <End Role="CajaBancoOperacionNacionalMov_CAJ" EntitySet="CajaBancoOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaEmpresaBancoMov_CAJ_CajaBanco_CAJ" Association="ModeloCaja.FK_CajaEmpresaBancoMov_CAJ_CajaBanco_CAJ">
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+      <End Role="CajaCasaMatrizBancoMov_CAJ" EntitySet="CajaCasaMatrizBancoMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaBanco_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.FK_CajaBanco_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+    </AssociationSet>
+    <FunctionImport Name="paObtenerCajaAfectadaAlCobro_CAJ" ReturnType="Collection(ModeloCaja.paObtenerCajaAfectadaAlCobro_CAJ_Result)">
+      <Parameter Name="NumeroOperacion" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerRegitrosTranCajaCentroSvc_CAJ" ReturnType="Collection(ModeloCaja.paObtenerRegitrosTranCajaCentroSvc_CAJ_Result)">
+      <Parameter Name="idCentroServcio" Mode="In" Type="Int64" />
+      <Parameter Name="fechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerCSRecacudoAlcobro_CAJ" ReturnType="Collection(ModeloCaja.paObtenerCSRecacudoAlcobro_CAJ_Result)">
+      <Parameter Name="NumeroGuia" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="ReporteMensajeroCaja_CAJ" EntityType="ModeloCaja.ReporteMensajeroCaja_CAJ" />
+    <AssociationSet Name="FK_ReporteMensajeroCaja_CAJ_RegistroTransacDetalleCaja_CAJ" Association="ModeloCaja.FK_ReporteMensajeroCaja_CAJ_RegistroTransacDetalleCaja_CAJ">
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+      <End Role="ReporteMensajeroCaja_CAJ" EntitySet="ReporteMensajeroCaja_CAJ" />
+    </AssociationSet>
+    <FunctionImport Name="paObtenerReporteMensajeroImprimir_CAJ" ReturnType="Collection(ModeloCaja.paObtenerReporteMensajeroImprimir_CAJ_Result)">
+      <Parameter Name="IdMensajero" Mode="In" Type="Int64" />
+      <Parameter Name="NumeroComprobante" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="CategoriaConceptoCaja_CAJ">
+    <Key>
+      <PropertyRef Name="CCC_IdCategoria" />
+    </Key>
+    <Property Type="Int16" Name="CCC_IdCategoria" Nullable="false" />
+    <Property Type="String" Name="CCC_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CCC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CCC_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ConceptoCajaCategoria_CAJ" Relationship="ModeloCaja.FK_ConceptoCajaCategoria_CAJ_CategoriaConceptoCaja_CAJ" FromRole="CategoriaConceptoCaja_CAJ" ToRole="ConceptoCajaCategoria_CAJ" />
+  </EntityType>
+  <EntityType Name="ConceptoCajaImpuesto_CAJ">
+    <Key>
+      <PropertyRef Name="CCI_IdConceptoCajaImpuesto" />
+    </Key>
+    <Property Type="Int32" Name="CCI_IdConceptoCajaImpuesto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="COC_IdConceptoCaja" Nullable="false" />
+    <Property Type="Int16" Name="COC_IdImpuesto" Nullable="false" />
+    <Property Type="DateTime" Name="COC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="COC_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_ConceptoCajaImpuesto_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCajaImpuesto_CAJ" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <EntityType Name="RegistroTrasnClienteCredit_CAJ">
+    <Key>
+      <PropertyRef Name="RTC_IdRegistroVenta" />
+    </Key>
+    <Property Type="Int64" Name="RTC_IdRegistroVenta" Nullable="false" />
+    <Property Type="Int32" Name="RTC_IdCliente" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCliente" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTC_Nit" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="RTC_IdContrato" Nullable="false" />
+    <Property Type="String" Name="RTC_NumeroContrato" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="RTC_IdSucursal" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreSucursal" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RTC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ" Relationship="ModeloCaja.FK_RegistroVentaClienteCredit_CAJ_RegistroVenta_CAJ" FromRole="RegistroTrasnClienteCredit_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+  </EntityType>
+  <EntityType Name="RegistroVentaFormaPago_CAJ">
+    <Key>
+      <PropertyRef Name="RVF_IdRegistroVentaFormaPago" />
+    </Key>
+    <Property Type="Int64" Name="RVF_IdRegistroVentaFormaPago" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RVF_IdRegistroVenta" Nullable="false" />
+    <Property Type="Int16" Name="RVF_IdFormaPago" Nullable="false" />
+    <Property Type="String" Name="RVF_DescripcionFormaPago" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="RVF_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="RVF_NumeroAsociado" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RVF_Campo1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RVF_Campo2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RVF_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RVF_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ" Relationship="ModeloCaja.FK_RegistroVentaFormaPago_CAJ_RegistroVenta_CAJ" FromRole="RegistroVentaFormaPago_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+  </EntityType>
+  <ComplexType Name="CrearRegistroTransCaja">
+    <Property Type="Decimal" Name="idRegistroTransaccion" Nullable="true" Precision="38" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="CAComisionesVentas">
+    <Property Type="Int64" Name="RTC_IdAperturaCaja" Nullable="false" />
+    <Property Type="Decimal" Name="TotalComisionVenta" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalComisionResponsable" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalComisionEmpresa" Nullable="true" Precision="38" Scale="4" />
+  </ComplexType>
+  <EntityType Name="ReporteDineroPuntoAgencia_CAJ">
+    <Key>
+      <PropertyRef Name="RDP_IdRecoleccion" />
+    </Key>
+    <Property Type="Int32" Name="RDP_IdRecoleccion" Nullable="false" />
+    <Property Type="Decimal" Name="RDP_ValorReportado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="RDP_Manual" Nullable="false" />
+    <Property Type="Int16" Name="RDP_TipoObservacion" />
+    <Property Type="String" Name="RDP_Observaciones" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RDP_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RDP_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TipoObsPuntoAgencia_CAJ" Relationship="ModeloCaja.FK_ReporteDineroPuntoAgencia_CAJ_TipoObsPuntoAgencia_CAJ" FromRole="ReporteDineroPuntoAgencia_CAJ" ToRole="TipoObsPuntoAgencia_CAJ" />
+    <NavigationProperty Name="RecoleccionDineroPuntos_CAJ" Relationship="ModeloCaja.FK_ReporteDineroPuntoAgencia_CAJ_RecoleccionDineroPuntos_CAJ" FromRole="ReporteDineroPuntoAgencia_CAJ" ToRole="RecoleccionDineroPuntos_CAJ" />
+  </EntityType>
+  <EntityType Name="TipoObsPuntoAgencia_CAJ">
+    <Key>
+      <PropertyRef Name="TOP_IdTipoObservacion" />
+    </Key>
+    <Property Type="Int16" Name="TOP_IdTipoObservacion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TOP_Descripcion" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TOP_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="TOP_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ReporteDineroPuntoAgencia_CAJ" Relationship="ModeloCaja.FK_ReporteDineroPuntoAgencia_CAJ_TipoObsPuntoAgencia_CAJ" FromRole="TipoObsPuntoAgencia_CAJ" ToRole="ReporteDineroPuntoAgencia_CAJ" />
+  </EntityType>
+  <Association Name="FK_ReporteDineroPuntoAgencia_CAJ_TipoObsPuntoAgencia_CAJ">
+    <End Type="ModeloCaja.TipoObsPuntoAgencia_CAJ" Role="TipoObsPuntoAgencia_CAJ" Multiplicity="0..1" />
+    <End Type="ModeloCaja.ReporteDineroPuntoAgencia_CAJ" Role="ReporteDineroPuntoAgencia_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoObsPuntoAgencia_CAJ">
+        <PropertyRef Name="TOP_IdTipoObservacion" />
+      </Principal>
+      <Dependent Role="ReporteDineroPuntoAgencia_CAJ">
+        <PropertyRef Name="RDP_TipoObservacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PinPrepago_CAJ">
+    <Key>
+      <PropertyRef Name="PIP_IdPinPrepago" />
+    </Key>
+    <Property Type="Int64" Name="PIP_IdPinPrepago" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="PIP_Pin" Nullable="false" />
+    <Property Type="Decimal" Name="PIP_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="PIP_Saldo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="PIP_FechaActualizacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PIP_NombreComprador" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PIP_IdTipoIdentificacion" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PIP_Identificacion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PIP_Direccion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PIP_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="PIP_IdCentroServiciosVende" Nullable="false" />
+    <Property Type="DateTime" Name="PIP_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PIP_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RegistroTransaccionesCaja_CAJ">
+    <Key>
+      <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+    </Key>
+    <Property Type="Int64" Name="RTC_IdRegistroTranscaccion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RTC_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int64" Name="RTC_IdCentroServiciosVenta" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCentroServiciosVenta" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="RTC_IdCentroServiosResponsable" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCtroSvcsResponsable" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="RTC_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTC_TotalImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTC_TotalRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="RTC_TipoDatosAdicionales" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="RTC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTrasnClienteCredit_CAJ" Relationship="ModeloCaja.FK_RegistroVentaClienteCredit_CAJ_RegistroVenta_CAJ" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="RegistroTrasnClienteCredit_CAJ" />
+    <NavigationProperty Name="RegistroVentaFormaPago_CAJ" Relationship="ModeloCaja.FK_RegistroVentaFormaPago_CAJ_RegistroVenta_CAJ" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="RegistroVentaFormaPago_CAJ" />
+    <NavigationProperty Name="CentroSvcCentroSvcMov_CAJ" Relationship="ModeloCaja.FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="CentroSvcCentroSvcMov_CAJ" />
+    <NavigationProperty Name="CentroSvcCentroSvcMov_CAJ1" Relationship="ModeloCaja.FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="CentroSvcCentroSvcMov_CAJ" />
+    <NavigationProperty Name="CajaCasaMatrizCentroSvcMov_CAJ" Relationship="ModeloCaja.FK_CajaEmpresaCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="CajaCasaMatrizCentroSvcMov_CAJ" />
+    <NavigationProperty Name="CajaCentroSvcOperacionNacionalMov_CAJ" Relationship="ModeloCaja.FK_CajaCentroSvcOperacionNacionalMov_CAJ_RegistroTransaccionesCaja_CAJ" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="CajaCentroSvcOperacionNacionalMov_CAJ" />
+    <NavigationProperty Name="BancoCentroServiciosMov_CAJ" Relationship="ModeloCaja.FK_BancoCentroServiciosMov_CAJ_RegistroTransaccionesCaja_CAJ" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="BancoCentroServiciosMov_CAJ" />
+    <NavigationProperty Name="AperturaCaja_CAJ" Relationship="ModeloCaja.FK_RegistroVenta_CAJ_AperturaCaja_CAJ" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="AperturaCaja_CAJ" />
+    <NavigationProperty Name="RegistroTransacDetalleCaja_CAJ" Relationship="ModeloCaja.FK_RegistroVentaDetalle_CAJ_RegistroVenta_CAJ" FromRole="RegistroTransaccionesCaja_CAJ" ToRole="RegistroTransacDetalleCaja_CAJ" />
+  </EntityType>
+  <Association Name="FK_RegistroVentaClienteCredit_CAJ_RegistroVenta_CAJ">
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RegistroTrasnClienteCredit_CAJ" Role="RegistroTrasnClienteCredit_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="RegistroTrasnClienteCredit_CAJ">
+        <PropertyRef Name="RTC_IdRegistroVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroVentaFormaPago_CAJ_RegistroVenta_CAJ">
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RegistroVentaFormaPago_CAJ" Role="RegistroVentaFormaPago_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="RegistroVentaFormaPago_CAJ">
+        <PropertyRef Name="RVF_IdRegistroVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CentroSvcCentroSvcMov_CAJ">
+    <Key>
+      <PropertyRef Name="CSM_IdCentroSvcCentroSvcMov" />
+    </Key>
+    <Property Type="Int64" Name="CSM_IdCentroSvcCentroSvcMov" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CSM_IdCentroServiciosOrigen" Nullable="false" />
+    <Property Type="String" Name="CSM_NombreCentroSvcOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CSM_IdCentroServiciosDestino" Nullable="false" />
+    <Property Type="String" Name="CSM_NombreCentroSvcDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CSM_IdRegistroTxOrigen" Nullable="false" />
+    <Property Type="Int64" Name="CSM_IdRegistroTxDestino" Nullable="false" />
+    <Property Type="DateTime" Name="CSM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CSM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ" Relationship="ModeloCaja.FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ" FromRole="CentroSvcCentroSvcMov_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ1" Relationship="ModeloCaja.FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1" FromRole="CentroSvcCentroSvcMov_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+    <Property Type="String" Name="CSM_NumeroPrecinto" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CSM_NumeroBolsaSeguridad" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CSM_NumeroGuia" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ">
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CentroSvcCentroSvcMov_CAJ" Role="CentroSvcCentroSvcMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="CentroSvcCentroSvcMov_CAJ">
+        <PropertyRef Name="CSM_IdRegistroTxOrigen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1">
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CentroSvcCentroSvcMov_CAJ" Role="CentroSvcCentroSvcMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="CentroSvcCentroSvcMov_CAJ">
+        <PropertyRef Name="CSM_IdRegistroTxDestino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ResumenCajaCentroServ_CAJ">
+    <Key>
+      <PropertyRef Name="RCC_IdCentroServicios" />
+    </Key>
+    <Property Type="Int64" Name="RCC_IdCentroServicios" Nullable="false" />
+    <Property Type="Decimal" Name="RCC_TotalIngresos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RCC_TotalEgresos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RCC_TotalSaldoCaja" Precision="17" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="DateTime" Name="RCC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RC_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ConceptoCajaCategoria_CAJ">
+    <Key>
+      <PropertyRef Name="CCA_IdCategoria" />
+      <PropertyRef Name="CCA_IdConceptoCaja" />
+    </Key>
+    <Property Type="Int16" Name="CCA_IdCategoria" Nullable="false" />
+    <Property Type="Int32" Name="CCA_IdConceptoCaja" Nullable="false" />
+    <Property Type="DateTime" Name="CCA_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CCA_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CategoriaConceptoCaja_CAJ" Relationship="ModeloCaja.FK_ConceptoCajaCategoria_CAJ_CategoriaConceptoCaja_CAJ" FromRole="ConceptoCajaCategoria_CAJ" ToRole="CategoriaConceptoCaja_CAJ" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_ConceptoCajaCategoria_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCajaCategoria_CAJ" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <Association Name="FK_ConceptoCajaCategoria_CAJ_CategoriaConceptoCaja_CAJ">
+    <End Type="ModeloCaja.CategoriaConceptoCaja_CAJ" Role="CategoriaConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.ConceptoCajaCategoria_CAJ" Role="ConceptoCajaCategoria_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaConceptoCaja_CAJ">
+        <PropertyRef Name="CCC_IdCategoria" />
+      </Principal>
+      <Dependent Role="ConceptoCajaCategoria_CAJ">
+        <PropertyRef Name="CCA_IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="DuplaConceptoCaja_CAJ">
+    <Key>
+      <PropertyRef Name="DCC_IdConceptoCajaPrimario" />
+      <PropertyRef Name="DCC_IdConceptoCajaSecundario" />
+    </Key>
+    <Property Type="Int32" Name="DCC_IdConceptoCajaPrimario" Nullable="false" />
+    <Property Type="Int32" Name="DCC_IdConceptoCajaSecundario" Nullable="false" />
+    <Property Type="DateTime" Name="DCC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="DCC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ" FromRole="DuplaConceptoCaja_CAJ" ToRole="ConceptoCaja_CAJ" />
+    <NavigationProperty Name="ConceptoCaja_CAJ1" Relationship="ModeloCaja.FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ1" FromRole="DuplaConceptoCaja_CAJ" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <EntityType Name="ParametrosCajas_CAJ">
+    <Key>
+      <PropertyRef Name="PAC_IdParametro" />
+    </Key>
+    <Property Type="String" Name="PAC_IdParametro" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAC_ValorParametro" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAC_Descripcion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PAC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PAC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="RegVentaPinPrepag_CAJ">
+    <Property Type="Int64" Name="PIP_Pin" Nullable="false" />
+    <Property Type="Int64" Name="RTD_Numero" Nullable="false" />
+    <Property Type="String" Name="RTD_NombreConcepto" Nullable="false" MaxLength="25" />
+    <Property Type="Int16" Name="RTD_Cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="RVF_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="PIP_Saldo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="RTD_FechaGrabacion" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="RegistroTransacDetalleImpuesto_CAJ">
+    <Key>
+      <PropertyRef Name="RTI_IdRegsitroTransacDetalleImpuesto" />
+    </Key>
+    <Property Type="Int64" Name="RTI_IdRegsitroTransacDetalleImpuesto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RTI_IdRegistroTransDetalleCaja" Nullable="false" />
+    <Property Type="Int16" Name="RTI_IdImpuesto" Nullable="false" />
+    <Property Type="String" Name="RTI_DescripcionImpuesto" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="RTI_ValorConfigurado" Nullable="false" Precision="6" Scale="4" />
+    <Property Type="Int16" Name="RTI_IdCuentaExterna" />
+    <Property Type="Decimal" Name="RTI_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="RTI_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTI_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransacDetalleCaja_CAJ" Relationship="ModeloCaja.FK_RegistroTransacDetalleImpuesto_CAJ_RegistroTransacDetalleCaja_CAJ" FromRole="RegistroTransacDetalleImpuesto_CAJ" ToRole="RegistroTransacDetalleCaja_CAJ" />
+  </EntityType>
+  <EntityType Name="ConceptoCajaRetencion_CAJ">
+    <Key>
+      <PropertyRef Name="CCR_IdConceptoCaja" />
+      <PropertyRef Name="CCR_IdRetencion" />
+    </Key>
+    <Property Type="Int32" Name="CCR_IdConceptoCaja" Nullable="false" />
+    <Property Type="Int16" Name="CCR_IdRetencion" Nullable="false" />
+    <Property Type="Decimal" Name="CCR_ValorFijo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCR_TarifaPorcentual" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCR_Base" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="CCR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CCR_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_ConceptoCajaRetencion_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCajaRetencion_CAJ" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <EntityType Name="RegistroTranscDetalleRetencion_CAJ">
+    <Key>
+      <PropertyRef Name="RTR_IdRegistroTransacDetalleRetencion" />
+    </Key>
+    <Property Type="Int64" Name="RTR_IdRegistroTransacDetalleRetencion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RTR_IdRegistroTransDetalleCaja" Nullable="false" />
+    <Property Type="Int16" Name="RTR_IdRetencion" Nullable="false" />
+    <Property Type="String" Name="RTR_DescripcionRetencion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="RTR_ValorFijo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTR_TarifaPorcentual" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTR_Base" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTI_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="RTR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransacDetalleCaja_CAJ" Relationship="ModeloCaja.FK_RegistroTranscDetalleRetencion_CAJ_RegistroTransacDetalleCaja_CAJ" FromRole="RegistroTranscDetalleRetencion_CAJ" ToRole="RegistroTransacDetalleCaja_CAJ" />
+  </EntityType>
+  <ComplexType Name="paObtenerRegFormaPagoRS_CAJ">
+    <Property Type="Int64" Name="RVF_IdRegistroVentaFormaPago" Nullable="false" />
+    <Property Type="Int64" Name="RVF_IdRegistroVenta" Nullable="false" />
+    <Property Type="Int16" Name="RVF_IdFormaPago" Nullable="false" />
+    <Property Type="String" Name="RVF_DescripcionFormaPago" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="RVF_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="RVF_NumeroAsociado" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RVF_Campo1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RVF_Campo2" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="RVF_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RVF_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="paObtenerRegistroTransRS_CAJ">
+    <Property Type="Int64" Name="RTC_IdRegistroTranscaccion" Nullable="false" />
+    <Property Type="Int64" Name="RTC_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int64" Name="RTC_IdCentroServiciosVenta" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCentroServiciosVenta" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="RTC_IdCentroServiosResponsable" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCtroSvcsResponsable" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="RTC_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTC_TotalImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTC_TotalRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="RTC_TipoDatosAdicionales" Nullable="false" MaxLength="3" />
+    <Property Type="DateTime" Name="RTC_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RTC_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="AperturaCajaCasaMatriz_CAJ">
+    <Key>
+      <PropertyRef Name="ACM_IdAperturaCaja" />
+    </Key>
+    <Property Type="Int64" Name="ACM_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int16" Name="ACM_IdCasaMatriz" Nullable="false" />
+    <Property Type="DateTime" Name="ACM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ACM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AperturaCaja_CAJ" Relationship="ModeloCaja.FK_AperturaCajaCasaMatriz_CAJ_AperturaCaja_CAJ" FromRole="AperturaCajaCasaMatriz_CAJ" ToRole="AperturaCaja_CAJ" />
+  </EntityType>
+  <EntityType Name="CierreCajaCasaMatriz_CAJ">
+    <Key>
+      <PropertyRef Name="CCM_IdCierreCaja" />
+    </Key>
+    <Property Type="Int64" Name="CCM_IdCierreCaja" Nullable="false" />
+    <Property Type="Decimal" Name="CCM_TotalIngresos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCM_TotalEgresos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="CCM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CCM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AperturaCaja_CAJ" Relationship="ModeloCaja.FK_CierreCajaCasaMatriz_CAJ_AperturaCaja_CAJ" FromRole="CierreCajaCasaMatriz_CAJ" ToRole="AperturaCaja_CAJ" />
+    <Property Type="Decimal" Name="CCM_SaldoAnterior" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCM_SaldoFinal" Precision="18" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CajaBancoOperacionNacionalMov_CAJ">
+    <Key>
+      <PropertyRef Name="CBO_IdOperacionCajaBanco" />
+      <PropertyRef Name="CBO_IdOperacionCajaOperacionNacional" />
+    </Key>
+    <Property Type="Int64" Name="CBO_IdOperacionCajaBanco" Nullable="false" />
+    <Property Type="Int64" Name="CBO_IdOperacionCajaOperacionNacional" Nullable="false" />
+    <Property Type="DateTime" Name="CBO_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CBO_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OperacionCajaOperacionNacional_CAJ" Relationship="ModeloCaja.FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" FromRole="CajaBancoOperacionNacionalMov_CAJ" ToRole="OperacionCajaOperacionNacional_CAJ" />
+    <NavigationProperty Name="OperacionCajaBanco_CAJ" Relationship="ModeloCaja.FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaBanco_CAJ" FromRole="CajaBancoOperacionNacionalMov_CAJ" ToRole="OperacionCajaBanco_CAJ" />
+  </EntityType>
+  <EntityType Name="CajaCasaMatrizBancoMov_CAJ">
+    <Key>
+      <PropertyRef Name="CBM_IdOperacionCajaCasaMatriz" />
+      <PropertyRef Name="CBM_IdOperacionCajaBanco" />
+    </Key>
+    <Property Type="Int64" Name="CBM_IdOperacionCajaCasaMatriz" Nullable="false" />
+    <Property Type="Int64" Name="CBM_IdOperacionCajaBanco" Nullable="false" />
+    <Property Type="DateTime" Name="CBM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CBM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OperacionCajaCasaMatriz_CAJ" Relationship="ModeloCaja.FK_CajaEmpresaBancoMov_CAJ_CajaEmpresa_CAJ" FromRole="CajaCasaMatrizBancoMov_CAJ" ToRole="OperacionCajaCasaMatriz_CAJ" />
+    <NavigationProperty Name="OperacionCajaBanco_CAJ" Relationship="ModeloCaja.FK_CajaEmpresaBancoMov_CAJ_CajaBanco_CAJ" FromRole="CajaCasaMatrizBancoMov_CAJ" ToRole="OperacionCajaBanco_CAJ" />
+  </EntityType>
+  <EntityType Name="CajaCasaMatrizCentroSvcMov_CAJ">
+    <Key>
+      <PropertyRef Name="CEM_IdOperacionCajaCasaMatriz" />
+      <PropertyRef Name="CEM_IdCentroServiciosMov" />
+    </Key>
+    <Property Type="Int64" Name="CEM_IdOperacionCajaCasaMatriz" Nullable="false" />
+    <Property Type="Int64" Name="CEM_IdCentroServiciosMov" Nullable="false" />
+    <Property Type="String" Name="CEM_NombreCentroServiciosMov" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CEM_IdRegistroTranscaccion" Nullable="false" />
+    <Property Type="DateTime" Name="CEM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CEM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ" Relationship="ModeloCaja.FK_CajaEmpresaCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1" FromRole="CajaCasaMatrizCentroSvcMov_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+    <NavigationProperty Name="OperacionCajaCasaMatriz_CAJ" Relationship="ModeloCaja.FK_CajaEmpresaCentroSvcMov_CAJ_CajaEmpresa_CAJ" FromRole="CajaCasaMatrizCentroSvcMov_CAJ" ToRole="OperacionCajaCasaMatriz_CAJ" />
+  </EntityType>
+  <EntityType Name="CajaCasaMatrizOperacionNacionalMov_CAJ">
+    <Key>
+      <PropertyRef Name="CMO_IdOperacionCajaCasaMatriz" />
+      <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+    </Key>
+    <Property Type="Int64" Name="CMO_IdOperacionCajaCasaMatriz" Nullable="false" />
+    <Property Type="Int64" Name="CON_IdOperacionCajaOperacionNacional" Nullable="false" />
+    <Property Type="DateTime" Name="CMO_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CMO_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CMO_NumeroPrecinto" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CMO_NumeroBolsaSeguridad" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CMO_NumeroGuia" Nullable="false" />
+    <NavigationProperty Name="OperacionCajaOperacionNacional_CAJ" Relationship="ModeloCaja.FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" FromRole="CajaCasaMatrizOperacionNacionalMov_CAJ" ToRole="OperacionCajaOperacionNacional_CAJ" />
+    <NavigationProperty Name="OperacionCajaCasaMatriz_CAJ" Relationship="ModeloCaja.FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaCasaMatriz_CAJ" FromRole="CajaCasaMatrizOperacionNacionalMov_CAJ" ToRole="OperacionCajaCasaMatriz_CAJ" />
+  </EntityType>
+  <EntityType Name="CajaCentroSvcOperacionNacionalMov_CAJ">
+    <Key>
+      <PropertyRef Name="CCO_IdOperacionCajaOperacionNacional" />
+      <PropertyRef Name="CCO_IdCentroServicios" />
+    </Key>
+    <Property Type="Int64" Name="CCO_IdOperacionCajaOperacionNacional" Nullable="false" />
+    <Property Type="Int64" Name="CCO_IdCentroServicios" Nullable="false" />
+    <Property Type="Int64" Name="CCO_IdRegistroTransaccionCaja" Nullable="false" />
+    <Property Type="DateTime" Name="CCO_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CCO_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ" Relationship="ModeloCaja.FK_CajaCentroSvcOperacionNacionalMov_CAJ_RegistroTransaccionesCaja_CAJ" FromRole="CajaCentroSvcOperacionNacionalMov_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+    <Property Type="String" Name="CCO_NumeroPrecinto" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CCO_NumeroBolsaSeguridad" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CCO_NumeroGuia" Nullable="false" />
+    <NavigationProperty Name="OperacionCajaOperacionNacional_CAJ" Relationship="ModeloCaja.FK_CajaCentroSvcOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" FromRole="CajaCentroSvcOperacionNacionalMov_CAJ" ToRole="OperacionCajaOperacionNacional_CAJ" />
+  </EntityType>
+  <Association Name="FK_CajaEmpresaCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1">
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaCasaMatrizCentroSvcMov_CAJ" Role="CajaCasaMatrizCentroSvcMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizCentroSvcMov_CAJ">
+        <PropertyRef Name="CEM_IdRegistroTranscaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaCentroSvcOperacionNacionalMov_CAJ_RegistroTransaccionesCaja_CAJ">
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaCentroSvcOperacionNacionalMov_CAJ" Role="CajaCentroSvcOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="CajaCentroSvcOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CCO_IdRegistroTransaccionCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BancoCentroServiciosMov_CAJ">
+    <Key>
+      <PropertyRef Name="BCM_IdCentroServiciosMov" />
+    </Key>
+    <Property Type="Int64" Name="BCM_IdCentroServiciosMov" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="BCM_IdCajaBanco" Nullable="false" />
+    <Property Type="Int64" Name="BCM_IdCentroServicios" Nullable="false" />
+    <Property Type="Int64" Name="BCM_IdRegistroTranscaccion" Nullable="false" />
+    <Property Type="DateTime" Name="BCM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="BCM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ" Relationship="ModeloCaja.FK_BancoCentroServiciosMov_CAJ_RegistroTransaccionesCaja_CAJ" FromRole="BancoCentroServiciosMov_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+    <NavigationProperty Name="OperacionCajaBanco_CAJ" Relationship="ModeloCaja.FK_BancoCentroServiciosMov_CAJ_CajaBanco_CAJ" FromRole="BancoCentroServiciosMov_CAJ" ToRole="OperacionCajaBanco_CAJ" />
+  </EntityType>
+  <Association Name="FK_BancoCentroServiciosMov_CAJ_RegistroTransaccionesCaja_CAJ">
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.BancoCentroServiciosMov_CAJ" Role="BancoCentroServiciosMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="BancoCentroServiciosMov_CAJ">
+        <PropertyRef Name="BCM_IdRegistroTranscaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="ComisionesVentasApertura_CAJ">
+    <Property Type="Int64" Name="RTC_IdAperturaCaja" Nullable="false" />
+    <Property Type="Decimal" Name="TotalComisionVenta" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalComisionResponsable" Nullable="true" Precision="38" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="paObtenerResumenCajas_CAJ_Result">
+    <Property Type="Int16" Name="RVF_IdFormaPago" Nullable="false" />
+    <Property Type="String" Name="RVF_DescripcionFormaPago" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="Ingresos" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Egresos" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Int64" Name="APC_IdAperturaCaja" Nullable="false" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="APC_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="ResumenCajas_CAJ">
+    <Property Type="Int16" Name="RVF_IdFormaPago" Nullable="false" />
+    <Property Type="String" Name="RVF_DescripcionFormaPago" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="Ingresos" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Egresos" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Int64" Name="APC_IdAperturaCaja" Nullable="false" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="APC_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="paObtenerRegTransDetallePorCentroServicio_CAJ_Result">
+    <Property Type="Int64" Name="RTC_IdRegistroTranscaccion" Nullable="false" />
+    <Property Type="Int64" Name="RTC_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="CARegTransDetallePorCentroServicio">
+    <Property Type="Int64" Name="RTC_IdRegistroTranscaccion" Nullable="false" />
+    <Property Type="Int64" Name="RTC_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="CuentaExterna_PAR">
+    <Key>
+      <PropertyRef Name="CEX_IdCuentaExterna" />
+    </Key>
+    <Property Type="Int16" Name="CEX_IdCuentaExterna" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CEX_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CEX_IdNaturaleza" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CEX_Codigo" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CEX_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CEX_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_ConceptoCaja_CAJ_CuentaExterna_PAR" FromRole="CuentaExterna_PAR" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <EntityType Name="CentroServiciosReporteDinero_PUA">
+    <Key>
+      <PropertyRef Name="CRD_IdCentroServiciosAQuienReporta" />
+      <PropertyRef Name="CRD_IdCentroServiciosQueReporta" />
+    </Key>
+    <Property Type="Int64" Name="CRD_IdCentroServiciosAQuienReporta" Nullable="false" />
+    <Property Type="Int64" Name="CRD_IdCentroServiciosQueReporta" Nullable="false" />
+    <Property Type="DateTime" Name="CRD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CRD_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AperturaCaja_CAJ">
+    <Key>
+      <PropertyRef Name="APC_IdAperturaCaja" />
+    </Key>
+    <Property Type="Int64" Name="APC_IdAperturaCaja" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Boolean" Name="APC_EstaAbierta" Nullable="false" />
+    <Property Type="Decimal" Name="APC_BaseInicialApertura" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="APC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="APC_IdCodigoUsuario" Nullable="false" />
+    <Property Type="String" Name="APC_TipoApertura" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="AperturaCajaCasaMatriz_CAJ" Relationship="ModeloCaja.FK_AperturaCajaCasaMatriz_CAJ_AperturaCaja_CAJ" FromRole="AperturaCaja_CAJ" ToRole="AperturaCajaCasaMatriz_CAJ" />
+    <NavigationProperty Name="AperturaCajaCentroServicios_CAJ" Relationship="ModeloCaja.FK_AperturaCajaCentroServicios_CAJ_AperturaCaja_CAJ" FromRole="AperturaCaja_CAJ" ToRole="AperturaCajaCentroServicios_CAJ" />
+    <NavigationProperty Name="CierreCaja_CAJ" Relationship="ModeloCaja.FK_CierreCaja_CAJ_AperturaCaja_CAJ" FromRole="AperturaCaja_CAJ" ToRole="CierreCaja_CAJ" />
+    <NavigationProperty Name="CierreCajaCasaMatriz_CAJ" Relationship="ModeloCaja.FK_CierreCajaCasaMatriz_CAJ_AperturaCaja_CAJ" FromRole="AperturaCaja_CAJ" ToRole="CierreCajaCasaMatriz_CAJ" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ" Relationship="ModeloCaja.FK_RegistroVenta_CAJ_AperturaCaja_CAJ" FromRole="AperturaCaja_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+    <NavigationProperty Name="OperacionCajaOperacionNacional_CAJ" Relationship="ModeloCaja.FK_OperacionCajaOperacionNacional_CAJ_AperturaCaja_CAJ" FromRole="AperturaCaja_CAJ" ToRole="OperacionCajaOperacionNacional_CAJ" />
+    <NavigationProperty Name="OperacionCajaCasaMatriz_CAJ" Relationship="ModeloCaja.FK_OperacionCajaCasaMatriz_CAJ_AperturaCaja_CAJ" FromRole="AperturaCaja_CAJ" ToRole="OperacionCajaCasaMatriz_CAJ" />
+    <NavigationProperty Name="OperacionCajaBanco_CAJ" Relationship="ModeloCaja.FK_OperacionCajaBanco_CAJ_AperturaCaja_CAJ" FromRole="AperturaCaja_CAJ" ToRole="OperacionCajaBanco_CAJ" />
+  </EntityType>
+  <EntityType Name="AperturaCajaCentroServicios_CAJ">
+    <Key>
+      <PropertyRef Name="ACS_IdAperturaCajaCentroServicios" />
+    </Key>
+    <Property Type="Int64" Name="ACS_IdAperturaCajaCentroServicios" Nullable="false" />
+    <Property Type="Int64" Name="ACS_IdCentroServicios" Nullable="false" />
+    <Property Type="String" Name="ACS_NombreCentroServicios" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ACS_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ACS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AperturaCaja_CAJ" Relationship="ModeloCaja.FK_AperturaCajaCentroServicios_CAJ_AperturaCaja_CAJ" FromRole="AperturaCajaCentroServicios_CAJ" ToRole="AperturaCaja_CAJ" />
+  </EntityType>
+  <EntityType Name="CierreCaja_CAJ">
+    <Key>
+      <PropertyRef Name="CIC_IdCierreCaja" />
+    </Key>
+    <Property Type="Int64" Name="CIC_IdCierreCaja" Nullable="false" />
+    <Property Type="Decimal" Name="CIC_TotalIngresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalEgresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalIngresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalEgresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="CIC_IdCierrepuntoAsociado" Nullable="false" />
+    <Property Type="DateTime" Name="CIC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CIC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="CIC_EstaReportado" Nullable="false" />
+    <NavigationProperty Name="AperturaCaja_CAJ" Relationship="ModeloCaja.FK_CierreCaja_CAJ_AperturaCaja_CAJ" FromRole="CierreCaja_CAJ" ToRole="AperturaCaja_CAJ" />
+  </EntityType>
+  <Association Name="FK_AperturaCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+    <End Type="ModeloCaja.AperturaCaja_CAJ" Role="AperturaCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.AperturaCajaCasaMatriz_CAJ" Role="AperturaCajaCasaMatriz_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="AperturaCajaCasaMatriz_CAJ">
+        <PropertyRef Name="ACM_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AperturaCajaCentroServicios_CAJ_AperturaCaja_CAJ">
+    <End Type="ModeloCaja.AperturaCaja_CAJ" Role="AperturaCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.AperturaCajaCentroServicios_CAJ" Role="AperturaCajaCentroServicios_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="AperturaCajaCentroServicios_CAJ">
+        <PropertyRef Name="ACS_IdAperturaCajaCentroServicios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CierreCaja_CAJ_AperturaCaja_CAJ">
+    <End Type="ModeloCaja.AperturaCaja_CAJ" Role="AperturaCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CierreCaja_CAJ" Role="CierreCaja_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="CierreCaja_CAJ">
+        <PropertyRef Name="CIC_IdCierreCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CierreCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+    <End Type="ModeloCaja.AperturaCaja_CAJ" Role="AperturaCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CierreCajaCasaMatriz_CAJ" Role="CierreCajaCasaMatriz_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="CierreCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CCM_IdCierreCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroVenta_CAJ_AperturaCaja_CAJ">
+    <End Type="ModeloCaja.AperturaCaja_CAJ" Role="AperturaCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CierreCajaGestion_VCAJ">
+    <Key>
+      <PropertyRef Name="CCM_IdCierreCaja" />
+      <PropertyRef Name="APC_IdCaja" />
+      <PropertyRef Name="APC_EstaAbierta" />
+      <PropertyRef Name="APC_BaseInicialApertura" />
+      <PropertyRef Name="APC_FechaGrabacion" />
+      <PropertyRef Name="APC_CreadoPor" />
+      <PropertyRef Name="APC_IdCodigoUsuario" />
+      <PropertyRef Name="APC_TipoApertura" />
+      <PropertyRef Name="CCM_TotalIngresos" />
+      <PropertyRef Name="CCM_TotalEgresos" />
+      <PropertyRef Name="CCM_FechaGrabacion" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="CAM_CentroCostos" />
+    </Key>
+    <Property Type="Int64" Name="CCM_IdCierreCaja" Nullable="false" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Boolean" Name="APC_EstaAbierta" Nullable="false" />
+    <Property Type="Decimal" Name="APC_BaseInicialApertura" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="APC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="APC_IdCodigoUsuario" Nullable="false" />
+    <Property Type="String" Name="APC_TipoApertura" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TipoAperturaDesc" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CCM_TotalIngresos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCM_TotalEgresos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="CCM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="Int64" Name="IdCasaMatrizOCS" />
+    <Property Type="String" Name="CAM_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="paObtenerCierreCajaCentroServiciosRS_CAJ">
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Boolean" Name="APC_EstaAbierta" Nullable="false" />
+    <Property Type="Decimal" Name="APC_BaseInicialApertura" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="APC_TipoApertura" Nullable="false" MaxLength="3" />
+    <Property Type="Int64" Name="APC_IdCodigoUsuario" Nullable="false" />
+    <Property Type="String" Name="APC_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="Int64" Name="ACS_IdCentroServicios" Nullable="false" />
+    <Property Type="String" Name="ACS_NombreCentroServicios" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="CIC_IdCierreCaja" Nullable="false" />
+    <Property Type="Decimal" Name="CIC_TotalIngresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalEgresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalIngresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalEgresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="CIC_IdCierrepuntoAsociado" Nullable="false" />
+    <Property Type="Boolean" Name="CIC_EstaReportado" Nullable="false" />
+    <Property Type="DateTime" Name="CIC_FechaGrabacion" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="RegistroTransacDetalleCaja_CAJ">
+    <Key>
+      <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+    </Key>
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RTD_IdRegistroTranscaccion" Nullable="false" />
+    <Property Type="Int32" Name="RTD_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="RTD_NombreConcepto" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="RTD_ConceptoEsIngreso" Nullable="false" />
+    <Property Type="Int16" Name="RTD_Cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="RTD_ValorServicio" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValoresAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorTercero" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorPrimaSeguros" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorDeclarado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="RTD_Numero" Nullable="false" />
+    <Property Type="Int16" Name="RTD_IdCuentaExterna" />
+    <Property Type="String" Name="RTD_NumeroFactura" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTD_EstadoFacturacion" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="RTD_FechaFacturacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTD_Observacion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTD_Descripcion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RTD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTD_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTD_NumeroComprobante" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransaccionesCaja_CAJ" Relationship="ModeloCaja.FK_RegistroVentaDetalle_CAJ_RegistroVenta_CAJ" FromRole="RegistroTransacDetalleCaja_CAJ" ToRole="RegistroTransaccionesCaja_CAJ" />
+    <NavigationProperty Name="RegistroTransacDetalleImpuesto_CAJ" Relationship="ModeloCaja.FK_RegistroTransacDetalleImpuesto_CAJ_RegistroTransacDetalleCaja_CAJ" FromRole="RegistroTransacDetalleCaja_CAJ" ToRole="RegistroTransacDetalleImpuesto_CAJ" />
+    <NavigationProperty Name="RegistroTranscDetalleRetencion_CAJ" Relationship="ModeloCaja.FK_RegistroTranscDetalleRetencion_CAJ_RegistroTransacDetalleCaja_CAJ" FromRole="RegistroTransacDetalleCaja_CAJ" ToRole="RegistroTranscDetalleRetencion_CAJ" />
+    <NavigationProperty Name="RegTranDetCajaAdicional_CAJ" Relationship="ModeloCaja.FK_RegTranDetCajaAdicional_CAJ_RegistroTransacDetalleCaja_CAJ" FromRole="RegistroTransacDetalleCaja_CAJ" ToRole="RegTranDetCajaAdicional_CAJ" />
+    <Property Type="Int64" Name="RTD_IdPersonaInterna" Nullable="false" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_RegistroVentaDetalle_CAJ_ConceptoCaja_CAJ" FromRole="RegistroTransacDetalleCaja_CAJ" ToRole="ConceptoCaja_CAJ" />
+    <NavigationProperty Name="ReporteMensajeroCaja_CAJ" Relationship="ModeloCaja.FK_ReporteMensajeroCaja_CAJ_RegistroTransacDetalleCaja_CAJ" FromRole="RegistroTransacDetalleCaja_CAJ" ToRole="ReporteMensajeroCaja_CAJ" />
+  </EntityType>
+  <Association Name="FK_RegistroVentaDetalle_CAJ_RegistroVenta_CAJ">
+    <End Type="ModeloCaja.RegistroTransaccionesCaja_CAJ" Role="RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RegistroTransacDetalleCaja_CAJ" Role="RegistroTransacDetalleCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTranscaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroTransacDetalleImpuesto_CAJ_RegistroTransacDetalleCaja_CAJ">
+    <End Type="ModeloCaja.RegistroTransacDetalleCaja_CAJ" Role="RegistroTransacDetalleCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RegistroTransacDetalleImpuesto_CAJ" Role="RegistroTransacDetalleImpuesto_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Principal>
+      <Dependent Role="RegistroTransacDetalleImpuesto_CAJ">
+        <PropertyRef Name="RTI_IdRegistroTransDetalleCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroTranscDetalleRetencion_CAJ_RegistroTransacDetalleCaja_CAJ">
+    <End Type="ModeloCaja.RegistroTransacDetalleCaja_CAJ" Role="RegistroTransacDetalleCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RegistroTranscDetalleRetencion_CAJ" Role="RegistroTranscDetalleRetencion_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Principal>
+      <Dependent Role="RegistroTranscDetalleRetencion_CAJ">
+        <PropertyRef Name="RTR_IdRegistroTransDetalleCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="ResumeCierrePunto_CAJ">
+    <Property Type="Int64" Name="IdPunto" Nullable="false" />
+    <Property Type="Int64" Name="IdCierreCaja" Nullable="false" />
+    <Property Type="Int64" Name="IdCierrePuntoAsociado" Nullable="false" />
+    <Property Type="Boolean" Name="EstaReportado" Nullable="true" />
+    <Property Type="Int32" Name="IdCaja" Nullable="false" />
+    <Property Type="Int32" Name="RTD_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="RTD_NombreConcepto" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="RTD_ConceptoEsIngreso" Nullable="false" />
+    <Property Type="Int32" Name="Cantidad" Nullable="true" />
+    <Property Type="Decimal" Name="BaseComision" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="VrImpuestos" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="VrAdicionales" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="VrTercero" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="VrRetenciones" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="VrPrimaSeguros" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Int16" Name="RVF_IdFormaPago" Nullable="false" />
+    <Property Type="String" Name="RVF_DescripcionFormaPago" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="VrFormaPago" Nullable="true" Precision="38" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="DineroReportPunto_CAJ">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int64" Name="CRD_IdCentroServiciosAQuienReporta" Nullable="false" />
+    <Property Type="Int64" Name="RDP_IdPuntoServicio" Nullable="false" />
+    <Property Type="String" Name="RDP_NombrePuntoServicio" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="RDP_IdMensajero" Nullable="false" />
+    <Property Type="String" Name="RDP_NombreMensajero" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="RDP_NoBolsaSeguridad" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="RDP_ValorTotalEnviado" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="RDP_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RDP_CreadoPor" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="RDP_IdRecoleccion" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paObtenerRegTransDetalleRS_CAJ">
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+    <Property Type="Int64" Name="RTD_IdRegistroTranscaccion" Nullable="false" />
+    <Property Type="Int32" Name="RTD_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="RTD_NombreConcepto" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="RTD_ConceptoEsIngreso" Nullable="false" />
+    <Property Type="Int16" Name="RTD_Cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="RTD_ValorServicio" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValoresAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorTercero" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorPrimaSeguros" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorDeclarado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="RTD_Numero" Nullable="false" />
+    <Property Type="Int16" Name="RTD_IdCuentaExterna" Nullable="true" />
+    <Property Type="String" Name="RTD_NumeroFactura" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="RTD_EstadoFacturacion" Nullable="false" MaxLength="3" />
+    <Property Type="DateTime" Name="RTD_FechaFacturacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RTD_Observacion" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RTD_Descripcion" Nullable="true" MaxLength="250" />
+    <Property Type="DateTime" Name="RTD_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RTD_CreadoPor" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="RTD_NumeroComprobante" Nullable="false" MaxLength="25" />
+  </ComplexType>
+  <EntityType Name="CierreCajaUsuarioCierre_VCAJ">
+    <Key>
+      <PropertyRef Name="CIC_IdCierreCaja" />
+      <PropertyRef Name="CIC_TotalIngresosEfectivo" />
+      <PropertyRef Name="CIC_TotalEgresosEfectivo" />
+      <PropertyRef Name="CIC_TotalIngresosOtrasFormas" />
+      <PropertyRef Name="CIC_TotalEgresosOtrasFormas" />
+      <PropertyRef Name="CIC_IdCierrepuntoAsociado" />
+      <PropertyRef Name="CIC_FechaGrabacion" />
+      <PropertyRef Name="CIC_EstaReportado" />
+      <PropertyRef Name="CIC_CreadoPor" />
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+      <PropertyRef Name="PEI_Identificacion" />
+      <PropertyRef Name="PEI_Nombre" />
+      <PropertyRef Name="PEI_PrimerApellido" />
+      <PropertyRef Name="NombreCompleto" />
+      <PropertyRef Name="FechaApertura" />
+      <PropertyRef Name="CES_IdCentroServicios" />
+      <PropertyRef Name="CES_IdCentroCostos" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="APC_IdCaja" />
+    </Key>
+    <Property Type="Int64" Name="CIC_IdCierreCaja" Nullable="false" />
+    <Property Type="Decimal" Name="CIC_TotalIngresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalEgresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalIngresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalEgresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="CIC_IdCierrepuntoAsociado" Nullable="false" />
+    <Property Type="DateTime" Name="CIC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="Boolean" Name="CIC_EstaReportado" Nullable="false" />
+    <Property Type="String" Name="CIC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="USU_IdCodigoUsuario" Nullable="false" />
+    <Property Type="String" Name="PEI_Identificacion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PEI_Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PEI_PrimerApellido" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PEI_SegundoApellido" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreCompleto" Nullable="false" MaxLength="152" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaApertura" Nullable="false" Precision="3" />
+    <Property Type="Int64" Name="CES_IdCentroServicios" Nullable="false" />
+    <Property Type="String" Name="CES_IdCentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResumenRecoleccionDineroPuntos_VCAJ">
+    <Key>
+      <PropertyRef Name="RDP_IdRecoleccion" />
+    </Key>
+    <Property Type="Int32" Name="RDP_IdRecoleccion" Nullable="false" />
+    <Property Type="Decimal" Name="TotalValorServicio" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalValoresAdicionales" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalValorTercero" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalValorImpuestos" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalValorRetenciones" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalValorPrimaSeguros" Precision="38" Scale="4" />
+  </EntityType>
+  <ComplexType Name="ResumenCajaPorFormaPago_CAJ">
+    <Property Type="Int16" Name="IdFormaPago" Nullable="false" />
+    <Property Type="String" Name="DescripcionFormaPago" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="CantidadRegistros" Nullable="true" />
+    <Property Type="Decimal" Name="ValorTotalIngreso" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="ValorTotalEgreso" Nullable="true" Precision="38" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="CAResumenTransccionesConcepto_CAJ">
+    <Property Type="Int32" Name="IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="NombreConcepto" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="TotalValorIngresoContado" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="TotalValorEgresoContado" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="CantidadTransacciones" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="BaseGestionCajas_CAJ">
+    <Key>
+      <PropertyRef Name="BGC_IdCasaMatriz" />
+    </Key>
+    <Property Type="Int16" Name="BGC_IdCasaMatriz" Nullable="false" />
+    <Property Type="Decimal" Name="BGC_BaseOperacionNacional" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="BGC_BaseCasaMatriz" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="BGC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="BGC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OperacionCajaOperacionNacional_CAJ">
+    <Key>
+      <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+    </Key>
+    <Property Type="Int64" Name="CON_IdOperacionCajaOperacionNacional" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CON_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int32" Name="CON_IdConceptoCaja" Nullable="false" />
+    <Property Type="Decimal" Name="CON_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CON_ConceptoEsIngreso" Nullable="false" />
+    <Property Type="String" Name="CON_NumeroDocumento" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CON_Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CON_FechaMovimiento" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CON_MovHechoPor" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CON_Descripcion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CON_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CON_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CON_NombreConceptoCaja" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AperturaCaja_CAJ" Relationship="ModeloCaja.FK_OperacionCajaOperacionNacional_CAJ_AperturaCaja_CAJ" FromRole="OperacionCajaOperacionNacional_CAJ" ToRole="AperturaCaja_CAJ" />
+    <NavigationProperty Name="CajaBancoOperacionNacionalMov_CAJ" Relationship="ModeloCaja.FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" FromRole="OperacionCajaOperacionNacional_CAJ" ToRole="CajaBancoOperacionNacionalMov_CAJ" />
+    <NavigationProperty Name="CajaCasaMatrizOperacionNacionalMov_CAJ" Relationship="ModeloCaja.FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" FromRole="OperacionCajaOperacionNacional_CAJ" ToRole="CajaCasaMatrizOperacionNacionalMov_CAJ" />
+    <NavigationProperty Name="CajaCentroSvcOperacionNacionalMov_CAJ" Relationship="ModeloCaja.FK_CajaCentroSvcOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" FromRole="OperacionCajaOperacionNacional_CAJ" ToRole="CajaCentroSvcOperacionNacionalMov_CAJ" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_OperacionCajaOperacionNacional_CAJ_ConceptoCaja_CAJ" FromRole="OperacionCajaOperacionNacional_CAJ" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <Association Name="FK_OperacionCajaOperacionNacional_CAJ_AperturaCaja_CAJ">
+    <End Type="ModeloCaja.AperturaCaja_CAJ" Role="AperturaCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.OperacionCajaOperacionNacional_CAJ" Role="OperacionCajaOperacionNacional_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+    <End Type="ModeloCaja.OperacionCajaOperacionNacional_CAJ" Role="OperacionCajaOperacionNacional_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaBancoOperacionNacionalMov_CAJ" Role="CajaBancoOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+      </Principal>
+      <Dependent Role="CajaBancoOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CBO_IdOperacionCajaOperacionNacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+    <End Type="ModeloCaja.OperacionCajaOperacionNacional_CAJ" Role="OperacionCajaOperacionNacional_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaCasaMatrizOperacionNacionalMov_CAJ" Role="CajaCasaMatrizOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaCentroSvcOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+    <End Type="ModeloCaja.OperacionCajaOperacionNacional_CAJ" Role="OperacionCajaOperacionNacional_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaCentroSvcOperacionNacionalMov_CAJ" Role="CajaCentroSvcOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+      </Principal>
+      <Dependent Role="CajaCentroSvcOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CCO_IdOperacionCajaOperacionNacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OperacionCajaCasaMatriz_CAJ">
+    <Key>
+      <PropertyRef Name="CAE_IdOperacionCajaCasaMatriz" />
+    </Key>
+    <Property Type="Int64" Name="CAE_IdOperacionCajaCasaMatriz" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CAE_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int32" Name="CAE_IdConceptoCaja" Nullable="false" />
+    <Property Type="Decimal" Name="CAE_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CAE_ConceptoEsIngreso" Nullable="false" />
+    <Property Type="String" Name="CAE_NumeroDocumento" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAE_Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CAE_FechaMovimiento" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CAE_MovHechoPor" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CAE_Descripcion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CAE_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CAE_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAE_NombreConceptoCaja" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AperturaCaja_CAJ" Relationship="ModeloCaja.FK_OperacionCajaCasaMatriz_CAJ_AperturaCaja_CAJ" FromRole="OperacionCajaCasaMatriz_CAJ" ToRole="AperturaCaja_CAJ" />
+    <NavigationProperty Name="CajaCasaMatrizBancoMov_CAJ" Relationship="ModeloCaja.FK_CajaEmpresaBancoMov_CAJ_CajaEmpresa_CAJ" FromRole="OperacionCajaCasaMatriz_CAJ" ToRole="CajaCasaMatrizBancoMov_CAJ" />
+    <NavigationProperty Name="CajaCasaMatrizCentroSvcMov_CAJ" Relationship="ModeloCaja.FK_CajaEmpresaCentroSvcMov_CAJ_CajaEmpresa_CAJ" FromRole="OperacionCajaCasaMatriz_CAJ" ToRole="CajaCasaMatrizCentroSvcMov_CAJ" />
+    <NavigationProperty Name="CajaCasaMatrizOperacionNacionalMov_CAJ" Relationship="ModeloCaja.FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaCasaMatriz_CAJ" FromRole="OperacionCajaCasaMatriz_CAJ" ToRole="CajaCasaMatrizOperacionNacionalMov_CAJ" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_CajaEmpresa_CAJ_ConceptoCaja_CAJ" FromRole="OperacionCajaCasaMatriz_CAJ" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <Association Name="FK_OperacionCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+    <End Type="ModeloCaja.AperturaCaja_CAJ" Role="AperturaCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.OperacionCajaCasaMatriz_CAJ" Role="OperacionCajaCasaMatriz_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaEmpresaBancoMov_CAJ_CajaEmpresa_CAJ">
+    <End Type="ModeloCaja.OperacionCajaCasaMatriz_CAJ" Role="OperacionCajaCasaMatriz_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaCasaMatrizBancoMov_CAJ" Role="CajaCasaMatrizBancoMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdOperacionCajaCasaMatriz" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizBancoMov_CAJ">
+        <PropertyRef Name="CBM_IdOperacionCajaCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaEmpresaCentroSvcMov_CAJ_CajaEmpresa_CAJ">
+    <End Type="ModeloCaja.OperacionCajaCasaMatriz_CAJ" Role="OperacionCajaCasaMatriz_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaCasaMatrizCentroSvcMov_CAJ" Role="CajaCasaMatrizCentroSvcMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdOperacionCajaCasaMatriz" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizCentroSvcMov_CAJ">
+        <PropertyRef Name="CEM_IdOperacionCajaCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaCasaMatriz_CAJ">
+    <End Type="ModeloCaja.OperacionCajaCasaMatriz_CAJ" Role="OperacionCajaCasaMatriz_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaCasaMatrizOperacionNacionalMov_CAJ" Role="CajaCasaMatrizOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdOperacionCajaCasaMatriz" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CMO_IdOperacionCajaCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paObtenerRegTransDetalle_CAJ_Result">
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+    <Property Type="Int64" Name="RTD_IdRegistroTranscaccion" Nullable="false" />
+    <Property Type="Int32" Name="RTD_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="RTD_NombreConcepto" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="RTD_ConceptoEsIngreso" Nullable="false" />
+    <Property Type="Int16" Name="RTD_Cantidad" Nullable="false" />
+    <Property Type="Decimal" Name="RTD_ValorServicio" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValoresAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorTercero" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorPrimaSeguros" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="RTD_ValorDeclarado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="RTD_Numero" Nullable="false" />
+    <Property Type="Int16" Name="RTD_IdCuentaExterna" Nullable="true" />
+    <Property Type="String" Name="RTD_NumeroFactura" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="RTD_EstadoFacturacion" Nullable="false" MaxLength="3" />
+    <Property Type="DateTime" Name="RTD_FechaFacturacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RTD_Observacion" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="RTD_Descripcion" Nullable="true" MaxLength="250" />
+    <Property Type="DateTime" Name="RTD_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="RTD_CreadoPor" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="RTD_NumeroComprobante" Nullable="false" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="ObtenerInfoCierreCaja_CAJ">
+    <Property Type="Int16" Name="RVF_IdFormaPago" Nullable="false" />
+    <Property Type="String" Name="RVF_DescripcionFormaPago" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="Ingresos" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Egresos" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Int64" Name="APC_IdAperturaCaja" Nullable="false" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="APC_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="RegTranDetCajaAdicional_CAJ">
+    <Key>
+      <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+    </Key>
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+    <Property Type="Int32" Name="RTD_IdSucursal" />
+    <Property Type="String" Name="RTD_Adicional1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTD_Adicional2" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTD_Adicional3" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransacDetalleCaja_CAJ" Relationship="ModeloCaja.FK_RegTranDetCajaAdicional_CAJ_RegistroTransacDetalleCaja_CAJ" FromRole="RegTranDetCajaAdicional_CAJ" ToRole="RegistroTransacDetalleCaja_CAJ" />
+    <Property Type="DateTime" Name="RTD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTD_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_RegTranDetCajaAdicional_CAJ_RegistroTransacDetalleCaja_CAJ">
+    <End Type="ModeloCaja.RegistroTransacDetalleCaja_CAJ" Role="RegistroTransacDetalleCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RegTranDetCajaAdicional_CAJ" Role="RegTranDetCajaAdicional_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Principal>
+      <Dependent Role="RegTranDetCajaAdicional_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CajasDisponibles_PUA">
+    <Key>
+      <PropertyRef Name="CAD_IdCaja" />
+    </Key>
+    <Property Type="Int32" Name="CAD_IdCaja" Nullable="false" />
+    <Property Type="DateTime" Name="CAD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CAD_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CierreCentroServicios_CAJ">
+    <Key>
+      <PropertyRef Name="CCS_IdCierreCentroServicios" />
+    </Key>
+    <Property Type="Int64" Name="CCS_IdCierreCentroServicios" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CCS_IdCierreCSAMostrar" MaxLength="20" FixedLength="false" Unicode="false" Nullable="true" />
+    <Property Type="Int64" Name="CCS_IdCentroServicios" Nullable="false" />
+    <Property Type="Decimal" Name="CCS_BaseInicial" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCS_SaldoAnteriorEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCS_TotalIngresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCS_TotalEgresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCS_TotalIngresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCS_TotalEgresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CCS_SaldoFinalEfectivo" Precision="18" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="DateTime" Name="CCS_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CCS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CCS_CantidadGirosNoPagados" Nullable="false" />
+    <Property Type="Decimal" Name="CCS_ValorGirosNoPagados" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CCS_EstaReportado" Nullable="false" />
+    <NavigationProperty Name="RecoleccionDineroPuntos_CAJ" Relationship="ModeloCaja.FK_RecoleccionDineroPuntos_CAJ_CierreCentroServicios_CAJ" FromRole="CierreCentroServicios_CAJ" ToRole="RecoleccionDineroPuntos_CAJ" />
+    <Property Type="Boolean" Name="CCS_EsCierreSistema" />
+  </EntityType>
+  <EntityType Name="RecoleccionDineroPuntos_CAJ">
+    <Key>
+      <PropertyRef Name="RDP_IdRecoleccion" />
+    </Key>
+    <Property Type="Int32" Name="RDP_IdRecoleccion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RDP_IdPuntoServicio" Nullable="false" />
+    <Property Type="String" Name="RDP_NombrePuntoServicio" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="RDP_IdMensajero" Nullable="false" />
+    <Property Type="String" Name="RDP_NombreMensajero" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RDP_NoBolsaSeguridad" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="RDP_ValorTotalEnviado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="RDP_IdCierreCentroServicios" Nullable="false" />
+    <Property Type="DateTime" Name="RDP_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RDP_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CierreCentroServicios_CAJ" Relationship="ModeloCaja.FK_RecoleccionDineroPuntos_CAJ_CierreCentroServicios_CAJ" FromRole="RecoleccionDineroPuntos_CAJ" ToRole="CierreCentroServicios_CAJ" />
+    <NavigationProperty Name="ReporteDineroPuntoAgencia_CAJ" Relationship="ModeloCaja.FK_ReporteDineroPuntoAgencia_CAJ_RecoleccionDineroPuntos_CAJ" FromRole="RecoleccionDineroPuntos_CAJ" ToRole="ReporteDineroPuntoAgencia_CAJ" />
+  </EntityType>
+  <Association Name="FK_RecoleccionDineroPuntos_CAJ_CierreCentroServicios_CAJ">
+    <End Type="ModeloCaja.CierreCentroServicios_CAJ" Role="CierreCentroServicios_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RecoleccionDineroPuntos_CAJ" Role="RecoleccionDineroPuntos_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CierreCentroServicios_CAJ">
+        <PropertyRef Name="CCS_IdCierreCentroServicios" />
+      </Principal>
+      <Dependent Role="RecoleccionDineroPuntos_CAJ">
+        <PropertyRef Name="RDP_IdCierreCentroServicios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReporteDineroPuntoAgencia_CAJ_RecoleccionDineroPuntos_CAJ">
+    <End Type="ModeloCaja.RecoleccionDineroPuntos_CAJ" Role="RecoleccionDineroPuntos_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.ReporteDineroPuntoAgencia_CAJ" Role="ReporteDineroPuntoAgencia_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RecoleccionDineroPuntos_CAJ">
+        <PropertyRef Name="RDP_IdRecoleccion" />
+      </Principal>
+      <Dependent Role="ReporteDineroPuntoAgencia_CAJ">
+        <PropertyRef Name="RDP_IdRecoleccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paObtenerAlCobrosSinCancelar_MEN">
+    <Property Type="Int32" Name="TotalAlCobroSinCancelar" Nullable="true" />
+    <Property Type="Decimal" Name="VRAlCobroSinCancelar" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="Int32" Name="TotalAlCobroEnTransito" Nullable="true" />
+    <Property Type="Decimal" Name="VRAlCobroEnTransito" Nullable="true" Precision="38" Scale="4" />
+  </ComplexType>
+  <EntityType Name="CuentaMensajero_CAJ">
+    <Key>
+      <PropertyRef Name="CUM_IdTransaccion" />
+    </Key>
+    <Property Type="Int64" Name="CUM_IdTransaccion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CUM_IdMensajero" Nullable="false" />
+    <Property Type="String" Name="CUM_NombreMensajero" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CUM_IdConcepto" Nullable="false" />
+    <Property Type="Int64" Name="CUM_NumeroDocumento" />
+    <Property Type="Decimal" Name="CUM_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CUM_ConceptoEsIngreso" Nullable="false" />
+    <Property Type="Decimal" Name="CUM_SaldoAcumulado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="CUM_Observaciones" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CUM_NoPlanillaAlCobros" Nullable="false" />
+    <Property Type="Int64" Name="CUM_NoPlanillaVentas" Nullable="false" />
+    <Property Type="DateTime" Name="CUM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CUM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_CuentaMensajero_CAJ_ConceptoCaja_CAJ" FromRole="CuentaMensajero_CAJ" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <ComplexType Name="paCrearRegTransCajaDetalle_CAJ_Result">
+    <Property Type="Int64" Name="IdDetalle" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="paCrearRegistroTransCaja_CAJ_Result">
+    <Property Type="Decimal" Name="idRegistroTransaccion" Nullable="true" Precision="38" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="paObtenerResumeCtaMensajer_CAJ_Result">
+    <Property Type="Int64" Name="CUM_IdTransaccion" Nullable="false" />
+    <Property Type="String" Name="COC_Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="Int64" Name="CUM_NumeroDocumento" Nullable="true" />
+    <Property Type="Decimal" Name="Ingresos" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="Egresos" Nullable="false" Precision="38" Scale="4" />
+    <Property Type="Decimal" Name="CUM_SaldoAcumulado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="CUM_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="CUM_Observaciones" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="paObtenerReportesMensajero_CAJ_Result">
+    <Property Type="Int64" Name="RMC_IdMensajero" Nullable="false" />
+    <Property Type="String" Name="RMC_NombreMensajero" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="RMC_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="RTD_NumeroComprobante" Nullable="false" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="paCerrarCentroServicio_CAJ_Result">
+    <Property Type="Decimal" Name="IdCierreCentroServicios" Nullable="true" Precision="18" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="ClienteOperacion_CAJ">
+    <Property Type="Int64" Name="IdMovimiento" Nullable="false" />
+    <Property Type="Int32" Name="IdServicio" Nullable="false" />
+    <Property Type="Int32" Name="IdCliente" Nullable="false" />
+    <Property Type="Decimal" Name="ValorOperacion" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="NombreServicio" Nullable="false" MaxLength="25" />
+    <Property Type="DateTime" Name="FechaGrabacion" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="AperturaCasaMatriz_VCAJ">
+    <Key>
+      <PropertyRef Name="APC_IdAperturaCaja" />
+      <PropertyRef Name="APC_IdCaja" />
+      <PropertyRef Name="APC_EstaAbierta" />
+      <PropertyRef Name="APC_BaseInicialApertura" />
+      <PropertyRef Name="APC_FechaGrabacion" />
+      <PropertyRef Name="APC_CreadoPor" />
+      <PropertyRef Name="APC_IdCodigoUsuario" />
+      <PropertyRef Name="APC_TipoApertura" />
+      <PropertyRef Name="ACM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="CAM_Nit" />
+      <PropertyRef Name="CAM_CentroCostos" />
+      <PropertyRef Name="CAM_Estado" />
+    </Key>
+    <Property Type="Int64" Name="APC_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Boolean" Name="APC_EstaAbierta" Nullable="false" />
+    <Property Type="Decimal" Name="APC_BaseInicialApertura" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="APC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="APC_IdCodigoUsuario" Nullable="false" />
+    <Property Type="String" Name="APC_TipoApertura" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="ACM_IdCasaMatriz" Nullable="false" />
+    <Property Type="String" Name="CAM_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Nit" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AperturaCentroServicos_VCAJ">
+    <Key>
+      <PropertyRef Name="APC_IdAperturaCaja" />
+      <PropertyRef Name="APC_IdCaja" />
+      <PropertyRef Name="APC_EstaAbierta" />
+      <PropertyRef Name="APC_BaseInicialApertura" />
+      <PropertyRef Name="APC_FechaGrabacion" />
+      <PropertyRef Name="APC_CreadoPor" />
+      <PropertyRef Name="APC_IdCodigoUsuario" />
+      <PropertyRef Name="APC_TipoApertura" />
+      <PropertyRef Name="ACS_IdCentroServicios" />
+      <PropertyRef Name="ACS_NombreCentroServicios" />
+      <PropertyRef Name="CES_Tipo" />
+      <PropertyRef Name="CES_DigitoVerificacion" />
+      <PropertyRef Name="CES_IdPropietario" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="CES_Barrio" />
+      <PropertyRef Name="CES_IdZona" />
+      <PropertyRef Name="CES_IdMunicipio" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CES_IdPersonaResponsable" />
+      <PropertyRef Name="CES_Email" />
+      <PropertyRef Name="CES_Sistematizada" />
+      <PropertyRef Name="CES_IdCentroCostos" />
+      <PropertyRef Name="CES_IdTipoPropiedad" />
+      <PropertyRef Name="CES_PesoMaximo" />
+      <PropertyRef Name="CES_VolumenMaximo" />
+      <PropertyRef Name="CES_AdmiteFormaPagoAlCobro" />
+      <PropertyRef Name="CES_VendePrepago" />
+      <PropertyRef Name="CES_ClasGirosPorIngresos" />
+      <PropertyRef Name="CES_PuedeRecibirGiros" />
+      <PropertyRef Name="CES_PuedePagarGiros" />
+      <PropertyRef Name="CES_TopeMaximoPorGiros" />
+      <PropertyRef Name="CES_TopeMaximoPorPagos" />
+      <PropertyRef Name="CES_BaseInicialCaja" />
+      <PropertyRef Name="CES_FechaGrabacion" />
+      <PropertyRef Name="CES_CreadoPor" />
+      <PropertyRef Name="CES_CodigoBodega" />
+      <PropertyRef Name="CES_IdClasificadorCanalVenta" />
+    </Key>
+    <Property Type="Int64" Name="APC_IdAperturaCaja" Nullable="false" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Boolean" Name="APC_EstaAbierta" Nullable="false" />
+    <Property Type="Decimal" Name="APC_BaseInicialApertura" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="APC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="APC_IdCodigoUsuario" Nullable="false" />
+    <Property Type="String" Name="APC_TipoApertura" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int64" Name="ACS_IdCentroServicios" Nullable="false" />
+    <Property Type="String" Name="ACS_NombreCentroServicios" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Tipo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CES_DigitoVerificacion" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="CES_IdPropietario" Nullable="false" />
+    <Property Type="String" Name="CES_Telefono1" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Telefono2" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Fax" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Barrio" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_IdZona" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_IdMunicipio" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int64" Name="CES_IdPersonaResponsable" Nullable="false" />
+    <Property Type="Decimal" Name="CES_Latitud" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="CES_Longitud" Precision="18" Scale="6" />
+    <Property Type="String" Name="CES_Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="CES_Sistematizada" Nullable="false" />
+    <Property Type="String" Name="CES_IdCentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CES_IdTipoPropiedad" Nullable="false" />
+    <Property Type="Decimal" Name="CES_PesoMaximo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_VolumenMaximo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CES_AdmiteFormaPagoAlCobro" Nullable="false" />
+    <Property Type="Boolean" Name="CES_VendePrepago" Nullable="false" />
+    <Property Type="String" Name="CES_ClasGirosPorIngresos" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="CES_PuedeRecibirGiros" Nullable="false" />
+    <Property Type="Boolean" Name="CES_PuedePagarGiros" Nullable="false" />
+    <Property Type="Decimal" Name="CES_TopeMaximoPorGiros" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_TopeMaximoPorPagos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_BaseInicialCaja" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="CES_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="CES_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_CodigoBodega" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CES_IdClasificadorCanalVenta" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="paObtenerEnviMenjAlCobro_CAJ_Result">
+    <Property Type="Int64" Name="ADM_NumeroGuia" Nullable="false" />
+    <Property Type="Decimal" Name="ADM_Peso" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="PAG_IdPlanillaAsignacionEnvio" Nullable="true" />
+    <Property Type="Decimal" Name="PAG_ValorTotalGuia" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="DateTime" Name="PAM_FechaGrabacion" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="ConceptoCaja_CAJ">
+    <Key>
+      <PropertyRef Name="COC_IdConceptoCaja" />
+    </Key>
+    <Property Type="Int32" Name="COC_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="COC_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COC_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="COC_EsServicio" Nullable="false" />
+    <Property Type="Int16" Name="COC_IdCuentaExterna" />
+    <Property Type="Boolean" Name="COC_EsIngreso" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleAgenciaOPunto" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleMensajero" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleRacol" Nullable="false" />
+    <Property Type="DateTime" Name="COC_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="COC_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="COC_ContrapartidaCasaMatriz" Nullable="false" />
+    <Property Type="Boolean" Name="COC_ContrapartidaCS" Nullable="false" />
+    <Property Type="Boolean" Name="COC_RequiereNoDocumento" Nullable="false" />
+    <NavigationProperty Name="OperacionCajaCasaMatriz_CAJ" Relationship="ModeloCaja.FK_CajaEmpresa_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="OperacionCajaCasaMatriz_CAJ" />
+    <NavigationProperty Name="CuentaExterna_PAR" Relationship="ModeloCaja.FK_ConceptoCaja_CAJ_CuentaExterna_PAR" FromRole="ConceptoCaja_CAJ" ToRole="CuentaExterna_PAR" />
+    <NavigationProperty Name="ConceptoCajaCategoria_CAJ" Relationship="ModeloCaja.FK_ConceptoCajaCategoria_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="ConceptoCajaCategoria_CAJ" />
+    <NavigationProperty Name="ConceptoCajaImpuesto_CAJ" Relationship="ModeloCaja.FK_ConceptoCajaImpuesto_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="ConceptoCajaImpuesto_CAJ" />
+    <NavigationProperty Name="ConceptoCajaRetencion_CAJ" Relationship="ModeloCaja.FK_ConceptoCajaRetencion_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="ConceptoCajaRetencion_CAJ" />
+    <NavigationProperty Name="CuentaMensajero_CAJ" Relationship="ModeloCaja.FK_CuentaMensajero_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="CuentaMensajero_CAJ" />
+    <NavigationProperty Name="DuplaConceptoCaja_CAJ" Relationship="ModeloCaja.FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="DuplaConceptoCaja_CAJ" />
+    <NavigationProperty Name="DuplaConceptoCaja_CAJ1" Relationship="ModeloCaja.FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ1" FromRole="ConceptoCaja_CAJ" ToRole="DuplaConceptoCaja_CAJ" />
+    <NavigationProperty Name="OperacionCajaOperacionNacional_CAJ" Relationship="ModeloCaja.FK_OperacionCajaOperacionNacional_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="OperacionCajaOperacionNacional_CAJ" />
+    <NavigationProperty Name="RegistroTransacDetalleCaja_CAJ" Relationship="ModeloCaja.FK_RegistroVentaDetalle_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="RegistroTransacDetalleCaja_CAJ" />
+    <NavigationProperty Name="OperacionCajaBanco_CAJ" Relationship="ModeloCaja.FK_CajaBanco_CAJ_ConceptoCaja_CAJ" FromRole="ConceptoCaja_CAJ" ToRole="OperacionCajaBanco_CAJ" />
+  </EntityType>
+  <Association Name="FK_CajaEmpresa_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.OperacionCajaCasaMatriz_CAJ" Role="OperacionCajaCasaMatriz_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCaja_CAJ_CuentaExterna_PAR">
+    <End Type="ModeloCaja.CuentaExterna_PAR" Role="CuentaExterna_PAR" Multiplicity="0..1" />
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaExterna_PAR">
+        <PropertyRef Name="CEX_IdCuentaExterna" />
+      </Principal>
+      <Dependent Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdCuentaExterna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCajaCategoria_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.ConceptoCajaCategoria_CAJ" Role="ConceptoCajaCategoria_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="ConceptoCajaCategoria_CAJ">
+        <PropertyRef Name="CCA_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCajaImpuesto_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.ConceptoCajaImpuesto_CAJ" Role="ConceptoCajaImpuesto_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="ConceptoCajaImpuesto_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCajaRetencion_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.ConceptoCajaRetencion_CAJ" Role="ConceptoCajaRetencion_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="ConceptoCajaRetencion_CAJ">
+        <PropertyRef Name="CCR_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaMensajero_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CuentaMensajero_CAJ" Role="CuentaMensajero_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="CuentaMensajero_CAJ">
+        <PropertyRef Name="CUM_IdConcepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.DuplaConceptoCaja_CAJ" Role="DuplaConceptoCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="DuplaConceptoCaja_CAJ">
+        <PropertyRef Name="DCC_IdConceptoCajaPrimario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ1">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.DuplaConceptoCaja_CAJ" Role="DuplaConceptoCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="DuplaConceptoCaja_CAJ">
+        <PropertyRef Name="DCC_IdConceptoCajaSecundario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionCajaOperacionNacional_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.OperacionCajaOperacionNacional_CAJ" Role="OperacionCajaOperacionNacional_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroVentaDetalle_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.RegistroTransacDetalleCaja_CAJ" Role="RegistroTransacDetalleCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CategConceptoCaja_VCAJ">
+    <Key>
+      <PropertyRef Name="COC_IdConceptoCaja" />
+      <PropertyRef Name="COC_Nombre" />
+      <PropertyRef Name="COC_Descripcion" />
+      <PropertyRef Name="COC_EsServicio" />
+      <PropertyRef Name="COC_EsIngreso" />
+      <PropertyRef Name="COC_VisibleAgenciaOPunto" />
+      <PropertyRef Name="COC_VisibleMensajero" />
+      <PropertyRef Name="COC_VisibleRacol" />
+      <PropertyRef Name="COC_FechaGrabacion" />
+      <PropertyRef Name="COC_CreadoPor" />
+      <PropertyRef Name="CCC_IdCategoria" />
+      <PropertyRef Name="CCC_Descripcion" />
+      <PropertyRef Name="COC_ContrapartidaCasaMatriz" />
+      <PropertyRef Name="COC_ContrapartidaCS" />
+      <PropertyRef Name="COC_RequiereNoDocumento" />
+    </Key>
+    <Property Type="Int32" Name="COC_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="COC_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COC_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="COC_EsServicio" Nullable="false" />
+    <Property Type="Int16" Name="COC_IdCuentaExterna" />
+    <Property Type="Boolean" Name="COC_EsIngreso" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleAgenciaOPunto" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleMensajero" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleRacol" Nullable="false" />
+    <Property Type="DateTime" Name="COC_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="COC_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CCC_IdCategoria" Nullable="false" />
+    <Property Type="String" Name="CCC_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="COC_ContrapartidaCasaMatriz" Nullable="false" />
+    <Property Type="Boolean" Name="COC_ContrapartidaCS" Nullable="false" />
+    <Property Type="Boolean" Name="COC_RequiereNoDocumento" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConceptoCajaHist_CAJ">
+    <Key>
+      <PropertyRef Name="COC_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="COC_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="COC_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="COC_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COC_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="COC_EsServicio" Nullable="false" />
+    <Property Type="Int16" Name="COC_IdCuentaExterna" />
+    <Property Type="Boolean" Name="COC_EsIngreso" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleAgenciaOPunto" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleMensajero" Nullable="false" />
+    <Property Type="Boolean" Name="COC_VisibleRacol" Nullable="false" />
+    <Property Type="DateTime" Name="COC_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="COC_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="COC_ContrapartidaCasaMatriz" Nullable="false" />
+    <Property Type="Boolean" Name="COC_ContrapartidaCS" Nullable="false" />
+    <Property Type="Boolean" Name="COC_RequiereNoDocumento" Nullable="false" />
+    <Property Type="DateTime" Name="COC_FechaCambio" Nullable="false" />
+    <Property Type="String" Name="COC_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COC_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="paObtenerCajasCerradasXCSFecha_CAJ_Result">
+    <Property Type="Int64" Name="CIC_IdCierreCaja" Nullable="false" />
+    <Property Type="Int32" Name="APC_IdCaja" Nullable="false" />
+    <Property Type="Decimal" Name="CIC_TotalIngresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalEgresosEfectivo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalIngresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CIC_TotalEgresosOtrasFormas" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="152" />
+    <Property Type="DateTime" Name="CIC_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ACS_IdCentroServicios" Nullable="false" />
+    <Property Type="DateTime" Name="APC_FechaGrabacion" Nullable="false" Precision="23" />
+  </ComplexType>
+  <EntityType Name="OperacionCajaBanco_CAJ">
+    <Key>
+      <PropertyRef Name="CAB_IdOperacionCajaBanco" />
+    </Key>
+    <Property Type="Int64" Name="CAB_IdOperacionCajaBanco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="CAB_IdAperturaCaja" Nullable="false" />
+    <Property Type="String" Name="CAB_IdBanco" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAB_DescripcionBanco" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAB_NumeroCuenta" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CAB_IdConceptoCaja" Nullable="false" />
+    <Property Type="Decimal" Name="CAB_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CAB_ConceptoEsIngreso" Nullable="false" />
+    <Property Type="Int16" Name="CAB_IdTipoDocumento" Nullable="false" />
+    <Property Type="String" Name="CAB_DescripcionTipoDocumento" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAB_NumeroDocumento" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAB_Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CAB_FechaMovimiento" Nullable="false" />
+    <Property Type="String" Name="CAB_MovHechoPor" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="CAB_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="CAB_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAB_NombreConceptoCaja" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAB_NumeroComprobante" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AperturaCaja_CAJ" Relationship="ModeloCaja.FK_OperacionCajaBanco_CAJ_AperturaCaja_CAJ" FromRole="OperacionCajaBanco_CAJ" ToRole="AperturaCaja_CAJ" />
+    <NavigationProperty Name="BancoCentroServiciosMov_CAJ" Relationship="ModeloCaja.FK_BancoCentroServiciosMov_CAJ_CajaBanco_CAJ" FromRole="OperacionCajaBanco_CAJ" ToRole="BancoCentroServiciosMov_CAJ" />
+    <NavigationProperty Name="CajaBancoOperacionNacionalMov_CAJ" Relationship="ModeloCaja.FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaBanco_CAJ" FromRole="OperacionCajaBanco_CAJ" ToRole="CajaBancoOperacionNacionalMov_CAJ" />
+    <NavigationProperty Name="CajaCasaMatrizBancoMov_CAJ" Relationship="ModeloCaja.FK_CajaEmpresaBancoMov_CAJ_CajaBanco_CAJ" FromRole="OperacionCajaBanco_CAJ" ToRole="CajaCasaMatrizBancoMov_CAJ" />
+    <NavigationProperty Name="ConceptoCaja_CAJ" Relationship="ModeloCaja.FK_CajaBanco_CAJ_ConceptoCaja_CAJ" FromRole="OperacionCajaBanco_CAJ" ToRole="ConceptoCaja_CAJ" />
+  </EntityType>
+  <Association Name="FK_OperacionCajaBanco_CAJ_AperturaCaja_CAJ">
+    <End Type="ModeloCaja.AperturaCaja_CAJ" Role="AperturaCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.OperacionCajaBanco_CAJ" Role="OperacionCajaBanco_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BancoCentroServiciosMov_CAJ_CajaBanco_CAJ">
+    <End Type="ModeloCaja.OperacionCajaBanco_CAJ" Role="OperacionCajaBanco_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.BancoCentroServiciosMov_CAJ" Role="BancoCentroServiciosMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdOperacionCajaBanco" />
+      </Principal>
+      <Dependent Role="BancoCentroServiciosMov_CAJ">
+        <PropertyRef Name="BCM_IdCajaBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaBanco_CAJ">
+    <End Type="ModeloCaja.OperacionCajaBanco_CAJ" Role="OperacionCajaBanco_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaBancoOperacionNacionalMov_CAJ" Role="CajaBancoOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdOperacionCajaBanco" />
+      </Principal>
+      <Dependent Role="CajaBancoOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CBO_IdOperacionCajaBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaEmpresaBancoMov_CAJ_CajaBanco_CAJ">
+    <End Type="ModeloCaja.OperacionCajaBanco_CAJ" Role="OperacionCajaBanco_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.CajaCasaMatrizBancoMov_CAJ" Role="CajaCasaMatrizBancoMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdOperacionCajaBanco" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizBancoMov_CAJ">
+        <PropertyRef Name="CBM_IdOperacionCajaBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaBanco_CAJ_ConceptoCaja_CAJ">
+    <End Type="ModeloCaja.ConceptoCaja_CAJ" Role="ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Type="ModeloCaja.OperacionCajaBanco_CAJ" Role="OperacionCajaBanco_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paObtenerCajaAfectadaAlCobro_CAJ_Result">
+    <Property Type="Int64" Name="IdCS" Nullable="false" />
+    <Property Type="String" Name="NombreCS" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="NoComprobante" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="ValorTotal" Nullable="true" Precision="38" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="paObtenerRegitrosTranCajaCentroSvc_CAJ_Result">
+    <Property Type="Int64" Name="RTC_IdCentroServiciosVenta" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCentroServiciosVenta" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="RTD_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="RTD_NombreConcepto" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="RTD_Descripcion" Nullable="true" MaxLength="250" />
+    <Property Type="Decimal" Name="RTD_ValorServicio" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="RTD_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paObtenerCSRecacudoAlcobro_CAJ_Result">
+    <Property Type="Int64" Name="RTC_IdCentroServiciosVenta" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCentroServiciosVenta" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="RTD_Numero" Nullable="false" />
+    <Property Type="Decimal" Name="ValorEnCaja" Nullable="true" Precision="38" Scale="4" />
+    <Property Type="String" Name="RTD_NumeroComprobante" Nullable="false" MaxLength="25" />
+  </ComplexType>
+  <EntityType Name="ReporteMensajeroCaja_CAJ">
+    <Key>
+      <PropertyRef Name="RMC_IdRegistro" />
+    </Key>
+    <Property Type="Int64" Name="RMC_IdRegistro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RMC_IdRegistroTransDetalleCaja" />
+    <Property Type="Int64" Name="RMC_IdMensajero" Nullable="false" />
+    <Property Type="String" Name="RMC_NombreMensajero" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RMC_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="RMC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RMC_NoComprobante" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RegistroTransacDetalleCaja_CAJ" Relationship="ModeloCaja.FK_ReporteMensajeroCaja_CAJ_RegistroTransacDetalleCaja_CAJ" FromRole="ReporteMensajeroCaja_CAJ" ToRole="RegistroTransacDetalleCaja_CAJ" />
+  </EntityType>
+  <Association Name="FK_ReporteMensajeroCaja_CAJ_RegistroTransacDetalleCaja_CAJ">
+    <End Type="ModeloCaja.RegistroTransacDetalleCaja_CAJ" Role="RegistroTransacDetalleCaja_CAJ" Multiplicity="0..1" />
+    <End Type="ModeloCaja.ReporteMensajeroCaja_CAJ" Role="ReporteMensajeroCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Principal>
+      <Dependent Role="ReporteMensajeroCaja_CAJ">
+        <PropertyRef Name="RMC_IdRegistroTransDetalleCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paObtenerReporteMensajeroImprimir_CAJ_Result">
+    <Property Type="Int32" Name="COC_IdConceptoCaja" Nullable="false" />
+    <Property Type="String" Name="COC_Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="RTD_ValorServicio" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int32" Name="IdConceptoCajaMensajero" Nullable="false" />
+    <Property Type="String" Name="NombConceptoCajaMensajero" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="NumComprobante" Nullable="true" MaxLength="25" />
+    <Property Type="Int64" Name="RTD_Numero" Nullable="false" />
+    <Property Type="String" Name="RTD_Observacion" Nullable="false" MaxLength="200" />
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+    <Property Type="String" Name="CUM_NombreMensajero" Nullable="false" MaxLength="255" />
+    <Property Type="Int64" Name="CUM_NumeroDocumento" Nullable="true" />
+    <Property Type="String" Name="PEI_Identificacion" Nullable="false" MaxLength="25" />
+    <Property Type="DateTime" Name="RTD_FechaGrabacion" Nullable="false" Precision="23" />
+  </ComplexType>
+</Schema>

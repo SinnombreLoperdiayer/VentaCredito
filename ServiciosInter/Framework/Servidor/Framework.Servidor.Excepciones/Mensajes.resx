@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EX_000" xml:space="preserve">
+    <value>Mensaje de error {0} no se encuentra configurado.</value>
+  </data>
+  <data name="EX_001" xml:space="preserve">
+    <value>No se encuentra registrado apropiadamente el equipo.</value>
+  </data>
+  <data name="EX_002" xml:space="preserve">
+    <value>Usuario bloqueado por multiples intentos de autenticación.</value>
+  </data>
+  <data name="EX_003" xml:space="preserve">
+    <value>La contraseña debe ser diferente a la que utilizo anteriormente.</value>
+  </data>
+  <data name="EX_004" xml:space="preserve">
+    <value>Usuario o contraseña no validos.</value>
+  </data>
+  <data name="EX_005" xml:space="preserve">
+    <value>El usuario esta bloqueado.</value>
+  </data>
+  <data name="EX_006" xml:space="preserve">
+    <value>Debe cambiar la clave.</value>
+  </data>
+  <data name="EX_007" xml:space="preserve">
+    <value>Usuario o contraseña invalidos.</value>
+  </data>
+  <data name="EX_008" xml:space="preserve">
+    <value>No está configurado correctamente el parámetro TiempoVidaToken.</value>
+  </data>
+  <data name="EX_009" xml:space="preserve">
+    <value>El equipo que intenta ingresar al sistema no se encuentra autorizado.</value>
+  </data>
+  <data name="EX_010" xml:space="preserve">
+    <value>El campo no existe.</value>
+  </data>
+  <data name="EX_011" xml:space="preserve">
+    <value>Error desconocido contactese con servicio técnico.</value>
+  </data>
+  <data name="EX_012" xml:space="preserve">
+    <value>Error en el formato de la informacion.</value>
+  </data>
+  <data name="EX_013" xml:space="preserve">
+    <value>Error division por cero.</value>
+  </data>
+  <data name="EX_014" xml:space="preserve">
+    <value>Error en operacion aritmetica.</value>
+  </data>
+  <data name="EX_015" xml:space="preserve">
+    <value>Error en conversión de datos.</value>
+  </data>
+  <data name="EX_016" xml:space="preserve">
+    <value>Operación invalida.</value>
+  </data>
+  <data name="EX_017" xml:space="preserve">
+    <value>Directorio no encontrado.</value>
+  </data>
+  <data name="EX_018" xml:space="preserve">
+    <value>Error cargando el archivo.</value>
+  </data>
+  <data name="EX_019" xml:space="preserve">
+    <value>Archivo no encontrado.</value>
+  </data>
+  <data name="EX_020" xml:space="preserve">
+    <value>Memoria excedida.</value>
+  </data>
+  <data name="EX_021" xml:space="preserve">
+    <value>Proceso abortado.</value>
+  </data>
+  <data name="EX_022" xml:space="preserve">
+    <value>Error en interceptor.</value>
+  </data>
+  <data name="EX_023" xml:space="preserve">
+    <value>No se encontraron las credenciales de wcf desde el cliente.</value>
+  </data>
+  <data name="EX_024" xml:space="preserve">
+    <value>Usuario o password de servicios incorrecto.</value>
+  </data>
+  <data name="EX_025" xml:space="preserve">
+    <value>El cargo que debe atender la solicitud no tiene un usuario asignado o el usuario se encuentra inactivo.</value>
+  </data>
+  <data name="EX_026" xml:space="preserve">
+    <value>La tarea a asignar no se encuentra configurada de forma correcta.</value>
+  </data>
+  <data name="EX_027" xml:space="preserve">
+    <value>No está configurado correctamente el parámetro LimiteArchivoAdjunto.</value>
+  </data>
+  <data name="EX_028" xml:space="preserve">
+    <value>La versión no está configurada correctamente para el usuario.</value>
+  </data>
+  <data name="EX_029" xml:space="preserve">
+    <value>La falla no está configurada correctamente o no existe.</value>
+  </data>
+  <data name="EX_030" xml:space="preserve">
+    <value>La cadena de conexión al Directorio Activo es nula o vacía.</value>
+  </data>
+  <data name="EX_031" xml:space="preserve">
+    <value>El usuario de Directorio Activo es nulo o vacío.</value>
+  </data>
+  <data name="EX_032" xml:space="preserve">
+    <value>La clave del usuario de Directorio Activo es nula o vacía.</value>
+  </data>
+  <data name="EX_033" xml:space="preserve">
+    <value>No se obtuvo el dominio de la cadena de conexión del Directorio Activo.</value>
+  </data>
+  <data name="EX_034" xml:space="preserve">
+    <value>El usuario no tiene autorización para asignar fallas porque no está asociado a un centro logístico.</value>
+  </data>
+  <data name="EX_035" xml:space="preserve">
+    <value>La consulta en la Base de Datos no retorno ningún resultado.</value>
+  </data>
+  <data name="EX_036" xml:space="preserve">
+    <value>El usuario no existe.</value>
+  </data>
+  <data name="EX_037" xml:space="preserve">
+    <value>Se encontro información duplicada en la base de datos, por favor verifique los datos ingresados.</value>
+  </data>
+  <data name="EX_038" xml:space="preserve">
+    <value>Tarea reasignada por escalamiento ya que no fue atendida en el tiempo indicado por el usuario</value>
+  </data>
+  <data name="EX_039" xml:space="preserve">
+    <value>No se encontraron usuarios activos para escalar la tarea.</value>
+  </data>
+  <data name="EX_040" xml:space="preserve">
+    <value>No se encontraron cargos por encima del actual para ser escalada la tarea.</value>
+  </data>
+  <data name="EX_041" xml:space="preserve">
+    <value>El usuario asignado no existe o no es válido.</value>
+  </data>
+  <data name="EX_042" xml:space="preserve">
+    <value>Cargo Responsable no existe o no es válido.</value>
+  </data>
+  <data name="EX_043" xml:space="preserve">
+    <value>Error desconocido durante la autenticación.</value>
+  </data>
+  <data name="EX_044" xml:space="preserve">
+    <value>No se puede eliminar por que presenta registros asociados.</value>
+  </data>
+  <data name="EX_045" xml:space="preserve">
+    <value>El usuario para hacer la asignación de la tarea no está activo en el sistema.</value>
+  </data>
+  <data name="EX_046" xml:space="preserve">
+    <value>Fallo proceso de cambio de cambio de contraseña.</value>
+  </data>
+  <data name="EX_051" xml:space="preserve">
+    <value>El cliente se encuentra en las lista restrictiva.</value>
+    <comment>Cuando una identificación se encuentra dentro de las listas restrictivas</comment>
+  </data>
+  <data name="EX_052" xml:space="preserve">
+    <value>Falta zona general en tabla de zonas.</value>
+    <comment>Cuando no se ha agragado a la tabla la zona general (id = -1)</comment>
+  </data>
+  <data name="EX_053" xml:space="preserve">
+    <value>El centro de servicio no tiene asignados servicios o se encuentra inactivo.</value>
+    <comment>Mensaje de erorr</comment>
+  </data>
+  <data name="EX_054" xml:space="preserve">
+    <value>El usuario pertenece a una regional diferente a la del equipo.</value>
+  </data>
+  <data name="EX_055" xml:space="preserve">
+    <value>El centro de servicio ingresado no es válido.</value>
+  </data>
+  <data name="EX_056" xml:space="preserve">
+    <value>La sucursal ingresada no es válida.</value>
+  </data>
+  <data name="EX_057" xml:space="preserve">
+    <value>El cliente no tiene configurada la versión apropiadamente.</value>
+  </data>
+  <data name="EX_058" xml:space="preserve">
+    <value>El cliente no está configurado correctamente, no tiene sucursales asociadas.</value>
+  </data>
+  <data name="EX_059" xml:space="preserve">
+    <value>No se encontraron servicios asignados. Verifique que la sucursal se encuentre activa, que tenga servicios asignados y que el contrato asociado a la sucursal se encuentre vigente.</value>
+  </data>
+  <data name="EX_060" xml:space="preserve">
+    <value>No se puede asignar un Consecutivo, autonumerador Lleno.</value>
+    <comment>smensaje que informa que se completaron los consecutivos asignados</comment>
+  </data>
+  <data name="EX_061" xml:space="preserve">
+    <value>Error al adjuntar un archivo.</value>
+    <comment>Error al adjuntar un archivo</comment>
+  </data>
+  <data name="EX_062" xml:space="preserve">
+    <value>Alerta no configurada.</value>
+    <comment>Error al generar alerta</comment>
+  </data>
+  <data name="EX_063" xml:space="preserve">
+    <value>No se pudo crear la planilla.</value>
+    <comment>Error al crear la planilla venta guia</comment>
+  </data>
+  <data name="EX_064" xml:space="preserve">
+    <value>Error validando los campos ingresados.</value>
+    <comment>Error lanzado cuando no se hace una correcta validacion de los campos en el cliente</comment>
+  </data>
+  <data name="EX_065" xml:space="preserve">
+    <value>Error en solicitud de Consecutivo, intente nuevamente.</value>
+    <comment>Error cuando se consume el procedimiento para cargar siguiente numerador</comment>
+  </data>
+  <data name="EX_066" xml:space="preserve">
+    <value>Error de restricción por base de datos, intente nuevamente cargando los datos.</value>
+  </data>
+  <data name="EX_067" xml:space="preserve">
+    <value>Punto no tiene una comisión asignada.</value>
+    <comment>Error del punto no tiene una comision asignada</comment>
+  </data>
+  <data name="EX_068" xml:space="preserve">
+    <value>El Valor Base de la Comisión es Cero (0)</value>
+    <comment>Error al recibir el parametro en cero de la base de la comisión</comment>
+  </data>
+  <data name="EX_069" xml:space="preserve">
+    <value>Error en el valor del porcentaje de la comisión del Responsable.</value>
+    <comment>Error en el porcentaje de la comisión del responsable</comment>
+  </data>
+  <data name="EX_070" xml:space="preserve">
+    <value>Error en el valor de la comisión del Responsable.</value>
+    <comment>Error en el valor de la comisión del responsable</comment>
+  </data>
+  <data name="EX_071" xml:space="preserve">
+    <value>Error en el valor del porcentaje de la comisión del Centro de Servicio.</value>
+    <comment>Error en el valor del porcentaje de la comisión del Centro de Servicio.</comment>
+  </data>
+  <data name="EX_072" xml:space="preserve">
+    <value>Error en el valor de la comisión del Centro de Servicio.</value>
+    <comment>Error en el valor de la comisión del Centro de Servicio.</comment>
+  </data>
+  <data name="EX_073" xml:space="preserve">
+    <value>Existe un conflicto con registros asociados.</value>
+    <comment>Error lanzado cuando se viola la integridad referencial.</comment>
+  </data>
+  <data name="EX_074" xml:space="preserve">
+    <value>Error falta área interna default</value>
+    <comment>Error lanzado cuando no existe un area interna default.</comment>
+  </data>
+  <data name="EX_075" xml:space="preserve">
+    <value>Integración con web service de obtener precio del dólar en pesos fallo</value>
+  </data>
+  <data name="EX_076" xml:space="preserve">
+    <value>No existe una caja para editar para el tipo de consecutivo.</value>
+    <comment>Cuando No existe una caja para editar para el tipo de consecutivo.</comment>
+  </data>
+  <data name="EX_077" xml:space="preserve">
+    <value>No existe un consecutivo para el tipo de consecutivo {0}.</value>
+    <comment>Cuando no existe un consecutivo para el tipo de consecutivo enviado.</comment>
+  </data>
+  <data name="EX_078" xml:space="preserve">
+    <value>Los parámetros para ejecutar la regla no son correctos, llegaron en null</value>
+    <comment>Cuando los Parametros para ejecutar la regla llegan nulos.</comment>
+  </data>
+  <data name="EX_079" xml:space="preserve">
+    <value>La regla no implementa la interfaz de reglas, no se puede ejecutar la regla</value>
+    <comment>Mensaje de cuando no esta implemetada la regla.</comment>
+  </data>
+  <data name="EX_081" xml:space="preserve">
+    <value>Error al obtener parametros de framework</value>
+  </data>
+  <data name="EX_082" xml:space="preserve">
+    <value>La Racol no tiene configurada una versión</value>
+    <comment>Mensaje de error cuando una racol no tiene configurada una versión.</comment>
+  </data>
+  <data name="EX_083" xml:space="preserve">
+    <value>La gestión no tiene configurada una versión</value>
+    <comment>Mensaje de error cuando una gestión no tiene configurada una versión.</comment>
+  </data>
+  <data name="EX_084" xml:space="preserve">
+    <value>No está configurado el porcentaje de recargo de combustible para el operador postal</value>
+    <comment>Mensaje de error cuando no esta configurado el valor del porcentaje de recargo  de combustible del operador postal</comment>
+  </data>
+  <data name="EX_085" xml:space="preserve">
+    <value>Se presentó un error de datos, por favor comunicarse con soporte técnico</value>
+  </data>
+  <data name="EX_087" xml:space="preserve">
+    <value>No se encontraron destinatarios para el correo</value>
+    <comment>Mensaje indicando que no hay destinatarios para enviar un correo</comment>
+  </data>
+  <data name="EX_089" xml:space="preserve">
+    <value>El nombre de usuario ingresado ya existe en la base de datos</value>
+  </data>
+  <data name="EX_090" xml:space="preserve">
+    <value>La persona ya se encuentra asociada al usuario {0}</value>
+  </data>
+  <data name="EX_091" xml:space="preserve">
+    <value>{0} con documento {1}, ya tiene asignado el usuario activo {2}</value>
+    <comment>Mensaje de error cuando el usuario esta activo de la persona consultada.</comment>
+  </data>
+  <data name="EX_092" xml:space="preserve">
+    <value>el usuario {0} esta Activo y esta asignado a la persona {1} con numero de documento {2}</value>
+    <comment>Mensaje de error cuando el usuario esta activo de la persona consultada.</comment>
+  </data>
+  <data name="EX_093" xml:space="preserve">
+    <value>El numero de documento {0} que digito esta asociado a la persona {1} que tiene como usuario activo {2}</value>
+    <comment>Mensaje de error cuando el usuario esta activo de la persona consultada.</comment>
+  </data>
+  <data name="EX_094" xml:space="preserve">
+    <value>el usuario {0} esta Activo y no esta asignado, Se debe Inactivar para poder Asignar nuevamente</value>
+    <comment>Mensaje de error cuando el usuario esta activo i no asignado</comment>
+  </data>
+  <data name="EX_095" xml:space="preserve">
+    <value>No se encontró el inventario del consolidado</value>
+  </data>
+  <data name="EX_096" xml:space="preserve">
+    <value>El número de la tula a asignar no corresponde al centro de servicio.</value>
+    <comment>Mensaje de error cuando se esta realizando la asignación de tulas entre diferentes centros de servicio.</comment>
+  </data>
+  <data name="EX_097" xml:space="preserve">
+    <value>Usuario no existe en el dominio</value>
+  </data>
+  <data name="IN_001" xml:space="preserve">
+    <value>La máquina desde la que desea trabajar no se encuentra autorizada. Se ha generado automáticamente una solicitud de autorización. Intente nuevamente cuando su máquina haya sido autorizada.</value>
+    <comment>Mensaje informativo informando que debe esperar a que le autoricen la máquina.</comment>
+  </data>
+</root>

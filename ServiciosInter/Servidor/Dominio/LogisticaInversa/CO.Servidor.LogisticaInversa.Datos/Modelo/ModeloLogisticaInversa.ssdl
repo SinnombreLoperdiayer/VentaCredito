@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloLogisticaInversaNS.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloLogisticaInversaNSStoreContainer">
+    <EntitySet Name="AlmacenGuia_LOI" EntityType="ModeloLogisticaInversaNS.Store.AlmacenGuia_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConsecutivoPorCol_PAR" EntityType="ModeloLogisticaInversaNS.Store.ConsecutivoPorCol_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConsecutivosGlobales_PAR" EntityType="ModeloLogisticaInversaNS.Store.ConsecutivosGlobales_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EvidenciaDevolucion_MEN" EntityType="ModeloLogisticaInversaNS.Store.EvidenciaDevolucion_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ManifiestoLogInvDetalle_LOI" EntityType="ModeloLogisticaInversaNS.Store.ManifiestoLogInvDetalle_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ManifiestoLogInvDetallHist_LOI" EntityType="ModeloLogisticaInversaNS.Store.ManifiestoLogInvDetallHist_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ManifiestoLogInvHist_LOI" EntityType="ModeloLogisticaInversaNS.Store.ManifiestoLogInvHist_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ManifiestoLogisticaInversa_LOI" EntityType="ModeloLogisticaInversaNS.Store.ManifiestoLogisticaInversa_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoBorraGtionGuiaTeleme_LOI" EntityType="ModeloLogisticaInversaNS.Store.MotivoBorraGtionGuiaTeleme_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanillaCertificacionDetalle_LOI" EntityType="ModeloLogisticaInversaNS.Store.PlanillaCertificacionDetalle_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanillaCertificaciones_LOI" EntityType="ModeloLogisticaInversaNS.Store.PlanillaCertificaciones_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanillaCertificacionesGuia_LOI" EntityType="ModeloLogisticaInversaNS.Store.PlanillaCertificacionesGuia_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanillaRelacionGuia_LOI" EntityType="ModeloLogisticaInversaNS.Store.PlanillaRelacionGuia_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanillaRelacionGuiaGuia_LOI" EntityType="ModeloLogisticaInversaNS.Store.PlanillaRelacionGuiaGuia_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RecibidoGuia_LOI" EntityType="ModeloLogisticaInversaNS.Store.RecibidoGuia_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResultadoTelemercadeo_LOI" EntityType="ModeloLogisticaInversaNS.Store.ResultadoTelemercadeo_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEvidenciaDevolucion_MEN" EntityType="ModeloLogisticaInversaNS.Store.TipoEvidenciaDevolucion_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoManifiestoLogInv_LOI" EntityType="ModeloLogisticaInversaNS.Store.TipoManifiestoLogInv_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidades_VPAR" EntityType="ModeloLogisticaInversaNS.Store.Localidades_VPAR" store:Type="Views" store:Schema="dbo" store:Name="Localidades_VPAR">
+      <DefiningQuery>SELECT 
+      [Localidades_VPAR].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [Localidades_VPAR].[LOC_IdTipo] AS [LOC_IdTipo], 
+      [Localidades_VPAR].[TLO_Descripcion] AS [TLO_Descripcion], 
+      [Localidades_VPAR].[LOC_Nombre] AS [LOC_Nombre], 
+      [Localidades_VPAR].[LOC_NombreCorto] AS [LOC_NombreCorto], 
+      [Localidades_VPAR].[LOC_IdAncestroPrimerGrado] AS [LOC_IdAncestroPrimerGrado], 
+      [Localidades_VPAR].[LOC_IdTipoPrimero] AS [LOC_IdTipoPrimero], 
+      [Localidades_VPAR].[LOC_IdTipoPrimeroDesc] AS [LOC_IdTipoPrimeroDesc], 
+      [Localidades_VPAR].[LOC_NombrePrimero] AS [LOC_NombrePrimero], 
+      [Localidades_VPAR].[LOC_NombreCortoPrimero] AS [LOC_NombreCortoPrimero], 
+      [Localidades_VPAR].[LOC_IdAncestroSegundoGrado] AS [LOC_IdAncestroSegundoGrado], 
+      [Localidades_VPAR].[LOC_IdTipoSegundo] AS [LOC_IdTipoSegundo], 
+      [Localidades_VPAR].[LOC_IdTipoSegundoDesc] AS [LOC_IdTipoSegundoDesc], 
+      [Localidades_VPAR].[LOC_NombreSegundo] AS [LOC_NombreSegundo], 
+      [Localidades_VPAR].[LOC_NombreCortoSegundo] AS [LOC_NombreCortoSegundo], 
+      [Localidades_VPAR].[LOC_IdAncestroTercerGrado] AS [LOC_IdAncestroTercerGrado], 
+      [Localidades_VPAR].[LOC_IdTipoTercero] AS [LOC_IdTipoTercero], 
+      [Localidades_VPAR].[LOC_IdTipoTerceroDesc] AS [LOC_IdTipoTerceroDesc], 
+      [Localidades_VPAR].[LOC_NombreTercero] AS [LOC_NombreTercero], 
+      [Localidades_VPAR].[LOC_NombreCortoTercero] AS [LOC_NombreCortoTercero], 
+      [Localidades_VPAR].[NombreCompleto] AS [NombreCompleto], 
+      [Localidades_VPAR].[LOC_CodigoPostal] AS [LOC_CodigoPostal]
+      FROM [dbo].[Localidades_VPAR] AS [Localidades_VPAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ManifiestoDetalleLogInv_VLOI" EntityType="ModeloLogisticaInversaNS.Store.ManifiestoDetalleLogInv_VLOI" store:Type="Views" store:Schema="dbo" store:Name="ManifiestoDetalleLogInv_VLOI">
+      <DefiningQuery>SELECT 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_IdManifiestoLogInv] AS [MAN_IdManifiestoLogInv], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_IdTipoManifiesto] AS [MAN_IdTipoManifiesto], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_IdLocalidadOrigen] AS [MAN_IdLocalidadOrigen], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_IdLocalidadDestino] AS [MAN_IdLocalidadDestino], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_IdAgenciaOrigen] AS [MAN_IdAgenciaOrigen], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_IdAgenciaDestino] AS [MAN_IdAgenciaDestino], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_IdGuiaInterna] AS [MAN_IdGuiaInterna], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_NumeroGuiaInterna] AS [MAN_NumeroGuiaInterna], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_EsManifiestoAutomatico] AS [MAN_EsManifiestoAutomatico], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_IdManifiestoLogInvDetalle] AS [MLD_IdManifiestoLogInvDetalle], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_IdManifiesto] AS [MLD_IdManifiesto], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_IdAdminision] AS [MLD_IdAdminision], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_NumeroAdmision] AS [MLD_NumeroAdmision], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_FechaGrabacion] AS [MLD_FechaGrabacion], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_FechaDescarga] AS [MLD_FechaDescarga], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_UsuarioDescarga] AS [MLD_UsuarioDescarga], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_FechaGrabacion] AS [MAN_FechaGrabacion], 
+      [ManifiestoDetalleLogInv_VLOI].[MAN_FechaInicioDescarga] AS [MAN_FechaInicioDescarga], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_IdServicio] AS [MLD_IdServicio], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_EstaDescargada] AS [MLD_EstaDescargada], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_FueManifestadaEnOrigen] AS [MLD_FueManifestadaEnOrigen], 
+      [ManifiestoDetalleLogInv_VLOI].[MLD_EstadoEnManifiesto] AS [MLD_EstadoEnManifiesto]
+      FROM [dbo].[ManifiestoDetalleLogInv_VLOI] AS [ManifiestoDetalleLogInv_VLOI]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PlanillaCertificaciones_VLOI" EntityType="ModeloLogisticaInversaNS.Store.PlanillaCertificaciones_VLOI" store:Type="Views" store:Schema="dbo" store:Name="PlanillaCertificaciones_VLOI">
+      <DefiningQuery>SELECT 
+      [PlanillaCertificaciones_VLOI].[PLC_IdPlanillaCertificaciones] AS [PLC_IdPlanillaCertificaciones], 
+      [PlanillaCertificaciones_VLOI].[PLC_IdRegionalAdmPlanilla] AS [PLC_IdRegionalAdmPlanilla], 
+      [PlanillaCertificaciones_VLOI].[PLC_IdCentroServiciosPlanilla] AS [PLC_IdCentroServiciosPlanilla], 
+      [PlanillaCertificaciones_VLOI].[PLC_FechaGrabacion] AS [PLC_FechaGrabacion], 
+      [PlanillaCertificaciones_VLOI].[REA_Descripcion] AS [REA_Descripcion], 
+      [PlanillaCertificaciones_VLOI].[CES_Nombre] AS [CES_Nombre], 
+      [PlanillaCertificaciones_VLOI].[IdAdmision] AS [IdAdmision], 
+      [PlanillaCertificaciones_VLOI].[NumGuia] AS [NumGuia], 
+      [PlanillaCertificaciones_VLOI].[LOC_Nombre] AS [LOC_Nombre], 
+      [PlanillaCertificaciones_VLOI].[CES_Telefono1] AS [CES_Telefono1], 
+      [PlanillaCertificaciones_VLOI].[CES_Direccion] AS [CES_Direccion], 
+      [PlanillaCertificaciones_VLOI].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [PlanillaCertificaciones_VLOI].[PLC_IdAdmisionMensajeria] AS [PLC_IdAdmisionMensajeria], 
+      [PlanillaCertificaciones_VLOI].[PLC_NumeroGuia] AS [PLC_NumeroGuia], 
+      [PlanillaCertificaciones_VLOI].[PLC_EstaDescargada] AS [PLC_EstaDescargada], 
+      [PlanillaCertificaciones_VLOI].[PLC_FechaDescargue] AS [PLC_FechaDescargue], 
+      [PlanillaCertificaciones_VLOI].[PLC_DescargadaPor] AS [PLC_DescargadaPor], 
+      [PlanillaCertificaciones_VLOI].[PLC_CreadoPor] AS [PLC_CreadoPor], 
+      [PlanillaCertificaciones_VLOI].[PCD_TipoPlanilla] AS [PCD_TipoPlanilla], 
+      [PlanillaCertificaciones_VLOI].[PCD_IdDestinatario] AS [PCD_IdDestinatario], 
+      [PlanillaCertificaciones_VLOI].[PCD_Nombre] AS [PCD_Nombre], 
+      [PlanillaCertificaciones_VLOI].[PCD_Direccion] AS [PCD_Direccion], 
+      [PlanillaCertificaciones_VLOI].[PCD_Telefono] AS [PCD_Telefono], 
+      [PlanillaCertificaciones_VLOI].[PCD_IdLocalidad] AS [PCD_IdLocalidad], 
+      [PlanillaCertificaciones_VLOI].[PCD_Consolidada] AS [PCD_Consolidada], 
+      [PlanillaCertificaciones_VLOI].[PCD_Devolucion] AS [PCD_Devolucion], 
+      [PlanillaCertificaciones_VLOI].[PCD_FechaGrabacion] AS [PCD_FechaGrabacion], 
+      [PlanillaCertificaciones_VLOI].[PCD_CreadoPor] AS [PCD_CreadoPor], 
+      [PlanillaCertificaciones_VLOI].[LOC_NombreDestino] AS [LOC_NombreDestino], 
+      [PlanillaCertificaciones_VLOI].[PCD_Cerrada] AS [PCD_Cerrada], 
+      [PlanillaCertificaciones_VLOI].[PCD_FechaCierre] AS [PCD_FechaCierre], 
+      [PlanillaCertificaciones_VLOI].[PCD_CerradoPor] AS [PCD_CerradoPor], 
+      [PlanillaCertificaciones_VLOI].[NomClienteCredito] AS [NomClienteCredito]
+      FROM [dbo].[PlanillaCertificaciones_VLOI] AS [PlanillaCertificaciones_VLOI]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PlanillaCertificacionesGuia_VLOI" EntityType="ModeloLogisticaInversaNS.Store.PlanillaCertificacionesGuia_VLOI" store:Type="Views" store:Schema="dbo" store:Name="PlanillaCertificacionesGuia_VLOI">
+      <DefiningQuery>SELECT 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_IdPlanillaCertificacionesGuia] AS [PLG_IdPlanillaCertificacionesGuia], 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_IdPlanillaCertificaciones] AS [PLG_IdPlanillaCertificaciones], 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_IdAdminisionMensajeria] AS [PLG_IdAdminisionMensajeria], 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_NumeroGuia] AS [PLG_NumeroGuia], 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_IdAdminisionGuiaInterna] AS [PLG_IdAdminisionGuiaInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_NumeroGuiaInterna] AS [PLG_NumeroGuiaInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_FechaGrabacion] AS [PLG_FechaGrabacion], 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_CreadoPor] AS [PLG_CreadoPor], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdServicio] AS [ADM_IdServicio], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreServicio] AS [ADM_NombreServicio], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_FechaGrabacion] AS [ADM_FechaGrabacion], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreCentroServicioOrigen] AS [ADM_NombreCentroServicioOrigen], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdCentroServicioOrigen] AS [ADM_IdCentroServicioOrigen], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdCentroServicioDestino] AS [ADM_IdCentroServicioDestino], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreCentroServicioDestino] AS [ADM_NombreCentroServicioDestino], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdCiudadOrigen] AS [ADM_IdCiudadOrigen], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreCiudadOrigen] AS [ADM_NombreCiudadOrigen], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdCiudadDestino] AS [ADM_IdCiudadDestino], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreCiudadDestino] AS [ADM_NombreCiudadDestino], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_EstaEntregada] AS [ADM_EstaEntregada], 
+      [PlanillaCertificacionesGuia_VLOI].[PLG_IdCentroServicioDestino] AS [PLG_IdCentroServicioDestino], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_IdAdmisionMensajeria] AS [AGI_IdAdmisionMensajeria], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_IdGestionOrigen] AS [AGI_IdGestionOrigen], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_DescripcionGestionOrig] AS [AGI_DescripcionGestionOrig], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_IdGestionDestino] AS [AGI_IdGestionDestino], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_DescripcionGestionDest] AS [AGI_DescripcionGestionDest], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_NombreRemitente] AS [AGI_NombreRemitente], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_TelefonoRemitente] AS [AGI_TelefonoRemitente], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_DireccionRemitente] AS [AGI_DireccionRemitente], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_NombreDestinatario] AS [AGI_NombreDestinatario], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_TelefonoDestinatario] AS [AGI_TelefonoDestinatario], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_DireccionDestinatario] AS [AGI_DireccionDestinatario], 
+      [PlanillaCertificacionesGuia_VLOI].[AGI_Contenido] AS [AGI_Contenido], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdCentroServicioOrigenInterna] AS [ADM_IdCentroServicioOrigenInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreCentroServicioOrigenInterna] AS [ADM_NombreCentroServicioOrigenInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdCentroServicioDestinoInterna] AS [ADM_IdCentroServicioDestinoInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreCentroServicioDestinoInterna] AS [ADM_NombreCentroServicioDestinoInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreCiudadOrigenInterna] AS [ADM_NombreCiudadOrigenInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdCiudadOrigenInterna] AS [ADM_IdCiudadOrigenInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_IdCiudadDestinoInterna] AS [ADM_IdCiudadDestinoInterna], 
+      [PlanillaCertificacionesGuia_VLOI].[ADM_NombreCiudadDestinoInterna] AS [ADM_NombreCiudadDestinoInterna]
+      FROM [dbo].[PlanillaCertificacionesGuia_VLOI] AS [PlanillaCertificacionesGuia_VLOI]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ManifiestoLogInvGuia_LOI_ManifiestoLogisticaInversa_LOI" Association="ModeloLogisticaInversaNS.Store.FK_ManifiestoLogInvGuia_LOI_ManifiestoLogisticaInversa_LOI">
+      <End Role="ManifiestoLogisticaInversa_LOI" EntitySet="ManifiestoLogisticaInversa_LOI" />
+      <End Role="ManifiestoLogInvDetalle_LOI" EntitySet="ManifiestoLogInvDetalle_LOI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ManifiestoLogisticaInversa_LOI_TipoManifiestoLogInv_LOI" Association="ModeloLogisticaInversaNS.Store.FK_ManifiestoLogisticaInversa_LOI_TipoManifiestoLogInv_LOI">
+      <End Role="TipoManifiestoLogInv_LOI" EntitySet="TipoManifiestoLogInv_LOI" />
+      <End Role="ManifiestoLogisticaInversa_LOI" EntitySet="ManifiestoLogisticaInversa_LOI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanillaCertificacionDetalle_LOI_PlanillaCertificaciones_LOI" Association="ModeloLogisticaInversaNS.Store.FK_PlanillaCertificacionDetalle_LOI_PlanillaCertificaciones_LOI">
+      <End Role="PlanillaCertificaciones_LOI" EntitySet="PlanillaCertificaciones_LOI" />
+      <End Role="PlanillaCertificacionDetalle_LOI" EntitySet="PlanillaCertificacionDetalle_LOI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PlanillaImpresGuiaInteGuia_LOI_PlanillaImpresGuiaInterna_LOI" Association="ModeloLogisticaInversaNS.Store.FK_PlanillaImpresGuiaInteGuia_LOI_PlanillaImpresGuiaInterna_LOI">
+      <End Role="PlanillaRelacionGuia_LOI" EntitySet="PlanillaRelacionGuia_LOI" />
+      <End Role="PlanillaRelacionGuiaGuia_LOI" EntitySet="PlanillaRelacionGuiaGuia_LOI" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AlmacenGuia_LOI">
+    <Key>
+      <PropertyRef Name="ARG_IdArchivo" />
+    </Key>
+    <Property Name="ARG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="ARG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="ARG_Caja" Type="bigint" Nullable="false" />
+    <Property Name="ARG_Lote" Type="int" Nullable="false" />
+    <Property Name="ARG_Posicion" Type="int" Nullable="false" />
+    <Property Name="ARG_DatosEdicion" Type="char" MaxLength="3" />
+    <Property Name="ARG_DatosEntrega" Type="char" MaxLength="3" />
+    <Property Name="ARG_EstadoFisicoGuia" Type="char" MaxLength="3" />
+    <Property Name="ARG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ARG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ARG_FechaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="ARG_FechaArchivo" Type="datetime" Nullable="false" />
+    <Property Name="ARG_UsuarioArchiva" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ARG_IdCentroLogArchiva" Type="bigint" />
+    <Property Name="ARG_Decodificada" Type="bit" />
+    <Property Name="ARG_Manual" Type="bit" />
+    <Property Name="ARG_IdArchivo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ARG_CarpetaImagen" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConsecutivoPorCol_PAR">
+    <Key>
+      <PropertyRef Name="CCC_IdTipoConsecutivo" />
+      <PropertyRef Name="CCC_IdCentroLogistico" />
+    </Key>
+    <Property Name="CCC_IdTipoConsecutivo" Type="smallint" Nullable="false" />
+    <Property Name="CCC_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="CCC_Inicio" Type="bigint" Nullable="false" />
+    <Property Name="CCC_Fin" Type="bigint" Nullable="false" />
+    <Property Name="CCC_Actual" Type="bigint" Nullable="false" />
+    <Property Name="CCC_EstaActivo" Type="bit" Nullable="false" />
+    <Property Name="CCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ConsecutivosGlobales_PAR">
+    <Key>
+      <PropertyRef Name="CON_IdTipoConsecutivo" />
+    </Key>
+    <Property Name="CON_IdTipoConsecutivo" Type="smallint" Nullable="false" />
+    <Property Name="CON_Inicio" Type="bigint" Nullable="false" />
+    <Property Name="CON_Fin" Type="bigint" Nullable="false" />
+    <Property Name="CON_Actual" Type="bigint" Nullable="false" />
+    <Property Name="CON_EstaActivo" Type="bit" Nullable="false" />
+    <Property Name="CON_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CON_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="EvidenciaDevolucion_MEN">
+    <Key>
+      <PropertyRef Name="VOD_IdEvidenciaDevolucion" />
+    </Key>
+    <Property Name="VOD_IdEvidenciaDevolucion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VOD_IdEstadoGuiaLog" Type="bigint" Nullable="false" />
+    <Property Name="VOD_NumeroEvidencia" Type="bigint" Nullable="false" />
+    <Property Name="VOD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VOD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VOD_IdTipoEvidenciaDevolucion" Type="smallint" Nullable="false" />
+    <Property Name="VOD_EstaDigitalizado" Type="bit" Nullable="false" />
+    <Property Name="VOD_DescripcionTipoEvidenciaDevolucion" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ManifiestoLogInvDetalle_LOI">
+    <Key>
+      <PropertyRef Name="MLD_IdManifiestoLogInvDetalle" />
+    </Key>
+    <Property Name="MLD_IdManifiestoLogInvDetalle" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MLD_IdManifiesto" Type="bigint" Nullable="false" />
+    <Property Name="MLD_IdAdminision" Type="bigint" Nullable="false" />
+    <Property Name="MLD_NumeroAdmision" Type="bigint" Nullable="false" />
+    <Property Name="MLD_IdServicio" Type="int" Nullable="false" />
+    <Property Name="MLD_EstaDescargada" Type="bit" Nullable="false" />
+    <Property Name="MLD_FueManifestadaEnOrigen" Type="bit" Nullable="false" />
+    <Property Name="MLD_FechaDescarga" Type="datetime" Nullable="false" />
+    <Property Name="MLD_UsuarioDescarga" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MLD_EstadoEnManifiesto" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MLD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MLD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ManifiestoLogInvDetallHist_LOI">
+    <Key>
+      <PropertyRef Name="MLD_IdManifiestoLogInvDetalle" />
+    </Key>
+    <Property Name="MLD_IdManifiestoLogInvDetalle" Type="bigint" Nullable="false" />
+    <Property Name="MLD_IdManifiesto" Type="bigint" Nullable="false" />
+    <Property Name="MLD_IdAdminision" Type="bigint" Nullable="false" />
+    <Property Name="MLD_NumeroAdmision" Type="bigint" Nullable="false" />
+    <Property Name="MLD_IdServicio" Type="int" Nullable="false" />
+    <Property Name="MLD_EstaDescargada" Type="bit" Nullable="false" />
+    <Property Name="MLD_FueManifestadaEnOrigen" Type="bit" Nullable="false" />
+    <Property Name="MLD_FechaDescarga" Type="datetime" Nullable="false" />
+    <Property Name="MLD_UsuarioDescarga" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MLD_EstadoEnManifiesto" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MLD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MLD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MLD_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="MLD_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MLD_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ManifiestoLogInvHist_LOI">
+    <Key>
+      <PropertyRef Name="MAN_IdManifiestoLogInv" />
+    </Key>
+    <Property Name="MAN_IdManifiestoLogInv" Type="bigint" Nullable="false" />
+    <Property Name="MAN_IdTipoManifiesto" Type="smallint" Nullable="false" />
+    <Property Name="MAN_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="MAN_NombreLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAN_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="MAN_NombreLocalidadDestino" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAN_IdAgenciaOrigen" Type="bigint" Nullable="false" />
+    <Property Name="MAN_NombreAgenciaOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="MAN_IdAgenciaDestino" Type="bigint" Nullable="false" />
+    <Property Name="MAN_NombreAgenciaDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="MAN_IdGuiaInterna" Type="bigint" />
+    <Property Name="MAN_NumeroGuiaInterna" Type="bigint" />
+    <Property Name="MAN_IdAreaInternaEmpresa" Type="smallint" Nullable="false" />
+    <Property Name="MAN_EsManifiestoAutomatico" Type="bit" Nullable="false" />
+    <Property Name="MAN_FechaInicioDescarga" Type="datetime" Nullable="false" />
+    <Property Name="MAN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAN_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MAN_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="MAN_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MAN_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ManifiestoLogisticaInversa_LOI">
+    <Key>
+      <PropertyRef Name="MAN_IdManifiestoLogInv" />
+    </Key>
+    <Property Name="MAN_IdManifiestoLogInv" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAN_IdTipoManifiesto" Type="smallint" Nullable="false" />
+    <Property Name="MAN_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="MAN_NombreLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAN_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="MAN_NombreLocalidadDestino" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAN_IdAgenciaOrigen" Type="bigint" Nullable="false" />
+    <Property Name="MAN_NombreAgenciaOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="MAN_IdAgenciaDestino" Type="bigint" Nullable="false" />
+    <Property Name="MAN_NombreAgenciaDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="MAN_IdGuiaInterna" Type="bigint" />
+    <Property Name="MAN_NumeroGuiaInterna" Type="bigint" />
+    <Property Name="MAN_EsManifiestoAutomatico" Type="bit" Nullable="false" />
+    <Property Name="MAN_FechaInicioDescarga" Type="datetime" Nullable="false" />
+    <Property Name="MAN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAN_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MotivoBorraGtionGuiaTeleme_LOI">
+    <Key>
+      <PropertyRef Name="MBT_IdMotivoBorrado" />
+    </Key>
+    <Property Name="MBT_IdMotivoBorrado" Type="smallint" Nullable="false" />
+    <Property Name="MBT_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MBT_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MBT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MBT_CreadoPor" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PlanillaCertificacionDetalle_LOI">
+    <Key>
+      <PropertyRef Name="PCD_IdPlanillaCertificaciones" />
+    </Key>
+    <Property Name="PCD_IdPlanillaCertificaciones" Type="bigint" Nullable="false" />
+    <Property Name="PCD_TipoPlanilla" Type="nchar" Nullable="false" MaxLength="3" />
+    <Property Name="PCD_IdDestinatario" Type="bigint" Nullable="false" />
+    <Property Name="PCD_Nombre" Type="nchar" Nullable="false" MaxLength="250" />
+    <Property Name="PCD_Direccion" Type="nchar" Nullable="false" MaxLength="250" />
+    <Property Name="PCD_Telefono" Type="nchar" MaxLength="20" />
+    <Property Name="PCD_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PCD_Consolidada" Type="bit" Nullable="false" />
+    <Property Name="PCD_Devolucion" Type="bit" Nullable="false" />
+    <Property Name="PCD_Cerrada" Type="bit" Nullable="false" />
+    <Property Name="PCD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PCD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PCD_FechaCierre" Type="datetime" Nullable="false" />
+    <Property Name="PCD_CerradoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PlanillaCertificaciones_LOI">
+    <Key>
+      <PropertyRef Name="PLC_IdPlanillaCertificaciones" />
+    </Key>
+    <Property Name="PLC_IdPlanillaCertificaciones" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PLC_IdRegionalAdmPlanilla" Type="bigint" Nullable="false" />
+    <Property Name="PLC_IdCentroServiciosPlanilla" Type="bigint" Nullable="false" />
+    <Property Name="PLC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PLC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PLC_IdAdmisionMensajeria" Type="bigint" />
+    <Property Name="PLC_NumeroGuia" Type="bigint" />
+    <Property Name="PLC_FechaDescargue" Type="datetime" Nullable="false" />
+    <Property Name="PLC_EstaDescargada" Type="bit" Nullable="false" />
+    <Property Name="PLC_DescargadaPor" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PlanillaCertificacionesGuia_LOI">
+    <Key>
+      <PropertyRef Name="PLG_IdPlanillaCertificacionesGuia" />
+    </Key>
+    <Property Name="PLG_IdPlanillaCertificacionesGuia" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PLG_IdPlanillaCertificaciones" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="PLG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdAdminisionGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="PLG_NumeroGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="PLG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PLG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PlanillaRelacionGuia_LOI">
+    <Key>
+      <PropertyRef Name="PIG_NumeroPlanilla" />
+    </Key>
+    <Property Name="PIG_NumeroPlanilla" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PIG_IdTipoImpreso" Type="smallint" Nullable="false" />
+    <Property Name="PIG_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="PIG_NombreCentroSvc" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PIG_TipoCliente" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PIG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PIG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PIG_NitCliente" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PIG_EsConsolidado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlanillaRelacionGuiaGuia_LOI">
+    <Key>
+      <PropertyRef Name="PGG_IdPlanillaRelacionGuiaGuia" />
+    </Key>
+    <Property Name="PGG_IdPlanillaRelacionGuiaGuia" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PGG_NumeroPlanilla" Type="bigint" Nullable="false" />
+    <Property Name="PGG_IdAdminisionAnterior" Type="bigint" Nullable="false" />
+    <Property Name="PGG_NumeroGuiaAnterior" Type="bigint" Nullable="false" />
+    <Property Name="PGG_IdAdmisionNueva" Type="bigint" Nullable="false" />
+    <Property Name="PGG_NumeroGuiaNueva" Type="bigint" Nullable="false" />
+    <Property Name="PGG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PGG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RecibidoGuia_LOI">
+    <Key>
+      <PropertyRef Name="REG_IdAdminisionMensajeria" />
+    </Key>
+    <Property Name="REG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="REG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="REG_RecibidoPor" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REG_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REG_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REG_OtrosDatos" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REG_FechaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="REG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ResultadoTelemercadeo_LOI">
+    <Key>
+      <PropertyRef Name="RTM_IdResultadoTelemercadeo" />
+    </Key>
+    <Property Name="RTM_IdResultadoTelemercadeo" Type="smallint" Nullable="false" />
+    <Property Name="RTM_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RTM_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="RTM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RTM_CreadoPor" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RTM_NombreAssembly" Type="varchar" MaxLength="100" />
+    <Property Name="RTM_Namespace" Type="varchar" MaxLength="100" />
+    <Property Name="RTM_NombreClase" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TipoEvidenciaDevolucion_MEN">
+    <Key>
+      <PropertyRef Name="TIV_IdTipoEvidenciaDevolucion" />
+    </Key>
+    <Property Name="TIV_IdTipoEvidenciaDevolucion" Type="smallint" Nullable="false" />
+    <Property Name="TIV_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TIV_IdSuministro" Type="int" Nullable="false" />
+    <Property Name="TIV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIV_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoManifiestoLogInv_LOI">
+    <Key>
+      <PropertyRef Name="TIM_IdTipoManifiesto" />
+    </Key>
+    <Property Name="TIM_IdTipoManifiesto" Type="smallint" Nullable="false" />
+    <Property Name="TIM_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TIM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.Localidades_VPAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Localidades_VPAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="LOC_IdTipo" />
+      <PropertyRef Name="TLO_Descripcion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_NombreCorto" />
+      <PropertyRef Name="LOC_CodigoPostal" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="TLO_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoPrimero" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoPrimeroDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombrePrimero" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoPrimero" Type="varchar" MaxLength="4" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoSegundo" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoSegundoDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombreSegundo" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoSegundo" Type="varchar" MaxLength="4" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoTercero" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoTerceroDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombreTercero" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoTercero" Type="varchar" MaxLength="4" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="110" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ManifiestoDetalleLogInv_VLOI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ManifiestoDetalleLogInv_VLOI">
+    <Key>
+      <PropertyRef Name="MAN_IdManifiestoLogInv" />
+      <PropertyRef Name="MAN_IdTipoManifiesto" />
+      <PropertyRef Name="MAN_IdLocalidadOrigen" />
+      <PropertyRef Name="MAN_IdLocalidadDestino" />
+      <PropertyRef Name="MAN_IdAgenciaOrigen" />
+      <PropertyRef Name="MAN_IdAgenciaDestino" />
+      <PropertyRef Name="MAN_EsManifiestoAutomatico" />
+      <PropertyRef Name="MLD_IdManifiestoLogInvDetalle" />
+      <PropertyRef Name="MLD_IdManifiesto" />
+      <PropertyRef Name="MLD_IdAdminision" />
+      <PropertyRef Name="MLD_NumeroAdmision" />
+      <PropertyRef Name="MLD_FechaGrabacion" />
+      <PropertyRef Name="MLD_FechaDescarga" />
+      <PropertyRef Name="MLD_UsuarioDescarga" />
+      <PropertyRef Name="MAN_FechaGrabacion" />
+      <PropertyRef Name="MAN_FechaInicioDescarga" />
+      <PropertyRef Name="MLD_IdServicio" />
+      <PropertyRef Name="MLD_EstaDescargada" />
+      <PropertyRef Name="MLD_FueManifestadaEnOrigen" />
+      <PropertyRef Name="MLD_EstadoEnManifiesto" />
+      <PropertyRef Name="MAN_IdGuiaInterna" />
+      <PropertyRef Name="MAN_NumeroGuiaInterna" />
+    </Key>
+    <Property Name="MAN_IdManifiestoLogInv" Type="bigint" Nullable="false" />
+    <Property Name="MAN_IdTipoManifiesto" Type="smallint" Nullable="false" />
+    <Property Name="MAN_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="MAN_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="MAN_IdAgenciaOrigen" Type="bigint" Nullable="false" />
+    <Property Name="MAN_IdAgenciaDestino" Type="bigint" Nullable="false" />
+    <Property Name="MAN_IdGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="MAN_NumeroGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="MAN_EsManifiestoAutomatico" Type="bit" Nullable="false" />
+    <Property Name="MLD_IdManifiestoLogInvDetalle" Type="bigint" Nullable="false" />
+    <Property Name="MLD_IdManifiesto" Type="bigint" Nullable="false" />
+    <Property Name="MLD_IdAdminision" Type="bigint" Nullable="false" />
+    <Property Name="MLD_NumeroAdmision" Type="bigint" Nullable="false" />
+    <Property Name="MLD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MLD_FechaDescarga" Type="datetime" Nullable="false" />
+    <Property Name="MLD_UsuarioDescarga" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MAN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAN_FechaInicioDescarga" Type="datetime" Nullable="false" />
+    <Property Name="MLD_IdServicio" Type="int" Nullable="false" />
+    <Property Name="MLD_EstaDescargada" Type="bit" Nullable="false" />
+    <Property Name="MLD_FueManifestadaEnOrigen" Type="bit" Nullable="false" />
+    <Property Name="MLD_EstadoEnManifiesto" Type="char" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.PlanillaCertificaciones_VLOI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PlanillaCertificaciones_VLOI">
+    <Key>
+      <PropertyRef Name="PLC_IdPlanillaCertificaciones" />
+      <PropertyRef Name="PLC_IdRegionalAdmPlanilla" />
+      <PropertyRef Name="PLC_IdCentroServiciosPlanilla" />
+      <PropertyRef Name="PLC_FechaGrabacion" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="IdAdmision" />
+      <PropertyRef Name="NumGuia" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="PLC_EstaDescargada" />
+      <PropertyRef Name="PLC_FechaDescargue" />
+      <PropertyRef Name="PLC_CreadoPor" />
+      <PropertyRef Name="PCD_TipoPlanilla" />
+      <PropertyRef Name="PCD_IdDestinatario" />
+      <PropertyRef Name="PCD_Nombre" />
+      <PropertyRef Name="PCD_Direccion" />
+      <PropertyRef Name="PCD_IdLocalidad" />
+      <PropertyRef Name="PCD_Consolidada" />
+      <PropertyRef Name="PCD_Devolucion" />
+      <PropertyRef Name="PCD_FechaGrabacion" />
+      <PropertyRef Name="PCD_CreadoPor" />
+      <PropertyRef Name="LOC_NombreDestino" />
+      <PropertyRef Name="PCD_Cerrada" />
+      <PropertyRef Name="PCD_FechaCierre" />
+      <PropertyRef Name="PCD_CerradoPor" />
+    </Key>
+    <Property Name="PLC_IdPlanillaCertificaciones" Type="bigint" Nullable="false" />
+    <Property Name="PLC_IdRegionalAdmPlanilla" Type="bigint" Nullable="false" />
+    <Property Name="PLC_IdCentroServiciosPlanilla" Type="bigint" Nullable="false" />
+    <Property Name="PLC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="IdAdmision" Type="bigint" Nullable="false" />
+    <Property Name="NumGuia" Type="bigint" Nullable="false" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PLC_IdAdmisionMensajeria" Type="bigint" />
+    <Property Name="PLC_NumeroGuia" Type="bigint" />
+    <Property Name="PLC_EstaDescargada" Type="bit" Nullable="false" />
+    <Property Name="PLC_FechaDescargue" Type="datetime" Nullable="false" />
+    <Property Name="PLC_DescargadaPor" Type="varchar" MaxLength="20" />
+    <Property Name="PLC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PCD_TipoPlanilla" Type="nchar" Nullable="false" MaxLength="3" />
+    <Property Name="PCD_IdDestinatario" Type="bigint" Nullable="false" />
+    <Property Name="PCD_Nombre" Type="nchar" Nullable="false" MaxLength="250" />
+    <Property Name="PCD_Direccion" Type="nchar" Nullable="false" MaxLength="250" />
+    <Property Name="PCD_Telefono" Type="nchar" MaxLength="20" />
+    <Property Name="PCD_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PCD_Consolidada" Type="bit" Nullable="false" />
+    <Property Name="PCD_Devolucion" Type="bit" Nullable="false" />
+    <Property Name="PCD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PCD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LOC_NombreDestino" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PCD_Cerrada" Type="bit" Nullable="false" />
+    <Property Name="PCD_FechaCierre" Type="datetime" Nullable="false" />
+    <Property Name="PCD_CerradoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NomClienteCredito" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.PlanillaCertificacionesGuia_VLOI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PlanillaCertificacionesGuia_VLOI">
+    <Key>
+      <PropertyRef Name="PLG_IdPlanillaCertificacionesGuia" />
+      <PropertyRef Name="PLG_IdPlanillaCertificaciones" />
+      <PropertyRef Name="PLG_IdAdminisionMensajeria" />
+      <PropertyRef Name="PLG_NumeroGuia" />
+      <PropertyRef Name="PLG_IdAdminisionGuiaInterna" />
+      <PropertyRef Name="PLG_NumeroGuiaInterna" />
+      <PropertyRef Name="PLG_FechaGrabacion" />
+      <PropertyRef Name="PLG_CreadoPor" />
+      <PropertyRef Name="ADM_IdServicio" />
+      <PropertyRef Name="ADM_NombreServicio" />
+      <PropertyRef Name="ADM_FechaGrabacion" />
+      <PropertyRef Name="ADM_NombreCentroServicioOrigen" />
+      <PropertyRef Name="ADM_IdCentroServicioOrigen" />
+      <PropertyRef Name="ADM_IdCentroServicioDestino" />
+      <PropertyRef Name="ADM_NombreCentroServicioDestino" />
+      <PropertyRef Name="ADM_IdCiudadOrigen" />
+      <PropertyRef Name="ADM_NombreCiudadOrigen" />
+      <PropertyRef Name="ADM_IdCiudadDestino" />
+      <PropertyRef Name="ADM_NombreCiudadDestino" />
+      <PropertyRef Name="ADM_EstaEntregada" />
+      <PropertyRef Name="PLG_IdCentroServicioDestino" />
+      <PropertyRef Name="AGI_IdAdmisionMensajeria" />
+      <PropertyRef Name="AGI_IdGestionOrigen" />
+      <PropertyRef Name="AGI_DescripcionGestionOrig" />
+      <PropertyRef Name="AGI_IdGestionDestino" />
+      <PropertyRef Name="AGI_DescripcionGestionDest" />
+      <PropertyRef Name="AGI_NombreRemitente" />
+      <PropertyRef Name="AGI_TelefonoRemitente" />
+      <PropertyRef Name="AGI_DireccionRemitente" />
+      <PropertyRef Name="AGI_NombreDestinatario" />
+      <PropertyRef Name="AGI_TelefonoDestinatario" />
+      <PropertyRef Name="AGI_DireccionDestinatario" />
+      <PropertyRef Name="ADM_IdCentroServicioOrigenInterna" />
+      <PropertyRef Name="ADM_NombreCentroServicioOrigenInterna" />
+      <PropertyRef Name="ADM_IdCentroServicioDestinoInterna" />
+      <PropertyRef Name="ADM_NombreCentroServicioDestinoInterna" />
+      <PropertyRef Name="ADM_NombreCiudadOrigenInterna" />
+      <PropertyRef Name="ADM_IdCiudadOrigenInterna" />
+      <PropertyRef Name="ADM_IdCiudadDestinoInterna" />
+      <PropertyRef Name="ADM_NombreCiudadDestinoInterna" />
+    </Key>
+    <Property Name="PLG_IdPlanillaCertificacionesGuia" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdPlanillaCertificaciones" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="PLG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdAdminisionGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="PLG_NumeroGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="PLG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PLG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ADM_IdServicio" Type="int" Nullable="false" />
+    <Property Name="ADM_NombreServicio" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ADM_NombreCentroServicioOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdCentroServicioOrigen" Type="bigint" Nullable="false" />
+    <Property Name="ADM_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="ADM_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdCiudadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_NombreCiudadOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_NombreCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_EstaEntregada" Type="bit" Nullable="false" />
+    <Property Name="PLG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="AGI_IdAdmisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="AGI_IdGestionOrigen" Type="bigint" Nullable="false" />
+    <Property Name="AGI_DescripcionGestionOrig" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="AGI_IdGestionDestino" Type="bigint" Nullable="false" />
+    <Property Name="AGI_DescripcionGestionDest" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="AGI_NombreRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="AGI_TelefonoRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="AGI_DireccionRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="AGI_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="AGI_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="AGI_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="AGI_Contenido" Type="varchar" MaxLength="250" />
+    <Property Name="ADM_IdCentroServicioOrigenInterna" Type="bigint" Nullable="false" />
+    <Property Name="ADM_NombreCentroServicioOrigenInterna" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdCentroServicioDestinoInterna" Type="bigint" Nullable="false" />
+    <Property Name="ADM_NombreCentroServicioDestinoInterna" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_NombreCiudadOrigenInterna" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdCiudadOrigenInterna" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_IdCiudadDestinoInterna" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_NombreCiudadDestinoInterna" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <Association Name="FK_ManifiestoLogInvGuia_LOI_ManifiestoLogisticaInversa_LOI">
+    <End Role="ManifiestoLogisticaInversa_LOI" Type="ModeloLogisticaInversaNS.Store.ManifiestoLogisticaInversa_LOI" Multiplicity="1" />
+    <End Role="ManifiestoLogInvDetalle_LOI" Type="ModeloLogisticaInversaNS.Store.ManifiestoLogInvDetalle_LOI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ManifiestoLogisticaInversa_LOI">
+        <PropertyRef Name="MAN_IdManifiestoLogInv" />
+      </Principal>
+      <Dependent Role="ManifiestoLogInvDetalle_LOI">
+        <PropertyRef Name="MLD_IdManifiesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ManifiestoLogisticaInversa_LOI_TipoManifiestoLogInv_LOI">
+    <End Role="TipoManifiestoLogInv_LOI" Type="ModeloLogisticaInversaNS.Store.TipoManifiestoLogInv_LOI" Multiplicity="1" />
+    <End Role="ManifiestoLogisticaInversa_LOI" Type="ModeloLogisticaInversaNS.Store.ManifiestoLogisticaInversa_LOI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoManifiestoLogInv_LOI">
+        <PropertyRef Name="TIM_IdTipoManifiesto" />
+      </Principal>
+      <Dependent Role="ManifiestoLogisticaInversa_LOI">
+        <PropertyRef Name="MAN_IdTipoManifiesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanillaCertificacionDetalle_LOI_PlanillaCertificaciones_LOI">
+    <End Role="PlanillaCertificaciones_LOI" Type="ModeloLogisticaInversaNS.Store.PlanillaCertificaciones_LOI" Multiplicity="1" />
+    <End Role="PlanillaCertificacionDetalle_LOI" Type="ModeloLogisticaInversaNS.Store.PlanillaCertificacionDetalle_LOI" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PlanillaCertificaciones_LOI">
+        <PropertyRef Name="PLC_IdPlanillaCertificaciones" />
+      </Principal>
+      <Dependent Role="PlanillaCertificacionDetalle_LOI">
+        <PropertyRef Name="PCD_IdPlanillaCertificaciones" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PlanillaImpresGuiaInteGuia_LOI_PlanillaImpresGuiaInterna_LOI">
+    <End Role="PlanillaRelacionGuia_LOI" Type="ModeloLogisticaInversaNS.Store.PlanillaRelacionGuia_LOI" Multiplicity="1" />
+    <End Role="PlanillaRelacionGuiaGuia_LOI" Type="ModeloLogisticaInversaNS.Store.PlanillaRelacionGuiaGuia_LOI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanillaRelacionGuia_LOI">
+        <PropertyRef Name="PIG_NumeroPlanilla" />
+      </Principal>
+      <Dependent Role="PlanillaRelacionGuiaGuia_LOI">
+        <PropertyRef Name="PGG_NumeroPlanilla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paActualizaEntregado_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="FechaEntrega" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paActualizarArchivoGuia_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ARG_Caja" Type="bigint" Mode="In" />
+    <Parameter Name="ARG_Lote" Type="int" Mode="In" />
+    <Parameter Name="ARG_Posicion" Type="int" Mode="In" />
+    <Parameter Name="ARG_DatosEdicion" Type="char" Mode="In" />
+    <Parameter Name="ARG_DatosEntrega" Type="char" Mode="In" />
+    <Parameter Name="ARG_EstadoFisicoGuia" Type="char" Mode="In" />
+    <Parameter Name="ARG_FechaEntrega" Type="datetime" Mode="In" />
+    <Parameter Name="ARG_UsuarioArchiva" Type="varchar" Mode="In" />
+    <Parameter Name="ARG_IdCentroLogArchiva" Type="bigint" Mode="In" />
+    <Parameter Name="ARG_NumeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paActualizarEstadoGuiaMan_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idGuiaManifiesto" Type="bigint" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+    <Parameter Name="estaDescargada" Type="bit" Mode="In" />
+    <Parameter Name="fechaDescarga" Type="datetime" Mode="In" />
+    <Parameter Name="usuarioDescarga" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paActualizarFecDescMani_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idManifiesto" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paCrearGestionGuia_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GGT_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="GGT_NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="GGT_IdResultadoTelemercadeo" Type="smallint" Mode="In" />
+    <Parameter Name="GGT_TelefonoMarcado" Type="varchar" Mode="In" />
+    <Parameter Name="GGT_PersonaContesta" Type="varchar" Mode="In" />
+    <Parameter Name="GGT_IdParentestoConDestinatari" Type="smallint" Mode="In" />
+    <Parameter Name="GGT_NuevoTelefono" Type="varchar" Mode="In" />
+    <Parameter Name="GGT_NuevoContaco" Type="varchar" Mode="In" />
+    <Parameter Name="GGT_NuevaDireccionEnvio" Type="varchar" Mode="In" />
+    <Parameter Name="GGT_Observacion" Type="varchar" Mode="In" />
+    <Parameter Name="GGT_IdEstadoGuiaLog" Type="bigint" Mode="In" />
+    <Parameter Name="GGT_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="GGT_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PaCrearGuiaPlanillaGuia_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PGG_NumeroPlanilla" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_IdAdminisionAnterior" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_NumeroGuiaAnterior" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_IdAdmisionNueva" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_NumeroGuiaNueva" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="PGG_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PaCrearGuiaPlanillaGuiaInterna_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PGG_NumeroPlanilla" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_IdGuiaInterna" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_NumeroGuiaInterna" Type="bigint" Mode="In" />
+    <Parameter Name="PGG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="PGG_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PaCrearPlanilla_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PIG_IdTipoImpreso" Type="smallint" Mode="In" />
+    <Parameter Name="PIG_IdCentroServicios" Type="bigint" Mode="In" />
+    <Parameter Name="PIG_NombreCentroSvc" Type="varchar" Mode="In" />
+    <Parameter Name="PIG_TipoCliente" Type="char" Mode="In" />
+    <Parameter Name="PIG_NitCliente" Type="varchar" Mode="In" />
+    <Parameter Name="PIG_EsConsolidado" Type="bit" Mode="In" />
+    <Parameter Name="PIG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="PIG_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEliminarGestionGuia_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdMotivo" Type="smallint" Mode="In" />
+    <Parameter Name="IdGestion" Type="bigint" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Accion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEliminarGuiaPlanillaGuia_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGuiaPlanillaGuia" Type="bigint" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Accion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEliminarManifiesto_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdManifiesto" Type="bigint" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Accion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarGuiaManifiesto_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdManifiesto" Type="bigint" Mode="In" />
+    <Parameter Name="IdAdminision" Type="bigint" Mode="In" />
+    <Parameter Name="NumeroAdmision" Type="bigint" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+    <Parameter Name="EstaDescargada" Type="bit" Mode="In" />
+    <Parameter Name="FueManifestadaEnOrigen" Type="bit" Mode="In" />
+    <Parameter Name="FechaDescarga" Type="datetime" Mode="In" />
+    <Parameter Name="UsuarioDescarga" Type="varchar" Mode="In" />
+    <Parameter Name="EstadoEnManifiesto" Type="char" Mode="In" />
+    <Parameter Name="FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarManifiesto_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdTipoManifiesto" Type="smallint" Mode="In" />
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="NombreLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="NombreLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdAgenciaOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="NombreAgenciaOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdAgenciaDestino" Type="bigint" Mode="In" />
+    <Parameter Name="NombreAgenciaDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdGuiaInterna" Type="bigint" Mode="In" />
+    <Parameter Name="NumeroGuiaInterna" Type="bigint" Mode="In" />
+    <Parameter Name="EsManifiestoAutomatico" Type="bit" Mode="In" />
+    <Parameter Name="FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="FechaDescargue" Type="datetime" Mode="In" />
+    <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerArchEviDevolucion_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEstadoGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGestionesGuia_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="estadoGuia" Type="smallint" Mode="In" />
+    <Parameter Name="localidad" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGestionesGuiasCOL_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="estadoGuia" Type="smallint" Mode="In" />
+    <Parameter Name="idcentroServicio" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGestionesTrazaGuia_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idTrazaGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiaCustodia_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="estadoGuia" Type="smallint" Mode="In" />
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="localidad" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiaManifDescarga_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idManifiesto" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiasEstado_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="estadoGuia" Type="smallint" Mode="In" />
+    <Parameter Name="localidad" Type="varchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiasIntCertificaciones_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="planillas" Type="varchar" Mode="In" />
+    <Parameter Name="idCol" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiasIntPlanCert_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="planillas" Type="varchar" Mode="In" />
+    <Parameter Name="idCol" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiasPlanilla_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroPlanilla" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiasSupervision_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="estadoGuia" Type="smallint" Mode="In" />
+    <Parameter Name="localidad" Type="varchar" Mode="In" />
+    <Parameter Name="servicio" Type="int" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paObtenerManifiestos_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="AgenciaOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="AgenciaDestino" Type="bigint" Mode="In" />
+    <Parameter Name="IdManifiesto" Type="bigint" Mode="In" />
+    <Parameter Name="GuiaInterna" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paObtenerNotificacionesNoPlan_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCentroLogistico" Type="bigint" Mode="In" />
+    <Parameter Name="idSucursal" Type="int" Mode="In" />
+    <Parameter Name="idFormaPago" Type="int" Mode="In" />
+    <Parameter Name="nitCliente" Type="varchar" Mode="In" />
+    <Parameter Name="fechaInicial" Type="date" Mode="In" />
+    <Parameter Name="fechaFinal" Type="date" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPlanillasRelacion_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="numeroPlanilla" Type="bigint" Mode="In" />
+    <Parameter Name="centroServicio" Type="bigint" Mode="In" />
+    <Parameter Name="tipoCliente" Type="char" Mode="In" />
+    <Parameter Name="fechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="fechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="tipoPlanilla" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="paValidarFechaArchivo_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fechaEntrega" Type="datetime" Mode="In" />
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+</Schema>

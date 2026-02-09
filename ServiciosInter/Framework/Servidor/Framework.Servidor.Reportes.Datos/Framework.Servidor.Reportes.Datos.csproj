@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58CEEAF9-1741-49AB-AF01-DAB36D33E227}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.Servidor.Reportes.Datos</RootNamespace>
+    <AssemblyName>Framework.Servidor.Reportes.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelo\AdministradorReportes_REP.cs">
+      <DependentUpon>ModeloReportes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloReportes.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloReportes.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloReportes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloReportes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloReportes.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloReportes.Views.cs" />
+    <Compile Include="Modelo\ParametrosFramework.cs">
+      <DependentUpon>ModeloReportes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ReportesRol_REP.cs">
+      <DependentUpon>ModeloReportes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Rol_SEG.cs">
+      <DependentUpon>ModeloReportes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UsuarioRol_SEG.cs">
+      <DependentUpon>ModeloReportes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Usuario_SEG.cs">
+      <DependentUpon>ModeloReportes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="REPRepositorio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloReportes.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloReportes.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Framework.Servidor.Reportes.Datos.nuspec" />
+    <None Include="Modelo\ModeloReportes.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloReportes.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloReportes.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloReportes.msl" />
+    <EmbeddedResource Include="Modelo\ModeloReportes.ssdl" />
+    <None Include="Modelo\ModeloReportes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloReportes.cs</LastGenOutput>
+    </None>
+    <None Include="package.builder.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloReportes.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloReportes.csdl" "/inmsl:$(TargetDir)Modelo/ModeloReportes.msl" "/outviews:$(ProjectDir)Modelo/ModeloReportes.Views.cs"
+XCOPY  "$(TargetDir)Modelo/ModeloReportes.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloReportes.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloReportes.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\..\..\packages\NuGet.Package.Builder.1.0.10\build\NuGet.Package.Builder.targets" Condition="Exists('..\..\..\packages\NuGet.Package.Builder.1.0.10\build\NuGet.Package.Builder.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\NuGet.Package.Builder.1.0.10\build\NuGet.Package.Builder.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\NuGet.Package.Builder.1.0.10\build\NuGet.Package.Builder.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

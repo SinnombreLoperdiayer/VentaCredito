@@ -1,0 +1,3755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CodigoMinisterio" xml:space="preserve">
+    <value>Código Ministerio</value>
+  </data>
+  <data name="Descripcion" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="IdTipoEmpaque" xml:space="preserve">
+    <value>Identificador Tipo de Empaque</value>
+  </data>
+  <data name="Nombre" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="PesoMaximo" xml:space="preserve">
+    <value>Peso Máximo</value>
+  </data>
+  <data name="PesoMinimo" xml:space="preserve">
+    <value>Peso Mínimo</value>
+  </data>
+  <data name="TasaCambio" xml:space="preserve">
+    <value>Tasa de Cambio</value>
+  </data>
+  <data name="TooltipCodMinTipoEnvio" xml:space="preserve">
+    <value>Código de ministerio del tipo de envío.</value>
+  </data>
+  <data name="TooltipDescripcionMoneda" xml:space="preserve">
+    <value>Descripción de la moneda.</value>
+  </data>
+  <data name="TooltipDescripcionTipoEnvio" xml:space="preserve">
+    <value>Descripción del tipo de envío.</value>
+  </data>
+  <data name="TooltipDescTipEmpaque" xml:space="preserve">
+    <value>Descripción tipo de empaque.</value>
+  </data>
+  <data name="TooltipNombreMoneda" xml:space="preserve">
+    <value>Nombre de la moneda.</value>
+  </data>
+  <data name="TooltipNombreTipoEnvio" xml:space="preserve">
+    <value>Nombre Tipo de Envío.</value>
+  </data>
+  <data name="TooltipPesoMaximoTipoEnvio" xml:space="preserve">
+    <value>Peso máximo del tipo de envío.</value>
+  </data>
+  <data name="TooltipPesoMinimoTipoEnvio" xml:space="preserve">
+    <value>Peso mínimo del tipo de envío.</value>
+  </data>
+  <data name="TooltipTasaCambioMoneda" xml:space="preserve">
+    <value>Tasa de cambio de la moneda.</value>
+  </data>
+  <data name="IdTipoTramite" xml:space="preserve">
+    <value>Identificador Tipo de Trámite</value>
+  </data>
+  <data name="TooltipDescTramite" xml:space="preserve">
+    <value>Descripción tipo de trámite.</value>
+  </data>
+  <data name="TooltipServicio" xml:space="preserve">
+    <value>Servicio al que pertenece el tipo de valor adicional.</value>
+  </data>
+  <data name="TooltipValorAdicional" xml:space="preserve">
+    <value>Descripción tipo de valor adicional</value>
+  </data>
+  <data name="IdTipoTrayecto" xml:space="preserve">
+    <value>Identificador Tipo de Trayecto</value>
+  </data>
+  <data name="TooltipIdTipoTrayecto" xml:space="preserve">
+    <value>Identificador Tipo de Trayecto.</value>
+  </data>
+  <data name="TooltipDesTipTrayecto" xml:space="preserve">
+    <value>Descripción tipo de trayecto.</value>
+  </data>
+  <data name="IdTipoSubTrayecto" xml:space="preserve">
+    <value>Identificador Tipo de Subtrayecto</value>
+  </data>
+  <data name="TooltipDesSubTrayecto" xml:space="preserve">
+    <value>Descripción del tipo de Subtrayecto.</value>
+  </data>
+  <data name="TooltipIdSubTrayecto" xml:space="preserve">
+    <value>Identificador Tipo de Subtrayecto</value>
+  </data>
+  <data name="IdTipoComisionFija" xml:space="preserve">
+    <value>Id tipo de comisión fija</value>
+  </data>
+  <data name="TooltipDescTipoComisionFija" xml:space="preserve">
+    <value>Descripción del tipo de comisión fija.</value>
+  </data>
+  <data name="IdTipoDescuento" xml:space="preserve">
+    <value>Id tipo de descuento</value>
+  </data>
+  <data name="TooltipDescTipoDescuento" xml:space="preserve">
+    <value>Descripción del tipo de descuento</value>
+  </data>
+  <data name="IdTipoActEconomica" xml:space="preserve">
+    <value>Id tipo de actividad económica</value>
+  </data>
+  <data name="TooltipDescTipoActEconomica" xml:space="preserve">
+    <value>Descripción del tipo de actividad económica.</value>
+  </data>
+  <data name="IdBanco" xml:space="preserve">
+    <value>Id Banco</value>
+  </data>
+  <data name="TooltipDescBanco" xml:space="preserve">
+    <value>Descripción del Banco.</value>
+  </data>
+  <data name="IdDocuCentrosServicio" xml:space="preserve">
+    <value>Id Documento Centro Servicio</value>
+  </data>
+  <data name="ToolTipDocuCentrosServicio" xml:space="preserve">
+    <value>Descripción del documento de referencia para los centros de servicio.</value>
+  </data>
+  <data name="Estado" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="TooltipEstado" xml:space="preserve">
+    <value>Indica el estado del registro</value>
+  </data>
+  <data name="FechaFin" xml:space="preserve">
+    <value>Fecha Final</value>
+  </data>
+  <data name="FechaInicio" xml:space="preserve">
+    <value>Fecha de Inicio</value>
+  </data>
+  <data name="Moneda" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="TarifaPlena" xml:space="preserve">
+    <value>Tarifa Plena</value>
+  </data>
+  <data name="TooltipEstListaPrecio" xml:space="preserve">
+    <value>Estado de la lista de precios.</value>
+  </data>
+  <data name="TooltipFechaFin" xml:space="preserve">
+    <value>Fecha final de la lista de precios.</value>
+  </data>
+  <data name="TooltipFechaInicio" xml:space="preserve">
+    <value>Fecha de Inicio de la lista de precios.</value>
+  </data>
+  <data name="TooltipNomListaPrecio" xml:space="preserve">
+    <value>Nombre de la lista de precios.</value>
+  </data>
+  <data name="TooltipTarifaPlena" xml:space="preserve">
+    <value>Indica si la lista de precios es de tarifa plena o no.</value>
+  </data>
+  <data name="NombreListaPrecio" xml:space="preserve">
+    <value>Lista de Precio</value>
+  </data>
+  <data name="IdUnidadNegocio" xml:space="preserve">
+    <value>Unidad de Negocio</value>
+  </data>
+  <data name="PrimaSeguro" xml:space="preserve">
+    <value>Sobre Flete</value>
+  </data>
+  <data name="ValorMinimoDeclarado" xml:space="preserve">
+    <value>Valor Mínimo Declarado</value>
+  </data>
+  <data name="TooltipPrimaSeguro" xml:space="preserve">
+    <value>Valor de la prima del seguro.</value>
+  </data>
+  <data name="TooltipServListaPrecio" xml:space="preserve">
+    <value>Servicio de la lista de precios.</value>
+  </data>
+  <data name="TooltipUniNegocio" xml:space="preserve">
+    <value>Unidad de negocio.</value>
+  </data>
+  <data name="TooltipValMinDec" xml:space="preserve">
+    <value>Valor mínimo declarado.</value>
+  </data>
+  <data name="Activo" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="IdExterno" xml:space="preserve">
+    <value>Id Externo</value>
+  </data>
+  <data name="IdSuministro" xml:space="preserve">
+    <value>Id Suministro</value>
+  </data>
+  <data name="ManejaInventario" xml:space="preserve">
+    <value>Maneja Inventario</value>
+  </data>
+  <data name="StockMinimo" xml:space="preserve">
+    <value>Stock Mínimo Referencia</value>
+  </data>
+  <data name="ToolTipActivo" xml:space="preserve">
+    <value>Indica si un registro esta activo o inactivo</value>
+  </data>
+  <data name="ToolTipDescSuministros" xml:space="preserve">
+    <value>Descripción del suministro.</value>
+  </data>
+  <data name="ToolTipIdExterno" xml:space="preserve">
+    <value>Indica el id externo</value>
+  </data>
+  <data name="ToolTipManejaInventario" xml:space="preserve">
+    <value>Indica si el suministro maneja inventario.</value>
+  </data>
+  <data name="ToolTipStockMinimo" xml:space="preserve">
+    <value>Indica la cantidad mínima que debe haber en stock.</value>
+  </data>
+  <data name="IdServicio" xml:space="preserve">
+    <value>Id Servicio</value>
+  </data>
+  <data name="PorcentajeReferenciaDescuento" xml:space="preserve">
+    <value>Porcentaje Referencia (%)</value>
+  </data>
+  <data name="ToolTipIdTipoDescuento" xml:space="preserve">
+    <value>Identificador del tipo de descuento.</value>
+  </data>
+  <data name="ToolTipoIdServicio" xml:space="preserve">
+    <value>Identificador del servicio.</value>
+  </data>
+  <data name="TooltipPorcentajeReferenciaDescuento" xml:space="preserve">
+    <value>Porcentaje de referencia para el descuento según el tipo de incumplimiento</value>
+  </data>
+  <data name="TooltipValorCritPenalizacion" xml:space="preserve">
+    <value>Valor de referencia para el criterio que marca el incumplimiento</value>
+  </data>
+  <data name="TooltipValorReferenciaDescuento" xml:space="preserve">
+    <value>Valor de referencia del descuento</value>
+  </data>
+  <data name="ValorCritPenalizacion" xml:space="preserve">
+    <value>Valor criterio penalización</value>
+  </data>
+  <data name="ValorReferenciaDescuento" xml:space="preserve">
+    <value>Valor Referencia</value>
+  </data>
+  <data name="NombreServicio" xml:space="preserve">
+    <value>Nombre Servicio</value>
+  </data>
+  <data name="NombreTipoDescuento" xml:space="preserve">
+    <value>Tipo descuento</value>
+  </data>
+  <data name="ToolTipoNombreServicio" xml:space="preserve">
+    <value>Nombre del servicio</value>
+  </data>
+  <data name="Servicio" xml:space="preserve">
+    <value>Servicios</value>
+  </data>
+  <data name="NombreTipoComision" xml:space="preserve">
+    <value>Tipo Comisión</value>
+  </data>
+  <data name="ToolTipIdTipoComision" xml:space="preserve">
+    <value>Identificador del tipo de comisión.</value>
+  </data>
+  <data name="Porcentaje" xml:space="preserve">
+    <value>Porcentaje (%)</value>
+  </data>
+  <data name="TooltipPorcentajeComision" xml:space="preserve">
+    <value>Porcentaje de la comisión</value>
+  </data>
+  <data name="TooltipValorComision" xml:space="preserve">
+    <value>Valor de la comisión</value>
+  </data>
+  <data name="Valor" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="IdTipoComision" xml:space="preserve">
+    <value>Id tipo de comisión</value>
+  </data>
+  <data name="TooltipDescTipoComision" xml:space="preserve">
+    <value>Descripción tipo de comisión</value>
+  </data>
+  <data name="ActividadEconomica" xml:space="preserve">
+    <value>Actividad económica</value>
+  </data>
+  <data name="Direccion" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="FechaConstitucion" xml:space="preserve">
+    <value>Fecha Constitución</value>
+  </data>
+  <data name="IdPropietario" xml:space="preserve">
+    <value>Id Propietario</value>
+  </data>
+  <data name="Municipio" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="PagaPorIntergiro" xml:space="preserve">
+    <value>Paga por intergiro</value>
+  </data>
+  <data name="RazonSocial" xml:space="preserve">
+    <value>Razón social</value>
+  </data>
+  <data name="RegimenContributivo" xml:space="preserve">
+    <value>Reg contributivo</value>
+  </data>
+  <data name="RepresentanteLegal" xml:space="preserve">
+    <value>Representante Legal</value>
+  </data>
+  <data name="Telefono" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="TipoSociedad" xml:space="preserve">
+    <value>Tipo de sociedad</value>
+  </data>
+  <data name="TooltipActividadEconomica" xml:space="preserve">
+    <value>Tipo de actividad económica</value>
+  </data>
+  <data name="TooltipDireccion" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="Tooltipemail" xml:space="preserve">
+    <value>Dirección de email</value>
+  </data>
+  <data name="TooltipFax" xml:space="preserve">
+    <value>Número de fax</value>
+  </data>
+  <data name="TooltipFechaConstitucion" xml:space="preserve">
+    <value>Fecha de constitución del concesionario</value>
+  </data>
+  <data name="TooltipIdPropietario" xml:space="preserve">
+    <value>Identificador del propietario</value>
+  </data>
+  <data name="TooltipMunicipio" xml:space="preserve">
+    <value>Ciudad donde se ubica el concesionario</value>
+  </data>
+  <data name="TooltipPagaPorIntergiro" xml:space="preserve">
+    <value>Indica si el concesionario paga por intergiro</value>
+  </data>
+  <data name="TooltipRazonSocial" xml:space="preserve">
+    <value>Razón social del concesionario</value>
+  </data>
+  <data name="TooltipRegimenContributivo" xml:space="preserve">
+    <value>Tipo de régimen contributivo</value>
+  </data>
+  <data name="TooltipRepresentanteLegal" xml:space="preserve">
+    <value>Representante legal del concesionario</value>
+  </data>
+  <data name="TooltipTelefono" xml:space="preserve">
+    <value>Número de teléfono</value>
+  </data>
+  <data name="TooltipTipoSociedad" xml:space="preserve">
+    <value>Tipo de sociedad constituida</value>
+  </data>
+  <data name="DigitoVerificacion" xml:space="preserve">
+    <value>DV</value>
+  </data>
+  <data name="Nit" xml:space="preserve">
+    <value>Nit</value>
+  </data>
+  <data name="TooltipDigitoVerificacion" xml:space="preserve">
+    <value>Digito de verificación del Nit</value>
+  </data>
+  <data name="TooltipNit" xml:space="preserve">
+    <value>Número del Nit</value>
+  </data>
+  <data name="IdRegimen" xml:space="preserve">
+    <value>Identificador del régimen contributivo</value>
+  </data>
+  <data name="Regimen" xml:space="preserve">
+    <value>Régimen Contributivo</value>
+  </data>
+  <data name="TooltipDescRegimen" xml:space="preserve">
+    <value>Régimen Contributivo</value>
+  </data>
+  <data name="Barrio" xml:space="preserve">
+    <value>Barrio</value>
+  </data>
+  <data name="TooltipBarrio" xml:space="preserve">
+    <value>Barrio</value>
+  </data>
+  <data name="TooltipValMaxDec" xml:space="preserve">
+    <value>Valor Máximo Declarado.</value>
+  </data>
+  <data name="ValorMaximoDeclarado" xml:space="preserve">
+    <value>Valor Máximo Declarado</value>
+  </data>
+  <data name="Celular" xml:space="preserve">
+    <value>Número de celular</value>
+  </data>
+  <data name="EmpresaEmpleador" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="FechaExpedicionDocumento" xml:space="preserve">
+    <value>Fecha de expedición</value>
+  </data>
+  <data name="Identificacion" xml:space="preserve">
+    <value>Identificación</value>
+  </data>
+  <data name="Ingresos" xml:space="preserve">
+    <value>Ingresos</value>
+  </data>
+  <data name="Ocupacion" xml:space="preserve">
+    <value>Ocupación</value>
+  </data>
+  <data name="PoseeFincaRaiz" xml:space="preserve">
+    <value>Posee Finca Raíz</value>
+  </data>
+  <data name="PrimerApellido" xml:space="preserve">
+    <value>Primer apellido</value>
+  </data>
+  <data name="PrimerNombre" xml:space="preserve">
+    <value>Primer nombre</value>
+  </data>
+  <data name="SegundoApellido" xml:space="preserve">
+    <value>Segundo apellido</value>
+  </data>
+  <data name="SegundoNombre" xml:space="preserve">
+    <value>Segundo nombre</value>
+  </data>
+  <data name="TipoIdentificacion" xml:space="preserve">
+    <value>Tipo Identificación</value>
+  </data>
+  <data name="TooltipCelular" xml:space="preserve">
+    <value>Número de teléfono celular de la persona</value>
+  </data>
+  <data name="TooltipEmpresaEmpleador" xml:space="preserve">
+    <value>Empresa donde labora la persona</value>
+  </data>
+  <data name="TooltipFechaExpeDocumento" xml:space="preserve">
+    <value>La fecha de expedición del documento de identificación</value>
+  </data>
+  <data name="TooltipIdentificacion" xml:space="preserve">
+    <value>Identificación de la persona</value>
+  </data>
+  <data name="TooltipIngresosActuales" xml:space="preserve">
+    <value>Ingresos económicos actuales de la persona</value>
+  </data>
+  <data name="TooltipOcupacion" xml:space="preserve">
+    <value>Ocupación de la persona</value>
+  </data>
+  <data name="TooltipPoseeFincaRaiz" xml:space="preserve">
+    <value>Indica si la persona posee finca raíz</value>
+  </data>
+  <data name="TooltipPrimerApellido" xml:space="preserve">
+    <value>Primer apellido de la persona</value>
+  </data>
+  <data name="TooltipPrimerNombre" xml:space="preserve">
+    <value>Primer nombre de la persona</value>
+  </data>
+  <data name="TooltipSegundoApellido" xml:space="preserve">
+    <value>Segundo apellido de la persona</value>
+  </data>
+  <data name="TooltipSegundoNombre" xml:space="preserve">
+    <value>Segundo nombre de la persona</value>
+  </data>
+  <data name="TooltipTipoIdentificacion" xml:space="preserve">
+    <value>Tipo de identificación de la persona</value>
+  </data>
+  <data name="CuentaExterna" xml:space="preserve">
+    <value>Cuenta Externa</value>
+  </data>
+  <data name="TooltipCuentaExterna" xml:space="preserve">
+    <value>Descripción Cuenta Externa</value>
+  </data>
+  <data name="TooltipDescImpuesto" xml:space="preserve">
+    <value>Descripción Impuesto.</value>
+  </data>
+  <data name="TooltipValorImpuesto" xml:space="preserve">
+    <value>Valor (%) del impuesto.</value>
+  </data>
+  <data name="CampoRequerido" xml:space="preserve">
+    <value>El campo "{0}" es requerido</value>
+  </data>
+  <data name="OperadorPostal" xml:space="preserve">
+    <value>Operador Postal</value>
+  </data>
+  <data name="Peso" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="SegmentoMercado" xml:space="preserve">
+    <value>Segmento Mercado</value>
+  </data>
+  <data name="TooltipSegmentoMercado" xml:space="preserve">
+    <value>Descripción del segmento de mercado</value>
+  </data>
+  <data name="Fecha" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="FechaVinculacion" xml:space="preserve">
+    <value>Fecha de vinculación</value>
+  </data>
+  <data name="Motivo" xml:space="preserve">
+    <value>Motivo</value>
+  </data>
+  <data name="NombreGerente" xml:space="preserve">
+    <value>Nombre del gerente</value>
+  </data>
+  <data name="Observaciones" xml:space="preserve">
+    <value>Observaciones</value>
+  </data>
+  <data name="TooltipFecha" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="TooltipFechaVinculacion" xml:space="preserve">
+    <value>Fecha de vinculación</value>
+  </data>
+  <data name="TooltipMotivo" xml:space="preserve">
+    <value>Motivo de cambio de estado</value>
+  </data>
+  <data name="TooltipNombreGerente" xml:space="preserve">
+    <value>Nombre del gerente</value>
+  </data>
+  <data name="TooltipObservaciones" xml:space="preserve">
+    <value>Observaciones</value>
+  </data>
+  <data name="TooltipTopeMaximoCredito" xml:space="preserve">
+    <value>Tope máximo de crédito</value>
+  </data>
+  <data name="TopeMaximoCredito" xml:space="preserve">
+    <value>Tope máximo de crédito</value>
+  </data>
+  <data name="IdTipoValorAdicional" xml:space="preserve">
+    <value>Identificador Valor Adicional</value>
+  </data>
+  <data name="TooltipIdTipoValorAdicional" xml:space="preserve">
+    <value>Identificador Valor Adicional.</value>
+  </data>
+  <data name="Banco" xml:space="preserve">
+    <value>Banco</value>
+  </data>
+  <data name="NumeroCuenta" xml:space="preserve">
+    <value>Número de cuenta</value>
+  </data>
+  <data name="TipoCuenta" xml:space="preserve">
+    <value>Tipo de cuenta</value>
+  </data>
+  <data name="TitularCuenta" xml:space="preserve">
+    <value>Titular de la cuenta</value>
+  </data>
+  <data name="TooltipBanco" xml:space="preserve">
+    <value>Nombre del banco</value>
+  </data>
+  <data name="ToolTipoNumeroCuenta" xml:space="preserve">
+    <value>Número de la cuenta bancaria</value>
+  </data>
+  <data name="ToolTipTipoCuenta" xml:space="preserve">
+    <value>Tipo de la cuenta bancaria</value>
+  </data>
+  <data name="ToolTipTitularCuenta" xml:space="preserve">
+    <value>Titular de la cuenta bancaria</value>
+  </data>
+  <data name="TooltipPesoMaximo" xml:space="preserve">
+    <value>Peso máximo del servicio.</value>
+  </data>
+  <data name="TooltipPesoMinimo" xml:space="preserve">
+    <value>Peso mínimo del servicio.</value>
+  </data>
+  <data name="Documento" xml:space="preserve">
+    <value>Documento</value>
+  </data>
+  <data name="TooltipNombre" xml:space="preserve">
+    <value>Nombre de la persona</value>
+  </data>
+  <data name="Cliente" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="IdSucursal" xml:space="preserve">
+    <value>Id Sucursal</value>
+  </data>
+  <data name="Sucursal" xml:space="preserve">
+    <value>Sucursal</value>
+  </data>
+  <data name="TooltipCliente" xml:space="preserve">
+    <value>Cliente sobre el que se están realizando las acciones</value>
+  </data>
+  <data name="TooltipZona" xml:space="preserve">
+    <value>Zona perteneciente a la localidad </value>
+  </data>
+  <data name="NumeroFactura" xml:space="preserve">
+    <value>Número Factura</value>
+  </data>
+  <data name="Localidad" xml:space="preserve">
+    <value>Localidad</value>
+  </data>
+  <data name="Destino" xml:space="preserve">
+    <value>Destino:</value>
+  </data>
+  <data name="Origen" xml:space="preserve">
+    <value>Origen:</value>
+  </data>
+  <data name="Codigo" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="AdmiteFormaPagoAlCobro" xml:space="preserve">
+    <value>Admite forma de pago al cobro</value>
+  </data>
+  <data name="CentroCostos" xml:space="preserve">
+    <value>Centro de costos</value>
+  </data>
+  <data name="CentroServicioAdministrador" xml:space="preserve">
+    <value>Centro de servicio administrador</value>
+  </data>
+  <data name="Ciudad" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="IdCentroServicio" xml:space="preserve">
+    <value>Id Centro Servicio</value>
+  </data>
+  <data name="Latitud" xml:space="preserve">
+    <value>Latitud</value>
+  </data>
+  <data name="Longitud" xml:space="preserve">
+    <value>Longitud</value>
+  </data>
+  <data name="Propietario" xml:space="preserve">
+    <value>Agente Comercial</value>
+  </data>
+  <data name="ResponsableServicio" xml:space="preserve">
+    <value>Responsable Servicio</value>
+  </data>
+  <data name="Sistematizado" xml:space="preserve">
+    <value>Sistematizado</value>
+  </data>
+  <data name="Telefono2" xml:space="preserve">
+    <value>Teléfono 2</value>
+  </data>
+  <data name="Tipo" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="TipoCentroServicio" xml:space="preserve">
+    <value>Tipo de centro de servicio</value>
+  </data>
+  <data name="TipoPropiedad" xml:space="preserve">
+    <value>Tipo de propiedad</value>
+  </data>
+  <data name="ToolTipAdmiteFormaPagoAlCobro" xml:space="preserve">
+    <value>Admite forma de pago al cobro</value>
+  </data>
+  <data name="ToolTipCentroCostos" xml:space="preserve">
+    <value>Identificador del centro de costos asociado al centro de servicios</value>
+  </data>
+  <data name="ToolTipCentroServicioAdministrador" xml:space="preserve">
+    <value>Centro de servicio administrador</value>
+  </data>
+  <data name="ToolTipCiudad" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="TooltipIdCentroServicio" xml:space="preserve">
+    <value>Identificador del centro de servicio</value>
+  </data>
+  <data name="ToolTipLatitud" xml:space="preserve">
+    <value>Coordenada (latitud) donde se encuentra ubicado el centro de servicios.</value>
+  </data>
+  <data name="ToolTipLongitud" xml:space="preserve">
+    <value>Coordenada (Longitud) donde está ubicado el centro de servicios.</value>
+  </data>
+  <data name="ToolTipNombreCentroServicio" xml:space="preserve">
+    <value>Nombre del centro de servicios</value>
+  </data>
+  <data name="ToolTipPropietario" xml:space="preserve">
+    <value>Nombre del agente comercial</value>
+  </data>
+  <data name="TooltipresponsebleServicio" xml:space="preserve">
+    <value>Persona responsable del servicio</value>
+  </data>
+  <data name="ToolTipSistematizado" xml:space="preserve">
+    <value>Indica si el centro de servicios es sistematizado.</value>
+  </data>
+  <data name="TooltipTelefono2" xml:space="preserve">
+    <value>Segundo número de teléfono </value>
+  </data>
+  <data name="TooltipTipoPropiedad" xml:space="preserve">
+    <value>Tipo de propiedad</value>
+  </data>
+  <data name="ToolTipVendePrepago" xml:space="preserve">
+    <value>Indicador si puede vender tiquetes o voucher prepago</value>
+  </data>
+  <data name="ToolTipVolumenMaximo" xml:space="preserve">
+    <value>Volumen máximo admitido para envío y recepción</value>
+  </data>
+  <data name="VendePrepago" xml:space="preserve">
+    <value>Vende Prepago</value>
+  </data>
+  <data name="KiloAdicional" xml:space="preserve">
+    <value>Kilo Adicional</value>
+  </data>
+  <data name="RangoPesoFinal" xml:space="preserve">
+    <value>Rango de Peso Final</value>
+  </data>
+  <data name="RangoPesoInicial" xml:space="preserve">
+    <value>Rango de Peso Inicial</value>
+  </data>
+  <data name="ServicioRetorno" xml:space="preserve">
+    <value>Servicio de Retorno</value>
+  </data>
+  <data name="SubTrayecto" xml:space="preserve">
+    <value>SubTrayecto</value>
+  </data>
+  <data name="Trayecto" xml:space="preserve">
+    <value>Trayecto</value>
+  </data>
+  <data name="AgenciaManual" xml:space="preserve">
+    <value>Agencia Manual</value>
+  </data>
+  <data name="AgenciaSistema" xml:space="preserve">
+    <value>Agencia Sistematizada</value>
+  </data>
+  <data name="CiudadDestino" xml:space="preserve">
+    <value>Ciudad de Destino</value>
+  </data>
+  <data name="CiudadOrigen" xml:space="preserve">
+    <value>Ciudad de Origen</value>
+  </data>
+  <data name="PaisOrigen" xml:space="preserve">
+    <value>País Origen</value>
+  </data>
+  <data name="TooltipCiudadDestino" xml:space="preserve">
+    <value>Ciudad de destino hacia la cual se dirige el envío</value>
+  </data>
+  <data name="TooltipCiudadOrigen" xml:space="preserve">
+    <value>Ciudad de origen desde la cual se hace el envío</value>
+  </data>
+  <data name="TooltipPaisOrigen" xml:space="preserve">
+    <value>País de origen desde el cual se hace el envío</value>
+  </data>
+  <data name="CiudadGestor" xml:space="preserve">
+    <value>Ciudad del gestor</value>
+  </data>
+  <data name="CiudadInterventor" xml:space="preserve">
+    <value>Ciudad del interventor</value>
+  </data>
+  <data name="Ejecutivo" xml:space="preserve">
+    <value>Nombre del Ejecutivo</value>
+  </data>
+  <data name="Gestor" xml:space="preserve">
+    <value>Gestor</value>
+  </data>
+  <data name="Interventor" xml:space="preserve">
+    <value>Interventor</value>
+  </data>
+  <data name="Numero" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Objeto" xml:space="preserve">
+    <value>Objeto</value>
+  </data>
+  <data name="PorcentajeAviso" xml:space="preserve">
+    <value>Porcentaje Aviso (%)</value>
+  </data>
+  <data name="PresupuestoMensual" xml:space="preserve">
+    <value>Presupuesto Mensual</value>
+  </data>
+  <data name="Supervisor" xml:space="preserve">
+    <value>Nombre del Supervisor</value>
+  </data>
+  <data name="TooltipCiudadGestor" xml:space="preserve">
+    <value>Ciudad del gestor</value>
+  </data>
+  <data name="TooltipCiudadInterventor" xml:space="preserve">
+    <value>Ciudad del interventor</value>
+  </data>
+  <data name="TooltipCodigoContrato" xml:space="preserve">
+    <value>Código del contrato</value>
+  </data>
+  <data name="TooltipEjecutivo" xml:space="preserve">
+    <value>Ejecutivo encargado del cliente</value>
+  </data>
+  <data name="TooltipGestor" xml:space="preserve">
+    <value>Nombre del gestor</value>
+  </data>
+  <data name="TooltipInterventor" xml:space="preserve">
+    <value>Nombre del interventor</value>
+  </data>
+  <data name="TooltipNombreContrato" xml:space="preserve">
+    <value>Nombre del contrato</value>
+  </data>
+  <data name="TooltipNumeroContrato" xml:space="preserve">
+    <value>Numero del contrato</value>
+  </data>
+  <data name="TooltipObjeto" xml:space="preserve">
+    <value>Objeto del contrato</value>
+  </data>
+  <data name="TooltipPorcentajeAviso" xml:space="preserve">
+    <value>Porcentaje de Aviso asociado al contrato</value>
+  </data>
+  <data name="TooltipPresupuestoMensual" xml:space="preserve">
+    <value>Presupuesto mensual asignado al contrato</value>
+  </data>
+  <data name="TooltipSupervisor" xml:space="preserve">
+    <value>Supervisor encargado del cliente</value>
+  </data>
+  <data name="TooltipValorContrato" xml:space="preserve">
+    <value>Valor del contrato</value>
+  </data>
+  <data name="PaisGestor" xml:space="preserve">
+    <value>País del Gestor</value>
+  </data>
+  <data name="PaisInterventor" xml:space="preserve">
+    <value>País del Interventor</value>
+  </data>
+  <data name="TooltipPaisGestor" xml:space="preserve">
+    <value>País del Gestor</value>
+  </data>
+  <data name="TooltipPaisInterventor" xml:space="preserve">
+    <value>País del Interventor</value>
+  </data>
+  <data name="NumeroAsignacion" xml:space="preserve">
+    <value>No Presupuesto</value>
+  </data>
+  <data name="TooltipNumeroAsignacion" xml:space="preserve">
+    <value>Numero asignación presupuesto</value>
+  </data>
+  <data name="Apellidos" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="TooltipApellidos" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="Contrato" xml:space="preserve">
+    <value>Contrato</value>
+  </data>
+  <data name="DescripcionTipoSolicitud" xml:space="preserve">
+    <value>Tipo de Solicitud</value>
+  </data>
+  <data name="IdMotivoSolicitud" xml:space="preserve">
+    <value>Motivo</value>
+  </data>
+  <data name="Id" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="TooltipId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="AdicionarServicio" xml:space="preserve">
+    <value>Adicionar Servicio</value>
+  </data>
+  <data name="TipoSolicitud" xml:space="preserve">
+    <value>Tipo de Solicitud</value>
+  </data>
+  <data name="TooltipTipoSolicitud" xml:space="preserve">
+    <value>Es la razón por la que se Genera una Solicitud.</value>
+  </data>
+  <data name="DiasEntrega" xml:space="preserve">
+    <value>Horas Entrega</value>
+  </data>
+  <data name="LineaServicio" xml:space="preserve">
+    <value>Servicio</value>
+  </data>
+  <data name="TooltipDiasEntrega" xml:space="preserve">
+    <value>Tiempo máximo en horas que debe pasar antes de hacer efectiva la entrega</value>
+  </data>
+  <data name="TooltipLineaServicio" xml:space="preserve">
+    <value>Línea de servicio de Inter Rapidísimo</value>
+  </data>
+  <data name="TooltipDescMotivo" xml:space="preserve">
+    <value>Es la Descripción del Motivo de la Solicitud</value>
+  </data>
+  <data name="IdMoneda" xml:space="preserve">
+    <value>Identificador Moneda</value>
+    <comment>Identificador del tipo de  moneda.</comment>
+  </data>
+  <data name="Cargo" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="ToolitipCargo" xml:space="preserve">
+    <value>Cargo del empleado</value>
+  </data>
+  <data name="DescripTipoSolicitud" xml:space="preserve">
+    <value>Descripción Tipo</value>
+  </data>
+  <data name="FechaCreacion" xml:space="preserve">
+    <value>Fecha de Creación</value>
+  </data>
+  <data name="IdSolicitud" xml:space="preserve">
+    <value>Solicitud  Número</value>
+  </data>
+  <data name="ErrorValidacionServicioYTrayectoDestino" xml:space="preserve">
+    <value>El destino seleccionado no tiene el servicio indicado</value>
+  </data>
+  <data name="DescripMotivoSolicitud" xml:space="preserve">
+    <value>Motivo Solicitud</value>
+  </data>
+  <data name="EstadoGiro" xml:space="preserve">
+    <value>Estado del Giro</value>
+  </data>
+  <data name="NumeroGiro" xml:space="preserve">
+    <value>No. Giro</value>
+  </data>
+  <data name="TipoIdentReclama" xml:space="preserve">
+    <value>Tipo de Ident Reclama</value>
+  </data>
+  <data name="ToolTipDescripMotivSolicitud" xml:space="preserve">
+    <value>Es la Descripción del Motivo de la Solicitud</value>
+  </data>
+  <data name="ToolTipDescripTipoSolicitud" xml:space="preserve">
+    <value>Es la Descripción del Tipo de Solicitud</value>
+  </data>
+  <data name="ToolTipEstadoGiro" xml:space="preserve">
+    <value>Estado Actual  del giro</value>
+  </data>
+  <data name="ToolTipEstadoSolicitud" xml:space="preserve">
+    <value>Es el Estado en el que se encuentra la Solicitud</value>
+  </data>
+  <data name="ToolTipFechaGrabSolicitud" xml:space="preserve">
+    <value>Es la Fecha en la que se creo la Solicitud</value>
+  </data>
+  <data name="ToolTipIdSolicitud" xml:space="preserve">
+    <value>Es el Número de la Solicitud</value>
+  </data>
+  <data name="ToolTipNumeroGiro" xml:space="preserve">
+    <value>Es el número del giro</value>
+  </data>
+  <data name="ToolTipTipoIdentReclama" xml:space="preserve">
+    <value>Es el tipo de Identificación con el que reclama el destinatario</value>
+  </data>
+  <data name="TootipObsevSolicitud" xml:space="preserve">
+    <value>Es la observación relacionada con la Solicitud</value>
+  </data>
+  <data name="ObservaSolAtendida" xml:space="preserve">
+    <value>Motivo de Rechazo</value>
+  </data>
+  <data name="ToolTipObservaSolAtendida" xml:space="preserve">
+    <value>Es el Motivo de Rechazo que se puede generar al Gestionar una Solicitud</value>
+  </data>
+  <data name="EstadoSolic" xml:space="preserve">
+    <value>Estado de la Solicitud</value>
+  </data>
+  <data name="ToolTipEstadoSolc" xml:space="preserve">
+    <value>Es el Estado de la Solicitud</value>
+  </data>
+  <data name="CentroSolicitaSol" xml:space="preserve">
+    <value>Centro Atención</value>
+  </data>
+  <data name="ToolTipCentroSolicitaSol" xml:space="preserve">
+    <value>Es el Centro que crea la Solicitud</value>
+  </data>
+  <data name="Pieza" xml:space="preserve">
+    <value>Pieza</value>
+  </data>
+  <data name="TooltipTotalPiezas" xml:space="preserve">
+    <value>Piezas a enviar</value>
+  </data>
+  <data name="TotalPiezas" xml:space="preserve">
+    <value>Total piezas</value>
+  </data>
+  <data name="ToolTipValorGiro" xml:space="preserve">
+    <value>Es el Valor del Giro</value>
+  </data>
+  <data name="ValorGiro" xml:space="preserve">
+    <value>Valor del Giro</value>
+  </data>
+  <data name="BolsaSeguridad" xml:space="preserve">
+    <value>Bolsa seguridad</value>
+  </data>
+  <data name="TooltipBolsaSeguridad" xml:space="preserve">
+    <value>Número de la bolsa de seguridad</value>
+  </data>
+  <data name="TooltipPeso" xml:space="preserve">
+    <value>Peso del artículo</value>
+  </data>
+  <data name="Alto" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="Ancho" xml:space="preserve">
+    <value>Ancho</value>
+  </data>
+  <data name="CalcularPesoPorVolumen" xml:space="preserve">
+    <value>Activar Peso Por Volumen</value>
+  </data>
+  <data name="DiceContener" xml:space="preserve">
+    <value>Dice Contener</value>
+  </data>
+  <data name="Largo" xml:space="preserve">
+    <value>Largo</value>
+  </data>
+  <data name="PaisDestino" xml:space="preserve">
+    <value>País Destino</value>
+  </data>
+  <data name="PesoVolumetrico" xml:space="preserve">
+    <value>Peso x Volumen</value>
+  </data>
+  <data name="PorcentajeSeguro" xml:space="preserve">
+    <value>% Seguro</value>
+  </data>
+  <data name="TooltipAlto" xml:space="preserve">
+    <value>Alto del envío en centímetros</value>
+  </data>
+  <data name="TooltipAncho" xml:space="preserve">
+    <value>Ancho del envío en centímetros</value>
+  </data>
+  <data name="TooltipCalcularPesoPorVolumen" xml:space="preserve">
+    <value>Indica si el peso por volumen debe ser calculado</value>
+  </data>
+  <data name="TooltipDiceContener" xml:space="preserve">
+    <value>Contenido del envío</value>
+  </data>
+  <data name="TooltipLargo" xml:space="preserve">
+    <value>Largo del envío en centímetros</value>
+  </data>
+  <data name="TooltipPaisDestino" xml:space="preserve">
+    <value>País al cual se hace el envío</value>
+  </data>
+  <data name="TooltipPesoVolumetrico" xml:space="preserve">
+    <value>Peso volumétrico del envío</value>
+  </data>
+  <data name="TooltipPorcentajeSeguro" xml:space="preserve">
+    <value>Porcentaje correspondiente al seguro del envío</value>
+  </data>
+  <data name="TooltipUnidadMedida" xml:space="preserve">
+    <value>Unidad de medida para el cálculo del peso</value>
+  </data>
+  <data name="TooltipValorComercial" xml:space="preserve">
+    <value>Valor Comercial aproximado del Envío</value>
+  </data>
+  <data name="UnidadMedida" xml:space="preserve">
+    <value>Unidad Medida</value>
+  </data>
+  <data name="ValorComercial" xml:space="preserve">
+    <value>Valor Comercial</value>
+  </data>
+  <data name="FormaPago" xml:space="preserve">
+    <value>Forma de Pago</value>
+  </data>
+  <data name="Prepago" xml:space="preserve">
+    <value>Prepago No.</value>
+  </data>
+  <data name="Recomendado" xml:space="preserve">
+    <value>Prioritario</value>
+  </data>
+  <data name="SaldoPrepago" xml:space="preserve">
+    <value>Saldo Prepago</value>
+  </data>
+  <data name="TipoEnvio" xml:space="preserve">
+    <value>Tipo Envío</value>
+  </data>
+  <data name="TooltipFormaPago" xml:space="preserve">
+    <value>Forma de pago del envío</value>
+  </data>
+  <data name="TooltipPrepago" xml:space="preserve">
+    <value>Número del prepago</value>
+  </data>
+  <data name="TooltipRecomendado" xml:space="preserve">
+    <value>Indica si el envío debe tener un trato o vigilancia especial de acuerdo a su contenido</value>
+  </data>
+  <data name="TooltipSaldoPrepago" xml:space="preserve">
+    <value>Saldo del prepago</value>
+  </data>
+  <data name="TooltipTipoEnvio" xml:space="preserve">
+    <value>Tipo de envío a realizar</value>
+  </data>
+  <data name="TipoMensajero" xml:space="preserve">
+    <value>Tipo de Mensajero</value>
+  </data>
+  <data name="TipoAgencia" xml:space="preserve">
+    <value>Tipo Agencia</value>
+  </data>
+  <data name="ToolTipTipoAgencia" xml:space="preserve">
+    <value>El tipo de la agencia</value>
+  </data>
+  <data name="EsContratista" xml:space="preserve">
+    <value>Contratista</value>
+  </data>
+  <data name="NumeroPase" xml:space="preserve">
+    <value>Numero del Pase</value>
+  </data>
+  <data name="LongitudCadena" xml:space="preserve">
+    <value>El tamaño máximo del campo {0} debe estar entre {2} y {1} caracteres</value>
+  </data>
+  <data name="FechaIngreso" xml:space="preserve">
+    <value>Fecha de Ingreso</value>
+  </data>
+  <data name="FechaTerminacionContrato" xml:space="preserve">
+    <value>Fecha de terminación del contrato</value>
+  </data>
+  <data name="FechaVencimientoPase" xml:space="preserve">
+    <value>Fecha de vencimiento del pase</value>
+  </data>
+  <data name="ToolTipDescripcionRacol" xml:space="preserve">
+    <value>Descripción del RACOL</value>
+  </data>
+  <data name="ToolTipColApoyo" xml:space="preserve">
+    <value>COL / RACOL de apoyo</value>
+  </data>
+  <data name="PrecioFinal" xml:space="preserve">
+    <value>Precio Final</value>
+    <comment>Precio Final de un Rango</comment>
+  </data>
+  <data name="PrecioInicial" xml:space="preserve">
+    <value>Precio Inicial</value>
+    <comment>Precio Inicial de un Rango</comment>
+  </data>
+  <data name="Recoger" xml:space="preserve">
+    <value>Recoger</value>
+  </data>
+  <data name="TooltipRecoger" xml:space="preserve">
+    <value>Descripción de los elementos a recoger en la sucursal</value>
+  </data>
+  <data name="TooltipSucursal" xml:space="preserve">
+    <value>Sucursal</value>
+  </data>
+  <data name="Pais" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="TooltipPais" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="ColApoyo" xml:space="preserve">
+    <value>COL / RACOL Apoyo</value>
+  </data>
+  <data name="ValorTotal" xml:space="preserve">
+    <value>Valor Total Servicios</value>
+  </data>
+  <data name="Impuestos" xml:space="preserve">
+    <value>Impuestos</value>
+  </data>
+  <data name="ToolTipDigitoVerificacionGiro" xml:space="preserve">
+    <value>Es el Digito de Verificación que trae el Giro</value>
+  </data>
+  <data name="TipoIdentificacionReclamoGiro" xml:space="preserve">
+    <value>Tipo de documento de identificación con el  cual se reclamará el Giro</value>
+  </data>
+  <data name="TipoContrato" xml:space="preserve">
+    <value>Tipo de Contrato</value>
+  </data>
+  <data name="Modalidad" xml:space="preserve">
+    <value>Modalidad</value>
+  </data>
+  <data name="NumeroInterno" xml:space="preserve">
+    <value>Número Interno</value>
+  </data>
+  <data name="TooltipCodigoOtrosi" xml:space="preserve">
+    <value>Código del Otrosí</value>
+  </data>
+  <data name="TooltipModalidad" xml:space="preserve">
+    <value>Modalidad del Otrosí</value>
+  </data>
+  <data name="TooltipNumeroInterno" xml:space="preserve">
+    <value>Número interno del otrosí asignado por el cliente</value>
+  </data>
+  <data name="ArchivosCentroServicios" xml:space="preserve">
+    <value>Archivos Requeridos</value>
+  </data>
+  <data name="ToolTipArchivosCentroServicios" xml:space="preserve">
+    <value>Archivos requeridos para la creación de un centro de servicios.</value>
+  </data>
+  <data name="Destinatario" xml:space="preserve">
+    <value>Destinatario</value>
+  </data>
+  <data name="ErrorBolsaSeguridad" xml:space="preserve">
+    <value>La bolsa de seguridad ingresada no es válida y no ha ingresado novedad respecto a la misma</value>
+  </data>
+  <data name="NovedadBolsaSeguridad" xml:space="preserve">
+    <value>Novedad</value>
+  </data>
+  <data name="Remitente" xml:space="preserve">
+    <value>Remitente</value>
+  </data>
+  <data name="TooltipDestinatario" xml:space="preserve">
+    <value>Destinatario del envío</value>
+  </data>
+  <data name="TooltipNovedadBolsaSeguridad" xml:space="preserve">
+    <value>Novedad de la bolsa de seguridad</value>
+  </data>
+  <data name="TooltipRemitente" xml:space="preserve">
+    <value>Remitente del envío</value>
+  </data>
+  <data name="IdRegional" xml:space="preserve">
+    <value>Regional</value>
+  </data>
+  <data name="ToolTipIdRegional" xml:space="preserve">
+    <value>Es el id de la Regional</value>
+  </data>
+  <data name="Descuento" xml:space="preserve">
+    <value>Descuento(%)</value>
+  </data>
+  <data name="PlazoPago" xml:space="preserve">
+    <value>Plazo de pago</value>
+  </data>
+  <data name="TooltipDescFactura" xml:space="preserve">
+    <value>Descripción de la factura</value>
+  </data>
+  <data name="TooltipDescuento" xml:space="preserve">
+    <value>Porcentaje de descuento por pronto pago</value>
+  </data>
+  <data name="TooltipFormaPagoFact" xml:space="preserve">
+    <value>Forma de pago de la factura</value>
+  </data>
+  <data name="TooltipPlazoPago" xml:space="preserve">
+    <value>Plazo de pago de la factura en días</value>
+  </data>
+  <data name="CantidadAsignada" xml:space="preserve">
+    <value>Cantidad Asignada</value>
+  </data>
+  <data name="StockMinimoSuministro" xml:space="preserve">
+    <value>Stock Mínimo</value>
+  </data>
+  <data name="ToolTipCantidadAsignadaSuministro" xml:space="preserve">
+    <value>Cantidad de asignada de un suministro</value>
+  </data>
+  <data name="ToolTipIdSuministro" xml:space="preserve">
+    <value>Identificador del suministro</value>
+  </data>
+  <data name="ToolTipNombreSuministro" xml:space="preserve">
+    <value>Nombre del suministro</value>
+  </data>
+  <data name="ToolTipStockMinimoSuministro" xml:space="preserve">
+    <value>Stock mínimo de un suministro</value>
+  </data>
+  <data name="Dia" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="DiaOrdinal" xml:space="preserve">
+    <value>Día Ordinal</value>
+  </data>
+  <data name="Semana" xml:space="preserve">
+    <value>Semana</value>
+  </data>
+  <data name="TooltipServicioComi" xml:space="preserve">
+    <value>Servicio de la unidad de negocio</value>
+  </data>
+  <data name="TooltipUnidadNegocio" xml:space="preserve">
+    <value>Nombre de la unidad de negocio</value>
+  </data>
+  <data name="UnidadNegocio" xml:space="preserve">
+    <value>Unidad de negocio</value>
+  </data>
+  <data name="DiaFinal" xml:space="preserve">
+    <value>Día Final</value>
+  </data>
+  <data name="DiaInicial" xml:space="preserve">
+    <value>Día Inicial</value>
+  </data>
+  <data name="TooltipDiaFinal" xml:space="preserve">
+    <value>Día final del corte de facturación</value>
+  </data>
+  <data name="TooltipDiaInicial" xml:space="preserve">
+    <value>Día inicial del corte de facturación</value>
+  </data>
+  <data name="DirigidoA" xml:space="preserve">
+    <value>Dirigido a</value>
+  </data>
+  <data name="TooltipDirigidoA" xml:space="preserve">
+    <value>A quien va dirigida la radicación</value>
+  </data>
+  <data name="ErrorValidacionPesos" xml:space="preserve">
+    <value>El peso supera el límite permitido para el trayecto seleccionado</value>
+  </data>
+  <data name="TipoDocumentoCentroServ" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="ToolTipTipoDocumentoCentroServ" xml:space="preserve">
+    <value>Indica para quien se está creando el documento</value>
+  </data>
+  <data name="IdCentroServicioDestino" xml:space="preserve">
+    <value>Id Centro de Servicio Destino</value>
+  </data>
+  <data name="IdCentroServicioOrigen" xml:space="preserve">
+    <value>Id Centro de Servicio Origen</value>
+  </data>
+  <data name="NombreCentroServicioOrigen" xml:space="preserve">
+    <value>Nombre Centro de Servicios Origen</value>
+  </data>
+  <data name="NombreCentroServiciosDestino" xml:space="preserve">
+    <value>Nombre Centro de Servicios Destino </value>
+  </data>
+  <data name="ValorAdicional" xml:space="preserve">
+    <value>Valor Adicional</value>
+  </data>
+  <data name="ValorImpuestos" xml:space="preserve">
+    <value>Valor del Impuestos</value>
+  </data>
+  <data name="ValorPorte" xml:space="preserve">
+    <value>Porte</value>
+  </data>
+  <data name="TarifaPorcentual" xml:space="preserve">
+    <value>Porcentaje (%)</value>
+  </data>
+  <data name="TooltipDescripcionDeduccion" xml:space="preserve">
+    <value>Descripción de la deducción</value>
+  </data>
+  <data name="TooltipIdDeduccion" xml:space="preserve">
+    <value>Id de la deducción al contrato</value>
+  </data>
+  <data name="TooltipTarifaPorcentual" xml:space="preserve">
+    <value>% sobre el subtotal de la factura</value>
+  </data>
+  <data name="ToolTipValorFijo" xml:space="preserve">
+    <value>Valor fijo de la deducción</value>
+  </data>
+  <data name="TooltipValorMonto" xml:space="preserve">
+    <value>Valor por cada 100 pesos</value>
+  </data>
+  <data name="ValorFijo" xml:space="preserve">
+    <value>Valor fijo</value>
+  </data>
+  <data name="ValorMonto" xml:space="preserve">
+    <value>Valor por monto</value>
+  </data>
+  <data name="ToolTipContratoComFija" xml:space="preserve">
+    <value>Contrato para el cual aplicará el concepto adicional</value>
+  </data>
+  <data name="ToolTipDescripcionConceptoAd" xml:space="preserve">
+    <value>Descripción del concepto adicional</value>
+  </data>
+  <data name="ToolTipFechaInicioComisionFija" xml:space="preserve">
+    <value>Fecha desde la cual se pagará el concepto adicional</value>
+  </data>
+  <data name="ToolTipValorComisionFija" xml:space="preserve">
+    <value>Valor de la comisión por el concepto adicional</value>
+  </data>
+  <data name="Concepto" xml:space="preserve">
+    <value>Concepto</value>
+  </data>
+  <data name="TipoComisionFija" xml:space="preserve">
+    <value>Tipo de comisión fija</value>
+  </data>
+  <data name="ToolTipTipoComisionFija" xml:space="preserve">
+    <value>Tipo de comisión fija</value>
+  </data>
+  <data name="Ano" xml:space="preserve">
+    <value>Año</value>
+  </data>
+  <data name="Mes" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="RutaDestino" xml:space="preserve">
+    <value>Ruta de Destino</value>
+  </data>
+  <data name="Duracion" xml:space="preserve">
+    <value>Duración</value>
+  </data>
+  <data name="ValorAdicionalDocumento" xml:space="preserve">
+    <value>Val. Adicional Documento</value>
+  </data>
+  <data name="DiasServicio" xml:space="preserve">
+    <value>Días Servicio</value>
+  </data>
+  <data name="FechaInicioVenta" xml:space="preserve">
+    <value>Fecha Inicio Venta</value>
+  </data>
+  <data name="ToolTipDiasServicio" xml:space="preserve">
+    <value>Indica los días en los que se presta el servicio</value>
+  </data>
+  <data name="ToolTipFechaInicioVenta" xml:space="preserve">
+    <value>Indica la fecha en la que se inicia la venta del servicio</value>
+  </data>
+  <data name="CantidadRecogidaFinal" xml:space="preserve">
+    <value>Cantidad Recogida Final</value>
+  </data>
+  <data name="CantidadRecogidaInicial" xml:space="preserve">
+    <value>Cantidad Recogida Inicial</value>
+  </data>
+  <data name="Requisitos" xml:space="preserve">
+    <value>Requisitos</value>
+  </data>
+  <data name="TooltipPorcentajeDescuentoServicios" xml:space="preserve">
+    <value>Porcentaje del descuento por penalización</value>
+  </data>
+  <data name="TooltipValorCritPenalizacionServi" xml:space="preserve">
+    <value>Valor del criterio para aplicar el descuento por penalización</value>
+  </data>
+  <data name="TooltipValorDescuentoServi" xml:space="preserve">
+    <value>Valor del descuento por penalización</value>
+  </data>
+  <data name="TipoDescuento" xml:space="preserve">
+    <value>Tipo Descuento</value>
+  </data>
+  <data name="TooltipDescripcionDescuentoServicios" xml:space="preserve">
+    <value>Descripción del descuento</value>
+  </data>
+  <data name="ToolTipTipoDescuentoServi" xml:space="preserve">
+    <value>Indica el tipo de descuento a aplicar por servicio</value>
+  </data>
+  <data name="TooltipContrato" xml:space="preserve">
+    <value>El contrato al cual se asocia</value>
+  </data>
+  <data name="KiloInicial" xml:space="preserve">
+    <value>Kilo Inicial</value>
+  </data>
+  <data name="ValorKiloAdicional" xml:space="preserve">
+    <value>Valor Kilo Adicional</value>
+  </data>
+  <data name="ValorKiloInicial" xml:space="preserve">
+    <value>Valor Kilo Inicial</value>
+  </data>
+  <data name="AgenciaSolicitud" xml:space="preserve">
+    <value>Agencia que Solicita</value>
+  </data>
+  <data name="TooltipAgencia" xml:space="preserve">
+    <value>Es la Agencia que crea la Solicitud</value>
+  </data>
+  <data name="RegionalAdministrativa" xml:space="preserve">
+    <value>Regional Administrativa</value>
+  </data>
+  <data name="TooltipRegionalAdministrativa" xml:space="preserve">
+    <value>Es el RACOL ó Regional Administrativa que reune varios centros logisticos y varias agencias ó puntos.</value>
+  </data>
+  <data name="CampoLongitud" xml:space="preserve">
+    <value>El campo "{0}" no cumple con los criterios de longitud.</value>
+  </data>
+  <data name="Contacto" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="ToolTipContacto" xml:space="preserve">
+    <value>Nombre del contacto</value>
+  </data>
+  <data name="TooltipNombreContacto" xml:space="preserve">
+    <value>Nombre del contacto</value>
+  </data>
+  <data name="ValorImpuestoPorcentaje" xml:space="preserve">
+    <value>Impuesto (%)</value>
+  </data>
+  <data name="TooltipCliCredito" xml:space="preserve">
+    <value>Cliente crédito a consultar</value>
+  </data>
+  <data name="PesoInicial" xml:space="preserve">
+    <value>Peso Inicial</value>
+  </data>
+  <data name="PesoFinal" xml:space="preserve">
+    <value>Peso Final</value>
+  </data>
+  <data name="TipoEntrega" xml:space="preserve">
+    <value>Tipo de Entrega</value>
+  </data>
+  <data name="TooltipTipoEntrega" xml:space="preserve">
+    <value>Forma en la cual se va a hacer entrega del envío</value>
+  </data>
+  <data name="ObjetoProhibidaCirculacion" xml:space="preserve">
+    <value>Objeto de Prohibida Circulación</value>
+  </data>
+  <data name="IdNaturaleza" xml:space="preserve">
+    <value>Id. Naturaleza</value>
+  </data>
+  <data name="ToolTipCodigoCuentaExterna" xml:space="preserve">
+    <value>Código Cuenta Externa.</value>
+  </data>
+  <data name="ToolTipIdNaturaleza" xml:space="preserve">
+    <value>Id. Naturaleza.</value>
+  </data>
+  <data name="Planilla" xml:space="preserve">
+    <value>Planilla</value>
+  </data>
+  <data name="CantidadPagos" xml:space="preserve">
+    <value>Cantidad de Pagos</value>
+  </data>
+  <data name="ToolTipCantidadPagos" xml:space="preserve">
+    <value>Indica la cantidad de pagos asignados a la  agencia</value>
+  </data>
+  <data name="ToolTipValorTotalPagos" xml:space="preserve">
+    <value>Indica la sumatoria de los pagos  asignados a la agencia</value>
+  </data>
+  <data name="ValorTotalPagos" xml:space="preserve">
+    <value>Valor Total de los Pagos</value>
+  </data>
+  <data name="TipoMoneda" xml:space="preserve">
+    <value>Tipo de Moneda</value>
+  </data>
+  <data name="TooltipTipoMoneda" xml:space="preserve">
+    <value>Tipo de moneda con que se va a  pagar el precio del envío</value>
+  </data>
+  <data name="TipoDestino" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="TooltipTipoDestino" xml:space="preserve">
+    <value>Tipo de destino al que se va a hacer el envío</value>
+  </data>
+  <data name="IdFormaPago" xml:space="preserve">
+    <value>Id Forma Pago</value>
+  </data>
+  <data name="PagoMixto" xml:space="preserve">
+    <value>Pago Mixto</value>
+  </data>
+  <data name="ToolTipIdFormaPago" xml:space="preserve">
+    <value>Es el Identificador de la forma de Pago</value>
+  </data>
+  <data name="TooltipPagoMixto" xml:space="preserve">
+    <value>Forma de Pago que Acepta el pago mixto</value>
+  </data>
+  <data name="CodigoRapiRadicado" xml:space="preserve">
+    <value>Código RapiRadicado</value>
+  </data>
+  <data name="NumeroFolios" xml:space="preserve">
+    <value>Número de Folios</value>
+  </data>
+  <data name="NumeroRadicados" xml:space="preserve">
+    <value>Número de Radicados</value>
+  </data>
+  <data name="TooltipCodigoRapiRadicado" xml:space="preserve">
+    <value>Código del RapiRadicado</value>
+  </data>
+  <data name="TooltipNumeroFolios" xml:space="preserve">
+    <value>Número de folios entregados por el cliente</value>
+  </data>
+  <data name="TooltipNumeroRadicados" xml:space="preserve">
+    <value>Cantidad de destinatarios radicados</value>
+  </data>
+  <data name="TooltipValorTotal" xml:space="preserve">
+    <value>Valor Total, Sumatoria del (los) Item(s)</value>
+  </data>
+  <data name="AceptaPagoMixto" xml:space="preserve">
+    <value>Acepta Pago Mixto?</value>
+  </data>
+  <data name="ToolTipAceptaPagoMixto" xml:space="preserve">
+    <value>Permite pagar el articulo de diferentes Formas</value>
+  </data>
+  <data name="ToolTipValor" xml:space="preserve">
+    <value>Es el valor a cancelar</value>
+  </data>
+  <data name="TooltipValorDiferencia" xml:space="preserve">
+    <value>Muestra el Cambio ó Diferencia entre el total de los valores de Caja y el Total de los valores de las Formas de Pago.</value>
+  </data>
+  <data name="ValorDiferencia" xml:space="preserve">
+    <value>Valor Cambio</value>
+  </data>
+  <data name="CampoEsRequerido" xml:space="preserve">
+    <value>El campo es requerido</value>
+  </data>
+  <data name="DescripcionProducto" xml:space="preserve">
+    <value>Descripción Producto</value>
+  </data>
+  <data name="TooltipDescripcionProducto" xml:space="preserve">
+    <value>Descripción del producto</value>
+  </data>
+  <data name="TooltipValorARecaudar" xml:space="preserve">
+    <value>Valor a recaudar</value>
+  </data>
+  <data name="ValorARecaudar" xml:space="preserve">
+    <value>Valor a Recaudar</value>
+  </data>
+  <data name="CajaNumero" xml:space="preserve">
+    <value>N° Caja</value>
+  </data>
+  <data name="CentroServicio" xml:space="preserve">
+    <value>Centro Servicio</value>
+  </data>
+  <data name="TooltipCaja" xml:space="preserve">
+    <value>Es el Número Caja</value>
+  </data>
+  <data name="TooltipCentroServicio" xml:space="preserve">
+    <value>Es el Centro de Servicio</value>
+  </data>
+  <data name="TooltipDocumento" xml:space="preserve">
+    <value>Es el Documento de Identificacion.</value>
+  </data>
+  <data name="TooltipValorBase" xml:space="preserve">
+    <value>Es la Base con la que se abre la caja</value>
+  </data>
+  <data name="ValorBase" xml:space="preserve">
+    <value>Saldo Inicial</value>
+  </data>
+  <data name="CiudadEstacion" xml:space="preserve">
+    <value>Ciudad Estación</value>
+  </data>
+  <data name="CostoMensualRuta" xml:space="preserve">
+    <value>Costo Mensual Ruta</value>
+  </data>
+  <data name="EmpresaTransportadora" xml:space="preserve">
+    <value>Empresa Transportadora</value>
+  </data>
+  <data name="GeneraManifiesto" xml:space="preserve">
+    <value>Genera Manifiesto Ministerio</value>
+  </data>
+  <data name="IdRuta" xml:space="preserve">
+    <value>Código Ruta</value>
+  </data>
+  <data name="LocalidadDestino" xml:space="preserve">
+    <value>Ciudad Destino</value>
+  </data>
+  <data name="LocalidadOrigen" xml:space="preserve">
+    <value>Ciudad Origen</value>
+  </data>
+  <data name="MedioTransporte" xml:space="preserve">
+    <value>Medio Transporte</value>
+  </data>
+  <data name="MedioTransporteEmpresa" xml:space="preserve">
+    <value>Medio Transporte Empresa</value>
+  </data>
+  <data name="OrdenEnCasillero" xml:space="preserve">
+    <value>Orden Casillero</value>
+  </data>
+  <data name="OrdenEnRuta" xml:space="preserve">
+    <value>Orden en Ruta</value>
+  </data>
+  <data name="PermiteEnganche" xml:space="preserve">
+    <value>Permite Enganche</value>
+  </data>
+  <data name="RequierePrecintoRetorno" xml:space="preserve">
+    <value>Requiere Precinto Retorno</value>
+  </data>
+  <data name="Ruta" xml:space="preserve">
+    <value>Ruta</value>
+  </data>
+  <data name="TiempoParada" xml:space="preserve">
+    <value>Tiempo Parada (minutos)</value>
+  </data>
+  <data name="TiempoViajeDesdeAnterior" xml:space="preserve">
+    <value>Tiempo Viaje Desde Anterior (minutos)</value>
+  </data>
+  <data name="TipoRuta" xml:space="preserve">
+    <value>Tipo Ruta</value>
+  </data>
+  <data name="TipoTransporte" xml:space="preserve">
+    <value>Tipo Transporte</value>
+  </data>
+  <data name="ToolTipCiudadEstacion" xml:space="preserve">
+    <value>Ciudad donde se ubica la estación</value>
+  </data>
+  <data name="ToolTipCostoMensualRuta" xml:space="preserve">
+    <value>Costo mensual de la ruta</value>
+  </data>
+  <data name="ToolTipEmpresaTransportadora" xml:space="preserve">
+    <value>Empresa encargada del transporte</value>
+  </data>
+  <data name="ToolTipGeneraManifiesto" xml:space="preserve">
+    <value>Indica si la ruta genera el manifiesto del ministerio</value>
+  </data>
+  <data name="ToolTipIdRuta" xml:space="preserve">
+    <value>Código de la ruta</value>
+  </data>
+  <data name="ToolTipLocalidadDestino" xml:space="preserve">
+    <value>Ciudad de destino de la ruta</value>
+  </data>
+  <data name="ToolTipLocalidadOrigen" xml:space="preserve">
+    <value>Ciudad de origen de la ruta</value>
+  </data>
+  <data name="ToolTipMedioTransporte" xml:space="preserve">
+    <value>Medio de transporte</value>
+  </data>
+  <data name="ToolTipMedioTransporteEmpresa" xml:space="preserve">
+    <value>Medio de transporte de la empresa</value>
+  </data>
+  <data name="ToolTipOrdenEnCasillero" xml:space="preserve">
+    <value>Orden dentro del casillero</value>
+  </data>
+  <data name="ToolTipOrdenEnRuta" xml:space="preserve">
+    <value>Orden de la estación dentro de la ruta</value>
+  </data>
+  <data name="ToolTipPermiteEnganche" xml:space="preserve">
+    <value>Indica si la estación permite enganche</value>
+  </data>
+  <data name="ToolTipRequierePrecintoRetorno" xml:space="preserve">
+    <value>Indica si la estación requiere el precinto de retorno</value>
+  </data>
+  <data name="ToolTipRuta" xml:space="preserve">
+    <value>Nombre de la ruta</value>
+  </data>
+  <data name="ToolTipTiempoParada" xml:space="preserve">
+    <value>Tiempo de parada en la estación, esta dado en minutos</value>
+  </data>
+  <data name="ToolTipTiempoViajeDesdeAnterior" xml:space="preserve">
+    <value>Tiempo de viaje desde la anterior estación, esta dado en minutos</value>
+  </data>
+  <data name="ToolTipTipoRuta" xml:space="preserve">
+    <value>Tipo de la ruta</value>
+  </data>
+  <data name="ToolTipTipoTransporte" xml:space="preserve">
+    <value>Tipo de transporte</value>
+  </data>
+  <data name="NumeroGuiaInterna" xml:space="preserve">
+    <value>Guía Interna</value>
+  </data>
+  <data name="TipoManifiesto" xml:space="preserve">
+    <value>Tipo del Manifiesto</value>
+  </data>
+  <data name="TooltipManifiesto" xml:space="preserve">
+    <value>Id del Manifiesto</value>
+  </data>
+  <data name="TotalGuias" xml:space="preserve">
+    <value>Total de Guias</value>
+  </data>
+  <data name="TipoVehiculo" xml:space="preserve">
+    <value>Tipo Vehiculo</value>
+  </data>
+  <data name="ToolTipTipoVehiculo" xml:space="preserve">
+    <value>Tipo de vehiculo</value>
+  </data>
+  <data name="TipoIdentificacionReclama" xml:space="preserve">
+    <value>Tipo Id Reclama Giro</value>
+  </data>
+  <data name="AreaInternaOrigen" xml:space="preserve">
+    <value>Área Interna Origen</value>
+  </data>
+  <data name="Descargada" xml:space="preserve">
+    <value>Descargada</value>
+  </data>
+  <data name="NumeroGuia" xml:space="preserve">
+    <value>Número de Guía</value>
+  </data>
+  <data name="TooltipAreaInternaOrigen" xml:space="preserve">
+    <value>Área interna Origen</value>
+  </data>
+  <data name="TooltipNumeroGuia" xml:space="preserve">
+    <value>Número de la guía</value>
+  </data>
+  <data name="TooltipNumeroGuiaInterna" xml:space="preserve">
+    <value>Número de guía interna con el que se envía el manifiesto</value>
+  </data>
+  <data name="TooltipTipoManifiesto" xml:space="preserve">
+    <value>Tipo de acuerdo a las guías a manifestar</value>
+  </data>
+  <data name="Usuario" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Contratista" xml:space="preserve">
+    <value>Contratista</value>
+  </data>
+  <data name="ToolTipContratista" xml:space="preserve">
+    <value>Indica si es contratista(Seleccionado) o Empleado(Sin Seleccionar)</value>
+  </data>
+  <data name="ToolTipFechaIngreso" xml:space="preserve">
+    <value>Fecha de ingreso a la empresa</value>
+  </data>
+  <data name="ToolTipFechaTerminacionContrato" xml:space="preserve">
+    <value>Fecha en la que finaliza el contrato de la persona.</value>
+  </data>
+  <data name="ToolTipFechaVencimientoPase" xml:space="preserve">
+    <value>Fecha en la que vence el pase del conductor.</value>
+  </data>
+  <data name="ToolTipNumeroPase" xml:space="preserve">
+    <value>Número del pase</value>
+  </data>
+  <data name="ToolTipTipoContrato" xml:space="preserve">
+    <value>Tipo de contrato de la persona.</value>
+  </data>
+  <data name="AgenciaDestino" xml:space="preserve">
+    <value>Agencia de Destino</value>
+  </data>
+  <data name="AgenciaOrigen" xml:space="preserve">
+    <value>Agencia de Origen</value>
+  </data>
+  <data name="NombreMensajero" xml:space="preserve">
+    <value>Nombre del mensajero</value>
+  </data>
+  <data name="ToolTipCiudadExpedicionPlaca" xml:space="preserve">
+    <value>Ciudad donde se expidió la placa del vehículo.</value>
+  </data>
+  <data name="CiudadExpedicionPlaca" xml:space="preserve">
+    <value>Ciudad Expedición Placa</value>
+  </data>
+  <data name="CiudadUbicacion" xml:space="preserve">
+    <value>Ciudad Ubicación</value>
+  </data>
+  <data name="ToolTipCiudadTenedor" xml:space="preserve">
+    <value>Ciudad del tenedor del vehículo</value>
+  </data>
+  <data name="ToolTipCiudadUbicacion" xml:space="preserve">
+    <value>Ciudad ubicación del vehículo</value>
+  </data>
+  <data name="ToolTipCiudadPropietario" xml:space="preserve">
+    <value>Ciudad del propietario.</value>
+  </data>
+  <data name="ToolTipTotalIngreso" xml:space="preserve">
+    <value>Es el total que ha ingresado a la Caja.</value>
+  </data>
+  <data name="ToolTipTotalReportar" xml:space="preserve">
+    <value>Es el Total a Reportar por parte de la Caja.</value>
+  </data>
+  <data name="ToolTipTotalTotalEgreso" xml:space="preserve">
+    <value>Es el total que ha egresado de la Caja.</value>
+  </data>
+  <data name="TotalEgreso" xml:space="preserve">
+    <value>Total Egresado</value>
+  </data>
+  <data name="TotalIngreso" xml:space="preserve">
+    <value>Total Ingresado</value>
+  </data>
+  <data name="TotalReportar" xml:space="preserve">
+    <value>Total a Reportar</value>
+  </data>
+  <data name="TipoDestinatario" xml:space="preserve">
+    <value>Tipo Destinatario</value>
+  </data>
+  <data name="TipoRemitente" xml:space="preserve">
+    <value>Tipo Remitente</value>
+  </data>
+  <data name="PendXReportarCajas" xml:space="preserve">
+    <value>Pendiente por Reportar Cajas</value>
+  </data>
+  <data name="ToolTipPendXReportarCajas" xml:space="preserve">
+    <value>Es el valor Pendiente por Reportar de las Cajas</value>
+  </data>
+  <data name="ErrorValidacionColRacolApoyo" xml:space="preserve">
+    <value>El campo Col Racol apoyo es requerido</value>
+  </data>
+  <data name="ErrorValidacionDescripcionRacol" xml:space="preserve">
+    <value>El campo Descripción es requerido</value>
+  </data>
+  <data name="FechaAsignacion" xml:space="preserve">
+    <value>Fecha de asignación</value>
+  </data>
+  <data name="IdPuntoCentroServicio" xml:space="preserve">
+    <value>Cod Punto/Ctr Srv</value>
+  </data>
+  <data name="PuntoCentroServicio" xml:space="preserve">
+    <value>Punto/Ctr Servicio</value>
+  </data>
+  <data name="ToolTipIdPuntoCentroServicio" xml:space="preserve">
+    <value>Es el Id Punto Centro Servicio</value>
+  </data>
+  <data name="ToolTipPuntoCentroServicio" xml:space="preserve">
+    <value>Es el Punto ó Centro de Servicio Asociado</value>
+  </data>
+  <data name="Estadoplanilla" xml:space="preserve">
+    <value>Estado de la planilla</value>
+  </data>
+  <data name="Capacidad" xml:space="preserve">
+    <value>Capacidad</value>
+  </data>
+  <data name="Cilindraje" xml:space="preserve">
+    <value>Cilindraje</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="IdentificacionPropietario" xml:space="preserve">
+    <value>Identificación Propietario</value>
+  </data>
+  <data name="Linea" xml:space="preserve">
+    <value>Linea</value>
+  </data>
+  <data name="Marca" xml:space="preserve">
+    <value>Marca</value>
+  </data>
+  <data name="Modelo" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="ModeloRepotenciado" xml:space="preserve">
+    <value>Modelo Repotenciado</value>
+  </data>
+  <data name="NombreCompleto" xml:space="preserve">
+    <value>Nombre Completo</value>
+  </data>
+  <data name="NombrePropietario" xml:space="preserve">
+    <value>Nombre Propietario</value>
+  </data>
+  <data name="NumeroMotor" xml:space="preserve">
+    <value>NúmeroMotor</value>
+  </data>
+  <data name="NumeroSerie" xml:space="preserve">
+    <value>Número de Serie</value>
+  </data>
+  <data name="PesoBrutoTaraVacio" xml:space="preserve">
+    <value>Peso Bruto Tara Vacio</value>
+  </data>
+  <data name="Placa" xml:space="preserve">
+    <value>Placa</value>
+  </data>
+  <data name="RegistroNacionalCarga" xml:space="preserve">
+    <value>Registro Nacional de Carga</value>
+  </data>
+  <data name="TablaConfiguracionVehiculo" xml:space="preserve">
+    <value>Configuración Vehiculo</value>
+  </data>
+  <data name="TipoCarroceria" xml:space="preserve">
+    <value>Tipo Carrocería</value>
+  </data>
+  <data name="ToolTipCapacidadVehiculo" xml:space="preserve">
+    <value>Capacidad del vehículo</value>
+  </data>
+  <data name="ToolTipCilindraje" xml:space="preserve">
+    <value>Cilindraje del Vehículo</value>
+  </data>
+  <data name="ToolTipColorVehiculo" xml:space="preserve">
+    <value>Color del vehículo</value>
+  </data>
+  <data name="ToolTipEstadoVehiculo" xml:space="preserve">
+    <value>Estado del vehículo</value>
+  </data>
+  <data name="ToolTipLineaVehiculo" xml:space="preserve">
+    <value>Linea del vehículo</value>
+  </data>
+  <data name="ToolTipMarcaVehiculo" xml:space="preserve">
+    <value>Marca del vehículo</value>
+  </data>
+  <data name="ToolTipModeloRepotenciado" xml:space="preserve">
+    <value>Modelo repotenciado del vehículo</value>
+  </data>
+  <data name="ToolTipModeloVehiculo" xml:space="preserve">
+    <value>Modelo del vehículo</value>
+  </data>
+  <data name="ToolTipNombreCompleto" xml:space="preserve">
+    <value>Nombre completo de la persona</value>
+  </data>
+  <data name="ToolTipNumeroMotor" xml:space="preserve">
+    <value>Número del Motor</value>
+  </data>
+  <data name="ToolTipNumeroSerie" xml:space="preserve">
+    <value>Número de serie del vehículo</value>
+  </data>
+  <data name="ToolTipPesoBrutoTaraVacio" xml:space="preserve">
+    <value>Peso bruto tara vacio del vehículo</value>
+  </data>
+  <data name="ToolTipPlaca" xml:space="preserve">
+    <value>Placa del vehículo.</value>
+  </data>
+  <data name="ToolTipRegistroNacionalCarga" xml:space="preserve">
+    <value>Registro nacional de carga del vehículo</value>
+  </data>
+  <data name="ToolTipTablaConfiguracionVehiculo" xml:space="preserve">
+    <value>Configuración del vehículo</value>
+  </data>
+  <data name="ToolTipTipoCarroceria" xml:space="preserve">
+    <value>Tipo de Carrocería</value>
+  </data>
+  <data name="ToolTipTipoContratoVehiculo" xml:space="preserve">
+    <value>Tipo de contrato del vehículo</value>
+  </data>
+  <data name="Aseguradora" xml:space="preserve">
+    <value>Aseguradora</value>
+  </data>
+  <data name="CategoriaLicenciaConducir" xml:space="preserve">
+    <value>Categoria Licencia Conducir</value>
+  </data>
+  <data name="Cobertura" xml:space="preserve">
+    <value>Cobertura</value>
+  </data>
+  <data name="FechaExpedicion" xml:space="preserve">
+    <value>Fecha Expedición</value>
+  </data>
+  <data name="FechaVencimiento" xml:space="preserve">
+    <value>Fecha Vencimiento</value>
+  </data>
+  <data name="NumeroCelular2" xml:space="preserve">
+    <value>Número Celular 2</value>
+  </data>
+  <data name="NumeroLicenciaConducir" xml:space="preserve">
+    <value>Número Licencia Conducir</value>
+  </data>
+  <data name="NumeroPoliza" xml:space="preserve">
+    <value>Número Poliza</value>
+  </data>
+  <data name="TipoPoliza" xml:space="preserve">
+    <value>Tipo Poliza</value>
+  </data>
+  <data name="ToolTipAseguradora" xml:space="preserve">
+    <value>Empresa aseguradora</value>
+  </data>
+  <data name="ToolTipCategoriaLicenciaConducir" xml:space="preserve">
+    <value>Categoria de licencia de conducir</value>
+  </data>
+  <data name="ToolTipCoberturaPoliza" xml:space="preserve">
+    <value>Cobertura de la poliza</value>
+  </data>
+  <data name="ToolTipFechaExpedicionSeguro" xml:space="preserve">
+    <value>Fecha de expedición del seguro</value>
+  </data>
+  <data name="ToolTipFechaExpedicionTecnoMecanica" xml:space="preserve">
+    <value>Fecha de expedición del certificado de la revisión técnico mecánica.</value>
+  </data>
+  <data name="ToolTipFechaVencimientoSeguro" xml:space="preserve">
+    <value>Fecha de vencimiento del seguro</value>
+  </data>
+  <data name="ToolTipFechaVencimientoTecnoMecanica" xml:space="preserve">
+    <value>Fecha en la que vence el certificado de la revisión técnico mecánica.</value>
+  </data>
+  <data name="ToolTipNumeroCelular2" xml:space="preserve">
+    <value>Segundo número de celular </value>
+  </data>
+  <data name="ToolTipNumeroLicenciaConducir" xml:space="preserve">
+    <value>Número de licencia de conducir</value>
+  </data>
+  <data name="ToolTipNumeroPoliza" xml:space="preserve">
+    <value>Número de poliza del seguro</value>
+  </data>
+  <data name="ToolTipTipoContratoPropietario" xml:space="preserve">
+    <value>Tipo de contrato del propietario</value>
+  </data>
+  <data name="ToolTipTipoContratoTenedor" xml:space="preserve">
+    <value>Tipo de contrato del tenedor</value>
+  </data>
+  <data name="ToolTipTipoPoliza" xml:space="preserve">
+    <value>Tipo de poliza de seguros</value>
+  </data>
+  <data name="CodigoVerificacion" xml:space="preserve">
+    <value>Código de Verificación</value>
+  </data>
+  <data name="ComprobantePago" xml:space="preserve">
+    <value>Comprobante de Pago</value>
+  </data>
+  <data name="FechaPago" xml:space="preserve">
+    <value>Fecha de Pago</value>
+  </data>
+  <data name="ToolTipCodigoVerificacion" xml:space="preserve">
+    <value>Código de Verificación</value>
+  </data>
+  <data name="ToolTipComprobantePago" xml:space="preserve">
+    <value>Comprobante de Pago</value>
+  </data>
+  <data name="ToolTipFechaPago" xml:space="preserve">
+    <value>Fecha de Pago</value>
+  </data>
+  <data name="ToolTipUsuarioPago" xml:space="preserve">
+    <value>Usuario Pago</value>
+  </data>
+  <data name="UsuarioPago" xml:space="preserve">
+    <value>Usuario Pago</value>
+  </data>
+  <data name="BaseInicial" xml:space="preserve">
+    <value>Base Inicial</value>
+  </data>
+  <data name="ComisionAgenciaPunto" xml:space="preserve">
+    <value>Comisión Agencia/Punto</value>
+  </data>
+  <data name="ComisionEmpresa" xml:space="preserve">
+    <value>Comisión Empresa</value>
+  </data>
+  <data name="ComisionResponsable" xml:space="preserve">
+    <value>Comisión Agencia/RACOL</value>
+  </data>
+  <data name="FechaCierreCaja" xml:space="preserve">
+    <value>Ultimo Cierre</value>
+  </data>
+  <data name="SaldoAnteriorEfectivo" xml:space="preserve">
+    <value>Saldo Anterior Efectivo</value>
+  </data>
+  <data name="SaldoFinalEfectivo" xml:space="preserve">
+    <value>Saldo Final Efectivo</value>
+  </data>
+  <data name="ToolTipBaseInicial" xml:space="preserve">
+    <value>Es la Base Inicial con la que se abre la Caja.</value>
+  </data>
+  <data name="ToolTipComisionAgenciaPunto" xml:space="preserve">
+    <value>Es la comisión que le corresponde a la agencia ó punto de venta por la venta de un servicio.</value>
+  </data>
+  <data name="ToolTipComisionEmpresa" xml:space="preserve">
+    <value>Es la comisión que le corresponde a la empresa por la venta de un servicio.</value>
+  </data>
+  <data name="ToolTipComisionResponsable" xml:space="preserve">
+    <value>Es la comisión que le corresponde a la agencia ó RACOL de venta por la venta de su agencia ó punto a cargo.</value>
+  </data>
+  <data name="ToolTipFechaCierreCaja" xml:space="preserve">
+    <value>Es la fecha en la que se cerro la caja </value>
+  </data>
+  <data name="ToolTipIngresosOtrasFormas" xml:space="preserve">
+    <value>Es el total de los ingresos de otras formas</value>
+  </data>
+  <data name="ToolTipSaldoAnteriorEfectivo" xml:space="preserve">
+    <value>Es el Saldo Anterior del efectivo del cierre.</value>
+  </data>
+  <data name="ToolTipSaldoFinalEfectivo" xml:space="preserve">
+    <value>Es el saldo final en efectivo es la resta del Total de ingresos en efectivo menos el total de egresos en efectivo</value>
+  </data>
+  <data name="ToolTipTotalEgresosEfectivo" xml:space="preserve">
+    <value>Es el total de los egresos en efectivo.</value>
+  </data>
+  <data name="ToolTipTotalEgresosOtrasFormas" xml:space="preserve">
+    <value>Es el total de los egresos de otras formas</value>
+  </data>
+  <data name="ToolTipTotalIngresosEfectivo" xml:space="preserve">
+    <value>Es el total de los ingresos en efectivo.</value>
+  </data>
+  <data name="ToolTipUsuarioCierraPunto" xml:space="preserve">
+    <value>Es el usuario que efectua el Cierre de la caja del punto.</value>
+  </data>
+  <data name="TotalEgresosEfectivo" xml:space="preserve">
+    <value>Total Egresos Efectivo</value>
+  </data>
+  <data name="TotalEgresosOtrasFormas" xml:space="preserve">
+    <value>Total Egresos Otras Formas</value>
+  </data>
+  <data name="TotalIngresosEfectivo" xml:space="preserve">
+    <value>Total Ingresos Efectivo</value>
+  </data>
+  <data name="TotalIngresosOtrasFormas" xml:space="preserve">
+    <value>Total Ingresos Otras Formas</value>
+  </data>
+  <data name="UsuarioCierraPunto" xml:space="preserve">
+    <value>Ultimo Cierre Realizado por:</value>
+  </data>
+  <data name="ManifiestoAuto" xml:space="preserve">
+    <value>Automatico</value>
+  </data>
+  <data name="IdManifiesto" xml:space="preserve">
+    <value>Id Manifiesto</value>
+  </data>
+  <data name="NombreUsuario" xml:space="preserve">
+    <value>Nombre Usuario</value>
+  </data>
+  <data name="ToolTipNombreUsuario" xml:space="preserve">
+    <value>Es el nombre del Usuario de que esta logueado en la aplicación.</value>
+  </data>
+  <data name="TipoCliente" xml:space="preserve">
+    <value>Tipo de cliente</value>
+  </data>
+  <data name="BaseComision" xml:space="preserve">
+    <value>Base Comisión</value>
+  </data>
+  <data name="Cantidad" xml:space="preserve">
+    <value>Cantidad</value>
+  </data>
+  <data name="Egreso" xml:space="preserve">
+    <value>Egreso</value>
+  </data>
+  <data name="Ingreso" xml:space="preserve">
+    <value>Ingreso</value>
+  </data>
+  <data name="ToolTipBaseComision" xml:space="preserve">
+    <value>Es la Base de la Comisión para los porcentajes de </value>
+  </data>
+  <data name="ToolTipEgreso" xml:space="preserve">
+    <value>Son los Egresos de la Caja</value>
+  </data>
+  <data name="ToolTipIngreso" xml:space="preserve">
+    <value>Son los Ingresos de la Caja</value>
+  </data>
+  <data name="FechaDescargue" xml:space="preserve">
+    <value>Fecha de Descargue</value>
+  </data>
+  <data name="ToolTipTotalAEmpresa" xml:space="preserve">
+    <value>Es el valor que se debe a Inter Rapidisimo</value>
+  </data>
+  <data name="TotalAEmpresa" xml:space="preserve">
+    <value>Debe a Inter Rapidisimo</value>
+  </data>
+  <data name="TooltipFechaCreacion" xml:space="preserve">
+    <value>Fecha de creación de la guía</value>
+  </data>
+  <data name="tooltipFechaDescargue" xml:space="preserve">
+    <value>Fecha de inicio del descargue de la guía</value>
+  </data>
+  <data name="NombreCliente" xml:space="preserve">
+    <value>Nombre del cliente</value>
+  </data>
+  <data name="TipoComision" xml:space="preserve">
+    <value>Tipo Comisión</value>
+    <comment>Tipo de comisión</comment>
+  </data>
+  <data name="TipoServicio" xml:space="preserve">
+    <value>Tipo Servicio</value>
+    <comment>Tipo de servicio</comment>
+  </data>
+  <data name="ToolTipTipoComision" xml:space="preserve">
+    <value>Tipo de comisión</value>
+  </data>
+  <data name="FechaRecogida" xml:space="preserve">
+    <value>Fecha de recogida</value>
+  </data>
+  <data name="FechaSolicitud" xml:space="preserve">
+    <value>Fecha de solicitud</value>
+  </data>
+  <data name="Recogida" xml:space="preserve">
+    <value>Número recogida</value>
+  </data>
+  <data name="CantidadEnvios" xml:space="preserve">
+    <value>Cantidad de envíos</value>
+  </data>
+  <data name="PesoAproximado" xml:space="preserve">
+    <value>Peso aproximado</value>
+  </data>
+  <data name="ToolTipEstadoRuta" xml:space="preserve">
+    <value>Estado de la Ruta</value>
+  </data>
+  <data name="NombreRuta" xml:space="preserve">
+    <value>Nombre Ruta</value>
+  </data>
+  <data name="NumeroAsociadoFormaPago" xml:space="preserve">
+    <value>Número Asociado</value>
+  </data>
+  <data name="ToolTipNumeroAsociado" xml:space="preserve">
+    <value>Es el número asociado a la transaccion puede ser un numero de un PinPrepago,
+N° Cheque ó Consignación</value>
+  </data>
+  <data name="TooltipUbicacionActual" xml:space="preserve">
+    <value>Indica la Ubicación actual del envío</value>
+  </data>
+  <data name="UbicacionActual" xml:space="preserve">
+    <value>Ubicación actual</value>
+  </data>
+  <data name="PersonaRecepciono" xml:space="preserve">
+    <value>Quién recepciono la recogida</value>
+  </data>
+  <data name="MotivoReprogramacion" xml:space="preserve">
+    <value>Motivo reprogramación</value>
+  </data>
+  <data name="PersonaSolicita" xml:space="preserve">
+    <value>Persona que solicita</value>
+  </data>
+  <data name="Reportada" xml:space="preserve">
+    <value>Reportada</value>
+  </data>
+  <data name="TooTipValorReal" xml:space="preserve">
+    <value>Es el valor Real Recibido</value>
+  </data>
+  <data name="ValorReal" xml:space="preserve">
+    <value>Valor Real</value>
+  </data>
+  <data name="TotalEnvios" xml:space="preserve">
+    <value>Total de envíos</value>
+  </data>
+  <data name="GeneraConsolidado" xml:space="preserve">
+    <value>Genera Consolidado</value>
+  </data>
+  <data name="ToolTipGeneraConsolidado" xml:space="preserve">
+    <value>Indica si la localidad genera consolidado</value>
+  </data>
+  <data name="TooltipPieza" xml:space="preserve">
+    <value>Contiene el número de la pieza que se está admitiendo</value>
+  </data>
+  <data name="TipoObsevPunto" xml:space="preserve">
+    <value>Tipo Observación</value>
+  </data>
+  <data name="ToolTipTipoObsevPunto" xml:space="preserve">
+    <value>Es el tipo de Observacion del punto frente recibo de Dinero por parte de la agencia</value>
+  </data>
+  <data name="FechaProgramacion" xml:space="preserve">
+    <value>Fecha de programación</value>
+  </data>
+  <data name="FechaReporte" xml:space="preserve">
+    <value>Fecha de reporte</value>
+  </data>
+  <data name="FechaRecoleccion" xml:space="preserve">
+    <value>Fecha Recolección</value>
+  </data>
+  <data name="TootipFechaRecoleccion" xml:space="preserve">
+    <value>Es la fecha en la que se realizo la recolección </value>
+  </data>
+  <data name="TotalReportado" xml:space="preserve">
+    <value>Total Reportado</value>
+  </data>
+  <data name="Cedula" xml:space="preserve">
+    <value>Cédula</value>
+  </data>
+  <data name="ToolTipValorFormaPago" xml:space="preserve">
+    <value>Valor de la Forma de Pago</value>
+  </data>
+  <data name="CodigoPuntoCliente" xml:space="preserve">
+    <value>Código del punto o cliente</value>
+  </data>
+  <data name="ValorVentasMensajero" xml:space="preserve">
+    <value>Valor Reportado x Ventas</value>
+  </data>
+  <data name="Suministro" xml:space="preserve">
+    <value>Suministro</value>
+  </data>
+  <data name="ToolTipSuministro" xml:space="preserve">
+    <value>Suministro</value>
+  </data>
+  <data name="QuienSolicita" xml:space="preserve">
+    <value>Quien Solicita</value>
+  </data>
+  <data name="ToolTipQuienSolicita" xml:space="preserve">
+    <value>Quien solicita la modificación</value>
+  </data>
+  <data name="TipoRecogida" xml:space="preserve">
+    <value>Tipo de recogida</value>
+  </data>
+  <data name="ValorAlCobro" xml:space="preserve">
+    <value>Valor al Cobro</value>
+  </data>
+  <data name="Saldo" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="GiroTransmitido" xml:space="preserve">
+    <value>Giro Transmitido</value>
+  </data>
+  <data name="MotivoDescargue" xml:space="preserve">
+    <value>Motivo descargue</value>
+  </data>
+  <data name="ErrorValidacionCiudadDestino" xml:space="preserve">
+    <value>La ciudad de destino es requerida</value>
+  </data>
+  <data name="ErrorValidacionCiudadOrigen" xml:space="preserve">
+    <value>La ciudad de origen es requerida</value>
+  </data>
+  <data name="MotivoApertura" xml:space="preserve">
+    <value>Motivo apertura</value>
+  </data>
+  <data name="FechaActualizacion" xml:space="preserve">
+    <value>Fecha Ultimo descuento Pin Prepago</value>
+  </data>
+  <data name="PinPrepago" xml:space="preserve">
+    <value>Pin Prepago</value>
+  </data>
+  <data name="TootipPinPrepago" xml:space="preserve">
+    <value>Es el Numero del Pin Prepago</value>
+  </data>
+  <data name="TooltipNumeroGuiaRe" xml:space="preserve">
+    <value>Número de la guía a consultar</value>
+  </data>
+  <data name="FechaAdmision" xml:space="preserve">
+    <value>Fecha Admisión</value>
+  </data>
+  <data name="FechaTransaccion" xml:space="preserve">
+    <value>Fecha Transacción</value>
+  </data>
+  <data name="Conductores" xml:space="preserve">
+    <value>Conductores</value>
+  </data>
+  <data name="Caja" xml:space="preserve">
+    <value>Caja</value>
+  </data>
+  <data name="DatosEdicion" xml:space="preserve">
+    <value>Datos de Edición</value>
+  </data>
+  <data name="DatosEntrega" xml:space="preserve">
+    <value>Datos de Entrega</value>
+  </data>
+  <data name="EstadoGuia" xml:space="preserve">
+    <value>Estado de la Guía</value>
+  </data>
+  <data name="Lote" xml:space="preserve">
+    <value>Lote</value>
+  </data>
+  <data name="Posicion" xml:space="preserve">
+    <value>Posición</value>
+  </data>
+  <data name="ToolTipDatosEdicion" xml:space="preserve">
+    <value>Nivel para saber si los datos impresos son entendibles</value>
+  </data>
+  <data name="ToolTipDatosEntrega" xml:space="preserve">
+    <value>Nivel para saber si los datos escritos son entendibles</value>
+  </data>
+  <data name="ToolTipEstadoGuia" xml:space="preserve">
+    <value>Estado de la Guía de Mensajería</value>
+  </data>
+  <data name="CreadoPor" xml:space="preserve">
+    <value>Creado por</value>
+  </data>
+  <data name="NumeroIntentoTransmision" xml:space="preserve">
+    <value>Numero Intento Transmisión</value>
+  </data>
+  <data name="ResultadoTransmision" xml:space="preserve">
+    <value>Resultado Transmisión</value>
+  </data>
+  <data name="ToolTipCreadoPor" xml:space="preserve">
+    <value>Usuario que realizo la creación</value>
+  </data>
+  <data name="ToolTipFechaGracion" xml:space="preserve">
+    <value>Fecha de Grabación</value>
+  </data>
+  <data name="ToolTipNumIntentoTransmision" xml:space="preserve">
+    <value>Numero Intento Transmisión</value>
+  </data>
+  <data name="ToolTipResultadoTransmision" xml:space="preserve">
+    <value>Resultado del intento de transmisión del giro TRA(Transmitido)-FAL(Fallido)</value>
+  </data>
+  <data name="TooltipFechaRangoMes" xml:space="preserve">
+    <value>Esta fecha es por rango de mes, apartir de la fecha seleccionada trae los registros encontrados en el mes</value>
+  </data>
+  <data name="Hora" xml:space="preserve">
+    <value>Hora</value>
+  </data>
+  <data name="ToolTipHora" xml:space="preserve">
+    <value>Hora de la Entrega</value>
+  </data>
+  <data name="GuiaConsolidado" xml:space="preserve">
+    <value>Guía Consolidado</value>
+  </data>
+  <data name="NumeroConsolidado" xml:space="preserve">
+    <value>Número del consolidado</value>
+  </data>
+  <data name="NumeroManifiesto" xml:space="preserve">
+    <value>Número de manifiesto</value>
+  </data>
+  <data name="DetalleConsolidado" xml:space="preserve">
+    <value>Detalle de consolidado</value>
+  </data>
+  <data name="NumeroPrecinto" xml:space="preserve">
+    <value>Número de Precinto </value>
+  </data>
+  <data name="NumTulaContendedor" xml:space="preserve">
+    <value>Núm. tula o contenedor</value>
+  </data>
+  <data name="TipoConsolidado" xml:space="preserve">
+    <value>Tipo de consolidado</value>
+  </data>
+  <data name="Novedad" xml:space="preserve">
+    <value>Novedad</value>
+  </data>
+  <data name="EstadoEmpaque" xml:space="preserve">
+    <value>Estado del empaque</value>
+  </data>
+  <data name="Gestiones" xml:space="preserve">
+    <value>No. Gestiones</value>
+  </data>
+  <data name="NombreConductor" xml:space="preserve">
+    <value>Nombre del Conductor</value>
+  </data>
+  <data name="TooltipNombreConductor" xml:space="preserve">
+    <value>Nombre del Conductor</value>
+  </data>
+  <data name="Mensajero" xml:space="preserve">
+    <value>Mensajero</value>
+  </data>
+  <data name="DetalleTipoConsolidado" xml:space="preserve">
+    <value>Detalle tipo consolidado</value>
+  </data>
+  <data name="FechaGestion" xml:space="preserve">
+    <value>Fecha de la gestión</value>
+  </data>
+  <data name="NoGestion" xml:space="preserve">
+    <value>Número de la gestión</value>
+  </data>
+  <data name="Parentesco" xml:space="preserve">
+    <value>Parentesco</value>
+  </data>
+  <data name="ResultadoGestion" xml:space="preserve">
+    <value>Resultado de la gestión</value>
+  </data>
+  <data name="ToolTipFechaGestion" xml:space="preserve">
+    <value>Fecha y hora en la cual se realizo la gestión</value>
+  </data>
+  <data name="ToolTipNoGestion" xml:space="preserve">
+    <value>Número identificador de la gestión en telemercadeo</value>
+  </data>
+  <data name="ToolTipParentesco" xml:space="preserve">
+    <value>Parentesco familiar</value>
+  </data>
+  <data name="ToolTipResultadoGestion" xml:space="preserve">
+    <value>Descripción del resultado de la gestión de telemercadeo</value>
+  </data>
+  <data name="ToolTipUsuarioGestion" xml:space="preserve">
+    <value>Usuario que gestiono</value>
+  </data>
+  <data name="Contesta" xml:space="preserve">
+    <value>Persona que contesta</value>
+  </data>
+  <data name="ToolTipContesta" xml:space="preserve">
+    <value>Persona que contesta la gestión</value>
+  </data>
+  <data name="TelefonoMarcado" xml:space="preserve">
+    <value>Teléfono Marcado</value>
+  </data>
+  <data name="TotalEnviosManifestados" xml:space="preserve">
+    <value>Total de envíos manifestados</value>
+  </data>
+  <data name="TotalEnviosPendientes" xml:space="preserve">
+    <value>Total de envíos pendientes</value>
+  </data>
+  <data name="TotalEnviosSobrantes" xml:space="preserve">
+    <value>Total de envíos sobrantes</value>
+  </data>
+  <data name="CiudadRadicacion" xml:space="preserve">
+    <value>Ciudad de radicación</value>
+  </data>
+  <data name="DireccionRadic" xml:space="preserve">
+    <value>Dirección de Radicación</value>
+  </data>
+  <data name="ToolTipCiudadRadicacion" xml:space="preserve">
+    <value>Ciudad de radicación de la factura</value>
+  </data>
+  <data name="TooltipDireccionRadic" xml:space="preserve">
+    <value>Dirección de Radicación de la factura</value>
+  </data>
+  <data name="TotalImpuestos" xml:space="preserve">
+    <value>Total Impuestos</value>
+  </data>
+  <data name="ValorUnitario" xml:space="preserve">
+    <value>Valor Unitario</value>
+  </data>
+  <data name="NumeroPrecintoRetorno" xml:space="preserve">
+    <value>Número precinto retorno</value>
+  </data>
+  <data name="NumeroPrecintoSalida" xml:space="preserve">
+    <value>Número precinto salida</value>
+  </data>
+  <data name="ToolTipServicioFac" xml:space="preserve">
+    <value>Servicio al que se asocia el concepto</value>
+  </data>
+  <data name="ToolTipSucursalFac" xml:space="preserve">
+    <value>Sucursal a la que se asocia el concepto</value>
+  </data>
+  <data name="TotalNeto" xml:space="preserve">
+    <value>Total Neto</value>
+  </data>
+  <data name="EmailNoValido" xml:space="preserve">
+    <value>Dirección email no válida</value>
+  </data>
+  <data name="ValorAdicionales" xml:space="preserve">
+    <value>V. Adicionales</value>
+  </data>
+  <data name="ValorAsegurado" xml:space="preserve">
+    <value>V. Asegurado</value>
+  </data>
+  <data name="ValorEmpaque" xml:space="preserve">
+    <value>V. Empaque</value>
+  </data>
+  <data name="ValorTransporte" xml:space="preserve">
+    <value>Valor del transporte</value>
+  </data>
+  <data name="AreaInternaDestino" xml:space="preserve">
+    <value>Área Interna Destino</value>
+  </data>
+  <data name="TooltipAreaInternaDestino" xml:space="preserve">
+    <value>Área Interna Destino</value>
+  </data>
+  <data name="TipoEmpaque" xml:space="preserve">
+    <value>Tipo de Empaque</value>
+  </data>
+  <data name="TooltipTipoEmpaque" xml:space="preserve">
+    <value>Tipo de empaque a utilizar para el envío internacional</value>
+  </data>
+  <data name="CedulaConductor" xml:space="preserve">
+    <value>Cedula Conductor</value>
+  </data>
+  <data name="Conductor" xml:space="preserve">
+    <value>Conductor</value>
+  </data>
+  <data name="RutaDespacho" xml:space="preserve">
+    <value>Ruta Despacho</value>
+  </data>
+  <data name="ToolTipCedulaConductor" xml:space="preserve">
+    <value>Cedula del conductor</value>
+  </data>
+  <data name="ToolTipRutaDespacho" xml:space="preserve">
+    <value>Ruta de despacho del manifiesto</value>
+  </data>
+  <data name="NumeroOperacion" xml:space="preserve">
+    <value>No. Operación</value>
+  </data>
+  <data name="CuentaBancaria" xml:space="preserve">
+    <value>Cuenta Bancaria</value>
+  </data>
+  <data name="TooltipCuentaBancaria" xml:space="preserve">
+    <value>Es el Número de la Cuenta Bancaria</value>
+  </data>
+  <data name="ValorPagado" xml:space="preserve">
+    <value>V. Pagado</value>
+  </data>
+  <data name="FechaConsulta" xml:space="preserve">
+    <value>Fecha Consulta</value>
+  </data>
+  <data name="ToolTipFechaConsulta" xml:space="preserve">
+    <value>Es la fecha a realizar la Consulta</value>
+  </data>
+  <data name="NumeroFinal" xml:space="preserve">
+    <value>Numero Final:</value>
+  </data>
+  <data name="NumeroInicial" xml:space="preserve">
+    <value>Numero Inicial:</value>
+  </data>
+  <data name="CiudadManifestar" xml:space="preserve">
+    <value>Ciudad a Manifestar</value>
+  </data>
+  <data name="TooltipCiudadManifestar" xml:space="preserve">
+    <value>Ciudad a Manifestar</value>
+  </data>
+  <data name="NumeroPrecintoVehiculo" xml:space="preserve">
+    <value>Número de precinto Vehículo.</value>
+  </data>
+  <data name="TooltipNumPrecintoVehiculo" xml:space="preserve">
+    <value>Número de precinto Vehículo.</value>
+  </data>
+  <data name="FechaEntrega" xml:space="preserve">
+    <value>Fecha de Entrega</value>
+  </data>
+  <data name="HoraEntrega" xml:space="preserve">
+    <value>Hora de Entrega</value>
+  </data>
+  <data name="ToolTipFechaEntrega" xml:space="preserve">
+    <value>Fecha de entrega de la guía.</value>
+  </data>
+  <data name="ToolTipHoraEntrega" xml:space="preserve">
+    <value>Hora de entrega de la guía.</value>
+  </data>
+  <data name="NumeroManifiestoCarga" xml:space="preserve">
+    <value>Número de manifiesto Carga</value>
+  </data>
+  <data name="ToolTipNumManifiestoCarga" xml:space="preserve">
+    <value>Número de manifiesto Carga</value>
+  </data>
+  <data name="MotivoEliminacion" xml:space="preserve">
+    <value>Motivo Eliminación</value>
+  </data>
+  <data name="ToolTipMotivoEliminacionGuia" xml:space="preserve">
+    <value>Motivo de eliminación de la guia</value>
+  </data>
+  <data name="CiudadDespachoManifiesto" xml:space="preserve">
+    <value>Ciudad Despacho</value>
+  </data>
+  <data name="ToolTipCiudadDespachoManifiesto" xml:space="preserve">
+    <value>Ciudad de despacho del manifiesto</value>
+  </data>
+  <data name="MotivoAnulacion" xml:space="preserve">
+    <value>Motivo Anulación</value>
+  </data>
+  <data name="ToolTipMotivoAnulacion" xml:space="preserve">
+    <value>Motivo de anulación de la guía.</value>
+  </data>
+  <data name="PuntosAgenciasDepen" xml:space="preserve">
+    <value>Puntos y Agencias Dependientes</value>
+  </data>
+  <data name="ToolTipTotalReportarEfectivo" xml:space="preserve">
+    <value>Es el dinero a reportar recibido por el cajero en Efectivo.</value>
+  </data>
+  <data name="TotalReportarEfectivo" xml:space="preserve">
+    <value>Total a Reportar en Efectivo</value>
+  </data>
+  <data name="ToolTipNumeroOperacion" xml:space="preserve">
+    <value>Es el número con el que se registra la operación</value>
+  </data>
+  <data name="Adjuntos" xml:space="preserve">
+    <value>Archivos Adjuntos</value>
+  </data>
+  <data name="TooltipAdjuntos" xml:space="preserve">
+    <value>Archivos adjuntos para la devolución</value>
+  </data>
+  <data name="FechaCorte" xml:space="preserve">
+    <value>Fecha Corte</value>
+  </data>
+  <data name="TotalDeducciones" xml:space="preserve">
+    <value>Total deducciones</value>
+  </data>
+  <data name="TotalPagos" xml:space="preserve">
+    <value>Total pagos</value>
+  </data>
+  <data name="EntradaSalida" xml:space="preserve">
+    <value>Entrada/Salida</value>
+  </data>
+  <data name="ToolTipEntradaSalidaTransportador" xml:space="preserve">
+    <value>Indica si un transportador esta entrando o saliendo</value>
+  </data>
+  <data name="SaldoAcumuladoCaja" xml:space="preserve">
+    <value>Saldo acumulado en caja</value>
+  </data>
+  <data name="TotalFavorAgencia" xml:space="preserve">
+    <value>Total a favor de la Agencia </value>
+  </data>
+  <data name="TotalFavorInter" xml:space="preserve">
+    <value>Total a favor de Interrapidisimo</value>
+  </data>
+  <data name="DiasHabiles" xml:space="preserve">
+    <value>Días hábiles</value>
+  </data>
+  <data name="ValorComision" xml:space="preserve">
+    <value>Valor comisión</value>
+  </data>
+  <data name="Retencion" xml:space="preserve">
+    <value>Retención</value>
+  </data>
+  <data name="Aprobada" xml:space="preserve">
+    <value>Aprobada</value>
+  </data>
+  <data name="FechaAprobacion" xml:space="preserve">
+    <value>Fecha de aprobación</value>
+  </data>
+  <data name="FechaLiquidacion" xml:space="preserve">
+    <value>Fecha liquidación</value>
+  </data>
+  <data name="IdLiquidacion" xml:space="preserve">
+    <value>Id liquidación</value>
+  </data>
+  <data name="UsuarioAprobacion" xml:space="preserve">
+    <value>Usuario aprobación</value>
+  </data>
+  <data name="ClienteConvenio" xml:space="preserve">
+    <value>Cliente Convenio</value>
+  </data>
+  <data name="PermiteDispersion" xml:space="preserve">
+    <value>Permite realizar Dispersión de Fondos</value>
+  </data>
+  <data name="PermiteGiroConvenio" xml:space="preserve">
+    <value>Permite realizar giros Convenio.</value>
+  </data>
+  <data name="TooltipPermiteDispersion" xml:space="preserve">
+    <value>El contrato permite que el Cliente Convenio pueda realizar giros a es Naturales</value>
+  </data>
+  <data name="TooltipPermiteGiroConvenio" xml:space="preserve">
+    <value>El contrato permite que los  Clientes Naturales puedan realizar giros  al iente Convenio.</value>
+  </data>
+  <data name="FechaEjecucion" xml:space="preserve">
+    <value>Fecha de ejecución</value>
+  </data>
+  <data name="PesoVolumetricoCorto" xml:space="preserve">
+    <value>Peso Vol.</value>
+  </data>
+  <data name="TooltipFechaAdmision" xml:space="preserve">
+    <value>Fecha de admisión del envío</value>
+  </data>
+  <data name="TooltipValorAdicionales" xml:space="preserve">
+    <value>Valores adicionales asociados al envío</value>
+  </data>
+  <data name="TooltipValorTransporte" xml:space="preserve">
+    <value>Valor de la admisión del envío</value>
+  </data>
+  <data name="CertificacionFechaEntrega" xml:space="preserve">
+    <value>Fecha y Hora</value>
+  </data>
+  <data name="CertificacionIdentificacion" xml:space="preserve">
+    <value>Cédula</value>
+  </data>
+  <data name="CertificacionOtros" xml:space="preserve">
+    <value>Otros</value>
+  </data>
+  <data name="CertificacionRecibidoPor" xml:space="preserve">
+    <value>Recibido Por</value>
+  </data>
+  <data name="CertificacionTelefono" xml:space="preserve">
+    <value>Teléfono</value>
+  </data>
+  <data name="TooltipCertificacionFechaEntrega" xml:space="preserve">
+    <value>Fecha y hora de recibido registrada en la guía</value>
+  </data>
+  <data name="TooltipCertificacionIdentificacion" xml:space="preserve">
+    <value>Cédula o identificación de quien recibió el envío</value>
+  </data>
+  <data name="TooltipCertificacionOtros" xml:space="preserve">
+    <value>Registrar otras posibles formas de recibido del envío (Placa Guarda de Seguridad)</value>
+  </data>
+  <data name="TooltipCertificacionRecibidoPor" xml:space="preserve">
+    <value>Nombre de la empresa o persona que recibe o sello de recibido</value>
+  </data>
+  <data name="TooltipCertificacionTelefono" xml:space="preserve">
+    <value>Número de teléfono de quien recibe el envío</value>
+  </data>
+  <data name="AgenciaPunto" xml:space="preserve">
+    <value>Agencia / Punto</value>
+  </data>
+  <data name="CantidadAgencias" xml:space="preserve">
+    <value>Cantidad de agencias</value>
+  </data>
+  <data name="FechaGrabacion" xml:space="preserve">
+    <value>Fecha grabación</value>
+  </data>
+  <data name="IdProgramacion" xml:space="preserve">
+    <value>Id programación</value>
+  </data>
+  <data name="MotivoEntrega" xml:space="preserve">
+    <value>Motivo</value>
+  </data>
+  <data name="TooltipMotivoEntrega" xml:space="preserve">
+    <value>Motivo de Entrega</value>
+  </data>
+  <data name="Novedades" xml:space="preserve">
+    <value>Novedades: </value>
+  </data>
+  <data name="PagaGiros" xml:space="preserve">
+    <value>Permite realizar el  pago de giros:</value>
+  </data>
+  <data name="RecibeGiros" xml:space="preserve">
+    <value>Permite realizar la venta de giros:</value>
+  </data>
+  <data name="TooltipTopeMaximoGiros" xml:space="preserve">
+    <value>Indica el Tope maximo de dinero en venta de giros permitido para una Agencia o PS</value>
+  </data>
+  <data name="TooltipTopeMaximoPagos" xml:space="preserve">
+    <value>Indica el Tope maximo de dinero en pagos de giros permitido para una Agencia o PS</value>
+  </data>
+  <data name="TopeMaximoGiros" xml:space="preserve">
+    <value>Tope Maximo Giros</value>
+  </data>
+  <data name="TopeMaximoPagos" xml:space="preserve">
+    <value>Tope Maximo Pagos</value>
+  </data>
+  <data name="ClasificacionPorIngresos" xml:space="preserve">
+    <value>Clasificación por Ingresos</value>
+  </data>
+  <data name="IdCiudadDestino" xml:space="preserve">
+    <value>Código Ciudad de Destino</value>
+  </data>
+  <data name="IdCiudadOrigen" xml:space="preserve">
+    <value>Código Ciudad de Origen</value>
+  </data>
+  <data name="IdUbicacionActual" xml:space="preserve">
+    <value>Código Ubicación actual</value>
+  </data>
+  <data name="TooltipIdCiudadOrigen" xml:space="preserve">
+    <value>Código de la ciudad de origen desde la cual se hace el envío</value>
+  </data>
+  <data name="ToolTipIdLocalidadDestino" xml:space="preserve">
+    <value>Código de la Ciudad de destino de la ruta</value>
+  </data>
+  <data name="TooltipIdUbicacionActual" xml:space="preserve">
+    <value>Indica el código de la Ubicación actual del envío</value>
+  </data>
+  <data name="TooltipNumeroFactura" xml:space="preserve">
+    <value>Número Factura</value>
+  </data>
+  <data name="TooltipUsuarioLiquidacion" xml:space="preserve">
+    <value>Usuario que realizo la Liquidación</value>
+  </data>
+  <data name="TipoOperacion" xml:space="preserve">
+    <value>Tipo Operación</value>
+  </data>
+  <data name="TooltipTipoOperacion" xml:space="preserve">
+    <value>Tipo Operación</value>
+  </data>
+  <data name="ValorFlete" xml:space="preserve">
+    <value>Valor  Porte</value>
+  </data>
+  <data name="ToolTipCiudadConductor" xml:space="preserve">
+    <value>Ciudad del conductor</value>
+  </data>
+  <data name="ToolTipCargo" xml:space="preserve">
+    <value>Cargo de la persona dentro de la compañia</value>
+  </data>
+  <data name="TooltipNombreCentroServicioOrigen" xml:space="preserve">
+    <value>Nombre del centro de servicio origen del envío</value>
+  </data>
+  <data name="DescripcionCsOrigen" xml:space="preserve">
+    <value>Cód Origen - Agencia / Punto / Mensajero</value>
+  </data>
+  <data name="TooltipDescripcionCsOrigen" xml:space="preserve">
+    <value>Código y nombre de la agencia, punto o mensajero</value>
+  </data>
+  <data name="CentroLogistico" xml:space="preserve">
+    <value>Centro logístico</value>
+  </data>
+  <data name="ProgramacionLiquidacion" xml:space="preserve">
+    <value>Programación liquidación</value>
+  </data>
+  <data name="NombreAgencia" xml:space="preserve">
+    <value>Nombre Agencia</value>
+  </data>
+  <data name="Zona" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="IdNovedad" xml:space="preserve">
+    <value>Id novedad</value>
+  </data>
+  <data name="TipoNovedad" xml:space="preserve">
+    <value>Tipo de novedad</value>
+  </data>
+  <data name="AplicadaPR" xml:space="preserve">
+    <value>Aplicada en PR</value>
+  </data>
+  <data name="FechaAplicacionPR" xml:space="preserve">
+    <value>Fecha aplicación</value>
+  </data>
+  <data name="ValorAdmision" xml:space="preserve">
+    <value>Valor Transporte</value>
+  </data>
+  <data name="TooltipTotalIngresoCaja" xml:space="preserve">
+    <value>Indica el valor total que se debe ingresar a caja (sumatoria valor del giro + porte + servicios + impuestos)</value>
+  </data>
+  <data name="TotalIngresoCaja" xml:space="preserve">
+    <value>Total Ingreso Caja</value>
+  </data>
+  <data name="TooltipValorTotalServicio" xml:space="preserve">
+    <value>Valor total del servicio</value>
+  </data>
+  <data name="ValorTotalServicio" xml:space="preserve">
+    <value>Valor Total del Servicio</value>
+  </data>
+  <data name="TooltipTotalValoresAdicionales" xml:space="preserve">
+    <value>Contiene el valor total de otros servicios adicionales</value>
+  </data>
+  <data name="TotalValoresAdicionales" xml:space="preserve">
+    <value>Total Otros Servicios</value>
+  </data>
+  <data name="DestinoCorrecto" xml:space="preserve">
+    <value>Destino Correcto</value>
+  </data>
+  <data name="ToolTipDestinoCorrecto" xml:space="preserve">
+    <value>Es la Ciudad de Destino Correcto</value>
+  </data>
+  <data name="RequiereAuditoria" xml:space="preserve">
+    <value>Requiere auditoria de la asignación</value>
+  </data>
+  <data name="TotalEnviosPlanillados" xml:space="preserve">
+    <value>Total de envios planillados</value>
+  </data>
+  <data name="IdParametro" xml:space="preserve">
+    <value>Id parametro</value>
+  </data>
+  <data name="TarifaLibre" xml:space="preserve">
+    <value>Otros Servicios Libre</value>
+  </data>
+  <data name="TooltipTarifaLibre" xml:space="preserve">
+    <value>El valor de otro servicios que no se encuentra especificado en la lista de otros servicios</value>
+  </data>
+  <data name="AplicaResolucion" xml:space="preserve">
+    <value>Aplica resolución</value>
+  </data>
+  <data name="Categoria" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="CodigoAlterno" xml:space="preserve">
+    <value>Código alterno</value>
+  </data>
+  <data name="CodigoNovaSoft" xml:space="preserve">
+    <value>Código NovaSoft</value>
+  </data>
+  <data name="CuentaGasto" xml:space="preserve">
+    <value>Cuenta gasto</value>
+  </data>
+  <data name="SePreimprime" xml:space="preserve">
+    <value>Se Pre-Imprime</value>
+  </data>
+  <data name="Prefijo" xml:space="preserve">
+    <value>Prefijo</value>
+  </data>
+  <data name="RangoFinal" xml:space="preserve">
+    <value>Rango final</value>
+  </data>
+  <data name="RangoInicial" xml:space="preserve">
+    <value>Rango inicial</value>
+  </data>
+  <data name="Resolucion" xml:space="preserve">
+    <value>Número resolución</value>
+  </data>
+  <data name="IdGrupo" xml:space="preserve">
+    <value>Id grupo</value>
+  </data>
+  <data name="Seleccionar" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="ToolTipSeleccionar" xml:space="preserve">
+    <value>Selecciona una opción</value>
+  </data>
+  <data name="SuministroAutorizado" xml:space="preserve">
+    <value>Suministro autorizado</value>
+  </data>
+  <data name="ClasificadorCanalVenta" xml:space="preserve">
+    <value>Clasificador Canal Venta</value>
+  </data>
+  <data name="CodigoBodega" xml:space="preserve">
+    <value>Código de Bodega</value>
+  </data>
+  <data name="ToolTipClasificadorCanalVenta" xml:space="preserve">
+    <value>Clasificador del canal de ventas, este es como se clasifica un centro de servicos en la aplicación de la ERP</value>
+  </data>
+  <data name="ToolTipCodigoBodega" xml:space="preserve">
+    <value>Código de la bodega asociado al centro de servicios en la aplicación de la ERP</value>
+  </data>
+  <data name="ToolTipTotalIngresosOtrasFormas" xml:space="preserve">
+    <value>Ingresos de Otras Formas de Pago</value>
+  </data>
+  <data name="NumeroGuiaInternaDespacho" xml:space="preserve">
+    <value>Número de guía interna de despacho</value>
+  </data>
+  <data name="NumeroRemision" xml:space="preserve">
+    <value>Número de remisión</value>
+  </data>
+  <data name="CentroCostosRegional" xml:space="preserve">
+    <value>Centro de costos Regional</value>
+  </data>
+  <data name="CodRacolExterno" xml:space="preserve">
+    <value>Código Racol Externo</value>
+  </data>
+  <data name="ErrorValidacionCodRacolExterno" xml:space="preserve">
+    <value>El campo Código Racol Externo es requerido</value>
+  </data>
+  <data name="ToolTipCodRacolExterno" xml:space="preserve">
+    <value>Código del RACOL en la aplicación ERP</value>
+  </data>
+  <data name="TiposDestino" xml:space="preserve">
+    <value>Destino</value>
+  </data>
+  <data name="TooltipTiposDestino" xml:space="preserve">
+    <value>Indica cuál debe ser el destino del envío</value>
+  </data>
+  <data name="CantidadInicialAutorizada" xml:space="preserve">
+    <value>Cantidad inical autorizada</value>
+  </data>
+  <data name="FechaCierre" xml:space="preserve">
+    <value>Fecha de Cierre</value>
+  </data>
+  <data name="ToolTipFechaCierre" xml:space="preserve">
+    <value>Es la Fecha de Cierre de Caja</value>
+  </data>
+  <data name="CodClasificadorCanalVenta" xml:space="preserve">
+    <value>Código Clasificador Canal Venta</value>
+  </data>
+  <data name="ToolTipCodClasificadorCanalVenta" xml:space="preserve">
+    <value>Es el código asignado para clasificar el canal de venta</value>
+  </data>
+  <data name="ToolTipNombreClasificadoCanalVenta" xml:space="preserve">
+    <value>Es el nombre del clasificador de canal de venta</value>
+  </data>
+  <data name="ToolTipTipoCentroServicio" xml:space="preserve">
+    <value>Tipo de centro de servicio</value>
+  </data>
+  <data name="CasaMatriz" xml:space="preserve">
+    <value>Casa Matriz</value>
+  </data>
+  <data name="ToolTipCasaMatriz" xml:space="preserve">
+    <value>Casa matriz encargada del centro de servicios</value>
+  </data>
+  <data name="Cajero" xml:space="preserve">
+    <value>Cajero</value>
+  </data>
+  <data name="ToolTipCajero" xml:space="preserve">
+    <value>Es el Nombre del cajero</value>
+  </data>
+  <data name="VolumenMaximo" xml:space="preserve">
+    <value>Volumen Máximo</value>
+  </data>
+  <data name="ErrorValidacionCasaMatrizRacol" xml:space="preserve">
+    <value>El campo Casa Matriz es requerido</value>
+  </data>
+  <data name="ToolTipCodigoTipoSectorCliente" xml:space="preserve">
+    <value>Código del tipo de sector del cliente</value>
+  </data>
+  <data name="ToolTipNombreTipoSectorCliente" xml:space="preserve">
+    <value>Nombre del tipo de sector del cliente</value>
+  </data>
+  <data name="TipoSectorCliente" xml:space="preserve">
+    <value>Tipo Sector Cliente</value>
+  </data>
+  <data name="ToolTipTipoSectorCliente" xml:space="preserve">
+    <value>Indica el tipo de sector del cliente</value>
+  </data>
+  <data name="CertificadoDisponibilidad" xml:space="preserve">
+    <value>Certificado Disponibilidad</value>
+  </data>
+  <data name="NumeroRegistroDisponibilidad" xml:space="preserve">
+    <value>Número Registro Disponibilidad</value>
+  </data>
+  <data name="ToolTipCertificadoDisponibilidad" xml:space="preserve">
+    <value>Certificado de disponibilidad</value>
+  </data>
+  <data name="ToolTipCodigoBodegaSucursal" xml:space="preserve">
+    <value>Código de la bodega asociado a la sucursal del cliente en la ERP</value>
+  </data>
+  <data name="ToolTipNumeroRegistroDisponibilidad" xml:space="preserve">
+    <value>Número de registro de disponibilidad</value>
+  </data>
+  <data name="ToolTipValorDisponibilidad" xml:space="preserve">
+    <value>Valor de la disponibilidad</value>
+  </data>
+  <data name="ValorDisponibilidad" xml:space="preserve">
+    <value>Valor Disponibilidad</value>
+  </data>
+  <data name="TooTipNumeroEvidencia" xml:space="preserve">
+    <value>Número de la evidencia a descargar</value>
+  </data>
+  <data name="ToolTipTipoEvidencia" xml:space="preserve">
+    <value>Tipo de evidencia a descargar</value>
+  </data>
+  <data name="GirosNoPagos" xml:space="preserve">
+    <value>Numero de Giros no Pagos</value>
+  </data>
+  <data name="ToolTipGirosNoPagos" xml:space="preserve">
+    <value>Es la cantidad de giros no pagos por el Centro de Servicio</value>
+  </data>
+  <data name="ToolTipValorGirosNoPagos" xml:space="preserve">
+    <value>Es el valor Total de giros no pagos por el Centro de Servicio</value>
+  </data>
+  <data name="ValorGirosNoPagos" xml:space="preserve">
+    <value>Valor Total de Giros no Pagos</value>
+  </data>
+  <data name="Supervisado" xml:space="preserve">
+    <value>Descargue supervisado</value>
+  </data>
+  <data name="Archivo" xml:space="preserve">
+    <value>Archivo adjunto</value>
+  </data>
+  <data name="CodigoPostal" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="ToolTipCodigoPostal" xml:space="preserve">
+    <value>Código Postal</value>
+  </data>
+  <data name="ToolTipValorDeDiferencia" xml:space="preserve">
+    <value>Es la diferencia entre dos Valores</value>
+  </data>
+  <data name="ValorDeDiferencia" xml:space="preserve">
+    <value>Valor Diferencia</value>
+  </data>
+  <data name="DescripcionConcepto" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="TooltipConcepto" xml:space="preserve">
+    <value>Nombre del concepto</value>
+  </data>
+  <data name="TooltipDescripcionConcepto" xml:space="preserve">
+    <value>Descripción del concepto</value>
+  </data>
+  <data name="IdConcepto" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="TooltipIdConcepto" xml:space="preserve">
+    <value>Identificador del concepto de caja</value>
+  </data>
+  <data name="NumeroVolante" xml:space="preserve">
+    <value>Número del volante</value>
+  </data>
+  <data name="RangoFechaFinal" xml:space="preserve">
+    <value>Rango de Fecha y Hora Final</value>
+  </data>
+  <data name="RangoFechaInicial" xml:space="preserve">
+    <value>Rango de Fecha y Hora Inicial</value>
+  </data>
+  <data name="RangoFinalRemision" xml:space="preserve">
+    <value>Rango Final Remisiones</value>
+  </data>
+  <data name="RangoFinalSuministro" xml:space="preserve">
+    <value>Rango Final Suministro</value>
+  </data>
+  <data name="RangoInicialRemision" xml:space="preserve">
+    <value>Rango Inicial Remisiones</value>
+  </data>
+  <data name="RangoInicialSuministro" xml:space="preserve">
+    <value>Rango Inicial Suministro</value>
+  </data>
+  <data name="RegionalRacol" xml:space="preserve">
+    <value>Regional (Racol) Destino</value>
+  </data>
+  <data name="SuministroPlanillaDespachoManual" xml:space="preserve">
+    <value>Suministro Planilla Despacho Manual</value>
+  </data>
+  <data name="ToolTipSuministroPlanillaDespachoManual" xml:space="preserve">
+    <value>Es el suministro de planilla Manual para recepcion de dinero</value>
+  </data>
+  <data name="NumeroFoliosMayorRango" xml:space="preserve">
+    <value>El número de folios ingresado no es válido</value>
+  </data>
+  <data name="AreaInterna" xml:space="preserve">
+    <value>Área Interna</value>
+  </data>
+  <data name="CodAreaInterna" xml:space="preserve">
+    <value>Código Área</value>
+  </data>
+  <data name="ToolTipAreaInterna" xml:space="preserve">
+    <value>Área Interna</value>
+  </data>
+  <data name="ToolTipCodAreaInterna" xml:space="preserve">
+    <value>Código del área interna</value>
+  </data>
+  <data name="CodMacroproceso" xml:space="preserve">
+    <value>Código Macroproceso</value>
+  </data>
+  <data name="Macroproceso" xml:space="preserve">
+    <value>Macroproceso</value>
+  </data>
+  <data name="ToolTipCodMacroproceso" xml:space="preserve">
+    <value>Código del macroproceso</value>
+  </data>
+  <data name="ToolTipMacroproceso" xml:space="preserve">
+    <value>Macroproceso</value>
+  </data>
+  <data name="Consolidado" xml:space="preserve">
+    <value>Consolidado</value>
+  </data>
+  <data name="Individual" xml:space="preserve">
+    <value>Individual</value>
+  </data>
+  <data name="ClienteCredito" xml:space="preserve">
+    <value>Cliente Credito</value>
+  </data>
+  <data name="ClientePeaton" xml:space="preserve">
+    <value>Cliente Peaton</value>
+  </data>
+  <data name="Proceso" xml:space="preserve">
+    <value>Proceso</value>
+  </data>
+  <data name="ToolTipProceso" xml:space="preserve">
+    <value>Proceso</value>
+  </data>
+  <data name="CodigoBodegaERP" xml:space="preserve">
+    <value>Código Bodega Novasoft</value>
+  </data>
+  <data name="ToolTipCodigoBodegaERP" xml:space="preserve">
+    <value>Código de la bodega en la ERP</value>
+  </data>
+  <data name="IdProceso" xml:space="preserve">
+    <value>Códogo Proceso</value>
+  </data>
+  <data name="ToolTipIdProceso" xml:space="preserve">
+    <value>Código del proceso</value>
+  </data>
+  <data name="CodigoSucursalNovasoft" xml:space="preserve">
+    <value>Código Sucursal Novasoft</value>
+  </data>
+  <data name="AsignarASupervisor" xml:space="preserve">
+    <value>Supervisión</value>
+  </data>
+  <data name="TooltipAsignarASupervisor" xml:space="preserve">
+    <value>Indica si el envío se asigna a supervisor</value>
+  </data>
+  <data name="Gestion" xml:space="preserve">
+    <value>Gestión</value>
+  </data>
+  <data name="ToolTipAgenciaDestino" xml:space="preserve">
+    <value>Es la agencia a la que se le destina el servicio ó transacción.</value>
+  </data>
+  <data name="IdNumerador" xml:space="preserve">
+    <value>Id Numerador</value>
+  </data>
+  <data name="FechaFinalResolucion" xml:space="preserve">
+    <value>Fecha final de la resolución</value>
+  </data>
+  <data name="FechaInicioResolucion" xml:space="preserve">
+    <value>Fecha inicial de la resolución</value>
+  </data>
+  <data name="Grupo" xml:space="preserve">
+    <value>Grupo</value>
+  </data>
+  <data name="FechaPlanilla" xml:space="preserve">
+    <value>Fecha planilla</value>
+  </data>
+  <data name="FechaCambioEstado" xml:space="preserve">
+    <value>Fecha Cambio de Estado</value>
+  </data>
+  <data name="EnvioEmailDestinatario" xml:space="preserve">
+    <value>Envío email destinatario</value>
+  </data>
+  <data name="EnvioEmailRemitente" xml:space="preserve">
+    <value>Envío email remitente</value>
+  </data>
+  <data name="UsuarioGestiona" xml:space="preserve">
+    <value>Usuario que realiza la gestión</value>
+  </data>
+  <data name="FechaLimitePagoGiro" xml:space="preserve">
+    <value>Fecha limite para reclamar el giro</value>
+  </data>
+  <data name="ToolTipIdentiRecibeTransmi" xml:space="preserve">
+    <value>Identificación de quien recibe la transmisión en la agencia destino</value>
+  </data>
+  <data name="ToolTipNombreRecibeTransmision" xml:space="preserve">
+    <value>Nombre de quien recibe la transmisión en la agencia destino</value>
+  </data>
+  <data name="TipoDocumento" xml:space="preserve">
+    <value>Tipo documento</value>
+  </data>
+  <data name="ToolTipValorRealGiro" xml:space="preserve">
+    <value>Es el valor real del giro digitado</value>
+  </data>
+  <data name="ValorRealGiro" xml:space="preserve">
+    <value>Valor Real Giro</value>
+  </data>
+  <data name="ToolTipValorAjusteGiro" xml:space="preserve">
+    <value>Es el valor faltante ó sobrante para ajustar el valor real del giro</value>
+  </data>
+  <data name="ValorAjusteGiro" xml:space="preserve">
+    <value>Valor a Ajustar</value>
+  </data>
+  <data name="NotificarEntregaPorEmail" xml:space="preserve">
+    <value>¿Recibir notificación?</value>
+  </data>
+  <data name="TooltipNotificarEntregaPorEmail" xml:space="preserve">
+    <value>Indica si el remitente desea recibir vía correo electrónico una notificación cuando su envío haya sido entregado</value>
+  </data>
+  <data name="FechaTrasmision" xml:space="preserve">
+    <value>Fecha y hora de trasmisión </value>
+  </data>
+  <data name="UsuarioTrasmite" xml:space="preserve">
+    <value>Usuario que transmite</value>
+  </data>
+  <data name="DiasCustodia" xml:space="preserve">
+    <value>Días custodia</value>
+  </data>
+  <data name="GiroPorTrasmitir" xml:space="preserve">
+    <value>Giros pendientes por trasmitir</value>
+  </data>
+  <data name="TipoPlanilla" xml:space="preserve">
+    <value>Tipo de planilla</value>
+  </data>
+  <data name="DiferenciaValor" xml:space="preserve">
+    <value>Diferencia</value>
+  </data>
+  <data name="NuevoServicio" xml:space="preserve">
+    <value>Nuevo tipo de Servicio</value>
+  </data>
+  <data name="TooltipDiferenciaValor" xml:space="preserve">
+    <value>Diferencia del valor original calculado respecto al nuevo valor calculado</value>
+  </data>
+  <data name="TooltipNuevoServicio" xml:space="preserve">
+    <value>Nuevo servicio asignado al envío</value>
+  </data>
+  <data name="TooltipValorCalculado" xml:space="preserve">
+    <value>Nuevo valor calculado con base en el nuevo servicio seleccionado</value>
+  </data>
+  <data name="ValorCalculado" xml:space="preserve">
+    <value>Nuevo Valor</value>
+  </data>
+  <data name="ResponsableError" xml:space="preserve">
+    <value>Responsable por Error</value>
+  </data>
+  <data name="TooltipResponsableError" xml:space="preserve">
+    <value>Permite seleccionar quien es el responsable de la captura incorrecta de la admisión</value>
+  </data>
+  <data name="UsuarioSolicita" xml:space="preserve">
+    <value>Usuario que Solicita</value>
+  </data>
+  <data name="UsuarioAtiendeSol" xml:space="preserve">
+    <value>Usuario que Atiende la Solicitud</value>
+  </data>
+  <data name="CargoResponsable" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="DescripcionResponsable" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="IdentificadorResponsable" xml:space="preserve">
+    <value>Identificación</value>
+  </data>
+  <data name="TooltipCargoResponsable" xml:space="preserve">
+    <value>Cargo de la persona responsable</value>
+  </data>
+  <data name="TooltipDescripcionResponsable" xml:space="preserve">
+    <value>Nombre del Responsable</value>
+  </data>
+  <data name="TooltipIdentificadorResponsable" xml:space="preserve">
+    <value>Número de identificación del responsable</value>
+  </data>
+  <data name="NumGuiaFactura" xml:space="preserve">
+    <value>Núm Guía o Factura</value>
+  </data>
+  <data name="RangoDesde" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="RangoHasta" xml:space="preserve">
+    <value>Hasta</value>
+  </data>
+  <data name="TooltipNumGuiaFactura" xml:space="preserve">
+    <value>Se debe ingresar el número de guía o factura a anular</value>
+  </data>
+  <data name="TooltipRangoDesde" xml:space="preserve">
+    <value>Primer número de guía a anular</value>
+  </data>
+  <data name="TooltipRangoHasta" xml:space="preserve">
+    <value>Último número de guía a anular</value>
+  </data>
+  <data name="FueAnulada" xml:space="preserve">
+    <value>Anulada</value>
+  </data>
+  <data name="MensajeAnulacion" xml:space="preserve">
+    <value>Mensaje</value>
+  </data>
+  <data name="CreacionNuevaGuia" xml:space="preserve">
+    <value>¿Crear Guía?</value>
+  </data>
+  <data name="ToolTipValorAjustePorte" xml:space="preserve">
+    <value>Es el valor de diferencia para ajustar el porte de acuerdo con el ajuste del valor del giro</value>
+  </data>
+  <data name="ValorAjustePorte" xml:space="preserve">
+    <value>Valor ajustar porte</value>
+  </data>
+  <data name="IdCasaMatriz" xml:space="preserve">
+    <value>Id Casa Matriz</value>
+  </data>
+  <data name="ToolTipValorBaseCajaCasaMatriz" xml:space="preserve">
+    <value>Es la Base de la Caja de Casa Matriz</value>
+  </data>
+  <data name="ToolTipValorBaseCajaOperacionNal" xml:space="preserve">
+    <value>Es la Base de la Caja de Opereación Nacional</value>
+  </data>
+  <data name="ValorBaseCajaCasaMatriz" xml:space="preserve">
+    <value>Base Caja Casa Matriz</value>
+  </data>
+  <data name="ValorBaseCajaOperacionNal" xml:space="preserve">
+    <value>Base Caja Operación Nacional</value>
+    <comment>ValorBaseCajaOperacionNal</comment>
+  </data>
+  <data name="NuevoValorTotal" xml:space="preserve">
+    <value>Nuevo Valor Total</value>
+  </data>
+  <data name="TooltipNuevoValorTotal" xml:space="preserve">
+    <value>Contiene el nuevo valor total a asignar a la guía</value>
+  </data>
+  <data name="Incremento" xml:space="preserve">
+    <value>Incremento (%)</value>
+  </data>
+  <data name="ValorFijadoKiloInicial" xml:space="preserve">
+    <value>V. Fijado Kilo Inicial</value>
+  </data>
+  <data name="ValorPropuestoKiloInicial" xml:space="preserve">
+    <value>V. Propuesto Kilo Inicial</value>
+  </data>
+  <data name="ValorFijadoKiloAdicional" xml:space="preserve">
+    <value>V. Fijado Kilo Adicional</value>
+  </data>
+  <data name="ValorPropuestoKiloAdicional" xml:space="preserve">
+    <value>V. Propuesto Kilo Adicional</value>
+  </data>
+  <data name="ListaPrecioBase" xml:space="preserve">
+    <value>Lista de precios base</value>
+  </data>
+  <data name="ToolTipListaPrecioBase" xml:space="preserve">
+    <value>Lista de precios base para el cálculo de la nueva lista de precios</value>
+  </data>
+  <data name="ValorBaseKiloAdicional" xml:space="preserve">
+    <value>V. base kilo adicional</value>
+  </data>
+  <data name="RangoActual" xml:space="preserve">
+    <value>Rango Actual</value>
+  </data>
+  <data name="ToolTipRangoActual" xml:space="preserve">
+    <value>Es el Rango actual de numeración</value>
+  </data>
+  <data name="HoraDescargue" xml:space="preserve">
+    <value>Hora Descargue</value>
+  </data>
+  <data name="PersonaRecibe" xml:space="preserve">
+    <value>Persona que recibe</value>
+  </data>
+  <data name="ToolTipPersonaRecibe" xml:space="preserve">
+    <value>Nombre de la persona que recibe la planilla</value>
+  </data>
+  <data name="RacolOrigenEnvio" xml:space="preserve">
+    <value>Racol Origen Envío</value>
+  </data>
+  <data name="TooltipRacolOrigenEnvio" xml:space="preserve">
+    <value>Racol de Origen del envío</value>
+  </data>
+  <data name="Responsable" xml:space="preserve">
+    <value>Responsable</value>
+  </data>
+  <data name="NotasCredito" xml:space="preserve">
+    <value>Notas Credito</value>
+  </data>
+  <data name="NotasDebito" xml:space="preserve">
+    <value>Notas Debito</value>
+  </data>
+  <data name="SeleccionarTodo" xml:space="preserve">
+    <value>Seleccionar todo</value>
+  </data>
+  <data name="FechaFactura" xml:space="preserve">
+    <value>Fecha Factura</value>
+  </data>
+  <data name="ImprimeCarta" xml:space="preserve">
+    <value>Factura Carta</value>
+  </data>
+  <data name="TelefonoAdiciona" xml:space="preserve">
+    <value>Telefono Adicional </value>
+    <comment>Telefono Adicional Gestion Telemercadeo</comment>
+  </data>
+  <data name="TooltipValidaPeso" xml:space="preserve">
+    <value>si se debe validar el peso en las agencias origen y destino cuando se trata de una admisión asociada al contrato</value>
+  </data>
+  <data name="ValidaPeso" xml:space="preserve">
+    <value>Validar Peso</value>
+  </data>
+  <data name="MedioRecepcion" xml:space="preserve">
+    <value>Medio de Recepción</value>
+  </data>
+  <data name="Reclamacion" xml:space="preserve">
+    <value>No Reclamación</value>
+  </data>
+  <data name="SubTipo" xml:space="preserve">
+    <value>SubTipo</value>
+  </data>
+  <data name="ProgramacionSolRecogida" xml:space="preserve">
+    <value>Número Programación</value>
+  </data>
+  <data name="ToolTipProgramacionSolRecogida" xml:space="preserve">
+    <value>Número de programación se la solicitud de la recogida</value>
+  </data>
+  <data name="TipoSeguimiento" xml:space="preserve">
+    <value>Tipo de Seguimiento</value>
+  </data>
+  <data name="PorcentajeRecargo" xml:space="preserve">
+    <value>Porcentaje de Recargo</value>
+  </data>
+  <data name="ToolTipPorcentajeRecargo" xml:space="preserve">
+    <value>Es el Porcentaje de Recargo al envio</value>
+  </data>
+  <data name="ToolTipValorDolar" xml:space="preserve">
+    <value>Es el Valor que se toma por defecto cuando no existe la consulta en linea del valor actual del Dolar</value>
+  </data>
+  <data name="ValorDolar" xml:space="preserve">
+    <value>Vr Dolar</value>
+  </data>
+  <data name="ToolTipCiudadRecogida" xml:space="preserve">
+    <value>Ciudad donde se programa la recogida</value>
+  </data>
+  <data name="PesoBruto" xml:space="preserve">
+    <value>Peso bruto</value>
+  </data>
+  <data name="ValorKiloFinal" xml:space="preserve">
+    <value>Valor Kilo Final</value>
+  </data>
+  <data name="CodigoSPN" xml:space="preserve">
+    <value>Código SPN</value>
+  </data>
+  <data name="ToolTipCodigoSPN" xml:space="preserve">
+    <value>Codigo suministrado por 4-72 para identificar nuestros puntos de recepción de puntos y agencias.</value>
+  </data>
+  <data name="ConvenioNacional" xml:space="preserve">
+    <value>Convenio Nacional</value>
+  </data>
+  <data name="TooltipConvenioNacional" xml:space="preserve">
+    <value>Cliente aplica como convenio nacional</value>
+  </data>
+  <data name="MensajeroUrbano" xml:space="preserve">
+    <value>Es Mensajero Urbano</value>
+  </data>
+  <data name="ToolTipMensajeroUrbano" xml:space="preserve">
+    <value>Se activa el cuadro, si el mensajero es un mensajero urbano</value>
+  </data>
+  <data name="TooltipIdTipoEntrega" xml:space="preserve">
+    <value>Codigó Asignado al Tipo de Entrega </value>
+  </data>
+  <data name="TooltipDesTipoEntrega" xml:space="preserve">
+    <value>Descripción del Tipo de Entrega</value>
+  </data>
+  <data name="PesoCorrecto" xml:space="preserve">
+    <value>Peso Correcto</value>
+  </data>
+  <data name="ToolTipPesoCorrecto" xml:space="preserve">
+    <value>Valor del peso corregido</value>
+  </data>
+  <data name="CategoriaConcepto" xml:space="preserve">
+    <value>Categoria Concepto</value>
+  </data>
+  <data name="ToolTipCategoriaConcepto" xml:space="preserve">
+    <value>Es la Categoria asociada al concepto de caja para el manejo de las opciones o permisos de los puntos</value>
+  </data>
+  <data name="CodigoTipObsPunAgen" xml:space="preserve">
+    <value>Código Tipo Observación</value>
+  </data>
+  <data name="ToolTipCodigoTipObsPunAgen" xml:space="preserve">
+    <value>Código del tipo de observacion recoleccion dinero</value>
+  </data>
+  <data name="ToolTipDescTipObsPun" xml:space="preserve">
+    <value>Descripción del tipo de observacion recoleccion dinero</value>
+  </data>
+  <data name="TipoAsignacion" xml:space="preserve">
+    <value>Tipo Asignación</value>
+  </data>
+  <data name="NumeroTula" xml:space="preserve">
+    <value>Número Tula/Contenedor</value>
+  </data>
+  <data name="ControlManifiesto" xml:space="preserve">
+    <value>Control Manifiesto</value>
+  </data>
+  <data name="ToolTipCodigoNovaSoft" xml:space="preserve">
+    <value>Es el codigo de Novasoft para el Racol</value>
+  </data>
+  <data name="TooltipValorNota" xml:space="preserve">
+    <value>Es el valor que afecta este item</value>
+  </data>
+  <data name="ValorNota" xml:space="preserve">
+    <value>Valor Nota</value>
+  </data>
+  <data name="CajasDisponibles" xml:space="preserve">
+    <value>N° Cajas Disponibles</value>
+  </data>
+  <data name="CajasDisponiblesTooltip" xml:space="preserve">
+    <value>Es el número de Cajas disponibles para todos los centros de Servicios </value>
+  </data>
+  <data name="ControlManifiestoManual" xml:space="preserve">
+    <value>Si el manifiesto es manual ingrese número</value>
+  </data>
+  <data name="ControlManifiestoManualToolTip" xml:space="preserve">
+    <value>Debe ingresar el número del manifiesto, si este es manual</value>
+  </data>
+  <data name="IngresarEnvíoSuelto" xml:space="preserve">
+    <value>Ingresar Envío Suelto</value>
+  </data>
+  <data name="IngresarEnvíoSueltoToolTip" xml:space="preserve">
+    <value>Ingreso de envíos sueltos</value>
+  </data>
+  <data name="CtrolTranMan" xml:space="preserve">
+    <value>Contro Trans. Manifiesto</value>
+  </data>
+  <data name="TotalEnviosIngresados" xml:space="preserve">
+    <value>Total Envíos Ingresados: </value>
+  </data>
+  <data name="TotalAlCobrosEnTransito" xml:space="preserve">
+    <value>Total de Alcobros en Transito</value>
+  </data>
+  <data name="TotalAlCobrosSinCancelar" xml:space="preserve">
+    <value>Total de Alcobros sin Cancelar</value>
+  </data>
+  <data name="RetornaFlete" xml:space="preserve">
+    <value>Retorna Flete</value>
+  </data>
+  <data name="RetornaFleteToolTip" xml:space="preserve">
+    <value>Indica si se hace la devolución del valor del flete del giro.</value>
+  </data>
+  <data name="ToolTipValorAjusteCaja" xml:space="preserve">
+    <value>Valor a ajustar en la caja del punto seleccionado</value>
+  </data>
+  <data name="mintic" xml:space="preserve">
+    <value>El MinTic exige que se suministre el correo del remitente en formato correcto</value>
+  </data>
+  <data name="ValidaRecibido" xml:space="preserve">
+    <value>Validar Recibido</value>
+  </data>
+  <data name="ReclameEnOficina" xml:space="preserve">
+    <value>Reclame En Oficina</value>
+  </data>
+  <data name="ToolTipReclameEnOficina" xml:space="preserve">
+    <value>Indica si el punto se reclama o no en oficina</value>
+  </data>
+  <data name="Operacional" xml:space="preserve">
+    <value>Es Operacional</value>
+  </data>
+  <data name="ToolTipOperacional" xml:space="preserve">
+    <value>Indica si la Agencia es Operacional</value>
+  </data>
+  <data name="RangoLatitud" xml:space="preserve">
+    <value>El valor supera el rango permitido para la latitud de -90 a 90.9</value>
+  </data>
+  <data name="RangoLongitud" xml:space="preserve">
+    <value>El valor supera el rango permitido para la longitud de -180 a 180.9</value>
+  </data>
+  <data name="TipoCombustible" xml:space="preserve">
+    <value>Tipo de Combustible</value>
+  </data>
+  <data name="ToolTipTipoCombustible" xml:space="preserve">
+    <value>Tipo de Combustible</value>
+  </data>
+  <data name="TipoCombustible2" xml:space="preserve">
+    <value>Tipo de Combustible</value>
+  </data>
+  <data name="ToolTipTipoCombustible2" xml:space="preserve">
+    <value>Tipo de Combustible</value>
+  </data>
+  <data name="NombreAMostrar" xml:space="preserve">
+    <value>Nombre A Mostrar</value>
+  </data>
+  <data name="ToolTipNombreAMostrar" xml:space="preserve">
+    <value>Nombre A Mostrar</value>
+  </data>
+  <data name="FechaApertura" xml:space="preserve">
+    <value>Fecha de Apertura</value>
+  </data>
+  <data name="ToolTipFechaApertura" xml:space="preserve">
+    <value>Es la fecha de apertura</value>
+  </data>
+  <data name="TooltipFechaCierre2" xml:space="preserve">
+    <value>Fecha del cierre</value>
+  </data>
+  <data name="TooltipCodigo472" xml:space="preserve">
+    <value>Código Asignado por 4-72</value>
+  </data>
+  <data name="Codigo472" xml:space="preserve">
+    <value>Código 4-72</value>
+  </data>
+  <data name="PuntoPAM" xml:space="preserve">
+    <value>Es Punto PAM</value>
+  </data>
+  <data name="ToolTipPuntoPAM" xml:space="preserve">
+    <value>Indica si el centro de servicio es Punto PAM </value>
+  </data>
+  <data name="Biometrico" xml:space="preserve">
+    <value>Tiene Biometrico</value>
+  </data>
+  <data name="ToolTipBiometrico" xml:space="preserve">
+    <value>Indica si el Centro de Servicio Tiene Biometrico </value>
+  </data>
+  <data name="AcumuladoVentas" xml:space="preserve">
+    <value>Cupo Utilizado</value>
+  </data>
+  <data name="TooltipAcumuladoVentas" xml:space="preserve">
+    <value>Total utilizado del cupo</value>
+  </data>
+  <data name="EsMensajeroPAM" xml:space="preserve">
+    <value>Es Mensajero PAM</value>
+  </data>
+  <data name="Recaudo" xml:space="preserve">
+    <value>Recaudo</value>
+  </data>
+  <data name="ToolTipRecaudo" xml:space="preserve">
+    <value>Indica si el Centro de Servicio Es Recaudo</value>
+  </data>
+  <data name="ToolTipReportarSatrack" xml:space="preserve">
+    <value>Genera Reporte a Satrack</value>
+  </data>
+  <data name="ReportarSatrack" xml:space="preserve">
+    <value>Reporte Satrack</value>
+  </data>
+  <data name="ToolMisPendientes" xml:space="preserve">
+    <value>Mis pendientes</value>
+  </data>
+  <data name="MisPendientes" xml:space="preserve">
+    <value>Mis Pendientes</value>
+  </data>
+</root>

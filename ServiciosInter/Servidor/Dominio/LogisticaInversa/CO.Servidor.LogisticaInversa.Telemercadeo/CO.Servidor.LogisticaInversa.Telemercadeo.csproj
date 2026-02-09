@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19E72DED-DD07-48E8-8DB3-5F56BE2B52B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.LogisticaInversa.Telemercadeo</RootNamespace>
+    <AssemblyName>CO.Servidor.LogisticaInversa.Telemercadeo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custodia\LIConfiguradorCustodia.cs" />
+    <Compile Include="LIAdministradorTelemercadeo.cs" />
+    <Compile Include="Planillas\LIConfiguradorPlanillas.cs" />
+    <Compile Include="Rapiradicados\LIConfiguradorRapiradicados.cs" />
+    <Compile Include="Reexpedicion\LIConfiguradorReexpedicion.cs" />
+    <Compile Include="Telemercadeo\LIConfiguradorTelemercadeo.cs" />
+    <Compile Include="LIFachadaTelemercadeo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.MotorReglas\Framework.Servidor.MotorReglas.csproj">
+      <Project>{E9EE53AB-8A4C-48A7-BBF7-C4D841DF7AE5}</Project>
+      <Name>Framework.Servidor.MotorReglas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.AdmEstadosGuia\CO.Servidor.Dominio.Comun.AdmEstadosGuia.csproj">
+      <Project>{0FC1794B-1536-4BBC-9641-B91AC94A5A3D}</Project>
+      <Name>CO.Servidor.Dominio.Comun.AdmEstadosGuia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.Middleware\CO.Servidor.Dominio.Comun.Middleware.csproj">
+      <Project>{826B7134-398B-474F-9C60-3F433F0441F1}</Project>
+      <Name>CO.Servidor.Dominio.Comun.Middleware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512C6601-1C3C-455A-A91A-10906C2F2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Raps\CO.Servidor.Raps.Comun.Integraciones\CO.Servidor.Raps.Comun.Integraciones.csproj">
+      <Project>{cef6870f-e113-43f0-9ecd-6b8c1386aca8}</Project>
+      <Name>CO.Servidor.Raps.Comun.Integraciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.LogisticaInversa.Comun\CO.Servidor.LogisticaInversa.Comun.csproj">
+      <Project>{32988092-BE2B-4B09-92E9-49B3595C3640}</Project>
+      <Name>CO.Servidor.LogisticaInversa.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.LogisticaInversa.Datos\CO.Servidor.LogisticaInversa.Datos.csproj">
+      <Project>{0DD59536-D8E2-4A1B-9AFA-8B6B43A8EF40}</Project>
+      <Name>CO.Servidor.LogisticaInversa.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.LogisticaInversa.PruebasEntrega\CO.Servidor.LogisticaInversa.PruebasEntrega.csproj">
+      <Project>{01acddb2-9395-45e6-9b94-49628b37adc8}</Project>
+      <Name>CO.Servidor.LogisticaInversa.PruebasEntrega</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dgClasesTelemercadeo.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

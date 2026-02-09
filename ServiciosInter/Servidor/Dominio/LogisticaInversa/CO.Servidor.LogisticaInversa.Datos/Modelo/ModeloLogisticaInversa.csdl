@@ -1,0 +1,1180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloLogisticaInversaNS" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EntidadesLogisticaInversa" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Localidades_VPAR" EntityType="ModeloLogisticaInversaNS.Localidades_VPAR" />
+    <EntitySet Name="TipoManifiestoLogInv_LOI" EntityType="ModeloLogisticaInversaNS.TipoManifiestoLogInv_LOI" />
+    <EntitySet Name="ManifiestoLogInvDetalle_LOI" EntityType="ModeloLogisticaInversaNS.ManifiestoLogInvDetalle_LOI" />
+    <FunctionImport Name="paInsertarGuiaManifiesto_LOI">
+      <Parameter Name="IdManifiesto" Mode="In" Type="Int64" />
+      <Parameter Name="IdAdminision" Mode="In" Type="Int64" />
+      <Parameter Name="NumeroAdmision" Mode="In" Type="Int64" />
+      <Parameter Name="IdServicio" Mode="In" Type="Int32" />
+      <Parameter Name="EstaDescargada" Mode="In" Type="Boolean" />
+      <Parameter Name="FueManifestadaEnOrigen" Mode="In" Type="Boolean" />
+      <Parameter Name="FechaDescarga" Mode="In" Type="DateTime" />
+      <Parameter Name="UsuarioDescarga" Mode="In" Type="String" />
+      <Parameter Name="EstadoEnManifiesto" Mode="In" Type="String" />
+      <Parameter Name="FechaGrabacion" Mode="In" Type="DateTime" />
+      <Parameter Name="CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGuiaManifDescarga_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGuiaManifDescarga_LOI)">
+      <Parameter Name="idManifiesto" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paActualizarFecDescMani_LOI">
+      <Parameter Name="idManifiesto" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGestionesTrazaGuia_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGestionesTrazaGuia_LOI)">
+      <Parameter Name="idTrazaGuia" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paCrearGestionGuia_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paCrearGestionGuia_LOI)">
+      <Parameter Name="GGT_IdAdminisionMensajeria" Mode="In" Type="Int64" />
+      <Parameter Name="GGT_NumeroGuia" Mode="In" Type="Int64" />
+      <Parameter Name="GGT_IdResultadoTelemercadeo" Mode="In" Type="Int16" />
+      <Parameter Name="GGT_TelefonoMarcado" Mode="In" Type="String" />
+      <Parameter Name="GGT_PersonaContesta" Mode="In" Type="String" />
+      <Parameter Name="GGT_IdParentestoConDestinatari" Mode="In" Type="Int16" />
+      <Parameter Name="GGT_NuevoTelefono" Mode="In" Type="String" />
+      <Parameter Name="GGT_NuevoContaco" Mode="In" Type="String" />
+      <Parameter Name="GGT_NuevaDireccionEnvio" Mode="In" Type="String" />
+      <Parameter Name="GGT_Observacion" Mode="In" Type="String" />
+      <Parameter Name="GGT_IdEstadoGuiaLog" Mode="In" Type="Int64" />
+      <Parameter Name="GGT_FechaGrabacion" Mode="In" Type="DateTime" />
+      <Parameter Name="GGT_CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="MotivoBorraGtionGuiaTeleme_LOI" EntityType="ModeloLogisticaInversaNS.MotivoBorraGtionGuiaTeleme_LOI" />
+    <EntitySet Name="ManifiestoLogInvDetallHist_LOI" EntityType="ModeloLogisticaInversaNS.ManifiestoLogInvDetallHist_LOI" />
+    <FunctionImport Name="paActualizarEstadoGuiaMan_LOI">
+      <Parameter Name="idGuiaManifiesto" Mode="In" Type="Int64" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+      <Parameter Name="estaDescargada" Mode="In" Type="Boolean" />
+      <Parameter Name="fechaDescarga" Mode="In" Type="DateTime" />
+      <Parameter Name="usuarioDescarga" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ResultadoTelemercadeo_LOI" EntityType="ModeloLogisticaInversaNS.ResultadoTelemercadeo_LOI" />
+    <FunctionImport Name="paObtenerGuiasSupervision_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGuiasSupervision_LOI)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="numeroGuia" Mode="In" Type="Int64" />
+      <Parameter Name="estadoGuia" Mode="In" Type="Int16" />
+      <Parameter Name="localidad" Mode="In" Type="String" />
+      <Parameter Name="servicio" Mode="In" Type="Int32" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="RecibidoGuia_LOI" EntityType="ModeloLogisticaInversaNS.RecibidoGuia_LOI" />
+    <FunctionImport Name="paObtenerGuiasPlanilla_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGuiasPlanilla_LOI)">
+      <Parameter Name="numeroPlanilla" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paEliminarGuiaPlanillaGuia_LOI">
+      <Parameter Name="IdGuiaPlanillaGuia" Mode="In" Type="Int64" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Accion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paEliminarGestionGuia_LOI">
+      <Parameter Name="IdMotivo" Mode="In" Type="Int16" />
+      <Parameter Name="IdGestion" Mode="In" Type="Int64" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Accion" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="TipoEvidenciaDevolucion_MEN" EntityType="ModeloLogisticaInversaNS.TipoEvidenciaDevolucion_MEN" />
+    <EntitySet Name="ConsecutivoPorCol_PAR" EntityType="ModeloLogisticaInversaNS.ConsecutivoPorCol_PAR" />
+    <EntitySet Name="ConsecutivosGlobales_PAR" EntityType="ModeloLogisticaInversaNS.ConsecutivosGlobales_PAR" />
+    <EntitySet Name="EvidenciaDevolucion_MEN" EntityType="ModeloLogisticaInversaNS.EvidenciaDevolucion_MEN" />
+    <AssociationSet Name="FK_VolanteDevolucion_MEN_TipoVolante_MEN" Association="ModeloLogisticaInversaNS.FK_VolanteDevolucion_MEN_TipoVolante_MEN">
+      <End Role="TipoEvidenciaDevolucion_MEN" EntitySet="TipoEvidenciaDevolucion_MEN" />
+      <End Role="EvidenciaDevolucion_MEN" EntitySet="EvidenciaDevolucion_MEN" />
+    </AssociationSet>
+    <FunctionImport Name="paEliminarManifiesto_LOI">
+      <Parameter Name="IdManifiesto" Mode="In" Type="Int64" />
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Accion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paInsertarManifiesto_LOI" ReturnType="Collection(Decimal)">
+      <Parameter Name="IdTipoManifiesto" Mode="In" Type="Int16" />
+      <Parameter Name="IdLocalidadOrigen" Mode="In" Type="String" />
+      <Parameter Name="NombreLocalidadOrigen" Mode="In" Type="String" />
+      <Parameter Name="IdLocalidadDestino" Mode="In" Type="String" />
+      <Parameter Name="NombreLocalidadDestino" Mode="In" Type="String" />
+      <Parameter Name="IdAgenciaOrigen" Mode="In" Type="Int64" />
+      <Parameter Name="NombreAgenciaOrigen" Mode="In" Type="String" />
+      <Parameter Name="IdAgenciaDestino" Mode="In" Type="Int64" />
+      <Parameter Name="NombreAgenciaDestino" Mode="In" Type="String" />
+      <Parameter Name="IdGuiaInterna" Mode="In" Type="Int64" />
+      <Parameter Name="NumeroGuiaInterna" Mode="In" Type="Int64" />
+      <Parameter Name="EsManifiestoAutomatico" Mode="In" Type="Boolean" />
+      <Parameter Name="FechaGrabacion" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaDescargue" Mode="In" Type="DateTime" />
+      <Parameter Name="CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ManifiestoDetalleLogInv_VLOI" EntityType="ModeloLogisticaInversaNS.ManifiestoDetalleLogInv_VLOI" />
+    <FunctionImport Name="paObtenerArchEviDevolucion_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerArchEviDevolucion_LOI_Result)">
+      <Parameter Name="IdEstadoGuia" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="PaCrearPlanilla_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.PaCrearPlanilla_LOI)">
+      <Parameter Name="PIG_IdTipoImpreso" Mode="In" Type="Int16" />
+      <Parameter Name="PIG_IdCentroServicios" Mode="In" Type="Int64" />
+      <Parameter Name="PIG_NombreCentroSvc" Mode="In" Type="String" />
+      <Parameter Name="PIG_TipoCliente" Mode="In" Type="String" />
+      <Parameter Name="PIG_NitCliente" Mode="In" Type="String" />
+      <Parameter Name="PIG_EsConsolidado" Mode="In" Type="Boolean" />
+      <Parameter Name="PIG_FechaGrabacion" Mode="In" Type="DateTime" />
+      <Parameter Name="PIG_CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerPlanillasRelacion_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerPlanillasRelacion_LOI)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="numeroPlanilla" Mode="In" Type="Int64" />
+      <Parameter Name="centroServicio" Mode="In" Type="Int64" />
+      <Parameter Name="tipoCliente" Mode="In" Type="String" />
+      <Parameter Name="fechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaFinal" Mode="In" Type="DateTime" />
+      <Parameter Name="tipoPlanilla" Mode="In" Type="Int16" />
+    </FunctionImport>
+    <FunctionImport Name="PaCrearGuiaPlanillaGuiaInterna_LOI">
+      <Parameter Name="PGG_NumeroPlanilla" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_IdAdminisionMensajeria" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_NumeroGuia" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_IdGuiaInterna" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_NumeroGuiaInterna" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_FechaGrabacion" Mode="In" Type="DateTime" />
+      <Parameter Name="PGG_CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="PaCrearGuiaPlanillaGuia_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.PaCrearGuiaPlanillaGuia_LOI)">
+      <Parameter Name="PGG_NumeroPlanilla" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_IdAdminisionAnterior" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_NumeroGuiaAnterior" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_IdAdmisionNueva" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_NumeroGuiaNueva" Mode="In" Type="Int64" />
+      <Parameter Name="PGG_FechaGrabacion" Mode="In" Type="DateTime" />
+      <Parameter Name="PGG_CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGuiasEstado_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGuiasEstado_LOI)">
+      <Parameter Name="estadoGuia" Mode="In" Type="Int16" />
+      <Parameter Name="localidad" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGuiaCustodia_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGuiaCustodia_LOI_Result)">
+      <Parameter Name="estadoGuia" Mode="In" Type="Int16" />
+      <Parameter Name="numeroGuia" Mode="In" Type="Int64" />
+      <Parameter Name="localidad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGestionesGuia_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGestionesGuia_LOI)">
+      <Parameter Name="numeroGuia" Mode="In" Type="Int64" />
+      <Parameter Name="estadoGuia" Mode="In" Type="Int16" />
+      <Parameter Name="localidad" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGuiasIntCertificaciones_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGuiasIntCertificaciones)">
+      <Parameter Name="planillas" Mode="In" Type="String" />
+      <Parameter Name="idCol" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGuiasIntPlanCert_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGuiasIntPlanCert)">
+      <Parameter Name="planillas" Mode="In" Type="String" />
+      <Parameter Name="idCol" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerNotificacionesNoPlan_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerNotificacionesNoPlan)">
+      <Parameter Name="idCentroLogistico" Mode="In" Type="Int64" />
+      <Parameter Name="idSucursal" Mode="In" Type="Int32" />
+      <Parameter Name="idFormaPago" Mode="In" Type="Int32" />
+      <Parameter Name="nitCliente" Mode="In" Type="String" />
+      <Parameter Name="fechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="fechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paActualizaEntregado_LOI">
+      <Parameter Name="IdAdminisionMensajeria" Mode="In" Type="Int64" />
+      <Parameter Name="FechaEntrega" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="PlanillaRelacionGuia_LOI" EntityType="ModeloLogisticaInversaNS.PlanillaRelacionGuia_LOI" />
+    <EntitySet Name="PlanillaRelacionGuiaGuia_LOI" EntityType="ModeloLogisticaInversaNS.PlanillaRelacionGuiaGuia_LOI" />
+    <AssociationSet Name="FK_PlanillaImpresGuiaInteGuia_LOI_PlanillaImpresGuiaInterna_LOI" Association="ModeloLogisticaInversaNS.FK_PlanillaImpresGuiaInteGuia_LOI_PlanillaImpresGuiaInterna_LOI">
+      <End Role="PlanillaRelacionGuia_LOI" EntitySet="PlanillaRelacionGuia_LOI" />
+      <End Role="PlanillaRelacionGuiaGuia_LOI" EntitySet="PlanillaRelacionGuiaGuia_LOI" />
+    </AssociationSet>
+    <EntitySet Name="ManifiestoLogInvHist_LOI" EntityType="ModeloLogisticaInversaNS.ManifiestoLogInvHist_LOI" />
+    <EntitySet Name="ManifiestoLogisticaInversa_LOI" EntityType="ModeloLogisticaInversaNS.ManifiestoLogisticaInversa_LOI" />
+    <AssociationSet Name="FK_ManifiestoLogInvGuia_LOI_ManifiestoLogisticaInversa_LOI" Association="ModeloLogisticaInversaNS.FK_ManifiestoLogInvGuia_LOI_ManifiestoLogisticaInversa_LOI">
+      <End Role="ManifiestoLogisticaInversa_LOI" EntitySet="ManifiestoLogisticaInversa_LOI" />
+      <End Role="ManifiestoLogInvDetalle_LOI" EntitySet="ManifiestoLogInvDetalle_LOI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ManifiestoLogisticaInversa_LOI_TipoManifiestoLogInv_LOI" Association="ModeloLogisticaInversaNS.FK_ManifiestoLogisticaInversa_LOI_TipoManifiestoLogInv_LOI">
+      <End Role="TipoManifiestoLogInv_LOI" EntitySet="TipoManifiestoLogInv_LOI" />
+      <End Role="ManifiestoLogisticaInversa_LOI" EntitySet="ManifiestoLogisticaInversa_LOI" />
+    </AssociationSet>
+    <FunctionImport Name="paObtenerManifiestos_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerManifiestos_LOI)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="AgenciaOrigen" Mode="In" Type="Int64" />
+      <Parameter Name="AgenciaDestino" Mode="In" Type="Int64" />
+      <Parameter Name="IdManifiesto" Mode="In" Type="Int64" />
+      <Parameter Name="GuiaInterna" Mode="In" Type="Int64" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="PlanillaCertificacionDetalle_LOI" EntityType="ModeloLogisticaInversaNS.PlanillaCertificacionDetalle_LOI" />
+    <EntitySet Name="PlanillaCertificaciones_LOI" EntityType="ModeloLogisticaInversaNS.PlanillaCertificaciones_LOI" />
+    <AssociationSet Name="FK_PlanillaCertificacionDetalle_LOI_PlanillaCertificaciones_LOI" Association="ModeloLogisticaInversaNS.FK_PlanillaCertificacionDetalle_LOI_PlanillaCertificaciones_LOI">
+      <End Role="PlanillaCertificaciones_LOI" EntitySet="PlanillaCertificaciones_LOI" />
+      <End Role="PlanillaCertificacionDetalle_LOI" EntitySet="PlanillaCertificacionDetalle_LOI" />
+    </AssociationSet>
+    <EntitySet Name="PlanillaCertificacionesGuia_LOI" EntityType="ModeloLogisticaInversaNS.PlanillaCertificacionesGuia_LOI" />
+    <EntitySet Name="PlanillaCertificacionesGuia_VLOI" EntityType="ModeloLogisticaInversaNS.PlanillaCertificacionesGuia_VLOI" />
+    <EntitySet Name="PlanillaCertificaciones_VLOI" EntityType="ModeloLogisticaInversaNS.PlanillaCertificaciones_VLOI" />
+    <EntitySet Name="AlmacenGuia_LOI" EntityType="ModeloLogisticaInversaNS.AlmacenGuia_LOI" />
+    <FunctionImport Name="paActualizarArchivoGuia_LOI">
+      <Parameter Name="ARG_Caja" Mode="In" Type="Int64" />
+      <Parameter Name="ARG_Lote" Mode="In" Type="Int32" />
+      <Parameter Name="ARG_Posicion" Mode="In" Type="Int32" />
+      <Parameter Name="ARG_DatosEdicion" Mode="In" Type="String" />
+      <Parameter Name="ARG_DatosEntrega" Mode="In" Type="String" />
+      <Parameter Name="ARG_EstadoFisicoGuia" Mode="In" Type="String" />
+      <Parameter Name="ARG_FechaEntrega" Mode="In" Type="DateTime" />
+      <Parameter Name="ARG_UsuarioArchiva" Mode="In" Type="String" />
+      <Parameter Name="ARG_IdCentroLogArchiva" Mode="In" Type="Int64" />
+      <Parameter Name="ARG_NumeroGuia" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paValidarFechaArchivo_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paValidarFechaArchivo_LOI_Result)">
+      <Parameter Name="fechaEntrega" Mode="In" Type="DateTime" />
+      <Parameter Name="numeroGuia" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGestionesGuiasCOL_LOI" ReturnType="Collection(ModeloLogisticaInversaNS.paObtenerGestionesGuiasCOL_LOI_Result)">
+      <Parameter Name="numeroGuia" Mode="In" Type="Int64" />
+      <Parameter Name="estadoGuia" Mode="In" Type="Int16" />
+      <Parameter Name="idcentroServicio" Mode="In" Type="Int64" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Localidades_VPAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="LOC_IdTipo" />
+      <PropertyRef Name="TLO_Descripcion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_NombreCorto" />
+      <PropertyRef Name="LOC_CodigoPostal" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdTipo" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TLO_Descripcion" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_Nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_NombreCorto" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdTipoPrimero" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdTipoPrimeroDesc" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_NombrePrimero" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_NombreCortoPrimero" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdTipoSegundo" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdTipoSegundoDesc" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_NombreSegundo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_NombreCortoSegundo" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdTipoTercero" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_IdTipoTerceroDesc" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_NombreTercero" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LOC_NombreCortoTercero" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="NombreCompleto" Type="String" MaxLength="110" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="LOC_CodigoPostal" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TipoManifiestoLogInv_LOI">
+    <Key>
+      <PropertyRef Name="TIM_IdTipoManifiesto" />
+    </Key>
+    <Property Type="Int16" Name="TIM_IdTipoManifiesto" Nullable="false" />
+    <Property Type="String" Name="TIM_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TIM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="TIM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ManifiestoLogisticaInversa_LOI" Relationship="ModeloLogisticaInversaNS.FK_ManifiestoLogisticaInversa_LOI_TipoManifiestoLogInv_LOI" FromRole="TipoManifiestoLogInv_LOI" ToRole="ManifiestoLogisticaInversa_LOI" />
+  </EntityType>
+  <EntityType Name="ManifiestoLogInvDetalle_LOI">
+    <Key>
+      <PropertyRef Name="MLD_IdManifiestoLogInvDetalle" />
+    </Key>
+    <Property Type="Int64" Name="MLD_IdManifiestoLogInvDetalle" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="MLD_IdManifiesto" Nullable="false" />
+    <Property Type="Int64" Name="MLD_IdAdminision" Nullable="false" />
+    <Property Type="Int64" Name="MLD_NumeroAdmision" Nullable="false" />
+    <Property Type="Boolean" Name="MLD_EstaDescargada" Nullable="false" />
+    <Property Type="Boolean" Name="MLD_FueManifestadaEnOrigen" Nullable="false" />
+    <Property Type="DateTime" Name="MLD_FechaDescarga" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MLD_UsuarioDescarga" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MLD_EstadoEnManifiesto" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="MLD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MLD_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MLD_IdServicio" Nullable="false" />
+    <NavigationProperty Name="ManifiestoLogisticaInversa_LOI" Relationship="ModeloLogisticaInversaNS.FK_ManifiestoLogInvGuia_LOI_ManifiestoLogisticaInversa_LOI" FromRole="ManifiestoLogInvDetalle_LOI" ToRole="ManifiestoLogisticaInversa_LOI" />
+  </EntityType>
+  <ComplexType Name="paObtenerGuiaManifDescarga_LOI">
+    <Property Type="Int64" Name="MLD_IdManifiestoLogInvDetalle" Nullable="false" />
+    <Property Type="Int64" Name="MLD_IdManifiesto" Nullable="false" />
+    <Property Type="Int64" Name="MLD_IdAdminision" Nullable="false" />
+    <Property Type="Int32" Name="MLD_IdServicio" Nullable="false" />
+    <Property Type="Int64" Name="MLD_NumeroAdmision" Nullable="false" />
+    <Property Type="Boolean" Name="MLD_EstaDescargada" Nullable="false" />
+    <Property Type="Boolean" Name="MLD_FueManifestadaEnOrigen" Nullable="false" />
+    <Property Type="DateTime" Name="MLD_FechaDescarga" Nullable="false" Precision="23" />
+    <Property Type="String" Name="MLD_UsuarioDescarga" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MLD_EstadoEnManifiesto" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="DescripcionEstadoManifiesto" Nullable="false" MaxLength="24" />
+    <Property Type="DateTime" Name="MLD_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="MLD_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGestionesTrazaGuia_LOI">
+    <Property Type="Int64" Name="GGT_IdGestionGuiaTelemercadeo" Nullable="false" />
+    <Property Type="Int64" Name="GGT_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="GGT_NumeroGuia" Nullable="false" />
+    <Property Type="Int16" Name="GGT_IdResultadoTelemercadeo" Nullable="false" />
+    <Property Type="String" Name="GGT_TelefonoMarcado" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="GGT_PersonaContesta" Nullable="false" MaxLength="150" />
+    <Property Type="Int16" Name="GGT_IdParentestoConDestinatari" Nullable="false" />
+    <Property Type="String" Name="GGT_NuevoContaco" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="GGT_NuevoTelefono" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="GGT_NuevaDireccionEnvio" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="GGT_Observacion" Nullable="true" MaxLength="250" />
+    <Property Type="Int64" Name="GGT_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="DateTime" Name="GGT_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="GGT_CreadoPor" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="RTM_Descripcion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="RTM_Estado" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="PAR_Descripcion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="paCrearGestionGuia_LOI">
+    <Property Type="Decimal" Name="idGestionGuiaTelemercadeo" Nullable="true" Precision="38" Scale="0" />
+  </ComplexType>
+  <EntityType Name="MotivoBorraGtionGuiaTeleme_LOI">
+    <Key>
+      <PropertyRef Name="MBT_IdMotivoBorrado" />
+    </Key>
+    <Property Type="Int16" Name="MBT_IdMotivoBorrado" Nullable="false" />
+    <Property Type="String" Name="MBT_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MBT_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="MBT_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MBT_CreadoPor" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ManifiestoLogInvDetallHist_LOI">
+    <Key>
+      <PropertyRef Name="MLD_IdManifiestoLogInvDetalle" />
+    </Key>
+    <Property Type="Int64" Name="MLD_IdManifiestoLogInvDetalle" Nullable="false" />
+    <Property Type="Int64" Name="MLD_IdManifiesto" Nullable="false" />
+    <Property Type="Int64" Name="MLD_IdAdminision" Nullable="false" />
+    <Property Type="Int64" Name="MLD_NumeroAdmision" Nullable="false" />
+    <Property Type="Int32" Name="MLD_IdServicio" Nullable="false" />
+    <Property Type="Boolean" Name="MLD_EstaDescargada" Nullable="false" />
+    <Property Type="Boolean" Name="MLD_FueManifestadaEnOrigen" Nullable="false" />
+    <Property Type="DateTime" Name="MLD_FechaDescarga" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MLD_UsuarioDescarga" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MLD_EstadoEnManifiesto" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="MLD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MLD_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="MLD_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MLD_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MLD_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ResultadoTelemercadeo_LOI">
+    <Key>
+      <PropertyRef Name="RTM_IdResultadoTelemercadeo" />
+    </Key>
+    <Property Type="Int16" Name="RTM_IdResultadoTelemercadeo" Nullable="false" />
+    <Property Type="String" Name="RTM_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTM_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="RTM_NombreAssembly" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTM_Namespace" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTM_NombreClase" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RTM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTM_CreadoPor" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="paObtenerGuiasSupervision_LOI">
+    <Property Type="Int64" Name="EGT_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="EGT_NumeroGuia" Nullable="false" />
+    <Property Type="Int16" Name="EGT_IdEstadoGuia" Nullable="false" />
+    <Property Type="String" Name="EGT_DescripcionEstado" Nullable="false" MaxLength="25" />
+    <Property Type="Boolean" Name="EGT_EsVisible" Nullable="false" />
+    <Property Type="String" Name="EGT_Observacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="EGT_IdLocalidad" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="EGT_NombreLocalidad" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="EGT_IdModulo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="EGT_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="EGT_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="RecibidoGuia_LOI">
+    <Key>
+      <PropertyRef Name="REG_IdAdminisionMensajeria" />
+    </Key>
+    <Property Type="Int64" Name="REG_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="REG_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="REG_RecibidoPor" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REG_Identificacion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REG_Telefono" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REG_OtrosDatos" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="REG_FechaEntrega" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="REG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="REG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="paObtenerGuiasPlanilla_LOI">
+    <Property Type="DateTime" Name="PGG_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="PGG_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreServicio" Nullable="false" MaxLength="25" />
+    <Property Type="Boolean" Name="ADM_EsAlCobro" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdPaisOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombrePaisOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="ADM_IdServicio" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCiudadOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdPaisDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombrePaisDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="FormasPago" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="FormasPagoNueva" Nullable="true" MaxLength="500" />
+    <Property Type="Decimal" Name="ADM_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalNueva" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="ADM_NombreCiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="PGG_IdAdminisionAnterior" Nullable="false" />
+    <Property Type="Int64" Name="PGG_NumeroGuiaAnterior" Nullable="false" />
+    <Property Type="Int64" Name="PGG_IdAdmisionNueva" Nullable="false" />
+    <Property Type="Int64" Name="PGG_NumeroGuiaNueva" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_TelefonoRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="ADM_Peso" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ADM_EstaPagada" Nullable="false" />
+    <Property Type="Int32" Name="ADM_IdServicioNueva" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreServicioNueva" Nullable="false" MaxLength="25" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigenNueva" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigenNueva" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestinoNueva" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestinoNueva" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdPaisOrigenNueva" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombrePaisOrigenNueva" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadOrigenNueva" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombreCiudadOrigenNueva" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdPaisDestinoNueva" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombrePaisDestinoNueva" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadDestinoNueva" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombreCiudadDestinoNueva" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="ADM_PesoNueva" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="ADM_IdRemitenteNueva" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreRemitenteNueva" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_TelefonoRemitenteNueva" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_IdDestinatarioNueva" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreDestinatarioNueva" Nullable="false" MaxLength="150" />
+    <Property Type="Boolean" Name="ADM_EsAlCobroNueva" Nullable="false" />
+    <Property Type="Boolean" Name="ADM_EstaPagadaNueva" Nullable="false" />
+    <Property Type="Int64" Name="PGG_IdPlanillaRelacionGuiaGuia" Nullable="false" />
+    <Property Type="Int64" Name="PGG_NumeroPlanilla" Nullable="false" />
+    <Property Type="String" Name="ADM_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_TipoCliente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADM_TelefonoDestinatarioNueva" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionDestinatarioNueva" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_TipoClienteNueva" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADM_DireccionRemitenteNueva" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <EntityType Name="TipoEvidenciaDevolucion_MEN">
+    <Key>
+      <PropertyRef Name="TIV_IdTipoEvidenciaDevolucion" />
+    </Key>
+    <Property Type="Int16" Name="TIV_IdTipoEvidenciaDevolucion" Nullable="false" />
+    <Property Type="String" Name="TIV_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TIV_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="TIV_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TIV_IdSuministro" Nullable="false" />
+    <NavigationProperty Name="EvidenciaDevolucion_MEN" Relationship="ModeloLogisticaInversaNS.FK_VolanteDevolucion_MEN_TipoVolante_MEN" FromRole="TipoEvidenciaDevolucion_MEN" ToRole="EvidenciaDevolucion_MEN" />
+  </EntityType>
+  <EntityType Name="ConsecutivoPorCol_PAR">
+    <Key>
+      <PropertyRef Name="CCC_IdTipoConsecutivo" />
+      <PropertyRef Name="CCC_IdCentroLogistico" />
+    </Key>
+    <Property Type="Int16" Name="CCC_IdTipoConsecutivo" Nullable="false" />
+    <Property Type="Int64" Name="CCC_IdCentroLogistico" Nullable="false" />
+    <Property Type="Int64" Name="CCC_Inicio" Nullable="false" />
+    <Property Type="Int64" Name="CCC_Fin" Nullable="false" />
+    <Property Type="Int64" Name="CCC_Actual" Nullable="false" />
+    <Property Type="Boolean" Name="CCC_EstaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="CCC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CCC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ConsecutivosGlobales_PAR">
+    <Key>
+      <PropertyRef Name="CON_IdTipoConsecutivo" />
+    </Key>
+    <Property Type="Int16" Name="CON_IdTipoConsecutivo" Nullable="false" />
+    <Property Type="Int64" Name="CON_Inicio" Nullable="false" />
+    <Property Type="Int64" Name="CON_Fin" Nullable="false" />
+    <Property Type="Int64" Name="CON_Actual" Nullable="false" />
+    <Property Type="Boolean" Name="CON_EstaActivo" Nullable="false" />
+    <Property Type="DateTime" Name="CON_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CON_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EvidenciaDevolucion_MEN">
+    <Key>
+      <PropertyRef Name="VOD_IdEvidenciaDevolucion" />
+    </Key>
+    <Property Type="Int64" Name="VOD_IdEvidenciaDevolucion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="VOD_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="Int64" Name="VOD_NumeroEvidencia" Nullable="false" />
+    <Property Type="DateTime" Name="VOD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="VOD_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="VOD_IdTipoEvidenciaDevolucion" Nullable="false" />
+    <Property Type="Boolean" Name="VOD_EstaDigitalizado" Nullable="false" />
+    <NavigationProperty Name="TipoEvidenciaDevolucion_MEN" Relationship="ModeloLogisticaInversaNS.FK_VolanteDevolucion_MEN_TipoVolante_MEN" FromRole="EvidenciaDevolucion_MEN" ToRole="TipoEvidenciaDevolucion_MEN" />
+    <Property Type="String" Name="VOD_DescripcionTipoEvidenciaDevolucion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_VolanteDevolucion_MEN_TipoVolante_MEN">
+    <End Type="ModeloLogisticaInversaNS.TipoEvidenciaDevolucion_MEN" Role="TipoEvidenciaDevolucion_MEN" Multiplicity="1" />
+    <End Type="ModeloLogisticaInversaNS.EvidenciaDevolucion_MEN" Role="EvidenciaDevolucion_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEvidenciaDevolucion_MEN">
+        <PropertyRef Name="TIV_IdTipoEvidenciaDevolucion" />
+      </Principal>
+      <Dependent Role="EvidenciaDevolucion_MEN">
+        <PropertyRef Name="VOD_IdTipoEvidenciaDevolucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ManifiestoDetalleLogInv_VLOI">
+    <Key>
+      <PropertyRef Name="MAN_IdManifiestoLogInv" />
+      <PropertyRef Name="MAN_IdTipoManifiesto" />
+      <PropertyRef Name="MAN_IdLocalidadOrigen" />
+      <PropertyRef Name="MAN_IdLocalidadDestino" />
+      <PropertyRef Name="MAN_IdAgenciaOrigen" />
+      <PropertyRef Name="MAN_IdAgenciaDestino" />
+      <PropertyRef Name="MAN_IdGuiaInterna" />
+      <PropertyRef Name="MAN_NumeroGuiaInterna" />
+      <PropertyRef Name="MAN_EsManifiestoAutomatico" />
+      <PropertyRef Name="MLD_IdManifiestoLogInvDetalle" />
+      <PropertyRef Name="MLD_IdManifiesto" />
+      <PropertyRef Name="MLD_IdAdminision" />
+      <PropertyRef Name="MLD_NumeroAdmision" />
+      <PropertyRef Name="MLD_FechaDescarga" />
+      <PropertyRef Name="MLD_UsuarioDescarga" />
+      <PropertyRef Name="MAN_FechaGrabacion" />
+      <PropertyRef Name="MAN_FechaInicioDescarga" />
+      <PropertyRef Name="MLD_IdServicio" />
+      <PropertyRef Name="MLD_EstaDescargada" />
+      <PropertyRef Name="MLD_FueManifestadaEnOrigen" />
+      <PropertyRef Name="MLD_EstadoEnManifiesto" />
+      <PropertyRef Name="MLD_FechaGrabacion" />
+    </Key>
+    <Property Type="Int64" Name="MAN_IdManifiestoLogInv" Nullable="false" />
+    <Property Type="Int16" Name="MAN_IdTipoManifiesto" Nullable="false" />
+    <Property Type="String" Name="MAN_IdLocalidadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAN_IdLocalidadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="MAN_IdAgenciaOrigen" Nullable="false" />
+    <Property Type="Int64" Name="MAN_IdAgenciaDestino" Nullable="false" />
+    <Property Type="Int64" Name="MAN_IdGuiaInterna" Nullable="false" />
+    <Property Type="Int64" Name="MAN_NumeroGuiaInterna" Nullable="false" />
+    <Property Type="Boolean" Name="MAN_EsManifiestoAutomatico" Nullable="false" />
+    <Property Type="Int64" Name="MLD_IdManifiestoLogInvDetalle" Nullable="false" />
+    <Property Type="Int64" Name="MLD_IdManifiesto" Nullable="false" />
+    <Property Type="Int64" Name="MLD_IdAdminision" Nullable="false" />
+    <Property Type="Int64" Name="MLD_NumeroAdmision" Nullable="false" />
+    <Property Type="DateTime" Name="MLD_FechaDescarga" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MLD_UsuarioDescarga" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="MAN_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="MAN_FechaInicioDescarga" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="MLD_IdServicio" Nullable="false" />
+    <Property Type="Boolean" Name="MLD_EstaDescargada" Nullable="false" />
+    <Property Type="Boolean" Name="MLD_FueManifestadaEnOrigen" Nullable="false" />
+    <Property Type="String" Name="MLD_EstadoEnManifiesto" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="MLD_FechaGrabacion" Nullable="false" Precision="3" />
+  </EntityType>
+  <ComplexType Name="paObtenerArchEviDevolucion_Result">
+    <Property Type="Int64" Name="ARV_IdArchivoEvidencia" Nullable="false" />
+    <Property Type="String" Name="ARV_NombreAdjunto" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="VOD_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="Int64" Name="VOD_NumeroEvidencia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paObtenerArchEviDevolucion_LOI_Result">
+    <Property Type="String" Name="ARV_NombreAdjunto" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="VOD_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="Int64" Name="VOD_NumeroEvidencia" Nullable="false" />
+    <Property Type="Int64" Name="ARV_IdEvidenciaDevolucion" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="PaCrearPlanilla_LOI">
+    <Property Type="Decimal" Name="idPlanilla" Nullable="true" Precision="38" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="paObtenerPlanillasRelacion_LOI">
+    <Property Type="Int64" Name="PIG_NumeroPlanilla" Nullable="false" />
+    <Property Type="Int64" Name="PIG_IdCentroServicios" Nullable="false" />
+    <Property Type="String" Name="PIG_NombreCentroSvc" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="PIG_TipoCliente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="NombreTipocliente" Nullable="true" MaxLength="7" />
+    <Property Type="String" Name="PIG_NitCliente" Nullable="false" MaxLength="20" />
+    <Property Type="Boolean" Name="PIG_EsConsolidado" Nullable="false" />
+    <Property Type="DateTime" Name="PIG_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="PIG_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="PaCrearGuiaPlanillaGuia_LOI">
+    <Property Type="Decimal" Name="idPlanillaGuia" Nullable="true" Precision="38" Scale="0" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGuiasEstado_LOI">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int64" Name="EGT_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="Int64" Name="EGT_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="EGT_NumeroGuia" Nullable="false" />
+    <Property Type="Int16" Name="EGT_IdEstadoGuia" Nullable="false" />
+    <Property Type="String" Name="EGT_DescripcionEstado" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="EGT_Observacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="EGT_IdLocalidad" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="EGT_NombreLocalidad" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="EGT_IdModulo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="EGT_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="EGT_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="DiasEstado" Nullable="true" />
+    <Property Type="String" Name="ADM_EmailRemitente" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ADM_EmailDestinatario" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGuiaCustodia_LOI_Result">
+    <Property Type="Int64" Name="EGT_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="Int64" Name="EGT_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="EGT_NumeroGuia" Nullable="false" />
+    <Property Type="Int16" Name="EGT_IdEstadoGuia" Nullable="false" />
+    <Property Type="String" Name="EGT_DescripcionEstado" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="EGT_Observacion" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="EGT_IdLocalidad" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="EGT_NombreLocalidad" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="EGT_IdModulo" Nullable="true" MaxLength="10" />
+    <Property Type="DateTime" Name="EGT_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="EGT_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="DiasEstado" Nullable="true" />
+    <Property Type="String" Name="ADM_EmailRemitente" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ADM_EmailDestinatario" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGuiasIntCertificaciones">
+    <Property Type="Int64" Name="ADM_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="ADM_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCiudadOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_TelefonoRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_NombreCiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_DiceContener" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AGI_DescripcionGestionDest" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="AGI_IdGestionDestino" Nullable="false" />
+    <Property Type="String" Name="AGI_NombreRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AGI_TelefonoRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="AGI_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AGI_NombreDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AGI_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="AGI_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AGI_Contenido" Nullable="true" MaxLength="250" />
+    <Property Type="Int64" Name="PLG_IdPlanillaCertificaciones" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="PLC_IdCentroServiciosPlanilla" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGuiasIntPlanCert">
+    <Property Type="Int64" Name="ADM_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="ADM_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCiudadOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_TelefonoRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_NombreCiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_DiceContener" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AGI_DescripcionGestionDest" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="AGI_IdGestionDestino" Nullable="false" />
+    <Property Type="String" Name="AGI_NombreRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AGI_TelefonoRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="AGI_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AGI_NombreDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AGI_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="AGI_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="AGI_Contenido" Nullable="true" MaxLength="250" />
+    <Property Type="Int64" Name="PLC_IdPlanillaCertificaciones" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaGrabacion" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="paObtenerNotificacionesNoPlan">
+    <Property Type="Int64" Name="ADM_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="ADM_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="ADM_IdUnidadNegocio" Nullable="false" MaxLength="8" />
+    <Property Type="Int32" Name="ADM_IdServicio" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreServicio" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_IdTipoEntrega" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADM_DescripcionTipoEntrega" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdPaisOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombrePaisOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombreCiudadOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="ADM_IdPaisDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombrePaisDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdCiudadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADM_NombreCiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_TipoCliente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADM_NombreTipoEnvio" Nullable="false" MaxLength="25" />
+    <Property Type="Boolean" Name="ADM_EsAlCobro" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaPago" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ADM_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADM_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_TelefonoRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADM_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="Int64" Name="ADM_IdMensajero" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreMensajero" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ADM_EmailRemitente" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ADM_EmailDestinatario" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="ADM_EstaEntregada" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaEntrega" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ADN_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="String" Name="ADN_TipoIdDestinatario" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADN_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADN_NombreDestinatario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ADN_Apellido1Destinatario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ADN_Apellido2Destinatario" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ADN_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADN_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADN_EmailDestinatario" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ADN_IdCiudadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADN_NombreCiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="Boolean" Name="ADN_ReclamaEnOficina" Nullable="false" />
+    <Property Type="String" Name="ADN_IdTipoDestino" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADN_TipoDestino" Nullable="false" MaxLength="50" />
+    <Property Type="Int64" Name="ADN_NumeroGuiaInterna" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaAdmision" Nullable="false" Precision="23" />
+    <Property Type="Int16" Name="ADM_IdTipoEnvio" Nullable="false" />
+    <Property Type="String" Name="ADM_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+    <Property Type="String" Name="MCC_NitConvenioRemitente" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="MCC_IdSucursalRecogida" Nullable="true" />
+    <Property Type="Int64" Name="PLG_IdPlanillaCertificacionesGuia" Nullable="true" />
+    <Property Type="Int16" Name="AGF_IdFormaPago" Nullable="false" />
+    <Property Type="Int64" Name="AGE_IdCentroLogistico" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="PlanillaRelacionGuia_LOI">
+    <Key>
+      <PropertyRef Name="PIG_NumeroPlanilla" />
+    </Key>
+    <Property Type="Int64" Name="PIG_NumeroPlanilla" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int16" Name="PIG_IdTipoImpreso" Nullable="false" />
+    <Property Type="Int64" Name="PIG_IdCentroServicios" Nullable="false" />
+    <Property Type="String" Name="PIG_NombreCentroSvc" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PIG_TipoCliente" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="PIG_NitCliente" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="PIG_EsConsolidado" Nullable="false" />
+    <Property Type="DateTime" Name="PIG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PIG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PlanillaRelacionGuiaGuia_LOI" Relationship="ModeloLogisticaInversaNS.FK_PlanillaImpresGuiaInteGuia_LOI_PlanillaImpresGuiaInterna_LOI" FromRole="PlanillaRelacionGuia_LOI" ToRole="PlanillaRelacionGuiaGuia_LOI" />
+  </EntityType>
+  <EntityType Name="PlanillaRelacionGuiaGuia_LOI">
+    <Key>
+      <PropertyRef Name="PGG_IdPlanillaRelacionGuiaGuia" />
+    </Key>
+    <Property Type="Int64" Name="PGG_IdPlanillaRelacionGuiaGuia" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="PGG_NumeroPlanilla" Nullable="false" />
+    <Property Type="Int64" Name="PGG_IdAdminisionAnterior" Nullable="false" />
+    <Property Type="Int64" Name="PGG_NumeroGuiaAnterior" Nullable="false" />
+    <Property Type="Int64" Name="PGG_IdAdmisionNueva" Nullable="false" />
+    <Property Type="Int64" Name="PGG_NumeroGuiaNueva" Nullable="false" />
+    <Property Type="DateTime" Name="PGG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PGG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PlanillaRelacionGuia_LOI" Relationship="ModeloLogisticaInversaNS.FK_PlanillaImpresGuiaInteGuia_LOI_PlanillaImpresGuiaInterna_LOI" FromRole="PlanillaRelacionGuiaGuia_LOI" ToRole="PlanillaRelacionGuia_LOI" />
+  </EntityType>
+  <Association Name="FK_PlanillaImpresGuiaInteGuia_LOI_PlanillaImpresGuiaInterna_LOI">
+    <End Type="ModeloLogisticaInversaNS.PlanillaRelacionGuia_LOI" Role="PlanillaRelacionGuia_LOI" Multiplicity="1" />
+    <End Type="ModeloLogisticaInversaNS.PlanillaRelacionGuiaGuia_LOI" Role="PlanillaRelacionGuiaGuia_LOI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanillaRelacionGuia_LOI">
+        <PropertyRef Name="PIG_NumeroPlanilla" />
+      </Principal>
+      <Dependent Role="PlanillaRelacionGuiaGuia_LOI">
+        <PropertyRef Name="PGG_NumeroPlanilla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paObtenerGestionesGuia_LOI">
+    <Property Type="Int64" Name="EGT_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="Int64" Name="EGT_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="EGT_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="MOG_Descripcion" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Gestiones" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="ManifiestoLogInvHist_LOI">
+    <Key>
+      <PropertyRef Name="MAN_IdManifiestoLogInv" />
+    </Key>
+    <Property Type="Int64" Name="MAN_IdManifiestoLogInv" Nullable="false" />
+    <Property Type="Int16" Name="MAN_IdTipoManifiesto" Nullable="false" />
+    <Property Type="String" Name="MAN_IdLocalidadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAN_NombreLocalidadOrigen" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAN_IdLocalidadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAN_NombreLocalidadDestino" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="MAN_IdAgenciaOrigen" Nullable="false" />
+    <Property Type="String" Name="MAN_NombreAgenciaOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="MAN_IdAgenciaDestino" Nullable="false" />
+    <Property Type="String" Name="MAN_NombreAgenciaDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="MAN_IdGuiaInterna" />
+    <Property Type="Int64" Name="MAN_NumeroGuiaInterna" />
+    <Property Type="Int16" Name="MAN_IdAreaInternaEmpresa" Nullable="false" />
+    <Property Type="Boolean" Name="MAN_EsManifiestoAutomatico" Nullable="false" />
+    <Property Type="DateTime" Name="MAN_FechaInicioDescarga" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="MAN_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MAN_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="MAN_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MAN_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAN_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ManifiestoLogisticaInversa_LOI">
+    <Key>
+      <PropertyRef Name="MAN_IdManifiestoLogInv" />
+    </Key>
+    <Property Type="Int64" Name="MAN_IdManifiestoLogInv" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int16" Name="MAN_IdTipoManifiesto" Nullable="false" />
+    <Property Type="String" Name="MAN_IdLocalidadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAN_NombreLocalidadOrigen" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAN_IdLocalidadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAN_NombreLocalidadDestino" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="MAN_IdAgenciaOrigen" Nullable="false" />
+    <Property Type="String" Name="MAN_NombreAgenciaOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="MAN_IdAgenciaDestino" Nullable="false" />
+    <Property Type="String" Name="MAN_NombreAgenciaDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="MAN_IdGuiaInterna" />
+    <Property Type="Int64" Name="MAN_NumeroGuiaInterna" />
+    <Property Type="Boolean" Name="MAN_EsManifiestoAutomatico" Nullable="false" />
+    <Property Type="DateTime" Name="MAN_FechaInicioDescarga" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="MAN_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MAN_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ManifiestoLogInvDetalle_LOI" Relationship="ModeloLogisticaInversaNS.FK_ManifiestoLogInvGuia_LOI_ManifiestoLogisticaInversa_LOI" FromRole="ManifiestoLogisticaInversa_LOI" ToRole="ManifiestoLogInvDetalle_LOI" />
+    <NavigationProperty Name="TipoManifiestoLogInv_LOI" Relationship="ModeloLogisticaInversaNS.FK_ManifiestoLogisticaInversa_LOI_TipoManifiestoLogInv_LOI" FromRole="ManifiestoLogisticaInversa_LOI" ToRole="TipoManifiestoLogInv_LOI" />
+  </EntityType>
+  <Association Name="FK_ManifiestoLogInvGuia_LOI_ManifiestoLogisticaInversa_LOI">
+    <End Type="ModeloLogisticaInversaNS.ManifiestoLogisticaInversa_LOI" Role="ManifiestoLogisticaInversa_LOI" Multiplicity="1" />
+    <End Type="ModeloLogisticaInversaNS.ManifiestoLogInvDetalle_LOI" Role="ManifiestoLogInvDetalle_LOI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ManifiestoLogisticaInversa_LOI">
+        <PropertyRef Name="MAN_IdManifiestoLogInv" />
+      </Principal>
+      <Dependent Role="ManifiestoLogInvDetalle_LOI">
+        <PropertyRef Name="MLD_IdManifiesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ManifiestoLogisticaInversa_LOI_TipoManifiestoLogInv_LOI">
+    <End Type="ModeloLogisticaInversaNS.TipoManifiestoLogInv_LOI" Role="TipoManifiestoLogInv_LOI" Multiplicity="1" />
+    <End Type="ModeloLogisticaInversaNS.ManifiestoLogisticaInversa_LOI" Role="ManifiestoLogisticaInversa_LOI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoManifiestoLogInv_LOI">
+        <PropertyRef Name="TIM_IdTipoManifiesto" />
+      </Principal>
+      <Dependent Role="ManifiestoLogisticaInversa_LOI">
+        <PropertyRef Name="MAN_IdTipoManifiesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paObtenerManifiestos_LOI">
+    <Property Type="Int64" Name="MAN_IdManifiestoLogInv" Nullable="false" />
+    <Property Type="Int16" Name="MAN_IdTipoManifiesto" Nullable="false" />
+    <Property Type="String" Name="TIM_Descripcion" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="MAN_IdLocalidadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="MAN_NombreLocalidadOrigen" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="MAN_IdLocalidadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="MAN_NombreLocalidadDestino" Nullable="false" MaxLength="100" />
+    <Property Type="Int64" Name="MAN_IdAgenciaOrigen" Nullable="false" />
+    <Property Type="String" Name="MAN_NombreAgenciaOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="MAN_IdAgenciaDestino" Nullable="false" />
+    <Property Type="String" Name="MAN_NombreAgenciaDestino" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="MAN_IdGuiaInterna" Nullable="true" />
+    <Property Type="Int64" Name="MAN_NumeroGuiaInterna" Nullable="true" />
+    <Property Type="Boolean" Name="MAN_EsManifiestoAutomatico" Nullable="false" />
+    <Property Type="DateTime" Name="MAN_FechaInicioDescarga" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="MAN_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="MAN_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="AGI_NombreRemitente" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="AGI_TelefonoRemitente" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="AGI_DireccionRemitente" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="AGI_NombreDestinatario" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="AGI_TelefonoDestinatario" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="AGI_DireccionDestinatario" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="AGI_DescripcionGestionOrig" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="AGI_IdGestionOrigen" Nullable="true" />
+    <Property Type="Int64" Name="AGI_IdGestionDestino" Nullable="true" />
+    <Property Type="String" Name="AGI_DescripcionGestionDest" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AGI_Contenido" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <EntityType Name="PlanillaCertificacionDetalle_LOI">
+    <Key>
+      <PropertyRef Name="PCD_IdPlanillaCertificaciones" />
+    </Key>
+    <Property Type="Int64" Name="PCD_IdPlanillaCertificaciones" Nullable="false" />
+    <Property Type="String" Name="PCD_TipoPlanilla" Nullable="false" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Type="Int64" Name="PCD_IdDestinatario" Nullable="false" />
+    <Property Type="String" Name="PCD_Nombre" Nullable="false" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PCD_Direccion" Nullable="false" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PCD_Telefono" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PCD_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="PCD_Consolidada" Nullable="false" />
+    <Property Type="Boolean" Name="PCD_Devolucion" Nullable="false" />
+    <Property Type="DateTime" Name="PCD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PCD_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PlanillaCertificaciones_LOI" Relationship="ModeloLogisticaInversaNS.FK_PlanillaCertificacionDetalle_LOI_PlanillaCertificaciones_LOI" FromRole="PlanillaCertificacionDetalle_LOI" ToRole="PlanillaCertificaciones_LOI" />
+    <Property Type="Boolean" Name="PCD_Cerrada" Nullable="false" />
+    <Property Type="DateTime" Name="PCD_FechaCierre" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PCD_CerradoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PlanillaCertificaciones_LOI">
+    <Key>
+      <PropertyRef Name="PLC_IdPlanillaCertificaciones" />
+    </Key>
+    <Property Type="Int64" Name="PLC_IdPlanillaCertificaciones" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="PLC_IdRegionalAdmPlanilla" Nullable="false" />
+    <Property Type="Int64" Name="PLC_IdCentroServiciosPlanilla" Nullable="false" />
+    <Property Type="DateTime" Name="PLC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PLC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="PLC_IdAdmisionMensajeria" />
+    <Property Type="Int64" Name="PLC_NumeroGuia" />
+    <Property Type="DateTime" Name="PLC_FechaDescargue" Nullable="false" Precision="3" />
+    <Property Type="Boolean" Name="PLC_EstaDescargada" Nullable="false" />
+    <Property Type="String" Name="PLC_DescargadaPor" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PlanillaCertificacionDetalle_LOI" Relationship="ModeloLogisticaInversaNS.FK_PlanillaCertificacionDetalle_LOI_PlanillaCertificaciones_LOI" FromRole="PlanillaCertificaciones_LOI" ToRole="PlanillaCertificacionDetalle_LOI" />
+  </EntityType>
+  <Association Name="FK_PlanillaCertificacionDetalle_LOI_PlanillaCertificaciones_LOI">
+    <End Type="ModeloLogisticaInversaNS.PlanillaCertificaciones_LOI" Role="PlanillaCertificaciones_LOI" Multiplicity="1" />
+    <End Type="ModeloLogisticaInversaNS.PlanillaCertificacionDetalle_LOI" Role="PlanillaCertificacionDetalle_LOI" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PlanillaCertificaciones_LOI">
+        <PropertyRef Name="PLC_IdPlanillaCertificaciones" />
+      </Principal>
+      <Dependent Role="PlanillaCertificacionDetalle_LOI">
+        <PropertyRef Name="PCD_IdPlanillaCertificaciones" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PlanillaCertificacionesGuia_LOI">
+    <Key>
+      <PropertyRef Name="PLG_IdPlanillaCertificacionesGuia" />
+    </Key>
+    <Property Type="Int64" Name="PLG_IdPlanillaCertificacionesGuia" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="PLG_IdPlanillaCertificaciones" Nullable="false" />
+    <Property Type="Int64" Name="PLG_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="PLG_NumeroGuia" Nullable="false" />
+    <Property Type="Int64" Name="PLG_IdAdminisionGuiaInterna" Nullable="false" />
+    <Property Type="Int64" Name="PLG_NumeroGuiaInterna" Nullable="false" />
+    <Property Type="Int64" Name="PLG_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="DateTime" Name="PLG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PLG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PlanillaCertificacionesGuia_VLOI">
+    <Key>
+      <PropertyRef Name="PLG_IdPlanillaCertificacionesGuia" />
+      <PropertyRef Name="PLG_IdPlanillaCertificaciones" />
+      <PropertyRef Name="PLG_IdAdminisionMensajeria" />
+      <PropertyRef Name="PLG_NumeroGuia" />
+      <PropertyRef Name="PLG_IdAdminisionGuiaInterna" />
+      <PropertyRef Name="PLG_NumeroGuiaInterna" />
+      <PropertyRef Name="PLG_FechaGrabacion" />
+      <PropertyRef Name="PLG_CreadoPor" />
+      <PropertyRef Name="ADM_IdServicio" />
+      <PropertyRef Name="ADM_NombreServicio" />
+      <PropertyRef Name="ADM_FechaGrabacion" />
+      <PropertyRef Name="ADM_NombreCentroServicioOrigen" />
+      <PropertyRef Name="ADM_IdCentroServicioOrigen" />
+      <PropertyRef Name="ADM_IdCentroServicioDestino" />
+      <PropertyRef Name="ADM_NombreCentroServicioDestino" />
+      <PropertyRef Name="ADM_IdCiudadOrigen" />
+      <PropertyRef Name="ADM_NombreCiudadOrigen" />
+      <PropertyRef Name="ADM_IdCiudadDestino" />
+      <PropertyRef Name="ADM_NombreCiudadDestino" />
+      <PropertyRef Name="ADM_EstaEntregada" />
+      <PropertyRef Name="PLG_IdCentroServicioDestino" />
+      <PropertyRef Name="AGI_IdAdmisionMensajeria" />
+      <PropertyRef Name="AGI_IdGestionOrigen" />
+      <PropertyRef Name="AGI_DescripcionGestionOrig" />
+      <PropertyRef Name="AGI_IdGestionDestino" />
+      <PropertyRef Name="AGI_DescripcionGestionDest" />
+      <PropertyRef Name="AGI_NombreRemitente" />
+      <PropertyRef Name="AGI_TelefonoRemitente" />
+      <PropertyRef Name="AGI_DireccionRemitente" />
+      <PropertyRef Name="AGI_NombreDestinatario" />
+      <PropertyRef Name="AGI_TelefonoDestinatario" />
+      <PropertyRef Name="AGI_DireccionDestinatario" />
+      <PropertyRef Name="ADM_IdCentroServicioOrigenInterna" />
+      <PropertyRef Name="ADM_NombreCentroServicioOrigenInterna" />
+      <PropertyRef Name="ADM_IdCentroServicioDestinoInterna" />
+      <PropertyRef Name="ADM_NombreCentroServicioDestinoInterna" />
+      <PropertyRef Name="ADM_NombreCiudadOrigenInterna" />
+      <PropertyRef Name="ADM_IdCiudadOrigenInterna" />
+      <PropertyRef Name="ADM_IdCiudadDestinoInterna" />
+      <PropertyRef Name="ADM_NombreCiudadDestinoInterna" />
+    </Key>
+    <Property Type="Int64" Name="PLG_IdPlanillaCertificacionesGuia" Nullable="false" />
+    <Property Type="Int64" Name="PLG_IdPlanillaCertificaciones" Nullable="false" />
+    <Property Type="Int64" Name="PLG_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="PLG_NumeroGuia" Nullable="false" />
+    <Property Type="Int64" Name="PLG_IdAdminisionGuiaInterna" Nullable="false" />
+    <Property Type="Int64" Name="PLG_NumeroGuiaInterna" Nullable="false" />
+    <Property Type="DateTime" Name="PLG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PLG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ADM_IdServicio" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreServicio" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ADM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADM_IdCiudadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADM_NombreCiudadOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADM_IdCiudadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADM_NombreCiudadDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ADM_EstaEntregada" Nullable="false" />
+    <Property Type="Int64" Name="PLG_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="Int64" Name="AGI_IdAdmisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="AGI_IdGestionOrigen" Nullable="false" />
+    <Property Type="String" Name="AGI_DescripcionGestionOrig" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="AGI_IdGestionDestino" Nullable="false" />
+    <Property Type="String" Name="AGI_DescripcionGestionDest" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AGI_NombreRemitente" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AGI_TelefonoRemitente" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AGI_DireccionRemitente" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AGI_NombreDestinatario" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AGI_TelefonoDestinatario" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AGI_DireccionDestinatario" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AGI_Contenido" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigenInterna" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigenInterna" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestinoInterna" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestinoInterna" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADM_NombreCiudadOrigenInterna" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADM_IdCiudadOrigenInterna" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADM_IdCiudadDestinoInterna" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADM_NombreCiudadDestinoInterna" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PlanillaCertificaciones_VLOI">
+    <Key>
+      <PropertyRef Name="PLC_IdPlanillaCertificaciones" />
+      <PropertyRef Name="PLC_IdRegionalAdmPlanilla" />
+      <PropertyRef Name="PLC_IdCentroServiciosPlanilla" />
+      <PropertyRef Name="PLC_FechaGrabacion" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="IdAdmision" />
+      <PropertyRef Name="NumGuia" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="PLC_EstaDescargada" />
+      <PropertyRef Name="PLC_FechaDescargue" />
+      <PropertyRef Name="PLC_CreadoPor" />
+      <PropertyRef Name="PCD_TipoPlanilla" />
+      <PropertyRef Name="PCD_IdDestinatario" />
+      <PropertyRef Name="PCD_Nombre" />
+      <PropertyRef Name="PCD_Direccion" />
+      <PropertyRef Name="PCD_IdLocalidad" />
+      <PropertyRef Name="PCD_Consolidada" />
+      <PropertyRef Name="PCD_Devolucion" />
+      <PropertyRef Name="PCD_FechaGrabacion" />
+      <PropertyRef Name="PCD_CreadoPor" />
+      <PropertyRef Name="LOC_NombreDestino" />
+      <PropertyRef Name="PCD_Cerrada" />
+      <PropertyRef Name="PCD_FechaCierre" />
+      <PropertyRef Name="PCD_CerradoPor" />
+    </Key>
+    <Property Type="Int64" Name="PLC_IdPlanillaCertificaciones" Nullable="false" />
+    <Property Type="Int64" Name="PLC_IdRegionalAdmPlanilla" Nullable="false" />
+    <Property Type="Int64" Name="PLC_IdCentroServiciosPlanilla" Nullable="false" />
+    <Property Type="DateTime" Name="PLC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="IdAdmision" Nullable="false" />
+    <Property Type="Int64" Name="NumGuia" Nullable="false" />
+    <Property Type="String" Name="LOC_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Telefono1" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="PLC_IdAdmisionMensajeria" />
+    <Property Type="Int64" Name="PLC_NumeroGuia" />
+    <Property Type="Boolean" Name="PLC_EstaDescargada" Nullable="false" />
+    <Property Type="DateTime" Name="PLC_FechaDescargue" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PLC_DescargadaPor" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PLC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PCD_TipoPlanilla" Nullable="false" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Type="Int64" Name="PCD_IdDestinatario" Nullable="false" />
+    <Property Type="String" Name="PCD_Nombre" Nullable="false" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PCD_Direccion" Nullable="false" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PCD_Telefono" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="PCD_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="PCD_Consolidada" Nullable="false" />
+    <Property Type="Boolean" Name="PCD_Devolucion" Nullable="false" />
+    <Property Type="DateTime" Name="PCD_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PCD_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_NombreDestino" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="PCD_Cerrada" Nullable="false" />
+    <Property Type="DateTime" Name="PCD_FechaCierre" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PCD_CerradoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NomClienteCredito" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AlmacenGuia_LOI">
+    <Key>
+      <PropertyRef Name="ARG_IdArchivo" />
+    </Key>
+    <Property Type="Int64" Name="ARG_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="ARG_NumeroGuia" Nullable="false" />
+    <Property Type="Int64" Name="ARG_Caja" Nullable="false" />
+    <Property Type="Int32" Name="ARG_Lote" Nullable="false" />
+    <Property Type="Int32" Name="ARG_Posicion" Nullable="false" />
+    <Property Type="String" Name="ARG_DatosEdicion" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ARG_DatosEntrega" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ARG_EstadoFisicoGuia" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="ARG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ARG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ARG_FechaEntrega" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="ARG_FechaArchivo" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ARG_UsuarioArchiva" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ARG_IdCentroLogArchiva" />
+    <Property Type="Boolean" Name="ARG_Decodificada" />
+    <Property Type="Boolean" Name="ARG_Manual" />
+    <Property Type="Int64" Name="ARG_IdArchivo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Boolean" Name="ARG_CarpetaImagen" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="paValidarFechaArchivo_LOI">
+    <Property Type="Int32" Name="Column1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="paValidarFechaArchivo_LOI_Result">
+    <Property Type="Int32" Name="Respuesta" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGestionesGuiasCOL_LOI_Result">
+    <Property Type="Int64" Name="EGT_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="Int64" Name="EGT_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="EGT_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="MOG_Descripcion" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="Int32" Name="Gestiones" Nullable="true" />
+    <Property Type="Int32" Name="DiasTelemercadeo" Nullable="true" />
+  </ComplexType>
+</Schema>

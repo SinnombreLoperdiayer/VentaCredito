@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="nsModeloConfiguracionGiros.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="nsModeloConfiguracionGirosStoreContainer">
+          <EntitySet Name="ClasificacionPorIngresos_GIR" EntityType="nsModeloConfiguracionGiros.Store.ClasificacionPorIngresos_GIR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MotivoInactivacionGiros_GIR" EntityType="nsModeloConfiguracionGiros.Store.MotivoInactivacionGiros_GIR" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ClasificacionPorIngresos_GIR">
+          <Key>
+            <PropertyRef Name="CXI_IdClasificacion" />
+          </Key>
+          <Property Name="CXI_IdClasificacion" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="CXI_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="CXI_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="CXI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MotivoInactivacionGiros_GIR">
+          <Key>
+            <PropertyRef Name="MIG_IdMotivoInactivacion" />
+          </Key>
+          <Property Name="MIG_IdMotivoInactivacion" Type="smallint" Nullable="false" />
+          <Property Name="MIG_Descripcion" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MIG_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="MIG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <Function Name="fcObtenerDiasHabiles_PAR" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+          <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+          <Parameter Name="IdPais" Type="varchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="nsModeloConfiguracionGiros" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModeloConfiguracionGiros" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClasificacionPorIngresos_GIR" EntityType="nsModeloConfiguracionGiros.ClasificacionPorIngresos_GIR" />
+          <EntitySet Name="MotivoInactivacionGiros_GIR" EntityType="nsModeloConfiguracionGiros.MotivoInactivacionGiros_GIR" />
+        </EntityContainer>
+        <EntityType Name="ClasificacionPorIngresos_GIR">
+          <Key>
+            <PropertyRef Name="CXI_IdClasificacion" />
+          </Key>
+          <Property Name="CXI_IdClasificacion" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="CXI_Descripcion" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="CXI_FechaGrabacion" Type="DateTime" Nullable="false" />
+          <Property Name="CXI_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MotivoInactivacionGiros_GIR">
+          <Key>
+            <PropertyRef Name="MIG_IdMotivoInactivacion" />
+          </Key>
+          <Property Type="Int16" Name="MIG_IdMotivoInactivacion" Nullable="false" />
+          <Property Type="String" Name="MIG_Descripcion" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MIG_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="MIG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="nsModeloConfiguracionGirosStoreContainer" CdmEntityContainer="ModeloConfiguracionGiros">
+          <EntitySetMapping Name="ClasificacionPorIngresos_GIR"><EntityTypeMapping TypeName="nsModeloConfiguracionGiros.ClasificacionPorIngresos_GIR"><MappingFragment StoreEntitySet="ClasificacionPorIngresos_GIR">
+            <ScalarProperty Name="CXI_IdClasificacion" ColumnName="CXI_IdClasificacion" />
+            <ScalarProperty Name="CXI_Descripcion" ColumnName="CXI_Descripcion" />
+            <ScalarProperty Name="CXI_FechaGrabacion" ColumnName="CXI_FechaGrabacion" />
+            <ScalarProperty Name="CXI_CreadoPor" ColumnName="CXI_CreadoPor" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MotivoInactivacionGiros_GIR">
+            <EntityTypeMapping TypeName="nsModeloConfiguracionGiros.MotivoInactivacionGiros_GIR">
+              <MappingFragment StoreEntitySet="MotivoInactivacionGiros_GIR">
+                <ScalarProperty Name="MIG_CreadoPor" ColumnName="MIG_CreadoPor" />
+                <ScalarProperty Name="MIG_FechaGrabacion" ColumnName="MIG_FechaGrabacion" />
+                <ScalarProperty Name="MIG_Descripcion" ColumnName="MIG_Descripcion" />
+                <ScalarProperty Name="MIG_IdMotivoInactivacion" ColumnName="MIG_IdMotivoInactivacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloConfiguracionGiros">
+        <EntityTypeShape EntityType="nsModeloConfiguracionGiros.ClasificacionPorIngresos_GIR" Width="3.25" PointX="0.875" PointY="2.75" Height="1.787985026041667" IsExpanded="true" />
+        <EntityTypeShape EntityType="nsModeloConfiguracionGiros.MotivoInactivacionGiros_GIR" Width="2.5" PointX="3.375" PointY="0.75" Height="1.7879850260416674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

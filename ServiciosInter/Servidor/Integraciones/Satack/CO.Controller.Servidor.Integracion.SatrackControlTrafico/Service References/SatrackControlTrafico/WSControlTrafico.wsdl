@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="FinalizarItinerario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlacas" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinalizarItinerarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinalizarItinerarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProgramarItinerarioDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProgramarItinerarioDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProgramarItinerarioDataTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProgramarItinerarioXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProgramarItinerarioXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProgramarItinerarioXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPlacasFechaDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlacas" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPlacasFechaDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarPlacasFechaDataTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPlacasFechaXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlacas" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPlacasFechaXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarPlacasFechaXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPlacasIdentificadorDataTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Identificador" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlacas" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumReg" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPlacasIdentificadorDataTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarPlacasIdentificadorDataTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPlacasIdentificadorXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Identificador" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlacas" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumReg" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarPlacasIdentificadorXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarPlacasIdentificadorXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FinalizarItinerarioSoapIn">
+    <wsdl:part name="parameters" element="tns:FinalizarItinerario" />
+  </wsdl:message>
+  <wsdl:message name="FinalizarItinerarioSoapOut">
+    <wsdl:part name="parameters" element="tns:FinalizarItinerarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProgramarItinerarioDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:ProgramarItinerarioDataTable" />
+  </wsdl:message>
+  <wsdl:message name="ProgramarItinerarioDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:ProgramarItinerarioDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProgramarItinerarioXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ProgramarItinerarioXML" />
+  </wsdl:message>
+  <wsdl:message name="ProgramarItinerarioXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ProgramarItinerarioXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPlacasFechaDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarPlacasFechaDataTable" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPlacasFechaDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarPlacasFechaDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPlacasFechaXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarPlacasFechaXml" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPlacasFechaXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarPlacasFechaXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPlacasIdentificadorDataTableSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarPlacasIdentificadorDataTable" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPlacasIdentificadorDataTableSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarPlacasIdentificadorDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPlacasIdentificadorXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarPlacasIdentificadorXml" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarPlacasIdentificadorXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarPlacasIdentificadorXmlResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSControlTraficoSoap">
+    <wsdl:operation name="FinalizarItinerario">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realiza la elimación de los itinerarios para el control de trafico, Retorna una cadena XML</wsdl:documentation>
+      <wsdl:input message="tns:FinalizarItinerarioSoapIn" />
+      <wsdl:output message="tns:FinalizarItinerarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProgramarItinerarioDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realiza la programación de los itinerarios para el control de trafico (XML), Retorna una DateTable</wsdl:documentation>
+      <wsdl:input message="tns:ProgramarItinerarioDataTableSoapIn" />
+      <wsdl:output message="tns:ProgramarItinerarioDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProgramarItinerarioXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Realiza la programación de los itinerarios para el control de trafico (XML), Retorna una cadena XML</wsdl:documentation>
+      <wsdl:input message="tns:ProgramarItinerarioXMLSoapIn" />
+      <wsdl:output message="tns:ProgramarItinerarioXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasFechaDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con las placas solicitados entre el periodo de tiempo escogido. 
+ </wsdl:documentation>
+      <wsdl:input message="tns:ConsultarPlacasFechaDataTableSoapIn" />
+      <wsdl:output message="tns:ConsultarPlacasFechaDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasFechaXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un xml con las placas solicitados entre el periodo de tiempo escogido. 
+ </wsdl:documentation>
+      <wsdl:input message="tns:ConsultarPlacasFechaXmlSoapIn" />
+      <wsdl:output message="tns:ConsultarPlacasFechaXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasIdentificadorDataTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un datatable con las placas solicitados con el identificador  y numero de registros proporcionados. 
+ </wsdl:documentation>
+      <wsdl:input message="tns:ConsultarPlacasIdentificadorDataTableSoapIn" />
+      <wsdl:output message="tns:ConsultarPlacasIdentificadorDataTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasIdentificadorXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un xml con las placas solicitados con el identificador y numero de registros proporcionados. 
+ </wsdl:documentation>
+      <wsdl:input message="tns:ConsultarPlacasIdentificadorXmlSoapIn" />
+      <wsdl:output message="tns:ConsultarPlacasIdentificadorXmlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSControlTraficoSoap" type="tns:WSControlTraficoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FinalizarItinerario">
+      <soap:operation soapAction="http://tempuri.org/FinalizarItinerario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProgramarItinerarioDataTable">
+      <soap:operation soapAction="http://tempuri.org/ProgramarItinerarioDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProgramarItinerarioXML">
+      <soap:operation soapAction="http://tempuri.org/ProgramarItinerarioXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasFechaDataTable">
+      <soap:operation soapAction="http://tempuri.org/ConsultarPlacasFechaDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasFechaXml">
+      <soap:operation soapAction="http://tempuri.org/ConsultarPlacasFechaXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasIdentificadorDataTable">
+      <soap:operation soapAction="http://tempuri.org/ConsultarPlacasIdentificadorDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasIdentificadorXml">
+      <soap:operation soapAction="http://tempuri.org/ConsultarPlacasIdentificadorXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSControlTraficoSoap12" type="tns:WSControlTraficoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FinalizarItinerario">
+      <soap12:operation soapAction="http://tempuri.org/FinalizarItinerario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProgramarItinerarioDataTable">
+      <soap12:operation soapAction="http://tempuri.org/ProgramarItinerarioDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProgramarItinerarioXML">
+      <soap12:operation soapAction="http://tempuri.org/ProgramarItinerarioXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasFechaDataTable">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarPlacasFechaDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasFechaXml">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarPlacasFechaXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasIdentificadorDataTable">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarPlacasIdentificadorDataTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlacasIdentificadorXml">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarPlacasIdentificadorXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSControlTrafico">
+    <wsdl:port name="WSControlTraficoSoap" binding="tns:WSControlTraficoSoap">
+      <soap:address location="http://webcloud2.satrack.com/WebServiceControlTrafico/WSControlTrafico.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSControlTraficoSoap12" binding="tns:WSControlTraficoSoap12">
+      <soap12:address location="http://webcloud2.satrack.com/WebServiceControlTrafico/WSControlTrafico.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

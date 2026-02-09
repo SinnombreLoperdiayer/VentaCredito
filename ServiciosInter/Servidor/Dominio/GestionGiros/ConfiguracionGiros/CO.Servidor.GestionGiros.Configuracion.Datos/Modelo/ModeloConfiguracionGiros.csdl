@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="nsModeloConfiguracionGiros" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ModeloConfiguracionGiros" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClasificacionPorIngresos_GIR" EntityType="nsModeloConfiguracionGiros.ClasificacionPorIngresos_GIR" />
+    <EntitySet Name="MotivoInactivacionGiros_GIR" EntityType="nsModeloConfiguracionGiros.MotivoInactivacionGiros_GIR" />
+  </EntityContainer>
+  <EntityType Name="ClasificacionPorIngresos_GIR">
+    <Key>
+      <PropertyRef Name="CXI_IdClasificacion" />
+    </Key>
+    <Property Name="CXI_IdClasificacion" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="CXI_Descripcion" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="CXI_FechaGrabacion" Type="DateTime" Nullable="false" />
+    <Property Name="CXI_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="MotivoInactivacionGiros_GIR">
+    <Key>
+      <PropertyRef Name="MIG_IdMotivoInactivacion" />
+    </Key>
+    <Property Type="Int16" Name="MIG_IdMotivoInactivacion" Nullable="false" />
+    <Property Type="String" Name="MIG_Descripcion" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="MIG_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="MIG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

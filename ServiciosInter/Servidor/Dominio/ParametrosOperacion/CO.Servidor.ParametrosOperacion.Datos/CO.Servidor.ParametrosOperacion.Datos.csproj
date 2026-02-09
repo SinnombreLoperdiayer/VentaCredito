@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40259D3D-60A4-46FE-84F8-3DBF29EB34F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.ParametrosOperacion.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.ParametrosOperacion.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mapper\PORepositorioMapper.cs" />
+    <Compile Include="Modelo\Aseguradora_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Cargo_SEG.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Carro_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CategoriaLicencia_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ColorVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductoresMensajerosVCPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductorHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductorPersonaInterna_VCPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductorRegionalAdmiHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductorRegionalAdmini_VCPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductorRegionalAdmi_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductorVehiculoHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductorVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConductorVehiculo_VCPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Conductor_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EstadoActivoInactivo_VFRM.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LineaMarcarVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LineaVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidad_PAR.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MarcaVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MensajeroHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MensajeroLocalidad_VOPU.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Mensajeros_VCPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MensajeroVehiculo_OPU.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Mensajero_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloParametrosOperacion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloParametrosOperacion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloParametrosOperacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloParametrosOperacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloParametrosOperacion.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\OUpaVerificaMensajeroTecSoat.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerConductoresVehicu_CPORS.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerMensajerosMoto_CPO_Result.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaExternaHist_PAR.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaExterna_PAR.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInternaCargoRegional_VPAR.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInternaHistorico_PAR.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInterna_PAR.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PolizaSeguroHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PolizaSeguroVehiculoHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PolizaSeguroVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PolizaSeguro_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\POpaObtenerVehiculosActRacol.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PropietarioVehiculoHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PropietarioVehiculoVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PropietarioVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PropietarioVehiVehiHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RegionalAdministrativa_VCPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RegionalOperacionVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RevisionMecanicaHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RevisionMecanica_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TablaConfiguracionCarro_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TenedorVehiculoHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TenedorVehiculos_VCPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TenedorVehiculoVehiculHist_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TenedorVehiculoVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TenedorVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoCarroceria_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoCombustible_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoContrato_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoMensajero_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoPolizaSeguro_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoVehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UsuarioInterno_VSEG.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UsuarioPersonaInterna_VSEG.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Vehiculos_VCPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Vehiculo_CPO.cs">
+      <DependentUpon>ModeloParametrosOperacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PORepositorio.cs" />
+    <Compile Include="PORepositorioAudit.cs" />
+    <Compile Include="PORepositorioCodigoPostal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.ParametrosOperacion.Comun\CO.Servidor.ParametrosOperacion.Comun.csproj">
+      <Project>{93286AE7-BC1B-4C02-8CC0-13B83F5E2545}</Project>
+      <Name>CO.Servidor.ParametrosOperacion.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloParametrosOperacion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloParametrosOperacion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloParametrosOperacion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloParametrosOperacion.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Modelo\ModeloParametrosOperacion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloParametrosOperacion.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloVentaGirosNS.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloVentaGirosNSStoreContainer">
+    <EntitySet Name="AcumuladoGirosCliente_GIR" EntityType="ModeloVentaGirosNS.Store.AcumuladoGirosCliente_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdicionalesGiro_GIR" EntityType="ModeloVentaGirosNS.Store.AdicionalesGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdmisionGiros_GIR" EntityType="ModeloVentaGirosNS.Store.AdmisionGiros_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlmacenArchivoGiro_GIR" EntityType="ModeloVentaGirosNS.Store.AlmacenArchivoGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ArchivosPagoGiro_GIR" EntityType="ModeloVentaGirosNS.Store.ArchivosPagoGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleAdicionalesGiro_GIR" EntityType="ModeloVentaGirosNS.Store.DetalleAdicionalesGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadosGiro_GIR" EntityType="ModeloVentaGirosNS.Store.EstadosGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GirosConvenioPeaton_GIR" EntityType="ModeloVentaGirosNS.Store.GirosConvenioPeaton_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GirosPeatonPeaton_GIR" EntityType="ModeloVentaGirosNS.Store.GirosPeatonPeaton_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImpuestosGiro_GIR" EntityType="ModeloVentaGirosNS.Store.ImpuestosGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PagoGiros_GIR" EntityType="ModeloVentaGirosNS.Store.PagoGiros_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParametrosGiros_GIR" EntityType="ModeloVentaGirosNS.Store.ParametrosGiros_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PinVentaGiro_GIR" EntityType="ModeloVentaGirosNS.Store.PinVentaGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoGiro_GIR" EntityType="ModeloVentaGirosNS.Store.TipoGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoIdentificacionAdmin_GIR" EntityType="ModeloVentaGirosNS.Store.TipoIdentificacionAdmin_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoValorAdicional_TAR" EntityType="ModeloVentaGirosNS.Store.TipoValorAdicional_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdmGirosPeatonConvenio_VGIR" EntityType="ModeloVentaGirosNS.Store.AdmGirosPeatonConvenio_VGIR" store:Type="Views" store:Schema="dbo" store:Name="AdmGirosPeatonConvenio_VGIR">
+      <DefiningQuery>SELECT 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdAdmisionGiro] AS [ADG_IdAdmisionGiro], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdGiro] AS [ADG_IdGiro], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_DigitoVerificacion] AS [ADG_DigitoVerificacion], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_GuidDeChequeo] AS [ADG_GuidDeChequeo], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_AdmisionAutomatica] AS [ADG_AdmisionAutomatica], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdTipoGiro] AS [ADG_IdTipoGiro], 
+      [AdmGirosPeatonConvenio_VGIR].[UltimoEstadoGiro] AS [UltimoEstadoGiro], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdCentroServicioOrigen] AS [ADG_IdCentroServicioOrigen], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_NombreCentroServicioOrigen] AS [ADG_NombreCentroServicioOrigen], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdPaisOrigen] AS [ADG_IdPaisOrigen], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_DescPaisOrigen] AS [ADG_DescPaisOrigen], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdCiudadOrigen] AS [ADG_IdCiudadOrigen], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_DescCiudadOrigen] AS [ADG_DescCiudadOrigen], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_CodigoPostalOrigen] AS [ADG_CodigoPostalOrigen], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdCentroServicioDestino] AS [ADG_IdCentroServicioDestino], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_NombreCentroServicioDestino] AS [ADG_NombreCentroServicioDestino], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdPaisDestino] AS [ADG_IdPaisDestino], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_DescPaisDestino] AS [ADG_DescPaisDestino], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_IdCiudadDestino] AS [ADG_IdCiudadDestino], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_DescCiudadDestino] AS [ADG_DescCiudadDestino], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_CodigoPostalDestino] AS [ADG_CodigoPostalDestino], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_ValorGiro] AS [ADG_ValorGiro], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_TarifaPorcPorte] AS [ADG_TarifaPorcPorte], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_TarifaFijaPorte] AS [ADG_TarifaFijaPorte], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_ValorPorte] AS [ADG_ValorPorte], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_ValorAdicionales] AS [ADG_ValorAdicionales], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_ValorImpuestos] AS [ADG_ValorImpuestos], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_ValorTotal] AS [ADG_ValorTotal], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_DeclaracionVoluntariaOrigenes] AS [ADG_DeclaracionVoluntariaOrigenes], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_Observaciones] AS [ADG_Observaciones], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_IdRemitente] AS [GPC_IdRemitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_TipoIdRemitente] AS [GPC_TipoIdRemitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_NombreRemitente] AS [GPC_NombreRemitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_Apellido1Remitente] AS [GPC_Apellido1Remitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_Apellido2Remitente] AS [GPC_Apellido2Remitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_TelefonoRemitente] AS [GPC_TelefonoRemitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_DireccionRemitente] AS [GPC_DireccionRemitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_EmailRemitente] AS [GPC_EmailRemitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_OcupacionRemitente] AS [GPC_OcupacionRemitente], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_IdConvenioDestinatario] AS [GPC_IdConvenioDestinatario], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_RazonSocialConvenioDestinatario] AS [GPC_RazonSocialConvenioDestinatario], 
+      [AdmGirosPeatonConvenio_VGIR].[GPC_NitConvenioDestinatario] AS [GPC_NitConvenioDestinatario], 
+      [AdmGirosPeatonConvenio_VGIR].[ADG_FechaGrabacion] AS [ADG_FechaGrabacion]
+      FROM [dbo].[AdmGirosPeatonConvenio_VGIR] AS [AdmGirosPeatonConvenio_VGIR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AdmGirosPeatonPeaton_VGIR" EntityType="ModeloVentaGirosNS.Store.AdmGirosPeatonPeaton_VGIR" store:Type="Views" store:Schema="dbo" store:Name="AdmGirosPeatonPeaton_VGIR">
+      <DefiningQuery>SELECT 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdAdmisionGiro] AS [ADG_IdAdmisionGiro], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdGiro] AS [ADG_IdGiro], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_DigitoVerificacion] AS [ADG_DigitoVerificacion], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_GuidDeChequeo] AS [ADG_GuidDeChequeo], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_AdmisionAutomatica] AS [ADG_AdmisionAutomatica], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdTipoGiro] AS [ADG_IdTipoGiro], 
+      [AdmGirosPeatonPeaton_VGIR].[UltimoEstadoGiro] AS [UltimoEstadoGiro], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdCentroServicioOrigen] AS [ADG_IdCentroServicioOrigen], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_NombreCentroServicioOrigen] AS [ADG_NombreCentroServicioOrigen], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdPaisOrigen] AS [ADG_IdPaisOrigen], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_DescPaisOrigen] AS [ADG_DescPaisOrigen], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdCiudadOrigen] AS [ADG_IdCiudadOrigen], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_DescCiudadOrigen] AS [ADG_DescCiudadOrigen], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_CodigoPostalOrigen] AS [ADG_CodigoPostalOrigen], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdCentroServicioDestino] AS [ADG_IdCentroServicioDestino], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_NombreCentroServicioDestino] AS [ADG_NombreCentroServicioDestino], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdPaisDestino] AS [ADG_IdPaisDestino], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_DescPaisDestino] AS [ADG_DescPaisDestino], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_IdCiudadDestino] AS [ADG_IdCiudadDestino], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_DescCiudadDestino] AS [ADG_DescCiudadDestino], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_CodigoPostalDestino] AS [ADG_CodigoPostalDestino], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_ValorGiro] AS [ADG_ValorGiro], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_TarifaPorcPorte] AS [ADG_TarifaPorcPorte], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_TarifaFijaPorte] AS [ADG_TarifaFijaPorte], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_ValorPorte] AS [ADG_ValorPorte], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_ValorAdicionales] AS [ADG_ValorAdicionales], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_ValorImpuestos] AS [ADG_ValorImpuestos], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_ValorTotal] AS [ADG_ValorTotal], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_DeclaracionVoluntariaOrigenes] AS [ADG_DeclaracionVoluntariaOrigenes], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_Observaciones] AS [ADG_Observaciones], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_IdRemitente] AS [GPP_IdRemitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_TipoIdRemitente] AS [GPP_TipoIdRemitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_NombreRemitente] AS [GPP_NombreRemitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_Apellido1Remitente] AS [GPP_Apellido1Remitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_Apellido2Remitente] AS [GPP_Apellido2Remitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_TelefonoRemitente] AS [GPP_TelefonoRemitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_DireccionRemitente] AS [GPP_DireccionRemitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_EmailRemitente] AS [GPP_EmailRemitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_OcupacionRemitente] AS [GPP_OcupacionRemitente], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_IdDestinatario] AS [GPP_IdDestinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_TipoIdDestinatario] AS [GPP_TipoIdDestinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_NombreDestinatario] AS [GPP_NombreDestinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_Apellido1Destinatario] AS [GPP_Apellido1Destinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_Apellido2Destinatario] AS [GPP_Apellido2Destinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_TipoIdentificacionReclamoGiro] AS [GPP_TipoIdentificacionReclamoGiro], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_OcupacionDestinatario] AS [GPP_OcupacionDestinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_EmailDestinatario] AS [GPP_EmailDestinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_DireccionDestinatario] AS [GPP_DireccionDestinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[GPP_TelefonoDestinatario] AS [GPP_TelefonoDestinatario], 
+      [AdmGirosPeatonPeaton_VGIR].[ADG_FechaGrabacion] AS [ADG_FechaGrabacion]
+      FROM [dbo].[AdmGirosPeatonPeaton_VGIR] AS [AdmGirosPeatonPeaton_VGIR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CentroLogisDeRegionalAdmi_VPUA" EntityType="ModeloVentaGirosNS.Store.CentroLogisDeRegionalAdmi_VPUA" store:Type="Views" store:Schema="dbo" store:Name="CentroLogisDeRegionalAdmi_VPUA">
+      <DefiningQuery>SELECT 
+      [CentroLogisDeRegionalAdmi_VPUA].[REA_IdRegionalAdm] AS [REA_IdRegionalAdm], 
+      [CentroLogisDeRegionalAdmi_VPUA].[REA_Descripcion] AS [REA_Descripcion], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Direccion] AS [CES_Direccion], 
+      [CentroLogisDeRegionalAdmi_VPUA].[LOC_Nombre] AS [LOC_Nombre], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Nombre] AS [CES_Nombre], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Estado] AS [CES_Estado], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CEL_IdCentroLogistico] AS [CEL_IdCentroLogistico]
+      FROM [dbo].[CentroLogisDeRegionalAdmi_VPUA] AS [CentroLogisDeRegionalAdmi_VPUA]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AdicionalesGiro_GIR_AdmisionGiros_GIR" Association="ModeloVentaGirosNS.Store.FK_AdicionalesGiro_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="AdicionalesGiro_GIR" EntitySet="AdicionalesGiro_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdicionalesGiro_GIR_TipoValorAdicional_TAR" Association="ModeloVentaGirosNS.Store.FK_AdicionalesGiro_GIR_TipoValorAdicional_TAR">
+      <End Role="TipoValorAdicional_TAR" EntitySet="TipoValorAdicional_TAR" />
+      <End Role="AdicionalesGiro_GIR" EntitySet="AdicionalesGiro_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArchivosPagoGiro_GIR_PagoGiros_GIR" Association="ModeloVentaGirosNS.Store.FK_ArchivosPagoGiro_GIR_PagoGiros_GIR">
+      <End Role="PagoGiros_GIR" EntitySet="PagoGiros_GIR" />
+      <End Role="ArchivosPagoGiro_GIR" EntitySet="ArchivosPagoGiro_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleAdicionalesGiro_GIR_AdicionalesGiro_GIR" Association="ModeloVentaGirosNS.Store.FK_DetalleAdicionalesGiro_GIR_AdicionalesGiro_GIR">
+      <End Role="AdicionalesGiro_GIR" EntitySet="AdicionalesGiro_GIR" />
+      <End Role="DetalleAdicionalesGiro_GIR" EntitySet="DetalleAdicionalesGiro_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadosGiro_GIR_AdmisionGiros_GIR" Association="ModeloVentaGirosNS.Store.FK_EstadosGiro_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="EstadosGiro_GIR" EntitySet="EstadosGiro_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GirosConvenioPeaton_GIR_AdmisionGiros_GIR" Association="ModeloVentaGirosNS.Store.FK_GirosConvenioPeaton_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="GirosConvenioPeaton_GIR" EntitySet="GirosConvenioPeaton_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GirosPeatonPeaton_GIR_AdmisionGiros_GIR" Association="ModeloVentaGirosNS.Store.FK_GirosPeatonPeaton_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="GirosPeatonPeaton_GIR" EntitySet="GirosPeatonPeaton_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImpuestosGiro_GIR_AdmisionGiros_GIR" Association="ModeloVentaGirosNS.Store.FK_ImpuestosGiro_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="ImpuestosGiro_GIR" EntitySet="ImpuestosGiro_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PagoGiros_GIR_AdmisionGiros_GIR" Association="ModeloVentaGirosNS.Store.FK_PagoGiros_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="PagoGiros_GIR" EntitySet="PagoGiros_GIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PinVentaGiro_GIR_AdmisionGiros_GIR" Association="ModeloVentaGirosNS.Store.FK_PinVentaGiro_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="PinVentaGiro_GIR" EntitySet="PinVentaGiro_GIR" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AcumuladoGirosCliente_GIR">
+    <Key>
+      <PropertyRef Name="AGC_IdClienteContado" />
+    </Key>
+    <Property Name="AGC_IdClienteContado" Type="bigint" Nullable="false" />
+    <Property Name="AGC_AcumuladoDiarioGiros" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="AGC_FechaUltimoAcumGiros" Type="datetime" Nullable="false" />
+    <Property Name="AGC_AcumuladoDiarioPagos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="AGC_FechaUltimoAcumPagos" Type="datetime" Nullable="false" />
+    <Property Name="AGC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="AGC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AdicionalesGiro_GIR">
+    <Key>
+      <PropertyRef Name="ADG_IdGiro" />
+      <PropertyRef Name="ADG_IdServicioAdicional" />
+    </Key>
+    <Property Name="ADG_IdGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_IdServicioAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADG_DescripcionServicioAdicional" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_ValorAdicional" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ADG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AdmisionGiros_GIR">
+    <Key>
+      <PropertyRef Name="ADG_IdAdmisionGiro" />
+    </Key>
+    <Property Name="ADG_IdAdmisionGiro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ADG_PrefijoIdGiro" Type="varchar" MaxLength="8" />
+    <Property Name="ADG_IdGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_DigitoVerificacion" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_GuidDeChequeo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ADG_AdmisionAutomatica" Type="bit" Nullable="false" />
+    <Property Name="ADG_IdTipoGiro" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="ADG_IdCentroServicioOrigen" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdPaisOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescPaisOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_CodigoPostalOrigen" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdPaisDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescPaisDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_CodigoPostalDestino" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADG_ValorGiro" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_TarifaPorcPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_TarifaFijaPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorAdicionales" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorTotal" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_DeclaracionVoluntariaOrigenes" Type="bigint" />
+    <Property Name="ADG_Observaciones" Type="varchar" MaxLength="200" />
+    <Property Name="ADG_IdTipoIdentificacionRemitente" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADG_IdRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_NombreRemitente" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="ADG_IdTipoIdentificacionDestinatario" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADG_IdDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="ADG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ADG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ADG_Transmitido" Type="bit" Nullable="false" />
+    <Property Name="ADG_NotificarPagoPorEmail" Type="bit" />
+    <Property Name="ADG_EstaPagado" Type="bit" Nullable="false" />
+    <Property Name="ADG_TelefonoRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_DireccionRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_EmailRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADG_EmailDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADG_TieneTelemercadeo" Type="bit" Nullable="false" />
+    <Property Name="ADG_IdEstadosGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_EsProduccion" Type="bit" Nullable="false" />
+    <Property Name="ADG_ObservacionesSolicitudes" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="AlmacenArchivoGiro_GIR">
+    <Key>
+      <PropertyRef Name="AGI_IdArchivo" />
+    </Key>
+    <Property Name="AGI_IdArchivo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AGI_NombreAdjunto" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="AGI_RutaArchivo" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="AGI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="AGI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ArchivosPagoGiro_GIR">
+    <Key>
+      <PropertyRef Name="APG_IdArchivo" />
+      <PropertyRef Name="APG_IdAdmisionGiro" />
+    </Key>
+    <Property Name="APG_IdArchivo" Type="bigint" Nullable="false" />
+    <Property Name="APG_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="APG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="APG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="APG_IdTipoDocumentoPagoGiro" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleAdicionalesGiro_GIR">
+    <Key>
+      <PropertyRef Name="DAG_IdGiro" />
+      <PropertyRef Name="DAG_IdServicioAdicional" />
+      <PropertyRef Name="DAG_Campo" />
+    </Key>
+    <Property Name="DAG_IdGiro" Type="bigint" Nullable="false" />
+    <Property Name="DAG_IdServicioAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="DAG_Campo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="DAG_ValorCampo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="DAG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="EstadosGiro_GIR">
+    <Key>
+      <PropertyRef Name="ESG_IdEstadosGiro" />
+    </Key>
+    <Property Name="ESG_IdEstadosGiro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESG_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="ESG_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ESG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ESG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ESG_Transmitido472" Type="bit" />
+  </EntityType>
+  <EntityType Name="GirosConvenioPeaton_GIR">
+    <Key>
+      <PropertyRef Name="GCP_IdAdmisionGiro" />
+    </Key>
+    <Property Name="GCP_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="GCP_IdConvenioRemitente" Type="int" Nullable="false" />
+    <Property Name="GCP_NitConvenioRemitente" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="GCP_RazonSocialConvenioRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GCP_IdDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GCP_TipoIdDestinatario" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="GCP_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GCP_Apellido1Destinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GCP_Apellido2Destinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GCP_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GCP_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="GCP_EmailDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GCP_OcupacionDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GCP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="GCP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="GirosPeatonPeaton_GIR">
+    <Key>
+      <PropertyRef Name="GPP_IdAdmisionGiro" />
+    </Key>
+    <Property Name="GPP_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="GPP_IdRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPP_TipoIdRemitente" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="GPP_NombreRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_Apellido1Remitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_Apellido2Remitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_TelefonoRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPP_DireccionRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="GPP_EmailRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_OcupacionRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_IdDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPP_TipoIdDestinatario" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="GPP_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_Apellido1Destinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_Apellido2Destinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPP_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="GPP_EmailDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_OcupacionDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_TipoIdentificacionReclamoGiro" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="GPP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="GPP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ImpuestosGiro_GIR">
+    <Key>
+      <PropertyRef Name="IMG_IdGiro" />
+      <PropertyRef Name="IMG_IdImpuesto" />
+    </Key>
+    <Property Name="IMG_IdGiro" Type="bigint" Nullable="false" />
+    <Property Name="IMG_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="IMG_DescripcionImpuesto" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="IMG_Tarifa" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="IMG_ValorSobreBase" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="IMG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="IMG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PagoGiros_GIR">
+    <Key>
+      <PropertyRef Name="PAG_IdAdmisionGiro" />
+    </Key>
+    <Property Name="PAG_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="PAG_IdComprobantePago" Type="bigint" Nullable="false" />
+    <Property Name="PAG_PagoAutorizadoPeaton" Type="bit" Nullable="false" />
+    <Property Name="PAG_PagoAutorizadoEmpresarial" Type="bit" Nullable="false" />
+    <Property Name="PAG_PagoAutomatico" Type="bit" Nullable="false" />
+    <Property Name="PAG_IdCentroServiciosPagador" Type="bigint" Nullable="false" />
+    <Property Name="PAG_NombreCentroServicios" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PAG_ValorPagado" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PAG_IdCobrador" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PAG_TipoIdCobrador" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="PAG_NombreCobrador" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAG_Apellido1Cobrador" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAG_Apellido2Cobrador" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAG_TelefonoCobrador" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PAG_DireccionCobrador" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PAG_EmailCobrador" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAG_OcupacionCobrador" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAG_Observaciones" Type="varchar" MaxLength="200" />
+    <Property Name="PAG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ParametrosGiros_GIR">
+    <Key>
+      <PropertyRef Name="PAG_IdParametro" />
+    </Key>
+    <Property Name="PAG_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PAG_ValorParametro" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAG_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PinVentaGiro_GIR">
+    <Key>
+      <PropertyRef Name="PVG_IdAdmisionGiro" />
+    </Key>
+    <Property Name="PVG_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="PVG_Pin" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PVG_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PVG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PVG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoGiro_GIR">
+    <Key>
+      <PropertyRef Name="TIG_IdTipoGiro" />
+    </Key>
+    <Property Name="TIG_IdTipoGiro" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="TIG_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TIG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoIdentificacionAdmin_GIR">
+    <Key>
+      <PropertyRef Name="TII_IdTipoIdentificacion" />
+    </Key>
+    <Property Name="TII_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="TII_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TII_Estado" Type="char" MaxLength="3" />
+    <Property Name="TII_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TII_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoValorAdicional_TAR">
+    <Key>
+      <PropertyRef Name="TVA_IdTipoValorAdicional" />
+    </Key>
+    <Property Name="TVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TVA_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TVA_IdServicio" Type="int" Nullable="false" />
+    <Property Name="TVA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TVA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TVA_EsEmbalaje" Type="bit" Nullable="false" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.AdmGirosPeatonConvenio_VGIR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AdmGirosPeatonConvenio_VGIR">
+    <Key>
+      <PropertyRef Name="ADG_IdAdmisionGiro" />
+      <PropertyRef Name="ADG_IdGiro" />
+      <PropertyRef Name="ADG_DigitoVerificacion" />
+      <PropertyRef Name="ADG_GuidDeChequeo" />
+      <PropertyRef Name="ADG_AdmisionAutomatica" />
+      <PropertyRef Name="ADG_IdTipoGiro" />
+      <PropertyRef Name="ADG_IdCentroServicioOrigen" />
+      <PropertyRef Name="ADG_NombreCentroServicioOrigen" />
+      <PropertyRef Name="ADG_IdPaisOrigen" />
+      <PropertyRef Name="ADG_DescPaisOrigen" />
+      <PropertyRef Name="ADG_IdCiudadOrigen" />
+      <PropertyRef Name="ADG_DescCiudadOrigen" />
+      <PropertyRef Name="ADG_CodigoPostalOrigen" />
+      <PropertyRef Name="ADG_IdCentroServicioDestino" />
+      <PropertyRef Name="ADG_NombreCentroServicioDestino" />
+      <PropertyRef Name="ADG_IdPaisDestino" />
+      <PropertyRef Name="ADG_DescPaisDestino" />
+      <PropertyRef Name="ADG_IdCiudadDestino" />
+      <PropertyRef Name="ADG_DescCiudadDestino" />
+      <PropertyRef Name="ADG_CodigoPostalDestino" />
+      <PropertyRef Name="ADG_ValorGiro" />
+      <PropertyRef Name="ADG_TarifaPorcPorte" />
+      <PropertyRef Name="ADG_TarifaFijaPorte" />
+      <PropertyRef Name="ADG_ValorPorte" />
+      <PropertyRef Name="ADG_ValorAdicionales" />
+      <PropertyRef Name="ADG_ValorImpuestos" />
+      <PropertyRef Name="ADG_ValorTotal" />
+      <PropertyRef Name="GPC_IdRemitente" />
+      <PropertyRef Name="GPC_TipoIdRemitente" />
+      <PropertyRef Name="GPC_NombreRemitente" />
+      <PropertyRef Name="GPC_Apellido1Remitente" />
+      <PropertyRef Name="GPC_Apellido2Remitente" />
+      <PropertyRef Name="GPC_TelefonoRemitente" />
+      <PropertyRef Name="GPC_DireccionRemitente" />
+      <PropertyRef Name="GPC_EmailRemitente" />
+      <PropertyRef Name="GPC_OcupacionRemitente" />
+      <PropertyRef Name="GPC_IdConvenioDestinatario" />
+      <PropertyRef Name="GPC_RazonSocialConvenioDestinatario" />
+      <PropertyRef Name="GPC_NitConvenioDestinatario" />
+      <PropertyRef Name="ADG_FechaGrabacion" />
+    </Key>
+    <Property Name="ADG_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_IdGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_DigitoVerificacion" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_GuidDeChequeo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ADG_AdmisionAutomatica" Type="bit" Nullable="false" />
+    <Property Name="ADG_IdTipoGiro" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="UltimoEstadoGiro" Type="char" MaxLength="3" />
+    <Property Name="ADG_IdCentroServicioOrigen" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdPaisOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescPaisOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_CodigoPostalOrigen" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdPaisDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescPaisDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_CodigoPostalDestino" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADG_ValorGiro" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_TarifaPorcPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_TarifaFijaPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorAdicionales" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorTotal" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_DeclaracionVoluntariaOrigenes" Type="bigint" />
+    <Property Name="ADG_Observaciones" Type="varchar" MaxLength="200" />
+    <Property Name="GPC_IdRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPC_TipoIdRemitente" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="GPC_NombreRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPC_Apellido1Remitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPC_Apellido2Remitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPC_TelefonoRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPC_DireccionRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="GPC_EmailRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPC_OcupacionRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPC_IdConvenioDestinatario" Type="int" Nullable="false" />
+    <Property Name="GPC_RazonSocialConvenioDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPC_NitConvenioDestinatario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ADG_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.AdmGirosPeatonPeaton_VGIR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AdmGirosPeatonPeaton_VGIR">
+    <Key>
+      <PropertyRef Name="ADG_IdAdmisionGiro" />
+      <PropertyRef Name="ADG_IdGiro" />
+      <PropertyRef Name="ADG_DigitoVerificacion" />
+      <PropertyRef Name="ADG_GuidDeChequeo" />
+      <PropertyRef Name="ADG_AdmisionAutomatica" />
+      <PropertyRef Name="ADG_IdTipoGiro" />
+      <PropertyRef Name="ADG_IdCentroServicioOrigen" />
+      <PropertyRef Name="ADG_NombreCentroServicioOrigen" />
+      <PropertyRef Name="ADG_IdPaisOrigen" />
+      <PropertyRef Name="ADG_DescPaisOrigen" />
+      <PropertyRef Name="ADG_IdCiudadOrigen" />
+      <PropertyRef Name="ADG_DescCiudadOrigen" />
+      <PropertyRef Name="ADG_CodigoPostalOrigen" />
+      <PropertyRef Name="ADG_IdCentroServicioDestino" />
+      <PropertyRef Name="ADG_NombreCentroServicioDestino" />
+      <PropertyRef Name="ADG_IdPaisDestino" />
+      <PropertyRef Name="ADG_DescPaisDestino" />
+      <PropertyRef Name="ADG_IdCiudadDestino" />
+      <PropertyRef Name="ADG_DescCiudadDestino" />
+      <PropertyRef Name="ADG_CodigoPostalDestino" />
+      <PropertyRef Name="ADG_ValorGiro" />
+      <PropertyRef Name="ADG_TarifaPorcPorte" />
+      <PropertyRef Name="ADG_TarifaFijaPorte" />
+      <PropertyRef Name="ADG_ValorPorte" />
+      <PropertyRef Name="ADG_ValorAdicionales" />
+      <PropertyRef Name="ADG_ValorImpuestos" />
+      <PropertyRef Name="ADG_ValorTotal" />
+      <PropertyRef Name="GPP_IdRemitente" />
+      <PropertyRef Name="GPP_TipoIdRemitente" />
+      <PropertyRef Name="GPP_NombreRemitente" />
+      <PropertyRef Name="GPP_Apellido1Remitente" />
+      <PropertyRef Name="GPP_Apellido2Remitente" />
+      <PropertyRef Name="GPP_TelefonoRemitente" />
+      <PropertyRef Name="GPP_DireccionRemitente" />
+      <PropertyRef Name="GPP_EmailRemitente" />
+      <PropertyRef Name="GPP_OcupacionRemitente" />
+      <PropertyRef Name="GPP_IdDestinatario" />
+      <PropertyRef Name="GPP_TipoIdDestinatario" />
+      <PropertyRef Name="GPP_NombreDestinatario" />
+      <PropertyRef Name="GPP_Apellido1Destinatario" />
+      <PropertyRef Name="GPP_Apellido2Destinatario" />
+      <PropertyRef Name="GPP_TipoIdentificacionReclamoGiro" />
+      <PropertyRef Name="GPP_OcupacionDestinatario" />
+      <PropertyRef Name="GPP_EmailDestinatario" />
+      <PropertyRef Name="GPP_DireccionDestinatario" />
+      <PropertyRef Name="GPP_TelefonoDestinatario" />
+      <PropertyRef Name="ADG_FechaGrabacion" />
+    </Key>
+    <Property Name="ADG_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_IdGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_DigitoVerificacion" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_GuidDeChequeo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ADG_AdmisionAutomatica" Type="bit" Nullable="false" />
+    <Property Name="ADG_IdTipoGiro" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="UltimoEstadoGiro" Type="char" MaxLength="3" />
+    <Property Name="ADG_IdCentroServicioOrigen" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdPaisOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescPaisOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_CodigoPostalOrigen" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdPaisDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescPaisDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_CodigoPostalDestino" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADG_ValorGiro" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_TarifaPorcPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_TarifaFijaPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorAdicionales" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorTotal" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_DeclaracionVoluntariaOrigenes" Type="bigint" />
+    <Property Name="ADG_Observaciones" Type="varchar" MaxLength="200" />
+    <Property Name="GPP_IdRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPP_TipoIdRemitente" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="GPP_NombreRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_Apellido1Remitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_Apellido2Remitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_TelefonoRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPP_DireccionRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="GPP_EmailRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_OcupacionRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_IdDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GPP_TipoIdDestinatario" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="GPP_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_Apellido1Destinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_Apellido2Destinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_TipoIdentificacionReclamoGiro" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="GPP_OcupacionDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_EmailDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GPP_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="GPP_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.CentroLogisDeRegionalAdmi_VPUA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CentroLogisDeRegionalAdmi_VPUA">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CEL_IdCentroLogistico" />
+    </Key>
+    <Property Name="REA_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CEL_IdCentroLogistico" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AdicionalesGiro_GIR_AdmisionGiros_GIR">
+    <End Role="AdmisionGiros_GIR" Type="ModeloVentaGirosNS.Store.AdmisionGiros_GIR" Multiplicity="1" />
+    <End Role="AdicionalesGiro_GIR" Type="ModeloVentaGirosNS.Store.AdicionalesGiro_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="AdicionalesGiro_GIR">
+        <PropertyRef Name="ADG_IdGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdicionalesGiro_GIR_TipoValorAdicional_TAR">
+    <End Role="TipoValorAdicional_TAR" Type="ModeloVentaGirosNS.Store.TipoValorAdicional_TAR" Multiplicity="1" />
+    <End Role="AdicionalesGiro_GIR" Type="ModeloVentaGirosNS.Store.AdicionalesGiro_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoValorAdicional_TAR">
+        <PropertyRef Name="TVA_IdTipoValorAdicional" />
+      </Principal>
+      <Dependent Role="AdicionalesGiro_GIR">
+        <PropertyRef Name="ADG_IdServicioAdicional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArchivosPagoGiro_GIR_PagoGiros_GIR">
+    <End Role="PagoGiros_GIR" Type="ModeloVentaGirosNS.Store.PagoGiros_GIR" Multiplicity="1" />
+    <End Role="ArchivosPagoGiro_GIR" Type="ModeloVentaGirosNS.Store.ArchivosPagoGiro_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PagoGiros_GIR">
+        <PropertyRef Name="PAG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="ArchivosPagoGiro_GIR">
+        <PropertyRef Name="APG_IdAdmisionGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleAdicionalesGiro_GIR_AdicionalesGiro_GIR">
+    <End Role="AdicionalesGiro_GIR" Type="ModeloVentaGirosNS.Store.AdicionalesGiro_GIR" Multiplicity="1" />
+    <End Role="DetalleAdicionalesGiro_GIR" Type="ModeloVentaGirosNS.Store.DetalleAdicionalesGiro_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdicionalesGiro_GIR">
+        <PropertyRef Name="ADG_IdGiro" />
+        <PropertyRef Name="ADG_IdServicioAdicional" />
+      </Principal>
+      <Dependent Role="DetalleAdicionalesGiro_GIR">
+        <PropertyRef Name="DAG_IdGiro" />
+        <PropertyRef Name="DAG_IdServicioAdicional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadosGiro_GIR_AdmisionGiros_GIR">
+    <End Role="AdmisionGiros_GIR" Type="ModeloVentaGirosNS.Store.AdmisionGiros_GIR" Multiplicity="1" />
+    <End Role="EstadosGiro_GIR" Type="ModeloVentaGirosNS.Store.EstadosGiro_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="EstadosGiro_GIR">
+        <PropertyRef Name="ESG_IdAdmisionGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GirosConvenioPeaton_GIR_AdmisionGiros_GIR">
+    <End Role="AdmisionGiros_GIR" Type="ModeloVentaGirosNS.Store.AdmisionGiros_GIR" Multiplicity="1" />
+    <End Role="GirosConvenioPeaton_GIR" Type="ModeloVentaGirosNS.Store.GirosConvenioPeaton_GIR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="GirosConvenioPeaton_GIR">
+        <PropertyRef Name="GCP_IdAdmisionGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GirosPeatonPeaton_GIR_AdmisionGiros_GIR">
+    <End Role="AdmisionGiros_GIR" Type="ModeloVentaGirosNS.Store.AdmisionGiros_GIR" Multiplicity="1" />
+    <End Role="GirosPeatonPeaton_GIR" Type="ModeloVentaGirosNS.Store.GirosPeatonPeaton_GIR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="GirosPeatonPeaton_GIR">
+        <PropertyRef Name="GPP_IdAdmisionGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImpuestosGiro_GIR_AdmisionGiros_GIR">
+    <End Role="AdmisionGiros_GIR" Type="ModeloVentaGirosNS.Store.AdmisionGiros_GIR" Multiplicity="1" />
+    <End Role="ImpuestosGiro_GIR" Type="ModeloVentaGirosNS.Store.ImpuestosGiro_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="ImpuestosGiro_GIR">
+        <PropertyRef Name="IMG_IdGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PagoGiros_GIR_AdmisionGiros_GIR">
+    <End Role="AdmisionGiros_GIR" Type="ModeloVentaGirosNS.Store.AdmisionGiros_GIR" Multiplicity="1" />
+    <End Role="PagoGiros_GIR" Type="ModeloVentaGirosNS.Store.PagoGiros_GIR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="PagoGiros_GIR">
+        <PropertyRef Name="PAG_IdAdmisionGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PinVentaGiro_GIR_AdmisionGiros_GIR">
+    <End Role="AdmisionGiros_GIR" Type="ModeloVentaGirosNS.Store.AdmisionGiros_GIR" Multiplicity="1" />
+    <End Role="PinVentaGiro_GIR" Type="ModeloVentaGirosNS.Store.PinVentaGiro_GIR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="PinVentaGiro_GIR">
+        <PropertyRef Name="PVG_IdAdmisionGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paActualizarGiroPorSolicitud_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="IdCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="DescCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdPaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="DescPaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="NombreCentroServicioDestino" Type="varchar" Mode="In" />
+    <Parameter Name="Transmitido" Type="bit" Mode="In" />
+    <Parameter Name="IdTipoIdentificacionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="Observaciones" Type="varchar" Mode="In" />
+    <Parameter Name="ValorGiro" Type="decimal" Mode="In" />
+    <Parameter Name="ValorPorte" Type="decimal" Mode="In" />
+    <Parameter Name="ValorTotal" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="paInsertarAdicionalesGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADG_IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="ADG_IdServicioAdicional" Type="char" Mode="In" />
+    <Parameter Name="ADG_DescripcionServicioAdicional" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_ValorAdicional" Type="decimal" Mode="In" />
+    <Parameter Name="ADG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="ADG_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarAdmisionGiroHistorico_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="FechaCambio" Type="datetime" Mode="In" />
+    <Parameter Name="CambiadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="TipoCambio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarAdmisionGiros_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADG_IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="ADG_PrefijoIdGiro" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_DigitoVerificacion" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_GuidDeChequeo" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_AdmisionAutomatica" Type="bit" Mode="In" />
+    <Parameter Name="ADG_IdTipoGiro" Type="char" Mode="In" />
+    <Parameter Name="ESG_EstadoGiro" Type="char" Mode="In" />
+    <Parameter Name="ADG_IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="ADG_NombreCentroServicioOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_IdPaisOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_DescPaisOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_IdCiudadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_DescCiudadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_CodigoPostalOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="ADG_NombreCentroServicioDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_IdPaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_DescPaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_IdCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_DescCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_CodigoPostalDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_ValorGiro" Type="decimal" Mode="In" />
+    <Parameter Name="ADG_TarifaPorcPorte" Type="decimal" Mode="In" />
+    <Parameter Name="ADG_TarifaFijaPorte" Type="decimal" Mode="In" />
+    <Parameter Name="ADG_ValorPorte" Type="decimal" Mode="In" />
+    <Parameter Name="ADG_ValorAdicionales" Type="decimal" Mode="In" />
+    <Parameter Name="ADG_ValorImpuestos" Type="decimal" Mode="In" />
+    <Parameter Name="ADG_ValorTotal" Type="decimal" Mode="In" />
+    <Parameter Name="ADG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="ADG_CreadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_IdTipoIdentificacionRemitente" Type="char" Mode="In" />
+    <Parameter Name="ADG_IdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_NombreRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_IdTipoIdentificacionDestinatario" Type="char" Mode="In" />
+    <Parameter Name="ADG_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_DeclaracionVoluntariaOrigenes" Type="bigint" Mode="In" />
+    <Parameter Name="ADG_Observaciones" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_NotificacionPagoEmail" Type="bit" Mode="In" />
+    <Parameter Name="ADG_TelefonoRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_DireccionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_EmailRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADG_EsProduccion" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paInsertarDetalleAddGiros_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DAG_IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="DAG_IdServicioAdicional" Type="char" Mode="In" />
+    <Parameter Name="DAG_Campo" Type="varchar" Mode="In" />
+    <Parameter Name="DAG_ValorCampo" Type="varchar" Mode="In" />
+    <Parameter Name="DAG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="DAG_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarEstadoGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="EstadoGiro" Type="char" Mode="In" />
+    <Parameter Name="FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarGirosPeatonConvenio_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GPC_IdAdmisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="GPC_IdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_TipoIdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_NombreRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_Apellido1Remitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_Apellido2Remitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_TelefonoRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_DireccionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_EmailRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_OcupacionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_IdConvenioDestinatario" Type="int" Mode="In" />
+    <Parameter Name="GPC_NitConvenioDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_RazonSocialConvenioDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_TelefonoConvenioDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_DireccionConvenioDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPC_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="GPC_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarGirosPeatonPeaton_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GPP_IdAdmisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="GPP_IdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_TipoIdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_NombreRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_Apellido1Remitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_Apellido2Remitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_TelefonoRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_DireccionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_EmailRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_OcupacionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_Apellido1Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_Apellido2Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_OcupacionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_TipoIdentificacionReclamoGiro" Type="varchar" Mode="In" />
+    <Parameter Name="GPP_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="GPP_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarImpuestosGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IMG_IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="IMG_IdImpuesto" Type="smallint" Mode="In" />
+    <Parameter Name="IMG_DescripcionImpuesto" Type="varchar" Mode="In" />
+    <Parameter Name="IMG_Tarifa" Type="decimal" Mode="In" />
+    <Parameter Name="IMG_ValorSobreBase" Type="decimal" Mode="In" />
+    <Parameter Name="IMG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="IMG_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarPagoGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PAG_IdAdmisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="PAG_IdComprobantePago" Type="bigint" Mode="In" />
+    <Parameter Name="PAG_PagoAutorizadoPeaton" Type="bit" Mode="In" />
+    <Parameter Name="PAG_PagoAutorizadoEmpresarial" Type="bit" Mode="In" />
+    <Parameter Name="PAG_PagoAutomatico" Type="bit" Mode="In" />
+    <Parameter Name="PAG_IdCentroServiciosPagador" Type="bigint" Mode="In" />
+    <Parameter Name="PAG_NombreCentroServicios" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_ValorPagado" Type="decimal" Mode="In" />
+    <Parameter Name="PAG_IdCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_TipoIdCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_NombreCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_Apellido1Cobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_Apellido2Cobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_TelefonoCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_DireccionCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_EmailCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_OcupacionCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_Observaciones" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="PAG_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerCantPagosAgencia_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCentroServicio" Type="bigint" Mode="In" />
+    <Parameter Name="EstadoGiro" Type="char" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroAdicionales_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroConvenioPeaton_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroGuidGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GuidDeChequeo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroIdAdminGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroIdentificacio_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdDestinatario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroIdentificacionCiudad_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdCiudadConsulta" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroIdGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroIdGiroCentroServicio_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="IdCentroSvc" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroIdGiroCiudadDestino_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="idCiudadDestino" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroImpuestos_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroInfoPago_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroPeatonConvenio_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroPeatonPeaton_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroPPE_paraIntegracion742_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EstadoGiro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGirosFiltro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="TipoIdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="IdentificacionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdentificacionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdTipoGiro" Type="varchar" Mode="In" />
+    <Parameter Name="idRegional" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroSinSolicitud_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGirosPeatonPeaton_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="UltimoEstadoGiro" Type="char" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="TipoIdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="IdentificacionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdentificacionDestinatario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerHistoricoEstadosGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdminGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPagoGiroPorCompro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdComprobantePago" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPagoGirosFiltro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="TipoIdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="IdentificacionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdentificacionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdTipoGiro" Type="varchar" Mode="In" />
+    <Parameter Name="idRegional" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerSuministrosValorActualNumerador_SUM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDSUMINISTROS" Type="int" Mode="In" />
+    <Parameter Name="ACTUAL" Type="bigint" Mode="InOut" />
+  </Function>
+</Schema>

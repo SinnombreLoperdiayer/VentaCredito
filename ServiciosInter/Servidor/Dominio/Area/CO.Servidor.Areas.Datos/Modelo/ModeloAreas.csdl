@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloAreas" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ModeloAreasEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Banco_PAR" EntityType="ModeloAreas.Banco_PAR" />
+    <EntitySet Name="BancoCasaMatriz_ARE" EntityType="ModeloAreas.BancoCasaMatriz_ARE" />
+    <EntitySet Name="Gestion_ARE" EntityType="ModeloAreas.Gestion_ARE" />
+    <EntitySet Name="MacroProceso_ARE" EntityType="ModeloAreas.MacroProceso_ARE" />
+    <EntitySet Name="GestionesCasaMatriz_VARE" EntityType="ModeloAreas.GestionesCasaMatriz_VARE" />
+    <AssociationSet Name="FK_BancoEmpresa_PAR_Banco_PAR" Association="ModeloAreas.FK_BancoEmpresa_PAR_Banco_PAR">
+      <End Role="Banco_PAR" EntitySet="Banco_PAR" />
+      <End Role="BancoCasaMatriz_ARE" EntitySet="BancoCasaMatriz_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gestion_ARE_MacroProceso_ARE" Association="ModeloAreas.FK_Gestion_ARE_MacroProceso_ARE">
+      <End Role="MacroProceso_ARE" EntitySet="MacroProceso_ARE" />
+      <End Role="Gestion_ARE" EntitySet="Gestion_ARE" />
+    </AssociationSet>
+    <EntitySet Name="CuentaBancoCasaMatriz_ARE" EntityType="ModeloAreas.CuentaBancoCasaMatriz_ARE" />
+    <AssociationSet Name="FK_CuentaBancoEmpresa_PAR_BancoEmpresa_PAR" Association="ModeloAreas.FK_CuentaBancoEmpresa_PAR_BancoEmpresa_PAR">
+      <End Role="BancoCasaMatriz_ARE" EntitySet="BancoCasaMatriz_ARE" />
+      <End Role="CuentaBancoCasaMatriz_ARE" EntitySet="CuentaBancoCasaMatriz_ARE" />
+    </AssociationSet>
+    <EntitySet Name="TipoCuentaBanco_PAR" EntityType="ModeloAreas.TipoCuentaBanco_PAR" />
+    <AssociationSet Name="FK_CuentaBancoEmpresa_PAR_TipoCuentaBanco_PAR" Association="ModeloAreas.FK_CuentaBancoEmpresa_PAR_TipoCuentaBanco_PAR">
+      <End Role="TipoCuentaBanco_PAR" EntitySet="TipoCuentaBanco_PAR" />
+      <End Role="CuentaBancoCasaMatriz_ARE" EntitySet="CuentaBancoCasaMatriz_ARE" />
+    </AssociationSet>
+    <EntitySet Name="CasaMatrizCuentaBanco_VARE" EntityType="ModeloAreas.CasaMatrizCuentaBanco_VARE" />
+    <EntitySet Name="ProcesosCasaMatriz_VARE" EntityType="ModeloAreas.ProcesosCasaMatriz_VARE" />
+    <EntitySet Name="Proceso_ARE" EntityType="ModeloAreas.Proceso_ARE" />
+    <AssociationSet Name="FK_Proceso_ARE_Gestion_ARE" Association="ModeloAreas.FK_Proceso_ARE_Gestion_ARE">
+      <End Role="Gestion_ARE" EntitySet="Gestion_ARE" />
+      <End Role="Proceso_ARE" EntitySet="Proceso_ARE" />
+    </AssociationSet>
+    <EntitySet Name="CasaMatriz_VARE" EntityType="ModeloAreas.CasaMatriz_VARE" />
+    <EntitySet Name="CasaMatriz_ARE" EntityType="ModeloAreas.CasaMatriz_ARE" />
+    <AssociationSet Name="FK_BancoEmpresa_PAR_Empresa_PAR" Association="ModeloAreas.FK_BancoEmpresa_PAR_Empresa_PAR">
+      <End Role="CasaMatriz_ARE" EntitySet="CasaMatriz_ARE" />
+      <End Role="BancoCasaMatriz_ARE" EntitySet="BancoCasaMatriz_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MacroProceso_ARE_CasaMatriz_ARE" Association="ModeloAreas.FK_MacroProceso_ARE_CasaMatriz_ARE">
+      <End Role="CasaMatriz_ARE" EntitySet="CasaMatriz_ARE" />
+      <End Role="MacroProceso_ARE" EntitySet="MacroProceso_ARE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Banco_PAR">
+    <Key>
+      <PropertyRef Name="BAN_IdBanco" />
+    </Key>
+    <Property Name="BAN_IdBanco" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="BAN_Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="BAN_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BAN_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="BancoCasaMatriz_ARE" Relationship="ModeloAreas.FK_BancoEmpresa_PAR_Banco_PAR" FromRole="Banco_PAR" ToRole="BancoCasaMatriz_ARE" />
+  </EntityType>
+  <EntityType Name="BancoCasaMatriz_ARE">
+    <Key>
+      <PropertyRef Name="BAE_IdBancoCasaMatriz" />
+    </Key>
+    <Property Name="BAE_IdBancoCasaMatriz" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BAE_IdBanco" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="BAE_IdEmpresa" Type="Int16" Nullable="false" />
+    <Property Name="BAE_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BAE_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Banco_PAR" Relationship="ModeloAreas.FK_BancoEmpresa_PAR_Banco_PAR" FromRole="BancoCasaMatriz_ARE" ToRole="Banco_PAR" />
+    <NavigationProperty Name="CuentaBancoCasaMatriz_ARE" Relationship="ModeloAreas.FK_CuentaBancoEmpresa_PAR_BancoEmpresa_PAR" FromRole="BancoCasaMatriz_ARE" ToRole="CuentaBancoCasaMatriz_ARE" />
+    <NavigationProperty Name="CasaMatriz_ARE" Relationship="ModeloAreas.FK_BancoEmpresa_PAR_Empresa_PAR" FromRole="BancoCasaMatriz_ARE" ToRole="CasaMatriz_ARE" />
+  </EntityType>
+  <EntityType Name="Gestion_ARE">
+    <Key>
+      <PropertyRef Name="GES_CodigoGestion" />
+    </Key>
+    <Property Name="GES_CodigoGestion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GES_IdGestion" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="GES_Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="GES_IdMacroProceso" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="GES_CentroCostos" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="GES_CodigoBodegaERP" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="GES_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GES_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="MacroProceso_ARE" Relationship="ModeloAreas.FK_Gestion_ARE_MacroProceso_ARE" FromRole="Gestion_ARE" ToRole="MacroProceso_ARE" />
+    <NavigationProperty Name="Proceso_ARE" Relationship="ModeloAreas.FK_Proceso_ARE_Gestion_ARE" FromRole="Gestion_ARE" ToRole="Proceso_ARE" />
+  </EntityType>
+  <EntityType Name="MacroProceso_ARE">
+    <Key>
+      <PropertyRef Name="MAP_IdMacroProceso" />
+    </Key>
+    <Property Name="MAP_IdMacroProceso" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="MAP_Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MAP_IdCasaMatriz" Type="Int16" Nullable="false" />
+    <Property Name="MAP_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MAP_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Gestion_ARE" Relationship="ModeloAreas.FK_Gestion_ARE_MacroProceso_ARE" FromRole="MacroProceso_ARE" ToRole="Gestion_ARE" />
+    <NavigationProperty Name="CasaMatriz_ARE" Relationship="ModeloAreas.FK_MacroProceso_ARE_CasaMatriz_ARE" FromRole="MacroProceso_ARE" ToRole="CasaMatriz_ARE" />
+  </EntityType>
+  <EntityType Name="GestionesCasaMatriz_VARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="MAP_IdMacroProceso" />
+      <PropertyRef Name="MAP_Descripcion" />
+      <PropertyRef Name="GES_CodigoGestion" />
+      <PropertyRef Name="GES_IdGestion" />
+      <PropertyRef Name="GES_Descripcion" />
+      <PropertyRef Name="GES_CentroCostos" />
+      <PropertyRef Name="GES_CodigoBodegaERP" />
+    </Key>
+    <Property Name="CAM_IdCasaMatriz" Type="Int16" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MAP_IdMacroProceso" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="MAP_Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="GES_CodigoGestion" Type="Int64" Nullable="false" />
+    <Property Name="GES_IdGestion" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="GES_Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="GES_CentroCostos" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="GES_CodigoBodegaERP" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_BancoEmpresa_PAR_Banco_PAR">
+    <End Role="Banco_PAR" Type="ModeloAreas.Banco_PAR" Multiplicity="1" />
+    <End Role="BancoCasaMatriz_ARE" Type="ModeloAreas.BancoCasaMatriz_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco_PAR">
+        <PropertyRef Name="BAN_IdBanco" />
+      </Principal>
+      <Dependent Role="BancoCasaMatriz_ARE">
+        <PropertyRef Name="BAE_IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gestion_ARE_MacroProceso_ARE">
+    <End Role="MacroProceso_ARE" Type="ModeloAreas.MacroProceso_ARE" Multiplicity="1" />
+    <End Role="Gestion_ARE" Type="ModeloAreas.Gestion_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MacroProceso_ARE">
+        <PropertyRef Name="MAP_IdMacroProceso" />
+      </Principal>
+      <Dependent Role="Gestion_ARE">
+        <PropertyRef Name="GES_IdMacroProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CuentaBancoCasaMatriz_ARE">
+    <Key>
+      <PropertyRef Name="CBE_IdCuentaBanco" />
+    </Key>
+    <Property Type="Int16" Name="CBE_IdCuentaBanco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int16" Name="CBE_IdBancoEmpresa" Nullable="false" />
+    <Property Type="String" Name="CBE_NumeroCuenta" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CBE_TipoCuenta" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="CBE_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CBE_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BancoCasaMatriz_ARE" Relationship="ModeloAreas.FK_CuentaBancoEmpresa_PAR_BancoEmpresa_PAR" FromRole="CuentaBancoCasaMatriz_ARE" ToRole="BancoCasaMatriz_ARE" />
+    <NavigationProperty Name="TipoCuentaBanco_PAR" Relationship="ModeloAreas.FK_CuentaBancoEmpresa_PAR_TipoCuentaBanco_PAR" FromRole="CuentaBancoCasaMatriz_ARE" ToRole="TipoCuentaBanco_PAR" />
+  </EntityType>
+  <Association Name="FK_CuentaBancoEmpresa_PAR_BancoEmpresa_PAR">
+    <End Type="ModeloAreas.BancoCasaMatriz_ARE" Role="BancoCasaMatriz_ARE" Multiplicity="1" />
+    <End Type="ModeloAreas.CuentaBancoCasaMatriz_ARE" Role="CuentaBancoCasaMatriz_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BancoCasaMatriz_ARE">
+        <PropertyRef Name="BAE_IdBancoCasaMatriz" />
+      </Principal>
+      <Dependent Role="CuentaBancoCasaMatriz_ARE">
+        <PropertyRef Name="CBE_IdBancoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TipoCuentaBanco_PAR">
+    <Key>
+      <PropertyRef Name="TCB_IdTipoCuenta" />
+    </Key>
+    <Property Type="String" Name="TCB_IdTipoCuenta" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TCB_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TCB_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="TCB_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CuentaBancoCasaMatriz_ARE" Relationship="ModeloAreas.FK_CuentaBancoEmpresa_PAR_TipoCuentaBanco_PAR" FromRole="TipoCuentaBanco_PAR" ToRole="CuentaBancoCasaMatriz_ARE" />
+  </EntityType>
+  <Association Name="FK_CuentaBancoEmpresa_PAR_TipoCuentaBanco_PAR">
+    <End Type="ModeloAreas.TipoCuentaBanco_PAR" Role="TipoCuentaBanco_PAR" Multiplicity="1" />
+    <End Type="ModeloAreas.CuentaBancoCasaMatriz_ARE" Role="CuentaBancoCasaMatriz_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCuentaBanco_PAR">
+        <PropertyRef Name="TCB_IdTipoCuenta" />
+      </Principal>
+      <Dependent Role="CuentaBancoCasaMatriz_ARE">
+        <PropertyRef Name="CBE_TipoCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CasaMatrizCuentaBanco_VARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="CAM_Nit" />
+      <PropertyRef Name="CAM_DigitoVerificacion" />
+      <PropertyRef Name="CAM_CodigoSucursalERP" />
+      <PropertyRef Name="CAM_Sigla" />
+      <PropertyRef Name="CAM_Direccion" />
+      <PropertyRef Name="CAM_Telefono" />
+      <PropertyRef Name="CAM_IdLocalidad" />
+      <PropertyRef Name="CAM_CentroCostos" />
+      <PropertyRef Name="CAM_CodigoMinisterio" />
+      <PropertyRef Name="CAM_Estado" />
+      <PropertyRef Name="CAM_FechaGrabacion" />
+      <PropertyRef Name="CAM_CreadoPor" />
+      <PropertyRef Name="BAE_IdBanco" />
+      <PropertyRef Name="BAN_Descripcion" />
+      <PropertyRef Name="CBE_IdCuentaBanco" />
+      <PropertyRef Name="CBE_IdBancoEmpresa" />
+      <PropertyRef Name="CBE_NumeroCuenta" />
+      <PropertyRef Name="CBE_TipoCuenta" />
+      <PropertyRef Name="CBE_FechaGrabacion" />
+      <PropertyRef Name="CBE_CreadoPor" />
+      <PropertyRef Name="TCB_Descripcion" />
+    </Key>
+    <Property Type="Int16" Name="CAM_IdCasaMatriz" Nullable="false" />
+    <Property Type="String" Name="CAM_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Nit" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_DigitoVerificacion" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CAM_CodigoSucursalERP" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Sigla" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Telefono" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CAM_CodigoMinisterio" Nullable="false" />
+    <Property Type="String" Name="CAM_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="CAM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CAM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BAE_IdBanco" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="BAN_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CBE_IdCuentaBanco" Nullable="false" />
+    <Property Type="Int16" Name="CBE_IdBancoEmpresa" Nullable="false" />
+    <Property Type="String" Name="CBE_NumeroCuenta" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CBE_TipoCuenta" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="CBE_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CBE_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TCB_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProcesosCasaMatriz_VARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="MAP_IdMacroProceso" />
+      <PropertyRef Name="MAP_Descripcion" />
+      <PropertyRef Name="GES_CodigoGestion" />
+      <PropertyRef Name="GES_IdGestion" />
+      <PropertyRef Name="GES_Descripcion" />
+      <PropertyRef Name="GES_CentroCostos" />
+      <PropertyRef Name="GES_CodigoBodegaERP" />
+      <PropertyRef Name="PRO_IdProceso" />
+      <PropertyRef Name="PRO_IdCodigoProceso" />
+      <PropertyRef Name="PRO_Descripcion" />
+      <PropertyRef Name="PRO_CodigoGestion" />
+      <PropertyRef Name="PRO_CentroCostos" />
+      <PropertyRef Name="PRO_CodigoBodegaERP" />
+      <PropertyRef Name="CAM_Nit" />
+      <PropertyRef Name="CAM_DigitoVerificacion" />
+      <PropertyRef Name="CAM_CodigoSucursalERP" />
+      <PropertyRef Name="CAM_Sigla" />
+      <PropertyRef Name="CAM_Direccion" />
+      <PropertyRef Name="CAM_Telefono" />
+      <PropertyRef Name="CAM_IdLocalidad" />
+      <PropertyRef Name="CAM_CentroCostos" />
+      <PropertyRef Name="CAM_CodigoMinisterio" />
+      <PropertyRef Name="CAM_Estado" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_NombreCorto" />
+    </Key>
+    <Property Type="Int16" Name="CAM_IdCasaMatriz" Nullable="false" />
+    <Property Type="String" Name="CAM_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAP_IdMacroProceso" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MAP_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="GES_CodigoGestion" Nullable="false" />
+    <Property Type="String" Name="GES_IdGestion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GES_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GES_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GES_CodigoBodegaERP" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="PRO_IdProceso" Nullable="false" />
+    <Property Type="String" Name="PRO_IdCodigoProceso" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="PRO_CodigoGestion" Nullable="false" />
+    <Property Type="String" Name="PRO_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_CodigoBodegaERP" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Nit" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_DigitoVerificacion" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CAM_CodigoSucursalERP" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Sigla" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Telefono" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CAM_CodigoMinisterio" Nullable="false" />
+    <Property Type="String" Name="CAM_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="LOC_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_NombreCorto" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreCompleto" MaxLength="110" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Proceso_ARE">
+    <Key>
+      <PropertyRef Name="PRO_IdProceso" />
+    </Key>
+    <Property Type="Int64" Name="PRO_IdProceso" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="PRO_IdCodigoProceso" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="PRO_CodigoGestion" Nullable="false" />
+    <Property Type="String" Name="PRO_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRO_CodigoBodegaERP" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PRO_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PRO_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Gestion_ARE" Relationship="ModeloAreas.FK_Proceso_ARE_Gestion_ARE" FromRole="Proceso_ARE" ToRole="Gestion_ARE" />
+  </EntityType>
+  <Association Name="FK_Proceso_ARE_Gestion_ARE">
+    <End Type="ModeloAreas.Gestion_ARE" Role="Gestion_ARE" Multiplicity="1" />
+    <End Type="ModeloAreas.Proceso_ARE" Role="Proceso_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gestion_ARE">
+        <PropertyRef Name="GES_CodigoGestion" />
+      </Principal>
+      <Dependent Role="Proceso_ARE">
+        <PropertyRef Name="PRO_CodigoGestion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CasaMatriz_VARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="CAM_Nit" />
+      <PropertyRef Name="CAM_DigitoVerificacion" />
+      <PropertyRef Name="CAM_CodigoSucursalERP" />
+      <PropertyRef Name="CAM_Sigla" />
+      <PropertyRef Name="CAM_Direccion" />
+      <PropertyRef Name="CAM_Telefono" />
+      <PropertyRef Name="CAM_IdLocalidad" />
+      <PropertyRef Name="CAM_CentroCostos" />
+      <PropertyRef Name="CAM_CodigoMinisterio" />
+      <PropertyRef Name="CAM_Estado" />
+    </Key>
+    <Property Type="Int16" Name="CAM_IdCasaMatriz" Nullable="false" />
+    <Property Type="String" Name="CAM_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Nit" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_DigitoVerificacion" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CAM_CodigoSucursalERP" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Sigla" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Telefono" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CAM_CodigoMinisterio" Nullable="false" />
+    <Property Type="String" Name="CAM_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="NombreCompletoLocalidad" MaxLength="110" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CasaMatriz_ARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+    </Key>
+    <Property Type="Int16" Name="CAM_IdCasaMatriz" Nullable="false" />
+    <Property Type="String" Name="CAM_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Nit" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_DigitoVerificacion" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CAM_CodigoSucursalERP" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Sigla" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_Telefono" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CAM_CentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CAM_CodigoMinisterio" Nullable="false" />
+    <Property Type="String" Name="CAM_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="CAM_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="CAM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BancoCasaMatriz_ARE" Relationship="ModeloAreas.FK_BancoEmpresa_PAR_Empresa_PAR" FromRole="CasaMatriz_ARE" ToRole="BancoCasaMatriz_ARE" />
+    <NavigationProperty Name="MacroProceso_ARE" Relationship="ModeloAreas.FK_MacroProceso_ARE_CasaMatriz_ARE" FromRole="CasaMatriz_ARE" ToRole="MacroProceso_ARE" />
+  </EntityType>
+  <Association Name="FK_BancoEmpresa_PAR_Empresa_PAR">
+    <End Type="ModeloAreas.CasaMatriz_ARE" Role="CasaMatriz_ARE" Multiplicity="1" />
+    <End Type="ModeloAreas.BancoCasaMatriz_ARE" Role="BancoCasaMatriz_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasaMatriz_ARE">
+        <PropertyRef Name="CAM_IdCasaMatriz" />
+      </Principal>
+      <Dependent Role="BancoCasaMatriz_ARE">
+        <PropertyRef Name="BAE_IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MacroProceso_ARE_CasaMatriz_ARE">
+    <End Type="ModeloAreas.CasaMatriz_ARE" Role="CasaMatriz_ARE" Multiplicity="1" />
+    <End Type="ModeloAreas.MacroProceso_ARE" Role="MacroProceso_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasaMatriz_ARE">
+        <PropertyRef Name="CAM_IdCasaMatriz" />
+      </Principal>
+      <Dependent Role="MacroProceso_ARE">
+        <PropertyRef Name="MAP_IdCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

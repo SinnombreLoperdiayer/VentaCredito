@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloMensajeria" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EntidadesMensajeria" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CategoriaMensaje_MEN" EntityType="ModeloMensajeria.CategoriaMensaje_MEN" />
+    <EntitySet Name="RespuestasMensajes_MEN" EntityType="ModeloMensajeria.RespuestasMensajes_MEN" />
+    <EntitySet Name="Agencia_PUA" EntityType="ModeloMensajeria.Agencia_PUA" />
+    <EntitySet Name="CentroLogistico_PUA" EntityType="ModeloMensajeria.CentroLogistico_PUA" />
+    <EntitySet Name="MensajesEnviados_MEN" EntityType="ModeloMensajeria.MensajesEnviados_MEN" />
+    <EntitySet Name="PuntoServicio_PUA" EntityType="ModeloMensajeria.PuntoServicio_PUA" />
+    <EntitySet Name="RegionalAdministrativa_PUA" EntityType="ModeloMensajeria.RegionalAdministrativa_PUA" />
+    <AssociationSet Name="FK_Agencia_PUA_CentroLogistico_PUA" Association="ModeloMensajeria.FK_Agencia_PUA_CentroLogistico_PUA">
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PuntoServicio_PUA_Agencia_PUA" Association="ModeloMensajeria.FK_PuntoServicio_PUA_Agencia_PUA">
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+      <End Role="PuntoServicio_PUA" EntitySet="PuntoServicio_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MensajesEnviados_MEN_CategoriaMensaje_MEN" Association="ModeloMensajeria.FK_MensajesEnviados_MEN_CategoriaMensaje_MEN">
+      <End Role="CategoriaMensaje_MEN" EntitySet="CategoriaMensaje_MEN" />
+      <End Role="MensajesEnviados_MEN" EntitySet="MensajesEnviados_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" Association="ModeloMensajeria.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RespuestasMensajes_MEN_MensajesEnviados_MEN" Association="ModeloMensajeria.FK_RespuestasMensajes_MEN_MensajesEnviados_MEN">
+      <End Role="MensajesEnviados_MEN" EntitySet="MensajesEnviados_MEN" />
+      <End Role="RespuestasMensajes_MEN" EntitySet="RespuestasMensajes_MEN" />
+    </AssociationSet>
+    <EntitySet Name="CentrosServicosRacol_VPUA" EntityType="ModeloMensajeria.CentrosServicosRacol_VPUA" />
+    <EntitySet Name="CentroServicios_PUA" EntityType="ModeloMensajeria.CentroServicios_PUA" />
+    <AssociationSet Name="FK_Agencia_PUA_PuntoAtencion_PUA" Association="ModeloMensajeria.FK_Agencia_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroLogistico_PUA_PuntoAtencion_PUA" Association="ModeloMensajeria.FK_CentroLogistico_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MensajesEnviados_MEN_PuntoAtencion_PUA" Association="ModeloMensajeria.FK_MensajesEnviados_MEN_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="MensajesEnviados_MEN" EntitySet="MensajesEnviados_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PuntoServicio_PUA_PuntoAtencion_PUA" Association="ModeloMensajeria.FK_PuntoServicio_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="PuntoServicio_PUA" EntitySet="PuntoServicio_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA" Association="ModeloMensajeria.FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+    </AssociationSet>
+    <EntitySet Name="AdjuntosMensajes_MEN" EntityType="ModeloMensajeria.AdjuntosMensajes_MEN" />
+    <AssociationSet Name="FK_AdjuntosMensajes_MEN_MensajesEnviados_MEN" Association="ModeloMensajeria.FK_AdjuntosMensajes_MEN_MensajesEnviados_MEN">
+      <End Role="MensajesEnviados_MEN" EntitySet="MensajesEnviados_MEN" />
+      <End Role="AdjuntosMensajes_MEN" EntitySet="AdjuntosMensajes_MEN" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CategoriaMensaje_MEN">
+    <Key>
+      <PropertyRef Name="CAT_IdCategoriaMensaje" />
+    </Key>
+    <Property Name="CAT_IdCategoriaMensaje" Type="Int32" Nullable="false" />
+    <Property Name="CAT_Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CAT_EsExclusiva" Type="Boolean" Nullable="false" />
+    <Property Name="CAT_FechaGrabacion" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Type="String" Name="CAT_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MensajesEnviados_MEN" Relationship="ModeloMensajeria.FK_MensajesEnviados_MEN_CategoriaMensaje_MEN" FromRole="CategoriaMensaje_MEN" ToRole="MensajesEnviados_MEN" />
+  </EntityType>
+  <EntityType Name="RespuestasMensajes_MEN">
+    <Key>
+      <PropertyRef Name="RES_IdRespuesta" />
+    </Key>
+    <Property Type="Int32" Name="RES_IdRespuesta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RES_IdMensaje" Nullable="false" />
+    <Property Type="DateTime" Name="RES_FechaRespuesta" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RES_IdUsuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RES_TextoRespuesta" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MensajesEnviados_MEN" Relationship="ModeloMensajeria.FK_RespuestasMensajes_MEN_MensajesEnviados_MEN" FromRole="RespuestasMensajes_MEN" ToRole="MensajesEnviados_MEN" />
+  </EntityType>
+  <EntityType Name="Agencia_PUA">
+    <Key>
+      <PropertyRef Name="AGE_IdAgencia" />
+    </Key>
+    <Property Type="Int64" Name="AGE_IdAgencia" Nullable="false" />
+    <Property Type="Int64" Name="AGE_IdCentroLogistico" Nullable="false" />
+    <Property Type="String" Name="AGE_IdTipoAgencia" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="AGE_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="AGE_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CentroLogistico_PUA" Relationship="ModeloMensajeria.FK_Agencia_PUA_CentroLogistico_PUA" FromRole="Agencia_PUA" ToRole="CentroLogistico_PUA" />
+    <NavigationProperty Name="PuntoServicio_PUA" Relationship="ModeloMensajeria.FK_PuntoServicio_PUA_Agencia_PUA" FromRole="Agencia_PUA" ToRole="PuntoServicio_PUA" />
+    <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloMensajeria.FK_Agencia_PUA_PuntoAtencion_PUA" FromRole="Agencia_PUA" ToRole="CentroServicios_PUA" />
+    <Property Type="Binary" Name="anchor" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CentroLogistico_PUA">
+    <Key>
+      <PropertyRef Name="CEL_IdCentroLogistico" />
+    </Key>
+    <Property Type="Int64" Name="CEL_IdCentroLogistico" Nullable="false" />
+    <Property Type="Int64" Name="CEL_IdRegionalAdm" Nullable="false" />
+    <Property Type="DateTime" Name="CEL_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CEL_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Agencia_PUA" Relationship="ModeloMensajeria.FK_Agencia_PUA_CentroLogistico_PUA" FromRole="CentroLogistico_PUA" ToRole="Agencia_PUA" />
+    <NavigationProperty Name="RegionalAdministrativa_PUA" Relationship="ModeloMensajeria.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" FromRole="CentroLogistico_PUA" ToRole="RegionalAdministrativa_PUA" />
+    <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloMensajeria.FK_CentroLogistico_PUA_PuntoAtencion_PUA" FromRole="CentroLogistico_PUA" ToRole="CentroServicios_PUA" />
+  </EntityType>
+  <EntityType Name="MensajesEnviados_MEN">
+    <Key>
+      <PropertyRef Name="MEN_IdMensaje" />
+    </Key>
+    <Property Type="Int32" Name="MEN_IdMensaje" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="MEN_FechaCreacion" Nullable="false" Precision="3" />
+    <Property Type="Int64" Name="MEN_IdPuntoAtencionDestino" Nullable="false" />
+    <Property Type="String" Name="MEN_UsuarioOrigen" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MEN_IdMensajeOriginal" Nullable="false" />
+    <Property Type="String" Name="MEN_Asunto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="MEN_CategoriaMensaje" Nullable="false" />
+    <Property Type="String" Name="MEN_TextoMensaje" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MEN_EstadoNotificacion" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="MEN_UsuarioQueLeyo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="MEN_AceptaRespuestas" Nullable="false" />
+    <NavigationProperty Name="CategoriaMensaje_MEN" Relationship="ModeloMensajeria.FK_MensajesEnviados_MEN_CategoriaMensaje_MEN" FromRole="MensajesEnviados_MEN" ToRole="CategoriaMensaje_MEN" />
+    <NavigationProperty Name="RespuestasMensajes_MEN" Relationship="ModeloMensajeria.FK_RespuestasMensajes_MEN_MensajesEnviados_MEN" FromRole="MensajesEnviados_MEN" ToRole="RespuestasMensajes_MEN" />
+    <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloMensajeria.FK_MensajesEnviados_MEN_PuntoAtencion_PUA" FromRole="MensajesEnviados_MEN" ToRole="CentroServicios_PUA" />
+    <NavigationProperty Name="AdjuntosMensajes_MEN" Relationship="ModeloMensajeria.FK_AdjuntosMensajes_MEN_MensajesEnviados_MEN" FromRole="MensajesEnviados_MEN" ToRole="AdjuntosMensajes_MEN" />
+  </EntityType>
+  <EntityType Name="PuntoServicio_PUA">
+    <Key>
+      <PropertyRef Name="PUS_IdPuntoServicio" />
+    </Key>
+    <Property Type="Int64" Name="PUS_IdPuntoServicio" Nullable="false" />
+    <Property Type="Int64" Name="PUS_IdAgencia" Nullable="false" />
+    <Property Type="DateTime" Name="PUS_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PUS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Agencia_PUA" Relationship="ModeloMensajeria.FK_PuntoServicio_PUA_Agencia_PUA" FromRole="PuntoServicio_PUA" ToRole="Agencia_PUA" />
+    <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloMensajeria.FK_PuntoServicio_PUA_PuntoAtencion_PUA" FromRole="PuntoServicio_PUA" ToRole="CentroServicios_PUA" />
+    <Property Type="Boolean" Name="PUS_ReclameEnOficina" Nullable="false" />
+    <Property Type="Binary" Name="anchor" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="RegionalAdministrativa_PUA">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+    </Key>
+    <Property Type="Int64" Name="REA_IdRegionalAdm" Nullable="false" />
+    <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="REA_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="REA_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CentroLogistico_PUA" Relationship="ModeloMensajeria.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" FromRole="RegionalAdministrativa_PUA" ToRole="CentroLogistico_PUA" />
+    <Property Type="String" Name="REA_CodigoExternoSucursal" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="REA_IdCasaMatriz" Nullable="false" />
+    <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloMensajeria.FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA" FromRole="RegionalAdministrativa_PUA" ToRole="CentroServicios_PUA" />
+  </EntityType>
+  <Association Name="FK_Agencia_PUA_CentroLogistico_PUA">
+    <End Type="ModeloMensajeria.CentroLogistico_PUA" Role="CentroLogistico_PUA" Multiplicity="1" />
+    <End Type="ModeloMensajeria.Agencia_PUA" Role="Agencia_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdCentroLogistico" />
+      </Principal>
+      <Dependent Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdCentroLogistico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PuntoServicio_PUA_Agencia_PUA">
+    <End Type="ModeloMensajeria.Agencia_PUA" Role="Agencia_PUA" Multiplicity="1" />
+    <End Type="ModeloMensajeria.PuntoServicio_PUA" Role="PuntoServicio_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdAgencia" />
+      </Principal>
+      <Dependent Role="PuntoServicio_PUA">
+        <PropertyRef Name="PUS_IdAgencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MensajesEnviados_MEN_CategoriaMensaje_MEN">
+    <End Type="ModeloMensajeria.CategoriaMensaje_MEN" Role="CategoriaMensaje_MEN" Multiplicity="1" />
+    <End Type="ModeloMensajeria.MensajesEnviados_MEN" Role="MensajesEnviados_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaMensaje_MEN">
+        <PropertyRef Name="CAT_IdCategoriaMensaje" />
+      </Principal>
+      <Dependent Role="MensajesEnviados_MEN">
+        <PropertyRef Name="MEN_CategoriaMensaje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+    <End Type="ModeloMensajeria.RegionalAdministrativa_PUA" Role="RegionalAdministrativa_PUA" Multiplicity="1" />
+    <End Type="ModeloMensajeria.CentroLogistico_PUA" Role="CentroLogistico_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Principal>
+      <Dependent Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RespuestasMensajes_MEN_MensajesEnviados_MEN">
+    <End Type="ModeloMensajeria.MensajesEnviados_MEN" Role="MensajesEnviados_MEN" Multiplicity="1" />
+    <End Type="ModeloMensajeria.RespuestasMensajes_MEN" Role="RespuestasMensajes_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MensajesEnviados_MEN">
+        <PropertyRef Name="MEN_IdMensaje" />
+      </Principal>
+      <Dependent Role="RespuestasMensajes_MEN">
+        <PropertyRef Name="RES_IdMensaje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CentrosServicosRacol_VPUA">
+    <Key>
+      <PropertyRef Name="CES_IdCentroServicios" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_Tipo" />
+      <PropertyRef Name="REA_IdRegionalAdm" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_NombreCorto" />
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CES_TopeMaximoPorGiros" />
+      <PropertyRef Name="CES_TopeMaximoPorPagos" />
+      <PropertyRef Name="CES_PuedeRecibirGiros" />
+      <PropertyRef Name="CES_PuedePagarGiros" />
+      <PropertyRef Name="CES_ClasGirosPorIngresos" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_IdCentroCostos" />
+      <PropertyRef Name="CentroCostosRacol" />
+      <PropertyRef Name="CodRacolERP" />
+      <PropertyRef Name="CES_CodigoBodega" />
+      <PropertyRef Name="CES_BaseInicialCaja" />
+      <PropertyRef Name="CES_Sistematizada" />
+    </Key>
+    <Property Type="Int64" Name="CES_IdCentroServicios" Nullable="false" />
+    <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Tipo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int64" Name="REA_IdRegionalAdm" Nullable="false" />
+    <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_NombreCorto" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="CES_TopeMaximoPorGiros" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_TopeMaximoPorPagos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CES_PuedeRecibirGiros" Nullable="false" />
+    <Property Type="Boolean" Name="CES_PuedePagarGiros" Nullable="false" />
+    <Property Type="String" Name="CES_ClasGirosPorIngresos" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CES_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Telefono1" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_IdCentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CentroCostosRacol" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CodRacolERP" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_CodigoBodega" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CES_BaseInicialCaja" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CES_Sistematizada" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CentroServicios_PUA">
+    <Key>
+      <PropertyRef Name="CES_IdCentroServicios" />
+    </Key>
+    <Property Type="Int64" Name="CES_IdCentroServicios" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CES_Tipo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CES_DigitoVerificacion" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="CES_IdPropietario" Nullable="false" />
+    <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Telefono1" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Telefono2" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Fax" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Barrio" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_IdZona" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_IdMunicipio" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int64" Name="CES_IdPersonaResponsable" Nullable="false" />
+    <Property Type="Decimal" Name="CES_Latitud" Precision="18" Scale="14" />
+    <Property Type="Decimal" Name="CES_Longitud" Precision="18" Scale="14" />
+    <Property Type="String" Name="CES_Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="CES_Sistematizada" Nullable="false" />
+    <Property Type="String" Name="CES_IdCentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CES_IdTipoPropiedad" Nullable="false" />
+    <Property Type="Decimal" Name="CES_PesoMaximo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_VolumenMaximo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CES_AdmiteFormaPagoAlCobro" Nullable="false" />
+    <Property Type="Boolean" Name="CES_VendePrepago" Nullable="false" />
+    <Property Type="String" Name="CES_ClasGirosPorIngresos" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="CES_PuedeRecibirGiros" Nullable="false" />
+    <Property Type="Boolean" Name="CES_PuedePagarGiros" Nullable="false" />
+    <Property Type="Decimal" Name="CES_TopeMaximoPorGiros" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_TopeMaximoPorPagos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_BaseInicialCaja" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="CES_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CES_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_CodigoBodega" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CES_IdClasificadorCanalVenta" Nullable="false" />
+    <Property Type="String" Name="CES_CodigoSPN" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Agencia_PUA" Relationship="ModeloMensajeria.FK_Agencia_PUA_PuntoAtencion_PUA" FromRole="CentroServicios_PUA" ToRole="Agencia_PUA" />
+    <NavigationProperty Name="CentroLogistico_PUA" Relationship="ModeloMensajeria.FK_CentroLogistico_PUA_PuntoAtencion_PUA" FromRole="CentroServicios_PUA" ToRole="CentroLogistico_PUA" />
+    <NavigationProperty Name="MensajesEnviados_MEN" Relationship="ModeloMensajeria.FK_MensajesEnviados_MEN_PuntoAtencion_PUA" FromRole="CentroServicios_PUA" ToRole="MensajesEnviados_MEN" />
+    <NavigationProperty Name="PuntoServicio_PUA" Relationship="ModeloMensajeria.FK_PuntoServicio_PUA_PuntoAtencion_PUA" FromRole="CentroServicios_PUA" ToRole="PuntoServicio_PUA" />
+    <NavigationProperty Name="RegionalAdministrativa_PUA" Relationship="ModeloMensajeria.FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA" FromRole="CentroServicios_PUA" ToRole="RegionalAdministrativa_PUA" />
+    <Property Type="Binary" Name="anchor" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="CES_DireccionAjustada" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_NombreAMostrar" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Agencia_PUA_PuntoAtencion_PUA">
+    <End Type="ModeloMensajeria.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="1" />
+    <End Type="ModeloMensajeria.Agencia_PUA" Role="Agencia_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdAgencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroLogistico_PUA_PuntoAtencion_PUA">
+    <End Type="ModeloMensajeria.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="1" />
+    <End Type="ModeloMensajeria.CentroLogistico_PUA" Role="CentroLogistico_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdCentroLogistico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MensajesEnviados_MEN_PuntoAtencion_PUA">
+    <End Type="ModeloMensajeria.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="1" />
+    <End Type="ModeloMensajeria.MensajesEnviados_MEN" Role="MensajesEnviados_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="MensajesEnviados_MEN">
+        <PropertyRef Name="MEN_IdPuntoAtencionDestino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PuntoServicio_PUA_PuntoAtencion_PUA">
+    <End Type="ModeloMensajeria.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="1" />
+    <End Type="ModeloMensajeria.PuntoServicio_PUA" Role="PuntoServicio_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="PuntoServicio_PUA">
+        <PropertyRef Name="PUS_IdPuntoServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA">
+    <End Type="ModeloMensajeria.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="1" />
+    <End Type="ModeloMensajeria.RegionalAdministrativa_PUA" Role="RegionalAdministrativa_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AdjuntosMensajes_MEN">
+    <Key>
+      <PropertyRef Name="ADJ_IdAdjunto" />
+    </Key>
+    <Property Type="Int32" Name="ADJ_IdAdjunto" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ADJ_RutaArchivo" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ADJ_IdMensaje" Nullable="false" />
+    <NavigationProperty Name="MensajesEnviados_MEN" Relationship="ModeloMensajeria.FK_AdjuntosMensajes_MEN_MensajesEnviados_MEN" FromRole="AdjuntosMensajes_MEN" ToRole="MensajesEnviados_MEN" />
+  </EntityType>
+  <Association Name="FK_AdjuntosMensajes_MEN_MensajesEnviados_MEN">
+    <End Type="ModeloMensajeria.MensajesEnviados_MEN" Role="MensajesEnviados_MEN" Multiplicity="1" />
+    <End Type="ModeloMensajeria.AdjuntosMensajes_MEN" Role="AdjuntosMensajes_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MensajesEnviados_MEN">
+        <PropertyRef Name="MEN_IdMensaje" />
+      </Principal>
+      <Dependent Role="AdjuntosMensajes_MEN">
+        <PropertyRef Name="ADJ_IdMensaje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

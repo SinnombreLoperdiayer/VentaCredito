@@ -1,0 +1,181 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+trigger: 
+  branches:
+      include:
+      - Desarrollo
+      - QA    
+      - Produccion
+  paths:
+    exclude:
+      - '*.yml'
+
+pool:
+  vmImage: "windows-latest"
+  name: Servidor dedicado DevOps AWS New
+
+variables:
+- ${{ if startsWith(variables['Build.SourceBranch'], 'refs/heads/De') }}:
+  - group: Desarrollo-ServiciosInter
+- ${{ if startsWith(variables['Build.SourceBranch'], 'refs/heads/QA') }}:
+  - group: QA-ServiciosInter
+- ${{ if startsWith(variables['Build.SourceBranch'], 'refs/heads/Prod') }}:
+  - group: PROD-ServiciosInter
+- name: BuildConfiguration
+  value: 'Release'
+- name: BuildPlatform
+  value: 'any cpu'
+- name: BuildParameters.ArtifactName
+  value: drop
+
+name: $(date:yyyyMMdd)$(rev:.r)
+
+
+resources:
+  repositories:
+  - repository: self
+    type: git
+
+stages:
+- stage: 
+  jobs:
+  - job: CI_SERVICIOS_INTER
+    pool:
+      name: Servidor dedicado DevOps AWS
+#      vmImage: "windows-2019"
+#      name: Azure Pipelines
+    
+
+    steps:
+    - checkout: self
+      clean: true
+      persistCredentials: true
+
+
+    - task: SonarQubePrepare@5
+      displayName: 'Preparar analisis'
+      inputs:
+        SonarQube: 'SonarQube'
+        scannerMode: 'MSBuild'
+        projectKey: 'Servicios_ServiciosInter'
+        extraProperties: |
+          sonar.verbose=true
+          sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/TestResults/Coverage/Reports/coverage.opencover.xml
+      condition: startsWith(variables['Build.SourceBranch'], 'refs/heads/De')
+        
+    - powershell: |
+        $params = "$env:SONARQUBE_SCANNER_PARAMS" -replace '"sonar.branch.name":"[\w,/,-]*"\,?'
+        Write-Host "##vso[task.setvariable variable=SONARQUBE_SCANNER_PARAMS]$params"
+      condition: startsWith(variables['Build.SourceBranch'], 'refs/heads/De')
+
+
+    - task: qetza.replacetokens.replacetokens-task.replacetokens@4
+      displayName: 'Reemplaza Variables en Web.config'
+      inputs:
+        rootDirectory: '1 Servicios/REST/ServiciosInter.API/ConfigDevOps'
+        targetFiles: 'Web.config'
+        encoding: 'auto'
+        tokenPattern: 'octopus'
+        writeBOM: true
+        actionOnMissing: 'warn'
+        keepToken: false
+        actionOnNoFiles: 'continue'
+        enableTransforms: false
+        useLegacyPattern: false
+        enableTelemetry: true
+
+    - task: PowerShell@2
+      displayName: 'Copiar ConfigDevOps'
+      inputs:
+        targetType: 'inline'
+        script: |
+            ##################################
+            # COPIAR CONFIG DEVOPS
+            ##################################
+            robocopy "$(Build.SourcesDirectory)/1 Servicios/REST/ServiciosInter.API/ConfigDevOps" "$(Build.SourcesDirectory)/ServiciosInter" /E /Z /R:5 /W:5
+            # VALIDA CODIGO DE ERROR
+            ######################################
+            cd "$(Build.SourcesDirectory)/1 Servicios/REST/ServiciosInter.API/ConfigDevOps" 
+            ls
+            cat Web.config
+            Write-Host "Codigo de Error : " $lastexitcode            
+            if ($lastexitcode -eq 1 -or $lastexitcode -eq 3) 
+            {
+                $lastexitcode = 0
+            }
+            ##################################
+            # FIN
+            ##################################
+
+
+    - task: NuGetAuthenticate@0
+      displayName: 'NuGet Authenticate'
+      inputs:
+       nuGetServiceConnections: Nuget_Maceio_Azure
+
+    - task: NuGetToolInstaller@1
+      displayName: 'Use NuGet '
+
+    - task: NuGetCommand@2
+      displayName: 'NuGet restore'
+      inputs:
+        restoreSolution: '*.sln'
+        externalFeedCredentials: 'Nuget_Maceio_Azure'
+        feedsToUse: config
+      continueOnError: true
+    
+    - powershell: |
+        Write-Host "Nombre del host:"
+        hostname
+      displayName: 'Mostrar hostname del agente'
+
+    - task: MSBuild@1
+      displayName: 'Build solution ServiciosInter'
+      inputs:
+        solution: 1 Servicios/REST/ServiciosInter.API/ServiciosInter.API.csproj
+        platform: 'AnyCPU'
+        configuration: '$(BuildConfiguration)'       
+        msbuildArguments: >
+          /p:DeployOnBuild=true
+          /p:WebPublishMethod=FileSystem 
+          /p:PackageAsSingleFile=true 
+          /p:SkipInvalidConfigurations=true 
+          /p:publishUrl="$(Build.SourcesDirectory)\Compilado\\ServiciosInter\\" 
+          /p:DeployIisAppPath="Default Web Site" /p:DeployDefaultTarget=WebPublish
+
+
+##################################################################
+    - task: SonarQubeAnalyze@5
+      displayName: run analisis
+      condition: startsWith(variables['Build.SourceBranch'], 'refs/heads/De')
+
+    - task: SonarQubePublish@5
+      displayName: 'publicar analisis'
+      inputs:
+        pollingTimeoutSec: '300'
+      condition: startsWith(variables['Build.SourceBranch'], 'refs/heads/De')
+
+
+    - task: ArchiveFiles@2
+      displayName: 'Compress Zip ServiciosInter'
+      inputs:
+        rootFolderOrFile: '$(Build.SourcesDirectory)/Compilado/ServiciosInter/bin'
+        includeRootFolder: true
+        archiveFile: '$(Build.artifactstagingdirectory)/ServiciosInter/bin/bin.zip'
+
+
+    - task: PublishSymbols@2
+      displayName: 'Publish symbols path'
+      inputs:
+        SearchPattern: '*\bin\\.pdb'
+        PublishSymbols: false
+      continueOnError: true
+    
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        PathtoPublish: '$(build.artifactstagingdirectory)'
+      condition: succeededOrFailed()

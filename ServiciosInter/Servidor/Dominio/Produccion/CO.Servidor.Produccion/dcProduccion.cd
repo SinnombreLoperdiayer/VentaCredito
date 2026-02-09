@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.Produccion.PRAdmProduccion" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAAEAAA=</HashCode>
+      <FileName>PRAdmProduccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Produccion.PRFachadaProduccion" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAAAAAA=</HashCode>
+      <FileName>PRFachadaProduccion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CO.Servidor.Produccion.PRProduccion" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAAEAAA=</HashCode>
+      <FileName>PRProduccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Produccion.Programacion.PRProgramador" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Programacion\PRProgramador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Produccion.PRLiquidador" Collapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PRLiquidador.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LiquidadorComisionFija" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Produccion.LiquidadorComisionFija" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LiquidadorComisionFija.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

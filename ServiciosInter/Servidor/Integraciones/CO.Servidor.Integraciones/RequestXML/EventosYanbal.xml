@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.ord.ws.corp.yanbal.com">
+<soapenv:Header/>
+<soapenv:Body>
+<ser:registrarEventoDespachoCmpRequest>
+<integracionWSReq>
+<cabecera>
+<codigoInterfaz>REVEPROCMP</codigoInterfaz>
+<usuarioAplicacion>USREVT</usuarioAplicacion>
+<codigoAplicacion>EVT</codigoAplicacion>
+<codigoPais>CO</codigoPais>
+<codigoPaisOD>CO</codigoPaisOD>
+</cabecera>
+<seguridad>
+<keySeguridad>APPEVTENVIA</keySeguridad>
+<token>5ScJZarJ41QCiCwPT7PhXQ==]f0dwDIodCWqbNZkgkR7UUdrA+H1YBog+Aa8/vmIWk90q7lpvc23xchha8ZWNkxvxC7VyG+IRTh+WZwXbLwvYpQ==</token>
+</seguridad>
+<detalle>
+<parametros>
+<tipEnvio>0</tipEnvio>
+<eventos>
+<!--1 or more repetitions:-->
+<evento>
+<codEvento>XYZ00000000010013</codEvento>
+<fecHorCarga>2017-03-16T17:10:32</fecHorCarga>
+<codOrden>00000000000000185701</codOrden>
+<tipOrden>BD</tipOrden>
+<numGuiRemision>12302131</numGuiRemision>
+<codDirectora>2333</codDirectora>
+<codConsultora>7098090</codConsultora>
+<fecHorEvento>2017-03-16T17:10:32</fecHorEvento>
+<tipEvento>ZENTREGA_EFECTIVA</tipEvento>
+<cooEvento>0.2132 0.3213</cooEvento>
+<desEvento>Entrega de pedido se realizó con éxito</desEvento>
+<usuEvento>REP1</usuEvento>
+<tipParentesco>Padre</tipParentesco>
+<receptorNombre>Juan Pinto</receptorNombre>
+<receptorID>0</receptorID>
+<ubiRetorno/>
+<observacion>No tiene DNI</observacion>
+<motivo/>
+<motivoDesc/>
+<tipBulto>NOR</tipBulto>
+</evento>
+</eventos>
+</parametros>
+</detalle>
+</integracionWSReq>
+</ser:registrarEventoDespachoCmpRequest>
+</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DD59536-D8E2-4A1B-9AFA-8B6B43A8EF40}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.LogisticaInversa.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.LogisticaInversa.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LIRepositorioCentroDevoluciones.cs" />
+    <Compile Include="LIRepositorioDigitalizacion.cs" />
+    <Compile Include="LIRepositorioDigitalizacionArchivo.cs" />
+    <Compile Include="LIRepositorioNotificaciones.cs" />
+    <Compile Include="LIRepositorioPruebasEntrega.cs" />
+    <Compile Include="LIRepositorioTelemercadeo.cs" />
+    <Compile Include="LIRepositorioTelemercadeo_ext.cs" />
+    <Compile Include="Modelo\AlmacenGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConsecutivoPorCol_PAR.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConsecutivosGlobales_PAR.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EvidenciaDevolucion_MEN.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidades_VPAR.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManifiestoDetalleLogInv_VLOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManifiestoLogInvDetalle_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManifiestoLogInvDetallHist_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManifiestoLogInvHist_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManifiestoLogisticaInversa_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLogisticaInversa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLogisticaInversa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLogisticaInversa.Context.Extensions.cs">
+      <DependentUpon>ModeloLogisticaInversa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLogisticaInversa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Modelo\ModeloLogisticaInversa.Views.cs" />
+    <Compile Include="Modelo\ModeloLogisticaInversa.Designer.cs">
+      <DependentUpon>ModeloLogisticaInversa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLogisticaInversa1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLogisticaInversa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MotivoBorraGtionGuiaTeleme_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCrearGestionGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PaCrearGuiaPlanillaGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PaCrearPlanilla_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerArchEviDevolucion_LOI_Result.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerArchEviDevolucion_Result.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGestionesGuiasCOL_LOI_Result.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGestionesGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGestionesTrazaGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaCustodia_LOI_Result.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaManifDescarga_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiasEstado_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiasIntCertificaciones.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiasIntPlanCert.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiasPlanilla_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiasSupervision_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerManifiestos_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerNotificacionesNoPlan.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerPlanillasRelacion_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paValidarFechaArchivo_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paValidarFechaArchivo_LOI_Result.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PlanillaCertificacionDetalle_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PlanillaCertificacionesGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PlanillaCertificacionesGuia_VLOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PlanillaCertificaciones_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PlanillaCertificaciones_VLOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PlanillaRelacionGuiaGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PlanillaRelacionGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RecibidoGuia_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ResultadoTelemercadeo_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoEvidenciaDevolucion_MEN.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoManifiestoLogInv_LOI.cs">
+      <DependentUpon>ModeloLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admisiones\Mensajeria\CO.Servidor.Adminisiones.Mensajeria.Comun\CO.Servidor.Adminisiones.Mensajeria.Comun.csproj">
+      <Project>{0dd14ed4-8be9-4536-9744-501371626a63}</Project>
+      <Name>CO.Servidor.Adminisiones.Mensajeria.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.Middleware\CO.Servidor.Dominio.Comun.Middleware.csproj">
+      <Project>{826B7134-398B-474F-9C60-3F433F0441F1}</Project>
+      <Name>CO.Servidor.Dominio.Comun.Middleware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512C6601-1C3C-455A-A91A-10906C2F2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Suministros\CO.Servidor.Suministros\CO.Servidor.Suministros.csproj">
+      <Project>{D1B97DC4-4070-4543-A6FE-61BB48B16FB2}</Project>
+      <Name>CO.Servidor.Suministros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.LogisticaInversa.Comun\CO.Servidor.LogisticaInversa.Comun.csproj">
+      <Project>{32988092-be2b-4b09-92e9-49b3595c3640}</Project>
+      <Name>CO.Servidor.LogisticaInversa.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloLogisticaInversa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloLogisticaInversa.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloLogisticaInversa.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloLogisticaInversa.msl">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelo\ModeloLogisticaInversa.ssdl" />
+    <EntityDeploy Include="Modelo\ModeloLogisticaInversa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloLogisticaInversa1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo\ModeloLogisticaInversa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloLogisticaInversa.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-1.12.4.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.js" />
+    <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
+    <Content Include="Scripts\knockout-3.4.2.debug.js" />
+    <Content Include="Scripts\knockout-3.4.2.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloLogisticaInversa.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloLogisticaInversa.csdl" "/inmsl:$(TargetDir)Modelo/ModeloLogisticaInversa.msl" "/outviews:$(ProjectDir)Modelo/ModeloLogisticaInversa.Views.cs"
+XCOPY  "$(TargetDir)Modelo/ModeloLogisticaInversa.csdl" "$(ProjectDir)Modelo" /F /R /Y
+XCOPY "$(TargetDir)Modelo/ModeloLogisticaInversa.ssdl" "$(ProjectDir)Modelo" /F /R /Y
+XCOPY "$(TargetDir)Modelo/ModeloLogisticaInversa.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

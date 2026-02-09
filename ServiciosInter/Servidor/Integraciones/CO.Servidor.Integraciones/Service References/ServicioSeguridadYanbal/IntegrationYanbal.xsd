@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://to.comun.ws.corp.yanbal.com" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://to.comun.ws.corp.yanbal.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+			Integration schema for
+			Yanbal.
+		</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType name="Cabecera">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" ref="codigoInterfaz" />
+      <xsd:element minOccurs="1" ref="usuarioAplicacion" />
+      <xsd:element minOccurs="1" ref="codigoAplicacion" />
+      <xsd:element minOccurs="1" ref="codigoPais" />
+      <xsd:element minOccurs="1" ref="codigosPaisOD" />
+      <xsd:element ref="idTransaccion" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CodigosPaisODType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="20" ref="codigoPaisOD" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CodigoPaisODType">
+    <xsd:sequence>
+      <xsd:element ref="valor" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Respuesta">
+    <xsd:sequence>
+      <xsd:element ref="codigoRespuesta" />
+      <xsd:element ref="mensajeRespuesta" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="CodigoInterfazType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="10" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UsuarioAplicacionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="6" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CodigoAplicacionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3" />
+      <xsd:pattern value="[A-Z]" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CodigoPaisType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="2" />
+      <xsd:pattern value="[A-Z]" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ValorType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="2" />
+      <xsd:pattern value="[A-Z]" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdTransaccionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PagoNum_Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CodNumericoType">
+    <xsd:restriction base="xsd:int">
+      <xsd:minInclusive value="0" />
+      <xsd:maxInclusive value="99" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DescripcionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="20" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="codigoInterfaz" type="CodigoInterfazType" />
+  <xsd:element name="usuarioAplicacion" type="UsuarioAplicacionType" />
+  <xsd:element name="codigoAplicacion" type="CodigoAplicacionType" />
+  <xsd:element name="codigoPais" type="CodigoPaisType" />
+  <xsd:element name="codigosPaisOD" type="CodigosPaisODType" />
+  <xsd:element name="codigoPaisOD" type="CodigoPaisODType" />
+  <xsd:element name="valor" type="ValorType" />
+  <xsd:element name="idTransaccion" type="IdTransaccionType" />
+  <xsd:element name="ctd" type="xsd:long" />
+  <xsd:element name="codigoRespuesta" type="xsd:string" />
+  <xsd:element name="mensajeRespuesta" type="xsd:string" />
+</xsd:schema>

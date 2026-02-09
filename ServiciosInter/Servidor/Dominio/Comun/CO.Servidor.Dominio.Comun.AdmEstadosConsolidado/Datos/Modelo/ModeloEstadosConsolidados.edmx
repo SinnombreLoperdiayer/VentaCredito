@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ModeloEstadosConsolidadosNS.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModeloEstadosConsolidadosNSStoreContainer">
+          <EntitySet Name="EstadoConsolidado_OPU" EntityType="ModeloEstadosConsolidadosNS.Store.EstadoConsolidado_OPU" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="EstadoConsolidado_OPU">
+          <Key>
+            <PropertyRef Name="ECO_IdEstContenedor" />
+          </Key>
+          <Property Name="ECO_IdEstContenedor" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ECO_IdInvContenedor" Type="bigint" Nullable="false" />
+          <Property Name="ECO_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="ECO_Observaciones" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="ECO_IdCentroServicios" Type="bigint" Nullable="false" />
+          <Property Name="ECO_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="ECO_FechaGrabacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Function Name="paGrabarEstadoConsolidado_OPU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ECO_IdInvContenedor" Type="bigint" Mode="In" />
+          <Parameter Name="ECO_Estado" Type="char" Mode="In" />
+          <Parameter Name="ECO_Observaciones" Type="varchar" Mode="In" />
+          <Parameter Name="ECO_IdCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="ECO_CreadoPor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paObtenerInventarioPorCodigoInventario_OPU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="INT_Codigo" Type="varchar" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModeloEstadosConsolidadosNS" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModeloEstadosConsolidados" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EstadoConsolidado_OPU" EntityType="ModeloEstadosConsolidadosNS.EstadoConsolidado_OPU" />
+          <FunctionImport Name="paGrabarEstadoConsolidado_OPU">
+            <Parameter Name="ECO_IdInvContenedor" Mode="In" Type="Int64" />
+            <Parameter Name="ECO_Estado" Mode="In" Type="String" />
+            <Parameter Name="ECO_Observaciones" Mode="In" Type="String" />
+            <Parameter Name="ECO_IdCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="ECO_CreadoPor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerInventarioPorCodigoInventario_OPU" ReturnType="Collection(ModeloEstadosConsolidadosNS.paObtenerInventarioPorCodigoInventario_OPU_Result)">
+            <Parameter Name="INT_Codigo" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="EstadoConsolidado_OPU">
+          <Key>
+            <PropertyRef Name="ECO_IdEstContenedor" />
+          </Key>
+          <Property Name="ECO_IdEstContenedor" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ECO_IdInvContenedor" Type="Int64" Nullable="false" />
+          <Property Name="ECO_Estado" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="ECO_Observaciones" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="ECO_IdCentroServicios" Type="Int64" Nullable="false" />
+          <Property Name="ECO_CreadoPor" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ECO_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <ComplexType Name="paObtenerInventarioPorCodigoInventario_OPU_Result">
+          <Property Type="Int64" Name="INT_IdInventarioConsolidado" Nullable="false" />
+          <Property Type="Int16" Name="INT_IdTipoConsolidado" Nullable="false" />
+          <Property Type="Int16" Name="INT_TipoConsolidadoDetalle" Nullable="false" />
+          <Property Type="Int64" Name="INT_IdCentroServicios" Nullable="false" />
+          <Property Type="String" Name="INT_Trayecto" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="INT_Codigo" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="INT_Estado" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="INT_IdLocalidad" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="INT_CreadoPor" Nullable="false" MaxLength="25" />
+          <Property Type="DateTime" Name="INT_FechaGrabacion" Nullable="false" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModeloEstadosConsolidadosNSStoreContainer" CdmEntityContainer="ModeloEstadosConsolidados">
+          <EntitySetMapping Name="EstadoConsolidado_OPU">
+            <EntityTypeMapping TypeName="ModeloEstadosConsolidadosNS.EstadoConsolidado_OPU">
+              <MappingFragment StoreEntitySet="EstadoConsolidado_OPU">
+                <ScalarProperty Name="ECO_IdEstContenedor" ColumnName="ECO_IdEstContenedor" />
+                <ScalarProperty Name="ECO_IdInvContenedor" ColumnName="ECO_IdInvContenedor" />
+                <ScalarProperty Name="ECO_Estado" ColumnName="ECO_Estado" />
+                <ScalarProperty Name="ECO_Observaciones" ColumnName="ECO_Observaciones" />
+                <ScalarProperty Name="ECO_IdCentroServicios" ColumnName="ECO_IdCentroServicios" />
+                <ScalarProperty Name="ECO_CreadoPor" ColumnName="ECO_CreadoPor" />
+                <ScalarProperty Name="ECO_FechaGrabacion" ColumnName="ECO_FechaGrabacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="paGrabarEstadoConsolidado_OPU" FunctionName="ModeloEstadosConsolidadosNS.Store.paGrabarEstadoConsolidado_OPU" />
+          <FunctionImportMapping FunctionImportName="paObtenerInventarioPorCodigoInventario_OPU" FunctionName="ModeloEstadosConsolidadosNS.Store.paObtenerInventarioPorCodigoInventario_OPU">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloEstadosConsolidadosNS.paObtenerInventarioPorCodigoInventario_OPU_Result">
+                <ScalarProperty Name="INT_IdInventarioConsolidado" ColumnName="INT_IdInventarioConsolidado" />
+                <ScalarProperty Name="INT_IdTipoConsolidado" ColumnName="INT_IdTipoConsolidado" />
+                <ScalarProperty Name="INT_TipoConsolidadoDetalle" ColumnName="INT_TipoConsolidadoDetalle" />
+                <ScalarProperty Name="INT_IdCentroServicios" ColumnName="INT_IdCentroServicios" />
+                <ScalarProperty Name="INT_Trayecto" ColumnName="INT_Trayecto" />
+                <ScalarProperty Name="INT_Codigo" ColumnName="INT_Codigo" />
+                <ScalarProperty Name="INT_Estado" ColumnName="INT_Estado" />
+                <ScalarProperty Name="INT_IdLocalidad" ColumnName="INT_IdLocalidad" />
+                <ScalarProperty Name="INT_CreadoPor" ColumnName="INT_CreadoPor" />
+                <ScalarProperty Name="INT_FechaGrabacion" ColumnName="INT_FechaGrabacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

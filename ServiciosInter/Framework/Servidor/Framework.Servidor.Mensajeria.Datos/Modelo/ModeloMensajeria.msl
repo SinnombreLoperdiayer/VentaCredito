@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloMensajeriaStoreContainer" CdmEntityContainer="EntidadesMensajeria">
+    <EntitySetMapping Name="CategoriaMensaje_MEN">
+      <EntityTypeMapping TypeName="ModeloMensajeria.CategoriaMensaje_MEN">
+        <MappingFragment StoreEntitySet="CategoriaMensaje_MEN">
+          <ScalarProperty Name="CAT_CreadoPor" ColumnName="CAT_CreadoPor" />
+          <ScalarProperty Name="CAT_IdCategoriaMensaje" ColumnName="CAT_IdCategoriaMensaje" />
+          <ScalarProperty Name="CAT_Descripcion" ColumnName="CAT_Descripcion" />
+          <ScalarProperty Name="CAT_EsExclusiva" ColumnName="CAT_EsExclusiva" />
+          <ScalarProperty Name="CAT_FechaGrabacion" ColumnName="CAT_FechaGrabacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RespuestasMensajes_MEN">
+      <EntityTypeMapping TypeName="ModeloMensajeria.RespuestasMensajes_MEN">
+        <MappingFragment StoreEntitySet="RespuestasMensajes_MEN">
+          <ScalarProperty Name="RES_TextoRespuesta" ColumnName="RES_TextoRespuesta" />
+          <ScalarProperty Name="RES_IdUsuario" ColumnName="RES_IdUsuario" />
+          <ScalarProperty Name="RES_FechaRespuesta" ColumnName="RES_FechaRespuesta" />
+          <ScalarProperty Name="RES_IdMensaje" ColumnName="RES_IdMensaje" />
+          <ScalarProperty Name="RES_IdRespuesta" ColumnName="RES_IdRespuesta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Agencia_PUA">
+      <EntityTypeMapping TypeName="ModeloMensajeria.Agencia_PUA">
+        <MappingFragment StoreEntitySet="Agencia_PUA">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="AGE_CreadoPor" ColumnName="AGE_CreadoPor" />
+          <ScalarProperty Name="AGE_FechaGrabacion" ColumnName="AGE_FechaGrabacion" />
+          <ScalarProperty Name="AGE_IdTipoAgencia" ColumnName="AGE_IdTipoAgencia" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="AGE_IdAgencia" ColumnName="AGE_IdAgencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroLogistico_PUA">
+      <EntityTypeMapping TypeName="ModeloMensajeria.CentroLogistico_PUA">
+        <MappingFragment StoreEntitySet="CentroLogistico_PUA">
+          <ScalarProperty Name="CEL_CreadoPor" ColumnName="CEL_CreadoPor" />
+          <ScalarProperty Name="CEL_FechaGrabacion" ColumnName="CEL_FechaGrabacion" />
+          <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+          <ScalarProperty Name="CEL_IdCentroLogistico" ColumnName="CEL_IdCentroLogistico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MensajesEnviados_MEN">
+      <EntityTypeMapping TypeName="ModeloMensajeria.MensajesEnviados_MEN">
+        <MappingFragment StoreEntitySet="MensajesEnviados_MEN">
+          <ScalarProperty Name="MEN_AceptaRespuestas" ColumnName="MEN_AceptaRespuestas" />
+          <ScalarProperty Name="MEN_UsuarioQueLeyo" ColumnName="MEN_UsuarioQueLeyo" />
+          <ScalarProperty Name="MEN_EstadoNotificacion" ColumnName="MEN_EstadoNotificacion" />
+          <ScalarProperty Name="MEN_TextoMensaje" ColumnName="MEN_TextoMensaje" />
+          <ScalarProperty Name="MEN_CategoriaMensaje" ColumnName="MEN_CategoriaMensaje" />
+          <ScalarProperty Name="MEN_Asunto" ColumnName="MEN_Asunto" />
+          <ScalarProperty Name="MEN_IdMensajeOriginal" ColumnName="MEN_IdMensajeOriginal" />
+          <ScalarProperty Name="MEN_UsuarioOrigen" ColumnName="MEN_UsuarioOrigen" />
+          <ScalarProperty Name="MEN_IdPuntoAtencionDestino" ColumnName="MEN_IdPuntoAtencionDestino" />
+          <ScalarProperty Name="MEN_FechaCreacion" ColumnName="MEN_FechaCreacion" />
+          <ScalarProperty Name="MEN_IdMensaje" ColumnName="MEN_IdMensaje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PuntoServicio_PUA">
+      <EntityTypeMapping TypeName="ModeloMensajeria.PuntoServicio_PUA">
+        <MappingFragment StoreEntitySet="PuntoServicio_PUA">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="PUS_ReclameEnOficina" ColumnName="PUS_ReclameEnOficina" />
+          <ScalarProperty Name="PUS_CreadoPor" ColumnName="PUS_CreadoPor" />
+          <ScalarProperty Name="PUS_FechaGrabacion" ColumnName="PUS_FechaGrabacion" />
+          <ScalarProperty Name="PUS_IdAgencia" ColumnName="PUS_IdAgencia" />
+          <ScalarProperty Name="PUS_IdPuntoServicio" ColumnName="PUS_IdPuntoServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegionalAdministrativa_PUA">
+      <EntityTypeMapping TypeName="ModeloMensajeria.RegionalAdministrativa_PUA">
+        <MappingFragment StoreEntitySet="RegionalAdministrativa_PUA">
+          <ScalarProperty Name="REA_IdCasaMatriz" ColumnName="REA_IdCasaMatriz" />
+          <ScalarProperty Name="REA_CodigoExternoSucursal" ColumnName="REA_CodigoExternoSucursal" />
+          <ScalarProperty Name="REA_CreadoPor" ColumnName="REA_CreadoPor" />
+          <ScalarProperty Name="REA_FechaGrabacion" ColumnName="REA_FechaGrabacion" />
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+          <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentrosServicosRacol_VPUA">
+      <EntityTypeMapping TypeName="ModeloMensajeria.CentrosServicosRacol_VPUA">
+        <MappingFragment StoreEntitySet="CentrosServicosRacol_VPUA">
+          <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+          <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+          <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+          <ScalarProperty Name="CodRacolERP" ColumnName="CodRacolERP" />
+          <ScalarProperty Name="CentroCostosRacol" ColumnName="CentroCostosRacol" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+          <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+          <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+          <ScalarProperty Name="CES_TopeMaximoPorPagos" ColumnName="CES_TopeMaximoPorPagos" />
+          <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+          <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+          <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicios_PUA">
+      <EntityTypeMapping TypeName="ModeloMensajeria.CentroServicios_PUA">
+        <MappingFragment StoreEntitySet="CentroServicios_PUA">
+          <ScalarProperty Name="CES_NombreAMostrar" ColumnName="CES_NombreAMostrar" />
+          <ScalarProperty Name="CES_DireccionAjustada" ColumnName="CES_DireccionAjustada" />
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="CES_CodigoSPN" ColumnName="CES_CodigoSPN" />
+          <ScalarProperty Name="CES_IdClasificadorCanalVenta" ColumnName="CES_IdClasificadorCanalVenta" />
+          <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+          <ScalarProperty Name="CES_CreadoPor" ColumnName="CES_CreadoPor" />
+          <ScalarProperty Name="CES_FechaGrabacion" ColumnName="CES_FechaGrabacion" />
+          <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+          <ScalarProperty Name="CES_TopeMaximoPorPagos" ColumnName="CES_TopeMaximoPorPagos" />
+          <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+          <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+          <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+          <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+          <ScalarProperty Name="CES_VendePrepago" ColumnName="CES_VendePrepago" />
+          <ScalarProperty Name="CES_AdmiteFormaPagoAlCobro" ColumnName="CES_AdmiteFormaPagoAlCobro" />
+          <ScalarProperty Name="CES_VolumenMaximo" ColumnName="CES_VolumenMaximo" />
+          <ScalarProperty Name="CES_PesoMaximo" ColumnName="CES_PesoMaximo" />
+          <ScalarProperty Name="CES_IdTipoPropiedad" ColumnName="CES_IdTipoPropiedad" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+          <ScalarProperty Name="CES_Email" ColumnName="CES_Email" />
+          <ScalarProperty Name="CES_Longitud" ColumnName="CES_Longitud" />
+          <ScalarProperty Name="CES_Latitud" ColumnName="CES_Latitud" />
+          <ScalarProperty Name="CES_IdPersonaResponsable" ColumnName="CES_IdPersonaResponsable" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+          <ScalarProperty Name="CES_IdZona" ColumnName="CES_IdZona" />
+          <ScalarProperty Name="CES_Barrio" ColumnName="CES_Barrio" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_Fax" ColumnName="CES_Fax" />
+          <ScalarProperty Name="CES_Telefono2" ColumnName="CES_Telefono2" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_IdPropietario" ColumnName="CES_IdPropietario" />
+          <ScalarProperty Name="CES_DigitoVerificacion" ColumnName="CES_DigitoVerificacion" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdjuntosMensajes_MEN">
+      <EntityTypeMapping TypeName="ModeloMensajeria.AdjuntosMensajes_MEN">
+        <MappingFragment StoreEntitySet="AdjuntosMensajes_MEN">
+          <ScalarProperty Name="ADJ_IdMensaje" ColumnName="ADJ_IdMensaje" />
+          <ScalarProperty Name="ADJ_RutaArchivo" ColumnName="ADJ_RutaArchivo" />
+          <ScalarProperty Name="ADJ_IdAdjunto" ColumnName="ADJ_IdAdjunto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

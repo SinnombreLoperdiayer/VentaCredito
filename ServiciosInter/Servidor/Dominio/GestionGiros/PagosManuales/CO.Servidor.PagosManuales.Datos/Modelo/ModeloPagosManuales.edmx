@@ -1,0 +1,1158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DESARROLLOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DESARROLLOModelStoreContainer">
+          <EntitySet Name="AdmisionGiros_GIR" EntityType="DESARROLLOModel.Store.AdmisionGiros_GIR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="IntentosTransmisionGiro_GIR" EntityType="DESARROLLOModel.Store.IntentosTransmisionGiro_GIR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ParametrosGiros_GIR" EntityType="DESARROLLOModel.Store.ParametrosGiros_GIR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlanillaTransmisionGiros_VGIR" EntityType="DESARROLLOModel.Store.PlanillaTransmisionGiros_VGIR" store:Type="Views" store:Schema="dbo" store:Name="PlanillaTransmisionGiros_VGIR">
+            <DefiningQuery>SELECT 
+      [PlanillaTransmisionGiros_VGIR].[ITG_NoPlanillaTransmision] AS [ITG_NoPlanillaTransmision], 
+      [PlanillaTransmisionGiros_VGIR].[FechaPlanilla] AS [FechaPlanilla], 
+      [PlanillaTransmisionGiros_VGIR].[ADG_IdCentroServicioDestino] AS [ADG_IdCentroServicioDestino], 
+      [PlanillaTransmisionGiros_VGIR].[ADG_NombreCentroServicioDestino] AS [ADG_NombreCentroServicioDestino], 
+      [PlanillaTransmisionGiros_VGIR].[ADG_IdCiudadDestino] AS [ADG_IdCiudadDestino], 
+      [PlanillaTransmisionGiros_VGIR].[ADG_DescCiudadDestino] AS [ADG_DescCiudadDestino], 
+      [PlanillaTransmisionGiros_VGIR].[ITG_IdTipoPlanillaIntentosTrasnmision] AS [ITG_IdTipoPlanillaIntentosTrasnmision], 
+      [PlanillaTransmisionGiros_VGIR].[TPI_Descripcion] AS [TPI_Descripcion]
+      FROM [dbo].[PlanillaTransmisionGiros_VGIR] AS [PlanillaTransmisionGiros_VGIR]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR" Association="DESARROLLOModel.Store.FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR">
+            <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+            <End Role="IntentosTransmisionGiro_GIR" EntitySet="IntentosTransmisionGiro_GIR" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AdmisionGiros_GIR">
+          <Key>
+            <PropertyRef Name="ADG_IdAdmisionGiro" />
+          </Key>
+          <Property Name="ADG_IdAdmisionGiro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ADG_PrefijoIdGiro" Type="varchar" MaxLength="8" />
+          <Property Name="ADG_IdGiro" Type="bigint" Nullable="false" />
+          <Property Name="ADG_DigitoVerificacion" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="ADG_GuidDeChequeo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ADG_AdmisionAutomatica" Type="bit" Nullable="false" />
+          <Property Name="ADG_IdTipoGiro" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="ADG_IdCentroServicioOrigen" Type="bigint" Nullable="false" />
+          <Property Name="ADG_NombreCentroServicioOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_IdPaisOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="ADG_DescPaisOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_IdCiudadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="ADG_DescCiudadOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_CodigoPostalOrigen" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="ADG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+          <Property Name="ADG_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_IdPaisDestino" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="ADG_DescPaisDestino" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="ADG_DescCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_CodigoPostalDestino" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="ADG_ValorGiro" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="ADG_TarifaPorcPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="ADG_TarifaFijaPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="ADG_ValorPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="ADG_ValorAdicionales" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="ADG_ValorImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="ADG_ValorTotal" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="ADG_DeclaracionVoluntariaOrigenes" Type="bigint" />
+          <Property Name="ADG_Observaciones" Type="varchar" MaxLength="200" />
+          <Property Name="ADG_IdTipoIdentificacionRemitente" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="ADG_IdRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="ADG_NombreRemitente" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="ADG_IdTipoIdentificacionDestinatario" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="ADG_IdDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="ADG_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="ADG_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="ADG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ADG_Transmitido" Type="bit" Nullable="false" />
+          <Property Name="ADG_NotificarPagoPorEmail" Type="bit" />
+          <Property Name="ADG_EstaPagado" Type="bit" Nullable="false" />
+          <Property Name="ADG_TelefonoRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="ADG_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="ADG_DireccionRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_EmailRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ADG_EmailDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ADG_TieneTelemercadeo" Type="bit" Nullable="false" />
+          <Property Name="ADG_IdEstadosGiro" Type="bigint" Nullable="false" />
+          <Property Name="ADG_EsProduccion" Type="bit" Nullable="false" />
+          <Property Name="ADG_ObservacionesSolicitudes" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="IntentosTransmisionGiro_GIR">
+          <Key>
+            <PropertyRef Name="ITG_IdIntentoTransGiro" />
+          </Key>
+          <Property Name="ITG_IdIntentoTransGiro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ITG_IdAdmisionGiro" Type="bigint" Nullable="false" />
+          <Property Name="ITG_NoPlanillaTransmision" Type="bigint" Nullable="false" />
+          <Property Name="ITG_Resultado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="ITG_Observaciones" Type="varchar" MaxLength="100" />
+          <Property Name="ITG_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="ITG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ITG_NombreContactoTransmision" Type="varchar" MaxLength="150" />
+          <Property Name="ITG_IdentificacionContactoTransmision" Type="varchar" MaxLength="25" />
+          <Property Name="ITG_IdCentroServiciosTransmision" Type="bigint" Nullable="false" />
+          <Property Name="ITG_IdTipoPlanillaIntentosTrasnmision" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ParametrosGiros_GIR">
+          <Key>
+            <PropertyRef Name="PAG_IdParametro" />
+          </Key>
+          <Property Name="PAG_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PAG_ValorParametro" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PAG_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PAG_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="PAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLERX15.dbo.PlanillaTransmisionGiros_VGIR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="PlanillaTransmisionGiros_VGIR">
+          <Key>
+            <PropertyRef Name="ITG_NoPlanillaTransmision" />
+            <PropertyRef Name="ADG_IdCentroServicioDestino" />
+            <PropertyRef Name="ADG_NombreCentroServicioDestino" />
+            <PropertyRef Name="ADG_IdCiudadDestino" />
+            <PropertyRef Name="ADG_DescCiudadDestino" />
+            <PropertyRef Name="ITG_IdTipoPlanillaIntentosTrasnmision" />
+            <PropertyRef Name="TPI_Descripcion" />
+          </Key>
+          <Property Name="ITG_NoPlanillaTransmision" Type="bigint" Nullable="false" />
+          <Property Name="FechaPlanilla" Type="date" />
+          <Property Name="ADG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+          <Property Name="ADG_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ADG_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="ADG_DescCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="ITG_IdTipoPlanillaIntentosTrasnmision" Type="smallint" Nullable="false" />
+          <Property Name="TPI_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR">
+          <End Role="AdmisionGiros_GIR" Type="DESARROLLOModel.Store.AdmisionGiros_GIR" Multiplicity="1" />
+          <End Role="IntentosTransmisionGiro_GIR" Type="DESARROLLOModel.Store.IntentosTransmisionGiro_GIR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdmisionGiros_GIR">
+              <PropertyRef Name="ADG_IdAdmisionGiro" />
+            </Principal>
+            <Dependent Role="IntentosTransmisionGiro_GIR">
+              <PropertyRef Name="ITG_IdAdmisionGiro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="paActualizarGiroTransmiti_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paCrearIntentoTransmiGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+          <Parameter Name="ITG_Resultado" Type="char" Mode="In" />
+          <Parameter Name="ITG_Observaciones" Type="varchar" Mode="In" />
+          <Parameter Name="ITG_FechaGrabacion" Type="datetime" Mode="In" />
+          <Parameter Name="ITG_CreadoPor" Type="varchar" Mode="In" />
+          <Parameter Name="ITG_NombreContactoTransmision" Type="varchar" Mode="In" />
+          <Parameter Name="ITG_IdentificacionContactoTransmision" Type="varchar" Mode="In" />
+          <Parameter Name="ITG_NoPlanillaTransmision" Type="bigint" Mode="In" />
+          <Parameter Name="ITG_IdCentroServicioTransmision" Type="bigint" Mode="In" />
+          <Parameter Name="ITG_IdTipoPlanillaIntentosTrasnmision" Type="int" Mode="In" />
+        </Function>
+        <Function Name="paInsertarEstadoGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+          <Parameter Name="EstadoGiro" Type="char" Mode="In" />
+          <Parameter Name="FechaGrabacion" Type="datetime" Mode="In" />
+          <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paInsertarPagoGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PAG_IdAdmisionGiro" Type="bigint" Mode="In" />
+          <Parameter Name="PAG_IdComprobantePago" Type="bigint" Mode="In" />
+          <Parameter Name="PAG_PagoAutorizadoPeaton" Type="bit" Mode="In" />
+          <Parameter Name="PAG_PagoAutorizadoEmpresarial" Type="bit" Mode="In" />
+          <Parameter Name="PAG_PagoAutomatico" Type="bit" Mode="In" />
+          <Parameter Name="PAG_IdCentroServiciosPagador" Type="bigint" Mode="In" />
+          <Parameter Name="PAG_NombreCentroServicios" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_ValorPagado" Type="decimal" Mode="In" />
+          <Parameter Name="PAG_IdCobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_TipoIdCobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_NombreCobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_Apellido1Cobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_Apellido2Cobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_TelefonoCobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_DireccionCobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_EmailCobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_OcupacionCobrador" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_Observaciones" Type="varchar" Mode="In" />
+          <Parameter Name="PAG_FechaGrabacion" Type="datetime" Mode="In" />
+          <Parameter Name="PAG_CreadoPor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paObtenerGiroAdicionales_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerGiroIdGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerGiroImpuestos_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerGiroNoTransmitido_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+          <Parameter Name="UltimoEstadoGiro" Type="char" Mode="In" />
+        </Function>
+        <Function Name="paObtenerGiroNoTransmitidoAgencia_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerGirosDescargaManu_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+          <Parameter Name="UltimoEstadoGiro" Type="char" Mode="In" />
+          <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerGirosFiltro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="IdCentroServicioOrigen" Type="bigint" Mode="In" />
+          <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+          <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+          <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+          <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+          <Parameter Name="TipoIdRemitente" Type="varchar" Mode="In" />
+          <Parameter Name="IdentificacionRemitente" Type="varchar" Mode="In" />
+          <Parameter Name="TipoIdDestinatario" Type="varchar" Mode="In" />
+          <Parameter Name="IdentificacionDestinatario" Type="varchar" Mode="In" />
+          <Parameter Name="IdTipoGiro" Type="varchar" Mode="In" />
+          <Parameter Name="idRegional" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerSolicitudesDevolucionApro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NumeroGiro" Type="bigint" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModeloPagosManualesNS" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModeloPagosManuales" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="paObtenerGirosFiltro_GIR" ReturnType="Collection(ModeloPagosManualesNS.paObtenerGirosFiltro_GIR_Result)">
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="IdCentroServicioOrigen" Mode="In" Type="Int64" />
+            <Parameter Name="IdCentroServicioDestino" Mode="In" Type="Int64" />
+            <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+            <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+            <Parameter Name="IdGiro" Mode="In" Type="Int64" />
+            <Parameter Name="TipoIdRemitente" Mode="In" Type="String" />
+            <Parameter Name="IdentificacionRemitente" Mode="In" Type="String" />
+            <Parameter Name="TipoIdDestinatario" Mode="In" Type="String" />
+            <Parameter Name="IdentificacionDestinatario" Mode="In" Type="String" />
+            <Parameter Name="IdTipoGiro" Mode="In" Type="String" />
+            <Parameter Name="idRegional" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerGiroAdicionales_GIR" ReturnType="Collection(ModeloPagosManualesNS.GIpaObtenerGiroAdicionales)">
+          <Parameter Name="IdGiro" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerGiroImpuestos_GIR" ReturnType="Collection(ModeloPagosManualesNS.GIpaObtenerGiroImpuestos)">
+          <Parameter Name="IdGiro" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paActualizarGiroTransmiti_GIR">
+          <Parameter Name="IdAdmisionGiro" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerGiroNoTransmitido_GIR" ReturnType="Collection(ModeloPagosManualesNS.GIpaObtenerGiroNoTransmitido)">
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="IdCentroServicioDestino" Mode="In" Type="Int64" />
+            <Parameter Name="UltimoEstadoGiro" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerGiroIdGiro_GIR" ReturnType="Collection(ModeloPagosManualesNS.GIpaObtenerGiroIdGiro)">
+          <Parameter Name="IdGiro" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paInsertarPagoGiro_GIR">
+            <Parameter Name="PAG_IdAdmisionGiro" Mode="In" Type="Int64" />
+            <Parameter Name="PAG_IdComprobantePago" Mode="In" Type="Int64" />
+            <Parameter Name="PAG_PagoAutorizadoPeaton" Mode="In" Type="Boolean" />
+            <Parameter Name="PAG_PagoAutorizadoEmpresarial" Mode="In" Type="Boolean" />
+            <Parameter Name="PAG_PagoAutomatico" Mode="In" Type="Boolean" />
+            <Parameter Name="PAG_IdCentroServiciosPagador" Mode="In" Type="Int64" />
+            <Parameter Name="PAG_NombreCentroServicios" Mode="In" Type="String" />
+            <Parameter Name="PAG_ValorPagado" Mode="In" Type="Decimal" />
+            <Parameter Name="PAG_IdCobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_TipoIdCobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_NombreCobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_Apellido1Cobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_Apellido2Cobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_TelefonoCobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_DireccionCobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_EmailCobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_OcupacionCobrador" Mode="In" Type="String" />
+            <Parameter Name="PAG_Observaciones" Mode="In" Type="String" />
+            <Parameter Name="PAG_FechaGrabacion" Mode="In" Type="DateTime" />
+            <Parameter Name="PAG_CreadoPor" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="ParametrosGiros_GIR" EntityType="ModeloPagosManualesNS.ParametrosGiros_GIR" />
+          <FunctionImport Name="paInsertarEstadoGiro_GIR">
+            <Parameter Name="IdAdmisionGiro" Mode="In" Type="Int64" />
+            <Parameter Name="EstadoGiro" Mode="In" Type="String" />
+            <Parameter Name="FechaGrabacion" Mode="In" Type="DateTime" />
+            <Parameter Name="CreadoPor" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="IntentosTransmisionGiro_GIR" EntityType="ModeloPagosManualesNS.IntentosTransmisionGiro_GIR" />
+          <FunctionImport Name="paCrearIntentoTransmiGiro_GIR">
+            <Parameter Name="IdAdmisionGiro" Mode="In" Type="Int64" />
+            <Parameter Name="ITG_Resultado" Mode="In" Type="String" />
+            <Parameter Name="ITG_Observaciones" Mode="In" Type="String" />
+            <Parameter Name="ITG_FechaGrabacion" Mode="In" Type="DateTime" />
+            <Parameter Name="ITG_CreadoPor" Mode="In" Type="String" />
+            <Parameter Name="ITG_NombreContactoTransmision" Mode="In" Type="String" />
+            <Parameter Name="ITG_IdentificacionContactoTransmision" Mode="In" Type="String" />
+            <Parameter Name="ITG_NoPlanillaTransmision" Mode="In" Type="Int64" />
+            <Parameter Name="ITG_IdCentroServicioTransmision" Mode="In" Type="Int64" />
+            <Parameter Name="ITG_IdTipoPlanillaIntentosTrasnmision" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerGiroNoTransmitidoAgencia_GIR" ReturnType="Collection(ModeloPagosManualesNS.GIpaObtenerGiroNoTransmitidoAgencia)">
+          <Parameter Name="IdCentroServicioDestino" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <EntitySet Name="PlanillaTransmisionGiros_VGIR" EntityType="ModeloPagosManualesNS.PlanillaTransmisionGiros_VGIR" />
+          <FunctionImport Name="paObtenerGirosDescargaManu_GIR" ReturnType="Collection(ModeloPagosManualesNS.paObtenerGirosDescargaManu_GIR_Result)">
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="IdCentroServicioDestino" Mode="In" Type="Int64" />
+            <Parameter Name="UltimoEstadoGiro" Mode="In" Type="String" />
+            <Parameter Name="IdGiro" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <EntitySet Name="AdmisionGiros_GIR" EntityType="ModeloPagosManualesNS.AdmisionGiros_GIR" />
+          <AssociationSet Name="FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR" Association="ModeloPagosManualesNS.FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR">
+            <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+            <End Role="IntentosTransmisionGiro_GIR" EntitySet="IntentosTransmisionGiro_GIR" />
+          </AssociationSet>
+          <FunctionImport Name="paObtenerSolicitudesDevolucionApro_GIR" ReturnType="Collection(ModeloPagosManualesNS.paObtenerSolicitudesDevolucionApro_GIR_Result)">
+            <Parameter Name="NumeroGiro" Mode="In" Type="Int64" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GIpaObtenerGirosFiltro">
+          <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+          <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+          <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="UltimoEstadoGiro" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="UltimoFechaEstadoGiro" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+          <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+          <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="paObtenerGirosFiltro_GIR_Result">
+          <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+          <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+          <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="UltimoEstadoGiro" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="UltimoFechaEstadoGiro" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+          <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+          <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="GIpaObtenerGiroAdicionales">
+          <Property Type="String" Name="IdServicioAdicional" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="DescripcionServicioAdicional" Nullable="false" MaxLength="25" />
+          <Property Type="Decimal" Name="ValorAdicional" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="String" Name="CAMPOADICIONAL" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="VALORCAMPOADICIONAL" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GIpaObtenerGiroImpuestos">
+          <Property Type="String" Name="DescripcionImpuesto" Nullable="false" MaxLength="25" />
+          <Property Type="Decimal" Name="TarifaImpuesto" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ValorSobreBaseImpuesto" Nullable="false" Precision="16" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="GIpaObtenerGiroNoTransmitido">
+          <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+          <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+          <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="UltimoEstadoGiro" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="UltimoFechaEstadoGiro" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+          <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+          <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="GIpaObtenerGiroIdGiro">
+          <Property Type="Int64" Name="IdAdmisionGiro" Nullable="true" />
+          <Property Type="Int64" Name="IdGiro" Nullable="true" />
+          <Property Type="String" Name="TipoGiro" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="EstadoGiro" Nullable="true" MaxLength="3" />
+          <Property Type="Int64" Name="IdCentroServicioOrigen" Nullable="true" />
+          <Property Type="String" Name="NombreCentroServicioOrigen" Nullable="true" MaxLength="250" />
+          <Property Type="Int64" Name="IdCentroServicioDestino" Nullable="true" />
+          <Property Type="String" Name="NombreCentroServicioDestino" Nullable="true" MaxLength="250" />
+          <Property Type="Decimal" Name="ValorGiro" Nullable="true" Precision="16" Scale="4" />
+          <Property Type="String" Name="Observaciones" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="IdRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="TipoIdRemitente" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="NombreRemitente" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido1Remitente" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido2Remitente" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TelefonoRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="DireccionRemitente" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="EmailRemitente" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="OcupacionRemitente" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="IdDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="TipoIdDestinatario" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="NombreDestinatario" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido1Destinatario" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Apellido2Destinatario" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TelefonoDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="DireccionDestinatario" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="EmailDestinatario" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="OcupacionDestinatario" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="TipoIdentificacionReclamoGiro" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IdCiudadOrigen" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="DescCiudadOrigen" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="IdCiudadDestino" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="DescCiudadDestino" Nullable="true" MaxLength="250" />
+          <Property Type="Decimal" Name="ValorPorte" Nullable="true" Precision="16" Scale="4" />
+          <Property Type="String" Name="ObservacionesSolicitudes" Nullable="true" MaxLength="2000" />
+        </ComplexType>
+        <ComplexType Name="GIpaObtenerGirosDescargaManu">
+          <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+          <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+          <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="UltimoEstadoGiro" Nullable="true" MaxLength="3" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+          <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+          <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+        </ComplexType>
+        <EntityType Name="ParametrosGiros_GIR">
+          <Key>
+            <PropertyRef Name="PAG_IdParametro" />
+          </Key>
+          <Property Type="String" Name="PAG_IdParametro" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAG_ValorParametro" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAG_Descripcion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PAG_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="PAG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="IntentosTransmisionGiro_GIR">
+          <Key>
+            <PropertyRef Name="ITG_IdIntentoTransGiro" />
+          </Key>
+          <Property Type="Int64" Name="ITG_IdIntentoTransGiro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="ITG_IdAdmisionGiro" Nullable="false" />
+          <Property Type="Int64" Name="ITG_NoPlanillaTransmision" Nullable="false" />
+          <Property Type="String" Name="ITG_Resultado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ITG_Observaciones" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ITG_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ITG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ITG_NombreContactoTransmision" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ITG_IdentificacionContactoTransmision" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="ITG_IdCentroServiciosTransmision" Nullable="false" />
+          <Property Type="Int16" Name="ITG_IdTipoPlanillaIntentosTrasnmision" Nullable="false" />
+          <NavigationProperty Name="AdmisionGiros_GIR" Relationship="ModeloPagosManualesNS.FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR" FromRole="IntentosTransmisionGiro_GIR" ToRole="AdmisionGiros_GIR" />
+        </EntityType>
+        <ComplexType Name="GIpaObtenerGiroNoTransmitidoAgencia">
+          <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+          <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+          <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="UltimoEstadoGiro" Nullable="true" MaxLength="3" />
+          <Property Type="DateTime" Name="UltimoFechaEstadoGiro" Nullable="true" Precision="23" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+          <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+          <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="ADG_EstaPagado" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="PlanillaTransmisionGiros_VGIR">
+          <Key>
+            <PropertyRef Name="ITG_NoPlanillaTransmision" />
+            <PropertyRef Name="ADG_IdCentroServicioDestino" />
+            <PropertyRef Name="ADG_NombreCentroServicioDestino" />
+            <PropertyRef Name="ADG_IdCiudadDestino" />
+            <PropertyRef Name="ADG_DescCiudadDestino" />
+            <PropertyRef Name="ITG_IdTipoPlanillaIntentosTrasnmision" />
+            <PropertyRef Name="TPI_Descripcion" />
+          </Key>
+          <Property Type="Int64" Name="ITG_NoPlanillaTransmision" Nullable="false" />
+          <Property Type="DateTime" Name="FechaPlanilla" Precision="0" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="ITG_IdTipoPlanillaIntentosTrasnmision" Nullable="false" />
+          <Property Type="String" Name="TPI_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="paObtenerGirosDescargaManu_GIR_Result">
+          <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+          <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+          <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="ESG_Estado" Nullable="false" MaxLength="3" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+          <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+          <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+        </ComplexType>
+        <EntityType Name="AdmisionGiros_GIR">
+          <Key>
+            <PropertyRef Name="ADG_IdAdmisionGiro" />
+          </Key>
+          <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ADG_PrefijoIdGiro" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+          <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" />
+          <Property Type="String" Name="ADG_Observaciones" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="ADG_Transmitido" Nullable="false" />
+          <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ADG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="ADG_NotificarPagoPorEmail" />
+          <Property Type="Boolean" Name="ADG_EstaPagado" Nullable="false" />
+          <Property Type="String" Name="ADG_TelefonoRemitente" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_TelefonoDestinatario" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_DireccionRemitente" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_DireccionDestinatario" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_EmailRemitente" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ADG_EmailDestinatario" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="ADG_TieneTelemercadeo" Nullable="false" />
+          <Property Type="Int64" Name="ADG_IdEstadosGiro" Nullable="false" />
+          <Property Type="Boolean" Name="ADG_EsProduccion" Nullable="false" />
+          <NavigationProperty Name="IntentosTransmisionGiro_GIR" Relationship="ModeloPagosManualesNS.FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR" FromRole="AdmisionGiros_GIR" ToRole="IntentosTransmisionGiro_GIR" />
+          <Property Type="String" Name="ADG_ObservacionesSolicitudes" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR">
+          <End Type="ModeloPagosManualesNS.AdmisionGiros_GIR" Role="AdmisionGiros_GIR" Multiplicity="1" />
+          <End Type="ModeloPagosManualesNS.IntentosTransmisionGiro_GIR" Role="IntentosTransmisionGiro_GIR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdmisionGiros_GIR">
+              <PropertyRef Name="ADG_IdAdmisionGiro" />
+            </Principal>
+            <Dependent Role="IntentosTransmisionGiro_GIR">
+              <PropertyRef Name="ITG_IdAdmisionGiro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="paObtenerSolicitudesDevolucionApro_GIR_Result">
+          <Property Type="Int64" Name="SOG_IdSolicitudGiro" Nullable="false" />
+          <Property Type="Int64" Name="SOG_IdAdmisionGiro" Nullable="true" />
+          <Property Type="Int16" Name="SOG_IdTipoSolicitud" Nullable="false" />
+          <Property Type="String" Name="SOG_DescripcionTipoSolicitud" Nullable="false" MaxLength="50" />
+          <Property Type="Int16" Name="SOG_IdMotivoSolicitud" Nullable="false" />
+          <Property Type="String" Name="SOG_DescripcionMotivoSolicitud" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="SOG_Estado" Nullable="false" MaxLength="3" />
+          <Property Type="Int64" Name="SOG_IdRegionalAdm" Nullable="false" />
+          <Property Type="String" Name="SOG_DescripcionRegionalAdm" Nullable="false" MaxLength="250" />
+          <Property Type="Int64" Name="SOG_IdCentroServicioSolicita" Nullable="false" />
+          <Property Type="String" Name="SOG_NombreCentroServicioSolicita" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="SOG_Observaciones" Nullable="false" MaxLength="100" />
+          <Property Type="DateTime" Name="SOG_FechaGrabacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="SOG_CreadoPor" Nullable="false" MaxLength="20" />
+          <Property Type="Int64" Name="SOG_IdGiro" Nullable="false" />
+          <Property Type="Int16" Name="TIS_IdTipoSolicitud" Nullable="false" />
+          <Property Type="String" Name="TIS_Descripcion" Nullable="false" MaxLength="50" />
+          <Property Type="Int16" Name="MOS_IdMotivoSolicitud" Nullable="false" />
+          <Property Type="String" Name="MOS_Descripcion" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="MOS_RetornaFlete" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DESARROLLOModelStoreContainer" CdmEntityContainer="ModeloPagosManuales" >
+          <FunctionImportMapping FunctionImportName="paObtenerGirosFiltro_GIR" FunctionName="DESARROLLOModel.Store.paObtenerGirosFiltro_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloPagosManualesNS.paObtenerGirosFiltro_GIR_Result">
+                <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+                <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+                <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+                <ScalarProperty Name="ADG_GuidDeChequeo" ColumnName="ADG_GuidDeChequeo" />
+                <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+                <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+                <ScalarProperty Name="UltimoEstadoGiro" ColumnName="UltimoEstadoGiro" />
+                <ScalarProperty Name="UltimoFechaEstadoGiro" ColumnName="UltimoFechaEstadoGiro" />
+                <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+                <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+                <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+                <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+                <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+                <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+                <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+                <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+                <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+                <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+                <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+                <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+                <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+                <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+                <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+                <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+                <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+                <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+                <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+                <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+                <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+                <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+                <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+                <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+                <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+                <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerGiroAdicionales_GIR" FunctionName="DESARROLLOModel.Store.paObtenerGiroAdicionales_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloPagosManualesNS.GIpaObtenerGiroAdicionales">
+                <ScalarProperty Name="IdServicioAdicional" ColumnName="IdServicioAdicional" />
+                <ScalarProperty Name="DescripcionServicioAdicional" ColumnName="DescripcionServicioAdicional" />
+                <ScalarProperty Name="ValorAdicional" ColumnName="ValorAdicional" />
+                <ScalarProperty Name="CAMPOADICIONAL" ColumnName="CAMPOADICIONAL" />
+                <ScalarProperty Name="VALORCAMPOADICIONAL" ColumnName="VALORCAMPOADICIONAL" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerGiroImpuestos_GIR" FunctionName="DESARROLLOModel.Store.paObtenerGiroImpuestos_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloPagosManualesNS.GIpaObtenerGiroImpuestos">
+                <ScalarProperty Name="DescripcionImpuesto" ColumnName="DescripcionImpuesto" />
+                <ScalarProperty Name="TarifaImpuesto" ColumnName="TarifaImpuesto" />
+                <ScalarProperty Name="ValorSobreBaseImpuesto" ColumnName="ValorSobreBaseImpuesto" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paActualizarGiroTransmiti_GIR" FunctionName="DESARROLLOModel.Store.paActualizarGiroTransmiti_GIR" />
+          <FunctionImportMapping FunctionImportName="paObtenerGiroNoTransmitido_GIR" FunctionName="DESARROLLOModel.Store.paObtenerGiroNoTransmitido_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloPagosManualesNS.GIpaObtenerGiroNoTransmitido">
+                <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+                <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+                <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+                <ScalarProperty Name="ADG_GuidDeChequeo" ColumnName="ADG_GuidDeChequeo" />
+                <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+                <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+                <ScalarProperty Name="UltimoEstadoGiro" ColumnName="UltimoEstadoGiro" />
+                <ScalarProperty Name="UltimoFechaEstadoGiro" ColumnName="UltimoFechaEstadoGiro" />
+                <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+                <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+                <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+                <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+                <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+                <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+                <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+                <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+                <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+                <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+                <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+                <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+                <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+                <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+                <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+                <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+                <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+                <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+                <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+                <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+                <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+                <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+                <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+                <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+                <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+                <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerGiroIdGiro_GIR" FunctionName="DESARROLLOModel.Store.paObtenerGiroIdGiro_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloPagosManualesNS.GIpaObtenerGiroIdGiro">
+                <ScalarProperty Name="IdAdmisionGiro" ColumnName="IdAdmisionGiro" />
+                <ScalarProperty Name="IdGiro" ColumnName="IdGiro" />
+                <ScalarProperty Name="TipoGiro" ColumnName="TipoGiro" />
+                <ScalarProperty Name="EstadoGiro" ColumnName="EstadoGiro" />
+                <ScalarProperty Name="IdCentroServicioOrigen" ColumnName="IdCentroServicioOrigen" />
+                <ScalarProperty Name="NombreCentroServicioOrigen" ColumnName="NombreCentroServicioOrigen" />
+                <ScalarProperty Name="IdCentroServicioDestino" ColumnName="IdCentroServicioDestino" />
+                <ScalarProperty Name="NombreCentroServicioDestino" ColumnName="NombreCentroServicioDestino" />
+                <ScalarProperty Name="ValorGiro" ColumnName="ValorGiro" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="IdRemitente" ColumnName="IdRemitente" />
+                <ScalarProperty Name="TipoIdRemitente" ColumnName="TipoIdRemitente" />
+                <ScalarProperty Name="NombreRemitente" ColumnName="NombreRemitente" />
+                <ScalarProperty Name="Apellido1Remitente" ColumnName="Apellido1Remitente" />
+                <ScalarProperty Name="Apellido2Remitente" ColumnName="Apellido2Remitente" />
+                <ScalarProperty Name="TelefonoRemitente" ColumnName="TelefonoRemitente" />
+                <ScalarProperty Name="DireccionRemitente" ColumnName="DireccionRemitente" />
+                <ScalarProperty Name="EmailRemitente" ColumnName="EmailRemitente" />
+                <ScalarProperty Name="OcupacionRemitente" ColumnName="OcupacionRemitente" />
+                <ScalarProperty Name="IdDestinatario" ColumnName="IdDestinatario" />
+                <ScalarProperty Name="TipoIdDestinatario" ColumnName="TipoIdDestinatario" />
+                <ScalarProperty Name="NombreDestinatario" ColumnName="NombreDestinatario" />
+                <ScalarProperty Name="Apellido1Destinatario" ColumnName="Apellido1Destinatario" />
+                <ScalarProperty Name="Apellido2Destinatario" ColumnName="Apellido2Destinatario" />
+                <ScalarProperty Name="TelefonoDestinatario" ColumnName="TelefonoDestinatario" />
+                <ScalarProperty Name="DireccionDestinatario" ColumnName="DireccionDestinatario" />
+                <ScalarProperty Name="EmailDestinatario" ColumnName="EmailDestinatario" />
+                <ScalarProperty Name="OcupacionDestinatario" ColumnName="OcupacionDestinatario" />
+                <ScalarProperty Name="TipoIdentificacionReclamoGiro" ColumnName="TipoIdentificacionReclamoGiro" />
+                <ScalarProperty Name="IdCiudadOrigen" ColumnName="IdCiudadOrigen" />
+                <ScalarProperty Name="DescCiudadOrigen" ColumnName="DescCiudadOrigen" />
+                <ScalarProperty Name="IdCiudadDestino" ColumnName="IdCiudadDestino" />
+                <ScalarProperty Name="DescCiudadDestino" ColumnName="DescCiudadDestino" />
+                <ScalarProperty Name="ValorPorte" ColumnName="ValorPorte" />
+                <ScalarProperty Name="ObservacionesSolicitudes" ColumnName="ObservacionesSolicitudes" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paInsertarPagoGiro_GIR" FunctionName="DESARROLLOModel.Store.paInsertarPagoGiro_GIR" />
+          <EntitySetMapping Name="ParametrosGiros_GIR">
+            <EntityTypeMapping TypeName="ModeloPagosManualesNS.ParametrosGiros_GIR">
+              <MappingFragment StoreEntitySet="ParametrosGiros_GIR">
+                <ScalarProperty Name="PAG_CreadoPor" ColumnName="PAG_CreadoPor" />
+                <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+                <ScalarProperty Name="PAG_Descripcion" ColumnName="PAG_Descripcion" />
+                <ScalarProperty Name="PAG_ValorParametro" ColumnName="PAG_ValorParametro" />
+                <ScalarProperty Name="PAG_IdParametro" ColumnName="PAG_IdParametro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="paInsertarEstadoGiro_GIR" FunctionName="DESARROLLOModel.Store.paInsertarEstadoGiro_GIR" />
+          <EntitySetMapping Name="IntentosTransmisionGiro_GIR">
+            <EntityTypeMapping TypeName="ModeloPagosManualesNS.IntentosTransmisionGiro_GIR">
+              <MappingFragment StoreEntitySet="IntentosTransmisionGiro_GIR">
+                <ScalarProperty Name="ITG_IdTipoPlanillaIntentosTrasnmision" ColumnName="ITG_IdTipoPlanillaIntentosTrasnmision" />
+                <ScalarProperty Name="ITG_IdCentroServiciosTransmision" ColumnName="ITG_IdCentroServiciosTransmision" />
+                <ScalarProperty Name="ITG_IdentificacionContactoTransmision" ColumnName="ITG_IdentificacionContactoTransmision" />
+                <ScalarProperty Name="ITG_NombreContactoTransmision" ColumnName="ITG_NombreContactoTransmision" />
+                <ScalarProperty Name="ITG_CreadoPor" ColumnName="ITG_CreadoPor" />
+                <ScalarProperty Name="ITG_FechaGrabacion" ColumnName="ITG_FechaGrabacion" />
+                <ScalarProperty Name="ITG_Observaciones" ColumnName="ITG_Observaciones" />
+                <ScalarProperty Name="ITG_Resultado" ColumnName="ITG_Resultado" />
+                <ScalarProperty Name="ITG_NoPlanillaTransmision" ColumnName="ITG_NoPlanillaTransmision" />
+                <ScalarProperty Name="ITG_IdAdmisionGiro" ColumnName="ITG_IdAdmisionGiro" />
+                <ScalarProperty Name="ITG_IdIntentoTransGiro" ColumnName="ITG_IdIntentoTransGiro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="paCrearIntentoTransmiGiro_GIR" FunctionName="DESARROLLOModel.Store.paCrearIntentoTransmiGiro_GIR" />
+          <FunctionImportMapping FunctionImportName="paObtenerGiroNoTransmitidoAgencia_GIR" FunctionName="DESARROLLOModel.Store.paObtenerGiroNoTransmitidoAgencia_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloPagosManualesNS.GIpaObtenerGiroNoTransmitidoAgencia">
+                <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+                <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+                <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+                <ScalarProperty Name="ADG_GuidDeChequeo" ColumnName="ADG_GuidDeChequeo" />
+                <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+                <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+                <ScalarProperty Name="UltimoEstadoGiro" ColumnName="UltimoEstadoGiro" />
+                <ScalarProperty Name="UltimoFechaEstadoGiro" ColumnName="UltimoFechaEstadoGiro" />
+                <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+                <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+                <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+                <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+                <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+                <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+                <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+                <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+                <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+                <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+                <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+                <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+                <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+                <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+                <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+                <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+                <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+                <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+                <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+                <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+                <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+                <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+                <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+                <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+                <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+                <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+                <ScalarProperty Name="ADG_EstaPagado" ColumnName="ADG_EstaPagado" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="PlanillaTransmisionGiros_VGIR">
+            <EntityTypeMapping TypeName="ModeloPagosManualesNS.PlanillaTransmisionGiros_VGIR">
+              <MappingFragment StoreEntitySet="PlanillaTransmisionGiros_VGIR">
+                <ScalarProperty Name="TPI_Descripcion" ColumnName="TPI_Descripcion" />
+                <ScalarProperty Name="ITG_IdTipoPlanillaIntentosTrasnmision" ColumnName="ITG_IdTipoPlanillaIntentosTrasnmision" />
+                <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+                <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+                <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+                <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+                <ScalarProperty Name="FechaPlanilla" ColumnName="FechaPlanilla" />
+                <ScalarProperty Name="ITG_NoPlanillaTransmision" ColumnName="ITG_NoPlanillaTransmision" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerGirosDescargaManu_GIR" FunctionName="DESARROLLOModel.Store.paObtenerGirosDescargaManu_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloPagosManualesNS.paObtenerGirosDescargaManu_GIR_Result">
+                <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+                <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+                <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+                <ScalarProperty Name="ADG_GuidDeChequeo" ColumnName="ADG_GuidDeChequeo" />
+                <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+                <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+                <ScalarProperty Name="ESG_Estado" ColumnName="ESG_Estado" />
+                <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+                <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+                <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+                <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+                <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+                <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+                <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+                <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+                <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+                <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+                <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+                <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+                <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+                <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+                <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+                <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+                <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+                <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+                <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+                <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+                <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+                <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+                <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+                <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+                <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+                <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="AdmisionGiros_GIR">
+            <EntityTypeMapping TypeName="ModeloPagosManualesNS.AdmisionGiros_GIR">
+              <MappingFragment StoreEntitySet="AdmisionGiros_GIR">
+                <ScalarProperty Name="ADG_ObservacionesSolicitudes" ColumnName="ADG_ObservacionesSolicitudes" />
+                <ScalarProperty Name="ADG_EsProduccion" ColumnName="ADG_EsProduccion" />
+                <ScalarProperty Name="ADG_IdEstadosGiro" ColumnName="ADG_IdEstadosGiro" />
+                <ScalarProperty Name="ADG_TieneTelemercadeo" ColumnName="ADG_TieneTelemercadeo" />
+                <ScalarProperty Name="ADG_EmailDestinatario" ColumnName="ADG_EmailDestinatario" />
+                <ScalarProperty Name="ADG_EmailRemitente" ColumnName="ADG_EmailRemitente" />
+                <ScalarProperty Name="ADG_DireccionDestinatario" ColumnName="ADG_DireccionDestinatario" />
+                <ScalarProperty Name="ADG_DireccionRemitente" ColumnName="ADG_DireccionRemitente" />
+                <ScalarProperty Name="ADG_TelefonoDestinatario" ColumnName="ADG_TelefonoDestinatario" />
+                <ScalarProperty Name="ADG_TelefonoRemitente" ColumnName="ADG_TelefonoRemitente" />
+                <ScalarProperty Name="ADG_EstaPagado" ColumnName="ADG_EstaPagado" />
+                <ScalarProperty Name="ADG_NotificarPagoPorEmail" ColumnName="ADG_NotificarPagoPorEmail" />
+                <ScalarProperty Name="ADG_CreadoPor" ColumnName="ADG_CreadoPor" />
+                <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+                <ScalarProperty Name="ADG_Transmitido" ColumnName="ADG_Transmitido" />
+                <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+                <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+                <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+                <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+                <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+                <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+                <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+                <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+                <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+                <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+                <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+                <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+                <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+                <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+                <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+                <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+                <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+                <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+                <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+                <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+                <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+                <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+                <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+                <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+                <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+                <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+                <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+                <ScalarProperty Name="ADG_GuidDeChequeo" ColumnName="ADG_GuidDeChequeo" />
+                <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+                <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+                <ScalarProperty Name="ADG_PrefijoIdGiro" ColumnName="ADG_PrefijoIdGiro" />
+                <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerSolicitudesDevolucionApro_GIR" FunctionName="DESARROLLOModel.Store.paObtenerSolicitudesDevolucionApro_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloPagosManualesNS.paObtenerSolicitudesDevolucionApro_GIR_Result">
+                <ScalarProperty Name="SOG_IdSolicitudGiro" ColumnName="SOG_IdSolicitudGiro" />
+                <ScalarProperty Name="SOG_IdAdmisionGiro" ColumnName="SOG_IdAdmisionGiro" />
+                <ScalarProperty Name="SOG_IdTipoSolicitud" ColumnName="SOG_IdTipoSolicitud" />
+                <ScalarProperty Name="SOG_DescripcionTipoSolicitud" ColumnName="SOG_DescripcionTipoSolicitud" />
+                <ScalarProperty Name="SOG_IdMotivoSolicitud" ColumnName="SOG_IdMotivoSolicitud" />
+                <ScalarProperty Name="SOG_DescripcionMotivoSolicitud" ColumnName="SOG_DescripcionMotivoSolicitud" />
+                <ScalarProperty Name="SOG_Estado" ColumnName="SOG_Estado" />
+                <ScalarProperty Name="SOG_IdRegionalAdm" ColumnName="SOG_IdRegionalAdm" />
+                <ScalarProperty Name="SOG_DescripcionRegionalAdm" ColumnName="SOG_DescripcionRegionalAdm" />
+                <ScalarProperty Name="SOG_IdCentroServicioSolicita" ColumnName="SOG_IdCentroServicioSolicita" />
+                <ScalarProperty Name="SOG_NombreCentroServicioSolicita" ColumnName="SOG_NombreCentroServicioSolicita" />
+                <ScalarProperty Name="SOG_Observaciones" ColumnName="SOG_Observaciones" />
+                <ScalarProperty Name="SOG_FechaGrabacion" ColumnName="SOG_FechaGrabacion" />
+                <ScalarProperty Name="SOG_CreadoPor" ColumnName="SOG_CreadoPor" />
+                <ScalarProperty Name="SOG_IdGiro" ColumnName="SOG_IdGiro" />
+                <ScalarProperty Name="TIS_IdTipoSolicitud" ColumnName="TIS_IdTipoSolicitud" />
+                <ScalarProperty Name="TIS_Descripcion" ColumnName="TIS_Descripcion" />
+                <ScalarProperty Name="MOS_IdMotivoSolicitud" ColumnName="MOS_IdMotivoSolicitud" />
+                <ScalarProperty Name="MOS_Descripcion" ColumnName="MOS_Descripcion" />
+                <ScalarProperty Name="MOS_RetornaFlete" ColumnName="MOS_RetornaFlete" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloPagosManuales" ZoomLevel="69" >
+        <EntityTypeShape EntityType="ModeloPagosManualesNS.ParametrosGiros_GIR" Width="2.125" PointX="4.375" PointY="0.75" Height="1.9802864583333335" />
+        <EntityTypeShape EntityType="ModeloPagosManualesNS.IntentosTransmisionGiro_GIR" Width="1.5" PointX="0.75" PointY="0.75" Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="ModeloPagosManualesNS.PlanillaTransmisionGiros_VGIR" Width="1.5" PointX="3.375" PointY="3.75" Height="2.5571907552083335" />
+        <EntityTypeShape EntityType="ModeloPagosManualesNS.AdmisionGiros_GIR" Width="1.5" PointX="1.7658120550987366" PointY="11.036937808169489" />
+        <AssociationConnector Association="ModeloPagosManualesNS.FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

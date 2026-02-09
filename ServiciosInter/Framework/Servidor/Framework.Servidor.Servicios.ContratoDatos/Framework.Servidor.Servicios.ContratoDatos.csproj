@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.Servidor.Servicios.ContratoDatos</RootNamespace>
+    <AssemblyName>Framework.Servidor.Servicios.ContratoDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agenda\ASArchivoFramework.cs" />
+    <Compile Include="Agenda\ASEventoTareaAsignada.cs" />
+    <Compile Include="Agenda\ASTareaPorAgenda.cs" />
+    <Compile Include="Agenda\ASUsuario.cs" />
+    <Compile Include="ConsultasExternas\COConsultaComcelRequest.cs" />
+    <Compile Include="ConsultasExternas\COConsultaComcelResponse.cs" />
+    <Compile Include="DataContractBase.cs" />
+    <Compile Include="EstadoDC.cs" />
+    <Compile Include="Etiquetas.Designer.cs" />
+    <Compile Include="Importacion\IMDetallePlantilla.cs" />
+    <Compile Include="Importacion\IMPlantilla.cs" />
+    <Compile Include="Importacion\IMPlantillaImportacion.cs" />
+    <Compile Include="Importacion\IMTipoDato.cs" />
+    <Compile Include="Mensajeria\MEAdjuntos.cs" />
+    <Compile Include="Mensajeria\MEAgencia.cs" />
+    <Compile Include="Mensajeria\MECategoriaMensaje.cs" />
+    <Compile Include="Mensajeria\MEEnumEstadoNotificacion.cs" />
+    <Compile Include="Mensajeria\MEMensajeEnviado.cs" />
+    <Compile Include="Mensajeria\MEPuntoServicio.cs" />
+    <Compile Include="Mensajeria\MERacol.cs" />
+    <Compile Include="Mensajeria\MERespuestaMensaje.cs" />
+    <Compile Include="Notificador\Notificaciones.cs" />
+    <Compile Include="Parametros\Consecutivos\PAConsecutivoIngresoEgresoDC.cs" />
+    <Compile Include="Parametros\Consecutivos\PAEnumConsecutivos.cs" />
+    <Compile Include="Parametros\InformacionAlerta.cs" />
+    <Compile Include="Parametros\PAArchivosFramework.cs" />
+    <Compile Include="Parametros\PAFreezersDiscoDC.cs" />
+    <Compile Include="Parametros\PADispositivoMovil.cs" />
+    <Compile Include="Parametros\PAEnumEstados.cs" />
+    <Compile Include="Parametros\PAEnumOsDispositivo.cs" />
+    <Compile Include="Parametros\PAEnumTipoRolAplicacion.cs" />
+    <Compile Include="Parametros\PAEnumTiposDispositivos.cs" />
+    <Compile Include="Parametros\PAEstandarDireccionDC.cs" />
+    <Compile Include="Parametros\PAGestionDC.cs" />
+    <Compile Include="Parametros\PACondicionOperadorPostalDC.cs" />
+    <Compile Include="Parametros\PAConsecutivoDC.cs" />
+    <Compile Include="Parametros\PACuentaExternaDC.cs" />
+    <Compile Include="Parametros\PADia.cs" />
+    <Compile Include="Parametros\PADivulgacion.cs" />
+    <Compile Include="Parametros\PAEnumTipoLocalidad.cs" />
+    <Compile Include="Parametros\PAEstadoActivoInactivoDC.cs" />
+    <Compile Include="Parametros\PAEstadoEmpaqueDC.cs" />
+    <Compile Include="Parametros\PAGrupoAlerta.cs" />
+    <Compile Include="Parametros\PAHoras.cs" />
+    <Compile Include="Parametros\PAListaRestrictivaDC.cs" />
+    <Compile Include="Parametros\PALocalidadDC.cs" />
+    <Compile Include="Parametros\PAMedioTransporte.cs" />
+    <Compile Include="Parametros\PAMesDC.cs" />
+    <Compile Include="Parametros\PAOcupacionDC.cs" />
+    <Compile Include="Parametros\PAOperadorPostal.cs" />
+    <Compile Include="Parametros\PAOperadorPostalZonaDC.cs" />
+    <Compile Include="Parametros\PAParienteDC.cs" />
+    <Compile Include="Parametros\PAPersonaExterna.cs" />
+    <Compile Include="Parametros\PAPersonaInternaDC.cs" />
+    <Compile Include="Parametros\PAPropiedadesAplicacionDC.cs" />
+    <Compile Include="Parametros\ParamPublicidad.cs" />
+    <Compile Include="Parametros\PAResponsableLegal.cs" />
+    <Compile Include="Parametros\PAResponsableServicio.cs" />
+    <Compile Include="Parametros\PARetencionTipoRegimenContributivoDC.cs" />
+    <Compile Include="Parametros\PASemanaDC.cs" />
+    <Compile Include="Parametros\PATipoCuenta.cs" />
+    <Compile Include="Parametros\PATipoDocumBancoDC.cs" />
+    <Compile Include="Parametros\PATipoIdentificacion.cs" />
+    <Compile Include="Parametros\PATipoListaRestrictivaDC.cs" />
+    <Compile Include="Parametros\PATipoLocalidad.cs" />
+    <Compile Include="Parametros\PATipoRegimenDC.cs" />
+    <Compile Include="Parametros\PATipoSectorCliente.cs" />
+    <Compile Include="Parametros\PATipoSegmentoDC.cs" />
+    <Compile Include="Parametros\PATipoSociedadDC.cs" />
+    <Compile Include="Parametros\PATipoZona.cs" />
+    <Compile Include="Parametros\PAUnidadMedidaDC.cs" />
+    <Compile Include="Parametros\PAValorDolar.cs" />
+    <Compile Include="Parametros\PAZonaDC.cs" />
+    <Compile Include="Parametros\PAZonaLocalidad.cs" />
+    <Compile Include="Agenda\ASCargo.cs" />
+    <Compile Include="Agenda\ASEEstadoFalla.cs" />
+    <Compile Include="Agenda\ASEEventoAsignacion.cs" />
+    <Compile Include="Agenda\ASETipoFalla.cs" />
+    <Compile Include="Agenda\ASFalla.cs" />
+    <Compile Include="Agenda\ASTarea.cs" />
+    <Compile Include="Agenda\ASTareaAsignada.cs" />
+    <Compile Include="GenericoConsultasFramework.cs" />
+    <Compile Include="Parametros\PAParametro.cs" />
+    <Compile Include="Parametros\PABanco.cs" />
+    <Compile Include="Parametros\PATipoActEconomica.cs" />
+    <Compile Include="Reportes\REPInfoReporte.cs" />
+    <Compile Include="Seguridad\SEAccion.cs" />
+    <Compile Include="Seguridad\SEAdminUsuario.cs" />
+    <Compile Include="Seguridad\SECargo.cs" />
+    <Compile Include="Seguridad\SECasaMatriz.cs" />
+    <Compile Include="Seguridad\SECentroLogistico.cs" />
+    <Compile Include="Seguridad\SECentroServicio.cs" />
+    <Compile Include="Seguridad\SECiudad.cs" />
+    <Compile Include="Seguridad\SEClienteCredito.cs" />
+    <Compile Include="Seguridad\SEEnumAcciones.cs" />
+    <Compile Include="Seguridad\SEEnumSistemaInformacion.cs" />
+    <Compile Include="Seguridad\SEEstadoUsuario.cs" />
+    <Compile Include="Seguridad\SEFaultDetail.cs" />
+    <Compile Include="Seguridad\SEGestion.cs" />
+    <Compile Include="Seguridad\SEMacroproceso.cs" />
+    <Compile Include="Seguridad\SEMaquinaVersion.cs" />
+    <Compile Include="Seguridad\SEMenu.cs" />
+    <Compile Include="Seguridad\SECredencialUsuario.cs" />
+    <Compile Include="Seguridad\SEEnumMensajesSeguridad.cs" />
+    <Compile Include="Seguridad\SEMenuAccion.cs" />
+    <Compile Include="Seguridad\SEMenuRolAccion.cs" />
+    <Compile Include="Seguridad\SEMenuRolAccionConsolidado.cs" />
+    <Compile Include="Seguridad\SEPasswordUsuario.cs" />
+    <Compile Include="Seguridad\SEPersonaInternaDC.cs" />
+    <Compile Include="Seguridad\SERegional.cs" />
+    <Compile Include="Seguridad\SERolMenu.cs" />
+    <Compile Include="Seguridad\SEModulo.cs" />
+    <Compile Include="Seguridad\SERol.cs" />
+    <Compile Include="Seguridad\SERolReportes.cs" />
+    <Compile Include="Seguridad\SERolUsuario.cs" />
+    <Compile Include="Seguridad\SESucursal.cs" />
+    <Compile Include="Seguridad\SETipoAutenticacion.cs" />
+    <Compile Include="Seguridad\SETipoIdentificacion.cs" />
+    <Compile Include="Seguridad\SETipoUsuario.cs" />
+    <Compile Include="Seguridad\SEUbicacionAutorizada.cs" />
+    <Compile Include="Seguridad\SEUsuarioCentroServicioDC.cs" />
+    <Compile Include="Seguridad\SEUsuarioDC.cs" />
+    <Compile Include="Seguridad\SEUsuarioIntegracionDC.cs" />
+    <Compile Include="Seguridad\SEUsuarioPorCodigoDC.cs" />
+    <Compile Include="Seguridad\SEValidacionUsuarioYPersonaInternaDC.cs" />
+    <Compile Include="SincronizadorDatos\Columnas.cs" />
+    <Compile Include="SincronizadorDatos\EsquemaDB.cs" />
+    <Compile Include="SincronizadorDatos\Registros.cs" />
+    <Compile Include="Versionamiento\VECliente.cs" />
+    <Compile Include="Versionamiento\VEDatosCentroServicio.cs" />
+    <Compile Include="Versionamiento\VEDatosClienteCredito.cs" />
+    <Compile Include="Versionamiento\VEDatosIngresoUsuario.cs" />
+    <Compile Include="Versionamiento\VEDatosInicioSesion.cs" />
+    <Compile Include="Versionamiento\VEEEstadoNotificacion.cs" />
+    <Compile Include="Versionamiento\VEEnumProcesos.cs" />
+    <Compile Include="Versionamiento\VEMenuCapacitacion.cs" />
+    <Compile Include="Versionamiento\VEModulo.cs" />
+    <Compile Include="Versionamiento\VESucursal.cs" />
+    <Compile Include="Versionamiento\VEVersionInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Agencias\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Framework.Servidor.Servicios.ContratoDatos.nuspec" />
+    <None Include="Mensajeria\DgMensajeria.cd" />
+    <None Include="package.builder.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Etiquetas.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\..\..\packages\NuGet.Package.Builder.1.0.10\build\NuGet.Package.Builder.targets" Condition="Exists('..\..\..\packages\NuGet.Package.Builder.1.0.10\build\NuGet.Package.Builder.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\NuGet.Package.Builder.1.0.10\build\NuGet.Package.Builder.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\NuGet.Package.Builder.1.0.10\build\NuGet.Package.Builder.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

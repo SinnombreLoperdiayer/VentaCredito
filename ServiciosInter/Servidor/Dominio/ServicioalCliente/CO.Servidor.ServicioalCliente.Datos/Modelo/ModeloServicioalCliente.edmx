@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EntidadesServicioalCliente.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EntidadesServicioalClienteStoreContainer">
+          <EntitySet Name="EstadosSolicitud_SAC" EntityType="EntidadesServicioalCliente.Store.EstadosSolicitud_SAC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MedioRecepcionSolicitud_SAC" EntityType="EntidadesServicioalCliente.Store.MedioRecepcionSolicitud_SAC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SeguimientoSolicitud_SAC" EntityType="EntidadesServicioalCliente.Store.SeguimientoSolicitud_SAC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Solicitud_SAC" EntityType="EntidadesServicioalCliente.Store.Solicitud_SAC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SolicitudEstados_SAC" EntityType="EntidadesServicioalCliente.Store.SolicitudEstados_SAC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubTipoSolicitud_SAC" EntityType="EntidadesServicioalCliente.Store.SubTipoSolicitud_SAC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoSeguimientoSolicitud_SAC" EntityType="EntidadesServicioalCliente.Store.TipoSeguimientoSolicitud_SAC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TipoSolicitud_SAC" EntityType="EntidadesServicioalCliente.Store.TipoSolicitud_SAC" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_SeguimientoSolicitud_SAC_Solicitud_SAC" Association="EntidadesServicioalCliente.Store.FK_SeguimientoSolicitud_SAC_Solicitud_SAC">
+            <End Role="Solicitud_SAC" EntitySet="Solicitud_SAC" />
+            <End Role="SeguimientoSolicitud_SAC" EntitySet="SeguimientoSolicitud_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC" Association="EntidadesServicioalCliente.Store.FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC">
+            <End Role="TipoSeguimientoSolicitud_SAC" EntitySet="TipoSeguimientoSolicitud_SAC" />
+            <End Role="SeguimientoSolicitud_SAC" EntitySet="SeguimientoSolicitud_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC" Association="EntidadesServicioalCliente.Store.FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC">
+            <End Role="MedioRecepcionSolicitud_SAC" EntitySet="MedioRecepcionSolicitud_SAC" />
+            <End Role="Solicitud_SAC" EntitySet="Solicitud_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Solicitud_SAC_SubTipoSolicitud_SAC" Association="EntidadesServicioalCliente.Store.FK_Solicitud_SAC_SubTipoSolicitud_SAC">
+            <End Role="SubTipoSolicitud_SAC" EntitySet="SubTipoSolicitud_SAC" />
+            <End Role="Solicitud_SAC" EntitySet="Solicitud_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SolicitudEstados_SAC_EstadoSolicitud_SAC" Association="EntidadesServicioalCliente.Store.FK_SolicitudEstados_SAC_EstadoSolicitud_SAC">
+            <End Role="EstadosSolicitud_SAC" EntitySet="EstadosSolicitud_SAC" />
+            <End Role="SolicitudEstados_SAC" EntitySet="SolicitudEstados_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SolicitudEstados_SAC_Solicitud_SAC" Association="EntidadesServicioalCliente.Store.FK_SolicitudEstados_SAC_Solicitud_SAC">
+            <End Role="Solicitud_SAC" EntitySet="Solicitud_SAC" />
+            <End Role="SolicitudEstados_SAC" EntitySet="SolicitudEstados_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC" Association="EntidadesServicioalCliente.Store.FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC">
+            <End Role="TipoSolicitud_SAC" EntitySet="TipoSolicitud_SAC" />
+            <End Role="SubTipoSolicitud_SAC" EntitySet="SubTipoSolicitud_SAC" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="EstadosSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="ESO_IdEstado" />
+          </Key>
+          <Property Name="ESO_IdEstado" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ESO_Descripción" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ESO_OrdenEstado" Type="tinyint" Nullable="false" />
+          <Property Name="ESO_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="ESO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MedioRecepcionSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="MRS_IdMedio" />
+          </Key>
+          <Property Name="MRS_IdMedio" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MRS_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MRS_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="MRS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SeguimientoSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="SSO_IdSeguimiento" />
+          </Key>
+          <Property Name="SSO_IdSeguimiento" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SSO_IdSolicitud" Type="bigint" Nullable="false" />
+          <Property Name="SSO_IdTipoSeguimiento" Type="tinyint" Nullable="false" />
+          <Property Name="SSO_Descripcion" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="SSO_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="SSO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Solicitud_SAC">
+          <Key>
+            <PropertyRef Name="SOL_IdSolicitud" />
+          </Key>
+          <Property Name="SOL_IdSolicitud" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SOL_NumeroGuia" Type="bigint" Nullable="false" />
+          <Property Name="SOL_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="SOL_IdMedioRecepSolicitud" Type="tinyint" Nullable="false" />
+          <Property Name="SOL_IdTipoSolicitud" Type="tinyint" Nullable="false" />
+          <Property Name="SOL_IdSubtipoSolicitud" Type="tinyint" Nullable="false" />
+          <Property Name="SOL_Descripcion" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="SOL_NombreReclamante" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SOL_TelefonoReclamante" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="SOL_FaxReclamante" Type="varchar" MaxLength="25" />
+          <Property Name="SOL_DireccionReclamante" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="SOL_EmailReclamante" Type="varchar" MaxLength="100" />
+          <Property Name="SOL_FechaRadicacion" Type="datetime" />
+          <Property Name="SOL_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="SOL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SolicitudEstados_SAC">
+          <Key>
+            <PropertyRef Name="SES_IdEstadoSolicitud" />
+          </Key>
+          <Property Name="SES_IdEstadoSolicitud" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SES_IdSolicitud" Type="bigint" Nullable="false" />
+          <Property Name="SES_IdEstado" Type="tinyint" Nullable="false" />
+          <Property Name="SES_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="SES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SubTipoSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="STS_IdSubTipoSolicitud" />
+          </Key>
+          <Property Name="STS_IdSubTipoSolicitud" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="STS_IdTipoSolicitud" Type="tinyint" Nullable="false" />
+          <Property Name="STS_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="STS_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="STS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TipoSeguimientoSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="TSS_IdTipoSeguimiento" />
+          </Key>
+          <Property Name="TSS_IdTipoSeguimiento" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TSS_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TSS_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="TSS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TipoSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="TIS_IdTipoSolicitud" />
+          </Key>
+          <Property Name="TIS_IdTipoSolicitud" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TIS_Descripción" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TIS_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="TIS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_SeguimientoSolicitud_SAC_Solicitud_SAC">
+          <End Role="Solicitud_SAC" Type="EntidadesServicioalCliente.Store.Solicitud_SAC" Multiplicity="1" />
+          <End Role="SeguimientoSolicitud_SAC" Type="EntidadesServicioalCliente.Store.SeguimientoSolicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solicitud_SAC">
+              <PropertyRef Name="SOL_IdSolicitud" />
+            </Principal>
+            <Dependent Role="SeguimientoSolicitud_SAC">
+              <PropertyRef Name="SSO_IdSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC">
+          <End Role="TipoSeguimientoSolicitud_SAC" Type="EntidadesServicioalCliente.Store.TipoSeguimientoSolicitud_SAC" Multiplicity="1" />
+          <End Role="SeguimientoSolicitud_SAC" Type="EntidadesServicioalCliente.Store.SeguimientoSolicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoSeguimientoSolicitud_SAC">
+              <PropertyRef Name="TSS_IdTipoSeguimiento" />
+            </Principal>
+            <Dependent Role="SeguimientoSolicitud_SAC">
+              <PropertyRef Name="SSO_IdTipoSeguimiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC">
+          <End Role="MedioRecepcionSolicitud_SAC" Type="EntidadesServicioalCliente.Store.MedioRecepcionSolicitud_SAC" Multiplicity="1" />
+          <End Role="Solicitud_SAC" Type="EntidadesServicioalCliente.Store.Solicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MedioRecepcionSolicitud_SAC">
+              <PropertyRef Name="MRS_IdMedio" />
+            </Principal>
+            <Dependent Role="Solicitud_SAC">
+              <PropertyRef Name="SOL_IdMedioRecepSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Solicitud_SAC_SubTipoSolicitud_SAC">
+          <End Role="SubTipoSolicitud_SAC" Type="EntidadesServicioalCliente.Store.SubTipoSolicitud_SAC" Multiplicity="1" />
+          <End Role="Solicitud_SAC" Type="EntidadesServicioalCliente.Store.Solicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubTipoSolicitud_SAC">
+              <PropertyRef Name="STS_IdSubTipoSolicitud" />
+            </Principal>
+            <Dependent Role="Solicitud_SAC">
+              <PropertyRef Name="SOL_IdSubtipoSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SolicitudEstados_SAC_EstadoSolicitud_SAC">
+          <End Role="EstadosSolicitud_SAC" Type="EntidadesServicioalCliente.Store.EstadosSolicitud_SAC" Multiplicity="1" />
+          <End Role="SolicitudEstados_SAC" Type="EntidadesServicioalCliente.Store.SolicitudEstados_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadosSolicitud_SAC">
+              <PropertyRef Name="ESO_IdEstado" />
+            </Principal>
+            <Dependent Role="SolicitudEstados_SAC">
+              <PropertyRef Name="SES_IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SolicitudEstados_SAC_Solicitud_SAC">
+          <End Role="Solicitud_SAC" Type="EntidadesServicioalCliente.Store.Solicitud_SAC" Multiplicity="1" />
+          <End Role="SolicitudEstados_SAC" Type="EntidadesServicioalCliente.Store.SolicitudEstados_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solicitud_SAC">
+              <PropertyRef Name="SOL_IdSolicitud" />
+            </Principal>
+            <Dependent Role="SolicitudEstados_SAC">
+              <PropertyRef Name="SES_IdSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC">
+          <End Role="TipoSolicitud_SAC" Type="EntidadesServicioalCliente.Store.TipoSolicitud_SAC" Multiplicity="1" />
+          <End Role="SubTipoSolicitud_SAC" Type="EntidadesServicioalCliente.Store.SubTipoSolicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoSolicitud_SAC">
+              <PropertyRef Name="TIS_IdTipoSolicitud" />
+            </Principal>
+            <Dependent Role="SubTipoSolicitud_SAC">
+              <PropertyRef Name="STS_IdTipoSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModeloServicioalClienteNS" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EntidadesServicioalCliente" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="MedioRecepcionSolicitud_SAC" EntityType="ModeloServicioalClienteNS.MedioRecepcionSolicitud_SAC" />
+          <EntitySet Name="SeguimientoSolicitud_SAC" EntityType="ModeloServicioalClienteNS.SeguimientoSolicitud_SAC" />
+          <EntitySet Name="SolicitudEstados_SAC" EntityType="ModeloServicioalClienteNS.SolicitudEstados_SAC" />
+          <EntitySet Name="SubTipoSolicitud_SAC" EntityType="ModeloServicioalClienteNS.SubTipoSolicitud_SAC" />
+          <EntitySet Name="TipoSeguimientoSolicitud_SAC" EntityType="ModeloServicioalClienteNS.TipoSeguimientoSolicitud_SAC" />
+          <EntitySet Name="TipoSolicitud_SAC" EntityType="ModeloServicioalClienteNS.TipoSolicitud_SAC" />
+          <AssociationSet Name="FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC" Association="ModeloServicioalClienteNS.FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC">
+            <End Role="TipoSeguimientoSolicitud_SAC" EntitySet="TipoSeguimientoSolicitud_SAC" />
+            <End Role="SeguimientoSolicitud_SAC" EntitySet="SeguimientoSolicitud_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC" Association="ModeloServicioalClienteNS.FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC">
+            <End Role="TipoSolicitud_SAC" EntitySet="TipoSolicitud_SAC" />
+            <End Role="SubTipoSolicitud_SAC" EntitySet="SubTipoSolicitud_SAC" />
+          </AssociationSet>
+          <EntitySet Name="EstadosSolicitud_SAC" EntityType="ModeloServicioalClienteNS.EstadosSolicitud_SAC" />
+          <EntitySet Name="Solicitud_SAC" EntityType="ModeloServicioalClienteNS.Solicitud_SAC" />
+          <AssociationSet Name="FK_SolicitudEstados_SAC_EstadoSolicitud_SAC" Association="ModeloServicioalClienteNS.FK_SolicitudEstados_SAC_EstadoSolicitud_SAC">
+            <End Role="EstadosSolicitud_SAC" EntitySet="EstadosSolicitud_SAC" />
+            <End Role="SolicitudEstados_SAC" EntitySet="SolicitudEstados_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC" Association="ModeloServicioalClienteNS.FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC">
+            <End Role="MedioRecepcionSolicitud_SAC" EntitySet="MedioRecepcionSolicitud_SAC" />
+            <End Role="Solicitud_SAC" EntitySet="Solicitud_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SeguimientoSolicitud_SAC_Solicitud_SAC" Association="ModeloServicioalClienteNS.FK_SeguimientoSolicitud_SAC_Solicitud_SAC">
+            <End Role="Solicitud_SAC" EntitySet="Solicitud_SAC" />
+            <End Role="SeguimientoSolicitud_SAC" EntitySet="SeguimientoSolicitud_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Solicitud_SAC_SubTipoSolicitud_SAC" Association="ModeloServicioalClienteNS.FK_Solicitud_SAC_SubTipoSolicitud_SAC">
+            <End Role="SubTipoSolicitud_SAC" EntitySet="SubTipoSolicitud_SAC" />
+            <End Role="Solicitud_SAC" EntitySet="Solicitud_SAC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SolicitudEstados_SAC_Solicitud_SAC" Association="ModeloServicioalClienteNS.FK_SolicitudEstados_SAC_Solicitud_SAC">
+            <End Role="Solicitud_SAC" EntitySet="Solicitud_SAC" />
+            <End Role="SolicitudEstados_SAC" EntitySet="SolicitudEstados_SAC" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MedioRecepcionSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="MRS_IdMedio" />
+          </Key>
+          <Property Type="Byte" Name="MRS_IdMedio" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MRS_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MRS_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="MRS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Solicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC" FromRole="MedioRecepcionSolicitud_SAC" ToRole="Solicitud_SAC" />
+        </EntityType>
+        <EntityType Name="SeguimientoSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="SSO_IdSeguimiento" />
+          </Key>
+          <Property Type="Int64" Name="SSO_IdSeguimiento" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="SSO_IdSolicitud" Nullable="false" />
+          <Property Type="Byte" Name="SSO_IdTipoSeguimiento" Nullable="false" />
+          <Property Type="String" Name="SSO_Descripcion" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SSO_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="SSO_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TipoSeguimientoSolicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC" FromRole="SeguimientoSolicitud_SAC" ToRole="TipoSeguimientoSolicitud_SAC" />
+          <NavigationProperty Name="Solicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_SeguimientoSolicitud_SAC_Solicitud_SAC" FromRole="SeguimientoSolicitud_SAC" ToRole="Solicitud_SAC" />
+        </EntityType>
+        <EntityType Name="SolicitudEstados_SAC">
+          <Key>
+            <PropertyRef Name="SES_IdEstadoSolicitud" />
+          </Key>
+          <Property Type="Int64" Name="SES_IdSolicitud" Nullable="false" />
+          <Property Type="Byte" Name="SES_IdEstado" Nullable="false" />
+          <Property Type="DateTime" Name="SES_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="SES_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EstadosSolicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_SolicitudEstados_SAC_EstadoSolicitud_SAC" FromRole="SolicitudEstados_SAC" ToRole="EstadosSolicitud_SAC" />
+          <NavigationProperty Name="Solicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_SolicitudEstados_SAC_Solicitud_SAC" FromRole="SolicitudEstados_SAC" ToRole="Solicitud_SAC" />
+          <Property Type="Int64" Name="SES_IdEstadoSolicitud" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="SubTipoSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="STS_IdSubTipoSolicitud" />
+          </Key>
+          <Property Type="Byte" Name="STS_IdSubTipoSolicitud" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Byte" Name="STS_IdTipoSolicitud" Nullable="false" />
+          <Property Type="String" Name="STS_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="STS_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="STS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TipoSolicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC" FromRole="SubTipoSolicitud_SAC" ToRole="TipoSolicitud_SAC" />
+          <NavigationProperty Name="Solicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_Solicitud_SAC_SubTipoSolicitud_SAC" FromRole="SubTipoSolicitud_SAC" ToRole="Solicitud_SAC" />
+        </EntityType>
+        <EntityType Name="TipoSeguimientoSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="TSS_IdTipoSeguimiento" />
+          </Key>
+          <Property Type="Byte" Name="TSS_IdTipoSeguimiento" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TSS_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TSS_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="TSS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SeguimientoSolicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC" FromRole="TipoSeguimientoSolicitud_SAC" ToRole="SeguimientoSolicitud_SAC" />
+        </EntityType>
+        <EntityType Name="TipoSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="TIS_IdTipoSolicitud" />
+          </Key>
+          <Property Type="Byte" Name="TIS_IdTipoSolicitud" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TIS_Descripción" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TIS_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="TIS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SubTipoSolicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC" FromRole="TipoSolicitud_SAC" ToRole="SubTipoSolicitud_SAC" />
+        </EntityType>
+        <Association Name="FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC">
+          <End Type="ModeloServicioalClienteNS.TipoSeguimientoSolicitud_SAC" Role="TipoSeguimientoSolicitud_SAC" Multiplicity="1" />
+          <End Type="ModeloServicioalClienteNS.SeguimientoSolicitud_SAC" Role="SeguimientoSolicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoSeguimientoSolicitud_SAC">
+              <PropertyRef Name="TSS_IdTipoSeguimiento" />
+            </Principal>
+            <Dependent Role="SeguimientoSolicitud_SAC">
+              <PropertyRef Name="SSO_IdTipoSeguimiento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC">
+          <End Type="ModeloServicioalClienteNS.TipoSolicitud_SAC" Role="TipoSolicitud_SAC" Multiplicity="1" />
+          <End Type="ModeloServicioalClienteNS.SubTipoSolicitud_SAC" Role="SubTipoSolicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoSolicitud_SAC">
+              <PropertyRef Name="TIS_IdTipoSolicitud" />
+            </Principal>
+            <Dependent Role="SubTipoSolicitud_SAC">
+              <PropertyRef Name="STS_IdTipoSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="EstadosSolicitud_SAC">
+          <Key>
+            <PropertyRef Name="ESO_IdEstado" />
+          </Key>
+          <Property Type="Byte" Name="ESO_IdEstado" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ESO_Descripción" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="ESO_OrdenEstado" Nullable="false" />
+          <Property Type="DateTime" Name="ESO_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ESO_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SolicitudEstados_SAC" Relationship="ModeloServicioalClienteNS.FK_SolicitudEstados_SAC_EstadoSolicitud_SAC" FromRole="EstadosSolicitud_SAC" ToRole="SolicitudEstados_SAC" />
+        </EntityType>
+        <EntityType Name="Solicitud_SAC">
+          <Key>
+            <PropertyRef Name="SOL_IdSolicitud" />
+          </Key>
+          <Property Type="Int64" Name="SOL_IdSolicitud" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="SOL_NumeroGuia" Nullable="false" />
+          <Property Type="String" Name="SOL_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="SOL_IdMedioRecepSolicitud" Nullable="false" />
+          <Property Type="Byte" Name="SOL_IdTipoSolicitud" Nullable="false" />
+          <Property Type="Byte" Name="SOL_IdSubtipoSolicitud" Nullable="false" />
+          <Property Type="String" Name="SOL_Descripcion" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOL_NombreReclamante" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOL_TelefonoReclamante" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOL_FaxReclamante" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOL_DireccionReclamante" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOL_EmailReclamante" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SOL_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="SOL_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MedioRecepcionSolicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC" FromRole="Solicitud_SAC" ToRole="MedioRecepcionSolicitud_SAC" />
+          <NavigationProperty Name="SeguimientoSolicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_SeguimientoSolicitud_SAC_Solicitud_SAC" FromRole="Solicitud_SAC" ToRole="SeguimientoSolicitud_SAC" />
+          <NavigationProperty Name="SubTipoSolicitud_SAC" Relationship="ModeloServicioalClienteNS.FK_Solicitud_SAC_SubTipoSolicitud_SAC" FromRole="Solicitud_SAC" ToRole="SubTipoSolicitud_SAC" />
+          <NavigationProperty Name="SolicitudEstados_SAC" Relationship="ModeloServicioalClienteNS.FK_SolicitudEstados_SAC_Solicitud_SAC" FromRole="Solicitud_SAC" ToRole="SolicitudEstados_SAC" />
+          <Property Type="DateTime" Name="SOL_FechaRadicacion" Precision="3" />
+        </EntityType>
+        <Association Name="FK_SolicitudEstados_SAC_EstadoSolicitud_SAC">
+          <End Type="ModeloServicioalClienteNS.EstadosSolicitud_SAC" Role="EstadosSolicitud_SAC" Multiplicity="1" />
+          <End Type="ModeloServicioalClienteNS.SolicitudEstados_SAC" Role="SolicitudEstados_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EstadosSolicitud_SAC">
+              <PropertyRef Name="ESO_IdEstado" />
+            </Principal>
+            <Dependent Role="SolicitudEstados_SAC">
+              <PropertyRef Name="SES_IdEstado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC">
+          <End Type="ModeloServicioalClienteNS.MedioRecepcionSolicitud_SAC" Role="MedioRecepcionSolicitud_SAC" Multiplicity="1" />
+          <End Type="ModeloServicioalClienteNS.Solicitud_SAC" Role="Solicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MedioRecepcionSolicitud_SAC">
+              <PropertyRef Name="MRS_IdMedio" />
+            </Principal>
+            <Dependent Role="Solicitud_SAC">
+              <PropertyRef Name="SOL_IdMedioRecepSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SeguimientoSolicitud_SAC_Solicitud_SAC">
+          <End Type="ModeloServicioalClienteNS.Solicitud_SAC" Role="Solicitud_SAC" Multiplicity="1" />
+          <End Type="ModeloServicioalClienteNS.SeguimientoSolicitud_SAC" Role="SeguimientoSolicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solicitud_SAC">
+              <PropertyRef Name="SOL_IdSolicitud" />
+            </Principal>
+            <Dependent Role="SeguimientoSolicitud_SAC">
+              <PropertyRef Name="SSO_IdSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Solicitud_SAC_SubTipoSolicitud_SAC">
+          <End Type="ModeloServicioalClienteNS.SubTipoSolicitud_SAC" Role="SubTipoSolicitud_SAC" Multiplicity="1" />
+          <End Type="ModeloServicioalClienteNS.Solicitud_SAC" Role="Solicitud_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubTipoSolicitud_SAC">
+              <PropertyRef Name="STS_IdSubTipoSolicitud" />
+            </Principal>
+            <Dependent Role="Solicitud_SAC">
+              <PropertyRef Name="SOL_IdSubtipoSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SolicitudEstados_SAC_Solicitud_SAC">
+          <End Type="ModeloServicioalClienteNS.Solicitud_SAC" Role="Solicitud_SAC" Multiplicity="1" />
+          <End Type="ModeloServicioalClienteNS.SolicitudEstados_SAC" Role="SolicitudEstados_SAC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Solicitud_SAC">
+              <PropertyRef Name="SOL_IdSolicitud" />
+            </Principal>
+            <Dependent Role="SolicitudEstados_SAC">
+              <PropertyRef Name="SES_IdSolicitud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EntidadesServicioalClienteStoreContainer" CdmEntityContainer="EntidadesServicioalCliente" >
+          <EntitySetMapping Name="MedioRecepcionSolicitud_SAC">
+            <EntityTypeMapping TypeName="ModeloServicioalClienteNS.MedioRecepcionSolicitud_SAC">
+              <MappingFragment StoreEntitySet="MedioRecepcionSolicitud_SAC">
+                <ScalarProperty Name="MRS_CreadoPor" ColumnName="MRS_CreadoPor" />
+                <ScalarProperty Name="MRS_FechaGrabacion" ColumnName="MRS_FechaGrabacion" />
+                <ScalarProperty Name="MRS_Descripcion" ColumnName="MRS_Descripcion" />
+                <ScalarProperty Name="MRS_IdMedio" ColumnName="MRS_IdMedio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SeguimientoSolicitud_SAC">
+            <EntityTypeMapping TypeName="ModeloServicioalClienteNS.SeguimientoSolicitud_SAC">
+              <MappingFragment StoreEntitySet="SeguimientoSolicitud_SAC">
+                <ScalarProperty Name="SSO_CreadoPor" ColumnName="SSO_CreadoPor" />
+                <ScalarProperty Name="SSO_FechaGrabacion" ColumnName="SSO_FechaGrabacion" />
+                <ScalarProperty Name="SSO_Descripcion" ColumnName="SSO_Descripcion" />
+                <ScalarProperty Name="SSO_IdTipoSeguimiento" ColumnName="SSO_IdTipoSeguimiento" />
+                <ScalarProperty Name="SSO_IdSolicitud" ColumnName="SSO_IdSolicitud" />
+                <ScalarProperty Name="SSO_IdSeguimiento" ColumnName="SSO_IdSeguimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SolicitudEstados_SAC">
+            <EntityTypeMapping TypeName="ModeloServicioalClienteNS.SolicitudEstados_SAC">
+              <MappingFragment StoreEntitySet="SolicitudEstados_SAC">
+                <ScalarProperty Name="SES_IdEstadoSolicitud" ColumnName="SES_IdEstadoSolicitud" />
+                <ScalarProperty Name="SES_CreadoPor" ColumnName="SES_CreadoPor" />
+                <ScalarProperty Name="SES_FechaGrabacion" ColumnName="SES_FechaGrabacion" />
+                <ScalarProperty Name="SES_IdEstado" ColumnName="SES_IdEstado" />
+                <ScalarProperty Name="SES_IdSolicitud" ColumnName="SES_IdSolicitud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubTipoSolicitud_SAC">
+            <EntityTypeMapping TypeName="ModeloServicioalClienteNS.SubTipoSolicitud_SAC">
+              <MappingFragment StoreEntitySet="SubTipoSolicitud_SAC">
+                <ScalarProperty Name="STS_CreadoPor" ColumnName="STS_CreadoPor" />
+                <ScalarProperty Name="STS_FechaGrabacion" ColumnName="STS_FechaGrabacion" />
+                <ScalarProperty Name="STS_Descripcion" ColumnName="STS_Descripcion" />
+                <ScalarProperty Name="STS_IdTipoSolicitud" ColumnName="STS_IdTipoSolicitud" />
+                <ScalarProperty Name="STS_IdSubTipoSolicitud" ColumnName="STS_IdSubTipoSolicitud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoSeguimientoSolicitud_SAC">
+            <EntityTypeMapping TypeName="ModeloServicioalClienteNS.TipoSeguimientoSolicitud_SAC">
+              <MappingFragment StoreEntitySet="TipoSeguimientoSolicitud_SAC">
+                <ScalarProperty Name="TSS_CreadoPor" ColumnName="TSS_CreadoPor" />
+                <ScalarProperty Name="TSS_FechaGrabacion" ColumnName="TSS_FechaGrabacion" />
+                <ScalarProperty Name="TSS_Descripcion" ColumnName="TSS_Descripcion" />
+                <ScalarProperty Name="TSS_IdTipoSeguimiento" ColumnName="TSS_IdTipoSeguimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoSolicitud_SAC">
+            <EntityTypeMapping TypeName="ModeloServicioalClienteNS.TipoSolicitud_SAC">
+              <MappingFragment StoreEntitySet="TipoSolicitud_SAC">
+                <ScalarProperty Name="TIS_CreadoPor" ColumnName="TIS_CreadoPor" />
+                <ScalarProperty Name="TIS_FechaGrabacion" ColumnName="TIS_FechaGrabacion" />
+                <ScalarProperty Name="TIS_Descripción" ColumnName="TIS_Descripción" />
+                <ScalarProperty Name="TIS_IdTipoSolicitud" ColumnName="TIS_IdTipoSolicitud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstadosSolicitud_SAC">
+            <EntityTypeMapping TypeName="ModeloServicioalClienteNS.EstadosSolicitud_SAC">
+              <MappingFragment StoreEntitySet="EstadosSolicitud_SAC">
+                <ScalarProperty Name="ESO_CreadoPor" ColumnName="ESO_CreadoPor" />
+                <ScalarProperty Name="ESO_FechaGrabacion" ColumnName="ESO_FechaGrabacion" />
+                <ScalarProperty Name="ESO_OrdenEstado" ColumnName="ESO_OrdenEstado" />
+                <ScalarProperty Name="ESO_Descripción" ColumnName="ESO_Descripción" />
+                <ScalarProperty Name="ESO_IdEstado" ColumnName="ESO_IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Solicitud_SAC">
+            <EntityTypeMapping TypeName="ModeloServicioalClienteNS.Solicitud_SAC">
+              <MappingFragment StoreEntitySet="Solicitud_SAC">
+                <ScalarProperty Name="SOL_FechaRadicacion" ColumnName="SOL_FechaRadicacion" />
+                <ScalarProperty Name="SOL_CreadoPor" ColumnName="SOL_CreadoPor" />
+                <ScalarProperty Name="SOL_FechaGrabacion" ColumnName="SOL_FechaGrabacion" />
+                <ScalarProperty Name="SOL_EmailReclamante" ColumnName="SOL_EmailReclamante" />
+                <ScalarProperty Name="SOL_DireccionReclamante" ColumnName="SOL_DireccionReclamante" />
+                <ScalarProperty Name="SOL_FaxReclamante" ColumnName="SOL_FaxReclamante" />
+                <ScalarProperty Name="SOL_TelefonoReclamante" ColumnName="SOL_TelefonoReclamante" />
+                <ScalarProperty Name="SOL_NombreReclamante" ColumnName="SOL_NombreReclamante" />
+                <ScalarProperty Name="SOL_Descripcion" ColumnName="SOL_Descripcion" />
+                <ScalarProperty Name="SOL_IdSubtipoSolicitud" ColumnName="SOL_IdSubtipoSolicitud" />
+                <ScalarProperty Name="SOL_IdTipoSolicitud" ColumnName="SOL_IdTipoSolicitud" />
+                <ScalarProperty Name="SOL_IdMedioRecepSolicitud" ColumnName="SOL_IdMedioRecepSolicitud" />
+                <ScalarProperty Name="SOL_IdLocalidad" ColumnName="SOL_IdLocalidad" />
+                <ScalarProperty Name="SOL_NumeroGuia" ColumnName="SOL_NumeroGuia" />
+                <ScalarProperty Name="SOL_IdSolicitud" ColumnName="SOL_IdSolicitud" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloServicioalCliente" >
+        <EntityTypeShape EntityType="ModeloServicioalClienteNS.MedioRecepcionSolicitud_SAC" Width="1.5" PointX="1.375" PointY="4.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ModeloServicioalClienteNS.SeguimientoSolicitud_SAC" Width="1.5" PointX="4" PointY="3.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="ModeloServicioalClienteNS.SolicitudEstados_SAC" Width="1.5" PointX="4" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloServicioalClienteNS.SubTipoSolicitud_SAC" Width="1.5" PointX="7.125" PointY="4.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="ModeloServicioalClienteNS.TipoSeguimientoSolicitud_SAC" Width="1.5" PointX="5.625" PointY="2.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="ModeloServicioalClienteNS.TipoSolicitud_SAC" Width="1.5" PointX="7.125" PointY="5.25" IsExpanded="false" />
+        <AssociationConnector Association="ModeloServicioalClienteNS.FK_SeguimientoSolicitud_SAC_TipoSeguimientoSolicitud_SAC" />
+        <AssociationConnector Association="ModeloServicioalClienteNS.FK_SubTipoSolicitud_SAC_TipoSolicitud_SAC" />
+        <EntityTypeShape EntityType="ModeloServicioalClienteNS.EstadosSolicitud_SAC" Width="1.5" PointX="1.375" PointY="5.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="ModeloServicioalClienteNS.Solicitud_SAC" Width="1.5" PointX="4" PointY="4.25" IsExpanded="false" />
+        <AssociationConnector Association="ModeloServicioalClienteNS.FK_SolicitudEstados_SAC_EstadoSolicitud_SAC" />
+        <AssociationConnector Association="ModeloServicioalClienteNS.FK_Solicitud_SAC_MedioRecepcionSolicitud_SAC" />
+        <AssociationConnector Association="ModeloServicioalClienteNS.FK_SeguimientoSolicitud_SAC_Solicitud_SAC" />
+        <AssociationConnector Association="ModeloServicioalClienteNS.FK_Solicitud_SAC_SubTipoSolicitud_SAC" />
+        <AssociationConnector Association="ModeloServicioalClienteNS.FK_SolicitudEstados_SAC_Solicitud_SAC" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

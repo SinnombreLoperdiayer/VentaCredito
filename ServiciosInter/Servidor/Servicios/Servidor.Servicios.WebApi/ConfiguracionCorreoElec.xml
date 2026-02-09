@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InformacionSMTP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Remitente>controller@interrapidisimo.com</Remitente>
+  <DisplayRemitente>Controller</DisplayRemitente>
+  <PasswordRemitente>A51573m452014d</PasswordRemitente>
+  <Host>correo.interrapidisimo.com</Host>
+  <Port>587</Port>
+  <EnableSsl>true</EnableSsl>
+  <DeliveryMethod>Network</DeliveryMethod>
+  <UseDefaultCredentials>true</UseDefaultCredentials>
+</InformacionSMTP>
+
+<!--<InformacionSMTP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Remitente>controllogis@gmail.com</Remitente>
+  <DisplayRemitente>Controller</DisplayRemitente>
+  <PasswordRemitente>c0ntr0ll3r</PasswordRemitente>
+  <Host>smtp.gmail.com</Host>
+  <Port>587</Port>
+  <EnableSsl>true</EnableSsl>
+  <DeliveryMethod>Network</DeliveryMethod>
+  <UseDefaultCredentials>false</UseDefaultCredentials>
+</InformacionSMTP>-->
+
+<!--
+<InformacionSMTP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Remitente>controllogisdesarrollo@gmail.com</Remitente>
+  <DisplayRemitente>Controller</DisplayRemitente>
+  <PasswordRemitente>$3m4ilc0ntr0ll3r123</PasswordRemitente>
+  <Host>smtp.gmail.com</Host>
+  <Port>587</Port>
+  <EnableSsl>true</EnableSsl>
+  <DeliveryMethod>Network</DeliveryMethod>
+  <UseDefaultCredentials>false</UseDefaultCredentials>
+</InformacionSMTP>-->
+
+<!--<Host>mail.interrapidisimo.com</Host>-->

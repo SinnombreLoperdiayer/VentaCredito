@@ -1,0 +1,2962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DESARROLLOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DESARROLLOModelStoreContainer">
+    <EntitySet Name="CampoTipoValorAdicional_TAR" EntityType="DESARROLLOModel.Store.CampoTipoValorAdicional_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContabilizacionServicioFormaPago_TAR" EntityType="DESARROLLOModel.Store.ContabilizacionServicioFormaPago_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CuentaExterna_PAR" EntityType="DESARROLLOModel.Store.CuentaExterna_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FormasPago_TAR" EntityType="DESARROLLOModel.Store.FormasPago_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Impuesto_TAR" EntityType="DESARROLLOModel.Store.Impuesto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ListaPrecios_TAR" EntityType="DESARROLLOModel.Store.ListaPrecios_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ListaPrecioServicio_TAR" EntityType="DESARROLLOModel.Store.ListaPrecioServicio_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ListaPrecioServicioHist_TAR" EntityType="DESARROLLOModel.Store.ListaPrecioServicioHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ListaPreciosHist_TAR" EntityType="DESARROLLOModel.Store.ListaPreciosHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidad_PAR" EntityType="DESARROLLOModel.Store.Localidad_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Moneda_TAR" EntityType="DESARROLLOModel.Store.Moneda_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OperadorPostal_PAR" EntityType="DESARROLLOModel.Store.OperadorPostal_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OperadorPostalZona_PAR" EntityType="DESARROLLOModel.Store.OperadorPostalZona_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParametrosTarifas_TAR" EntityType="DESARROLLOModel.Store.ParametrosTarifas_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioCentroCorrespondencia_TAR" EntityType="DESARROLLOModel.Store.PrecioCentroCorrespondencia_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioCentroCorresponHist_TAR" EntityType="DESARROLLOModel.Store.PrecioCentroCorresponHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioInternacional_TAR" EntityType="DESARROLLOModel.Store.PrecioInternacional_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioInternacionalHist_TAR" EntityType="DESARROLLOModel.Store.PrecioInternacionalHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioRango_TAR" EntityType="DESARROLLOModel.Store.PrecioRango_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioRangoHist_TAR" EntityType="DESARROLLOModel.Store.PrecioRangoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioServicioExcepcionTrayecto_TAR" EntityType="DESARROLLOModel.Store.PrecioServicioExcepcionTrayecto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioServicioExcepcionTrayectoHist_TAR" EntityType="DESARROLLOModel.Store.PrecioServicioExcepcionTrayectoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioSvExcepTrayRango_TAR" EntityType="DESARROLLOModel.Store.PrecioSvExcepTrayRango_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioSvExcTrayRangoHist_TAR" EntityType="DESARROLLOModel.Store.PrecioSvExcTrayRangoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTipoEntRango_TAR" EntityType="DESARROLLOModel.Store.PrecioTipoEntRango_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTipoEntrega_TAR" EntityType="DESARROLLOModel.Store.PrecioTipoEntrega_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTramite_TAR" EntityType="DESARROLLOModel.Store.PrecioTramite_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTramiteHist_TAR" EntityType="DESARROLLOModel.Store.PrecioTramiteHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTraSubTraVlrAdiHist_TAR" EntityType="DESARROLLOModel.Store.PrecioTraSubTraVlrAdiHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTrayecto_TAR" EntityType="DESARROLLOModel.Store.PrecioTrayecto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTrayectoHist_TAR" EntityType="DESARROLLOModel.Store.PrecioTrayectoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTrayectoRango_TAR" EntityType="DESARROLLOModel.Store.PrecioTrayectoRango_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTrayectoRangoHist_TAR" EntityType="DESARROLLOModel.Store.PrecioTrayectoRangoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioTrayeSubTraValorAdic_TAR" EntityType="DESARROLLOModel.Store.PrecioTrayeSubTraValorAdic_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioValorAdicional_TAR" EntityType="DESARROLLOModel.Store.PrecioValorAdicional_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PrecioValorAdicionalHist_TAR" EntityType="DESARROLLOModel.Store.PrecioValorAdicionalHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequisitoServicio_TAR" EntityType="DESARROLLOModel.Store.RequisitoServicio_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequisitoServicioHist_TAR" EntityType="DESARROLLOModel.Store.RequisitoServicioHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequisitoTramite_TAR" EntityType="DESARROLLOModel.Store.RequisitoTramite_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RequisitoTramiteHist_TAR" EntityType="DESARROLLOModel.Store.RequisitoTramiteHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Servicio_TAR" EntityType="DESARROLLOModel.Store.Servicio_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioCentroCorrespondencia_TAR" EntityType="DESARROLLOModel.Store.ServicioCentroCorrespondencia_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioCtroCorrespondHist_TAR" EntityType="DESARROLLOModel.Store.ServicioCtroCorrespondHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioExcepcionTrayeHist_TAR" EntityType="DESARROLLOModel.Store.ServicioExcepcionTrayeHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioFormaPago_TAR" EntityType="DESARROLLOModel.Store.ServicioFormaPago_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioFormaPagoHist_TAR" EntityType="DESARROLLOModel.Store.ServicioFormaPagoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioImpuesto_TAR" EntityType="DESARROLLOModel.Store.ServicioImpuesto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioImpuestoHist_TAR" EntityType="DESARROLLOModel.Store.ServicioImpuestoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioMensajeria_TAR" EntityType="DESARROLLOModel.Store.ServicioMensajeria_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioMensajeriaHist_TAR" EntityType="DESARROLLOModel.Store.ServicioMensajeriaHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioTrayecto_TAR" EntityType="DESARROLLOModel.Store.ServicioTrayecto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServicioTrayectoHist_TAR" EntityType="DESARROLLOModel.Store.ServicioTrayectoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TiempoEntrega_KOM" EntityType="DESARROLLOModel.Store.TiempoEntrega_KOM" store:Type="Tables" store:Schema="dbo" store:Name="TiempoEntrega_KOM">
+      <DefiningQuery>SELECT 
+      [TiempoEntrega_KOM].[TEK_IdLocalidad] AS [TEK_IdLocalidad], 
+      [TiempoEntrega_KOM].[TEK_Nombre] AS [TEK_Nombre], 
+      [TiempoEntrega_KOM].[TEK_TiempoEntrega] AS [TEK_TiempoEntrega]
+      FROM [dbo].[TiempoEntrega_KOM] AS [TiempoEntrega_KOM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TipoDestino_TAR" EntityType="DESARROLLOModel.Store.TipoDestino_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEmpaque_TAR" EntityType="DESARROLLOModel.Store.TipoEmpaque_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEntrega_MEN" EntityType="DESARROLLOModel.Store.TipoEntrega_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEnvio_TAR" EntityType="DESARROLLOModel.Store.TipoEnvio_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEnvioHist_TAR" EntityType="DESARROLLOModel.Store.TipoEnvioHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoSubTrayecto_TAR" EntityType="DESARROLLOModel.Store.TipoSubTrayecto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoSubTrayectoHist_TAR" EntityType="DESARROLLOModel.Store.TipoSubTrayectoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoTramite_TAR" EntityType="DESARROLLOModel.Store.TipoTramite_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoTrayecto_TAR" EntityType="DESARROLLOModel.Store.TipoTrayecto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoTrayectoHist_TAR" EntityType="DESARROLLOModel.Store.TipoTrayectoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoValorAdicional_TAR" EntityType="DESARROLLOModel.Store.TipoValorAdicional_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoValorAdicionalHist_TAR" EntityType="DESARROLLOModel.Store.TipoValorAdicionalHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tramite_TAR" EntityType="DESARROLLOModel.Store.Tramite_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TramiteHist_TAR" EntityType="DESARROLLOModel.Store.TramiteHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TramiteImpuesto_TAR" EntityType="DESARROLLOModel.Store.TramiteImpuesto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Trayecto_TAR" EntityType="DESARROLLOModel.Store.Trayecto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TrayectoHist_TAR" EntityType="DESARROLLOModel.Store.TrayectoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TrayectoSubTrayecto_TAR" EntityType="DESARROLLOModel.Store.TrayectoSubTrayecto_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnidadNegocio_TAR" EntityType="DESARROLLOModel.Store.UnidadNegocio_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ValorPesoDeclarado_TAR" EntityType="DESARROLLOModel.Store.ValorPesoDeclarado_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ValorPesoDeclaradoHist_TAR" EntityType="DESARROLLOModel.Store.ValorPesoDeclaradoHist_TAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Zona_PAR" EntityType="DESARROLLOModel.Store.Zona_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContabilizacionServicioFormaPago_VTAR" EntityType="DESARROLLOModel.Store.ContabilizacionServicioFormaPago_VTAR" store:Type="Views" store:Schema="dbo" store:Name="ContabilizacionServicioFormaPago_VTAR">
+      <DefiningQuery>SELECT 
+      [ContabilizacionServicioFormaPago_VTAR].[SER_IdServicio] AS [SER_IdServicio], 
+      [ContabilizacionServicioFormaPago_VTAR].[SER_Nombre] AS [SER_Nombre], 
+      [ContabilizacionServicioFormaPago_VTAR].[FOP_IdFormaPago] AS [FOP_IdFormaPago], 
+      [ContabilizacionServicioFormaPago_VTAR].[FOP_Descripcion] AS [FOP_Descripcion], 
+      [ContabilizacionServicioFormaPago_VTAR].[CSFP_VentasDebito] AS [CSFP_VentasDebito], 
+      [ContabilizacionServicioFormaPago_VTAR].[CSFP_VentasCredito] AS [CSFP_VentasCredito], 
+      [ContabilizacionServicioFormaPago_VTAR].[CSFP_EfectivasTipoDebidoDebito] AS [CSFP_EfectivasTipoDebidoDebito], 
+      [ContabilizacionServicioFormaPago_VTAR].[CSFP_EfectivasTipoDebitoCredito] AS [CSFP_EfectivasTipoDebitoCredito], 
+      [ContabilizacionServicioFormaPago_VTAR].[CSFP_EfectivasTipoCreditoDebito] AS [CSFP_EfectivasTipoCreditoDebito], 
+      [ContabilizacionServicioFormaPago_VTAR].[CSFP_EfectivasTipoCreditoCredito] AS [CSFP_EfectivasTipoCreditoCredito], 
+      [ContabilizacionServicioFormaPago_VTAR].[CSFP_IdContabilidadServicioPago] AS [CSFP_IdContabilidadServicioPago]
+      FROM [dbo].[ContabilizacionServicioFormaPago_VTAR] AS [ContabilizacionServicioFormaPago_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EstadoActivoInactivo_VFRM" EntityType="DESARROLLOModel.Store.EstadoActivoInactivo_VFRM" store:Type="Views" store:Schema="dbo" store:Name="EstadoActivoInactivo_VFRM">
+      <DefiningQuery>SELECT 
+      [EstadoActivoInactivo_VFRM].[IdEstado] AS [IdEstado], 
+      [EstadoActivoInactivo_VFRM].[Estado] AS [Estado]
+      FROM [dbo].[EstadoActivoInactivo_VFRM] AS [EstadoActivoInactivo_VFRM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ExcepcionTrayecto_VTAR" EntityType="DESARROLLOModel.Store.ExcepcionTrayecto_VTAR" store:Type="Views" store:Schema="dbo" store:Name="ExcepcionTrayecto_VTAR">
+      <DefiningQuery>SELECT 
+      [ExcepcionTrayecto_VTAR].[EXT_IdExcepionTrayecto] AS [EXT_IdExcepionTrayecto], 
+      [ExcepcionTrayecto_VTAR].[EXT_IdLocalidadOrigen] AS [EXT_IdLocalidadOrigen], 
+      [ExcepcionTrayecto_VTAR].[EXT_IdLocalidadDestino] AS [EXT_IdLocalidadDestino], 
+      [ExcepcionTrayecto_VTAR].[EXT_IdTrayectoSubTrayecto] AS [EXT_IdTrayectoSubTrayecto], 
+      [ExcepcionTrayecto_VTAR].[EXT_IdListaPrecios] AS [EXT_IdListaPrecios], 
+      [ExcepcionTrayecto_VTAR].[TRS_IdTipoSubTrayecto] AS [TRS_IdTipoSubTrayecto], 
+      [ExcepcionTrayecto_VTAR].[TRS_IdTipoTrayecto] AS [TRS_IdTipoTrayecto], 
+      [ExcepcionTrayecto_VTAR].[TST_Descripcion] AS [TST_Descripcion], 
+      [ExcepcionTrayecto_VTAR].[TTR_Descripcion] AS [TTR_Descripcion]
+      FROM [dbo].[ExcepcionTrayecto_VTAR] AS [ExcepcionTrayecto_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ExcepcionTrayectoLocalida_VTAR" EntityType="DESARROLLOModel.Store.ExcepcionTrayectoLocalida_VTAR" store:Type="Views" store:Schema="dbo" store:Name="ExcepcionTrayectoLocalida_VTAR">
+      <DefiningQuery>SELECT 
+      [ExcepcionTrayectoLocalida_VTAR].[EXT_IdPrecioTrayectoSubTrayect] AS [EXT_IdPrecioTrayectoSubTrayect], 
+      [ExcepcionTrayectoLocalida_VTAR].[EXT_IdLocalidadOrigen] AS [EXT_IdLocalidadOrigen], 
+      [ExcepcionTrayectoLocalida_VTAR].[EXT_TiempoEntrega] AS [EXT_TiempoEntrega], 
+      [ExcepcionTrayectoLocalida_VTAR].[LOC_IdTipo] AS [LOC_IdTipo], 
+      [ExcepcionTrayectoLocalida_VTAR].[LOC_Nombre] AS [LOC_Nombre], 
+      [ExcepcionTrayectoLocalida_VTAR].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [ExcepcionTrayectoLocalida_VTAR].[PTR_IdTrayectoSubTrayecto] AS [PTR_IdTrayectoSubTrayecto], 
+      [ExcepcionTrayectoLocalida_VTAR].[PTR_IdPrecioTrayectoSubTrayect] AS [PTR_IdPrecioTrayectoSubTrayect], 
+      [ExcepcionTrayectoLocalida_VTAR].[PTR_IdListaPrecioServicio] AS [PTR_IdListaPrecioServicio], 
+      [ExcepcionTrayectoLocalida_VTAR].[PTR_Valor] AS [PTR_Valor], 
+      [ExcepcionTrayectoLocalida_VTAR].[TRS_IdTrayectoSubTrayecto] AS [TRS_IdTrayectoSubTrayecto], 
+      [ExcepcionTrayectoLocalida_VTAR].[TRS_IdTipoSubTrayecto] AS [TRS_IdTipoSubTrayecto], 
+      [ExcepcionTrayectoLocalida_VTAR].[TRS_IdTipoTrayecto] AS [TRS_IdTipoTrayecto], 
+      [ExcepcionTrayectoLocalida_VTAR].[TST_Descripcion] AS [TST_Descripcion], 
+      [ExcepcionTrayectoLocalida_VTAR].[TTR_Descripcion] AS [TTR_Descripcion]
+      FROM [dbo].[ExcepcionTrayectoLocalida_VTAR] AS [ExcepcionTrayectoLocalida_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FormasPagoServicio_VTAR" EntityType="DESARROLLOModel.Store.FormasPagoServicio_VTAR" store:Type="Views" store:Schema="dbo" store:Name="FormasPagoServicio_VTAR">
+      <DefiningQuery>SELECT 
+      [FormasPagoServicio_VTAR].[SFP_IdServicio] AS [SFP_IdServicio], 
+      [FormasPagoServicio_VTAR].[SFP_IdFormaPago] AS [SFP_IdFormaPago], 
+      [FormasPagoServicio_VTAR].[FOP_Descripcion] AS [FOP_Descripcion], 
+      [FormasPagoServicio_VTAR].[FOP_AceptaMixto] AS [FOP_AceptaMixto], 
+      [FormasPagoServicio_VTAR].[SER_Nombre] AS [SER_Nombre]
+      FROM [dbo].[FormasPagoServicio_VTAR] AS [FormasPagoServicio_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ListaPrecioCampoValorAdd_VTAR" EntityType="DESARROLLOModel.Store.ListaPrecioCampoValorAdd_VTAR" store:Type="Views" store:Schema="dbo" store:Name="ListaPrecioCampoValorAdd_VTAR">
+      <DefiningQuery>SELECT 
+      [ListaPrecioCampoValorAdd_VTAR].[LPS_IdListaPrecioServicio] AS [LPS_IdListaPrecioServicio], 
+      [ListaPrecioCampoValorAdd_VTAR].[LPS_IdServicio] AS [LPS_IdServicio], 
+      [ListaPrecioCampoValorAdd_VTAR].[LPS_IdListaPrecios] AS [LPS_IdListaPrecios], 
+      [ListaPrecioCampoValorAdd_VTAR].[PVA_IdTipoValorAdicional] AS [PVA_IdTipoValorAdicional], 
+      [ListaPrecioCampoValorAdd_VTAR].[PVA_Valor] AS [PVA_Valor], 
+      [ListaPrecioCampoValorAdd_VTAR].[CTA_IdTipoValorAdicional] AS [CTA_IdTipoValorAdicional], 
+      [ListaPrecioCampoValorAdd_VTAR].[CTA_IdCampo] AS [CTA_IdCampo], 
+      [ListaPrecioCampoValorAdd_VTAR].[CTA_Display] AS [CTA_Display], 
+      [ListaPrecioCampoValorAdd_VTAR].[CTA_TipoDato] AS [CTA_TipoDato], 
+      [ListaPrecioCampoValorAdd_VTAR].[TVA_Descripcion] AS [TVA_Descripcion], 
+      [ListaPrecioCampoValorAdd_VTAR].[TVA_IdServicio] AS [TVA_IdServicio]
+      FROM [dbo].[ListaPrecioCampoValorAdd_VTAR] AS [ListaPrecioCampoValorAdd_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ListaPrecioSrvPrecioRango_VCLI" EntityType="DESARROLLOModel.Store.ListaPrecioSrvPrecioRango_VCLI" store:Type="Views" store:Schema="dbo" store:Name="ListaPrecioSrvPrecioRango_VCLI">
+      <DefiningQuery>SELECT 
+      [ListaPrecioSrvPrecioRango_VCLI].[LPS_IdListaPrecioServicio] AS [LPS_IdListaPrecioServicio], 
+      [ListaPrecioSrvPrecioRango_VCLI].[LPS_IdServicio] AS [LPS_IdServicio], 
+      [ListaPrecioSrvPrecioRango_VCLI].[LPS_IdListaPrecios] AS [LPS_IdListaPrecios], 
+      [ListaPrecioSrvPrecioRango_VCLI].[LPS_PrimaSeguros] AS [LPS_PrimaSeguros], 
+      [ListaPrecioSrvPrecioRango_VCLI].[PRA_IdListaPrecioServicio] AS [PRA_IdListaPrecioServicio], 
+      [ListaPrecioSrvPrecioRango_VCLI].[PRA_Inicial] AS [PRA_Inicial], 
+      [ListaPrecioSrvPrecioRango_VCLI].[PRA_Final] AS [PRA_Final], 
+      [ListaPrecioSrvPrecioRango_VCLI].[PRA_Valor] AS [PRA_Valor], 
+      [ListaPrecioSrvPrecioRango_VCLI].[PRA_Porcentaje] AS [PRA_Porcentaje], 
+      [ListaPrecioSrvPrecioRango_VCLI].[PRA_IdPrecioRango] AS [PRA_IdPrecioRango]
+      FROM [dbo].[ListaPrecioSrvPrecioRango_VCLI] AS [ListaPrecioSrvPrecioRango_VCLI]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Localidades_VPAR" EntityType="DESARROLLOModel.Store.Localidades_VPAR" store:Type="Views" store:Schema="dbo" store:Name="Localidades_VPAR">
+      <DefiningQuery>SELECT 
+      [Localidades_VPAR].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [Localidades_VPAR].[LOC_IdTipo] AS [LOC_IdTipo], 
+      [Localidades_VPAR].[TLO_Descripcion] AS [TLO_Descripcion], 
+      [Localidades_VPAR].[LOC_Nombre] AS [LOC_Nombre], 
+      [Localidades_VPAR].[LOC_NombreCorto] AS [LOC_NombreCorto], 
+      [Localidades_VPAR].[LOC_IdAncestroPrimerGrado] AS [LOC_IdAncestroPrimerGrado], 
+      [Localidades_VPAR].[LOC_IdTipoPrimero] AS [LOC_IdTipoPrimero], 
+      [Localidades_VPAR].[LOC_IdTipoPrimeroDesc] AS [LOC_IdTipoPrimeroDesc], 
+      [Localidades_VPAR].[LOC_NombrePrimero] AS [LOC_NombrePrimero], 
+      [Localidades_VPAR].[LOC_NombreCortoPrimero] AS [LOC_NombreCortoPrimero], 
+      [Localidades_VPAR].[LOC_IdAncestroSegundoGrado] AS [LOC_IdAncestroSegundoGrado], 
+      [Localidades_VPAR].[LOC_IdTipoSegundo] AS [LOC_IdTipoSegundo], 
+      [Localidades_VPAR].[LOC_IdTipoSegundoDesc] AS [LOC_IdTipoSegundoDesc], 
+      [Localidades_VPAR].[LOC_NombreSegundo] AS [LOC_NombreSegundo], 
+      [Localidades_VPAR].[LOC_NombreCortoSegundo] AS [LOC_NombreCortoSegundo], 
+      [Localidades_VPAR].[LOC_IdAncestroTercerGrado] AS [LOC_IdAncestroTercerGrado], 
+      [Localidades_VPAR].[LOC_IdTipoTercero] AS [LOC_IdTipoTercero], 
+      [Localidades_VPAR].[LOC_IdTipoTerceroDesc] AS [LOC_IdTipoTerceroDesc], 
+      [Localidades_VPAR].[LOC_NombreTercero] AS [LOC_NombreTercero], 
+      [Localidades_VPAR].[LOC_NombreCortoTercero] AS [LOC_NombreCortoTercero], 
+      [Localidades_VPAR].[NombreCompleto] AS [NombreCompleto], 
+      [Localidades_VPAR].[LOC_CodigoPostal] AS [LOC_CodigoPostal]
+      FROM [dbo].[Localidades_VPAR] AS [Localidades_VPAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PrecioServicioExcepcionTrayecto_VTAR" EntityType="DESARROLLOModel.Store.PrecioServicioExcepcionTrayecto_VTAR" store:Type="Views" store:Schema="dbo" store:Name="PrecioServicioExcepcionTrayecto_VTAR">
+      <DefiningQuery>SELECT 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_IdPrecioServicioExcepionTrayecto] AS [SET_IdPrecioServicioExcepionTrayecto], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_IdListaPrecioServicio] AS [SET_IdListaPrecioServicio], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_IdLocalidadOrigen] AS [SET_IdLocalidadOrigen], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_IdLocalidadDestino] AS [SET_IdLocalidadDestino], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_ValorKiloInicial] AS [SET_ValorKiloInicial], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_ValorKiloAdicional] AS [SET_ValorKiloAdicional], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_EsOrigenTodoElPais] AS [SET_EsOrigenTodoElPais], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_EsDestinoTodoElPais] AS [SET_EsDestinoTodoElPais], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_FechaGrabacion] AS [SET_FechaGrabacion], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[SET_CreadoPor] AS [SET_CreadoPor], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[NombreLocalidadOrigen] AS [NombreLocalidadOrigen], 
+      [PrecioServicioExcepcionTrayecto_VTAR].[NombreLocalidadDestino] AS [NombreLocalidadDestino]
+      FROM [dbo].[PrecioServicioExcepcionTrayecto_VTAR] AS [PrecioServicioExcepcionTrayecto_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PrecioServicioTipoEntrega_VTAR" EntityType="DESARROLLOModel.Store.PrecioServicioTipoEntrega_VTAR" store:Type="Views" store:Schema="dbo" store:Name="PrecioServicioTipoEntrega_VTAR">
+      <DefiningQuery>SELECT 
+      [PrecioServicioTipoEntrega_VTAR].[TIE_Descripcion] AS [TIE_Descripcion], 
+      [PrecioServicioTipoEntrega_VTAR].[PTE_IdPrecioTipoEntrega] AS [PTE_IdPrecioTipoEntrega], 
+      [PrecioServicioTipoEntrega_VTAR].[PTE_IdTipoEntrega] AS [PTE_IdTipoEntrega], 
+      [PrecioServicioTipoEntrega_VTAR].[PTE_IdListaPrecioServicio] AS [PTE_IdListaPrecioServicio], 
+      [PrecioServicioTipoEntrega_VTAR].[PTE_CreadoPor] AS [PTE_CreadoPor], 
+      [PrecioServicioTipoEntrega_VTAR].[PTE_FechaGrabacion] AS [PTE_FechaGrabacion], 
+      [PrecioServicioTipoEntrega_VTAR].[PTE_ValorKiloInicial] AS [PTE_ValorKiloInicial], 
+      [PrecioServicioTipoEntrega_VTAR].[PTE_ValorKiloAdicional] AS [PTE_ValorKiloAdicional]
+      FROM [dbo].[PrecioServicioTipoEntrega_VTAR] AS [PrecioServicioTipoEntrega_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PrecioValorAdicional_VTAR" EntityType="DESARROLLOModel.Store.PrecioValorAdicional_VTAR" store:Type="Views" store:Schema="dbo" store:Name="PrecioValorAdicional_VTAR">
+      <DefiningQuery>SELECT 
+      [PrecioValorAdicional_VTAR].[TVA_IdTipoValorAdicional] AS [TVA_IdTipoValorAdicional], 
+      [PrecioValorAdicional_VTAR].[TVA_Descripcion] AS [TVA_Descripcion], 
+      [PrecioValorAdicional_VTAR].[TVA_IdServicio] AS [TVA_IdServicio], 
+      [PrecioValorAdicional_VTAR].[PVA_IdPrecioServicio] AS [PVA_IdPrecioServicio], 
+      [PrecioValorAdicional_VTAR].[PVA_IdTipoValorAdicional] AS [PVA_IdTipoValorAdicional], 
+      [PrecioValorAdicional_VTAR].[PVA_Valor] AS [PVA_Valor], 
+      [PrecioValorAdicional_VTAR].[TVA_EsEmbalaje] AS [TVA_EsEmbalaje], 
+      [PrecioValorAdicional_VTAR].[LPS_IdListaPrecios] AS [LPS_IdListaPrecios]
+      FROM [dbo].[PrecioValorAdicional_VTAR] AS [PrecioValorAdicional_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ServicioCentroCorrespon_VTAR" EntityType="DESARROLLOModel.Store.ServicioCentroCorrespon_VTAR" store:Type="Views" store:Schema="dbo" store:Name="ServicioCentroCorrespon_VTAR">
+      <DefiningQuery>SELECT 
+      [ServicioCentroCorrespon_VTAR].[SCC_IdServCentroCorrespondencia] AS [SCC_IdServCentroCorrespondencia], 
+      [ServicioCentroCorrespon_VTAR].[SCC_Concepto] AS [SCC_Concepto], 
+      [ServicioCentroCorrespon_VTAR].[SCC_Descripcion] AS [SCC_Descripcion], 
+      [ServicioCentroCorrespon_VTAR].[SCC_IdServicio] AS [SCC_IdServicio], 
+      [ServicioCentroCorrespon_VTAR].[POP_IdPrecioServiCentroCorresp] AS [POP_IdPrecioServiCentroCorresp], 
+      [ServicioCentroCorrespon_VTAR].[POP_IdListaPrecioServicio] AS [POP_IdListaPrecioServicio], 
+      [ServicioCentroCorrespon_VTAR].[POP_Valor] AS [POP_Valor]
+      FROM [dbo].[ServicioCentroCorrespon_VTAR] AS [ServicioCentroCorrespon_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ServicioImpuestos_VTAR" EntityType="DESARROLLOModel.Store.ServicioImpuestos_VTAR" store:Type="Views" store:Schema="dbo" store:Name="ServicioImpuestos_VTAR">
+      <DefiningQuery>SELECT 
+      [ServicioImpuestos_VTAR].[SEI_IdServicio] AS [SEI_IdServicio], 
+      [ServicioImpuestos_VTAR].[SEI_IdImpuesto] AS [SEI_IdImpuesto], 
+      [ServicioImpuestos_VTAR].[SER_Nombre] AS [SER_Nombre], 
+      [ServicioImpuestos_VTAR].[SER_Descripcion] AS [SER_Descripcion], 
+      [ServicioImpuestos_VTAR].[SER_IdCuentaExterna] AS [SER_IdCuentaExterna], 
+      [ServicioImpuestos_VTAR].[SER_HoraInicioVenta] AS [SER_HoraInicioVenta], 
+      [ServicioImpuestos_VTAR].[SER_HoraFinVenta] AS [SER_HoraFinVenta], 
+      [ServicioImpuestos_VTAR].[SER_IdentificadorInterno] AS [SER_IdentificadorInterno], 
+      [ServicioImpuestos_VTAR].[SER_AplicaRetenciones] AS [SER_AplicaRetenciones], 
+      [ServicioImpuestos_VTAR].[IMP_Descripcion] AS [IMP_Descripcion], 
+      [ServicioImpuestos_VTAR].[IMP_Valor] AS [IMP_Valor], 
+      [ServicioImpuestos_VTAR].[IMP_IdCuentaExterna] AS [IMP_IdCuentaExterna], 
+      [ServicioImpuestos_VTAR].[UNE_IdUnidad] AS [UNE_IdUnidad], 
+      [ServicioImpuestos_VTAR].[UNE_Nombre] AS [UNE_Nombre], 
+      [ServicioImpuestos_VTAR].[UNE_Descripcion] AS [UNE_Descripcion], 
+      [ServicioImpuestos_VTAR].[UNE_IdCuentaExterna] AS [UNE_IdCuentaExterna]
+      FROM [dbo].[ServicioImpuestos_VTAR] AS [ServicioImpuestos_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ServicioInternacionalZona_VTAR" EntityType="DESARROLLOModel.Store.ServicioInternacionalZona_VTAR" store:Type="Views" store:Schema="dbo" store:Name="ServicioInternacionalZona_VTAR">
+      <DefiningQuery>SELECT 
+      [ServicioInternacionalZona_VTAR].[ZON_Descripcion] AS [ZON_Descripcion], 
+      [ServicioInternacionalZona_VTAR].[TEM_Descripcion] AS [TEM_Descripcion], 
+      [ServicioInternacionalZona_VTAR].[OPZ_IdOperadorPostal] AS [OPZ_IdOperadorPostal], 
+      [ServicioInternacionalZona_VTAR].[OPZ_TiempoEntrega] AS [OPZ_TiempoEntrega], 
+      [ServicioInternacionalZona_VTAR].[OPO_Nombre] AS [OPO_Nombre], 
+      [ServicioInternacionalZona_VTAR].[OPO_Descripcion] AS [OPO_Descripcion], 
+      [ServicioInternacionalZona_VTAR].[OPO_FormulaPesoVolumetrico] AS [OPO_FormulaPesoVolumetrico], 
+      [ServicioInternacionalZona_VTAR].[PIN_IdListaPrecioServicio] AS [PIN_IdListaPrecioServicio], 
+      [ServicioInternacionalZona_VTAR].[PIN_IdZona] AS [PIN_IdZona], 
+      [ServicioInternacionalZona_VTAR].[PIN_Valor] AS [PIN_Valor], 
+      [ServicioInternacionalZona_VTAR].[PIN_IdTipoEmpaque] AS [PIN_IdTipoEmpaque], 
+      [ServicioInternacionalZona_VTAR].[PIN_Peso] AS [PIN_Peso], 
+      [ServicioInternacionalZona_VTAR].[PIN_IdPrecioInternalcional] AS [PIN_IdPrecioInternalcional]
+      FROM [dbo].[ServicioInternacionalZona_VTAR] AS [ServicioInternacionalZona_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ServicioTramites_VTAR" EntityType="DESARROLLOModel.Store.ServicioTramites_VTAR" store:Type="Views" store:Schema="dbo" store:Name="ServicioTramites_VTAR">
+      <DefiningQuery>SELECT 
+      [ServicioTramites_VTAR].[TRA_IdTramite] AS [TRA_IdTramite], 
+      [ServicioTramites_VTAR].[TRA_IdServicio] AS [TRA_IdServicio], 
+      [ServicioTramites_VTAR].[TRA_IdTipoTramite] AS [TRA_IdTipoTramite], 
+      [ServicioTramites_VTAR].[TRA_Nombre] AS [TRA_Nombre], 
+      [ServicioTramites_VTAR].[TRA_Descripcion] AS [TRA_Descripcion], 
+      [ServicioTramites_VTAR].[TRA_Duracion] AS [TRA_Duracion], 
+      [ServicioTramites_VTAR].[PRT_IdPrecioTramite] AS [PRT_IdPrecioTramite], 
+      [ServicioTramites_VTAR].[PRT_IdTramite] AS [PRT_IdTramite], 
+      [ServicioTramites_VTAR].[PRT_IdListaPrecioServicio] AS [PRT_IdListaPrecioServicio], 
+      [ServicioTramites_VTAR].[PRT_Valor] AS [PRT_Valor], 
+      [ServicioTramites_VTAR].[PRT_ValorAdicionalLocal] AS [PRT_ValorAdicionalLocal], 
+      [ServicioTramites_VTAR].[PRT_ValorAdicionalPorDocumento] AS [PRT_ValorAdicionalPorDocumento]
+      FROM [dbo].[ServicioTramites_VTAR] AS [ServicioTramites_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TrayectoPrecioMensajeria_VTAR" EntityType="DESARROLLOModel.Store.TrayectoPrecioMensajeria_VTAR" store:Type="Views" store:Schema="dbo" store:Name="TrayectoPrecioMensajeria_VTAR">
+      <DefiningQuery>SELECT 
+      [TrayectoPrecioMensajeria_VTAR].[TTR_IdTipoTrayecto] AS [TTR_IdTipoTrayecto], 
+      [TrayectoPrecioMensajeria_VTAR].[TTR_Descripcion] AS [TTR_Descripcion], 
+      [TrayectoPrecioMensajeria_VTAR].[TST_IdTipoSubTrayecto] AS [TST_IdTipoSubTrayecto], 
+      [TrayectoPrecioMensajeria_VTAR].[TST_Descripcion] AS [TST_Descripcion], 
+      [TrayectoPrecioMensajeria_VTAR].[TRS_IdTrayectoSubTrayecto] AS [TRS_IdTrayectoSubTrayecto], 
+      [TrayectoPrecioMensajeria_VTAR].[PTR_IdPrecioTrayectoSubTrayect] AS [PTR_IdPrecioTrayectoSubTrayect], 
+      [TrayectoPrecioMensajeria_VTAR].[TRS_IdTipoSubTrayecto] AS [TRS_IdTipoSubTrayecto], 
+      [TrayectoPrecioMensajeria_VTAR].[TRS_IdTipoTrayecto] AS [TRS_IdTipoTrayecto], 
+      [TrayectoPrecioMensajeria_VTAR].[PTR_IdListaPrecioServicio] AS [PTR_IdListaPrecioServicio], 
+      [TrayectoPrecioMensajeria_VTAR].[PTR_IdTrayectoSubTrayecto] AS [PTR_IdTrayectoSubTrayecto], 
+      [TrayectoPrecioMensajeria_VTAR].[PTR_ValorFijo] AS [PTR_ValorFijo], 
+      [TrayectoPrecioMensajeria_VTAR].[PTR_Porcentaje] AS [PTR_Porcentaje], 
+      [TrayectoPrecioMensajeria_VTAR].[LIP_IdListaPreciosBase] AS [LIP_IdListaPreciosBase], 
+      [TrayectoPrecioMensajeria_VTAR].[PrecioBase] AS [PrecioBase], 
+      [TrayectoPrecioMensajeria_VTAR].[LPS_IdServicio] AS [LPS_IdServicio]
+      FROM [dbo].[TrayectoPrecioMensajeria_VTAR] AS [TrayectoPrecioMensajeria_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TrayectServicio_VTAR" EntityType="DESARROLLOModel.Store.TrayectServicio_VTAR" store:Type="Views" store:Schema="dbo" store:Name="TrayectServicio_VTAR">
+      <DefiningQuery>SELECT 
+      [TrayectServicio_VTAR].[STR_IdTrayecto] AS [STR_IdTrayecto], 
+      [TrayectServicio_VTAR].[TRA_IdLocalidadOrigen] AS [TRA_IdLocalidadOrigen], 
+      [TrayectServicio_VTAR].[TRA_IdLocalidadDestino] AS [TRA_IdLocalidadDestino], 
+      [TrayectServicio_VTAR].[TRA_IdTrayectoSubTrayecto] AS [TRA_IdTrayectoSubTrayecto], 
+      [TrayectServicio_VTAR].[TRS_IdTipoTrayecto] AS [TRS_IdTipoTrayecto], 
+      [TrayectServicio_VTAR].[TTR_Descripcion] AS [TTR_Descripcion], 
+      [TrayectServicio_VTAR].[TRS_IdTipoSubTrayecto] AS [TRS_IdTipoSubTrayecto], 
+      [TrayectServicio_VTAR].[TST_Descripcion] AS [TST_Descripcion], 
+      [TrayectServicio_VTAR].[LOC_Nombre] AS [LOC_Nombre], 
+      [TrayectServicio_VTAR].[1] AS [1], 
+      [TrayectServicio_VTAR].[2] AS [2], 
+      [TrayectServicio_VTAR].[3] AS [3], 
+      [TrayectServicio_VTAR].[4] AS [4], 
+      [TrayectServicio_VTAR].[5] AS [5], 
+      [TrayectServicio_VTAR].[6] AS [6], 
+      [TrayectServicio_VTAR].[7] AS [7], 
+      [TrayectServicio_VTAR].[8] AS [8], 
+      [TrayectServicio_VTAR].[9] AS [9], 
+      [TrayectServicio_VTAR].[10] AS [10], 
+      [TrayectServicio_VTAR].[11] AS [11], 
+      [TrayectServicio_VTAR].[12] AS [12], 
+      [TrayectServicio_VTAR].[13] AS [13], 
+      [TrayectServicio_VTAR].[14] AS [14], 
+      [TrayectServicio_VTAR].[15] AS [15], 
+      [TrayectServicio_VTAR].[16] AS [16], 
+      [TrayectServicio_VTAR].[17] AS [17], 
+      [TrayectServicio_VTAR].[19] AS [19], 
+      [TrayectServicio_VTAR].[20] AS [20], 
+      [TrayectServicio_VTAR].[21] AS [21], 
+      [TrayectServicio_VTAR].[22] AS [22], 
+      [TrayectServicio_VTAR].[23] AS [23]
+      FROM [dbo].[TrayectServicio_VTAR] AS [TrayectServicio_VTAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TrayectSubTrayectValorAdi_VTAR" EntityType="DESARROLLOModel.Store.TrayectSubTrayectValorAdi_VTAR" store:Type="Views" store:Schema="dbo" store:Name="TrayectSubTrayectValorAdi_VTAR">
+      <DefiningQuery>SELECT 
+      [TrayectSubTrayectValorAdi_VTAR].[KiloAdicional] AS [KiloAdicional], 
+      [TrayectSubTrayectValorAdi_VTAR].[SubTrayecto] AS [SubTrayecto], 
+      [TrayectSubTrayectValorAdi_VTAR].[Trayecto] AS [Trayecto], 
+      [TrayectSubTrayectValorAdi_VTAR].[ServicioRetorno] AS [ServicioRetorno], 
+      [TrayectSubTrayectValorAdi_VTAR].[PTV_IdTipoValorAdicional] AS [PTV_IdTipoValorAdicional], 
+      [TrayectSubTrayectValorAdi_VTAR].[PTR_IdListaPrecioServicio] AS [PTR_IdListaPrecioServicio], 
+      [TrayectSubTrayectValorAdi_VTAR].[IdPrecioTrayecto] AS [IdPrecioTrayecto], 
+      [TrayectSubTrayectValorAdi_VTAR].[TRS_IdTrayectoSubTrayecto] AS [TRS_IdTrayectoSubTrayecto], 
+      [TrayectSubTrayectValorAdi_VTAR].[TRS_IdTipoSubTrayecto] AS [TRS_IdTipoSubTrayecto], 
+      [TrayectSubTrayectValorAdi_VTAR].[TRS_IdTipoTrayecto] AS [TRS_IdTipoTrayecto], 
+      [TrayectSubTrayectValorAdi_VTAR].[TTR_IdTipoTrayecto] AS [TTR_IdTipoTrayecto], 
+      [TrayectSubTrayectValorAdi_VTAR].[TST_IdTipoSubTrayecto] AS [TST_IdTipoSubTrayecto], 
+      [TrayectSubTrayectValorAdi_VTAR].[PTV_IdPrecioTrayectoSubTrayect] AS [PTV_IdPrecioTrayectoSubTrayect], 
+      [TrayectSubTrayectValorAdi_VTAR].[PTR_IdTrayectoSubTrayecto] AS [PTR_IdTrayectoSubTrayecto]
+      FROM [dbo].[TrayectSubTrayectValorAdi_VTAR] AS [TrayectSubTrayectValorAdi_VTAR]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CampoTipoValorAdicional_TAR_TipoValorAdicional_TAR" Association="DESARROLLOModel.Store.FK_CampoTipoValorAdicional_TAR_TipoValorAdicional_TAR">
+      <End Role="TipoValorAdicional_TAR" EntitySet="TipoValorAdicional_TAR" />
+      <End Role="CampoTipoValorAdicional_TAR" EntitySet="CampoTipoValorAdicional_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContabilizacionServicioFormaPago_TAR_ServicioFormaPago_TAR" Association="DESARROLLOModel.Store.FK_ContabilizacionServicioFormaPago_TAR_ServicioFormaPago_TAR">
+      <End Role="ServicioFormaPago_TAR" EntitySet="ServicioFormaPago_TAR" />
+      <End Role="ContabilizacionServicioFormaPago_TAR" EntitySet="ContabilizacionServicioFormaPago_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Impuesto_TAR_CuentaExterna_TAR" Association="DESARROLLOModel.Store.FK_Impuesto_TAR_CuentaExterna_TAR">
+      <End Role="CuentaExterna_PAR" EntitySet="CuentaExterna_PAR" />
+      <End Role="Impuesto_TAR" EntitySet="Impuesto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecios_TAR_ListaPrecios_TAR" Association="DESARROLLOModel.Store.FK_ListaPrecios_TAR_ListaPrecios_TAR">
+      <End Role="ListaPrecios_TAR" EntitySet="ListaPrecios_TAR" />
+      <End Role="ListaPrecios_TAR1" EntitySet="ListaPrecios_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecios_TAR_Moneda_TAR" Association="DESARROLLOModel.Store.FK_ListaPrecios_TAR_Moneda_TAR">
+      <End Role="Moneda_TAR" EntitySet="Moneda_TAR" />
+      <End Role="ListaPrecios_TAR" EntitySet="ListaPrecios_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecioServicio_TAR_ListaPrecios_TAR" Association="DESARROLLOModel.Store.FK_ListaPrecioServicio_TAR_ListaPrecios_TAR">
+      <End Role="ListaPrecios_TAR" EntitySet="ListaPrecios_TAR" />
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ListaPrecioServicio_TAR_Servicio_TAR" Association="DESARROLLOModel.Store.FK_ListaPrecioServicio_TAR_Servicio_TAR">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="DESARROLLOModel.Store.FK_Localidad_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="DESARROLLOModel.Store.FK_Localidad_PAR_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="DESARROLLOModel.Store.FK_Localidad_PAR_Localidad_PAR2">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperadorPostalZona_PAR_OperadorPostal_PAR" Association="DESARROLLOModel.Store.FK_OperadorPostalZona_PAR_OperadorPostal_PAR">
+      <End Role="OperadorPostal_PAR" EntitySet="OperadorPostal_PAR" />
+      <End Role="OperadorPostalZona_PAR" EntitySet="OperadorPostalZona_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperadorPostalZona_PAR_Zona_PAR" Association="DESARROLLOModel.Store.FK_OperadorPostalZona_PAR_Zona_PAR">
+      <End Role="Zona_PAR" EntitySet="Zona_PAR" />
+      <End Role="OperadorPostalZona_PAR" EntitySet="OperadorPostalZona_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioInternacional_TAR_ListaPrecioServicio_TAR" Association="DESARROLLOModel.Store.FK_PrecioInternacional_TAR_ListaPrecioServicio_TAR">
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+      <End Role="PrecioInternacional_TAR" EntitySet="PrecioInternacional_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioInternacional_TAR_OperadorPostalZona_PAR" Association="DESARROLLOModel.Store.FK_PrecioInternacional_TAR_OperadorPostalZona_PAR">
+      <End Role="OperadorPostalZona_PAR" EntitySet="OperadorPostalZona_PAR" />
+      <End Role="PrecioInternacional_TAR" EntitySet="PrecioInternacional_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioInternacional_TAR_TipoEmpaque_TAR" Association="DESARROLLOModel.Store.FK_PrecioInternacional_TAR_TipoEmpaque_TAR">
+      <End Role="TipoEmpaque_TAR" EntitySet="TipoEmpaque_TAR" />
+      <End Role="PrecioInternacional_TAR" EntitySet="PrecioInternacional_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioOutsourcingPersonal_TAR_ListaPrecioServicio_TAR" Association="DESARROLLOModel.Store.FK_PrecioOutsourcingPersonal_TAR_ListaPrecioServicio_TAR">
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+      <End Role="PrecioCentroCorrespondencia_TAR" EntitySet="PrecioCentroCorrespondencia_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioOutsourcingPersonal_TAR_ServicioOutsourcingPersona_TAR" Association="DESARROLLOModel.Store.FK_PrecioOutsourcingPersonal_TAR_ServicioOutsourcingPersona_TAR">
+      <End Role="ServicioCentroCorrespondencia_TAR" EntitySet="ServicioCentroCorrespondencia_TAR" />
+      <End Role="PrecioCentroCorrespondencia_TAR" EntitySet="PrecioCentroCorrespondencia_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioRango_TAR_ListaPrecioServicio_TAR" Association="DESARROLLOModel.Store.FK_PrecioRango_TAR_ListaPrecioServicio_TAR">
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+      <End Role="PrecioRango_TAR" EntitySet="PrecioRango_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioServicioExcepcionTrayecto_TAR_ListaPrecioServicio_TAR" Association="DESARROLLOModel.Store.FK_PrecioServicioExcepcionTrayecto_TAR_ListaPrecioServicio_TAR">
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+      <End Role="PrecioServicioExcepcionTrayecto_TAR" EntitySet="PrecioServicioExcepcionTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioServicioExcepcionTrayecto_TAR_Localidad_PAR" Association="DESARROLLOModel.Store.FK_PrecioServicioExcepcionTrayecto_TAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="PrecioServicioExcepcionTrayecto_TAR" EntitySet="PrecioServicioExcepcionTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioServicioExcepcionTrayecto_TAR_Localidad_PAR1" Association="DESARROLLOModel.Store.FK_PrecioServicioExcepcionTrayecto_TAR_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="PrecioServicioExcepcionTrayecto_TAR" EntitySet="PrecioServicioExcepcionTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioSvExcepTrayRango_TAR_PrecioServicioExcepcionTrayecto_TAR" Association="DESARROLLOModel.Store.FK_PrecioSvExcepTrayRango_TAR_PrecioServicioExcepcionTrayecto_TAR">
+      <End Role="PrecioServicioExcepcionTrayecto_TAR" EntitySet="PrecioServicioExcepcionTrayecto_TAR" />
+      <End Role="PrecioSvExcepTrayRango_TAR" EntitySet="PrecioSvExcepTrayRango_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTipoEntRango_TAR_PrecioTipoEntrega_TAR" Association="DESARROLLOModel.Store.FK_PrecioTipoEntRango_TAR_PrecioTipoEntrega_TAR">
+      <End Role="PrecioTipoEntrega_TAR" EntitySet="PrecioTipoEntrega_TAR" />
+      <End Role="PrecioTipoEntRango_TAR" EntitySet="PrecioTipoEntRango_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTipoEntrega_TAR_ListaPrecioServicio_TAR" Association="DESARROLLOModel.Store.FK_PrecioTipoEntrega_TAR_ListaPrecioServicio_TAR">
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+      <End Role="PrecioTipoEntrega_TAR" EntitySet="PrecioTipoEntrega_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTipoEntrega_TAR_TipoEntrega_MEN" Association="DESARROLLOModel.Store.FK_PrecioTipoEntrega_TAR_TipoEntrega_MEN">
+      <End Role="TipoEntrega_MEN" EntitySet="TipoEntrega_MEN" />
+      <End Role="PrecioTipoEntrega_TAR" EntitySet="PrecioTipoEntrega_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTramite_TAR_ListaPrecioServicio_TAR" Association="DESARROLLOModel.Store.FK_PrecioTramite_TAR_ListaPrecioServicio_TAR">
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+      <End Role="PrecioTramite_TAR" EntitySet="PrecioTramite_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTramite_TAR_Tramite_TAR" Association="DESARROLLOModel.Store.FK_PrecioTramite_TAR_Tramite_TAR">
+      <End Role="Tramite_TAR" EntitySet="Tramite_TAR" />
+      <End Role="PrecioTramite_TAR" EntitySet="PrecioTramite_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTrayecto_TAR_ListaPrecioServicio_TAR" Association="DESARROLLOModel.Store.FK_PrecioTrayecto_TAR_ListaPrecioServicio_TAR">
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+      <End Role="PrecioTrayecto_TAR" EntitySet="PrecioTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTrayecto_TAR_TrayectoSubTrayecto_TAR" Association="DESARROLLOModel.Store.FK_PrecioTrayecto_TAR_TrayectoSubTrayecto_TAR">
+      <End Role="TrayectoSubTrayecto_TAR" EntitySet="TrayectoSubTrayecto_TAR" />
+      <End Role="PrecioTrayecto_TAR" EntitySet="PrecioTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTrayectoRango_TAR_PrecioTrayecto_TAR" Association="DESARROLLOModel.Store.FK_PrecioTrayectoRango_TAR_PrecioTrayecto_TAR">
+      <End Role="PrecioTrayecto_TAR" EntitySet="PrecioTrayecto_TAR" />
+      <End Role="PrecioTrayectoRango_TAR" EntitySet="PrecioTrayectoRango_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTrayeSubTraValorAdic_TAR_PrecioTrayecto_TAR" Association="DESARROLLOModel.Store.FK_PrecioTrayeSubTraValorAdic_TAR_PrecioTrayecto_TAR">
+      <End Role="PrecioTrayecto_TAR" EntitySet="PrecioTrayecto_TAR" />
+      <End Role="PrecioTrayeSubTraValorAdic_TAR" EntitySet="PrecioTrayeSubTraValorAdic_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioTrayeSubTraValorAdic_TAR_TipoValorAdicional_TAR" Association="DESARROLLOModel.Store.FK_PrecioTrayeSubTraValorAdic_TAR_TipoValorAdicional_TAR">
+      <End Role="TipoValorAdicional_TAR" EntitySet="TipoValorAdicional_TAR" />
+      <End Role="PrecioTrayeSubTraValorAdic_TAR" EntitySet="PrecioTrayeSubTraValorAdic_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioValorAdicional_TAR_ListaPrecioServicio_TAR" Association="DESARROLLOModel.Store.FK_PrecioValorAdicional_TAR_ListaPrecioServicio_TAR">
+      <End Role="ListaPrecioServicio_TAR" EntitySet="ListaPrecioServicio_TAR" />
+      <End Role="PrecioValorAdicional_TAR" EntitySet="PrecioValorAdicional_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PrecioValorAdicional_TAR_TipoValorAdicional_TAR" Association="DESARROLLOModel.Store.FK_PrecioValorAdicional_TAR_TipoValorAdicional_TAR">
+      <End Role="TipoValorAdicional_TAR" EntitySet="TipoValorAdicional_TAR" />
+      <End Role="PrecioValorAdicional_TAR" EntitySet="PrecioValorAdicional_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequisitoServicio_TAR_Servicio_TAR" Association="DESARROLLOModel.Store.FK_RequisitoServicio_TAR_Servicio_TAR">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="RequisitoServicio_TAR" EntitySet="RequisitoServicio_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequisitoTramite_TAR_Tramite_TAR" Association="DESARROLLOModel.Store.FK_RequisitoTramite_TAR_Tramite_TAR">
+      <End Role="Tramite_TAR" EntitySet="Tramite_TAR" />
+      <End Role="RequisitoTramite_TAR" EntitySet="RequisitoTramite_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Servicio_TAR_CuentaExterna_TAR" Association="DESARROLLOModel.Store.FK_Servicio_TAR_CuentaExterna_TAR">
+      <End Role="CuentaExterna_PAR" EntitySet="CuentaExterna_PAR" />
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Servicio_TAR_UnidadNegocio_TAR" Association="DESARROLLOModel.Store.FK_Servicio_TAR_UnidadNegocio_TAR">
+      <End Role="UnidadNegocio_TAR" EntitySet="UnidadNegocio_TAR" />
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioFormaPago_TAR_FormasPago_TAR" Association="DESARROLLOModel.Store.FK_ServicioFormaPago_TAR_FormasPago_TAR">
+      <End Role="FormasPago_TAR" EntitySet="FormasPago_TAR" />
+      <End Role="ServicioFormaPago_TAR" EntitySet="ServicioFormaPago_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioFormaPago_TAR_Servicio_TAR" Association="DESARROLLOModel.Store.FK_ServicioFormaPago_TAR_Servicio_TAR">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="ServicioFormaPago_TAR" EntitySet="ServicioFormaPago_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioImpuesto_TAR_Impuesto_TAR" Association="DESARROLLOModel.Store.FK_ServicioImpuesto_TAR_Impuesto_TAR">
+      <End Role="Impuesto_TAR" EntitySet="Impuesto_TAR" />
+      <End Role="ServicioImpuesto_TAR" EntitySet="ServicioImpuesto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioImpuesto_TAR_Servicio_TAR" Association="DESARROLLOModel.Store.FK_ServicioImpuesto_TAR_Servicio_TAR">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="ServicioImpuesto_TAR" EntitySet="ServicioImpuesto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioMensajeria_TAR_Servicio_TAR" Association="DESARROLLOModel.Store.FK_ServicioMensajeria_TAR_Servicio_TAR">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="ServicioMensajeria_TAR" EntitySet="ServicioMensajeria_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioOutsourcingPersona_TAR_Servicio_TAR" Association="DESARROLLOModel.Store.FK_ServicioOutsourcingPersona_TAR_Servicio_TAR">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="ServicioCentroCorrespondencia_TAR" EntitySet="ServicioCentroCorrespondencia_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioTrayecto_TAR_Servicio_TAR" Association="DESARROLLOModel.Store.FK_ServicioTrayecto_TAR_Servicio_TAR">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="ServicioTrayecto_TAR" EntitySet="ServicioTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServicioTrayecto_TAR_Trayecto_TAR" Association="DESARROLLOModel.Store.FK_ServicioTrayecto_TAR_Trayecto_TAR">
+      <End Role="Trayecto_TAR" EntitySet="Trayecto_TAR" />
+      <End Role="ServicioTrayecto_TAR" EntitySet="ServicioTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoValorAdicional_TAR_Servicio_TAR" Association="DESARROLLOModel.Store.FK_TipoValorAdicional_TAR_Servicio_TAR">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="TipoValorAdicional_TAR" EntitySet="TipoValorAdicional_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tramite_TAR_Servicio_TAR1" Association="DESARROLLOModel.Store.FK_Tramite_TAR_Servicio_TAR1">
+      <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+      <End Role="Tramite_TAR" EntitySet="Tramite_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tramite_TAR_TipoTramite_TAR1" Association="DESARROLLOModel.Store.FK_Tramite_TAR_TipoTramite_TAR1">
+      <End Role="TipoTramite_TAR" EntitySet="TipoTramite_TAR" />
+      <End Role="Tramite_TAR" EntitySet="Tramite_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TramiteImpuesto_TAR_Impuesto_TAR" Association="DESARROLLOModel.Store.FK_TramiteImpuesto_TAR_Impuesto_TAR">
+      <End Role="Impuesto_TAR" EntitySet="Impuesto_TAR" />
+      <End Role="TramiteImpuesto_TAR" EntitySet="TramiteImpuesto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TramiteImpuesto_TAR_Tramite_TAR" Association="DESARROLLOModel.Store.FK_TramiteImpuesto_TAR_Tramite_TAR">
+      <End Role="Tramite_TAR" EntitySet="Tramite_TAR" />
+      <End Role="TramiteImpuesto_TAR" EntitySet="TramiteImpuesto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trayecto_TAR_LocalDest_PAR" Association="DESARROLLOModel.Store.FK_Trayecto_TAR_LocalDest_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Trayecto_TAR" EntitySet="Trayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trayecto_TAR_Localidad_PAR" Association="DESARROLLOModel.Store.FK_Trayecto_TAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Trayecto_TAR" EntitySet="Trayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Trayecto_TAR_TrayectoSubTrayecto_TAR" Association="DESARROLLOModel.Store.FK_Trayecto_TAR_TrayectoSubTrayecto_TAR">
+      <End Role="TrayectoSubTrayecto_TAR" EntitySet="TrayectoSubTrayecto_TAR" />
+      <End Role="Trayecto_TAR" EntitySet="Trayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrayectoSubTrayecto_TAR_TipoSubTrayecto_TAR" Association="DESARROLLOModel.Store.FK_TrayectoSubTrayecto_TAR_TipoSubTrayecto_TAR">
+      <End Role="TipoSubTrayecto_TAR" EntitySet="TipoSubTrayecto_TAR" />
+      <End Role="TrayectoSubTrayecto_TAR" EntitySet="TrayectoSubTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TrayectoSubTrayecto_TAR_TipoTrayecto_TAR" Association="DESARROLLOModel.Store.FK_TrayectoSubTrayecto_TAR_TipoTrayecto_TAR">
+      <End Role="TipoTrayecto_TAR" EntitySet="TipoTrayecto_TAR" />
+      <End Role="TrayectoSubTrayecto_TAR" EntitySet="TrayectoSubTrayecto_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UnidadNegocio_TAR_CuentaExterna_TAR" Association="DESARROLLOModel.Store.FK_UnidadNegocio_TAR_CuentaExterna_TAR">
+      <End Role="CuentaExterna_PAR" EntitySet="CuentaExterna_PAR" />
+      <End Role="UnidadNegocio_TAR" EntitySet="UnidadNegocio_TAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ValorPesoDeclarado_TAR_ListaPrecios_TAR" Association="DESARROLLOModel.Store.FK_ValorPesoDeclarado_TAR_ListaPrecios_TAR">
+      <End Role="ListaPrecios_TAR" EntitySet="ListaPrecios_TAR" />
+      <End Role="ValorPesoDeclarado_TAR" EntitySet="ValorPesoDeclarado_TAR" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CampoTipoValorAdicional_TAR">
+    <Key>
+      <PropertyRef Name="CTA_IdTipoValorAdicional" />
+      <PropertyRef Name="CTA_IdCampo" />
+    </Key>
+    <Property Name="CTA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CTA_IdCampo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CTA_Display" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CTA_TipoDato" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CTA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CTA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ContabilizacionServicioFormaPago_TAR">
+    <Key>
+      <PropertyRef Name="CSFP_IdContabilidadServicioPago" />
+    </Key>
+    <Property Name="CSFP_IdContabilidadServicioPago" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSFP_VentasDebito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_VentasCredito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_EfectivasTipoDebidoDebito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_EfectivasTipoDebitoCredito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_EfectivasTipoCreditoDebito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_EfectivasTipoCreditoCredito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CSFP_FechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="CSFP_IdTipoServicio" Type="int" Nullable="false" />
+    <Property Name="CSFP_IdFormaPago" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CuentaExterna_PAR">
+    <Key>
+      <PropertyRef Name="CEX_IdCuentaExterna" />
+    </Key>
+    <Property Name="CEX_IdCuentaExterna" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CEX_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CEX_IdNaturaleza" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CEX_Codigo" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CEX_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CEX_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="FormasPago_TAR">
+    <Key>
+      <PropertyRef Name="FOP_IdFormaPago" />
+    </Key>
+    <Property Name="FOP_IdFormaPago" Type="smallint" Nullable="false" />
+    <Property Name="FOP_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="FOP_AceptaMixto" Type="bit" Nullable="false" />
+    <Property Name="FOP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="FOP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FOP_AplicaFacturacion" Type="bit" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Impuesto_TAR">
+    <Key>
+      <PropertyRef Name="IMP_IdImpuesto" />
+    </Key>
+    <Property Name="IMP_IdImpuesto" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IMP_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="IMP_Valor" Type="numeric" Nullable="false" Precision="6" Scale="4" />
+    <Property Name="IMP_IdCuentaExterna" Type="smallint" />
+    <Property Name="IMP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="IMP_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ListaPrecios_TAR">
+    <Key>
+      <PropertyRef Name="LIP_IdListaPrecios" />
+    </Key>
+    <Property Name="LIP_IdListaPrecios" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LIP_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LIP_Inicio" Type="datetime" Nullable="false" />
+    <Property Name="LIP_Fin" Type="datetime" Nullable="false" />
+    <Property Name="LIP_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="LIP_EsTarifaPlena" Type="bit" Nullable="false" />
+    <Property Name="LIP_IdMoneda" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="LIP_EsListaCliente" Type="bit" Nullable="false" />
+    <Property Name="LIP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LIP_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LIP_IdListaPreciosBase" Type="int" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ListaPrecioServicio_TAR">
+    <Key>
+      <PropertyRef Name="LPS_IdListaPrecioServicio" />
+    </Key>
+    <Property Name="LPS_IdListaPrecioServicio" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LPS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="LPS_IdListaPrecios" Type="int" Nullable="false" />
+    <Property Name="LPS_PrimaSeguros" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LPS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LPS_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LPS_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="LPS_IgnorarPrima" Type="bit" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ListaPrecioServicioHist_TAR">
+    <Key>
+      <PropertyRef Name="LPS_IdAuditoria" />
+    </Key>
+    <Property Name="LPS_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LPS_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="LPS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="LPS_IdListaPrecios" Type="int" Nullable="false" />
+    <Property Name="LPS_PrimaSeguros" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LPS_ValorMinimoDeclarado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LPS_ValorMaximoDeclarado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LPS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LPS_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LIS_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="LIS_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LIS_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ListaPreciosHist_TAR">
+    <Key>
+      <PropertyRef Name="LIP_IdAuditoria" />
+    </Key>
+    <Property Name="LIP_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LIP_IdListaPrecios" Type="int" Nullable="false" />
+    <Property Name="LIP_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LIP_Inicio" Type="datetime" Nullable="false" />
+    <Property Name="LIP_Fin" Type="datetime" Nullable="false" />
+    <Property Name="LIP_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="LIP_EsTarifaPlena" Type="bit" Nullable="false" />
+    <Property Name="LIP_IdMoneda" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="LIP_EsListaCliente" Type="bit" Nullable="false" />
+    <Property Name="LIP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LIP_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LIP_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="LIP_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="LIP_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Localidad_PAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LOC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_DHLActivo" Type="bit" Nullable="false" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="LOC_AplicaDireccionEstandar" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Moneda_TAR">
+    <Key>
+      <PropertyRef Name="MON_IdMoneda" />
+    </Key>
+    <Property Name="MON_IdMoneda" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MON_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MON_TasaCambio" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="MON_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MON_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="OperadorPostal_PAR">
+    <Key>
+      <PropertyRef Name="OPO_IdOperadorPostal" />
+    </Key>
+    <Property Name="OPO_IdOperadorPostal" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OPO_Nombre" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="OPO_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="OPO_FormulaPesoVolumetrico" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="OPO_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="OPO_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="OPO_PorcentajeCombustible" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+  </EntityType>
+  <EntityType Name="OperadorPostalZona_PAR">
+    <Key>
+      <PropertyRef Name="OPZ_IdZona" />
+    </Key>
+    <Property Name="OPZ_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="OPZ_IdOperadorPostal" Type="int" Nullable="false" />
+    <Property Name="OPZ_TiempoEntrega" Type="int" Nullable="false" />
+    <Property Name="OPZ_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="OPZ_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ParametrosTarifas_TAR">
+    <Key>
+      <PropertyRef Name="PAT_IdParametro" />
+    </Key>
+    <Property Name="PAT_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PAT_ValorParametro" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAT_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAT_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PrecioCentroCorrespondencia_TAR">
+    <Key>
+      <PropertyRef Name="POP_IdPrecioServiCentroCorresp" />
+      <PropertyRef Name="POP_IdListaPrecioServicio" />
+    </Key>
+    <Property Name="POP_IdPrecioServiCentroCorresp" Type="int" Nullable="false" />
+    <Property Name="POP_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="POP_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="POP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="POP_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="PrecioCentroCorresponHist_TAR">
+    <Key>
+      <PropertyRef Name="POP_IdAuditoria" />
+    </Key>
+    <Property Name="POP_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="POP_IdPrecioServiCentroCorresp" Type="int" Nullable="false" />
+    <Property Name="POP_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="POP_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="POP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="POP_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="POP_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="POP_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="POP_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PrecioInternacional_TAR">
+    <Key>
+      <PropertyRef Name="PIN_IdPrecioInternalcional" />
+    </Key>
+    <Property Name="PIN_IdPrecioInternalcional" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PIN_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PIN_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PIN_IdTipoEmpaque" Type="int" Nullable="false" />
+    <Property Name="PIN_Peso" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PIN_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PIN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PIN_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="PrecioInternacionalHist_TAR">
+    <Key>
+      <PropertyRef Name="PIN_IdAuditoria" />
+    </Key>
+    <Property Name="PIN_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PIN_IdPrecioInternalcional" Type="int" Nullable="false" />
+    <Property Name="PIN_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PIN_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PIN_IdTipoEmpaque" Type="int" Nullable="false" />
+    <Property Name="PIN_Peso" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PIN_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PIN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PIN_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PIN_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PIN_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PIN_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PrecioRango_TAR">
+    <Key>
+      <PropertyRef Name="PRA_IdPrecioRango" />
+    </Key>
+    <Property Name="PRA_IdPrecioRango" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRA_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PRA_Inicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Final" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PrecioRangoHist_TAR">
+    <Key>
+      <PropertyRef Name="PRA_IdAuditoria" />
+    </Key>
+    <Property Name="PRA_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRA_IdPrecioRango" Type="bigint" Nullable="false" />
+    <Property Name="PRA_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PRA_Inicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Final" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PRA_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PRA_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PRA_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PrecioServicioExcepcionTrayecto_TAR">
+    <Key>
+      <PropertyRef Name="SET_IdPrecioServicioExcepionTrayecto" />
+    </Key>
+    <Property Name="SET_IdPrecioServicioExcepionTrayecto" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SET_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="SET_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SET_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SET_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SET_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SET_ValorKiloInicial" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SET_ValorKiloAdicional" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SET_EsOrigenTodoElPais" Type="bit" />
+    <Property Name="SET_EsDestinoTodoElPais" Type="bit" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PrecioServicioExcepcionTrayectoHist_TAR">
+    <Key>
+      <PropertyRef Name="SET_IdAuditoria" />
+    </Key>
+    <Property Name="SET_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SET_IdPrecioServicioExcepionTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="SET_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="SET_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SET_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SET_ValorKiloInicial" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SET_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SET_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SET_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="SET_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SET_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SET_ValorKiloAdicional" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SET_EsOrigenTodoElPais" Type="bit" />
+    <Property Name="SET_EsDestinoTodoElPais" Type="bit" />
+  </EntityType>
+  <EntityType Name="PrecioSvExcepTrayRango_TAR">
+    <Key>
+      <PropertyRef Name="PTR_IdPrecioSvcExcTrayecto" />
+    </Key>
+    <Property Name="PTR_IdPrecioSvcExcTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="PTR_Inicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_Final" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTR_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PrecioSvExcTrayRangoHist_TAR">
+    <Key>
+      <PropertyRef Name="SET_IdAuditoria" />
+    </Key>
+    <Property Name="PTR_IdPrecioExcepcionRango" Type="bigint" Nullable="false" />
+    <Property Name="PTR_IdPrecioSvcExcTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="PTR_Inicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_Final" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTR_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PTR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PTR_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PTR_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SET_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="PrecioTipoEntRango_TAR">
+    <Key>
+      <PropertyRef Name="PTR_IdPrecioTipoEntrega" />
+    </Key>
+    <Property Name="PTR_IdPrecioTipoEntrega" Type="bigint" Nullable="false" />
+    <Property Name="PTR_Inicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_Final" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTR_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PrecioTipoEntrega_TAR">
+    <Key>
+      <PropertyRef Name="PTE_IdPrecioTipoEntrega" />
+    </Key>
+    <Property Name="PTE_IdPrecioTipoEntrega" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PTE_IdTipoEntrega" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PTE_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PTE_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PTE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTE_ValorKiloInicial" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTE_ValorKiloAdicional" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PrecioTramite_TAR">
+    <Key>
+      <PropertyRef Name="PRT_IdPrecioTramite" />
+    </Key>
+    <Property Name="PRT_IdPrecioTramite" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRT_IdTramite" Type="int" Nullable="false" />
+    <Property Name="PRT_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PRT_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRT_ValorAdicionalLocal" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRT_ValorAdicionalPorDocumento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRT_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="PrecioTramiteHist_TAR">
+    <Key>
+      <PropertyRef Name="PRT_IdAuditoria" />
+    </Key>
+    <Property Name="PRT_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRT_IdPrecioTramite" Type="int" Nullable="false" />
+    <Property Name="PRT_IdTramite" Type="int" Nullable="false" />
+    <Property Name="PRT_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PRT_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRT_ValorAdicionalLocal" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRT_ValorAdicionalPorDocumento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRT_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PRT_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PRT_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PRT_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PrecioTraSubTraVlrAdiHist_TAR">
+    <Key>
+      <PropertyRef Name="PTV_IdAuditoria" />
+    </Key>
+    <Property Name="PTV_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PTV_IdPrecioTrayectoSubTrayect" Type="bigint" Nullable="false" />
+    <Property Name="PTV_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PTV_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTV_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PTV_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PTV_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PTV_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PrecioTrayecto_TAR">
+    <Key>
+      <PropertyRef Name="PTR_IdPrecioTrayectoSubTrayect" />
+    </Key>
+    <Property Name="PTR_IdPrecioTrayectoSubTrayect" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PTR_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PTR_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="PTR_ValorFijo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTR_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PTR_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PrecioTrayectoHist_TAR">
+    <Key>
+      <PropertyRef Name="PTR_IdAuditoria" />
+    </Key>
+    <Property Name="PTR_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PTR_IdPrecioTrayectoSubTrayect" Type="bigint" Nullable="false" />
+    <Property Name="PTR_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PTR_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="PTR_ValorFijo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTR_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PTR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PTR_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PTR_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PTR_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+  </EntityType>
+  <EntityType Name="PrecioTrayectoRango_TAR">
+    <Key>
+      <PropertyRef Name="PRR_IdPrecioTrayectoRango" />
+    </Key>
+    <Property Name="PRR_IdPrecioTrayectoRango" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PPR_IdPrecioTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="PPR_Inicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PPR_Final" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PPR_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PPR_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PPR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PPR_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PrecioTrayectoRangoHist_TAR">
+    <Key>
+      <PropertyRef Name="PPR_IdAuditoria" />
+    </Key>
+    <Property Name="PPR_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRR_IdPrecioTrayectoRango" Type="bigint" Nullable="false" />
+    <Property Name="PPR_IdPrecioTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="PPR_Inicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PPR_Final" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PPR_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PPR_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PPR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PPR_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PPR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PPR_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PPR_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PrecioTrayeSubTraValorAdic_TAR">
+    <Key>
+      <PropertyRef Name="PTV_IdPrecioTrayectoSubTrayect" />
+    </Key>
+    <Property Name="PTV_IdPrecioTrayectoSubTrayect" Type="bigint" Nullable="false" />
+    <Property Name="PTV_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PTV_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTV_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="PrecioValorAdicional_TAR">
+    <Key>
+      <PropertyRef Name="PVA_IdPrecioServicio" />
+      <PropertyRef Name="PVA_IdTipoValorAdicional" />
+    </Key>
+    <Property Name="PVA_IdPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PVA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PVA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PVA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PrecioValorAdicionalHist_TAR">
+    <Key>
+      <PropertyRef Name="PVA_IdAuditoria" />
+    </Key>
+    <Property Name="PVA_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PVA_IdPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PVA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PVA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PVA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PVA_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PVA_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PVA_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RequisitoServicio_TAR">
+    <Key>
+      <PropertyRef Name="RES_IdRequisitoServicio" />
+    </Key>
+    <Property Name="RES_IdRequisitoServicio" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RES_IdServicio" Type="int" Nullable="false" />
+    <Property Name="RES_Descripcion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="RES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RES_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="RequisitoServicioHist_TAR">
+    <Key>
+      <PropertyRef Name="RES_IdAuditoria" />
+    </Key>
+    <Property Name="RES_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RES_IdRequisitoServicio" Type="int" Nullable="false" />
+    <Property Name="RES_IdServicio" Type="int" Nullable="false" />
+    <Property Name="RES_Descripcion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="RES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RES_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="RES_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="RES_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RES_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RequisitoTramite_TAR">
+    <Key>
+      <PropertyRef Name="REQ_IdRequisitoServicio" />
+    </Key>
+    <Property Name="REQ_IdRequisitoServicio" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="REQ_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REQ_IdTramite" Type="int" Nullable="false" />
+    <Property Name="REQ_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REQ_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="RequisitoTramiteHist_TAR">
+    <Key>
+      <PropertyRef Name="PEQ_IdAuditoria" />
+    </Key>
+    <Property Name="PEQ_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="REQ_IdRequisitoServicio" Type="smallint" Nullable="false" />
+    <Property Name="REQ_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REQ_IdTramite" Type="int" Nullable="false" />
+    <Property Name="REQ_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REQ_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REQ_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="REQ_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="REQ_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Servicio_TAR">
+    <Key>
+      <PropertyRef Name="SER_IdServicio" />
+    </Key>
+    <Property Name="SER_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SER_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SER_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SER_IdUnidadNegocio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SER_IdCuentaExterna" Type="smallint" />
+    <Property Name="SER_HoraInicioVenta" Type="datetime" Nullable="false" />
+    <Property Name="SER_HoraFinVenta" Type="datetime" Nullable="false" />
+    <Property Name="SER_IdentificadorInterno" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="SER_AplicaRetenciones" Type="bit" Nullable="false" />
+    <Property Name="SER_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="SER_CodigoIntMensajero" Type="char" MaxLength="3" />
+    <Property Name="SER_CodigoERP" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="SER_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="SER_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SER_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SER_CodigoPrimaERP" Type="varchar" MaxLength="4" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ServicioCentroCorrespondencia_TAR">
+    <Key>
+      <PropertyRef Name="SCC_IdServCentroCorrespondencia" />
+    </Key>
+    <Property Name="SCC_IdServCentroCorrespondencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SCC_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SCC_Concepto" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SCC_Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="SCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SCC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="ServicioCtroCorrespondHist_TAR">
+    <Key>
+      <PropertyRef Name="SCC_IdAuditoria" />
+    </Key>
+    <Property Name="SCC_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SCC_IdServCentroCorrespondencia" Type="int" Nullable="false" />
+    <Property Name="SCC_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SCC_Concepto" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SCC_Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="SCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SCC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SCC_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="SCC_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SCC_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ServicioExcepcionTrayeHist_TAR">
+    <Key>
+      <PropertyRef Name="SET_IdAuditoria" />
+    </Key>
+    <Property Name="SET_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SET_IdExcepionTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="SET_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SET_TiempoEntrega" Type="int" Nullable="false" />
+    <Property Name="SET_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SET_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SET_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="SET_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SET_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ServicioFormaPago_TAR">
+    <Key>
+      <PropertyRef Name="SFP_IdServicio" />
+      <PropertyRef Name="SFP_IdFormaPago" />
+    </Key>
+    <Property Name="SFP_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SFP_IdFormaPago" Type="smallint" Nullable="false" />
+    <Property Name="SFP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SFP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ServicioFormaPagoHist_TAR">
+    <Key>
+      <PropertyRef Name="SFP_IdAuditoria" />
+    </Key>
+    <Property Name="SFP_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SFP_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SFP_IdFormaPago" Type="smallint" Nullable="false" />
+    <Property Name="SFP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SFP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SFP_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="SFP_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SFP_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ServicioImpuesto_TAR">
+    <Key>
+      <PropertyRef Name="SEI_IdServicio" />
+      <PropertyRef Name="SEI_IdImpuesto" />
+    </Key>
+    <Property Name="SEI_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SEI_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="SEI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SEI_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ServicioImpuestoHist_TAR">
+    <Key>
+      <PropertyRef Name="SEI_IdAuditoria" />
+    </Key>
+    <Property Name="SEI_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SEI_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SEI_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="SEI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SEI_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SEI_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="SEI_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SEI_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ServicioMensajeria_TAR">
+    <Key>
+      <PropertyRef Name="SME_IdServicio" />
+    </Key>
+    <Property Name="SME_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SME_PesoMínimo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SME_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SME_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SME_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ServicioMensajeriaHist_TAR">
+    <Key>
+      <PropertyRef Name="SME_IdAuditoria" />
+    </Key>
+    <Property Name="SME_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SME_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SME_PesoMínimo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SME_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SME_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SME_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SME_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="SME_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SME_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ServicioTrayecto_TAR">
+    <Key>
+      <PropertyRef Name="STR_IdTrayecto" />
+      <PropertyRef Name="STR_IdServicio" />
+    </Key>
+    <Property Name="STR_IdTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="STR_IdServicio" Type="int" Nullable="false" />
+    <Property Name="STR_TiempoEntrega" Type="int" Nullable="false" />
+    <Property Name="STR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="STR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ServicioTrayectoHist_TAR">
+    <Key>
+      <PropertyRef Name="STR_IdAuditoria" />
+    </Key>
+    <Property Name="STR_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="STR_IdTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="STR_IdServicio" Type="int" Nullable="false" />
+    <Property Name="STR_TiempoEntrega" Type="int" Nullable="false" />
+    <Property Name="STR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="STR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="STR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="STR_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="STR_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.TiempoEntrega_KOM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TiempoEntrega_KOM">
+    <Key>
+      <PropertyRef Name="TEK_IdLocalidad" />
+      <PropertyRef Name="TEK_Nombre" />
+      <PropertyRef Name="TEK_TiempoEntrega" />
+    </Key>
+    <Property Name="TEK_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TEK_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TEK_TiempoEntrega" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoDestino_TAR">
+    <Key>
+      <PropertyRef Name="TID_IdTipoDestino" />
+    </Key>
+    <Property Name="TID_IdTipoDestino" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TID_TipoDestino" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TID_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TID_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TipoEmpaque_TAR">
+    <Key>
+      <PropertyRef Name="TEM_IdTipoEmpaque" />
+    </Key>
+    <Property Name="TEM_IdTipoEmpaque" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TEM_Descripcion" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="TEM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TEM_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TEM_Observacion" Type="varchar" MaxLength="250" />
+    <Property Name="TEM_Internacional" Type="bit" Nullable="false" />
+    <Property Name="TEM_Kilos" Type="int" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TipoEntrega_MEN">
+    <Key>
+      <PropertyRef Name="TIE_IdTipoEntrega" />
+    </Key>
+    <Property Name="TIE_IdTipoEntrega" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TIE_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TIE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIE_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TipoEnvio_TAR">
+    <Key>
+      <PropertyRef Name="TEN_IdTipoEnvio" />
+    </Key>
+    <Property Name="TEN_IdTipoEnvio" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TEN_Nombre" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="TEN_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TEN_PesoMinimo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="TEN_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="TEN_CodigoMinisterio" Type="numeric" Nullable="false" Precision="6" />
+    <Property Name="TEN_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TEN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TEN_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TipoEnvioHist_TAR">
+    <Key>
+      <PropertyRef Name="TEN_IdAuditoria" />
+    </Key>
+    <Property Name="TEN_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TEN_IdTipoEnvio" Type="smallint" Nullable="false" />
+    <Property Name="TEN_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TEN_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TEN_PesoMinimo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="TEN_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="TEN_CodigoMinisterio" Type="numeric" Nullable="false" Precision="6" />
+    <Property Name="TEN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TEN_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TEN_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="TEN_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TEN_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoSubTrayecto_TAR">
+    <Key>
+      <PropertyRef Name="TST_IdTipoSubTrayecto" />
+    </Key>
+    <Property Name="TST_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TST_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TST_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TST_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoSubTrayectoHist_TAR">
+    <Key>
+      <PropertyRef Name="TST_IdAuditoria" />
+    </Key>
+    <Property Name="TST_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TST_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TST_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TST_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TST_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TST_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="TST_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TST_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoTramite_TAR">
+    <Key>
+      <PropertyRef Name="TIT_IdTipoTramite" />
+    </Key>
+    <Property Name="TIT_IdTipoTramite" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TIT_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TIT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIT_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="TipoTrayecto_TAR">
+    <Key>
+      <PropertyRef Name="TTR_IdTipoTrayecto" />
+    </Key>
+    <Property Name="TTR_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TTR_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TTR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoTrayectoHist_TAR">
+    <Key>
+      <PropertyRef Name="TTR_IdAuditoria" />
+    </Key>
+    <Property Name="TTR_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TTR_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TTR_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TTR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TTR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="TTR_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TTR_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoValorAdicional_TAR">
+    <Key>
+      <PropertyRef Name="TVA_IdTipoValorAdicional" />
+    </Key>
+    <Property Name="TVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TVA_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TVA_IdServicio" Type="int" Nullable="false" />
+    <Property Name="TVA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TVA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TVA_EsEmbalaje" Type="bit" Nullable="false" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TipoValorAdicionalHist_TAR">
+    <Key>
+      <PropertyRef Name="TVA_IdAuditoria" />
+    </Key>
+    <Property Name="TVA_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TVA_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TVA_IdServicio" Type="int" Nullable="false" />
+    <Property Name="TVA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TVA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TVA_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="TVA_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TVA_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tramite_TAR">
+    <Key>
+      <PropertyRef Name="TRA_IdTramite" />
+    </Key>
+    <Property Name="TRA_IdTramite" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TRA_IdServicio" Type="int" Nullable="false" />
+    <Property Name="TRA_IdTipoTramite" Type="smallint" Nullable="false" />
+    <Property Name="TRA_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TRA_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TRA_Duracion" Type="numeric" Nullable="false" Precision="6" Scale="4" />
+    <Property Name="TRA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TRA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="TramiteHist_TAR">
+    <Key>
+      <PropertyRef Name="TRA_IdAuditoria" />
+    </Key>
+    <Property Name="TRA_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TRA_IdTramite" Type="int" Nullable="false" />
+    <Property Name="TRA_IdServicio" Type="int" Nullable="false" />
+    <Property Name="TRA_IdTipoTramite" Type="smallint" Nullable="false" />
+    <Property Name="TRA_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TRA_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TRA_Duracion" Type="numeric" Nullable="false" Precision="6" Scale="4" />
+    <Property Name="TRA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TRA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TRA_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="TRA_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TRA_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TramiteImpuesto_TAR">
+    <Key>
+      <PropertyRef Name="TRI_IdTramite" />
+      <PropertyRef Name="TRI_IdImpuesto" />
+    </Key>
+    <Property Name="TRI_IdTramite" Type="int" Nullable="false" />
+    <Property Name="TRI_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="TRI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TRI_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Trayecto_TAR">
+    <Key>
+      <PropertyRef Name="TRA_IdTrayecto" />
+    </Key>
+    <Property Name="TRA_IdTrayecto" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TRA_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRA_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRA_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="TRA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TRA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TrayectoHist_TAR">
+    <Key>
+      <PropertyRef Name="TRA_IdAuditoria" />
+    </Key>
+    <Property Name="TRA_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TRA_IdTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="TRA_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRA_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRA_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="TRA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TRA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TRA_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="TRA_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TRA_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TrayectoSubTrayecto_TAR">
+    <Key>
+      <PropertyRef Name="TRS_IdTrayectoSubTrayecto" />
+    </Key>
+    <Property Name="TRS_IdTrayectoSubTrayecto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TRS_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRS_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TRS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="UnidadNegocio_TAR">
+    <Key>
+      <PropertyRef Name="UNE_IdUnidad" />
+    </Key>
+    <Property Name="UNE_IdUnidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="UNE_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="UNE_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UNE_IdCuentaExterna" Type="smallint" />
+    <Property Name="UNE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="UNE_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="UNE_CodigoERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ValorPesoDeclarado_TAR">
+    <Key>
+      <PropertyRef Name="VMD_IdValorMinimoDeclarado" />
+    </Key>
+    <Property Name="VMD_IdValorMinimoDeclarado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VMD_IdListaPrecios" Type="int" Nullable="false" />
+    <Property Name="VMD_PesoInicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="VMD_PesoFinal" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="VMD_ValorMinimoDeclarado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="VMD_ValorMaximoDeclarado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="VMD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VMD_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="ValorPesoDeclaradoHist_TAR">
+    <Key>
+      <PropertyRef Name="VMD_IdAuditoria" />
+    </Key>
+    <Property Name="VMD_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VMD_IdValorMinimoDeclarado" Type="int" Nullable="false" />
+    <Property Name="VMD_IdListaPrecios" Type="int" Nullable="false" />
+    <Property Name="VMD_PesoInicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="VMD_PesoFinal" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="VMD_ValorMinimoDeclarado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="VMD_ValorMaximoDeclarado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="VMD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VMD_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="VMD_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="VMD_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VMD_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Zona_PAR">
+    <Key>
+      <PropertyRef Name="ZON_IdZona" />
+    </Key>
+    <Property Name="ZON_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ZON_Descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="ZON_IdTipoZona" Type="int" Nullable="false" />
+    <Property Name="ZON_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ZON_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ZON_Observacion" Type="varchar" MaxLength="800" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ContabilizacionServicioFormaPago_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ContabilizacionServicioFormaPago_VTAR">
+    <Key>
+      <PropertyRef Name="SER_IdServicio" />
+      <PropertyRef Name="SER_Nombre" />
+      <PropertyRef Name="FOP_IdFormaPago" />
+      <PropertyRef Name="FOP_Descripcion" />
+      <PropertyRef Name="CSFP_VentasDebito" />
+      <PropertyRef Name="CSFP_VentasCredito" />
+      <PropertyRef Name="CSFP_EfectivasTipoDebidoDebito" />
+      <PropertyRef Name="CSFP_EfectivasTipoDebitoCredito" />
+      <PropertyRef Name="CSFP_EfectivasTipoCreditoDebito" />
+      <PropertyRef Name="CSFP_EfectivasTipoCreditoCredito" />
+      <PropertyRef Name="CSFP_IdContabilidadServicioPago" />
+    </Key>
+    <Property Name="SER_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SER_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="FOP_IdFormaPago" Type="smallint" Nullable="false" />
+    <Property Name="FOP_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CSFP_VentasDebito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_VentasCredito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_EfectivasTipoDebidoDebito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_EfectivasTipoDebitoCredito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_EfectivasTipoCreditoDebito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_EfectivasTipoCreditoCredito" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="CSFP_IdContabilidadServicioPago" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.EstadoActivoInactivo_VFRM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="EstadoActivoInactivo_VFRM">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+      <PropertyRef Name="Estado" />
+    </Key>
+    <Property Name="IdEstado" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="8" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ExcepcionTrayecto_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ExcepcionTrayecto_VTAR">
+    <Key>
+      <PropertyRef Name="EXT_IdExcepionTrayecto" />
+      <PropertyRef Name="EXT_IdLocalidadOrigen" />
+      <PropertyRef Name="EXT_IdLocalidadDestino" />
+      <PropertyRef Name="EXT_IdTrayectoSubTrayecto" />
+      <PropertyRef Name="EXT_IdListaPrecios" />
+      <PropertyRef Name="TRS_IdTipoSubTrayecto" />
+      <PropertyRef Name="TRS_IdTipoTrayecto" />
+      <PropertyRef Name="TST_Descripcion" />
+      <PropertyRef Name="TTR_Descripcion" />
+    </Key>
+    <Property Name="EXT_IdExcepionTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="EXT_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="EXT_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="EXT_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="EXT_IdListaPrecios" Type="int" Nullable="false" />
+    <Property Name="TRS_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRS_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TST_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TTR_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ExcepcionTrayectoLocalida_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ExcepcionTrayectoLocalida_VTAR">
+    <Key>
+      <PropertyRef Name="EXT_IdPrecioTrayectoSubTrayect" />
+      <PropertyRef Name="EXT_IdLocalidadOrigen" />
+      <PropertyRef Name="EXT_TiempoEntrega" />
+      <PropertyRef Name="LOC_IdTipo" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="PTR_IdTrayectoSubTrayecto" />
+      <PropertyRef Name="PTR_IdPrecioTrayectoSubTrayect" />
+      <PropertyRef Name="PTR_IdListaPrecioServicio" />
+      <PropertyRef Name="PTR_Valor" />
+      <PropertyRef Name="TRS_IdTrayectoSubTrayecto" />
+      <PropertyRef Name="TRS_IdTipoSubTrayecto" />
+      <PropertyRef Name="TRS_IdTipoTrayecto" />
+      <PropertyRef Name="TST_Descripcion" />
+      <PropertyRef Name="TTR_Descripcion" />
+    </Key>
+    <Property Name="EXT_IdPrecioTrayectoSubTrayect" Type="bigint" Nullable="false" />
+    <Property Name="EXT_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="EXT_TiempoEntrega" Type="int" Nullable="false" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PTR_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="PTR_IdPrecioTrayectoSubTrayect" Type="bigint" Nullable="false" />
+    <Property Name="PTR_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PTR_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="TRS_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="TRS_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRS_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TST_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TTR_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.FormasPagoServicio_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="FormasPagoServicio_VTAR">
+    <Key>
+      <PropertyRef Name="SFP_IdServicio" />
+      <PropertyRef Name="SFP_IdFormaPago" />
+      <PropertyRef Name="FOP_Descripcion" />
+      <PropertyRef Name="FOP_AceptaMixto" />
+      <PropertyRef Name="SER_Nombre" />
+    </Key>
+    <Property Name="SFP_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SFP_IdFormaPago" Type="smallint" Nullable="false" />
+    <Property Name="FOP_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="FOP_AceptaMixto" Type="bit" Nullable="false" />
+    <Property Name="SER_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ListaPrecioCampoValorAdd_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ListaPrecioCampoValorAdd_VTAR">
+    <Key>
+      <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      <PropertyRef Name="LPS_IdServicio" />
+      <PropertyRef Name="LPS_IdListaPrecios" />
+      <PropertyRef Name="PVA_IdTipoValorAdicional" />
+      <PropertyRef Name="PVA_Valor" />
+      <PropertyRef Name="CTA_IdTipoValorAdicional" />
+      <PropertyRef Name="CTA_IdCampo" />
+      <PropertyRef Name="CTA_Display" />
+      <PropertyRef Name="CTA_TipoDato" />
+      <PropertyRef Name="TVA_Descripcion" />
+      <PropertyRef Name="TVA_IdServicio" />
+    </Key>
+    <Property Name="LPS_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="LPS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="LPS_IdListaPrecios" Type="int" Nullable="false" />
+    <Property Name="PVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PVA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CTA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CTA_IdCampo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="CTA_Display" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CTA_TipoDato" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TVA_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TVA_IdServicio" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ListaPrecioSrvPrecioRango_VCLI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ListaPrecioSrvPrecioRango_VCLI">
+    <Key>
+      <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      <PropertyRef Name="LPS_IdServicio" />
+      <PropertyRef Name="LPS_IdListaPrecios" />
+      <PropertyRef Name="LPS_PrimaSeguros" />
+      <PropertyRef Name="PRA_IdListaPrecioServicio" />
+      <PropertyRef Name="PRA_Inicial" />
+      <PropertyRef Name="PRA_Final" />
+      <PropertyRef Name="PRA_Valor" />
+      <PropertyRef Name="PRA_Porcentaje" />
+      <PropertyRef Name="PRA_IdPrecioRango" />
+    </Key>
+    <Property Name="LPS_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="LPS_IdServicio" Type="int" Nullable="false" />
+    <Property Name="LPS_IdListaPrecios" Type="int" Nullable="false" />
+    <Property Name="LPS_PrimaSeguros" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PRA_Inicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Final" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRA_IdPrecioRango" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.Localidades_VPAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Localidades_VPAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="LOC_IdTipo" />
+      <PropertyRef Name="TLO_Descripcion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_NombreCorto" />
+      <PropertyRef Name="LOC_CodigoPostal" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="TLO_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoPrimero" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoPrimeroDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombrePrimero" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoPrimero" Type="varchar" MaxLength="4" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoSegundo" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoSegundoDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombreSegundo" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoSegundo" Type="varchar" MaxLength="4" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoTercero" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoTerceroDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombreTercero" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoTercero" Type="varchar" MaxLength="4" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="110" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.PrecioServicioExcepcionTrayecto_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PrecioServicioExcepcionTrayecto_VTAR">
+    <Key>
+      <PropertyRef Name="SET_IdPrecioServicioExcepionTrayecto" />
+      <PropertyRef Name="SET_IdListaPrecioServicio" />
+      <PropertyRef Name="SET_IdLocalidadOrigen" />
+      <PropertyRef Name="SET_IdLocalidadDestino" />
+      <PropertyRef Name="SET_ValorKiloInicial" />
+      <PropertyRef Name="SET_ValorKiloAdicional" />
+      <PropertyRef Name="SET_FechaGrabacion" />
+      <PropertyRef Name="SET_CreadoPor" />
+    </Key>
+    <Property Name="SET_IdPrecioServicioExcepionTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="SET_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="SET_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SET_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SET_ValorKiloInicial" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SET_ValorKiloAdicional" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SET_EsOrigenTodoElPais" Type="bit" />
+    <Property Name="SET_EsDestinoTodoElPais" Type="bit" />
+    <Property Name="SET_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SET_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NombreLocalidadOrigen" Type="varchar" MaxLength="110" />
+    <Property Name="NombreLocalidadDestino" Type="varchar" MaxLength="110" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.PrecioServicioTipoEntrega_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PrecioServicioTipoEntrega_VTAR">
+    <Key>
+      <PropertyRef Name="TIE_Descripcion" />
+      <PropertyRef Name="PTE_IdPrecioTipoEntrega" />
+      <PropertyRef Name="PTE_IdTipoEntrega" />
+      <PropertyRef Name="PTE_IdListaPrecioServicio" />
+      <PropertyRef Name="PTE_CreadoPor" />
+      <PropertyRef Name="PTE_FechaGrabacion" />
+      <PropertyRef Name="PTE_ValorKiloInicial" />
+      <PropertyRef Name="PTE_ValorKiloAdicional" />
+    </Key>
+    <Property Name="TIE_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PTE_IdPrecioTipoEntrega" Type="bigint" Nullable="false" />
+    <Property Name="PTE_IdTipoEntrega" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PTE_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PTE_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PTE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PTE_ValorKiloInicial" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTE_ValorKiloAdicional" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.PrecioValorAdicional_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PrecioValorAdicional_VTAR">
+    <Key>
+      <PropertyRef Name="TVA_IdTipoValorAdicional" />
+      <PropertyRef Name="TVA_Descripcion" />
+      <PropertyRef Name="TVA_IdServicio" />
+      <PropertyRef Name="PVA_IdPrecioServicio" />
+      <PropertyRef Name="PVA_IdTipoValorAdicional" />
+      <PropertyRef Name="PVA_Valor" />
+      <PropertyRef Name="TVA_EsEmbalaje" />
+      <PropertyRef Name="LPS_IdListaPrecios" />
+    </Key>
+    <Property Name="TVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TVA_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TVA_IdServicio" Type="int" Nullable="false" />
+    <Property Name="PVA_IdPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PVA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="TVA_EsEmbalaje" Type="bit" Nullable="false" />
+    <Property Name="LPS_IdListaPrecios" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ServicioCentroCorrespon_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ServicioCentroCorrespon_VTAR">
+    <Key>
+      <PropertyRef Name="SCC_IdServCentroCorrespondencia" />
+      <PropertyRef Name="SCC_Concepto" />
+      <PropertyRef Name="SCC_IdServicio" />
+      <PropertyRef Name="POP_IdPrecioServiCentroCorresp" />
+      <PropertyRef Name="POP_IdListaPrecioServicio" />
+      <PropertyRef Name="POP_Valor" />
+    </Key>
+    <Property Name="SCC_IdServCentroCorrespondencia" Type="int" Nullable="false" />
+    <Property Name="SCC_Concepto" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SCC_Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="SCC_IdServicio" Type="int" Nullable="false" />
+    <Property Name="POP_IdPrecioServiCentroCorresp" Type="int" Nullable="false" />
+    <Property Name="POP_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="POP_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ServicioImpuestos_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ServicioImpuestos_VTAR">
+    <Key>
+      <PropertyRef Name="SEI_IdServicio" />
+      <PropertyRef Name="SEI_IdImpuesto" />
+      <PropertyRef Name="SER_Nombre" />
+      <PropertyRef Name="SER_Descripcion" />
+      <PropertyRef Name="SER_HoraInicioVenta" />
+      <PropertyRef Name="SER_HoraFinVenta" />
+      <PropertyRef Name="SER_IdentificadorInterno" />
+      <PropertyRef Name="SER_AplicaRetenciones" />
+      <PropertyRef Name="IMP_Descripcion" />
+      <PropertyRef Name="IMP_Valor" />
+      <PropertyRef Name="UNE_IdUnidad" />
+      <PropertyRef Name="UNE_Nombre" />
+      <PropertyRef Name="UNE_Descripcion" />
+    </Key>
+    <Property Name="SEI_IdServicio" Type="int" Nullable="false" />
+    <Property Name="SEI_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="SER_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SER_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SER_IdCuentaExterna" Type="smallint" />
+    <Property Name="SER_HoraInicioVenta" Type="datetime" Nullable="false" />
+    <Property Name="SER_HoraFinVenta" Type="datetime" Nullable="false" />
+    <Property Name="SER_IdentificadorInterno" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="SER_AplicaRetenciones" Type="bit" Nullable="false" />
+    <Property Name="IMP_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="IMP_Valor" Type="numeric" Nullable="false" Precision="6" Scale="4" />
+    <Property Name="IMP_IdCuentaExterna" Type="smallint" />
+    <Property Name="UNE_IdUnidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="UNE_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="UNE_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UNE_IdCuentaExterna" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ServicioInternacionalZona_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ServicioInternacionalZona_VTAR">
+    <Key>
+      <PropertyRef Name="TEM_Descripcion" />
+      <PropertyRef Name="OPZ_IdOperadorPostal" />
+      <PropertyRef Name="OPZ_TiempoEntrega" />
+      <PropertyRef Name="OPO_Nombre" />
+      <PropertyRef Name="OPO_Descripcion" />
+      <PropertyRef Name="OPO_FormulaPesoVolumetrico" />
+      <PropertyRef Name="PIN_IdListaPrecioServicio" />
+      <PropertyRef Name="PIN_IdZona" />
+      <PropertyRef Name="PIN_Valor" />
+      <PropertyRef Name="PIN_IdTipoEmpaque" />
+      <PropertyRef Name="PIN_Peso" />
+      <PropertyRef Name="PIN_IdPrecioInternalcional" />
+      <PropertyRef Name="ZON_Descripcion" />
+    </Key>
+    <Property Name="ZON_Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TEM_Descripcion" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="OPZ_IdOperadorPostal" Type="int" Nullable="false" />
+    <Property Name="OPZ_TiempoEntrega" Type="int" Nullable="false" />
+    <Property Name="OPO_Nombre" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="OPO_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="OPO_FormulaPesoVolumetrico" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PIN_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PIN_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PIN_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PIN_IdTipoEmpaque" Type="int" Nullable="false" />
+    <Property Name="PIN_Peso" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PIN_IdPrecioInternalcional" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.ServicioTramites_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ServicioTramites_VTAR">
+    <Key>
+      <PropertyRef Name="TRA_IdTramite" />
+      <PropertyRef Name="TRA_IdServicio" />
+      <PropertyRef Name="TRA_IdTipoTramite" />
+      <PropertyRef Name="TRA_Nombre" />
+      <PropertyRef Name="TRA_Descripcion" />
+      <PropertyRef Name="TRA_Duracion" />
+      <PropertyRef Name="PRT_IdPrecioTramite" />
+      <PropertyRef Name="PRT_IdTramite" />
+      <PropertyRef Name="PRT_IdListaPrecioServicio" />
+      <PropertyRef Name="PRT_Valor" />
+      <PropertyRef Name="PRT_ValorAdicionalLocal" />
+      <PropertyRef Name="PRT_ValorAdicionalPorDocumento" />
+    </Key>
+    <Property Name="TRA_IdTramite" Type="int" Nullable="false" />
+    <Property Name="TRA_IdServicio" Type="int" Nullable="false" />
+    <Property Name="TRA_IdTipoTramite" Type="smallint" Nullable="false" />
+    <Property Name="TRA_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TRA_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TRA_Duracion" Type="numeric" Nullable="false" Precision="6" Scale="4" />
+    <Property Name="PRT_IdPrecioTramite" Type="int" Nullable="false" />
+    <Property Name="PRT_IdTramite" Type="int" Nullable="false" />
+    <Property Name="PRT_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PRT_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRT_ValorAdicionalLocal" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PRT_ValorAdicionalPorDocumento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.TrayectoPrecioMensajeria_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TrayectoPrecioMensajeria_VTAR">
+    <Key>
+      <PropertyRef Name="TTR_IdTipoTrayecto" />
+      <PropertyRef Name="TTR_Descripcion" />
+      <PropertyRef Name="TST_IdTipoSubTrayecto" />
+      <PropertyRef Name="TST_Descripcion" />
+      <PropertyRef Name="TRS_IdTrayectoSubTrayecto" />
+      <PropertyRef Name="PTR_IdPrecioTrayectoSubTrayect" />
+      <PropertyRef Name="TRS_IdTipoSubTrayecto" />
+      <PropertyRef Name="TRS_IdTipoTrayecto" />
+      <PropertyRef Name="PTR_IdListaPrecioServicio" />
+      <PropertyRef Name="PTR_IdTrayectoSubTrayecto" />
+      <PropertyRef Name="PTR_ValorFijo" />
+      <PropertyRef Name="PTR_Porcentaje" />
+      <PropertyRef Name="PrecioBase" />
+      <PropertyRef Name="LPS_IdServicio" />
+    </Key>
+    <Property Name="TTR_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TTR_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TST_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TST_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TRS_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="PTR_IdPrecioTrayectoSubTrayect" Type="bigint" Nullable="false" />
+    <Property Name="TRS_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRS_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PTR_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="PTR_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="PTR_ValorFijo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTR_Porcentaje" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LIP_IdListaPreciosBase" Type="int" />
+    <Property Name="PrecioBase" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="LPS_IdServicio" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.TrayectServicio_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TrayectServicio_VTAR">
+    <Key>
+      <PropertyRef Name="STR_IdTrayecto" />
+      <PropertyRef Name="TRA_IdLocalidadOrigen" />
+      <PropertyRef Name="TRA_IdLocalidadDestino" />
+      <PropertyRef Name="TRA_IdTrayectoSubTrayecto" />
+      <PropertyRef Name="TRS_IdTipoTrayecto" />
+      <PropertyRef Name="TTR_Descripcion" />
+      <PropertyRef Name="TRS_IdTipoSubTrayecto" />
+      <PropertyRef Name="TST_Descripcion" />
+      <PropertyRef Name="LOC_Nombre" />
+    </Key>
+    <Property Name="STR_IdTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="TRA_IdLocalidadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRA_IdLocalidadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRA_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="TRS_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TTR_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TRS_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TST_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="1" Type="int" />
+    <Property Name="2" Type="int" />
+    <Property Name="3" Type="int" />
+    <Property Name="4" Type="int" />
+    <Property Name="5" Type="int" />
+    <Property Name="6" Type="int" />
+    <Property Name="7" Type="int" />
+    <Property Name="8" Type="int" />
+    <Property Name="9" Type="int" />
+    <Property Name="10" Type="int" />
+    <Property Name="11" Type="int" />
+    <Property Name="12" Type="int" />
+    <Property Name="13" Type="int" />
+    <Property Name="14" Type="int" />
+    <Property Name="15" Type="int" />
+    <Property Name="16" Type="int" />
+    <Property Name="17" Type="int" />
+    <Property Name="19" Type="int" />
+    <Property Name="20" Type="int" />
+    <Property Name="21" Type="int" />
+    <Property Name="22" Type="int" />
+    <Property Name="23" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.TrayectSubTrayectValorAdi_VTAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TrayectSubTrayectValorAdi_VTAR">
+    <Key>
+      <PropertyRef Name="KiloAdicional" />
+      <PropertyRef Name="SubTrayecto" />
+      <PropertyRef Name="Trayecto" />
+      <PropertyRef Name="ServicioRetorno" />
+      <PropertyRef Name="PTV_IdTipoValorAdicional" />
+      <PropertyRef Name="PTR_IdListaPrecioServicio" />
+      <PropertyRef Name="IdPrecioTrayecto" />
+      <PropertyRef Name="TRS_IdTrayectoSubTrayecto" />
+      <PropertyRef Name="TRS_IdTipoSubTrayecto" />
+      <PropertyRef Name="TRS_IdTipoTrayecto" />
+      <PropertyRef Name="TTR_IdTipoTrayecto" />
+      <PropertyRef Name="TST_IdTipoSubTrayecto" />
+      <PropertyRef Name="PTV_IdPrecioTrayectoSubTrayect" />
+      <PropertyRef Name="PTR_IdTrayectoSubTrayecto" />
+    </Key>
+    <Property Name="KiloAdicional" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="SubTrayecto" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Trayecto" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ServicioRetorno" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PTV_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PTR_IdListaPrecioServicio" Type="int" Nullable="false" />
+    <Property Name="IdPrecioTrayecto" Type="bigint" Nullable="false" />
+    <Property Name="TRS_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+    <Property Name="TRS_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TRS_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TTR_IdTipoTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="TST_IdTipoSubTrayecto" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PTV_IdPrecioTrayectoSubTrayect" Type="bigint" Nullable="false" />
+    <Property Name="PTR_IdTrayectoSubTrayecto" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CampoTipoValorAdicional_TAR_TipoValorAdicional_TAR">
+    <End Role="TipoValorAdicional_TAR" Type="DESARROLLOModel.Store.TipoValorAdicional_TAR" Multiplicity="1" />
+    <End Role="CampoTipoValorAdicional_TAR" Type="DESARROLLOModel.Store.CampoTipoValorAdicional_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoValorAdicional_TAR">
+        <PropertyRef Name="TVA_IdTipoValorAdicional" />
+      </Principal>
+      <Dependent Role="CampoTipoValorAdicional_TAR">
+        <PropertyRef Name="CTA_IdTipoValorAdicional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContabilizacionServicioFormaPago_TAR_ServicioFormaPago_TAR">
+    <End Role="ServicioFormaPago_TAR" Type="DESARROLLOModel.Store.ServicioFormaPago_TAR" Multiplicity="1" />
+    <End Role="ContabilizacionServicioFormaPago_TAR" Type="DESARROLLOModel.Store.ContabilizacionServicioFormaPago_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicioFormaPago_TAR">
+        <PropertyRef Name="SFP_IdServicio" />
+        <PropertyRef Name="SFP_IdFormaPago" />
+      </Principal>
+      <Dependent Role="ContabilizacionServicioFormaPago_TAR">
+        <PropertyRef Name="CSFP_IdTipoServicio" />
+        <PropertyRef Name="CSFP_IdFormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Impuesto_TAR_CuentaExterna_TAR">
+    <End Role="CuentaExterna_PAR" Type="DESARROLLOModel.Store.CuentaExterna_PAR" Multiplicity="0..1" />
+    <End Role="Impuesto_TAR" Type="DESARROLLOModel.Store.Impuesto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaExterna_PAR">
+        <PropertyRef Name="CEX_IdCuentaExterna" />
+      </Principal>
+      <Dependent Role="Impuesto_TAR">
+        <PropertyRef Name="IMP_IdCuentaExterna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecios_TAR_ListaPrecios_TAR">
+    <End Role="ListaPrecios_TAR" Type="DESARROLLOModel.Store.ListaPrecios_TAR" Multiplicity="0..1" />
+    <End Role="ListaPrecios_TAR1" Type="DESARROLLOModel.Store.ListaPrecios_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecios_TAR">
+        <PropertyRef Name="LIP_IdListaPrecios" />
+      </Principal>
+      <Dependent Role="ListaPrecios_TAR1">
+        <PropertyRef Name="LIP_IdListaPreciosBase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecios_TAR_Moneda_TAR">
+    <End Role="Moneda_TAR" Type="DESARROLLOModel.Store.Moneda_TAR" Multiplicity="1" />
+    <End Role="ListaPrecios_TAR" Type="DESARROLLOModel.Store.ListaPrecios_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moneda_TAR">
+        <PropertyRef Name="MON_IdMoneda" />
+      </Principal>
+      <Dependent Role="ListaPrecios_TAR">
+        <PropertyRef Name="LIP_IdMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecioServicio_TAR_ListaPrecios_TAR">
+    <End Role="ListaPrecios_TAR" Type="DESARROLLOModel.Store.ListaPrecios_TAR" Multiplicity="1" />
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecios_TAR">
+        <PropertyRef Name="LIP_IdListaPrecios" />
+      </Principal>
+      <Dependent Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ListaPrecioServicio_TAR_Servicio_TAR">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperadorPostalZona_PAR_OperadorPostal_PAR">
+    <End Role="OperadorPostal_PAR" Type="DESARROLLOModel.Store.OperadorPostal_PAR" Multiplicity="1" />
+    <End Role="OperadorPostalZona_PAR" Type="DESARROLLOModel.Store.OperadorPostalZona_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperadorPostal_PAR">
+        <PropertyRef Name="OPO_IdOperadorPostal" />
+      </Principal>
+      <Dependent Role="OperadorPostalZona_PAR">
+        <PropertyRef Name="OPZ_IdOperadorPostal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperadorPostalZona_PAR_Zona_PAR">
+    <End Role="Zona_PAR" Type="DESARROLLOModel.Store.Zona_PAR" Multiplicity="1" />
+    <End Role="OperadorPostalZona_PAR" Type="DESARROLLOModel.Store.OperadorPostalZona_PAR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Zona_PAR">
+        <PropertyRef Name="ZON_IdZona" />
+      </Principal>
+      <Dependent Role="OperadorPostalZona_PAR">
+        <PropertyRef Name="OPZ_IdZona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioInternacional_TAR_ListaPrecioServicio_TAR">
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="1" />
+    <End Role="PrecioInternacional_TAR" Type="DESARROLLOModel.Store.PrecioInternacional_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      </Principal>
+      <Dependent Role="PrecioInternacional_TAR">
+        <PropertyRef Name="PIN_IdListaPrecioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioInternacional_TAR_OperadorPostalZona_PAR">
+    <End Role="OperadorPostalZona_PAR" Type="DESARROLLOModel.Store.OperadorPostalZona_PAR" Multiplicity="1" />
+    <End Role="PrecioInternacional_TAR" Type="DESARROLLOModel.Store.PrecioInternacional_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperadorPostalZona_PAR">
+        <PropertyRef Name="OPZ_IdZona" />
+      </Principal>
+      <Dependent Role="PrecioInternacional_TAR">
+        <PropertyRef Name="PIN_IdZona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioInternacional_TAR_TipoEmpaque_TAR">
+    <End Role="TipoEmpaque_TAR" Type="DESARROLLOModel.Store.TipoEmpaque_TAR" Multiplicity="1" />
+    <End Role="PrecioInternacional_TAR" Type="DESARROLLOModel.Store.PrecioInternacional_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEmpaque_TAR">
+        <PropertyRef Name="TEM_IdTipoEmpaque" />
+      </Principal>
+      <Dependent Role="PrecioInternacional_TAR">
+        <PropertyRef Name="PIN_IdTipoEmpaque" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioOutsourcingPersonal_TAR_ListaPrecioServicio_TAR">
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="1" />
+    <End Role="PrecioCentroCorrespondencia_TAR" Type="DESARROLLOModel.Store.PrecioCentroCorrespondencia_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      </Principal>
+      <Dependent Role="PrecioCentroCorrespondencia_TAR">
+        <PropertyRef Name="POP_IdListaPrecioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioOutsourcingPersonal_TAR_ServicioOutsourcingPersona_TAR">
+    <End Role="ServicioCentroCorrespondencia_TAR" Type="DESARROLLOModel.Store.ServicioCentroCorrespondencia_TAR" Multiplicity="1" />
+    <End Role="PrecioCentroCorrespondencia_TAR" Type="DESARROLLOModel.Store.PrecioCentroCorrespondencia_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ServicioCentroCorrespondencia_TAR">
+        <PropertyRef Name="SCC_IdServCentroCorrespondencia" />
+      </Principal>
+      <Dependent Role="PrecioCentroCorrespondencia_TAR">
+        <PropertyRef Name="POP_IdPrecioServiCentroCorresp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioRango_TAR_ListaPrecioServicio_TAR">
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="1" />
+    <End Role="PrecioRango_TAR" Type="DESARROLLOModel.Store.PrecioRango_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      </Principal>
+      <Dependent Role="PrecioRango_TAR">
+        <PropertyRef Name="PRA_IdListaPrecioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioServicioExcepcionTrayecto_TAR_ListaPrecioServicio_TAR">
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="1" />
+    <End Role="PrecioServicioExcepcionTrayecto_TAR" Type="DESARROLLOModel.Store.PrecioServicioExcepcionTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      </Principal>
+      <Dependent Role="PrecioServicioExcepcionTrayecto_TAR">
+        <PropertyRef Name="SET_IdListaPrecioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioServicioExcepcionTrayecto_TAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="PrecioServicioExcepcionTrayecto_TAR" Type="DESARROLLOModel.Store.PrecioServicioExcepcionTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="PrecioServicioExcepcionTrayecto_TAR">
+        <PropertyRef Name="SET_IdLocalidadOrigen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioServicioExcepcionTrayecto_TAR_Localidad_PAR1">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="PrecioServicioExcepcionTrayecto_TAR" Type="DESARROLLOModel.Store.PrecioServicioExcepcionTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="PrecioServicioExcepcionTrayecto_TAR">
+        <PropertyRef Name="SET_IdLocalidadDestino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioSvExcepTrayRango_TAR_PrecioServicioExcepcionTrayecto_TAR">
+    <End Role="PrecioServicioExcepcionTrayecto_TAR" Type="DESARROLLOModel.Store.PrecioServicioExcepcionTrayecto_TAR" Multiplicity="1" />
+    <End Role="PrecioSvExcepTrayRango_TAR" Type="DESARROLLOModel.Store.PrecioSvExcepTrayRango_TAR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PrecioServicioExcepcionTrayecto_TAR">
+        <PropertyRef Name="SET_IdPrecioServicioExcepionTrayecto" />
+      </Principal>
+      <Dependent Role="PrecioSvExcepTrayRango_TAR">
+        <PropertyRef Name="PTR_IdPrecioSvcExcTrayecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTipoEntRango_TAR_PrecioTipoEntrega_TAR">
+    <End Role="PrecioTipoEntrega_TAR" Type="DESARROLLOModel.Store.PrecioTipoEntrega_TAR" Multiplicity="1" />
+    <End Role="PrecioTipoEntRango_TAR" Type="DESARROLLOModel.Store.PrecioTipoEntRango_TAR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PrecioTipoEntrega_TAR">
+        <PropertyRef Name="PTE_IdPrecioTipoEntrega" />
+      </Principal>
+      <Dependent Role="PrecioTipoEntRango_TAR">
+        <PropertyRef Name="PTR_IdPrecioTipoEntrega" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTipoEntrega_TAR_ListaPrecioServicio_TAR">
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="1" />
+    <End Role="PrecioTipoEntrega_TAR" Type="DESARROLLOModel.Store.PrecioTipoEntrega_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      </Principal>
+      <Dependent Role="PrecioTipoEntrega_TAR">
+        <PropertyRef Name="PTE_IdListaPrecioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTipoEntrega_TAR_TipoEntrega_MEN">
+    <End Role="TipoEntrega_MEN" Type="DESARROLLOModel.Store.TipoEntrega_MEN" Multiplicity="1" />
+    <End Role="PrecioTipoEntrega_TAR" Type="DESARROLLOModel.Store.PrecioTipoEntrega_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoEntrega_MEN">
+        <PropertyRef Name="TIE_IdTipoEntrega" />
+      </Principal>
+      <Dependent Role="PrecioTipoEntrega_TAR">
+        <PropertyRef Name="PTE_IdTipoEntrega" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTramite_TAR_ListaPrecioServicio_TAR">
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="1" />
+    <End Role="PrecioTramite_TAR" Type="DESARROLLOModel.Store.PrecioTramite_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      </Principal>
+      <Dependent Role="PrecioTramite_TAR">
+        <PropertyRef Name="PRT_IdListaPrecioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTramite_TAR_Tramite_TAR">
+    <End Role="Tramite_TAR" Type="DESARROLLOModel.Store.Tramite_TAR" Multiplicity="1" />
+    <End Role="PrecioTramite_TAR" Type="DESARROLLOModel.Store.PrecioTramite_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tramite_TAR">
+        <PropertyRef Name="TRA_IdTramite" />
+      </Principal>
+      <Dependent Role="PrecioTramite_TAR">
+        <PropertyRef Name="PRT_IdTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTrayecto_TAR_ListaPrecioServicio_TAR">
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="1" />
+    <End Role="PrecioTrayecto_TAR" Type="DESARROLLOModel.Store.PrecioTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      </Principal>
+      <Dependent Role="PrecioTrayecto_TAR">
+        <PropertyRef Name="PTR_IdListaPrecioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTrayecto_TAR_TrayectoSubTrayecto_TAR">
+    <End Role="TrayectoSubTrayecto_TAR" Type="DESARROLLOModel.Store.TrayectoSubTrayecto_TAR" Multiplicity="1" />
+    <End Role="PrecioTrayecto_TAR" Type="DESARROLLOModel.Store.PrecioTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrayectoSubTrayecto_TAR">
+        <PropertyRef Name="TRS_IdTrayectoSubTrayecto" />
+      </Principal>
+      <Dependent Role="PrecioTrayecto_TAR">
+        <PropertyRef Name="PTR_IdTrayectoSubTrayecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTrayectoRango_TAR_PrecioTrayecto_TAR">
+    <End Role="PrecioTrayecto_TAR" Type="DESARROLLOModel.Store.PrecioTrayecto_TAR" Multiplicity="1" />
+    <End Role="PrecioTrayectoRango_TAR" Type="DESARROLLOModel.Store.PrecioTrayectoRango_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PrecioTrayecto_TAR">
+        <PropertyRef Name="PTR_IdPrecioTrayectoSubTrayect" />
+      </Principal>
+      <Dependent Role="PrecioTrayectoRango_TAR">
+        <PropertyRef Name="PPR_IdPrecioTrayecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTrayeSubTraValorAdic_TAR_PrecioTrayecto_TAR">
+    <End Role="PrecioTrayecto_TAR" Type="DESARROLLOModel.Store.PrecioTrayecto_TAR" Multiplicity="1" />
+    <End Role="PrecioTrayeSubTraValorAdic_TAR" Type="DESARROLLOModel.Store.PrecioTrayeSubTraValorAdic_TAR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PrecioTrayecto_TAR">
+        <PropertyRef Name="PTR_IdPrecioTrayectoSubTrayect" />
+      </Principal>
+      <Dependent Role="PrecioTrayeSubTraValorAdic_TAR">
+        <PropertyRef Name="PTV_IdPrecioTrayectoSubTrayect" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioTrayeSubTraValorAdic_TAR_TipoValorAdicional_TAR">
+    <End Role="TipoValorAdicional_TAR" Type="DESARROLLOModel.Store.TipoValorAdicional_TAR" Multiplicity="1" />
+    <End Role="PrecioTrayeSubTraValorAdic_TAR" Type="DESARROLLOModel.Store.PrecioTrayeSubTraValorAdic_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoValorAdicional_TAR">
+        <PropertyRef Name="TVA_IdTipoValorAdicional" />
+      </Principal>
+      <Dependent Role="PrecioTrayeSubTraValorAdic_TAR">
+        <PropertyRef Name="PTV_IdTipoValorAdicional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioValorAdicional_TAR_ListaPrecioServicio_TAR">
+    <End Role="ListaPrecioServicio_TAR" Type="DESARROLLOModel.Store.ListaPrecioServicio_TAR" Multiplicity="1" />
+    <End Role="PrecioValorAdicional_TAR" Type="DESARROLLOModel.Store.PrecioValorAdicional_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecioServicio_TAR">
+        <PropertyRef Name="LPS_IdListaPrecioServicio" />
+      </Principal>
+      <Dependent Role="PrecioValorAdicional_TAR">
+        <PropertyRef Name="PVA_IdPrecioServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PrecioValorAdicional_TAR_TipoValorAdicional_TAR">
+    <End Role="TipoValorAdicional_TAR" Type="DESARROLLOModel.Store.TipoValorAdicional_TAR" Multiplicity="1" />
+    <End Role="PrecioValorAdicional_TAR" Type="DESARROLLOModel.Store.PrecioValorAdicional_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoValorAdicional_TAR">
+        <PropertyRef Name="TVA_IdTipoValorAdicional" />
+      </Principal>
+      <Dependent Role="PrecioValorAdicional_TAR">
+        <PropertyRef Name="PVA_IdTipoValorAdicional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequisitoServicio_TAR_Servicio_TAR">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="RequisitoServicio_TAR" Type="DESARROLLOModel.Store.RequisitoServicio_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="RequisitoServicio_TAR">
+        <PropertyRef Name="RES_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequisitoTramite_TAR_Tramite_TAR">
+    <End Role="Tramite_TAR" Type="DESARROLLOModel.Store.Tramite_TAR" Multiplicity="1" />
+    <End Role="RequisitoTramite_TAR" Type="DESARROLLOModel.Store.RequisitoTramite_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tramite_TAR">
+        <PropertyRef Name="TRA_IdTramite" />
+      </Principal>
+      <Dependent Role="RequisitoTramite_TAR">
+        <PropertyRef Name="REQ_IdTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Servicio_TAR_CuentaExterna_TAR">
+    <End Role="CuentaExterna_PAR" Type="DESARROLLOModel.Store.CuentaExterna_PAR" Multiplicity="0..1" />
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaExterna_PAR">
+        <PropertyRef Name="CEX_IdCuentaExterna" />
+      </Principal>
+      <Dependent Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdCuentaExterna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Servicio_TAR_UnidadNegocio_TAR">
+    <End Role="UnidadNegocio_TAR" Type="DESARROLLOModel.Store.UnidadNegocio_TAR" Multiplicity="1" />
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnidadNegocio_TAR">
+        <PropertyRef Name="UNE_IdUnidad" />
+      </Principal>
+      <Dependent Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdUnidadNegocio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioFormaPago_TAR_FormasPago_TAR">
+    <End Role="FormasPago_TAR" Type="DESARROLLOModel.Store.FormasPago_TAR" Multiplicity="1" />
+    <End Role="ServicioFormaPago_TAR" Type="DESARROLLOModel.Store.ServicioFormaPago_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormasPago_TAR">
+        <PropertyRef Name="FOP_IdFormaPago" />
+      </Principal>
+      <Dependent Role="ServicioFormaPago_TAR">
+        <PropertyRef Name="SFP_IdFormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioFormaPago_TAR_Servicio_TAR">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="ServicioFormaPago_TAR" Type="DESARROLLOModel.Store.ServicioFormaPago_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="ServicioFormaPago_TAR">
+        <PropertyRef Name="SFP_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioImpuesto_TAR_Impuesto_TAR">
+    <End Role="Impuesto_TAR" Type="DESARROLLOModel.Store.Impuesto_TAR" Multiplicity="1" />
+    <End Role="ServicioImpuesto_TAR" Type="DESARROLLOModel.Store.ServicioImpuesto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impuesto_TAR">
+        <PropertyRef Name="IMP_IdImpuesto" />
+      </Principal>
+      <Dependent Role="ServicioImpuesto_TAR">
+        <PropertyRef Name="SEI_IdImpuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioImpuesto_TAR_Servicio_TAR">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="ServicioImpuesto_TAR" Type="DESARROLLOModel.Store.ServicioImpuesto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="ServicioImpuesto_TAR">
+        <PropertyRef Name="SEI_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioMensajeria_TAR_Servicio_TAR">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="ServicioMensajeria_TAR" Type="DESARROLLOModel.Store.ServicioMensajeria_TAR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="ServicioMensajeria_TAR">
+        <PropertyRef Name="SME_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioOutsourcingPersona_TAR_Servicio_TAR">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="ServicioCentroCorrespondencia_TAR" Type="DESARROLLOModel.Store.ServicioCentroCorrespondencia_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="ServicioCentroCorrespondencia_TAR">
+        <PropertyRef Name="SCC_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioTrayecto_TAR_Servicio_TAR">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="ServicioTrayecto_TAR" Type="DESARROLLOModel.Store.ServicioTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="ServicioTrayecto_TAR">
+        <PropertyRef Name="STR_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServicioTrayecto_TAR_Trayecto_TAR">
+    <End Role="Trayecto_TAR" Type="DESARROLLOModel.Store.Trayecto_TAR" Multiplicity="1" />
+    <End Role="ServicioTrayecto_TAR" Type="DESARROLLOModel.Store.ServicioTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trayecto_TAR">
+        <PropertyRef Name="TRA_IdTrayecto" />
+      </Principal>
+      <Dependent Role="ServicioTrayecto_TAR">
+        <PropertyRef Name="STR_IdTrayecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoValorAdicional_TAR_Servicio_TAR">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="TipoValorAdicional_TAR" Type="DESARROLLOModel.Store.TipoValorAdicional_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="TipoValorAdicional_TAR">
+        <PropertyRef Name="TVA_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tramite_TAR_Servicio_TAR1">
+    <End Role="Servicio_TAR" Type="DESARROLLOModel.Store.Servicio_TAR" Multiplicity="1" />
+    <End Role="Tramite_TAR" Type="DESARROLLOModel.Store.Tramite_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicio_TAR">
+        <PropertyRef Name="SER_IdServicio" />
+      </Principal>
+      <Dependent Role="Tramite_TAR">
+        <PropertyRef Name="TRA_IdServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tramite_TAR_TipoTramite_TAR1">
+    <End Role="TipoTramite_TAR" Type="DESARROLLOModel.Store.TipoTramite_TAR" Multiplicity="1" />
+    <End Role="Tramite_TAR" Type="DESARROLLOModel.Store.Tramite_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTramite_TAR">
+        <PropertyRef Name="TIT_IdTipoTramite" />
+      </Principal>
+      <Dependent Role="Tramite_TAR">
+        <PropertyRef Name="TRA_IdTipoTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TramiteImpuesto_TAR_Impuesto_TAR">
+    <End Role="Impuesto_TAR" Type="DESARROLLOModel.Store.Impuesto_TAR" Multiplicity="1" />
+    <End Role="TramiteImpuesto_TAR" Type="DESARROLLOModel.Store.TramiteImpuesto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impuesto_TAR">
+        <PropertyRef Name="IMP_IdImpuesto" />
+      </Principal>
+      <Dependent Role="TramiteImpuesto_TAR">
+        <PropertyRef Name="TRI_IdImpuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TramiteImpuesto_TAR_Tramite_TAR">
+    <End Role="Tramite_TAR" Type="DESARROLLOModel.Store.Tramite_TAR" Multiplicity="1" />
+    <End Role="TramiteImpuesto_TAR" Type="DESARROLLOModel.Store.TramiteImpuesto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tramite_TAR">
+        <PropertyRef Name="TRA_IdTramite" />
+      </Principal>
+      <Dependent Role="TramiteImpuesto_TAR">
+        <PropertyRef Name="TRI_IdTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trayecto_TAR_LocalDest_PAR">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="Trayecto_TAR" Type="DESARROLLOModel.Store.Trayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Trayecto_TAR">
+        <PropertyRef Name="TRA_IdLocalidadDestino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trayecto_TAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="Trayecto_TAR" Type="DESARROLLOModel.Store.Trayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Trayecto_TAR">
+        <PropertyRef Name="TRA_IdLocalidadOrigen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Trayecto_TAR_TrayectoSubTrayecto_TAR">
+    <End Role="TrayectoSubTrayecto_TAR" Type="DESARROLLOModel.Store.TrayectoSubTrayecto_TAR" Multiplicity="1" />
+    <End Role="Trayecto_TAR" Type="DESARROLLOModel.Store.Trayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrayectoSubTrayecto_TAR">
+        <PropertyRef Name="TRS_IdTrayectoSubTrayecto" />
+      </Principal>
+      <Dependent Role="Trayecto_TAR">
+        <PropertyRef Name="TRA_IdTrayectoSubTrayecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrayectoSubTrayecto_TAR_TipoSubTrayecto_TAR">
+    <End Role="TipoSubTrayecto_TAR" Type="DESARROLLOModel.Store.TipoSubTrayecto_TAR" Multiplicity="1" />
+    <End Role="TrayectoSubTrayecto_TAR" Type="DESARROLLOModel.Store.TrayectoSubTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoSubTrayecto_TAR">
+        <PropertyRef Name="TST_IdTipoSubTrayecto" />
+      </Principal>
+      <Dependent Role="TrayectoSubTrayecto_TAR">
+        <PropertyRef Name="TRS_IdTipoSubTrayecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TrayectoSubTrayecto_TAR_TipoTrayecto_TAR">
+    <End Role="TipoTrayecto_TAR" Type="DESARROLLOModel.Store.TipoTrayecto_TAR" Multiplicity="1" />
+    <End Role="TrayectoSubTrayecto_TAR" Type="DESARROLLOModel.Store.TrayectoSubTrayecto_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTrayecto_TAR">
+        <PropertyRef Name="TTR_IdTipoTrayecto" />
+      </Principal>
+      <Dependent Role="TrayectoSubTrayecto_TAR">
+        <PropertyRef Name="TRS_IdTipoTrayecto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UnidadNegocio_TAR_CuentaExterna_TAR">
+    <End Role="CuentaExterna_PAR" Type="DESARROLLOModel.Store.CuentaExterna_PAR" Multiplicity="0..1" />
+    <End Role="UnidadNegocio_TAR" Type="DESARROLLOModel.Store.UnidadNegocio_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaExterna_PAR">
+        <PropertyRef Name="CEX_IdCuentaExterna" />
+      </Principal>
+      <Dependent Role="UnidadNegocio_TAR">
+        <PropertyRef Name="UNE_IdCuentaExterna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ValorPesoDeclarado_TAR_ListaPrecios_TAR">
+    <End Role="ListaPrecios_TAR" Type="DESARROLLOModel.Store.ListaPrecios_TAR" Multiplicity="1" />
+    <End Role="ValorPesoDeclarado_TAR" Type="DESARROLLOModel.Store.ValorPesoDeclarado_TAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListaPrecios_TAR">
+        <PropertyRef Name="LIP_IdListaPrecios" />
+      </Principal>
+      <Dependent Role="ValorPesoDeclarado_TAR">
+        <PropertyRef Name="VMD_IdListaPrecios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paActualizarPreciosTrayectosBaseMensajeria_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPrecioTrayectoSubtrayecto" Type="bigint" Mode="In" />
+    <Parameter Name="idListaPrecios" Type="int" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paAdicionarTraySubTraySvcBaseMen_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idListaPrecio" Type="int" Mode="In" />
+    <Parameter Name="idTrayectoSubTrayecto" Type="int" Mode="In" />
+    <Parameter Name="valor" Type="numeric" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="porcentaje" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="paEliminarServicioListaPrecios_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="idListaPrecio" Type="int" Mode="In" />
+    <Parameter Name="idServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paEliminarTraySubTraySvcBaseMen_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idListaPrecio" Type="int" Mode="In" />
+    <Parameter Name="idTrayectoSubtrayecto" Type="int" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paGuardarListaPrecios_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="inicio" Type="date" Mode="In" />
+    <Parameter Name="fin" Type="date" Mode="In" />
+    <Parameter Name="estado" Type="char" Mode="In" />
+    <Parameter Name="esTarifaPlena" Type="bit" Mode="In" />
+    <Parameter Name="idMoneda" Type="char" Mode="In" />
+    <Parameter Name="esListaCliente" Type="bit" Mode="In" />
+    <Parameter Name="idListaBase" Type="int" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paGuardarListaPreciosServicioUNegMensajeria_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idServicio" Type="int" Mode="In" />
+    <Parameter Name="idListaPrecios" Type="int" Mode="In" />
+    <Parameter Name="primaSeguro" Type="numeric" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerExTrayecto_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdListaPrecio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPrecioRangosClienteContado_CLI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+    <Parameter Name="idContrato" Type="int" Mode="In" />
+    <Parameter Name="idServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPrecioTipoEntregaListaPrecios_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdListaPrecio" Type="int" Mode="In" />
+    <Parameter Name="IdTipoEntrega" Type="char" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPrecioTraySubTraMensajeria_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idListaPreciosServicio" Type="int" Mode="In" />
+    <Parameter Name="idListaPrecio" Type="int" Mode="In" />
+    <Parameter Name="idTrayecto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPreTraSubValAdi_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPrecioTrayectoSubTrayecto" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPrimaSeguro_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdListaPrecio" Type="int" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerTrayectSubTrayectValorAdi_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idListaPrecios" Type="int" Mode="In" />
+    <Parameter Name="idServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paPrecioCtrCorrespondencia_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdListaPrecioServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paPrecioExTrayecto_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdListaPrecioServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paPrecioInternacional_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdListaPrecioServicio" Type="int" Mode="In" />
+    <Parameter Name="IdTipoEmpaque" Type="int" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="Zona" Type="varchar" Mode="In" />
+    <Parameter Name="Peso" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="paPrecioRango_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdListaPrecioServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paPrecioRapiPromo_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdListaPrecioServicio" Type="int" Mode="In" />
+    <Parameter Name="Peso" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="paPrecioTramite_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdListaPrecioServicio" Type="int" Mode="In" />
+    <Parameter Name="IdTramite" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paPrecioTrayecto_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdListaPrecios" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paPrecioTrayectoRango_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdListaPrecioServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paValidarExTrayectoCliente_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdListaPrecio" Type="int" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paValidarServicioTrayectoDestino_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paValidarServicioTrayectoOrigen_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paValidarTrayectoCliente_TAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLocalidadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="IdLocalidadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdListaPrecio" Type="int" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+  </Function>
+</Schema>

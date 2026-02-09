@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CFF0152-00D0-457A-8049-EB5ECFFDE651}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.Suministros.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.Suministros.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelo\CategoriaSuministro_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConsumoSuministro_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CorreoNotificacionSuministros_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GrupoSuministroSuministro_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GrupoSuministro_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\InventarioConsolidadoHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\InventarioConsolidadoTula_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\InventarioConsolidado_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidades_VPAR.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloSuministros.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloSuministros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloSuministros.Context.Extensions.cs">
+      <DependentUpon>ModeloSuministros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloSuministros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloSuministros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloSuministros.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MotivoCambioContenedor_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NumeradorAutomatico_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NumeradorAutoSuministros_VSUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerConsultaSuministros_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerInventarioActPorCodigoInventarioCiudadAsigna_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerInventarioActPorCodigoInventario_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerListaConsolidados_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerPropietarioGuia_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerPropietarioSuministro_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerPropietarioSuministro_SUM1_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumCentroServicioPorRemision_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumCentroServicioPorUsuarioRS_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumCentroServicioPorUsuario_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumCentroServicio_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumCiudadDestino_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumGestionPorRemision_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumGestionPorRemision_SUM_Result1.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumMensajeroCiudadDestino_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumMensajeroPorRemision_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumMensajeroPorRemision_SUM_Result1.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumMensajero_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumSucursalCiudadDestino_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumSucursalesPorRemision_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionesSumSucursal_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumCentroServicioPorRango_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumGestionPorRango_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumGestionPorUsuarioRS_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumGestionPorUsuario_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumMensajeroPorRango_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumMensajeroPorUsuarioRS_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumMensajeroPorUsuario_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumSucursalPorRangoRS_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumSucursalPorUsuarioRS_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerProvisionSumSucursalPorUsuario_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerRemisiones_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerRemisiones_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumAsignadoPorGrupoYCentroServicio_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumCentroServicioNoIncluidosEnGrupo_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumCentroServicioNoIncluidosEnGrupo_SUM_Result1.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumGestionNoGrupoSuministro_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumMensajeroNoIncluidosEnGrupoRS_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumMensajeroNoIncluidosEnGrupo_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumProcesoNoGrupoSuministroRS_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumProvisionadoCsvFecha_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumProvisionadoMenFecha.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumProvisionadoProcesoFecha.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumProvisionadoSucFecha.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumProvisionadoSucFecha_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSumSucursalNoGrupoSuministro_SUM_Result.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ParametrosSuministros_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumCentroSvcHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumCentroSvcSerialHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumCentroSvcSerial_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumCentroSvc_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumMensajeroHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumMensajeroSerialHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumMensajeroSerial_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumMensajero_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumProcesoHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumProcesoSerialHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumProcesoSerial_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumProceso_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumSucursalHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumSucursalSerialHist_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumSucursalSerial_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProvisionSumSucursal_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RemisionSuministros_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RemisionSuministro_VSUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministroGrupoSuministro_VSUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministroProvisionReferencia_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosCentroServicios_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosMensajero_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosProceso_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosProceso_VSUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosSucursal_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosSucursal_VCLI.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministroSucursal_VSUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosUnidadMedida_VSUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Suministro_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUMpaObtenerSuministrosValorActualNumerador.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaActualizarValorActualNumerador.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerCentroSrvPropietarioSuministro.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionesSumCentroServicio.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionesSumCentroServicioPorRemision.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionesSumMensajero.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionesSumMensajeroPorRemision.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionesSumSucursal.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionesSumSucursalesPorRemision.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionSumCentroServicioPorRango.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionSumGestionPorRango.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionSumMensajeroPorRango.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerProvisionSumSucursalPorRango.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerSumAsignadoPorGrupoYCentroServicio.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerSumAsignadoYNoAsigMen.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerSumCentroServicioNoIncluidosEnGrupo.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaObtenerSumMensajeroNoIncluidosEnGrupo_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUpaSumiSucurSerial.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SUSuministroCentroServicio.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TamanoTula_SUM.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoConsolDetColor_OPN.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoConsolidadoDetalle_OPN.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoConsolidado_OPN.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TiposConsolidado_VOPN.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UnidadMedida_PAR.cs">
+      <DependentUpon>ModeloSuministros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SUAudit.cs" />
+    <Compile Include="SURepositorio.cs" />
+    <Compile Include="SURepositorioAdministracion.cs" />
+    <Compile Include="SURepositorioAdministracionEXT.cs" />
+    <Compile Include="SURepositorioConsolidados.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Modelo\ModeloSuministros.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloSuministros.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Modelo\ModeloSuministros.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloSuministros.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Modelo\ModeloSuministros.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloSuministros.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Agenda\Framework.Servidor.Agenda.csproj">
+      <Project>{C1C44A50-0A31-4CB1-9ACA-3D02C18E8743}</Project>
+      <Name>Framework.Servidor.Agenda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512c6601-1c3c-455a-a91a-10906c2f2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.Suministros.Comun\CO.Servidor.Suministros.Comun.csproj">
+      <Project>{477643A6-8CE8-4B63-B6AC-1DB96F5459C3}</Project>
+      <Name>CO.Servidor.Suministros.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

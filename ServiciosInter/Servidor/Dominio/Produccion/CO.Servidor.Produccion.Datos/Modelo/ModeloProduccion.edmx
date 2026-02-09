@@ -1,0 +1,2109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloDesarrollo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModeloDesarrolloStoreContainer">
+          <EntitySet Name="CargaNovedadesProduccion_PRO" EntityType="ModeloDesarrollo.Store.CargaNovedadesProduccion_PRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CentroServicios_PUA" EntityType="ModeloDesarrollo.Store.CentroServicios_PUA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LiquidacionProduccion_PRO" EntityType="ModeloDesarrollo.Store.LiquidacionProduccion_PRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Localidad_PAR" EntityType="ModeloDesarrollo.Store.Localidad_PAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MotivoNovedad_PRO" EntityType="ModeloDesarrollo.Store.MotivoNovedad_PRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="NovedadCentroServicio_PRO" EntityType="ModeloDesarrollo.Store.NovedadCentroServicio_PRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Retencion_TAR" EntityType="ModeloDesarrollo.Store.Retencion_TAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RetencionConcepto_PRO" EntityType="ModeloDesarrollo.Store.RetencionConcepto_PRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RetencionLiqGlobal_PRO" EntityType="ModeloDesarrollo.Store.RetencionLiqGlobal_PRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RetencionLiqXCiudad_PRO" EntityType="ModeloDesarrollo.Store.RetencionLiqXCiudad_PRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RetencionXCiudadConcepto_PRO" EntityType="ModeloDesarrollo.Store.RetencionXCiudadConcepto_PRO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Servicio_TAR" EntityType="ModeloDesarrollo.Store.Servicio_TAR" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA" Association="ModeloDesarrollo.Store.FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA">
+            <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+            <End Role="CargaNovedadesProduccion_PRO" EntitySet="CargaNovedadesProduccion_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO" Association="ModeloDesarrollo.Store.FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO">
+            <End Role="MotivoNovedad_PRO" EntitySet="MotivoNovedad_PRO" />
+            <End Role="CargaNovedadesProduccion_PRO" EntitySet="CargaNovedadesProduccion_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CargaNovedadesProduccion_PRO_Servicio_TAR" Association="ModeloDesarrollo.Store.FK_CargaNovedadesProduccion_PRO_Servicio_TAR">
+            <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+            <End Role="CargaNovedadesProduccion_PRO" EntitySet="CargaNovedadesProduccion_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CentroServicios_PUA_Localidad_PAR" Association="ModeloDesarrollo.Store.FK_CentroServicios_PUA_Localidad_PAR">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LiquidacionProduccion_PRO_CentroServicios_PUA" Association="ModeloDesarrollo.Store.FK_LiquidacionProduccion_PRO_CentroServicios_PUA">
+            <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+            <End Role="LiquidacionProduccion_PRO" EntitySet="LiquidacionProduccion_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="ModeloDesarrollo.Store.FK_Localidad_PAR_Localidad_PAR">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="ModeloDesarrollo.Store.FK_Localidad_PAR_Localidad_PAR1">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="ModeloDesarrollo.Store.FK_Localidad_PAR_Localidad_PAR2">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NovedadCentroServicio_PRO_CentroServicios_PUA" Association="ModeloDesarrollo.Store.FK_NovedadCentroServicio_PRO_CentroServicios_PUA">
+            <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+            <End Role="NovedadCentroServicio_PRO" EntitySet="NovedadCentroServicio_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO" Association="ModeloDesarrollo.Store.FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO">
+            <End Role="LiquidacionProduccion_PRO" EntitySet="LiquidacionProduccion_PRO" />
+            <End Role="NovedadCentroServicio_PRO" EntitySet="NovedadCentroServicio_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO" Association="ModeloDesarrollo.Store.FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO">
+            <End Role="MotivoNovedad_PRO" EntitySet="MotivoNovedad_PRO" />
+            <End Role="NovedadCentroServicio_PRO" EntitySet="NovedadCentroServicio_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO" Association="ModeloDesarrollo.Store.FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO">
+            <End Role="RetencionLiqGlobal_PRO" EntitySet="RetencionLiqGlobal_PRO" />
+            <End Role="RetencionConcepto_PRO" EntitySet="RetencionConcepto_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RetencionLiqGlobal_PRO_Retencion_TAR" Association="ModeloDesarrollo.Store.FK_RetencionLiqGlobal_PRO_Retencion_TAR">
+            <End Role="Retencion_TAR" EntitySet="Retencion_TAR" />
+            <End Role="RetencionLiqGlobal_PRO" EntitySet="RetencionLiqGlobal_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RetencionLiqXCiudad_PRO_Retencion_TAR" Association="ModeloDesarrollo.Store.FK_RetencionLiqXCiudad_PRO_Retencion_TAR">
+            <End Role="Retencion_TAR" EntitySet="Retencion_TAR" />
+            <End Role="RetencionLiqXCiudad_PRO" EntitySet="RetencionLiqXCiudad_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RetencionXCiudad_PRO_Localidad_PAR" Association="ModeloDesarrollo.Store.FK_RetencionXCiudad_PRO_Localidad_PAR">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="RetencionLiqXCiudad_PRO" EntitySet="RetencionLiqXCiudad_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO" Association="ModeloDesarrollo.Store.FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO">
+            <End Role="RetencionLiqXCiudad_PRO" EntitySet="RetencionLiqXCiudad_PRO" />
+            <End Role="RetencionXCiudadConcepto_PRO" EntitySet="RetencionXCiudadConcepto_PRO" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CargaNovedadesProduccion_PRO">
+          <Key>
+            <PropertyRef Name="CNP_IdNovedadProduccion" />
+          </Key>
+          <Property Name="CNP_IdNovedadProduccion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NCS_IdMotivoNovedad" Type="smallint" Nullable="false" />
+          <Property Name="NCS_IdCentroServicios" Type="bigint" Nullable="false" />
+          <Property Name="NCS_IdServicio" Type="int" />
+          <Property Name="NCS_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="NCS_Cantidad" Type="int" Nullable="false" />
+          <Property Name="NCS_Observacion" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="NCS_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="NCS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="NCS_Cargada" Type="bit" Nullable="false" />
+          <Property Name="NCS_MesVigencia" Type="int" Nullable="false" />
+          <Property Name="NCS_AnoVigencia" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CentroServicios_PUA">
+          <Key>
+            <PropertyRef Name="CES_IdCentroServicios" />
+          </Key>
+          <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CES_Tipo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="CES_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="CES_IdPropietario" Type="int" Nullable="false" />
+          <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="CES_Telefono2" Type="varchar" MaxLength="25" />
+          <Property Name="CES_Fax" Type="varchar" MaxLength="25" />
+          <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="CES_Barrio" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CES_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="CES_IdMunicipio" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="CES_IdPersonaResponsable" Type="bigint" Nullable="false" />
+          <Property Name="CES_Latitud" Type="numeric" Scale="6" />
+          <Property Name="CES_Longitud" Type="numeric" Scale="6" />
+          <Property Name="CES_Email" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CES_Sistematizada" Type="bit" Nullable="false" />
+          <Property Name="CES_IdCentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="CES_IdTipoPropiedad" Type="smallint" Nullable="false" />
+          <Property Name="CES_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="CES_VolumenMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="CES_AdmiteFormaPagoAlCobro" Type="bit" Nullable="false" />
+          <Property Name="CES_VendePrepago" Type="bit" Nullable="false" />
+          <Property Name="CES_ClasGirosPorIngresos" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="CES_PuedeRecibirGiros" Type="bit" Nullable="false" />
+          <Property Name="CES_PuedePagarGiros" Type="bit" Nullable="false" />
+          <Property Name="CES_TopeMaximoPorGiros" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="CES_BaseInicialCaja" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="CES_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="CES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CES_TopeMaximoPorPagos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="CES_CodigoBodega" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="CES_IdClasificadorCanalVenta" Type="smallint" Nullable="false" />
+          <Property Name="CES_CodigoSPN" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="LiquidacionProduccion_PRO">
+          <Key>
+            <PropertyRef Name="LPR_IdLiquidacionProduccion" />
+          </Key>
+          <Property Name="LPR_IdLiquidacionProduccion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LPR_TotalComisionVenta" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_IdCentroServicios" Type="bigint" Nullable="false" />
+          <Property Name="LPR_IdEstadoLiquidacionProduccion" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="LPR_TotalComisionVentaPorOtros" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_TotalIngresosFijos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_TotalNovedadReintegro" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_TotalNovedadDescuento" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_TotalRetencionesConcepto" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_TotalRetencionesReintegro" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_NumeroGuiaInterna" Type="bigint" Nullable="false" />
+          <Property Name="LPR_NumeroGiro" Type="bigint" Nullable="false" />
+          <Property Name="LPR_FechaInicioCorte" Type="datetime" Nullable="false" />
+          <Property Name="LPR_FechaFinCorte" Type="datetime" Nullable="false" />
+          <Property Name="LPR_EstaAprobada" Type="bit" Nullable="false" />
+          <Property Name="LPR_FechaAprobacion" Type="datetime" Nullable="false" />
+          <Property Name="LPR_UsuarioAprueba" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="LPR_SaldoFinalCaja" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_TotalPagos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_TotalDeducciones" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="LPR_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="LPR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="LPR_NumAMostrar" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="LPR_IdTransaccionCaja" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Localidad_PAR">
+          <Key>
+            <PropertyRef Name="LOC_IdLocalidad" />
+          </Key>
+          <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+          <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+          <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+          <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="LOC_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="LOC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="MotivoNovedad_PRO">
+          <Key>
+            <PropertyRef Name="MNO_IdMotivoNovedad" />
+          </Key>
+          <Property Name="MNO_IdMotivoNovedad" Type="smallint" Nullable="false" />
+          <Property Name="MNO_IdTipoNovedad" Type="smallint" Nullable="false" />
+          <Property Name="MNO_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="MNO_EsVisible" Type="bit" Nullable="false" />
+          <Property Name="MNO_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="MNO_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="MNO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="NovedadCentroServicio_PRO">
+          <Key>
+            <PropertyRef Name="NCS_IdNovedadCentroServicios" />
+          </Key>
+          <Property Name="NCS_IdNovedadCentroServicios" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NCS_IdMotivoNovedad" Type="smallint" Nullable="false" />
+          <Property Name="NCS_IdCentroServicios" Type="bigint" Nullable="false" />
+          <Property Name="NCS_NombreCentroServicios" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="NCS_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="NCS_IdProduccion" Type="bigint" Nullable="false" />
+          <Property Name="NCS_FechaAplicacionPr" Type="datetime" Nullable="false" />
+          <Property Name="NCS_Observacion" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="NCS_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="NCS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="NCS_EstaAprobada" Type="bit" Nullable="false" />
+          <Property Name="NCS_IdCargaNovedad" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Retencion_TAR">
+          <Key>
+            <PropertyRef Name="RET_IdRetencion" />
+          </Key>
+          <Property Name="RET_IdRetencion" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RET_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="RET_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="RET_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+        </EntityType>
+        <EntityType Name="RetencionConcepto_PRO">
+          <Key>
+            <PropertyRef Name="REN_IdRetencion" />
+            <PropertyRef Name="REN_TipoConcepto" />
+            <PropertyRef Name="REN_IdConcepto" />
+          </Key>
+          <Property Name="REN_IdRetencion" Type="smallint" Nullable="false" />
+          <Property Name="REN_TipoConcepto" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="REN_IdConcepto" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="REN_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="REN_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="RetencionLiqGlobal_PRO">
+          <Key>
+            <PropertyRef Name="REL_IdRetencion" />
+          </Key>
+          <Property Name="REL_IdRetencion" Type="smallint" Nullable="false" />
+          <Property Name="REL_TextoDelConcepto" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="REL_BaseRetencion" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="REL_PorcRetencion" Type="decimal" Precision="16" Scale="6" />
+          <Property Name="REL_CuentaContableNovasoft" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="REL_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="REL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="RetencionLiqXCiudad_PRO">
+          <Key>
+            <PropertyRef Name="REC_IdRetencionCiudad" />
+          </Key>
+          <Property Name="REC_IdRetencionCiudad" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="REC_IdRetencion" Type="smallint" Nullable="false" />
+          <Property Name="REC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="REL_TextoDelConcepto" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="REL_BaseRetencion" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="REL_PorcRetencion" Type="decimal" Precision="16" Scale="6" />
+          <Property Name="REL_CuentaContableNovasoft" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="REC_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="REC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="RetencionXCiudadConcepto_PRO">
+          <Key>
+            <PropertyRef Name="RCN_IdRetencionCiudad" />
+            <PropertyRef Name="RCN_TipoConcepto" />
+            <PropertyRef Name="RCN_IdConcepto" />
+          </Key>
+          <Property Name="RCN_IdRetencionCiudad" Type="bigint" Nullable="false" />
+          <Property Name="RCN_TipoConcepto" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RCN_IdConcepto" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="RCN_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="RCN_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Servicio_TAR">
+          <Key>
+            <PropertyRef Name="SER_IdServicio" />
+          </Key>
+          <Property Name="SER_IdServicio" Type="int" Nullable="false" />
+          <Property Name="SER_Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="SER_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SER_IdUnidadNegocio" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="SER_IdCuentaExterna" Type="smallint" />
+          <Property Name="SER_HoraInicioVenta" Type="datetime" Nullable="false" />
+          <Property Name="SER_HoraFinVenta" Type="datetime" Nullable="false" />
+          <Property Name="SER_IdentificadorInterno" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="SER_AplicaRetenciones" Type="bit" Nullable="false" />
+          <Property Name="SER_IdConceptoCaja" Type="int" Nullable="false" />
+          <Property Name="SER_CodigoIntMensajero" Type="char" MaxLength="3" />
+          <Property Name="SER_CodigoERP" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="SER_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="SER_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="SER_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="SER_CodigoPrimaERP" Type="varchar" MaxLength="4" />
+        </EntityType>
+        <Association Name="FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA">
+          <End Role="CentroServicios_PUA" Type="ModeloDesarrollo.Store.CentroServicios_PUA" Multiplicity="1" />
+          <End Role="CargaNovedadesProduccion_PRO" Type="ModeloDesarrollo.Store.CargaNovedadesProduccion_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroServicios_PUA">
+              <PropertyRef Name="CES_IdCentroServicios" />
+            </Principal>
+            <Dependent Role="CargaNovedadesProduccion_PRO">
+              <PropertyRef Name="NCS_IdCentroServicios" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO">
+          <End Role="MotivoNovedad_PRO" Type="ModeloDesarrollo.Store.MotivoNovedad_PRO" Multiplicity="1" />
+          <End Role="CargaNovedadesProduccion_PRO" Type="ModeloDesarrollo.Store.CargaNovedadesProduccion_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MotivoNovedad_PRO">
+              <PropertyRef Name="MNO_IdMotivoNovedad" />
+            </Principal>
+            <Dependent Role="CargaNovedadesProduccion_PRO">
+              <PropertyRef Name="NCS_IdMotivoNovedad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CargaNovedadesProduccion_PRO_Servicio_TAR">
+          <End Role="Servicio_TAR" Type="ModeloDesarrollo.Store.Servicio_TAR" Multiplicity="0..1" />
+          <End Role="CargaNovedadesProduccion_PRO" Type="ModeloDesarrollo.Store.CargaNovedadesProduccion_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servicio_TAR">
+              <PropertyRef Name="SER_IdServicio" />
+            </Principal>
+            <Dependent Role="CargaNovedadesProduccion_PRO">
+              <PropertyRef Name="NCS_IdServicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CentroServicios_PUA_Localidad_PAR">
+          <End Role="Localidad_PAR" Type="ModeloDesarrollo.Store.Localidad_PAR" Multiplicity="1" />
+          <End Role="CentroServicios_PUA" Type="ModeloDesarrollo.Store.CentroServicios_PUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="CentroServicios_PUA">
+              <PropertyRef Name="CES_IdMunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LiquidacionProduccion_PRO_CentroServicios_PUA">
+          <End Role="CentroServicios_PUA" Type="ModeloDesarrollo.Store.CentroServicios_PUA" Multiplicity="1" />
+          <End Role="LiquidacionProduccion_PRO" Type="ModeloDesarrollo.Store.LiquidacionProduccion_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroServicios_PUA">
+              <PropertyRef Name="CES_IdCentroServicios" />
+            </Principal>
+            <Dependent Role="LiquidacionProduccion_PRO">
+              <PropertyRef Name="LPR_IdCentroServicios" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_PAR_Localidad_PAR">
+          <End Role="Localidad_PAR" Type="ModeloDesarrollo.Store.Localidad_PAR" Multiplicity="0..1" />
+          <End Role="Localidad_PAR1" Type="ModeloDesarrollo.Store.Localidad_PAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="Localidad_PAR1">
+              <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+          <End Role="Localidad_PAR" Type="ModeloDesarrollo.Store.Localidad_PAR" Multiplicity="0..1" />
+          <End Role="Localidad_PAR1" Type="ModeloDesarrollo.Store.Localidad_PAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="Localidad_PAR1">
+              <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+          <End Role="Localidad_PAR" Type="ModeloDesarrollo.Store.Localidad_PAR" Multiplicity="0..1" />
+          <End Role="Localidad_PAR1" Type="ModeloDesarrollo.Store.Localidad_PAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="Localidad_PAR1">
+              <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NovedadCentroServicio_PRO_CentroServicios_PUA">
+          <End Role="CentroServicios_PUA" Type="ModeloDesarrollo.Store.CentroServicios_PUA" Multiplicity="1" />
+          <End Role="NovedadCentroServicio_PRO" Type="ModeloDesarrollo.Store.NovedadCentroServicio_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroServicios_PUA">
+              <PropertyRef Name="CES_IdCentroServicios" />
+            </Principal>
+            <Dependent Role="NovedadCentroServicio_PRO">
+              <PropertyRef Name="NCS_IdCentroServicios" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO">
+          <End Role="LiquidacionProduccion_PRO" Type="ModeloDesarrollo.Store.LiquidacionProduccion_PRO" Multiplicity="1" />
+          <End Role="NovedadCentroServicio_PRO" Type="ModeloDesarrollo.Store.NovedadCentroServicio_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LiquidacionProduccion_PRO">
+              <PropertyRef Name="LPR_IdLiquidacionProduccion" />
+            </Principal>
+            <Dependent Role="NovedadCentroServicio_PRO">
+              <PropertyRef Name="NCS_IdProduccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO">
+          <End Role="MotivoNovedad_PRO" Type="ModeloDesarrollo.Store.MotivoNovedad_PRO" Multiplicity="1" />
+          <End Role="NovedadCentroServicio_PRO" Type="ModeloDesarrollo.Store.NovedadCentroServicio_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MotivoNovedad_PRO">
+              <PropertyRef Name="MNO_IdMotivoNovedad" />
+            </Principal>
+            <Dependent Role="NovedadCentroServicio_PRO">
+              <PropertyRef Name="NCS_IdMotivoNovedad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO">
+          <End Role="RetencionLiqGlobal_PRO" Type="ModeloDesarrollo.Store.RetencionLiqGlobal_PRO" Multiplicity="1" />
+          <End Role="RetencionConcepto_PRO" Type="ModeloDesarrollo.Store.RetencionConcepto_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RetencionLiqGlobal_PRO">
+              <PropertyRef Name="REL_IdRetencion" />
+            </Principal>
+            <Dependent Role="RetencionConcepto_PRO">
+              <PropertyRef Name="REN_IdRetencion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RetencionLiqGlobal_PRO_Retencion_TAR">
+          <End Role="Retencion_TAR" Type="ModeloDesarrollo.Store.Retencion_TAR" Multiplicity="1" />
+          <End Role="RetencionLiqGlobal_PRO" Type="ModeloDesarrollo.Store.RetencionLiqGlobal_PRO" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Retencion_TAR">
+              <PropertyRef Name="RET_IdRetencion" />
+            </Principal>
+            <Dependent Role="RetencionLiqGlobal_PRO">
+              <PropertyRef Name="REL_IdRetencion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RetencionLiqXCiudad_PRO_Retencion_TAR">
+          <End Role="Retencion_TAR" Type="ModeloDesarrollo.Store.Retencion_TAR" Multiplicity="1" />
+          <End Role="RetencionLiqXCiudad_PRO" Type="ModeloDesarrollo.Store.RetencionLiqXCiudad_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Retencion_TAR">
+              <PropertyRef Name="RET_IdRetencion" />
+            </Principal>
+            <Dependent Role="RetencionLiqXCiudad_PRO">
+              <PropertyRef Name="REC_IdRetencion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RetencionXCiudad_PRO_Localidad_PAR">
+          <End Role="Localidad_PAR" Type="ModeloDesarrollo.Store.Localidad_PAR" Multiplicity="1" />
+          <End Role="RetencionLiqXCiudad_PRO" Type="ModeloDesarrollo.Store.RetencionLiqXCiudad_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="RetencionLiqXCiudad_PRO">
+              <PropertyRef Name="REC_IdLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO">
+          <End Role="RetencionLiqXCiudad_PRO" Type="ModeloDesarrollo.Store.RetencionLiqXCiudad_PRO" Multiplicity="1" />
+          <End Role="RetencionXCiudadConcepto_PRO" Type="ModeloDesarrollo.Store.RetencionXCiudadConcepto_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RetencionLiqXCiudad_PRO">
+              <PropertyRef Name="REC_IdRetencionCiudad" />
+            </Principal>
+            <Dependent Role="RetencionXCiudadConcepto_PRO">
+              <PropertyRef Name="RCN_IdRetencionCiudad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="paActualizaEstLiquidacion_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+          <Parameter Name="estadoLiquidacion" Type="char" Mode="In" />
+        </Function>
+        <Function Name="paActualizaLiquidaAprobada_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+          <Parameter Name="numeroGuiaInterna" Type="bigint" Mode="In" />
+          <Parameter Name="numGiro" Type="smallint" Mode="In" />
+          <Parameter Name="fechaGrabacion" Type="datetime" Mode="In" />
+          <Parameter Name="aprobadoPor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paAprobarLiquidaciones_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Mes" Type="int" Mode="In" />
+          <Parameter Name="Ano" Type="int" Mode="In" />
+          <Parameter Name="IdRacol" Type="bigint" Mode="In" />
+          <Parameter Name="IdCiudad" Type="varchar" Mode="In" />
+          <Parameter Name="IdCS" Type="bigint" Mode="In" />
+          <Parameter Name="IdLiqDesde" Type="bigint" Mode="In" />
+          <Parameter Name="IdLiqHasta" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paCargarLiquidacionCaja_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mes" Type="int" Mode="In" />
+          <Parameter Name="ano" Type="int" Mode="In" />
+        </Function>
+        <Function Name="paConsultarLiquidaciones_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Mes" Type="int" Mode="In" />
+          <Parameter Name="Ano" Type="int" Mode="In" />
+          <Parameter Name="IdRacol" Type="bigint" Mode="In" />
+          <Parameter Name="IdCiudad" Type="varchar" Mode="In" />
+          <Parameter Name="IdCS" Type="bigint" Mode="In" />
+          <Parameter Name="IdLiqDesde" Type="bigint" Mode="In" />
+          <Parameter Name="IdLiqHasta" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paCrearLiquidacionesAgrupadas_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="fechaCorte" Type="datetime" Mode="In" />
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+          <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paCrearLiquidacionProducci_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="totalComisionVenta" Type="numeric" Mode="In" />
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="totalComisionPuntos" Type="numeric" Mode="In" />
+          <Parameter Name="totalIngresosFijos" Type="numeric" Mode="In" />
+          <Parameter Name="totalNovedadReintegro" Type="numeric" Mode="In" />
+          <Parameter Name="totalNovedadDescuento" Type="numeric" Mode="In" />
+          <Parameter Name="totalRetencionConcepto" Type="numeric" Mode="In" />
+          <Parameter Name="totalRetencionReintegro" Type="numeric" Mode="In" />
+          <Parameter Name="fechaInicioCorte" Type="datetime" Mode="In" />
+          <Parameter Name="fechaFinCorte" Type="datetime" Mode="In" />
+          <Parameter Name="saldoCaja" Type="numeric" Mode="In" />
+          <Parameter Name="totalPagos" Type="numeric" Mode="In" />
+          <Parameter Name="totalDeducciones" Type="numeric" Mode="In" />
+          <Parameter Name="fechaGrabacion" Type="datetime" Mode="In" />
+          <Parameter Name="fechaAprobacion" Type="datetime" Mode="In" />
+          <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+          <Parameter Name="usuarioAprueba" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paCrearLiquidaIngresosFijos_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="idTipoComisionFija" Type="smallint" Mode="In" />
+          <Parameter Name="descripcionTipoComi" Type="varchar" Mode="In" />
+          <Parameter Name="valorConfigurado" Type="numeric" Mode="In" />
+          <Parameter Name="valorLiquidado" Type="numeric" Mode="In" />
+          <Parameter Name="idContrato" Type="int" Mode="In" />
+          <Parameter Name="diasHabiles" Type="int" Mode="In" />
+          <Parameter Name="fechaGrabacion" Type="datetime" Mode="In" />
+          <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paEliminarLiqProduccion_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdLiqProduccion" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paLiquidacionProduccion_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="mes" Type="int" Mode="In" />
+          <Parameter Name="ano" Type="int" Mode="In" />
+          <Parameter Name="IdCentroServicio" Type="bigint" Mode="In" />
+          <Parameter Name="Usuario" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="paObtenerCenSvcSinPrograLiqui_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="idRacol" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerComisionConcepto_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="fechaCorte" Type="date" Mode="In" />
+        </Function>
+        <Function Name="paObtenerComisionPuntosAcargo_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="fechaCorte" Type="date" Mode="In" />
+        </Function>
+        <Function Name="paObtenerLiquidacionNovedad_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+          <Parameter Name="idTipoNovedad" Type="int" Mode="In" />
+        </Function>
+        <Function Name="paObtenerLiquidaComiConcepto_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerLiquidaComiPtoAcargo_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerLiquidaIngresosFijos_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerLiquidaProduAprobadas_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroLogistico" Type="bigint" Mode="In" />
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+          <Parameter Name="idTipoCentroSvc" Type="char" Mode="In" />
+          <Parameter Name="idProgramacion" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerLiquidaProduccion_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idRacol" Type="bigint" Mode="In" />
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+          <Parameter Name="fechaLiquidacion" Type="date" Mode="In" />
+          <Parameter Name="incluyeFecha" Type="bit" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+        </Function>
+        <Function Name="paObtenerLiquidaRetenConce_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerLiquidaRetenNovedad_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idLiquidacion" Type="bigint" Mode="In" />
+          <Parameter Name="idTipoMotivoNovedad" Type="int" Mode="In" />
+        </Function>
+        <Function Name="paObtenerNovedadTipoNoved_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="fechaCorte" Type="date" Mode="In" />
+          <Parameter Name="idTipoNovedad" Type="int" Mode="In" />
+        </Function>
+        <Function Name="paObtenerRetencionNovedad_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="fechaCorte" Type="date" Mode="In" />
+          <Parameter Name="idTipoMotivoNovedad" Type="int" Mode="In" />
+        </Function>
+        <Function Name="paObtenerRetencionServicio_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+          <Parameter Name="fechaCorte" Type="date" Mode="In" />
+        </Function>
+        <Function Name="paObtenerUltLiquidacionCentroSvc_PRO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModeloDesarrollo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModeloProduccion" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="paObtenerNovedadTipoNoved_PRO" ReturnType="Collection(ModeloDesarrollo.PRObtenerNovedadTipoNoved)">
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="fechaCorte" Mode="In" Type="DateTime" />
+            <Parameter Name="idTipoNovedad" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerUltLiquidacionCentroSvc_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerUltLiquidacionCentroSvc)">
+          <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paActualizaEstLiquidacion_PRO">
+            <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+            <Parameter Name="estadoLiquidacion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerLiquidacionNovedad_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerLiquidacionNovedad)">
+            <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+            <Parameter Name="idTipoNovedad" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="paCrearLiquidaIngresosFijos_PRO">
+            <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="idTipoComisionFija" Mode="In" Type="Int16" />
+            <Parameter Name="descripcionTipoComi" Mode="In" Type="String" />
+            <Parameter Name="valorConfigurado" Mode="In" Type="Decimal" />
+            <Parameter Name="valorLiquidado" Mode="In" Type="Decimal" />
+            <Parameter Name="idContrato" Mode="In" Type="Int32" />
+            <Parameter Name="diasHabiles" Mode="In" Type="Int32" />
+            <Parameter Name="fechaGrabacion" Mode="In" Type="DateTime" />
+            <Parameter Name="creadoPor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerLiquidaIngresosFijos_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerLiquidaIngresosFijos)">
+          <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerLiquidaProduccion_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerLiquidaProduccion)">
+            <Parameter Name="idRacol" Mode="In" Type="Int64" />
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+            <Parameter Name="fechaLiquidacion" Mode="In" Type="DateTime" />
+            <Parameter Name="incluyeFecha" Mode="In" Type="Boolean" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="paActualizaLiquidaAprobada_PRO">
+            <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+            <Parameter Name="numeroGuiaInterna" Mode="In" Type="Int64" />
+            <Parameter Name="numGiro" Mode="In" Type="Int16" />
+            <Parameter Name="fechaGrabacion" Mode="In" Type="DateTime" />
+            <Parameter Name="aprobadoPor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerCenSvcSinPrograLiqui_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerCenSvcSinPrograLiqui)">
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="idRacol" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerRetencionNovedad_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerRetencionNovedad)">
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="fechaCorte" Mode="In" Type="DateTime" />
+            <Parameter Name="idTipoMotivoNovedad" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerLiquidaRetenNovedad_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerLiquidaRetenNovedad)">
+            <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+            <Parameter Name="idTipoMotivoNovedad" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerComisionConcepto_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerComisionConcepto)">
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="fechaCorte" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerComisionPuntosAcargo_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerComisionPuntosAcargo)">
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="fechaCorte" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerLiquidaComiConcepto_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerLiquidaComiConcepto)">
+          <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerRetencionServicio_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerRetencionServicio)">
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="fechaCorte" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="paCrearLiquidacionProducci_PRO" ReturnType="Collection(Int64)">
+            <Parameter Name="totalComisionVenta" Mode="In" Type="Decimal" />
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="totalComisionPuntos" Mode="In" Type="Decimal" />
+            <Parameter Name="totalIngresosFijos" Mode="In" Type="Decimal" />
+            <Parameter Name="totalNovedadReintegro" Mode="In" Type="Decimal" />
+            <Parameter Name="totalNovedadDescuento" Mode="In" Type="Decimal" />
+            <Parameter Name="totalRetencionConcepto" Mode="In" Type="Decimal" />
+            <Parameter Name="totalRetencionReintegro" Mode="In" Type="Decimal" />
+            <Parameter Name="fechaInicioCorte" Mode="In" Type="DateTime" />
+            <Parameter Name="fechaFinCorte" Mode="In" Type="DateTime" />
+            <Parameter Name="saldoCaja" Mode="In" Type="Decimal" />
+            <Parameter Name="totalPagos" Mode="In" Type="Decimal" />
+            <Parameter Name="totalDeducciones" Mode="In" Type="Decimal" />
+            <Parameter Name="fechaGrabacion" Mode="In" Type="DateTime" />
+            <Parameter Name="fechaAprobacion" Mode="In" Type="DateTime" />
+            <Parameter Name="creadoPor" Mode="In" Type="String" />
+            <Parameter Name="usuarioAprueba" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerLiquidaRetenConce_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerLiquidaRetenConce)">
+          <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerLiquidaComiPtoAcargo_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerLiquidaComiPtoAcargo)">
+          <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paCrearLiquidacionesAgrupadas_PRO">
+            <Parameter Name="idCentroServicios" Mode="In" Type="Int64" />
+            <Parameter Name="fechaCorte" Mode="In" Type="DateTime" />
+            <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+            <Parameter Name="creadoPor" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerLiquidaProduAprobadas_PRO" ReturnType="Collection(ModeloDesarrollo.PRpaObtenerLiquidaProduAprobadas)">
+            <Parameter Name="idCentroLogistico" Mode="In" Type="Int64" />
+            <Parameter Name="idLiquidacion" Mode="In" Type="Int64" />
+            <Parameter Name="idTipoCentroSvc" Mode="In" Type="String" />
+            <Parameter Name="idProgramacion" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <EntitySet Name="MotivoNovedad_PRO" EntityType="ModeloDesarrollo.MotivoNovedad_PRO" />
+          <EntitySet Name="RetencionLiqGlobal_PRO" EntityType="ModeloDesarrollo.RetencionLiqGlobal_PRO" />
+          <EntitySet Name="Localidad_PAR" EntityType="ModeloDesarrollo.Localidad_PAR" />
+          <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR1">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR2">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+          </AssociationSet>
+          <EntitySet Name="Retencion_TAR" EntityType="ModeloDesarrollo.Retencion_TAR" />
+          <AssociationSet Name="FK_RetencionLiqGlobal_PRO_Retencion_TAR" Association="ModeloDesarrollo.FK_RetencionLiqGlobal_PRO_Retencion_TAR">
+            <End Role="Retencion_TAR" EntitySet="Retencion_TAR" />
+            <End Role="RetencionLiqGlobal_PRO" EntitySet="RetencionLiqGlobal_PRO" />
+          </AssociationSet>
+          <EntitySet Name="CargaNovedadesProduccion_PRO" EntityType="ModeloDesarrollo.CargaNovedadesProduccion_PRO" />
+          <AssociationSet Name="FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO" Association="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO">
+            <End Role="MotivoNovedad_PRO" EntitySet="MotivoNovedad_PRO" />
+            <End Role="CargaNovedadesProduccion_PRO" EntitySet="CargaNovedadesProduccion_PRO" />
+          </AssociationSet>
+          <EntitySet Name="CentroServicios_PUA" EntityType="ModeloDesarrollo.CentroServicios_PUA" />
+          <AssociationSet Name="FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA" Association="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA">
+            <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+            <End Role="CargaNovedadesProduccion_PRO" EntitySet="CargaNovedadesProduccion_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CentroServicios_PUA_Localidad_PAR" Association="ModeloDesarrollo.FK_CentroServicios_PUA_Localidad_PAR">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+          </AssociationSet>
+          <EntitySet Name="Servicio_TAR" EntityType="ModeloDesarrollo.Servicio_TAR" />
+          <AssociationSet Name="FK_CargaNovedadesProduccion_PRO_Servicio_TAR" Association="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_Servicio_TAR">
+            <End Role="Servicio_TAR" EntitySet="Servicio_TAR" />
+            <End Role="CargaNovedadesProduccion_PRO" EntitySet="CargaNovedadesProduccion_PRO" />
+          </AssociationSet>
+          <EntitySet Name="NovedadCentroServicio_PRO" EntityType="ModeloDesarrollo.NovedadCentroServicio_PRO" />
+          <AssociationSet Name="FK_NovedadCentroServicio_PRO_CentroServicios_PUA" Association="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_CentroServicios_PUA">
+            <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+            <End Role="NovedadCentroServicio_PRO" EntitySet="NovedadCentroServicio_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO" Association="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO">
+            <End Role="MotivoNovedad_PRO" EntitySet="MotivoNovedad_PRO" />
+            <End Role="NovedadCentroServicio_PRO" EntitySet="NovedadCentroServicio_PRO" />
+          </AssociationSet>
+          <EntitySet Name="RetencionConcepto_PRO" EntityType="ModeloDesarrollo.RetencionConcepto_PRO" />
+          <EntitySet Name="RetencionXCiudadConcepto_PRO" EntityType="ModeloDesarrollo.RetencionXCiudadConcepto_PRO" />
+          <AssociationSet Name="FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO" Association="ModeloDesarrollo.FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO">
+            <End Role="RetencionLiqGlobal_PRO" EntitySet="RetencionLiqGlobal_PRO" />
+            <End Role="RetencionConcepto_PRO" EntitySet="RetencionConcepto_PRO" />
+          </AssociationSet>
+          <FunctionImport Name="paLiquidacionProduccion_PRO">
+            <Parameter Name="mes" Mode="In" Type="Int32" />
+            <Parameter Name="ano" Mode="In" Type="Int32" />
+            <Parameter Name="IdCentroServicio" Mode="In" Type="Int64" />
+            <Parameter Name="Usuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="paAprobarLiquidaciones_PRO">
+            <Parameter Name="Mes" Mode="In" Type="Int32" />
+            <Parameter Name="Ano" Mode="In" Type="Int32" />
+            <Parameter Name="IdRacol" Mode="In" Type="Int64" />
+            <Parameter Name="IdCiudad" Mode="In" Type="String" />
+            <Parameter Name="IdCS" Mode="In" Type="Int64" />
+            <Parameter Name="IdLiqDesde" Mode="In" Type="Int64" />
+            <Parameter Name="IdLiqHasta" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paEliminarLiqProduccion_PRO">
+          <Parameter Name="IdLiqProduccion" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paCargarLiquidacionCaja_PRO">
+            <Parameter Name="mes" Mode="In" Type="Int32" />
+            <Parameter Name="ano" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="paConsultarLiquidaciones_PRO" ReturnType="Collection(ModeloDesarrollo.paConsultarLiquidaciones_PRO_Result)">
+            <Parameter Name="Mes" Mode="In" Type="Int32" />
+            <Parameter Name="Ano" Mode="In" Type="Int32" />
+            <Parameter Name="IdRacol" Mode="In" Type="Int64" />
+            <Parameter Name="IdCiudad" Mode="In" Type="String" />
+            <Parameter Name="IdCS" Mode="In" Type="Int64" />
+            <Parameter Name="IdLiqDesde" Mode="In" Type="Int64" />
+            <Parameter Name="IdLiqHasta" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <EntitySet Name="LiquidacionProduccion_PRO" EntityType="ModeloDesarrollo.LiquidacionProduccion_PRO" />
+          <AssociationSet Name="FK_LiquidacionProduccion_PRO_CentroServicios_PUA" Association="ModeloDesarrollo.FK_LiquidacionProduccion_PRO_CentroServicios_PUA">
+            <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+            <End Role="LiquidacionProduccion_PRO" EntitySet="LiquidacionProduccion_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO" Association="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO">
+            <End Role="LiquidacionProduccion_PRO" EntitySet="LiquidacionProduccion_PRO" />
+            <End Role="NovedadCentroServicio_PRO" EntitySet="NovedadCentroServicio_PRO" />
+          </AssociationSet>
+          <EntitySet Name="RetencionLiqXCiudad_PRO" EntityType="ModeloDesarrollo.RetencionLiqXCiudad_PRO" />
+          <AssociationSet Name="FK_RetencionXCiudad_PRO_Localidad_PAR" Association="ModeloDesarrollo.FK_RetencionXCiudad_PRO_Localidad_PAR">
+            <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+            <End Role="RetencionLiqXCiudad_PRO" EntitySet="RetencionLiqXCiudad_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RetencionLiqXCiudad_PRO_Retencion_TAR" Association="ModeloDesarrollo.FK_RetencionLiqXCiudad_PRO_Retencion_TAR">
+            <End Role="Retencion_TAR" EntitySet="Retencion_TAR" />
+            <End Role="RetencionLiqXCiudad_PRO" EntitySet="RetencionLiqXCiudad_PRO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO" Association="ModeloDesarrollo.FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO">
+            <End Role="RetencionLiqXCiudad_PRO" EntitySet="RetencionLiqXCiudad_PRO" />
+            <End Role="RetencionXCiudadConcepto_PRO" EntitySet="RetencionXCiudadConcepto_PRO" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="PRObtenerNovedadTipoNoved">
+          <Property Type="Int64" Name="NCS_IdCentroServicios" Nullable="false" />
+          <Property Type="Decimal" Name="ValorNovedad" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="String" Name="MNO_Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="Int16" Name="MNO_IdMotivoNovedad" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerUltLiquidacionCentroSvc">
+          <Property Type="Int64" Name="LPR_IdLiquidacionProduccion" Nullable="false" />
+          <Property Type="Decimal" Name="LPR_TotalComisionVenta" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="LPR_IdCentroServicios" Nullable="false" />
+          <Property Type="String" Name="LPR_IdEstadoLiquidacionProduccion" Nullable="false" MaxLength="3" />
+          <Property Type="Decimal" Name="LPR_TotalComisionVentaPorOtros" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalIngresosFijos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalNovedadReintegro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalNovedadDescuento" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalRetencionesConcepto" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalRetencionesReintegro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="LPR_NumeroGuiaInterna" Nullable="false" />
+          <Property Type="Int64" Name="LPR_NumeroGiro" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaInicioCorte" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="LPR_EstaAprobada" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaFinCorte" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LPR_FechaAprobacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LPR_UsuarioAprueba" Nullable="false" MaxLength="20" />
+          <Property Type="Decimal" Name="LPR_SaldoFinalCaja" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalPagos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalDeducciones" Nullable="false" Precision="16" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerLiquidacionNovedad">
+          <Property Type="Int64" Name="NCS_IdCentroServicios" Nullable="false" />
+          <Property Type="Decimal" Name="ValorNovedad" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="String" Name="MNO_Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="Int16" Name="MNO_IdMotivoNovedad" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerLiquidaIngresosFijos">
+          <Property Type="Int16" Name="LIF_IdTipoComisionFija" Nullable="false" />
+          <Property Type="String" Name="LIF_DescripcionTipoComi" Nullable="false" MaxLength="25" />
+          <Property Type="Decimal" Name="ValorBase" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LIF_ValorLiquidado" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int32" Name="LIF_DiasHabilesLiquidados" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerLiquidaProduccion">
+          <Property Type="Int64" Name="LPR_IdLiquidacionProduccion" Nullable="false" />
+          <Property Type="Decimal" Name="LPR_TotalComisionVenta" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="LPR_IdCentroServicios" Nullable="false" />
+          <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="LPR_IdEstadoLiquidacionProduccion" Nullable="false" MaxLength="3" />
+          <Property Type="Decimal" Name="LPR_TotalComisionVentaPorOtros" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalIngresosFijos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalNovedadReintegro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalNovedadDescuento" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalRetencionesConcepto" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalRetencionesReintegro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="LPR_NumeroGuiaInterna" Nullable="false" />
+          <Property Type="Int64" Name="LPR_NumeroGiro" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaInicioCorte" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LPR_FechaFinCorte" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="LPR_EstaAprobada" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaAprobacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LPR_UsuarioAprueba" Nullable="false" MaxLength="20" />
+          <Property Type="Decimal" Name="LPR_SaldoFinalCaja" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalPagos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalDeducciones" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="DateTime" Name="LPR_FechaGrabacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="CES_Tipo" Nullable="false" MaxLength="3" />
+          <Property Type="Int64" Name="AGE_IdCentroLogistico" Nullable="false" />
+          <Property Type="Int64" Name="CEL_IdRegionalAdm" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerCenSvcSinPrograLiqui">
+          <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" />
+          <Property Type="Int64" Name="CES_IdCentroServicios" Nullable="false" />
+          <Property Type="String" Name="CES_Tipo" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="CES_Estado" Nullable="false" MaxLength="3" />
+          <Property Type="Int64" Name="CEL_IdRegionalAdm" Nullable="false" />
+          <Property Type="String" Name="NombreRacol" Nullable="false" MaxLength="250" />
+          <Property Type="Decimal" Name="saldo" Nullable="true" Precision="16" Scale="4" />
+          <Property Type="Boolean" Name="estadoProgramacion" Nullable="true" />
+          <Property Type="DateTime" Name="FechaUltimaLiquidacion" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerRetencionNovedad">
+          <Property Type="Int16" Name="NCS_IdMotivoNovedad" Nullable="false" />
+          <Property Type="String" Name="MNO_Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="Int16" Name="RNC_IdRetencion" Nullable="false" />
+          <Property Type="String" Name="RNC_Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="RNC_TarifaPorcentual" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="RNC_ValorFijo" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ValorBase" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Decimal" Name="ValorRetencion" Nullable="true" Precision="38" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerLiquidaRetenNovedad">
+          <Property Type="Int16" Name="NCS_IdMotivoNovedad" Nullable="false" />
+          <Property Type="String" Name="MNO_Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="Int16" Name="RNC_IdRetencion" Nullable="false" />
+          <Property Type="String" Name="RNC_Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="RNC_TarifaPorcentual" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="RNC_ValorFijo" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ValorBase" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Decimal" Name="ValorRetencion" Nullable="true" Precision="38" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerComisionConcepto">
+          <Property Type="String" Name="SER_IdUnidadNegocio" Nullable="false" MaxLength="8" />
+          <Property Type="Int16" Name="LIC_IdTipoComision" Nullable="false" />
+          <Property Type="String" Name="UNE_Nombre" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="TCO_Descripcion" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="LIC_PorcentajeComisionVenta" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+          <Property Type="Decimal" Name="ValorBase" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Decimal" Name="ValorComisionVenta" Nullable="true" Precision="38" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerComisionPuntosAcargo">
+          <Property Type="Int64" Name="LIC_IdCentroServiciosVenta" Nullable="false" />
+          <Property Type="String" Name="LIC_NombreCentroServiciosVenta" Nullable="false" MaxLength="250" />
+          <Property Type="Decimal" Name="ValorComision" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Decimal" Name="ValorBase" Nullable="true" Precision="38" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerLiquidaComiConcepto">
+          <Property Type="String" Name="LPG_IdUnidadNegocio" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="LPG_NombreUnidadNegocio" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="LPG_DescripcionTipoComision" Nullable="false" MaxLength="10" />
+          <Property Type="Int16" Name="LPG_IdTipoComision" Nullable="false" />
+          <Property Type="Decimal" Name="LPG_PorcentajeComision" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ValorBase" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Decimal" Name="ValorComisionVenta" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Int32" Name="Cantidad" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerRetencionServicio">
+          <Property Type="Int32" Name="LIC_IdServicio" Nullable="false" />
+          <Property Type="String" Name="SER_Nombre" Nullable="false" MaxLength="25" />
+          <Property Type="Int16" Name="CCR_IdRetencion" Nullable="false" />
+          <Property Type="Int16" Name="LIC_IdTipoComision" Nullable="false" />
+          <Property Type="String" Name="TCO_Descripcion" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="RET_Descripcion" Nullable="false" MaxLength="100" />
+          <Property Type="Decimal" Name="CCR_ValorFijo" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="CCR_TarifaPorcentual" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="CCR_Base" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ValorBase" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Decimal" Name="RetencionLiquidada" Nullable="true" Precision="16" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerLiquidaRetenConce">
+          <Property Type="Int16" Name="LPR_IdRetencion" Nullable="false" />
+          <Property Type="String" Name="LPR_DescripcionRetencion" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="LPR_TarifaPorcentualRetencion" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_ValorFijoRetencion" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_BaseRetencion" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_ValorRetencionLiquidado" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int32" Name="LPR_IdServicio" Nullable="false" />
+          <Property Type="String" Name="LPR_DescripcionServicio" Nullable="false" MaxLength="100" />
+          <Property Type="Int64" Name="LPR_IdLiquidacionProduccion" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerLiquidaComiPtoAcargo">
+          <Property Type="Int64" Name="LIC_IdCentroServiciosVenta" Nullable="false" />
+          <Property Type="String" Name="LIC_NombreCentroServiciosVenta" Nullable="false" MaxLength="250" />
+          <Property Type="Decimal" Name="ValorComision" Nullable="true" Precision="38" Scale="4" />
+          <Property Type="Decimal" Name="ValorBase" Nullable="true" Precision="38" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="PRpaObtenerLiquidaProduAprobadas">
+          <Property Type="Int64" Name="LPR_IdLiquidacionProduccion" Nullable="false" />
+          <Property Type="Decimal" Name="LPR_TotalComisionVenta" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="LPR_IdCentroServicios" Nullable="false" />
+          <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="LPR_IdEstadoLiquidacionProduccion" Nullable="false" MaxLength="3" />
+          <Property Type="Decimal" Name="LPR_TotalComisionVentaPorOtros" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalIngresosFijos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalNovedadReintegro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalNovedadDescuento" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalRetencionesConcepto" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalRetencionesReintegro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="LPR_NumeroGuiaInterna" Nullable="false" />
+          <Property Type="Int64" Name="LPR_NumeroGiro" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaInicioCorte" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LPR_FechaFinCorte" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="LPR_EstaAprobada" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaAprobacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LPR_UsuarioAprueba" Nullable="false" MaxLength="20" />
+          <Property Type="Decimal" Name="LPR_SaldoFinalCaja" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalPagos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalDeducciones" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="DateTime" Name="LPR_FechaGrabacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="CES_Tipo" Nullable="false" MaxLength="3" />
+          <Property Type="Int64" Name="AGE_IdCentroLogistico" Nullable="false" />
+          <Property Type="Int64" Name="CEL_IdRegionalAdm" Nullable="false" />
+          <Property Type="Int64" Name="PRC_IdProgramacion" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="MotivoNovedad_PRO">
+          <Key>
+            <PropertyRef Name="MNO_IdMotivoNovedad" />
+          </Key>
+          <Property Type="Int16" Name="MNO_IdMotivoNovedad" Nullable="false" />
+          <Property Type="Int16" Name="MNO_IdTipoNovedad" Nullable="false" />
+          <Property Type="String" Name="MNO_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="MNO_EsVisible" Nullable="false" />
+          <Property Type="String" Name="MNO_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="MNO_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="MNO_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CargaNovedadesProduccion_PRO" Relationship="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO" FromRole="MotivoNovedad_PRO" ToRole="CargaNovedadesProduccion_PRO" />
+          <NavigationProperty Name="NovedadCentroServicio_PRO" Relationship="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO" FromRole="MotivoNovedad_PRO" ToRole="NovedadCentroServicio_PRO" />
+        </EntityType>
+        <EntityType Name="RetencionLiqGlobal_PRO">
+          <Key>
+            <PropertyRef Name="REL_IdRetencion" />
+          </Key>
+          <Property Type="Int16" Name="REL_IdRetencion" Nullable="false" />
+          <Property Type="String" Name="REL_TextoDelConcepto" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="REL_BaseRetencion" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="REL_PorcRetencion" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="String" Name="REL_CuentaContableNovasoft" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="REL_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="REL_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Retencion_TAR" Relationship="ModeloDesarrollo.FK_RetencionLiqGlobal_PRO_Retencion_TAR" FromRole="RetencionLiqGlobal_PRO" ToRole="Retencion_TAR" />
+          <NavigationProperty Name="RetencionConcepto_PRO" Relationship="ModeloDesarrollo.FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO" FromRole="RetencionLiqGlobal_PRO" ToRole="RetencionConcepto_PRO" />
+        </EntityType>
+        <EntityType Name="Localidad_PAR">
+          <Key>
+            <PropertyRef Name="LOC_IdLocalidad" />
+          </Key>
+          <Property Type="String" Name="LOC_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOC_IdTipo" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOC_IdAncestroPrimerGrado" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOC_IdAncestroSegundoGrado" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOC_IdAncestroTercerGrado" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOC_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOC_NombreCorto" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOC_CodigoPostal" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LOC_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="LOC_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Localidad_PAR1" Relationship="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR" FromRole="Localidad_PAR" ToRole="Localidad_PAR1" />
+          <NavigationProperty Name="Localidad_PAR2" Relationship="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR" FromRole="Localidad_PAR1" ToRole="Localidad_PAR" />
+          <NavigationProperty Name="Localidad_PAR11" Relationship="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR1" FromRole="Localidad_PAR" ToRole="Localidad_PAR1" />
+          <NavigationProperty Name="Localidad_PAR3" Relationship="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR1" FromRole="Localidad_PAR1" ToRole="Localidad_PAR" />
+          <NavigationProperty Name="Localidad_PAR12" Relationship="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR2" FromRole="Localidad_PAR" ToRole="Localidad_PAR1" />
+          <NavigationProperty Name="Localidad_PAR4" Relationship="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR2" FromRole="Localidad_PAR1" ToRole="Localidad_PAR" />
+          <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloDesarrollo.FK_CentroServicios_PUA_Localidad_PAR" FromRole="Localidad_PAR" ToRole="CentroServicios_PUA" />
+          <NavigationProperty Name="RetencionLiqXCiudad_PRO" Relationship="ModeloDesarrollo.FK_RetencionXCiudad_PRO_Localidad_PAR" FromRole="Localidad_PAR" ToRole="RetencionLiqXCiudad_PRO" />
+        </EntityType>
+        <Association Name="FK_Localidad_PAR_Localidad_PAR">
+          <End Type="ModeloDesarrollo.Localidad_PAR" Role="Localidad_PAR" Multiplicity="0..1" />
+          <End Type="ModeloDesarrollo.Localidad_PAR" Role="Localidad_PAR1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="Localidad_PAR1">
+              <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+          <End Type="ModeloDesarrollo.Localidad_PAR" Role="Localidad_PAR" Multiplicity="0..1" />
+          <End Type="ModeloDesarrollo.Localidad_PAR" Role="Localidad_PAR1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="Localidad_PAR1">
+              <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+          <End Type="ModeloDesarrollo.Localidad_PAR" Role="Localidad_PAR" Multiplicity="0..1" />
+          <End Type="ModeloDesarrollo.Localidad_PAR" Role="Localidad_PAR1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="Localidad_PAR1">
+              <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Retencion_TAR">
+          <Key>
+            <PropertyRef Name="RET_IdRetencion" />
+          </Key>
+          <Property Type="Int16" Name="RET_IdRetencion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RET_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RET_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="RET_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="RetencionLiqGlobal_PRO" Relationship="ModeloDesarrollo.FK_RetencionLiqGlobal_PRO_Retencion_TAR" FromRole="Retencion_TAR" ToRole="RetencionLiqGlobal_PRO" />
+          <NavigationProperty Name="RetencionLiqXCiudad_PRO" Relationship="ModeloDesarrollo.FK_RetencionLiqXCiudad_PRO_Retencion_TAR" FromRole="Retencion_TAR" ToRole="RetencionLiqXCiudad_PRO" />
+        </EntityType>
+        <Association Name="FK_RetencionLiqGlobal_PRO_Retencion_TAR">
+          <End Type="ModeloDesarrollo.Retencion_TAR" Role="Retencion_TAR" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.RetencionLiqGlobal_PRO" Role="RetencionLiqGlobal_PRO" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Retencion_TAR">
+              <PropertyRef Name="RET_IdRetencion" />
+            </Principal>
+            <Dependent Role="RetencionLiqGlobal_PRO">
+              <PropertyRef Name="REL_IdRetencion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CargaNovedadesProduccion_PRO">
+          <Key>
+            <PropertyRef Name="CNP_IdNovedadProduccion" />
+          </Key>
+          <Property Type="Int64" Name="CNP_IdNovedadProduccion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="NCS_IdMotivoNovedad" Nullable="false" />
+          <Property Type="Int64" Name="NCS_IdCentroServicios" Nullable="false" />
+          <Property Type="Int32" Name="NCS_IdServicio" />
+          <Property Type="Decimal" Name="NCS_Valor" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int32" Name="NCS_Cantidad" Nullable="false" />
+          <Property Type="String" Name="NCS_Observacion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="NCS_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="NCS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="NCS_Cargada" Nullable="false" />
+          <Property Type="Int32" Name="NCS_MesVigencia" Nullable="false" />
+          <Property Type="Int32" Name="NCS_AnoVigencia" Nullable="false" />
+          <NavigationProperty Name="MotivoNovedad_PRO" Relationship="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO" FromRole="CargaNovedadesProduccion_PRO" ToRole="MotivoNovedad_PRO" />
+          <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA" FromRole="CargaNovedadesProduccion_PRO" ToRole="CentroServicios_PUA" />
+          <NavigationProperty Name="Servicio_TAR" Relationship="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_Servicio_TAR" FromRole="CargaNovedadesProduccion_PRO" ToRole="Servicio_TAR" />
+        </EntityType>
+        <Association Name="FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO">
+          <End Type="ModeloDesarrollo.MotivoNovedad_PRO" Role="MotivoNovedad_PRO" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.CargaNovedadesProduccion_PRO" Role="CargaNovedadesProduccion_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MotivoNovedad_PRO">
+              <PropertyRef Name="MNO_IdMotivoNovedad" />
+            </Principal>
+            <Dependent Role="CargaNovedadesProduccion_PRO">
+              <PropertyRef Name="NCS_IdMotivoNovedad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CentroServicios_PUA">
+          <Key>
+            <PropertyRef Name="CES_IdCentroServicios" />
+          </Key>
+          <Property Type="Int64" Name="CES_IdCentroServicios" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CES_Tipo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="CES_DigitoVerificacion" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Int32" Name="CES_IdPropietario" Nullable="false" />
+          <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CES_Telefono1" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CES_Telefono2" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CES_Fax" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CES_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CES_Barrio" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CES_IdZona" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CES_IdMunicipio" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CES_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="Int64" Name="CES_IdPersonaResponsable" Nullable="false" />
+          <Property Type="Decimal" Name="CES_Latitud" Precision="18" Scale="6" />
+          <Property Type="Decimal" Name="CES_Longitud" Precision="18" Scale="6" />
+          <Property Type="String" Name="CES_Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="CES_Sistematizada" Nullable="false" />
+          <Property Type="String" Name="CES_IdCentroCostos" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="CES_IdTipoPropiedad" Nullable="false" />
+          <Property Type="Decimal" Name="CES_PesoMaximo" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="CES_VolumenMaximo" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Boolean" Name="CES_AdmiteFormaPagoAlCobro" Nullable="false" />
+          <Property Type="Boolean" Name="CES_VendePrepago" Nullable="false" />
+          <Property Type="String" Name="CES_ClasGirosPorIngresos" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="CES_PuedeRecibirGiros" Nullable="false" />
+          <Property Type="Boolean" Name="CES_PuedePagarGiros" Nullable="false" />
+          <Property Type="Decimal" Name="CES_TopeMaximoPorGiros" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="CES_BaseInicialCaja" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="DateTime" Name="CES_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="CES_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="CES_TopeMaximoPorPagos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="String" Name="CES_CodigoBodega" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="CES_IdClasificadorCanalVenta" Nullable="false" />
+          <Property Type="String" Name="CES_CodigoSPN" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CargaNovedadesProduccion_PRO" Relationship="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA" FromRole="CentroServicios_PUA" ToRole="CargaNovedadesProduccion_PRO" />
+          <NavigationProperty Name="Localidad_PAR" Relationship="ModeloDesarrollo.FK_CentroServicios_PUA_Localidad_PAR" FromRole="CentroServicios_PUA" ToRole="Localidad_PAR" />
+          <NavigationProperty Name="NovedadCentroServicio_PRO" Relationship="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_CentroServicios_PUA" FromRole="CentroServicios_PUA" ToRole="NovedadCentroServicio_PRO" />
+          <NavigationProperty Name="LiquidacionProduccion_PRO" Relationship="ModeloDesarrollo.FK_LiquidacionProduccion_PRO_CentroServicios_PUA" FromRole="CentroServicios_PUA" ToRole="LiquidacionProduccion_PRO" />
+        </EntityType>
+        <Association Name="FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA">
+          <End Type="ModeloDesarrollo.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.CargaNovedadesProduccion_PRO" Role="CargaNovedadesProduccion_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroServicios_PUA">
+              <PropertyRef Name="CES_IdCentroServicios" />
+            </Principal>
+            <Dependent Role="CargaNovedadesProduccion_PRO">
+              <PropertyRef Name="NCS_IdCentroServicios" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CentroServicios_PUA_Localidad_PAR">
+          <End Type="ModeloDesarrollo.Localidad_PAR" Role="Localidad_PAR" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="CentroServicios_PUA">
+              <PropertyRef Name="CES_IdMunicipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Servicio_TAR">
+          <Key>
+            <PropertyRef Name="SER_IdServicio" />
+          </Key>
+          <Property Type="Int32" Name="SER_IdServicio" Nullable="false" />
+          <Property Type="String" Name="SER_Nombre" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SER_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SER_IdUnidadNegocio" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="SER_IdCuentaExterna" />
+          <Property Type="DateTime" Name="SER_HoraInicioVenta" Nullable="false" />
+          <Property Type="DateTime" Name="SER_HoraFinVenta" Nullable="false" />
+          <Property Type="String" Name="SER_IdentificadorInterno" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="SER_AplicaRetenciones" Nullable="false" />
+          <Property Type="Int32" Name="SER_IdConceptoCaja" Nullable="false" />
+          <Property Type="String" Name="SER_CodigoIntMensajero" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="SER_CodigoERP" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SER_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="SER_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="SER_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SER_CodigoPrimaERP" MaxLength="4" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CargaNovedadesProduccion_PRO" Relationship="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_Servicio_TAR" FromRole="Servicio_TAR" ToRole="CargaNovedadesProduccion_PRO" />
+        </EntityType>
+        <Association Name="FK_CargaNovedadesProduccion_PRO_Servicio_TAR">
+          <End Type="ModeloDesarrollo.Servicio_TAR" Role="Servicio_TAR" Multiplicity="0..1" />
+          <End Type="ModeloDesarrollo.CargaNovedadesProduccion_PRO" Role="CargaNovedadesProduccion_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Servicio_TAR">
+              <PropertyRef Name="SER_IdServicio" />
+            </Principal>
+            <Dependent Role="CargaNovedadesProduccion_PRO">
+              <PropertyRef Name="NCS_IdServicio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NovedadCentroServicio_PRO">
+          <Key>
+            <PropertyRef Name="NCS_IdNovedadCentroServicios" />
+          </Key>
+          <Property Type="Int64" Name="NCS_IdNovedadCentroServicios" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="NCS_IdMotivoNovedad" Nullable="false" />
+          <Property Type="Int64" Name="NCS_IdCentroServicios" Nullable="false" />
+          <Property Type="String" Name="NCS_NombreCentroServicios" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="NCS_Valor" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="NCS_IdProduccion" Nullable="false" />
+          <Property Type="DateTime" Name="NCS_FechaAplicacionPr" Nullable="false" />
+          <Property Type="String" Name="NCS_Observacion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="NCS_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="NCS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="NCS_EstaAprobada" Nullable="false" />
+          <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_CentroServicios_PUA" FromRole="NovedadCentroServicio_PRO" ToRole="CentroServicios_PUA" />
+          <NavigationProperty Name="MotivoNovedad_PRO" Relationship="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO" FromRole="NovedadCentroServicio_PRO" ToRole="MotivoNovedad_PRO" />
+          <Property Type="Int64" Name="NCS_IdCargaNovedad" />
+          <NavigationProperty Name="LiquidacionProduccion_PRO" Relationship="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO" FromRole="NovedadCentroServicio_PRO" ToRole="LiquidacionProduccion_PRO" />
+        </EntityType>
+        <Association Name="FK_NovedadCentroServicio_PRO_CentroServicios_PUA">
+          <End Type="ModeloDesarrollo.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.NovedadCentroServicio_PRO" Role="NovedadCentroServicio_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroServicios_PUA">
+              <PropertyRef Name="CES_IdCentroServicios" />
+            </Principal>
+            <Dependent Role="NovedadCentroServicio_PRO">
+              <PropertyRef Name="NCS_IdCentroServicios" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO">
+          <End Type="ModeloDesarrollo.MotivoNovedad_PRO" Role="MotivoNovedad_PRO" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.NovedadCentroServicio_PRO" Role="NovedadCentroServicio_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MotivoNovedad_PRO">
+              <PropertyRef Name="MNO_IdMotivoNovedad" />
+            </Principal>
+            <Dependent Role="NovedadCentroServicio_PRO">
+              <PropertyRef Name="NCS_IdMotivoNovedad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="RetencionConcepto_PRO">
+          <Key>
+            <PropertyRef Name="REN_IdRetencion" />
+            <PropertyRef Name="REN_TipoConcepto" />
+            <PropertyRef Name="REN_IdConcepto" />
+          </Key>
+          <Property Type="Int16" Name="REN_IdRetencion" Nullable="false" />
+          <Property Type="String" Name="REN_TipoConcepto" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REN_IdConcepto" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="REN_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="REN_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="RetencionLiqGlobal_PRO" Relationship="ModeloDesarrollo.FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO" FromRole="RetencionConcepto_PRO" ToRole="RetencionLiqGlobal_PRO" />
+        </EntityType>
+        <EntityType Name="RetencionXCiudadConcepto_PRO">
+          <Key>
+            <PropertyRef Name="RCN_IdRetencionCiudad" />
+            <PropertyRef Name="RCN_TipoConcepto" />
+            <PropertyRef Name="RCN_IdConcepto" />
+          </Key>
+          <Property Type="Int64" Name="RCN_IdRetencionCiudad" Nullable="false" />
+          <Property Type="String" Name="RCN_TipoConcepto" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RCN_IdConcepto" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RCN_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="RCN_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="RetencionLiqXCiudad_PRO" Relationship="ModeloDesarrollo.FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO" FromRole="RetencionXCiudadConcepto_PRO" ToRole="RetencionLiqXCiudad_PRO" />
+        </EntityType>
+        <Association Name="FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO">
+          <End Type="ModeloDesarrollo.RetencionLiqGlobal_PRO" Role="RetencionLiqGlobal_PRO" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.RetencionConcepto_PRO" Role="RetencionConcepto_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RetencionLiqGlobal_PRO">
+              <PropertyRef Name="REL_IdRetencion" />
+            </Principal>
+            <Dependent Role="RetencionConcepto_PRO">
+              <PropertyRef Name="REN_IdRetencion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="paConsultarLiquidaciones_PRO_Result">
+          <Property Type="Int64" Name="LPR_IdLiquidacionProduccion" Nullable="false" />
+          <Property Type="String" Name="LPR_NumAMostrar" Nullable="false" MaxLength="15" />
+          <Property Type="Int64" Name="LPR_IdCentroServicios" Nullable="false" />
+          <Property Type="String" Name="NombreCentroServicios" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="LPR_IdEstadoLiquidacionProduccion" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="DescEstado" Nullable="false" MaxLength="50" />
+          <Property Type="Int64" Name="LPR_NumeroGuiaInterna" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaInicioCorte" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LPR_FechaFinCorte" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="LPR_FechaAprobacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LPR_UsuarioAprueba" Nullable="false" MaxLength="20" />
+          <Property Type="Decimal" Name="LPR_TotalPagos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalDeducciones" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="DateTime" Name="LPR_FechaGrabacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LPR_CreadoPor" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="Mes" Nullable="true" />
+          <Property Type="Int32" Name="Ano" Nullable="true" />
+          <Property Type="Int64" Name="IdTransaccionCaja" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="LiquidacionProduccion_PRO">
+          <Key>
+            <PropertyRef Name="LPR_IdLiquidacionProduccion" />
+          </Key>
+          <Property Type="Int64" Name="LPR_IdLiquidacionProduccion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="LPR_TotalComisionVenta" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="LPR_IdCentroServicios" Nullable="false" />
+          <Property Type="String" Name="LPR_IdEstadoLiquidacionProduccion" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="Decimal" Name="LPR_TotalComisionVentaPorOtros" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalIngresosFijos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalNovedadReintegro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalNovedadDescuento" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalRetencionesConcepto" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalRetencionesReintegro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="LPR_NumeroGuiaInterna" Nullable="false" />
+          <Property Type="Int64" Name="LPR_NumeroGiro" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaInicioCorte" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaFinCorte" Nullable="false" />
+          <Property Type="Boolean" Name="LPR_EstaAprobada" Nullable="false" />
+          <Property Type="DateTime" Name="LPR_FechaAprobacion" Nullable="false" />
+          <Property Type="String" Name="LPR_UsuarioAprueba" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="LPR_SaldoFinalCaja" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalPagos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="LPR_TotalDeducciones" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="DateTime" Name="LPR_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="LPR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LPR_NumAMostrar" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="LPR_IdTransaccionCaja" Nullable="false" />
+          <NavigationProperty Name="CentroServicios_PUA" Relationship="ModeloDesarrollo.FK_LiquidacionProduccion_PRO_CentroServicios_PUA" FromRole="LiquidacionProduccion_PRO" ToRole="CentroServicios_PUA" />
+          <NavigationProperty Name="NovedadCentroServicio_PRO" Relationship="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO" FromRole="LiquidacionProduccion_PRO" ToRole="NovedadCentroServicio_PRO" />
+        </EntityType>
+        <Association Name="FK_LiquidacionProduccion_PRO_CentroServicios_PUA">
+          <End Type="ModeloDesarrollo.CentroServicios_PUA" Role="CentroServicios_PUA" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.LiquidacionProduccion_PRO" Role="LiquidacionProduccion_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CentroServicios_PUA">
+              <PropertyRef Name="CES_IdCentroServicios" />
+            </Principal>
+            <Dependent Role="LiquidacionProduccion_PRO">
+              <PropertyRef Name="LPR_IdCentroServicios" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO">
+          <End Type="ModeloDesarrollo.LiquidacionProduccion_PRO" Role="LiquidacionProduccion_PRO" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.NovedadCentroServicio_PRO" Role="NovedadCentroServicio_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LiquidacionProduccion_PRO">
+              <PropertyRef Name="LPR_IdLiquidacionProduccion" />
+            </Principal>
+            <Dependent Role="NovedadCentroServicio_PRO">
+              <PropertyRef Name="NCS_IdProduccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="RetencionLiqXCiudad_PRO">
+          <Key>
+            <PropertyRef Name="REC_IdRetencionCiudad" />
+          </Key>
+          <Property Type="Int64" Name="REC_IdRetencionCiudad" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="REC_IdRetencion" Nullable="false" />
+          <Property Type="String" Name="REC_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REL_TextoDelConcepto" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="REL_BaseRetencion" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="REL_PorcRetencion" Precision="16" Scale="6" />
+          <Property Type="String" Name="REL_CuentaContableNovasoft" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="REC_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="REC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Localidad_PAR" Relationship="ModeloDesarrollo.FK_RetencionXCiudad_PRO_Localidad_PAR" FromRole="RetencionLiqXCiudad_PRO" ToRole="Localidad_PAR" />
+          <NavigationProperty Name="Retencion_TAR" Relationship="ModeloDesarrollo.FK_RetencionLiqXCiudad_PRO_Retencion_TAR" FromRole="RetencionLiqXCiudad_PRO" ToRole="Retencion_TAR" />
+          <NavigationProperty Name="RetencionXCiudadConcepto_PRO" Relationship="ModeloDesarrollo.FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO" FromRole="RetencionLiqXCiudad_PRO" ToRole="RetencionXCiudadConcepto_PRO" />
+        </EntityType>
+        <Association Name="FK_RetencionXCiudad_PRO_Localidad_PAR">
+          <End Type="ModeloDesarrollo.Localidad_PAR" Role="Localidad_PAR" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.RetencionLiqXCiudad_PRO" Role="RetencionLiqXCiudad_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Localidad_PAR">
+              <PropertyRef Name="LOC_IdLocalidad" />
+            </Principal>
+            <Dependent Role="RetencionLiqXCiudad_PRO">
+              <PropertyRef Name="REC_IdLocalidad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RetencionLiqXCiudad_PRO_Retencion_TAR">
+          <End Type="ModeloDesarrollo.Retencion_TAR" Role="Retencion_TAR" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.RetencionLiqXCiudad_PRO" Role="RetencionLiqXCiudad_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Retencion_TAR">
+              <PropertyRef Name="RET_IdRetencion" />
+            </Principal>
+            <Dependent Role="RetencionLiqXCiudad_PRO">
+              <PropertyRef Name="REC_IdRetencion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO">
+          <End Type="ModeloDesarrollo.RetencionLiqXCiudad_PRO" Role="RetencionLiqXCiudad_PRO" Multiplicity="1" />
+          <End Type="ModeloDesarrollo.RetencionXCiudadConcepto_PRO" Role="RetencionXCiudadConcepto_PRO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RetencionLiqXCiudad_PRO">
+              <PropertyRef Name="REC_IdRetencionCiudad" />
+            </Principal>
+            <Dependent Role="RetencionXCiudadConcepto_PRO">
+              <PropertyRef Name="RCN_IdRetencionCiudad" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModeloDesarrolloStoreContainer" CdmEntityContainer="ModeloProduccion">
+          <FunctionImportMapping FunctionImportName="paObtenerNovedadTipoNoved_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerNovedadTipoNoved_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRObtenerNovedadTipoNoved">
+                <ScalarProperty Name="NCS_IdCentroServicios" ColumnName="NCS_IdCentroServicios" />
+                <ScalarProperty Name="ValorNovedad" ColumnName="ValorNovedad" />
+                <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+                <ScalarProperty Name="MNO_IdMotivoNovedad" ColumnName="MNO_IdMotivoNovedad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerUltLiquidacionCentroSvc_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerUltLiquidacionCentroSvc_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerUltLiquidacionCentroSvc">
+                <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+                <ScalarProperty Name="LPR_TotalComisionVenta" ColumnName="LPR_TotalComisionVenta" />
+                <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+                <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+                <ScalarProperty Name="LPR_TotalComisionVentaPorOtros" ColumnName="LPR_TotalComisionVentaPorOtros" />
+                <ScalarProperty Name="LPR_TotalIngresosFijos" ColumnName="LPR_TotalIngresosFijos" />
+                <ScalarProperty Name="LPR_TotalNovedadReintegro" ColumnName="LPR_TotalNovedadReintegro" />
+                <ScalarProperty Name="LPR_TotalNovedadDescuento" ColumnName="LPR_TotalNovedadDescuento" />
+                <ScalarProperty Name="LPR_TotalRetencionesConcepto" ColumnName="LPR_TotalRetencionesConcepto" />
+                <ScalarProperty Name="LPR_TotalRetencionesReintegro" ColumnName="LPR_TotalRetencionesReintegro" />
+                <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+                <ScalarProperty Name="LPR_NumeroGiro" ColumnName="LPR_NumeroGiro" />
+                <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+                <ScalarProperty Name="LPR_EstaAprobada" ColumnName="LPR_EstaAprobada" />
+                <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+                <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+                <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+                <ScalarProperty Name="LPR_SaldoFinalCaja" ColumnName="LPR_SaldoFinalCaja" />
+                <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+                <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paActualizaEstLiquidacion_PRO" FunctionName="ModeloDesarrollo.Store.paActualizaEstLiquidacion_PRO" />
+          <FunctionImportMapping FunctionImportName="paObtenerLiquidacionNovedad_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidacionNovedad_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidacionNovedad">
+                <ScalarProperty Name="NCS_IdCentroServicios" ColumnName="NCS_IdCentroServicios" />
+                <ScalarProperty Name="ValorNovedad" ColumnName="ValorNovedad" />
+                <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+                <ScalarProperty Name="MNO_IdMotivoNovedad" ColumnName="MNO_IdMotivoNovedad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paCrearLiquidaIngresosFijos_PRO" FunctionName="ModeloDesarrollo.Store.paCrearLiquidaIngresosFijos_PRO" />
+          <FunctionImportMapping FunctionImportName="paObtenerLiquidaIngresosFijos_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaIngresosFijos_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaIngresosFijos">
+                <ScalarProperty Name="LIF_IdTipoComisionFija" ColumnName="LIF_IdTipoComisionFija" />
+                <ScalarProperty Name="LIF_DescripcionTipoComi" ColumnName="LIF_DescripcionTipoComi" />
+                <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+                <ScalarProperty Name="LIF_ValorLiquidado" ColumnName="LIF_ValorLiquidado" />
+                <ScalarProperty Name="LIF_DiasHabilesLiquidados" ColumnName="LIF_DiasHabilesLiquidados" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerLiquidaProduccion_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaProduccion_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaProduccion">
+                <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+                <ScalarProperty Name="LPR_TotalComisionVenta" ColumnName="LPR_TotalComisionVenta" />
+                <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+                <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+                <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+                <ScalarProperty Name="LPR_TotalComisionVentaPorOtros" ColumnName="LPR_TotalComisionVentaPorOtros" />
+                <ScalarProperty Name="LPR_TotalIngresosFijos" ColumnName="LPR_TotalIngresosFijos" />
+                <ScalarProperty Name="LPR_TotalNovedadReintegro" ColumnName="LPR_TotalNovedadReintegro" />
+                <ScalarProperty Name="LPR_TotalNovedadDescuento" ColumnName="LPR_TotalNovedadDescuento" />
+                <ScalarProperty Name="LPR_TotalRetencionesConcepto" ColumnName="LPR_TotalRetencionesConcepto" />
+                <ScalarProperty Name="LPR_TotalRetencionesReintegro" ColumnName="LPR_TotalRetencionesReintegro" />
+                <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+                <ScalarProperty Name="LPR_NumeroGiro" ColumnName="LPR_NumeroGiro" />
+                <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+                <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+                <ScalarProperty Name="LPR_EstaAprobada" ColumnName="LPR_EstaAprobada" />
+                <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+                <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+                <ScalarProperty Name="LPR_SaldoFinalCaja" ColumnName="LPR_SaldoFinalCaja" />
+                <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+                <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+                <ScalarProperty Name="LPR_FechaGrabacion" ColumnName="LPR_FechaGrabacion" />
+                <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+                <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+                <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paActualizaLiquidaAprobada_PRO" FunctionName="ModeloDesarrollo.Store.paActualizaLiquidaAprobada_PRO" />
+          <FunctionImportMapping FunctionImportName="paObtenerCenSvcSinPrograLiqui_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerCenSvcSinPrograLiqui_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerCenSvcSinPrograLiqui">
+                <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+                <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+                <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+                <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+                <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+                <ScalarProperty Name="NombreRacol" ColumnName="NombreRacol" />
+                <ScalarProperty Name="saldo" ColumnName="saldo" />
+                <ScalarProperty Name="estadoProgramacion" ColumnName="estadoProgramacion" />
+                <ScalarProperty Name="FechaUltimaLiquidacion" ColumnName="FechaUltimaLiquidacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerRetencionNovedad_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerRetencionNovedad_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerRetencionNovedad">
+                <ScalarProperty Name="NCS_IdMotivoNovedad" ColumnName="NCS_IdMotivoNovedad" />
+                <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+                <ScalarProperty Name="RNC_IdRetencion" ColumnName="RNC_IdRetencion" />
+                <ScalarProperty Name="RNC_Descripcion" ColumnName="RNC_Descripcion" />
+                <ScalarProperty Name="RNC_TarifaPorcentual" ColumnName="RNC_TarifaPorcentual" />
+                <ScalarProperty Name="RNC_ValorFijo" ColumnName="RNC_ValorFijo" />
+                <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+                <ScalarProperty Name="ValorRetencion" ColumnName="ValorRetencion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerLiquidaRetenNovedad_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaRetenNovedad_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaRetenNovedad">
+                <ScalarProperty Name="NCS_IdMotivoNovedad" ColumnName="NCS_IdMotivoNovedad" />
+                <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+                <ScalarProperty Name="RNC_IdRetencion" ColumnName="RNC_IdRetencion" />
+                <ScalarProperty Name="RNC_Descripcion" ColumnName="RNC_Descripcion" />
+                <ScalarProperty Name="RNC_TarifaPorcentual" ColumnName="RNC_TarifaPorcentual" />
+                <ScalarProperty Name="RNC_ValorFijo" ColumnName="RNC_ValorFijo" />
+                <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+                <ScalarProperty Name="ValorRetencion" ColumnName="ValorRetencion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerComisionConcepto_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerComisionConcepto_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerComisionConcepto">
+                <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+                <ScalarProperty Name="LIC_IdTipoComision" ColumnName="LIC_IdTipoComision" />
+                <ScalarProperty Name="UNE_Nombre" ColumnName="UNE_Nombre" />
+                <ScalarProperty Name="TCO_Descripcion" ColumnName="TCO_Descripcion" />
+                <ScalarProperty Name="LIC_PorcentajeComisionVenta" ColumnName="LIC_PorcentajeComisionVenta" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+                <ScalarProperty Name="ValorComisionVenta" ColumnName="ValorComisionVenta" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerComisionPuntosAcargo_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerComisionPuntosAcargo_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerComisionPuntosAcargo">
+                <ScalarProperty Name="LIC_IdCentroServiciosVenta" ColumnName="LIC_IdCentroServiciosVenta" />
+                <ScalarProperty Name="LIC_NombreCentroServiciosVenta" ColumnName="LIC_NombreCentroServiciosVenta" />
+                <ScalarProperty Name="ValorComision" ColumnName="ValorComision" />
+                <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerLiquidaComiConcepto_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaComiConcepto_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaComiConcepto">
+                <ScalarProperty Name="LPG_IdUnidadNegocio" ColumnName="LPG_IdUnidadNegocio" />
+                <ScalarProperty Name="LPG_NombreUnidadNegocio" ColumnName="LPG_NombreUnidadNegocio" />
+                <ScalarProperty Name="LPG_DescripcionTipoComision" ColumnName="LPG_DescripcionTipoComision" />
+                <ScalarProperty Name="LPG_IdTipoComision" ColumnName="LPG_IdTipoComision" />
+                <ScalarProperty Name="LPG_PorcentajeComision" ColumnName="LPG_PorcentajeComision" />
+                <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+                <ScalarProperty Name="ValorComisionVenta" ColumnName="ValorComisionVenta" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerRetencionServicio_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerRetencionServicio_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerRetencionServicio">
+                <ScalarProperty Name="LIC_IdServicio" ColumnName="LIC_IdServicio" />
+                <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+                <ScalarProperty Name="CCR_IdRetencion" ColumnName="CCR_IdRetencion" />
+                <ScalarProperty Name="LIC_IdTipoComision" ColumnName="LIC_IdTipoComision" />
+                <ScalarProperty Name="TCO_Descripcion" ColumnName="TCO_Descripcion" />
+                <ScalarProperty Name="RET_Descripcion" ColumnName="RET_Descripcion" />
+                <ScalarProperty Name="CCR_ValorFijo" ColumnName="CCR_ValorFijo" />
+                <ScalarProperty Name="CCR_TarifaPorcentual" ColumnName="CCR_TarifaPorcentual" />
+                <ScalarProperty Name="CCR_Base" ColumnName="CCR_Base" />
+                <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+                <ScalarProperty Name="RetencionLiquidada" ColumnName="RetencionLiquidada" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paCrearLiquidacionProducci_PRO" FunctionName="ModeloDesarrollo.Store.paCrearLiquidacionProducci_PRO" />
+          <FunctionImportMapping FunctionImportName="paObtenerLiquidaRetenConce_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaRetenConce_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaRetenConce">
+                <ScalarProperty Name="LPR_IdRetencion" ColumnName="LPR_IdRetencion" />
+                <ScalarProperty Name="LPR_DescripcionRetencion" ColumnName="LPR_DescripcionRetencion" />
+                <ScalarProperty Name="LPR_TarifaPorcentualRetencion" ColumnName="LPR_TarifaPorcentualRetencion" />
+                <ScalarProperty Name="LPR_ValorFijoRetencion" ColumnName="LPR_ValorFijoRetencion" />
+                <ScalarProperty Name="LPR_BaseRetencion" ColumnName="LPR_BaseRetencion" />
+                <ScalarProperty Name="LPR_ValorRetencionLiquidado" ColumnName="LPR_ValorRetencionLiquidado" />
+                <ScalarProperty Name="LPR_IdServicio" ColumnName="LPR_IdServicio" />
+                <ScalarProperty Name="LPR_DescripcionServicio" ColumnName="LPR_DescripcionServicio" />
+                <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paObtenerLiquidaComiPtoAcargo_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaComiPtoAcargo_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaComiPtoAcargo">
+                <ScalarProperty Name="LIC_IdCentroServiciosVenta" ColumnName="LIC_IdCentroServiciosVenta" />
+                <ScalarProperty Name="LIC_NombreCentroServiciosVenta" ColumnName="LIC_NombreCentroServiciosVenta" />
+                <ScalarProperty Name="ValorComision" ColumnName="ValorComision" />
+                <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="paCrearLiquidacionesAgrupadas_PRO" FunctionName="ModeloDesarrollo.Store.paCrearLiquidacionesAgrupadas_PRO" />
+          <FunctionImportMapping FunctionImportName="paObtenerLiquidaProduAprobadas_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaProduAprobadas_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaProduAprobadas">
+                <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+                <ScalarProperty Name="LPR_TotalComisionVenta" ColumnName="LPR_TotalComisionVenta" />
+                <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+                <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+                <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+                <ScalarProperty Name="LPR_TotalComisionVentaPorOtros" ColumnName="LPR_TotalComisionVentaPorOtros" />
+                <ScalarProperty Name="LPR_TotalIngresosFijos" ColumnName="LPR_TotalIngresosFijos" />
+                <ScalarProperty Name="LPR_TotalNovedadReintegro" ColumnName="LPR_TotalNovedadReintegro" />
+                <ScalarProperty Name="LPR_TotalNovedadDescuento" ColumnName="LPR_TotalNovedadDescuento" />
+                <ScalarProperty Name="LPR_TotalRetencionesConcepto" ColumnName="LPR_TotalRetencionesConcepto" />
+                <ScalarProperty Name="LPR_TotalRetencionesReintegro" ColumnName="LPR_TotalRetencionesReintegro" />
+                <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+                <ScalarProperty Name="LPR_NumeroGiro" ColumnName="LPR_NumeroGiro" />
+                <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+                <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+                <ScalarProperty Name="LPR_EstaAprobada" ColumnName="LPR_EstaAprobada" />
+                <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+                <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+                <ScalarProperty Name="LPR_SaldoFinalCaja" ColumnName="LPR_SaldoFinalCaja" />
+                <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+                <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+                <ScalarProperty Name="LPR_FechaGrabacion" ColumnName="LPR_FechaGrabacion" />
+                <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+                <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+                <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+                <ScalarProperty Name="PRC_IdProgramacion" ColumnName="PRC_IdProgramacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="MotivoNovedad_PRO">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.MotivoNovedad_PRO">
+              <MappingFragment StoreEntitySet="MotivoNovedad_PRO">
+                <ScalarProperty Name="MNO_CreadoPor" ColumnName="MNO_CreadoPor" />
+                <ScalarProperty Name="MNO_FechaGrabacion" ColumnName="MNO_FechaGrabacion" />
+                <ScalarProperty Name="MNO_Estado" ColumnName="MNO_Estado" />
+                <ScalarProperty Name="MNO_EsVisible" ColumnName="MNO_EsVisible" />
+                <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+                <ScalarProperty Name="MNO_IdTipoNovedad" ColumnName="MNO_IdTipoNovedad" />
+                <ScalarProperty Name="MNO_IdMotivoNovedad" ColumnName="MNO_IdMotivoNovedad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RetencionLiqGlobal_PRO">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.RetencionLiqGlobal_PRO">
+              <MappingFragment StoreEntitySet="RetencionLiqGlobal_PRO">
+                <ScalarProperty Name="REL_CreadoPor" ColumnName="REL_CreadoPor" />
+                <ScalarProperty Name="REL_FechaGrabacion" ColumnName="REL_FechaGrabacion" />
+                <ScalarProperty Name="REL_CuentaContableNovasoft" ColumnName="REL_CuentaContableNovasoft" />
+                <ScalarProperty Name="REL_PorcRetencion" ColumnName="REL_PorcRetencion" />
+                <ScalarProperty Name="REL_BaseRetencion" ColumnName="REL_BaseRetencion" />
+                <ScalarProperty Name="REL_TextoDelConcepto" ColumnName="REL_TextoDelConcepto" />
+                <ScalarProperty Name="REL_IdRetencion" ColumnName="REL_IdRetencion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Localidad_PAR">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.Localidad_PAR">
+              <MappingFragment StoreEntitySet="Localidad_PAR">
+                <ScalarProperty Name="LOC_CreadoPor" ColumnName="LOC_CreadoPor" />
+                <ScalarProperty Name="LOC_FechaGrabacion" ColumnName="LOC_FechaGrabacion" />
+                <ScalarProperty Name="LOC_CodigoPostal" ColumnName="LOC_CodigoPostal" />
+                <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+                <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+                <ScalarProperty Name="LOC_IdAncestroTercerGrado" ColumnName="LOC_IdAncestroTercerGrado" />
+                <ScalarProperty Name="LOC_IdAncestroSegundoGrado" ColumnName="LOC_IdAncestroSegundoGrado" />
+                <ScalarProperty Name="LOC_IdAncestroPrimerGrado" ColumnName="LOC_IdAncestroPrimerGrado" />
+                <ScalarProperty Name="LOC_IdTipo" ColumnName="LOC_IdTipo" />
+                <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Retencion_TAR">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.Retencion_TAR">
+              <MappingFragment StoreEntitySet="Retencion_TAR">
+                <ScalarProperty Name="RET_CreadoPor" ColumnName="RET_CreadoPor" />
+                <ScalarProperty Name="RET_FechaGrabacion" ColumnName="RET_FechaGrabacion" />
+                <ScalarProperty Name="RET_Descripcion" ColumnName="RET_Descripcion" />
+                <ScalarProperty Name="RET_IdRetencion" ColumnName="RET_IdRetencion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CargaNovedadesProduccion_PRO">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.CargaNovedadesProduccion_PRO">
+              <MappingFragment StoreEntitySet="CargaNovedadesProduccion_PRO">
+                <ScalarProperty Name="NCS_AnoVigencia" ColumnName="NCS_AnoVigencia" />
+                <ScalarProperty Name="NCS_MesVigencia" ColumnName="NCS_MesVigencia" />
+                <ScalarProperty Name="NCS_Cargada" ColumnName="NCS_Cargada" />
+                <ScalarProperty Name="NCS_CreadoPor" ColumnName="NCS_CreadoPor" />
+                <ScalarProperty Name="NCS_FechaGrabacion" ColumnName="NCS_FechaGrabacion" />
+                <ScalarProperty Name="NCS_Observacion" ColumnName="NCS_Observacion" />
+                <ScalarProperty Name="NCS_Cantidad" ColumnName="NCS_Cantidad" />
+                <ScalarProperty Name="NCS_Valor" ColumnName="NCS_Valor" />
+                <ScalarProperty Name="NCS_IdServicio" ColumnName="NCS_IdServicio" />
+                <ScalarProperty Name="NCS_IdCentroServicios" ColumnName="NCS_IdCentroServicios" />
+                <ScalarProperty Name="NCS_IdMotivoNovedad" ColumnName="NCS_IdMotivoNovedad" />
+                <ScalarProperty Name="CNP_IdNovedadProduccion" ColumnName="CNP_IdNovedadProduccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CentroServicios_PUA">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.CentroServicios_PUA">
+              <MappingFragment StoreEntitySet="CentroServicios_PUA">
+                <ScalarProperty Name="CES_CodigoSPN" ColumnName="CES_CodigoSPN" />
+                <ScalarProperty Name="CES_IdClasificadorCanalVenta" ColumnName="CES_IdClasificadorCanalVenta" />
+                <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+                <ScalarProperty Name="CES_TopeMaximoPorPagos" ColumnName="CES_TopeMaximoPorPagos" />
+                <ScalarProperty Name="CES_CreadoPor" ColumnName="CES_CreadoPor" />
+                <ScalarProperty Name="CES_FechaGrabacion" ColumnName="CES_FechaGrabacion" />
+                <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+                <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+                <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+                <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+                <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+                <ScalarProperty Name="CES_VendePrepago" ColumnName="CES_VendePrepago" />
+                <ScalarProperty Name="CES_AdmiteFormaPagoAlCobro" ColumnName="CES_AdmiteFormaPagoAlCobro" />
+                <ScalarProperty Name="CES_VolumenMaximo" ColumnName="CES_VolumenMaximo" />
+                <ScalarProperty Name="CES_PesoMaximo" ColumnName="CES_PesoMaximo" />
+                <ScalarProperty Name="CES_IdTipoPropiedad" ColumnName="CES_IdTipoPropiedad" />
+                <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+                <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+                <ScalarProperty Name="CES_Email" ColumnName="CES_Email" />
+                <ScalarProperty Name="CES_Longitud" ColumnName="CES_Longitud" />
+                <ScalarProperty Name="CES_Latitud" ColumnName="CES_Latitud" />
+                <ScalarProperty Name="CES_IdPersonaResponsable" ColumnName="CES_IdPersonaResponsable" />
+                <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+                <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+                <ScalarProperty Name="CES_IdZona" ColumnName="CES_IdZona" />
+                <ScalarProperty Name="CES_Barrio" ColumnName="CES_Barrio" />
+                <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+                <ScalarProperty Name="CES_Fax" ColumnName="CES_Fax" />
+                <ScalarProperty Name="CES_Telefono2" ColumnName="CES_Telefono2" />
+                <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+                <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+                <ScalarProperty Name="CES_IdPropietario" ColumnName="CES_IdPropietario" />
+                <ScalarProperty Name="CES_DigitoVerificacion" ColumnName="CES_DigitoVerificacion" />
+                <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+                <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Servicio_TAR">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.Servicio_TAR">
+              <MappingFragment StoreEntitySet="Servicio_TAR">
+                <ScalarProperty Name="SER_CodigoPrimaERP" ColumnName="SER_CodigoPrimaERP" />
+                <ScalarProperty Name="SER_CreadoPor" ColumnName="SER_CreadoPor" />
+                <ScalarProperty Name="SER_FechaGrabacion" ColumnName="SER_FechaGrabacion" />
+                <ScalarProperty Name="SER_Estado" ColumnName="SER_Estado" />
+                <ScalarProperty Name="SER_CodigoERP" ColumnName="SER_CodigoERP" />
+                <ScalarProperty Name="SER_CodigoIntMensajero" ColumnName="SER_CodigoIntMensajero" />
+                <ScalarProperty Name="SER_IdConceptoCaja" ColumnName="SER_IdConceptoCaja" />
+                <ScalarProperty Name="SER_AplicaRetenciones" ColumnName="SER_AplicaRetenciones" />
+                <ScalarProperty Name="SER_IdentificadorInterno" ColumnName="SER_IdentificadorInterno" />
+                <ScalarProperty Name="SER_HoraFinVenta" ColumnName="SER_HoraFinVenta" />
+                <ScalarProperty Name="SER_HoraInicioVenta" ColumnName="SER_HoraInicioVenta" />
+                <ScalarProperty Name="SER_IdCuentaExterna" ColumnName="SER_IdCuentaExterna" />
+                <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+                <ScalarProperty Name="SER_Descripcion" ColumnName="SER_Descripcion" />
+                <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+                <ScalarProperty Name="SER_IdServicio" ColumnName="SER_IdServicio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NovedadCentroServicio_PRO">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.NovedadCentroServicio_PRO">
+              <MappingFragment StoreEntitySet="NovedadCentroServicio_PRO">
+                <ScalarProperty Name="NCS_IdCargaNovedad" ColumnName="NCS_IdCargaNovedad" />
+                <ScalarProperty Name="NCS_EstaAprobada" ColumnName="NCS_EstaAprobada" />
+                <ScalarProperty Name="NCS_CreadoPor" ColumnName="NCS_CreadoPor" />
+                <ScalarProperty Name="NCS_FechaGrabacion" ColumnName="NCS_FechaGrabacion" />
+                <ScalarProperty Name="NCS_Observacion" ColumnName="NCS_Observacion" />
+                <ScalarProperty Name="NCS_FechaAplicacionPr" ColumnName="NCS_FechaAplicacionPr" />
+                <ScalarProperty Name="NCS_IdProduccion" ColumnName="NCS_IdProduccion" />
+                <ScalarProperty Name="NCS_Valor" ColumnName="NCS_Valor" />
+                <ScalarProperty Name="NCS_NombreCentroServicios" ColumnName="NCS_NombreCentroServicios" />
+                <ScalarProperty Name="NCS_IdCentroServicios" ColumnName="NCS_IdCentroServicios" />
+                <ScalarProperty Name="NCS_IdMotivoNovedad" ColumnName="NCS_IdMotivoNovedad" />
+                <ScalarProperty Name="NCS_IdNovedadCentroServicios" ColumnName="NCS_IdNovedadCentroServicios" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RetencionConcepto_PRO">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.RetencionConcepto_PRO">
+              <MappingFragment StoreEntitySet="RetencionConcepto_PRO">
+                <ScalarProperty Name="REN_CreadoPor" ColumnName="REN_CreadoPor" />
+                <ScalarProperty Name="REN_FechaGrabacion" ColumnName="REN_FechaGrabacion" />
+                <ScalarProperty Name="REN_IdConcepto" ColumnName="REN_IdConcepto" />
+                <ScalarProperty Name="REN_TipoConcepto" ColumnName="REN_TipoConcepto" />
+                <ScalarProperty Name="REN_IdRetencion" ColumnName="REN_IdRetencion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RetencionXCiudadConcepto_PRO">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.RetencionXCiudadConcepto_PRO">
+              <MappingFragment StoreEntitySet="RetencionXCiudadConcepto_PRO">
+                <ScalarProperty Name="RCN_CreadoPor" ColumnName="RCN_CreadoPor" />
+                <ScalarProperty Name="RCN_FechaGrabacion" ColumnName="RCN_FechaGrabacion" />
+                <ScalarProperty Name="RCN_IdConcepto" ColumnName="RCN_IdConcepto" />
+                <ScalarProperty Name="RCN_TipoConcepto" ColumnName="RCN_TipoConcepto" />
+                <ScalarProperty Name="RCN_IdRetencionCiudad" ColumnName="RCN_IdRetencionCiudad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="paLiquidacionProduccion_PRO" FunctionName="ModeloDesarrollo.Store.paLiquidacionProduccion_PRO" />
+          <FunctionImportMapping FunctionImportName="paAprobarLiquidaciones_PRO" FunctionName="ModeloDesarrollo.Store.paAprobarLiquidaciones_PRO" />
+          <FunctionImportMapping FunctionImportName="paEliminarLiqProduccion_PRO" FunctionName="ModeloDesarrollo.Store.paEliminarLiqProduccion_PRO" />
+          <FunctionImportMapping FunctionImportName="paCargarLiquidacionCaja_PRO" FunctionName="ModeloDesarrollo.Store.paCargarLiquidacionCaja_PRO" />
+          <FunctionImportMapping FunctionImportName="paConsultarLiquidaciones_PRO" FunctionName="ModeloDesarrollo.Store.paConsultarLiquidaciones_PRO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloDesarrollo.paConsultarLiquidaciones_PRO_Result">
+                <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+                <ScalarProperty Name="LPR_NumAMostrar" ColumnName="LPR_NumAMostrar" />
+                <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+                <ScalarProperty Name="NombreCentroServicios" ColumnName="NombreCentroServicios" />
+                <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+                <ScalarProperty Name="DescEstado" ColumnName="DescEstado" />
+                <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+                <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+                <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+                <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+                <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+                <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+                <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+                <ScalarProperty Name="LPR_FechaGrabacion" ColumnName="LPR_FechaGrabacion" />
+                <ScalarProperty Name="LPR_CreadoPor" ColumnName="LPR_CreadoPor" />
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="Ano" ColumnName="Ano" />
+                <ScalarProperty Name="IdTransaccionCaja" ColumnName="IdTransaccionCaja" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="LiquidacionProduccion_PRO">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.LiquidacionProduccion_PRO">
+              <MappingFragment StoreEntitySet="LiquidacionProduccion_PRO">
+                <ScalarProperty Name="LPR_IdTransaccionCaja" ColumnName="LPR_IdTransaccionCaja" />
+                <ScalarProperty Name="LPR_NumAMostrar" ColumnName="LPR_NumAMostrar" />
+                <ScalarProperty Name="LPR_CreadoPor" ColumnName="LPR_CreadoPor" />
+                <ScalarProperty Name="LPR_FechaGrabacion" ColumnName="LPR_FechaGrabacion" />
+                <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+                <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+                <ScalarProperty Name="LPR_SaldoFinalCaja" ColumnName="LPR_SaldoFinalCaja" />
+                <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+                <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+                <ScalarProperty Name="LPR_EstaAprobada" ColumnName="LPR_EstaAprobada" />
+                <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+                <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+                <ScalarProperty Name="LPR_NumeroGiro" ColumnName="LPR_NumeroGiro" />
+                <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+                <ScalarProperty Name="LPR_TotalRetencionesReintegro" ColumnName="LPR_TotalRetencionesReintegro" />
+                <ScalarProperty Name="LPR_TotalRetencionesConcepto" ColumnName="LPR_TotalRetencionesConcepto" />
+                <ScalarProperty Name="LPR_TotalNovedadDescuento" ColumnName="LPR_TotalNovedadDescuento" />
+                <ScalarProperty Name="LPR_TotalNovedadReintegro" ColumnName="LPR_TotalNovedadReintegro" />
+                <ScalarProperty Name="LPR_TotalIngresosFijos" ColumnName="LPR_TotalIngresosFijos" />
+                <ScalarProperty Name="LPR_TotalComisionVentaPorOtros" ColumnName="LPR_TotalComisionVentaPorOtros" />
+                <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+                <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+                <ScalarProperty Name="LPR_TotalComisionVenta" ColumnName="LPR_TotalComisionVenta" />
+                <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RetencionLiqXCiudad_PRO">
+            <EntityTypeMapping TypeName="ModeloDesarrollo.RetencionLiqXCiudad_PRO">
+              <MappingFragment StoreEntitySet="RetencionLiqXCiudad_PRO">
+                <ScalarProperty Name="REC_CreadoPor" ColumnName="REC_CreadoPor" />
+                <ScalarProperty Name="REC_FechaGrabacion" ColumnName="REC_FechaGrabacion" />
+                <ScalarProperty Name="REL_CuentaContableNovasoft" ColumnName="REL_CuentaContableNovasoft" />
+                <ScalarProperty Name="REL_PorcRetencion" ColumnName="REL_PorcRetencion" />
+                <ScalarProperty Name="REL_BaseRetencion" ColumnName="REL_BaseRetencion" />
+                <ScalarProperty Name="REL_TextoDelConcepto" ColumnName="REL_TextoDelConcepto" />
+                <ScalarProperty Name="REC_IdLocalidad" ColumnName="REC_IdLocalidad" />
+                <ScalarProperty Name="REC_IdRetencion" ColumnName="REC_IdRetencion" />
+                <ScalarProperty Name="REC_IdRetencionCiudad" ColumnName="REC_IdRetencionCiudad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloProduccion" ZoomLevel="67">
+        <EntityTypeShape EntityType="ModeloDesarrollo.MotivoNovedad_PRO" Width="1.5" PointX="14" PointY="0.625" Height="2.7494921875" />
+        <EntityTypeShape EntityType="ModeloDesarrollo.RetencionLiqGlobal_PRO" Width="1.5" PointX="3.75" PointY="1.75" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="ModeloDesarrollo.Localidad_PAR" Width="1.5" PointX="0.75" PointY="5" Height="4.2879036458333317" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR" >
+          <ConnectorPoint PointX="1.2819230769230767" PointY="9.480205078125" />
+          <ConnectorPoint PointX="1.2819230769230767" PointY="9.730205078125" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="9.730205078125" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="9.480205078125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR1" >
+          <ConnectorPoint PointX="1.2819230769230767" PointY="5" />
+          <ConnectorPoint PointX="1.2819230769230767" PointY="4.75" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="4.75" />
+          <ConnectorPoint PointX="1.7284615384615383" PointY="5" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloDesarrollo.FK_Localidad_PAR_Localidad_PAR2" >
+          <ConnectorPoint PointX="0.75" PointY="6.5406078725961541" />
+          <ConnectorPoint PointX="0.5" PointY="6.5406078725961541" />
+          <ConnectorPoint PointX="0.5" PointY="7.9729064753605776" />
+          <ConnectorPoint PointX="0.75" PointY="7.9729064753605776" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloDesarrollo.Retencion_TAR" Width="1.5" PointX="10.75" PointY="2.875" Height="2.1725878906249996" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_RetencionLiqGlobal_PRO_Retencion_TAR" >
+          <ConnectorPoint PointX="10.75" PointY="4.3672900390625014" />
+          <ConnectorPoint PointX="8.1770833333333339" PointY="4.3672900390625005" />
+          <ConnectorPoint PointX="8.0104166666666661" PointY="4.3672900390625014" />
+          <ConnectorPoint PointX="5.25" PointY="4.3672900390625014" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloDesarrollo.CargaNovedadesProduccion_PRO" Width="1.5" PointX="7.125" PointY="6.375" Height="3.5186979166666674" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_MotivoNovedad_PRO" >
+          <ConnectorPoint PointX="14" PointY="1.28125" />
+          <ConnectorPoint PointX="8.09375" PointY="1.28125" />
+          <ConnectorPoint PointX="8.09375" PointY="6.375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloDesarrollo.CentroServicios_PUA" Width="1.5" PointX="3.375" PointY="5.25" Height="8.1339322916666674" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_CentroServicios_PUA" >
+          <ConnectorPoint PointX="4.875" PointY="8.326650390625" />
+          <ConnectorPoint PointX="7.125" PointY="8.326650390625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloDesarrollo.FK_CentroServicios_PUA_Localidad_PAR" >
+          <ConnectorPoint PointX="2.25" PointY="7.3651025390625" />
+          <ConnectorPoint PointX="3.375" PointY="7.3651025390625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloDesarrollo.Servicio_TAR" Width="1.5" PointX="9.375" PointY="7" Height="4.2879036458333353" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_CargaNovedadesProduccion_PRO_Servicio_TAR" >
+          <ConnectorPoint PointX="9.375" PointY="8.639150390625" />
+          <ConnectorPoint PointX="8.625" PointY="8.639150390625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloDesarrollo.NovedadCentroServicio_PRO" Width="1.5" PointX="16.625" PointY="2.75" Height="3.5186979166666674" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_CentroServicios_PUA" >
+          <ConnectorPoint PointX="4.875" PointY="11.518951822916668" />
+          <ConnectorPoint PointX="17.115883541666665" PointY="11.518951822916668" />
+          <ConnectorPoint PointX="17.28255020833333" PointY="11.518951822916668" />
+          <ConnectorPoint PointX="17.64843875" PointY="11.518951822916668" />
+          <ConnectorPoint PointX="17.64843875" PointY="6.65330078125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_MotivoNovedad_PRO" >
+          <ConnectorPoint PointX="15.5" PointY="3.06224609375" />
+          <ConnectorPoint PointX="16.625" PointY="3.06224609375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloDesarrollo.RetencionConcepto_PRO" Width="1.5" PointX="6" PointY="2" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="ModeloDesarrollo.RetencionXCiudadConcepto_PRO" Width="1.5" PointX="15.25" PointY="7.25" Height="2.1725878906250031" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_RetencionConcepto_PRO_RetencionLiqGlobal_PRO" >
+          <ConnectorPoint PointX="5.25" PointY="3.0862939453125016" />
+          <ConnectorPoint PointX="6" PointY="3.0862939453125016" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloDesarrollo.LiquidacionProduccion_PRO" Width="1.5" PointX="5.625" PointY="11.75" Height="6.0186165364583317" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_LiquidacionProduccion_PRO_CentroServicios_PUA" >
+          <ConnectorPoint PointX="4.875" PointY="12.759267578125002" />
+          <ConnectorPoint PointX="5.625" PointY="12.759267578125002" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloDesarrollo.FK_NovedadCentroServicio_PRO_LiquidacionProduccion_PRO" >
+          <ConnectorPoint PointX="7.125" PointY="14.759308268229166" />
+          <ConnectorPoint PointX="17.199216874999998" PointY="14.759308268229166" />
+          <ConnectorPoint PointX="17.199216874999998" PointY="6.65330078125" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloDesarrollo.RetencionLiqXCiudad_PRO" Width="1.5" PointX="13.25" PointY="4.5" Height="3.3263964843750031" />
+        <AssociationConnector Association="ModeloDesarrollo.FK_RetencionXCiudad_PRO_Localidad_PAR" >
+          <ConnectorPoint PointX="2.25" PointY="5.1487939453125" />
+          <ConnectorPoint PointX="8.0104166666666661" PointY="5.1487939453124989" />
+          <ConnectorPoint PointX="8.1770833333333339" PointY="5.1487939453125" />
+          <ConnectorPoint PointX="13.25" PointY="5.1487939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloDesarrollo.FK_RetencionLiqXCiudad_PRO_Retencion_TAR" >
+          <ConnectorPoint PointX="12.25" PointY="4.7737939453125" />
+          <ConnectorPoint PointX="13.25" PointY="4.7737939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloDesarrollo.FK_RetencionXCiudadConcepto_PRO_RetencionLiqXCiudad_PRO" >
+          <ConnectorPoint PointX="14.75" PointY="7.5381982421875016" />
+          <ConnectorPoint PointX="15.25" PointY="7.5381982421875016" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

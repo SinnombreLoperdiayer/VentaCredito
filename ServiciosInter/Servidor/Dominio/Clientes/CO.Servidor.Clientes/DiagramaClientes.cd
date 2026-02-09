@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.Clientes.CLAdministradorClientes">
+    <Position X="1" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiZACiCACBIBAIBmkAUIFEUAAyhEYAFxABAgGBgGAgM=</HashCode>
+      <FileName>CLAdministradorClientes.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ICliente" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Clientes.CLCupoCliente">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhQAAAAAACAAAAACACAAgAAAAAAAAAAAAAABAAAEEAg=</HashCode>
+      <FileName>CLCupoCliente.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CO.Servidor.Clientes.CLContrato">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EARAAIAAACAAghAgAAAAAAAAAAgAAAAAADAAAAAkAAA=</HashCode>
+      <FileName>CLContrato.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CupoCliente" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Clientes.CLClienteCredito">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACAAIAAAAAAAAIAAAAAAQAAEAAAAEAAEAAA=</HashCode>
+      <FileName>CLClienteCredito.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contrato" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Clientes.CLClienteContado" Collapsed="true">
+    <Position X="6.5" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAgAAAAAAAAAABAgAAAAAAMAAAAgAAQkAAA=</HashCode>
+      <FileName>CLClienteContado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Clientes.CLConfiguradorClientes" Collapsed="true">
+    <Position X="9.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACZABiCAChABAAAmwAEIFEQAAQjUIAFxABCgCBgGAgM=</HashCode>
+      <FileName>CLConfiguradorClientes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Clientes.CLConsultas" Collapsed="true">
+    <Position X="9.25" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAAAIAIEAACABAIACAAQAAAAABAAQAEEAg=</HashCode>
+      <FileName>CLConsultas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Clientes.CLFachadaClientes" Collapsed="true">
+    <Position X="6.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AARAAACAAAgAIAAIAAAAABAoAAACAAMAAAAAAAQkAgg=</HashCode>
+      <FileName>CLFachadaClientes.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CO.Servidor.Clientes.Comun.CLMensajesClientes" Collapsed="true">
+    <Position X="5.5" Y="8.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Clientes.Comun.ConstantesClientes" Collapsed="true">
+    <Position X="3.25" Y="8.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Clientes.Datos.CLRepositorio" Collapsed="true">
+    <Position X="4.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="CO.Servidor.Clientes.ICliente" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAEAAAAAA=</HashCode>
+      <FileName>ICliente.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="CO.Servidor.Clientes.Comun.CLEnumTipoErrorCliente" Collapsed="true">
+    <Position X="3.25" Y="7" Width="2.25" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="CO.Servidor.Clientes.Comun.CLEnumTipoOtrosi" Collapsed="true">
+    <Position X="3.25" Y="7.75" Width="2.25" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

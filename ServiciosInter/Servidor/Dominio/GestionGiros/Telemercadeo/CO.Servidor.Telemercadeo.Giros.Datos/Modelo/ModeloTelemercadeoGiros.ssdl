@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloTelemercadeoGiros1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloTelemercadeoGiros1StoreContainer">
+    <EntitySet Name="GestionGiroTelemercadeo_GIR" EntityType="ModeloTelemercadeoGiros1.Store.GestionGiroTelemercadeo_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParametrosGiros_GIR" EntityType="ModeloTelemercadeoGiros1.Store.ParametrosGiros_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResultadoTelemercadeoGiro_GIR" EntityType="ModeloTelemercadeoGiros1.Store.ResultadoTelemercadeoGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" Association="ModeloTelemercadeoGiros1.Store.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR">
+      <End Role="ResultadoTelemercadeoGiro_GIR" EntitySet="ResultadoTelemercadeoGiro_GIR" />
+      <End Role="GestionGiroTelemercadeo_GIR" EntitySet="GestionGiroTelemercadeo_GIR" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="GestionGiroTelemercadeo_GIR">
+    <Key>
+      <PropertyRef Name="GTE_IdTelemercadeoGiro" />
+    </Key>
+    <Property Name="GTE_IdTelemercadeoGiro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GTE_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="GTE_NumeroGiro" Type="bigint" Nullable="false" />
+    <Property Name="GTE_IdResultadoTelemercadeoGiro" Type="smallint" Nullable="false" />
+    <Property Name="GTE_TelefonoMarcado" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GTE_NuevoTelefono" Type="varchar" MaxLength="25" />
+    <Property Name="GTE_PersonaContesta" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="GTE_TipoCliente" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="GTE_Observacion" Type="varchar" MaxLength="250" />
+    <Property Name="GTE_IdParentesco" Type="smallint" Nullable="false" />
+    <Property Name="GTE_DescripcionParentesco" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="GTE_EnviarEmailRemitente" Type="bit" Nullable="false" />
+    <Property Name="GTE_EnviarEmailDestinatario" Type="bit" Nullable="false" />
+    <Property Name="GTE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="GTE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ParametrosGiros_GIR">
+    <Key>
+      <PropertyRef Name="PAG_IdParametro" />
+    </Key>
+    <Property Name="PAG_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PAG_ValorParametro" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAG_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ResultadoTelemercadeoGiro_GIR">
+    <Key>
+      <PropertyRef Name="RTG_IdResultadoTelemercadeoGiro" />
+    </Key>
+    <Property Name="RTG_IdResultadoTelemercadeoGiro" Type="smallint" Nullable="false" />
+    <Property Name="RTG_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RTG_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="RTG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RTG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR">
+    <End Role="ResultadoTelemercadeoGiro_GIR" Type="ModeloTelemercadeoGiros1.Store.ResultadoTelemercadeoGiro_GIR" Multiplicity="1" />
+    <End Role="GestionGiroTelemercadeo_GIR" Type="ModeloTelemercadeoGiros1.Store.GestionGiroTelemercadeo_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResultadoTelemercadeoGiro_GIR">
+        <PropertyRef Name="RTG_IdResultadoTelemercadeoGiro" />
+      </Principal>
+      <Dependent Role="GestionGiroTelemercadeo_GIR">
+        <PropertyRef Name="GTE_IdResultadoTelemercadeoGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paActualizarTelemercadeoAdmGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGirosTelemercadeo_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGiro" Type="bigint" Mode="In" />
+    <Parameter Name="fechaInicial" Type="date" Mode="In" />
+    <Parameter Name="fechaFinal" Type="date" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="idRacol" Type="bigint" Mode="In" />
+    <Parameter Name="idCentroServicio" Type="bigint" Mode="In" />
+  </Function>
+</Schema>

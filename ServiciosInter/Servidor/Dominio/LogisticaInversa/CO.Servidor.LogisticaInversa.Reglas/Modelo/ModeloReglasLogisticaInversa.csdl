@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModeloReglasLogisticaInversa" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="EntidadesReglasLogisticaInversa" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="GestionGuiaTelemercadeo_LOI" EntityType="ModeloReglasLogisticaInversa.GestionGuiaTelemercadeo_LOI" />
+    <FunctionImport Name="paBuscarDireccionMensajeria_MEN" ReturnType="Collection(Int64)">
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="EsDestinatario" Mode="In" Type="Boolean" />
+      <Parameter Name="Localidad" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="GestionGuiaTelemercadeo_LOI">
+    <Key>
+      <PropertyRef Name="GGT_IdGestionGuiaTelemercadeo" />
+    </Key>
+    <Property Type="Int64" Name="GGT_IdGestionGuiaTelemercadeo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="GGT_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="GGT_NumeroGuia" Nullable="false" />
+    <Property Type="Int16" Name="GGT_IdResultadoTelemercadeo" Nullable="false" />
+    <Property Type="String" Name="GGT_TelefonoMarcado" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GGT_PersonaContesta" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="GGT_IdParentestoConDestinatari" Nullable="false" />
+    <Property Type="String" Name="GGT_NuevoTelefono" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GGT_NuevoContaco" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GGT_NuevaDireccionEnvio" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GGT_Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="GGT_IdEstadoGuiaLog" Nullable="false" />
+    <Property Type="DateTime" Name="GGT_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="GGT_CreadoPor" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

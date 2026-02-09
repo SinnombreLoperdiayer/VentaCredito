@@ -1,0 +1,1656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="retrieveEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventsV2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventsV3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventStringV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventStringV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventStringV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventStringV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventStringV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventStringV3Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Clave" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumReg" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventsByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsByIDV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Clave" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumReg" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsByIDV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventsByIDV2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsByIDV3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Clave" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumReg" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsByIDV3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventsByIDV3Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLastEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLastEventResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLastEventResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLastEventString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLastEventStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLastEventStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsInOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsInOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventsInOutResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsInOutString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Events" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="retrieveEventsInOutStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="retrieveEventsInOutStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getItineraryData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getItineraryDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getItineraryDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SNA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SNAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SNAResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RKH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RKHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RKHResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVirtualPointByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVirtualPointByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVirtualPointByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVirtualPointEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVirtualPointEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVirtualPointEventsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setMDTMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setMDTMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="setMDTMessageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SIR_InformePosicionesGeograficas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoTrama" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SIR_InformePosicionesGeograficasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SIR_InformePosicionesGeograficasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKilometer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKilometerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKilometerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKilometerString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhysicalID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialSecs" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalYear" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalDay" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalHour" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalMinute" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FinalSecs" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKilometerStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKilometerStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionesByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionesByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionesByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionesByUserString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegionesByUserStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegionesByUserStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehiclesByRegiones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehiclesByRegionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVehiclesByRegionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehiclesByRegionesString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVehiclesByRegionesStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVehiclesByRegionesStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerPointByUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerPointByUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerPointByUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerPointByUserString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerPointByUserStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerPointByUserStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearRegionDinamicas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="longitud" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="latitud" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="tamano" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoRestriccion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidadDias" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="placas" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrearRegionDinamicasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CrearRegionDinamicasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AttentionType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAlarmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAlarmsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="retrieveEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEvents" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsV2SoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventsV2" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsV2SoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventsV2Response" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsV3SoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventsV3" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsV3SoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventsV3Response" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventStringSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventString" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventStringSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventStringV2SoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventStringV2" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventStringV2SoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventStringV2Response" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventStringV3SoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventStringV3" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventStringV3SoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventStringV3Response" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventsByID" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsByIDV2SoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventsByIDV2" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsByIDV2SoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventsByIDV2Response" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsByIDV3SoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventsByIDV3" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsByIDV3SoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventsByIDV3Response" />
+  </wsdl:message>
+  <wsdl:message name="getLastEventSoapIn">
+    <wsdl:part name="parameters" element="tns:getLastEvent" />
+  </wsdl:message>
+  <wsdl:message name="getLastEventSoapOut">
+    <wsdl:part name="parameters" element="tns:getLastEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLastEventStringSoapIn">
+    <wsdl:part name="parameters" element="tns:getLastEventString" />
+  </wsdl:message>
+  <wsdl:message name="getLastEventStringSoapOut">
+    <wsdl:part name="parameters" element="tns:getLastEventStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsInOutSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventsInOut" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsInOutSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventsInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsInOutStringSoapIn">
+    <wsdl:part name="parameters" element="tns:retrieveEventsInOutString" />
+  </wsdl:message>
+  <wsdl:message name="retrieveEventsInOutStringSoapOut">
+    <wsdl:part name="parameters" element="tns:retrieveEventsInOutStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="getItineraryDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getItineraryData" />
+  </wsdl:message>
+  <wsdl:message name="getItineraryDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getItineraryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SNASoapIn">
+    <wsdl:part name="parameters" element="tns:SNA" />
+  </wsdl:message>
+  <wsdl:message name="SNASoapOut">
+    <wsdl:part name="parameters" element="tns:SNAResponse" />
+  </wsdl:message>
+  <wsdl:message name="RKHSoapIn">
+    <wsdl:part name="parameters" element="tns:RKH" />
+  </wsdl:message>
+  <wsdl:message name="RKHSoapOut">
+    <wsdl:part name="parameters" element="tns:RKHResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVirtualPointByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:getVirtualPointByUser" />
+  </wsdl:message>
+  <wsdl:message name="getVirtualPointByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:getVirtualPointByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVirtualPointEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:getVirtualPointEvents" />
+  </wsdl:message>
+  <wsdl:message name="getVirtualPointEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:getVirtualPointEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="setMDTMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:setMDTMessage" />
+  </wsdl:message>
+  <wsdl:message name="setMDTMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:setMDTMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SIR_InformePosicionesGeograficasSoapIn">
+    <wsdl:part name="parameters" element="tns:SIR_InformePosicionesGeograficas" />
+  </wsdl:message>
+  <wsdl:message name="SIR_InformePosicionesGeograficasSoapOut">
+    <wsdl:part name="parameters" element="tns:SIR_InformePosicionesGeograficasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKilometerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKilometer" />
+  </wsdl:message>
+  <wsdl:message name="GetKilometerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKilometerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKilometerStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKilometerString" />
+  </wsdl:message>
+  <wsdl:message name="GetKilometerStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKilometerStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionesByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegionesByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionesByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionesByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionesByUserStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegionesByUserString" />
+  </wsdl:message>
+  <wsdl:message name="GetRegionesByUserStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegionesByUserStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVehiclesByRegionesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVehiclesByRegiones" />
+  </wsdl:message>
+  <wsdl:message name="GetVehiclesByRegionesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVehiclesByRegionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVehiclesByRegionesStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVehiclesByRegionesString" />
+  </wsdl:message>
+  <wsdl:message name="GetVehiclesByRegionesStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVehiclesByRegionesStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerPointByUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerPointByUser" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerPointByUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerPointByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerPointByUserStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerPointByUserString" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerPointByUserStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerPointByUserStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrearRegionDinamicasSoapIn">
+    <wsdl:part name="parameters" element="tns:CrearRegionDinamicas" />
+  </wsdl:message>
+  <wsdl:message name="CrearRegionDinamicasSoapOut">
+    <wsdl:part name="parameters" element="tns:CrearRegionDinamicasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAlarms" />
+  </wsdl:message>
+  <wsdl:message name="GetAlarmsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAlarmsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="getEventsSoap">
+    <wsdl:operation name="retrieveEvents">
+      <wsdl:input message="tns:retrieveEventsSoapIn" />
+      <wsdl:output message="tns:retrieveEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsV2">
+      <wsdl:input message="tns:retrieveEventsV2SoapIn" />
+      <wsdl:output message="tns:retrieveEventsV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsV3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con los eventos solicitados entre el periodo de tiempo escogido. 
+ </wsdl:documentation>
+      <wsdl:input message="tns:retrieveEventsV3SoapIn" />
+      <wsdl:output message="tns:retrieveEventsV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventString">
+      <wsdl:input message="tns:retrieveEventStringSoapIn" />
+      <wsdl:output message="tns:retrieveEventStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventStringV2">
+      <wsdl:input message="tns:retrieveEventStringV2SoapIn" />
+      <wsdl:output message="tns:retrieveEventStringV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventStringV3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un string XML con los eventos solicitados entre el periodo de tiempo escogido. 
+ </wsdl:documentation>
+      <wsdl:input message="tns:retrieveEventStringV3SoapIn" />
+      <wsdl:output message="tns:retrieveEventStringV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByID">
+      <wsdl:input message="tns:retrieveEventsByIDSoapIn" />
+      <wsdl:output message="tns:retrieveEventsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByIDV2">
+      <wsdl:input message="tns:retrieveEventsByIDV2SoapIn" />
+      <wsdl:output message="tns:retrieveEventsByIDV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByIDV3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un DataSet con los eventos reportados por los vehículos de un usuario</wsdl:documentation>
+      <wsdl:input message="tns:retrieveEventsByIDV3SoapIn" />
+      <wsdl:output message="tns:retrieveEventsByIDV3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLastEvent">
+      <wsdl:input message="tns:getLastEventSoapIn" />
+      <wsdl:output message="tns:getLastEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLastEventString">
+      <wsdl:input message="tns:getLastEventStringSoapIn" />
+      <wsdl:output message="tns:getLastEventStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsInOut">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con con los eventos de ingreso a la región (1), salida de la región (0) o ambos (*)</wsdl:documentation>
+      <wsdl:input message="tns:retrieveEventsInOutSoapIn" />
+      <wsdl:output message="tns:retrieveEventsInOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsInOutString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un string XML con con los eventos de ingreso a la región (1), salida de la región (0) o ambos (*)</wsdl:documentation>
+      <wsdl:input message="tns:retrieveEventsInOutStringSoapIn" />
+      <wsdl:output message="tns:retrieveEventsInOutStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getItineraryData">
+      <wsdl:input message="tns:getItineraryDataSoapIn" />
+      <wsdl:output message="tns:getItineraryDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SNA">
+      <wsdl:input message="tns:SNASoapIn" />
+      <wsdl:output message="tns:SNASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RKH">
+      <wsdl:input message="tns:RKHSoapIn" />
+      <wsdl:output message="tns:RKHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVirtualPointByUser">
+      <wsdl:input message="tns:getVirtualPointByUserSoapIn" />
+      <wsdl:output message="tns:getVirtualPointByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVirtualPointEvents">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con los puestos de control reportados con su respectivo codigo cliente</wsdl:documentation>
+      <wsdl:input message="tns:getVirtualPointEventsSoapIn" />
+      <wsdl:output message="tns:getVirtualPointEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setMDTMessage">
+      <wsdl:input message="tns:setMDTMessageSoapIn" />
+      <wsdl:output message="tns:setMDTMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SIR_InformePosicionesGeograficas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un XML con las tramas solicitadas. No aplica para todos los clientes.</wsdl:documentation>
+      <wsdl:input message="tns:SIR_InformePosicionesGeograficasSoapIn" />
+      <wsdl:output message="tns:SIR_InformePosicionesGeograficasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKilometer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con cada placa y los respectivos km recorridos durante el rango de tiempo</wsdl:documentation>
+      <wsdl:input message="tns:GetKilometerSoapIn" />
+      <wsdl:output message="tns:GetKilometerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKilometerString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un XML con cada placa y los respectivos km recorridos durante el rango de tiempo</wsdl:documentation>
+      <wsdl:input message="tns:GetKilometerStringSoapIn" />
+      <wsdl:output message="tns:GetKilometerStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionesByUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con todas las regiones que pertenecen a un usuario</wsdl:documentation>
+      <wsdl:input message="tns:GetRegionesByUserSoapIn" />
+      <wsdl:output message="tns:GetRegionesByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionesByUserString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un xml con todas las regiones que pertenecen a un usuario</wsdl:documentation>
+      <wsdl:input message="tns:GetRegionesByUserStringSoapIn" />
+      <wsdl:output message="tns:GetRegionesByUserStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByRegiones">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con todas los vehículos que tienen restricción con la región enviada</wsdl:documentation>
+      <wsdl:input message="tns:GetVehiclesByRegionesSoapIn" />
+      <wsdl:output message="tns:GetVehiclesByRegionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByRegionesString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un XML con todas los vehículos que tienen restricción con la región enviada</wsdl:documentation>
+      <wsdl:input message="tns:GetVehiclesByRegionesStringSoapIn" />
+      <wsdl:output message="tns:GetVehiclesByRegionesStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPointByUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con todas los puntos cliente que pertenecen a un usuario</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerPointByUserSoapIn" />
+      <wsdl:output message="tns:GetCustomerPointByUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPointByUserString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un xml con todos los puntos clientes que pertenecen a un usuario</wsdl:documentation>
+      <wsdl:input message="tns:GetCustomerPointByUserStringSoapIn" />
+      <wsdl:output message="tns:GetCustomerPointByUserStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearRegionDinamicas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Crea regiones dinámicas</wsdl:documentation>
+      <wsdl:input message="tns:CrearRegionDinamicasSoapIn" />
+      <wsdl:output message="tns:CrearRegionDinamicasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna un dataset con todas los alarmas disponibles de los vehículos que pertenecen a un usuario</wsdl:documentation>
+      <wsdl:input message="tns:GetAlarmsSoapIn" />
+      <wsdl:output message="tns:GetAlarmsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="getEventsSoap" type="tns:getEventsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="retrieveEvents">
+      <soap:operation soapAction="http://tempuri.org/retrieveEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsV2">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventsV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsV3">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventsV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventString">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventStringV2">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventStringV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventStringV3">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventStringV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByID">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByIDV2">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventsByIDV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByIDV3">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventsByIDV3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastEvent">
+      <soap:operation soapAction="http://tempuri.org/getLastEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastEventString">
+      <soap:operation soapAction="http://tempuri.org/getLastEventString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsInOut">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventsInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsInOutString">
+      <soap:operation soapAction="http://tempuri.org/retrieveEventsInOutString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItineraryData">
+      <soap:operation soapAction="http://tempuri.org/getItineraryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SNA">
+      <soap:operation soapAction="http://tempuri.org/SNA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RKH">
+      <soap:operation soapAction="http://tempuri.org/RKH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVirtualPointByUser">
+      <soap:operation soapAction="http://tempuri.org/getVirtualPointByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVirtualPointEvents">
+      <soap:operation soapAction="http://tempuri.org/getVirtualPointEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMDTMessage">
+      <soap:operation soapAction="http://tempuri.org/setMDTMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SIR_InformePosicionesGeograficas">
+      <soap:operation soapAction="http://tempuri.org/SIR_InformePosicionesGeograficas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKilometer">
+      <soap:operation soapAction="http://tempuri.org/GetKilometer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKilometerString">
+      <soap:operation soapAction="http://tempuri.org/GetKilometerString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionesByUser">
+      <soap:operation soapAction="http://tempuri.org/GetRegionesByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionesByUserString">
+      <soap:operation soapAction="http://tempuri.org/GetRegionesByUserString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByRegiones">
+      <soap:operation soapAction="http://tempuri.org/GetVehiclesByRegiones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByRegionesString">
+      <soap:operation soapAction="http://tempuri.org/GetVehiclesByRegionesString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPointByUser">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerPointByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPointByUserString">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerPointByUserString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearRegionDinamicas">
+      <soap:operation soapAction="http://tempuri.org/CrearRegionDinamicas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarms">
+      <soap:operation soapAction="http://tempuri.org/GetAlarms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="getEventsSoap12" type="tns:getEventsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="retrieveEvents">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsV2">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventsV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsV3">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventsV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventString">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventStringV2">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventStringV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventStringV3">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventStringV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByID">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByIDV2">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventsByIDV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsByIDV3">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventsByIDV3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastEvent">
+      <soap12:operation soapAction="http://tempuri.org/getLastEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLastEventString">
+      <soap12:operation soapAction="http://tempuri.org/getLastEventString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsInOut">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventsInOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retrieveEventsInOutString">
+      <soap12:operation soapAction="http://tempuri.org/retrieveEventsInOutString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItineraryData">
+      <soap12:operation soapAction="http://tempuri.org/getItineraryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SNA">
+      <soap12:operation soapAction="http://tempuri.org/SNA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RKH">
+      <soap12:operation soapAction="http://tempuri.org/RKH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVirtualPointByUser">
+      <soap12:operation soapAction="http://tempuri.org/getVirtualPointByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVirtualPointEvents">
+      <soap12:operation soapAction="http://tempuri.org/getVirtualPointEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMDTMessage">
+      <soap12:operation soapAction="http://tempuri.org/setMDTMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SIR_InformePosicionesGeograficas">
+      <soap12:operation soapAction="http://tempuri.org/SIR_InformePosicionesGeograficas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKilometer">
+      <soap12:operation soapAction="http://tempuri.org/GetKilometer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKilometerString">
+      <soap12:operation soapAction="http://tempuri.org/GetKilometerString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionesByUser">
+      <soap12:operation soapAction="http://tempuri.org/GetRegionesByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionesByUserString">
+      <soap12:operation soapAction="http://tempuri.org/GetRegionesByUserString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByRegiones">
+      <soap12:operation soapAction="http://tempuri.org/GetVehiclesByRegiones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVehiclesByRegionesString">
+      <soap12:operation soapAction="http://tempuri.org/GetVehiclesByRegionesString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPointByUser">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerPointByUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPointByUserString">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerPointByUserString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearRegionDinamicas">
+      <soap12:operation soapAction="http://tempuri.org/CrearRegionDinamicas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlarms">
+      <soap12:operation soapAction="http://tempuri.org/GetAlarms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="getEvents">
+    <wsdl:port name="getEventsSoap" binding="tns:getEventsSoap">
+      <soap:address location="http://webcloud2.satrack.com/WebServiceEventos/GetEvents.asmx" />
+    </wsdl:port>
+    <wsdl:port name="getEventsSoap12" binding="tns:getEventsSoap12">
+      <soap12:address location="http://webcloud2.satrack.com/WebServiceEventos/GetEvents.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

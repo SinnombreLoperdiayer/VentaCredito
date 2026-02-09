@@ -1,0 +1,1298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloRutasNS.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="CoberturaEstacionRuta_RUT">
+    <Key>
+      <PropertyRef Name="CER_IdCoberturaEstacionRuta" />
+    </Key>
+    <Property Name="CER_IdCoberturaEstacionRuta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CER_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="CER_IdLocalidadCubierta" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CER_NombreLocalidadEstacion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CER_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CER_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoberturaEstacionRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="CER_IdAuditoria" />
+    </Key>
+    <Property Name="CER_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CER_IdCoberturaEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="CER_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="CER_IdLocalidadCubierta" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CER_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CER_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CER_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CER_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CER_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoberturaManifieEnRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="CMR_IdAuditoria" />
+    </Key>
+    <Property Name="CMR_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CMR_IdCoberturaManifiestaEnRut" Type="int" Nullable="false" />
+    <Property Name="CMR_IdLocalidadManifiestEnRuta" Type="int" Nullable="false" />
+    <Property Name="CMR_IdLocalidadCubierta" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CMR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CMR_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CMR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CMR_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="CMr_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CoberturaManifiestaEnRuta_RUT">
+    <Key>
+      <PropertyRef Name="CMR_IdCoberturaManifiestaEnRut" />
+    </Key>
+    <Property Name="CMR_IdCoberturaManifiestaEnRut" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CMR_IdLocalidadManifiestEnRuta" Type="int" Nullable="false" />
+    <Property Name="CMR_IdLocalidadCubierta" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CMR_NombreLocalidadCubierta" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CMR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CMR_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaTransMedioTransHist_RUT">
+    <Key>
+      <PropertyRef Name="ETM_IdAuditoria" />
+    </Key>
+    <Property Name="ETM_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ETM_IdMedioTranEmpresa" Type="smallint" Nullable="false" />
+    <Property Name="ETM_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="ETM_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="ETM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ETM_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ETM_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="ETM_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ETM_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaTransporMedioTransp_RUT">
+    <Key>
+      <PropertyRef Name="ETM_IdMedioTranEmpresa" />
+    </Key>
+    <Property Name="ETM_IdMedioTranEmpresa" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ETM_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="ETM_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="ETM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ETM_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaTransportadora_RUT">
+    <Key>
+      <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+    </Key>
+    <Property Name="ETR_IdEmpresaTransportadora" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ETR_Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ETR_IdTipoTransporte" Type="smallint" Nullable="false" />
+    <Property Name="ERT_Estado" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ETR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ETR_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaTransportadoraHist_RUT">
+    <Key>
+      <PropertyRef Name="ERT_IdAuditoria" />
+    </Key>
+    <Property Name="ERT_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ETR_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="ETR_Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ETR_IdTipoTransporte" Type="smallint" />
+    <Property Name="ERT_Estado" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ETR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ETR_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ERT_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="ERT_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ERT_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaTransRacol_RUT">
+    <Key>
+      <PropertyRef Name="ETR_IdEmpresaTrans" />
+      <PropertyRef Name="ETR_IdRegionalAdm" />
+    </Key>
+    <Property Name="ETR_IdEmpresaTrans" Type="smallint" Nullable="false" />
+    <Property Name="ETR_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="ETR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ETR_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstacionRuta_RUT">
+    <Key>
+      <PropertyRef Name="ESR_IdEstacionRuta" />
+    </Key>
+    <Property Name="ESR_IdEstacionRuta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ESR_IdRuta" Type="int" Nullable="false" />
+    <Property Name="ESR_IdLocalidadEstacion" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="ESR_NombreLocalidadEstacion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ESR_OrdenEnRuta" Type="smallint" Nullable="false" />
+    <Property Name="ESR_OrdenEnCasillero" Type="smallint" Nullable="false" />
+    <Property Name="ESR_TiempoParada" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="ESR_TiempoDeViajeDesdeAnterior" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="ESR_PermiteEnganche" Type="bit" Nullable="false" />
+    <Property Name="ESR_RequierePrecintoRetorno" Type="bit" Nullable="false" />
+    <Property Name="ESR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ESR_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstacionRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="ESR_IdAuditoria" />
+    </Key>
+    <Property Name="ESR_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ESR_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="ESR_IdRuta" Type="int" Nullable="false" />
+    <Property Name="ESR_IdLocalidadEstacion" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="ESR_NombreLocalidadEstacion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ESR_OrdenEnRuta" Type="smallint" Nullable="false" />
+    <Property Name="ESR_OrdenEnCasillero" Type="smallint" Nullable="false" />
+    <Property Name="ESR_TiempoParada" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="ESR_TiempoDeViajeDesdeAnterior" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="ESR_PermiteEnganche" Type="bit" Nullable="false" />
+    <Property Name="ESR_RequierePrecintoRetorno" Type="bit" Nullable="false" />
+    <Property Name="ESR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ESR_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ESR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="ESR_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ESR_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FrecuenciaParadaEstaciHist_RUT">
+    <Key>
+      <PropertyRef Name="FRE_IdAuditoria" />
+    </Key>
+    <Property Name="FRE_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FRE_IdFrecuenciaParadaEstacion" Type="int" Nullable="false" />
+    <Property Name="FRE_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="FRE_IdDia" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="FRE_HoraLlegada" Type="datetime" Nullable="false" />
+    <Property Name="FRE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="FRE_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="FRR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="FRR_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FRR_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FrecuenciaParadaEstacion_RUT">
+    <Key>
+      <PropertyRef Name="FRE_IdFrecuenciaParadaEstacion" />
+    </Key>
+    <Property Name="FRE_IdFrecuenciaParadaEstacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FRE_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="FRE_IdDia" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="FRE_HoraLlegada" Type="datetime" Nullable="false" />
+    <Property Name="FRE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="FRE_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FrecuenciaRuta_RUT">
+    <Key>
+      <PropertyRef Name="FRR_IdFrecuenciaRuta" />
+    </Key>
+    <Property Name="FRR_IdFrecuenciaRuta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FRR_IdRuta" Type="int" Nullable="false" />
+    <Property Name="FRR_IdDia" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="FRR_HoraSalida" Type="datetime" Nullable="false" />
+    <Property Name="FRR_HoraLlegada" Type="datetime" Nullable="false" />
+    <Property Name="FRR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="FRR_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FrecuenciaRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="FRR_IdAuditoria" />
+    </Key>
+    <Property Name="FRR_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FRR_IdFrecuenciaRuta" Type="int" Nullable="false" />
+    <Property Name="FRR_IdRuta" Type="int" Nullable="false" />
+    <Property Name="FRR_IdDia" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="FRR_HoraSalida" Type="datetime" Nullable="false" />
+    <Property Name="FRR_HoraLlegada" Type="datetime" Nullable="false" />
+    <Property Name="FRR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="FRR_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="FRR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="FRR_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FRR_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Localidad_PAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="LOC_IdTipo" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LOC_NombreCorto" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="LOC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LOC_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="anchor" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="LOC_DHLActivo" Type="bit" Nullable="false" />
+    <Property Name="LOC_AplicaDireccionEstandar" Type="bit" Nullable="false" />
+    <Property Name="LOC_Indicativo" Type="varchar" MaxLength="2" />
+    <Property Name="LOC_RadioRecogida" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LocalidadAdicionalEnRuta_RUT">
+    <Key>
+      <PropertyRef Name="LMR_IdLocalidadManifiestEnRuta" />
+    </Key>
+    <Property Name="LMR_IdLocalidadManifiestEnRuta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LMR_IdRuta" Type="int" Nullable="false" />
+    <Property Name="LMR_IdLocalidadManifiesta" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="LMR_NombreLocalidadManifiesta" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LMR_GeneraConsolidado" Type="bit" Nullable="false" />
+    <Property Name="LMR_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="LMR_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LocalidadAdicionEnRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="LMR_IdAuditoria" />
+    </Key>
+    <Property Name="LMR_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LMR_IdLocalidadManifiestEnRuta" Type="int" Nullable="false" />
+    <Property Name="LMR_IdRuta" Type="int" Nullable="false" />
+    <Property Name="LMR_IdLocalidadManifiesta" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="LMR_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="LMR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LMR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="LMR_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="LMR_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedioTransporte_PAR">
+    <Key>
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+    </Key>
+    <Property Name="MTR_IdMedioTransporte" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MTR_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="MTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MTR_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParametrosRutas_RUT">
+    <Key>
+      <PropertyRef Name="PRU_IdParametro" />
+    </Key>
+    <Property Name="PRU_IdParametro" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="PRU_ValorParametro" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PRU_Descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="PRU_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRU_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ruta_RUT">
+    <Key>
+      <PropertyRef Name="RUT_IdRuta" />
+    </Key>
+    <Property Name="RUT_IdRuta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RUT_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RUT_IdTipoRuta" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdLocalidadOrigen" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadOrigen" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_IdLocalidadDestino" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadDestino" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_GeneraManifiestoMinisterio" Type="bit" Nullable="false" />
+    <Property Name="RUT_CostoMensualTotal" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="RUT_IdTipoVehiculo" Type="smallint" Nullable="false" />
+    <Property Name="RUT_Estado" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="RUT_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="RUT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RUT_RutaMasivos" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RutaEmpresaTransportadora_RUT">
+    <Key>
+      <PropertyRef Name="RET_IdRuta" />
+      <PropertyRef Name="RET_IdEmpresaTransportadora" />
+    </Key>
+    <Property Name="RET_IdRuta" Type="int" Nullable="false" />
+    <Property Name="RET_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="RET_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RET_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RutaHist_RUT">
+    <Key>
+      <PropertyRef Name="RUT_IdAuditoria" />
+    </Key>
+    <Property Name="RUT_IdAuditoria" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RUT_IdRuta" Type="int" Nullable="false" />
+    <Property Name="RUT_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RUT_IdTipoRuta" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdLocalidadOrigen" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadOrigen" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_IdLocalidadDestino" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadDestino" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_IdMedioTranEmpresa" Type="smallint" Nullable="false" />
+    <Property Name="RUT_GeneraManifiestoMinisterio" Type="bit" Nullable="false" />
+    <Property Name="RUT_CostoMensualTotal" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="RUT_CreadoPor" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="RUT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RUT_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="RUT_CambiadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="RUT_TipoCambio" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoRuta_RUT">
+    <Key>
+      <PropertyRef Name="TRU_IdTipoRuta" />
+    </Key>
+    <Property Name="TRU_IdTipoRuta" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TRU_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="TRU_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TRU_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoTransporte_RUT">
+    <Key>
+      <PropertyRef Name="TIT_IdTipoTransporte" />
+    </Key>
+    <Property Name="TIT_IdTipoTransporte" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIT_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="TIT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIT_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoVehiculo_CPO">
+    <Key>
+      <PropertyRef Name="TIV_IdTipoVehiculo" />
+    </Key>
+    <Property Name="TIV_IdTipoVehiculo" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TIV_Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TIV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIV_CreadoPor" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.CiudadesRutas_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CiudadesRutas_VRUT">
+    <Key>
+      <PropertyRef Name="IdCiudadEstacion" />
+      <PropertyRef Name="IdRuta" />
+    </Key>
+    <Property Name="IdCiudadEstacion" Type="int" Nullable="false" />
+    <Property Name="IdCiudadHija" Type="varchar" MaxLength="8" />
+    <Property Name="IdRuta" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.CoberturaEstaciones_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CoberturaEstaciones_VRUT">
+    <Key>
+      <PropertyRef Name="ESR_IdEstacionRuta" />
+      <PropertyRef Name="ESR_IdLocalidadEstacion" />
+      <PropertyRef Name="ESR_IdRuta" />
+      <PropertyRef Name="CER_IdCoberturaEstacionRuta" />
+      <PropertyRef Name="CER_IdEstacionRuta" />
+      <PropertyRef Name="CER_IdLocalidadCubierta" />
+      <PropertyRef Name="CER_NombreLocalidadEstacion" />
+    </Key>
+    <Property Name="ESR_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="ESR_IdLocalidadEstacion" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="ESR_IdRuta" Type="int" Nullable="false" />
+    <Property Name="CER_IdCoberturaEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="CER_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="CER_IdLocalidadCubierta" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CER_NombreLocalidadEstacion" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.EmpresasTransportadorasMedioTransporte_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EmpresasTransportadorasMedioTransporte_VRUT">
+    <Key>
+      <PropertyRef Name="ETM_IdEmpresaTransportadora" />
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+      <PropertyRef Name="MTR_Descripcion" />
+    </Key>
+    <Property Name="ETM_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="MTR_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="MTR_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.EmpresasTransportadorasRacolAsociado_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EmpresasTransportadorasRacolAsociado_VRUT">
+    <Key>
+      <PropertyRef Name="ETR_IdRegionalAdm" />
+      <PropertyRef Name="ETR_IdEmpresaTrans" />
+      <PropertyRef Name="REA_Descripcion" />
+    </Key>
+    <Property Name="ETR_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="ETR_IdEmpresaTrans" Type="smallint" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.EstacionesYCiudAdiciRuta_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="EstacionesYCiudAdiciRuta_VRUT">
+    <Key>
+      <PropertyRef Name="Tabla" />
+      <PropertyRef Name="IdEstacion" />
+      <PropertyRef Name="IdRuta" />
+      <PropertyRef Name="IdCiudadEstacion" />
+      <PropertyRef Name="NombreEstacion" />
+      <PropertyRef Name="orden" />
+      <PropertyRef Name="RequierePrecintoRetorno" />
+      <PropertyRef Name="GeneraConsolidado" />
+    </Key>
+    <Property Name="Tabla" Type="varchar" MaxLength="28" Nullable="false" />
+    <Property Name="IdEstacion" Type="int" Nullable="false" />
+    <Property Name="IdRuta" Type="int" Nullable="false" />
+    <Property Name="IdCiudadEstacion" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="NombreEstacion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="orden" Type="int" Nullable="false" />
+    <Property Name="RequierePrecintoRetorno" Type="int" Nullable="false" />
+    <Property Name="GeneraConsolidado" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.FrecuenciaEstaciones_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FrecuenciaEstaciones_VRUT">
+    <Key>
+      <PropertyRef Name="FRE_IdFrecuenciaParadaEstacion" />
+      <PropertyRef Name="FRE_IdEstacionRuta" />
+      <PropertyRef Name="FRE_IdDia" />
+      <PropertyRef Name="FRE_HoraLlegada" />
+      <PropertyRef Name="ESR_IdEstacionRuta" />
+      <PropertyRef Name="ESR_IdRuta" />
+      <PropertyRef Name="ESR_IdLocalidadEstacion" />
+    </Key>
+    <Property Name="FRE_IdFrecuenciaParadaEstacion" Type="int" Nullable="false" />
+    <Property Name="FRE_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="FRE_IdDia" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="FRE_HoraLlegada" Type="datetime" Nullable="false" />
+    <Property Name="ESR_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="ESR_IdRuta" Type="int" Nullable="false" />
+    <Property Name="ESR_IdLocalidadEstacion" Type="varchar" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.MedioTransEmpresaTrans_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MedioTransEmpresaTrans_VRUT">
+    <Key>
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+      <PropertyRef Name="MTR_Descripcion" />
+      <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      <PropertyRef Name="ETR_Nombre" />
+      <PropertyRef Name="TIT_IdTipoTransporte" />
+      <PropertyRef Name="TIT_Descripcion" />
+      <PropertyRef Name="ETM_IdMedioTranEmpresa" />
+      <PropertyRef Name="ETM_IdEmpresaTransportadora" />
+      <PropertyRef Name="ETM_IdMedioTransporte" />
+    </Key>
+    <Property Name="MTR_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="MTR_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ETR_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="ETR_Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ETR_IdTipoTransporte" Type="smallint" />
+    <Property Name="TIT_IdTipoTransporte" Type="smallint" Nullable="false" />
+    <Property Name="TIT_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ETM_IdMedioTranEmpresa" Type="smallint" Nullable="false" />
+    <Property Name="ETM_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="ETM_IdMedioTransporte" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.RegionalAdministrativa_VCPO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RegionalAdministrativa_VCPO">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="CES_IdCentroServicios" />
+      <PropertyRef Name="CES_Tipo" />
+      <PropertyRef Name="CES_DigitoVerificacion" />
+      <PropertyRef Name="CES_IdPropietario" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="CES_Barrio" />
+      <PropertyRef Name="CES_IdZona" />
+      <PropertyRef Name="CES_IdMunicipio" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CES_IdPersonaResponsable" />
+      <PropertyRef Name="CES_Email" />
+      <PropertyRef Name="CES_IdTipoPropiedad" />
+      <PropertyRef Name="CES_PesoMaximo" />
+      <PropertyRef Name="CES_VolumenMaximo" />
+      <PropertyRef Name="CES_AdmiteFormaPagoAlCobro" />
+      <PropertyRef Name="CES_VendePrepago" />
+      <PropertyRef Name="CES_ClasGirosPorIngresos" />
+      <PropertyRef Name="CES_PuedeRecibirGiros" />
+      <PropertyRef Name="CES_PuedePagarGiros" />
+      <PropertyRef Name="CES_TopeMaximoPorGiros" />
+      <PropertyRef Name="CES_BaseInicialCaja" />
+    </Key>
+    <Property Name="REA_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CES_Tipo" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CES_DigitoVerificacion" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="CES_IdPropietario" Type="int" Nullable="false" />
+    <Property Name="CES_Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CES_Telefono1" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CES_Telefono2" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Fax" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Direccion" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CES_Barrio" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CES_IdZona" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CES_IdMunicipio" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="CES_Estado" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CES_IdPersonaResponsable" Type="bigint" Nullable="false" />
+    <Property Name="CES_Latitud" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="CES_Longitud" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="CES_Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CES_Sistematizada" Type="bit" Nullable="false" />
+    <Property Name="CES_IdCentroCostos" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="CES_IdTipoPropiedad" Type="smallint" Nullable="false" />
+    <Property Name="CES_PesoMaximo" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="CES_VolumenMaximo" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="CES_AdmiteFormaPagoAlCobro" Type="bit" Nullable="false" />
+    <Property Name="CES_VendePrepago" Type="bit" Nullable="false" />
+    <Property Name="CES_ClasGirosPorIngresos" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CES_PuedeRecibirGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_PuedePagarGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_TopeMaximoPorGiros" Type="decimal" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="CES_BaseInicialCaja" Type="decimal" Precision="16" Scale="4" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.RutaEmpresaTrans_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RutaEmpresaTrans_VRUT">
+    <Key>
+      <PropertyRef Name="RUT_IdRuta" />
+      <PropertyRef Name="RUT_Nombre" />
+      <PropertyRef Name="RUT_IdTipoRuta" />
+      <PropertyRef Name="RUT_IdMedioTransporte" />
+      <PropertyRef Name="RUT_IdLocalidadOrigen" />
+      <PropertyRef Name="RUT_NombreLocalidadOrigen" />
+      <PropertyRef Name="RUT_IdLocalidadDestino" />
+      <PropertyRef Name="RUT_NombreLocalidadDestino" />
+      <PropertyRef Name="RUT_GeneraManifiestoMinisterio" />
+      <PropertyRef Name="RUT_CostoMensualTotal" />
+      <PropertyRef Name="RUT_IdTipoVehiculo" />
+      <PropertyRef Name="RUT_Estado" />
+      <PropertyRef Name="RET_IdRuta" />
+      <PropertyRef Name="RET_IdEmpresaTransportadora" />
+      <PropertyRef Name="TIT_IdTipoTransporte" />
+      <PropertyRef Name="TIT_Descripcion" />
+      <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      <PropertyRef Name="ETR_Nombre" />
+    </Key>
+    <Property Name="RUT_IdRuta" Type="int" Nullable="false" />
+    <Property Name="RUT_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RUT_IdTipoRuta" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdLocalidadOrigen" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadOrigen" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_IdLocalidadDestino" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadDestino" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_GeneraManifiestoMinisterio" Type="bit" Nullable="false" />
+    <Property Name="RUT_CostoMensualTotal" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="RUT_IdTipoVehiculo" Type="smallint" Nullable="false" />
+    <Property Name="RUT_Estado" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="RET_IdRuta" Type="int" Nullable="false" />
+    <Property Name="RET_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="TIT_IdTipoTransporte" Type="smallint" Nullable="false" />
+    <Property Name="TIT_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ETR_IdEmpresaTransportadora" Type="smallint" Nullable="false" />
+    <Property Name="ETR_Nombre" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ETR_IdTipoTransporte" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.Rutas_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Rutas_VRUT">
+    <Key>
+      <PropertyRef Name="RUT_IdRuta" />
+      <PropertyRef Name="RUT_Nombre" />
+      <PropertyRef Name="RUT_IdTipoRuta" />
+      <PropertyRef Name="RUT_IdMedioTransporte" />
+      <PropertyRef Name="RUT_IdLocalidadOrigen" />
+      <PropertyRef Name="RUT_NombreLocalidadOrigen" />
+      <PropertyRef Name="RUT_IdLocalidadDestino" />
+      <PropertyRef Name="RUT_NombreLocalidadDestino" />
+      <PropertyRef Name="RUT_GeneraManifiestoMinisterio" />
+      <PropertyRef Name="RUT_CostoMensualTotal" />
+      <PropertyRef Name="RUT_IdTipoVehiculo" />
+      <PropertyRef Name="RUT_Estado" />
+      <PropertyRef Name="TRU_IdTipoRuta" />
+      <PropertyRef Name="TRU_Descripcion" />
+      <PropertyRef Name="TIV_IdTipoVehiculo" />
+      <PropertyRef Name="TIV_Descripcion" />
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+      <PropertyRef Name="MTR_Descripcion" />
+      <PropertyRef Name="RUT_RutaMasivos" />
+    </Key>
+    <Property Name="RUT_IdRuta" Type="int" Nullable="false" />
+    <Property Name="RUT_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RUT_IdTipoRuta" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdLocalidadOrigen" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadOrigen" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_IdLocalidadDestino" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadDestino" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_GeneraManifiestoMinisterio" Type="bit" Nullable="false" />
+    <Property Name="RUT_CostoMensualTotal" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="RUT_IdTipoVehiculo" Type="smallint" Nullable="false" />
+    <Property Name="RUT_Estado" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="TRU_IdTipoRuta" Type="smallint" Nullable="false" />
+    <Property Name="TRU_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="TIV_IdTipoVehiculo" Type="smallint" Nullable="false" />
+    <Property Name="TIV_Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MTR_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="MTR_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="RUT_RutaMasivos" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Icontroller.dbo.RutasEstacionRuta_VRUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="RutasEstacionRuta_VRUT">
+    <Key>
+      <PropertyRef Name="RUT_IdRuta" />
+      <PropertyRef Name="RUT_Nombre" />
+      <PropertyRef Name="RUT_IdTipoRuta" />
+      <PropertyRef Name="RUT_IdMedioTransporte" />
+      <PropertyRef Name="RUT_IdLocalidadOrigen" />
+      <PropertyRef Name="RUT_NombreLocalidadOrigen" />
+      <PropertyRef Name="RUT_IdLocalidadDestino" />
+      <PropertyRef Name="RUT_NombreLocalidadDestino" />
+      <PropertyRef Name="RUT_GeneraManifiestoMinisterio" />
+      <PropertyRef Name="RUT_CostoMensualTotal" />
+      <PropertyRef Name="RUT_IdTipoVehiculo" />
+      <PropertyRef Name="RUT_Estado" />
+      <PropertyRef Name="TRU_IdTipoRuta" />
+      <PropertyRef Name="TRU_Descripcion" />
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+      <PropertyRef Name="MTR_Descripcion" />
+      <PropertyRef Name="TIV_IdTipoVehiculo" />
+      <PropertyRef Name="TIV_Descripcion" />
+      <PropertyRef Name="ESR_IdEstacionRuta" />
+      <PropertyRef Name="ESR_IdLocalidadEstacion" />
+      <PropertyRef Name="ESR_NombreLocalidadEstacion" />
+      <PropertyRef Name="ESR_OrdenEnRuta" />
+      <PropertyRef Name="ESR_OrdenEnCasillero" />
+      <PropertyRef Name="ESR_TiempoParada" />
+      <PropertyRef Name="ESR_TiempoDeViajeDesdeAnterior" />
+      <PropertyRef Name="ESR_PermiteEnganche" />
+      <PropertyRef Name="ESR_RequierePrecintoRetorno" />
+    </Key>
+    <Property Name="RUT_IdRuta" Type="int" Nullable="false" />
+    <Property Name="RUT_Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RUT_IdTipoRuta" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="RUT_IdLocalidadOrigen" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadOrigen" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_IdLocalidadDestino" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="RUT_NombreLocalidadDestino" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="RUT_GeneraManifiestoMinisterio" Type="bit" Nullable="false" />
+    <Property Name="RUT_CostoMensualTotal" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="RUT_IdTipoVehiculo" Type="smallint" Nullable="false" />
+    <Property Name="RUT_Estado" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ESR_IdEstacionRuta" Type="int" Nullable="false" />
+    <Property Name="ESR_IdLocalidadEstacion" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="ESR_NombreLocalidadEstacion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ESR_OrdenEnRuta" Type="smallint" Nullable="false" />
+    <Property Name="ESR_OrdenEnCasillero" Type="smallint" Nullable="false" />
+    <Property Name="ESR_TiempoParada" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="ESR_TiempoDeViajeDesdeAnterior" Type="numeric" Precision="16" Scale="4" Nullable="false" />
+    <Property Name="ESR_PermiteEnganche" Type="bit" Nullable="false" />
+    <Property Name="ESR_RequierePrecintoRetorno" Type="bit" Nullable="false" />
+    <Property Name="TRU_IdTipoRuta" Type="smallint" Nullable="false" />
+    <Property Name="TRU_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="MTR_IdMedioTransporte" Type="smallint" Nullable="false" />
+    <Property Name="MTR_Descripcion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="TIV_IdTipoVehiculo" Type="smallint" Nullable="false" />
+    <Property Name="TIV_Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CoberturaEstacionRuta_RUT_EstacionRuta_RUT">
+    <End Role="EstacionRuta_RUT" Type="Self.EstacionRuta_RUT" Multiplicity="1" />
+    <End Role="CoberturaEstacionRuta_RUT" Type="Self.CoberturaEstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdEstacionRuta" />
+      </Principal>
+      <Dependent Role="CoberturaEstacionRuta_RUT">
+        <PropertyRef Name="CER_IdEstacionRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoberturaEstacionRuta_RUT_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="1" />
+    <End Role="CoberturaEstacionRuta_RUT" Type="Self.CoberturaEstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="CoberturaEstacionRuta_RUT">
+        <PropertyRef Name="CER_IdLocalidadCubierta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoberturaManifiestaEnRuta_RUT_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="1" />
+    <End Role="CoberturaManifiestaEnRuta_RUT" Type="Self.CoberturaManifiestaEnRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="CoberturaManifiestaEnRuta_RUT">
+        <PropertyRef Name="CMR_IdLocalidadCubierta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoberturaManifiestaEnRuta_RUT_LocalidadManifiestaEnRuta_RUT">
+    <End Role="LocalidadAdicionalEnRuta_RUT" Type="Self.LocalidadAdicionalEnRuta_RUT" Multiplicity="1" />
+    <End Role="CoberturaManifiestaEnRuta_RUT" Type="Self.CoberturaManifiestaEnRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocalidadAdicionalEnRuta_RUT">
+        <PropertyRef Name="LMR_IdLocalidadManifiestEnRuta" />
+      </Principal>
+      <Dependent Role="CoberturaManifiestaEnRuta_RUT">
+        <PropertyRef Name="CMR_IdLocalidadManifiestEnRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaTransporMedioTransp_RUT_EmpresaTransportadora_RUT">
+    <End Role="EmpresaTransportadora_RUT" Type="Self.EmpresaTransportadora_RUT" Multiplicity="1" />
+    <End Role="EmpresaTransporMedioTransp_RUT" Type="Self.EmpresaTransporMedioTransp_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaTransportadora_RUT">
+        <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      </Principal>
+      <Dependent Role="EmpresaTransporMedioTransp_RUT">
+        <PropertyRef Name="ETM_IdEmpresaTransportadora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaTransporMedioTransp_RUT_MedioTransporte_PAR">
+    <End Role="MedioTransporte_PAR" Type="Self.MedioTransporte_PAR" Multiplicity="1" />
+    <End Role="EmpresaTransporMedioTransp_RUT" Type="Self.EmpresaTransporMedioTransp_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedioTransporte_PAR">
+        <PropertyRef Name="MTR_IdMedioTransporte" />
+      </Principal>
+      <Dependent Role="EmpresaTransporMedioTransp_RUT">
+        <PropertyRef Name="ETM_IdMedioTransporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaTransportadora_RUT_TipoTransporte_RUT">
+    <End Role="TipoTransporte_RUT" Type="Self.TipoTransporte_RUT" Multiplicity="1" />
+    <End Role="EmpresaTransportadora_RUT" Type="Self.EmpresaTransportadora_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTransporte_RUT">
+        <PropertyRef Name="TIT_IdTipoTransporte" />
+      </Principal>
+      <Dependent Role="EmpresaTransportadora_RUT">
+        <PropertyRef Name="ETR_IdTipoTransporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaTransRacol_RUT_EmpresaTransportadora_RUT">
+    <End Role="EmpresaTransportadora_RUT" Type="Self.EmpresaTransportadora_RUT" Multiplicity="1" />
+    <End Role="EmpresaTransRacol_RUT" Type="Self.EmpresaTransRacol_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaTransportadora_RUT">
+        <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      </Principal>
+      <Dependent Role="EmpresaTransRacol_RUT">
+        <PropertyRef Name="ETR_IdEmpresaTrans" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstacionRuta_RUT_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="1" />
+    <End Role="EstacionRuta_RUT" Type="Self.EstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdLocalidadEstacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstacionRuta_RUT_Ruta_RUT">
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="1" />
+    <End Role="EstacionRuta_RUT" Type="Self.EstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstacionRuta_RUT_Ruta_RUT1">
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="1" />
+    <End Role="EstacionRuta_RUT" Type="Self.EstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FrecuenciaParadaEstacion_RUT_EstacionRuta_RUT">
+    <End Role="EstacionRuta_RUT" Type="Self.EstacionRuta_RUT" Multiplicity="1" />
+    <End Role="FrecuenciaParadaEstacion_RUT" Type="Self.FrecuenciaParadaEstacion_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdEstacionRuta" />
+      </Principal>
+      <Dependent Role="FrecuenciaParadaEstacion_RUT">
+        <PropertyRef Name="FRE_IdEstacionRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FrecuenciaRuta_RUT_Ruta_RUT">
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="1" />
+    <End Role="FrecuenciaRuta_RUT" Type="Self.FrecuenciaRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="FrecuenciaRuta_RUT">
+        <PropertyRef Name="FRR_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="Self.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="Self.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="Self.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocalidadRedespachoRuta_RUT_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="1" />
+    <End Role="LocalidadAdicionalEnRuta_RUT" Type="Self.LocalidadAdicionalEnRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="LocalidadAdicionalEnRuta_RUT">
+        <PropertyRef Name="LMR_IdLocalidadManifiesta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocalidadRedespachoRuta_RUT_Ruta_RUT">
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="1" />
+    <End Role="LocalidadAdicionalEnRuta_RUT" Type="Self.LocalidadAdicionalEnRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="LocalidadAdicionalEnRuta_RUT">
+        <PropertyRef Name="LMR_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="1" />
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdLocalidadOrigen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_Localidad_PAR1">
+    <End Role="Localidad_PAR" Type="Self.Localidad_PAR" Multiplicity="1" />
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdLocalidadDestino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_MedioTransporte_PAR">
+    <End Role="MedioTransporte_PAR" Type="Self.MedioTransporte_PAR" Multiplicity="1" />
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedioTransporte_PAR">
+        <PropertyRef Name="MTR_IdMedioTransporte" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdMedioTransporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_TipoRuta_RUT">
+    <End Role="TipoRuta_RUT" Type="Self.TipoRuta_RUT" Multiplicity="1" />
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoRuta_RUT">
+        <PropertyRef Name="TRU_IdTipoRuta" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdTipoRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_TipoVehiculo_CPO">
+    <End Role="TipoVehiculo_CPO" Type="Self.TipoVehiculo_CPO" Multiplicity="1" />
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoVehiculo_CPO">
+        <PropertyRef Name="TIV_IdTipoVehiculo" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdTipoVehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RutaEmpresaTransportadora_RUT_EmpresaTransportadora_RUT">
+    <End Role="EmpresaTransportadora_RUT" Type="Self.EmpresaTransportadora_RUT" Multiplicity="1" />
+    <End Role="RutaEmpresaTransportadora_RUT" Type="Self.RutaEmpresaTransportadora_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaTransportadora_RUT">
+        <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      </Principal>
+      <Dependent Role="RutaEmpresaTransportadora_RUT">
+        <PropertyRef Name="RET_IdEmpresaTransportadora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RutaEmpresaTransportadora_RUT_Ruta_RUT">
+    <End Role="Ruta_RUT" Type="Self.Ruta_RUT" Multiplicity="1" />
+    <End Role="RutaEmpresaTransportadora_RUT" Type="Self.RutaEmpresaTransportadora_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="RutaEmpresaTransportadora_RUT">
+        <PropertyRef Name="RET_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paObtenerRacolsAsignarAEmpresaTransp_CPO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpresaTransportadora" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRutasEstacionRuta_RUT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLocalidadEstacion" Type="varchar" Mode="In" />
+    <Parameter Name="IdDia" Type="char" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRutasEstacionRutaOriDest_RUT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdLocalidadEstacion" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="ModeloRutasNSStoreContainer">
+    <EntitySet Name="CoberturaEstacionRuta_RUT" EntityType="Self.CoberturaEstacionRuta_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoberturaEstacionRutaHist_RUT" EntityType="Self.CoberturaEstacionRutaHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoberturaManifieEnRutaHist_RUT" EntityType="Self.CoberturaManifieEnRutaHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CoberturaManifiestaEnRuta_RUT" EntityType="Self.CoberturaManifiestaEnRuta_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpresaTransMedioTransHist_RUT" EntityType="Self.EmpresaTransMedioTransHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpresaTransporMedioTransp_RUT" EntityType="Self.EmpresaTransporMedioTransp_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpresaTransportadora_RUT" EntityType="Self.EmpresaTransportadora_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpresaTransportadoraHist_RUT" EntityType="Self.EmpresaTransportadoraHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpresaTransRacol_RUT" EntityType="Self.EmpresaTransRacol_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstacionRuta_RUT" EntityType="Self.EstacionRuta_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstacionRutaHist_RUT" EntityType="Self.EstacionRutaHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FrecuenciaParadaEstaciHist_RUT" EntityType="Self.FrecuenciaParadaEstaciHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FrecuenciaParadaEstacion_RUT" EntityType="Self.FrecuenciaParadaEstacion_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FrecuenciaRuta_RUT" EntityType="Self.FrecuenciaRuta_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FrecuenciaRutaHist_RUT" EntityType="Self.FrecuenciaRutaHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Localidad_PAR" EntityType="Self.Localidad_PAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LocalidadAdicionalEnRuta_RUT" EntityType="Self.LocalidadAdicionalEnRuta_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LocalidadAdicionEnRutaHist_RUT" EntityType="Self.LocalidadAdicionEnRutaHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedioTransporte_PAR" EntityType="Self.MedioTransporte_PAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ParametrosRutas_RUT" EntityType="Self.ParametrosRutas_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ruta_RUT" EntityType="Self.Ruta_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RutaEmpresaTransportadora_RUT" EntityType="Self.RutaEmpresaTransportadora_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RutaHist_RUT" EntityType="Self.RutaHist_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoRuta_RUT" EntityType="Self.TipoRuta_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoTransporte_RUT" EntityType="Self.TipoTransporte_RUT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoVehiculo_CPO" EntityType="Self.TipoVehiculo_CPO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CiudadesRutas_VRUT" EntityType="Self.CiudadesRutas_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[CiudadesRutas_VRUT].[IdCiudadEstacion] AS [IdCiudadEstacion], 
+[CiudadesRutas_VRUT].[IdCiudadHija] AS [IdCiudadHija], 
+[CiudadesRutas_VRUT].[IdRuta] AS [IdRuta]
+FROM [dbo].[CiudadesRutas_VRUT] AS [CiudadesRutas_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CoberturaEstaciones_VRUT" EntityType="Self.CoberturaEstaciones_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[CoberturaEstaciones_VRUT].[ESR_IdEstacionRuta] AS [ESR_IdEstacionRuta], 
+[CoberturaEstaciones_VRUT].[ESR_IdLocalidadEstacion] AS [ESR_IdLocalidadEstacion], 
+[CoberturaEstaciones_VRUT].[ESR_IdRuta] AS [ESR_IdRuta], 
+[CoberturaEstaciones_VRUT].[CER_IdCoberturaEstacionRuta] AS [CER_IdCoberturaEstacionRuta], 
+[CoberturaEstaciones_VRUT].[CER_IdEstacionRuta] AS [CER_IdEstacionRuta], 
+[CoberturaEstaciones_VRUT].[CER_IdLocalidadCubierta] AS [CER_IdLocalidadCubierta], 
+[CoberturaEstaciones_VRUT].[CER_NombreLocalidadEstacion] AS [CER_NombreLocalidadEstacion]
+FROM [dbo].[CoberturaEstaciones_VRUT] AS [CoberturaEstaciones_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EmpresasTransportadorasMedioTransporte_VRUT" EntityType="Self.EmpresasTransportadorasMedioTransporte_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[EmpresasTransportadorasMedioTransporte_VRUT].[ETM_IdEmpresaTransportadora] AS [ETM_IdEmpresaTransportadora], 
+[EmpresasTransportadorasMedioTransporte_VRUT].[MTR_IdMedioTransporte] AS [MTR_IdMedioTransporte], 
+[EmpresasTransportadorasMedioTransporte_VRUT].[MTR_Descripcion] AS [MTR_Descripcion]
+FROM [dbo].[EmpresasTransportadorasMedioTransporte_VRUT] AS [EmpresasTransportadorasMedioTransporte_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EmpresasTransportadorasRacolAsociado_VRUT" EntityType="Self.EmpresasTransportadorasRacolAsociado_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[EmpresasTransportadorasRacolAsociado_VRUT].[ETR_IdRegionalAdm] AS [ETR_IdRegionalAdm], 
+[EmpresasTransportadorasRacolAsociado_VRUT].[ETR_IdEmpresaTrans] AS [ETR_IdEmpresaTrans], 
+[EmpresasTransportadorasRacolAsociado_VRUT].[REA_Descripcion] AS [REA_Descripcion]
+FROM [dbo].[EmpresasTransportadorasRacolAsociado_VRUT] AS [EmpresasTransportadorasRacolAsociado_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EstacionesYCiudAdiciRuta_VRUT" EntityType="Self.EstacionesYCiudAdiciRuta_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[EstacionesYCiudAdiciRuta_VRUT].[Tabla] AS [Tabla], 
+[EstacionesYCiudAdiciRuta_VRUT].[IdEstacion] AS [IdEstacion], 
+[EstacionesYCiudAdiciRuta_VRUT].[IdRuta] AS [IdRuta], 
+[EstacionesYCiudAdiciRuta_VRUT].[IdCiudadEstacion] AS [IdCiudadEstacion], 
+[EstacionesYCiudAdiciRuta_VRUT].[NombreEstacion] AS [NombreEstacion], 
+[EstacionesYCiudAdiciRuta_VRUT].[orden] AS [orden], 
+[EstacionesYCiudAdiciRuta_VRUT].[RequierePrecintoRetorno] AS [RequierePrecintoRetorno], 
+[EstacionesYCiudAdiciRuta_VRUT].[GeneraConsolidado] AS [GeneraConsolidado]
+FROM [dbo].[EstacionesYCiudAdiciRuta_VRUT] AS [EstacionesYCiudAdiciRuta_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FrecuenciaEstaciones_VRUT" EntityType="Self.FrecuenciaEstaciones_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[FrecuenciaEstaciones_VRUT].[FRE_IdFrecuenciaParadaEstacion] AS [FRE_IdFrecuenciaParadaEstacion], 
+[FrecuenciaEstaciones_VRUT].[FRE_IdEstacionRuta] AS [FRE_IdEstacionRuta], 
+[FrecuenciaEstaciones_VRUT].[FRE_IdDia] AS [FRE_IdDia], 
+[FrecuenciaEstaciones_VRUT].[FRE_HoraLlegada] AS [FRE_HoraLlegada], 
+[FrecuenciaEstaciones_VRUT].[ESR_IdEstacionRuta] AS [ESR_IdEstacionRuta], 
+[FrecuenciaEstaciones_VRUT].[ESR_IdRuta] AS [ESR_IdRuta], 
+[FrecuenciaEstaciones_VRUT].[ESR_IdLocalidadEstacion] AS [ESR_IdLocalidadEstacion]
+FROM [dbo].[FrecuenciaEstaciones_VRUT] AS [FrecuenciaEstaciones_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MedioTransEmpresaTrans_VRUT" EntityType="Self.MedioTransEmpresaTrans_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[MedioTransEmpresaTrans_VRUT].[MTR_IdMedioTransporte] AS [MTR_IdMedioTransporte], 
+[MedioTransEmpresaTrans_VRUT].[MTR_Descripcion] AS [MTR_Descripcion], 
+[MedioTransEmpresaTrans_VRUT].[ETR_IdEmpresaTransportadora] AS [ETR_IdEmpresaTransportadora], 
+[MedioTransEmpresaTrans_VRUT].[ETR_Nombre] AS [ETR_Nombre], 
+[MedioTransEmpresaTrans_VRUT].[ETR_IdTipoTransporte] AS [ETR_IdTipoTransporte], 
+[MedioTransEmpresaTrans_VRUT].[TIT_IdTipoTransporte] AS [TIT_IdTipoTransporte], 
+[MedioTransEmpresaTrans_VRUT].[TIT_Descripcion] AS [TIT_Descripcion], 
+[MedioTransEmpresaTrans_VRUT].[ETM_IdMedioTranEmpresa] AS [ETM_IdMedioTranEmpresa], 
+[MedioTransEmpresaTrans_VRUT].[ETM_IdEmpresaTransportadora] AS [ETM_IdEmpresaTransportadora], 
+[MedioTransEmpresaTrans_VRUT].[ETM_IdMedioTransporte] AS [ETM_IdMedioTransporte]
+FROM [dbo].[MedioTransEmpresaTrans_VRUT] AS [MedioTransEmpresaTrans_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RegionalAdministrativa_VCPO" EntityType="Self.RegionalAdministrativa_VCPO" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[RegionalAdministrativa_VCPO].[REA_IdRegionalAdm] AS [REA_IdRegionalAdm], 
+[RegionalAdministrativa_VCPO].[REA_Descripcion] AS [REA_Descripcion], 
+[RegionalAdministrativa_VCPO].[CES_IdCentroServicios] AS [CES_IdCentroServicios], 
+[RegionalAdministrativa_VCPO].[CES_Tipo] AS [CES_Tipo], 
+[RegionalAdministrativa_VCPO].[CES_DigitoVerificacion] AS [CES_DigitoVerificacion], 
+[RegionalAdministrativa_VCPO].[CES_IdPropietario] AS [CES_IdPropietario], 
+[RegionalAdministrativa_VCPO].[CES_Nombre] AS [CES_Nombre], 
+[RegionalAdministrativa_VCPO].[CES_Telefono1] AS [CES_Telefono1], 
+[RegionalAdministrativa_VCPO].[CES_Telefono2] AS [CES_Telefono2], 
+[RegionalAdministrativa_VCPO].[CES_Fax] AS [CES_Fax], 
+[RegionalAdministrativa_VCPO].[CES_Direccion] AS [CES_Direccion], 
+[RegionalAdministrativa_VCPO].[CES_Barrio] AS [CES_Barrio], 
+[RegionalAdministrativa_VCPO].[CES_IdZona] AS [CES_IdZona], 
+[RegionalAdministrativa_VCPO].[CES_IdMunicipio] AS [CES_IdMunicipio], 
+[RegionalAdministrativa_VCPO].[CES_Estado] AS [CES_Estado], 
+[RegionalAdministrativa_VCPO].[CES_IdPersonaResponsable] AS [CES_IdPersonaResponsable], 
+[RegionalAdministrativa_VCPO].[CES_Latitud] AS [CES_Latitud], 
+[RegionalAdministrativa_VCPO].[CES_Longitud] AS [CES_Longitud], 
+[RegionalAdministrativa_VCPO].[CES_Email] AS [CES_Email], 
+[RegionalAdministrativa_VCPO].[CES_Sistematizada] AS [CES_Sistematizada], 
+[RegionalAdministrativa_VCPO].[CES_IdCentroCostos] AS [CES_IdCentroCostos], 
+[RegionalAdministrativa_VCPO].[CES_IdTipoPropiedad] AS [CES_IdTipoPropiedad], 
+[RegionalAdministrativa_VCPO].[CES_PesoMaximo] AS [CES_PesoMaximo], 
+[RegionalAdministrativa_VCPO].[CES_VolumenMaximo] AS [CES_VolumenMaximo], 
+[RegionalAdministrativa_VCPO].[CES_AdmiteFormaPagoAlCobro] AS [CES_AdmiteFormaPagoAlCobro], 
+[RegionalAdministrativa_VCPO].[CES_VendePrepago] AS [CES_VendePrepago], 
+[RegionalAdministrativa_VCPO].[CES_ClasGirosPorIngresos] AS [CES_ClasGirosPorIngresos], 
+[RegionalAdministrativa_VCPO].[CES_PuedeRecibirGiros] AS [CES_PuedeRecibirGiros], 
+[RegionalAdministrativa_VCPO].[CES_PuedePagarGiros] AS [CES_PuedePagarGiros], 
+[RegionalAdministrativa_VCPO].[CES_TopeMaximoPorGiros] AS [CES_TopeMaximoPorGiros], 
+[RegionalAdministrativa_VCPO].[CES_BaseInicialCaja] AS [CES_BaseInicialCaja]
+FROM [dbo].[RegionalAdministrativa_VCPO] AS [RegionalAdministrativa_VCPO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RutaEmpresaTrans_VRUT" EntityType="Self.RutaEmpresaTrans_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[RutaEmpresaTrans_VRUT].[RUT_IdRuta] AS [RUT_IdRuta], 
+[RutaEmpresaTrans_VRUT].[RUT_Nombre] AS [RUT_Nombre], 
+[RutaEmpresaTrans_VRUT].[RUT_IdTipoRuta] AS [RUT_IdTipoRuta], 
+[RutaEmpresaTrans_VRUT].[RUT_IdMedioTransporte] AS [RUT_IdMedioTransporte], 
+[RutaEmpresaTrans_VRUT].[RUT_IdLocalidadOrigen] AS [RUT_IdLocalidadOrigen], 
+[RutaEmpresaTrans_VRUT].[RUT_NombreLocalidadOrigen] AS [RUT_NombreLocalidadOrigen], 
+[RutaEmpresaTrans_VRUT].[RUT_IdLocalidadDestino] AS [RUT_IdLocalidadDestino], 
+[RutaEmpresaTrans_VRUT].[RUT_NombreLocalidadDestino] AS [RUT_NombreLocalidadDestino], 
+[RutaEmpresaTrans_VRUT].[RUT_GeneraManifiestoMinisterio] AS [RUT_GeneraManifiestoMinisterio], 
+[RutaEmpresaTrans_VRUT].[RUT_CostoMensualTotal] AS [RUT_CostoMensualTotal], 
+[RutaEmpresaTrans_VRUT].[RUT_IdTipoVehiculo] AS [RUT_IdTipoVehiculo], 
+[RutaEmpresaTrans_VRUT].[RUT_Estado] AS [RUT_Estado], 
+[RutaEmpresaTrans_VRUT].[RET_IdRuta] AS [RET_IdRuta], 
+[RutaEmpresaTrans_VRUT].[RET_IdEmpresaTransportadora] AS [RET_IdEmpresaTransportadora], 
+[RutaEmpresaTrans_VRUT].[TIT_IdTipoTransporte] AS [TIT_IdTipoTransporte], 
+[RutaEmpresaTrans_VRUT].[TIT_Descripcion] AS [TIT_Descripcion], 
+[RutaEmpresaTrans_VRUT].[ETR_IdEmpresaTransportadora] AS [ETR_IdEmpresaTransportadora], 
+[RutaEmpresaTrans_VRUT].[ETR_Nombre] AS [ETR_Nombre], 
+[RutaEmpresaTrans_VRUT].[ETR_IdTipoTransporte] AS [ETR_IdTipoTransporte]
+FROM [dbo].[RutaEmpresaTrans_VRUT] AS [RutaEmpresaTrans_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Rutas_VRUT" EntityType="Self.Rutas_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Rutas_VRUT].[RUT_IdRuta] AS [RUT_IdRuta], 
+[Rutas_VRUT].[RUT_Nombre] AS [RUT_Nombre], 
+[Rutas_VRUT].[RUT_IdTipoRuta] AS [RUT_IdTipoRuta], 
+[Rutas_VRUT].[RUT_IdMedioTransporte] AS [RUT_IdMedioTransporte], 
+[Rutas_VRUT].[RUT_IdLocalidadOrigen] AS [RUT_IdLocalidadOrigen], 
+[Rutas_VRUT].[RUT_NombreLocalidadOrigen] AS [RUT_NombreLocalidadOrigen], 
+[Rutas_VRUT].[RUT_IdLocalidadDestino] AS [RUT_IdLocalidadDestino], 
+[Rutas_VRUT].[RUT_NombreLocalidadDestino] AS [RUT_NombreLocalidadDestino], 
+[Rutas_VRUT].[RUT_GeneraManifiestoMinisterio] AS [RUT_GeneraManifiestoMinisterio], 
+[Rutas_VRUT].[RUT_CostoMensualTotal] AS [RUT_CostoMensualTotal], 
+[Rutas_VRUT].[RUT_IdTipoVehiculo] AS [RUT_IdTipoVehiculo], 
+[Rutas_VRUT].[RUT_Estado] AS [RUT_Estado], 
+[Rutas_VRUT].[TRU_IdTipoRuta] AS [TRU_IdTipoRuta], 
+[Rutas_VRUT].[TRU_Descripcion] AS [TRU_Descripcion], 
+[Rutas_VRUT].[TIV_IdTipoVehiculo] AS [TIV_IdTipoVehiculo], 
+[Rutas_VRUT].[TIV_Descripcion] AS [TIV_Descripcion], 
+[Rutas_VRUT].[MTR_IdMedioTransporte] AS [MTR_IdMedioTransporte], 
+[Rutas_VRUT].[MTR_Descripcion] AS [MTR_Descripcion], 
+[Rutas_VRUT].[RUT_RutaMasivos] AS [RUT_RutaMasivos]
+FROM [dbo].[Rutas_VRUT] AS [Rutas_VRUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="RutasEstacionRuta_VRUT" EntityType="Self.RutasEstacionRuta_VRUT" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[RutasEstacionRuta_VRUT].[RUT_IdRuta] AS [RUT_IdRuta], 
+[RutasEstacionRuta_VRUT].[RUT_Nombre] AS [RUT_Nombre], 
+[RutasEstacionRuta_VRUT].[RUT_IdTipoRuta] AS [RUT_IdTipoRuta], 
+[RutasEstacionRuta_VRUT].[RUT_IdMedioTransporte] AS [RUT_IdMedioTransporte], 
+[RutasEstacionRuta_VRUT].[RUT_IdLocalidadOrigen] AS [RUT_IdLocalidadOrigen], 
+[RutasEstacionRuta_VRUT].[RUT_NombreLocalidadOrigen] AS [RUT_NombreLocalidadOrigen], 
+[RutasEstacionRuta_VRUT].[RUT_IdLocalidadDestino] AS [RUT_IdLocalidadDestino], 
+[RutasEstacionRuta_VRUT].[RUT_NombreLocalidadDestino] AS [RUT_NombreLocalidadDestino], 
+[RutasEstacionRuta_VRUT].[RUT_GeneraManifiestoMinisterio] AS [RUT_GeneraManifiestoMinisterio], 
+[RutasEstacionRuta_VRUT].[RUT_CostoMensualTotal] AS [RUT_CostoMensualTotal], 
+[RutasEstacionRuta_VRUT].[RUT_IdTipoVehiculo] AS [RUT_IdTipoVehiculo], 
+[RutasEstacionRuta_VRUT].[RUT_Estado] AS [RUT_Estado], 
+[RutasEstacionRuta_VRUT].[ESR_IdEstacionRuta] AS [ESR_IdEstacionRuta], 
+[RutasEstacionRuta_VRUT].[ESR_IdLocalidadEstacion] AS [ESR_IdLocalidadEstacion], 
+[RutasEstacionRuta_VRUT].[ESR_NombreLocalidadEstacion] AS [ESR_NombreLocalidadEstacion], 
+[RutasEstacionRuta_VRUT].[ESR_OrdenEnRuta] AS [ESR_OrdenEnRuta], 
+[RutasEstacionRuta_VRUT].[ESR_OrdenEnCasillero] AS [ESR_OrdenEnCasillero], 
+[RutasEstacionRuta_VRUT].[ESR_TiempoParada] AS [ESR_TiempoParada], 
+[RutasEstacionRuta_VRUT].[ESR_TiempoDeViajeDesdeAnterior] AS [ESR_TiempoDeViajeDesdeAnterior], 
+[RutasEstacionRuta_VRUT].[ESR_PermiteEnganche] AS [ESR_PermiteEnganche], 
+[RutasEstacionRuta_VRUT].[ESR_RequierePrecintoRetorno] AS [ESR_RequierePrecintoRetorno], 
+[RutasEstacionRuta_VRUT].[TRU_IdTipoRuta] AS [TRU_IdTipoRuta], 
+[RutasEstacionRuta_VRUT].[TRU_Descripcion] AS [TRU_Descripcion], 
+[RutasEstacionRuta_VRUT].[MTR_IdMedioTransporte] AS [MTR_IdMedioTransporte], 
+[RutasEstacionRuta_VRUT].[MTR_Descripcion] AS [MTR_Descripcion], 
+[RutasEstacionRuta_VRUT].[TIV_IdTipoVehiculo] AS [TIV_IdTipoVehiculo], 
+[RutasEstacionRuta_VRUT].[TIV_Descripcion] AS [TIV_Descripcion]
+FROM [dbo].[RutasEstacionRuta_VRUT] AS [RutasEstacionRuta_VRUT]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_CoberturaEstacionRuta_RUT_EstacionRuta_RUT" Association="Self.FK_CoberturaEstacionRuta_RUT_EstacionRuta_RUT">
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+      <End Role="CoberturaEstacionRuta_RUT" EntitySet="CoberturaEstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoberturaEstacionRuta_RUT_Localidad_PAR" Association="Self.FK_CoberturaEstacionRuta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="CoberturaEstacionRuta_RUT" EntitySet="CoberturaEstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoberturaManifiestaEnRuta_RUT_Localidad_PAR" Association="Self.FK_CoberturaManifiestaEnRuta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="CoberturaManifiestaEnRuta_RUT" EntitySet="CoberturaManifiestaEnRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoberturaManifiestaEnRuta_RUT_LocalidadManifiestaEnRuta_RUT" Association="Self.FK_CoberturaManifiestaEnRuta_RUT_LocalidadManifiestaEnRuta_RUT">
+      <End Role="LocalidadAdicionalEnRuta_RUT" EntitySet="LocalidadAdicionalEnRuta_RUT" />
+      <End Role="CoberturaManifiestaEnRuta_RUT" EntitySet="CoberturaManifiestaEnRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaTransporMedioTransp_RUT_EmpresaTransportadora_RUT" Association="Self.FK_EmpresaTransporMedioTransp_RUT_EmpresaTransportadora_RUT">
+      <End Role="EmpresaTransportadora_RUT" EntitySet="EmpresaTransportadora_RUT" />
+      <End Role="EmpresaTransporMedioTransp_RUT" EntitySet="EmpresaTransporMedioTransp_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaTransporMedioTransp_RUT_MedioTransporte_PAR" Association="Self.FK_EmpresaTransporMedioTransp_RUT_MedioTransporte_PAR">
+      <End Role="MedioTransporte_PAR" EntitySet="MedioTransporte_PAR" />
+      <End Role="EmpresaTransporMedioTransp_RUT" EntitySet="EmpresaTransporMedioTransp_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaTransportadora_RUT_TipoTransporte_RUT" Association="Self.FK_EmpresaTransportadora_RUT_TipoTransporte_RUT">
+      <End Role="TipoTransporte_RUT" EntitySet="TipoTransporte_RUT" />
+      <End Role="EmpresaTransportadora_RUT" EntitySet="EmpresaTransportadora_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaTransRacol_RUT_EmpresaTransportadora_RUT" Association="Self.FK_EmpresaTransRacol_RUT_EmpresaTransportadora_RUT">
+      <End Role="EmpresaTransportadora_RUT" EntitySet="EmpresaTransportadora_RUT" />
+      <End Role="EmpresaTransRacol_RUT" EntitySet="EmpresaTransRacol_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstacionRuta_RUT_Localidad_PAR" Association="Self.FK_EstacionRuta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstacionRuta_RUT_Ruta_RUT" Association="Self.FK_EstacionRuta_RUT_Ruta_RUT">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstacionRuta_RUT_Ruta_RUT1" Association="Self.FK_EstacionRuta_RUT_Ruta_RUT1">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FrecuenciaParadaEstacion_RUT_EstacionRuta_RUT" Association="Self.FK_FrecuenciaParadaEstacion_RUT_EstacionRuta_RUT">
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+      <End Role="FrecuenciaParadaEstacion_RUT" EntitySet="FrecuenciaParadaEstacion_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FrecuenciaRuta_RUT_Ruta_RUT" Association="Self.FK_FrecuenciaRuta_RUT_Ruta_RUT">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="FrecuenciaRuta_RUT" EntitySet="FrecuenciaRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="Self.FK_Localidad_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="Self.FK_Localidad_PAR_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="Self.FK_Localidad_PAR_Localidad_PAR2">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocalidadRedespachoRuta_RUT_Localidad_PAR" Association="Self.FK_LocalidadRedespachoRuta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="LocalidadAdicionalEnRuta_RUT" EntitySet="LocalidadAdicionalEnRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocalidadRedespachoRuta_RUT_Ruta_RUT" Association="Self.FK_LocalidadRedespachoRuta_RUT_Ruta_RUT">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="LocalidadAdicionalEnRuta_RUT" EntitySet="LocalidadAdicionalEnRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_Localidad_PAR" Association="Self.FK_Ruta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_Localidad_PAR1" Association="Self.FK_Ruta_RUT_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_MedioTransporte_PAR" Association="Self.FK_Ruta_RUT_MedioTransporte_PAR">
+      <End Role="MedioTransporte_PAR" EntitySet="MedioTransporte_PAR" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_TipoRuta_RUT" Association="Self.FK_Ruta_RUT_TipoRuta_RUT">
+      <End Role="TipoRuta_RUT" EntitySet="TipoRuta_RUT" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_TipoVehiculo_CPO" Association="Self.FK_Ruta_RUT_TipoVehiculo_CPO">
+      <End Role="TipoVehiculo_CPO" EntitySet="TipoVehiculo_CPO" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RutaEmpresaTransportadora_RUT_EmpresaTransportadora_RUT" Association="Self.FK_RutaEmpresaTransportadora_RUT_EmpresaTransportadora_RUT">
+      <End Role="EmpresaTransportadora_RUT" EntitySet="EmpresaTransportadora_RUT" />
+      <End Role="RutaEmpresaTransportadora_RUT" EntitySet="RutaEmpresaTransportadora_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RutaEmpresaTransportadora_RUT_Ruta_RUT" Association="Self.FK_RutaEmpresaTransportadora_RUT_Ruta_RUT">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="RutaEmpresaTransportadora_RUT" EntitySet="RutaEmpresaTransportadora_RUT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

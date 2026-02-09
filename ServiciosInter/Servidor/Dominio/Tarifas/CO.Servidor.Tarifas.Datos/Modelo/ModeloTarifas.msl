@@ -1,0 +1,1709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DESARROLLOModelStoreContainer" CdmEntityContainer="EntidadesTarifas">
+    <EntitySetMapping Name="Moneda_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Moneda_TAR">
+        <MappingFragment StoreEntitySet="Moneda_TAR">
+          <ScalarProperty Name="MON_CreadoPor" ColumnName="MON_CreadoPor" />
+          <ScalarProperty Name="MON_FechaGrabacion" ColumnName="MON_FechaGrabacion" />
+          <ScalarProperty Name="MON_TasaCambio" ColumnName="MON_TasaCambio" />
+          <ScalarProperty Name="MON_Descripcion" ColumnName="MON_Descripcion" />
+          <ScalarProperty Name="MON_IdMoneda" ColumnName="MON_IdMoneda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTrayecto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoTrayecto_TAR">
+        <MappingFragment StoreEntitySet="TipoTrayecto_TAR">
+          <ScalarProperty Name="TTR_CreadoPor" ColumnName="TTR_CreadoPor" />
+          <ScalarProperty Name="TTR_FechaGrabacion" ColumnName="TTR_FechaGrabacion" />
+          <ScalarProperty Name="TTR_Descripcion" ColumnName="TTR_Descripcion" />
+          <ScalarProperty Name="TTR_IdTipoTrayecto" ColumnName="TTR_IdTipoTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSubTrayecto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoSubTrayecto_TAR">
+        <MappingFragment StoreEntitySet="TipoSubTrayecto_TAR">
+          <ScalarProperty Name="TST_CreadoPor" ColumnName="TST_CreadoPor" />
+          <ScalarProperty Name="TST_FechaGrabacion" ColumnName="TST_FechaGrabacion" />
+          <ScalarProperty Name="TST_Descripcion" ColumnName="TST_Descripcion" />
+          <ScalarProperty Name="TST_IdTipoSubTrayecto" ColumnName="TST_IdTipoSubTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioFormaPago_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioFormaPago_TAR">
+        <MappingFragment StoreEntitySet="ServicioFormaPago_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="SFP_CreadoPor" ColumnName="SFP_CreadoPor" />
+          <ScalarProperty Name="SFP_FechaGrabacion" ColumnName="SFP_FechaGrabacion" />
+          <ScalarProperty Name="SFP_IdFormaPago" ColumnName="SFP_IdFormaPago" />
+          <ScalarProperty Name="SFP_IdServicio" ColumnName="SFP_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoActivoInactivo_VFRM">
+      <EntityTypeMapping TypeName="DESARROLLOModel.EstadoActivoInactivo_VFRM">
+        <MappingFragment StoreEntitySet="EstadoActivoInactivo_VFRM">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnidadNegocio_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.UnidadNegocio_TAR">
+        <MappingFragment StoreEntitySet="UnidadNegocio_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="UNE_CodigoERP" ColumnName="UNE_CodigoERP" />
+          <ScalarProperty Name="UNE_IdCuentaExterna" ColumnName="UNE_IdCuentaExterna" />
+          <ScalarProperty Name="UNE_CreadoPor" ColumnName="UNE_CreadoPor" />
+          <ScalarProperty Name="UNE_FechaGrabacion" ColumnName="UNE_FechaGrabacion" />
+          <ScalarProperty Name="UNE_Descripcion" ColumnName="UNE_Descripcion" />
+          <ScalarProperty Name="UNE_Nombre" ColumnName="UNE_Nombre" />
+          <ScalarProperty Name="UNE_IdUnidad" ColumnName="UNE_IdUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Impuesto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Impuesto_TAR">
+        <MappingFragment StoreEntitySet="Impuesto_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="IMP_CreadoPor" ColumnName="IMP_CreadoPor" />
+          <ScalarProperty Name="IMP_FechaGrabacion" ColumnName="IMP_FechaGrabacion" />
+          <ScalarProperty Name="IMP_IdCuentaExterna" ColumnName="IMP_IdCuentaExterna" />
+          <ScalarProperty Name="IMP_Valor" ColumnName="IMP_Valor" />
+          <ScalarProperty Name="IMP_Descripcion" ColumnName="IMP_Descripcion" />
+          <ScalarProperty Name="IMP_IdImpuesto" ColumnName="IMP_IdImpuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaPrecioServicioHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ListaPrecioServicioHist_TAR">
+        <MappingFragment StoreEntitySet="ListaPrecioServicioHist_TAR">
+          <ScalarProperty Name="LIS_TipoCambio" ColumnName="LIS_TipoCambio" />
+          <ScalarProperty Name="LIS_CambiadoPor" ColumnName="LIS_CambiadoPor" />
+          <ScalarProperty Name="LIS_FechaCambio" ColumnName="LIS_FechaCambio" />
+          <ScalarProperty Name="LPS_CreadoPor" ColumnName="LPS_CreadoPor" />
+          <ScalarProperty Name="LPS_FechaGrabacion" ColumnName="LPS_FechaGrabacion" />
+          <ScalarProperty Name="LPS_ValorMaximoDeclarado" ColumnName="LPS_ValorMaximoDeclarado" />
+          <ScalarProperty Name="LPS_ValorMinimoDeclarado" ColumnName="LPS_ValorMinimoDeclarado" />
+          <ScalarProperty Name="LPS_PrimaSeguros" ColumnName="LPS_PrimaSeguros" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecioServicio" ColumnName="LPS_IdListaPrecioServicio" />
+          <ScalarProperty Name="LPS_IdAuditoria" ColumnName="LPS_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperadorPostal_PAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.OperadorPostal_PAR">
+        <MappingFragment StoreEntitySet="OperadorPostal_PAR">
+          <ScalarProperty Name="OPO_PorcentajeCombustible" ColumnName="OPO_PorcentajeCombustible" />
+          <ScalarProperty Name="OPO_CreadoPor" ColumnName="OPO_CreadoPor" />
+          <ScalarProperty Name="OPO_FechaGrabacion" ColumnName="OPO_FechaGrabacion" />
+          <ScalarProperty Name="OPO_FormulaPesoVolumetrico" ColumnName="OPO_FormulaPesoVolumetrico" />
+          <ScalarProperty Name="OPO_Descripcion" ColumnName="OPO_Descripcion" />
+          <ScalarProperty Name="OPO_Nombre" ColumnName="OPO_Nombre" />
+          <ScalarProperty Name="OPO_IdOperadorPostal" ColumnName="OPO_IdOperadorPostal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zona_PAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Zona_PAR">
+        <MappingFragment StoreEntitySet="Zona_PAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="ZON_Observacion" ColumnName="ZON_Observacion" />
+          <ScalarProperty Name="ZON_CreadoPor" ColumnName="ZON_CreadoPor" />
+          <ScalarProperty Name="ZON_FechaGrabacion" ColumnName="ZON_FechaGrabacion" />
+          <ScalarProperty Name="ZON_IdTipoZona" ColumnName="ZON_IdTipoZona" />
+          <ScalarProperty Name="ZON_Descripcion" ColumnName="ZON_Descripcion" />
+          <ScalarProperty Name="ZON_IdZona" ColumnName="ZON_IdZona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioInternacionalZona_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioInternacionalZona_VTAR">
+        <MappingFragment StoreEntitySet="ServicioInternacionalZona_VTAR">
+          <ScalarProperty Name="PIN_IdPrecioInternalcional" ColumnName="PIN_IdPrecioInternalcional" />
+          <ScalarProperty Name="PIN_Peso" ColumnName="PIN_Peso" />
+          <ScalarProperty Name="PIN_IdTipoEmpaque" ColumnName="PIN_IdTipoEmpaque" />
+          <ScalarProperty Name="PIN_Valor" ColumnName="PIN_Valor" />
+          <ScalarProperty Name="PIN_IdZona" ColumnName="PIN_IdZona" />
+          <ScalarProperty Name="PIN_IdListaPrecioServicio" ColumnName="PIN_IdListaPrecioServicio" />
+          <ScalarProperty Name="OPO_FormulaPesoVolumetrico" ColumnName="OPO_FormulaPesoVolumetrico" />
+          <ScalarProperty Name="OPO_Descripcion" ColumnName="OPO_Descripcion" />
+          <ScalarProperty Name="OPO_Nombre" ColumnName="OPO_Nombre" />
+          <ScalarProperty Name="OPZ_TiempoEntrega" ColumnName="OPZ_TiempoEntrega" />
+          <ScalarProperty Name="OPZ_IdOperadorPostal" ColumnName="OPZ_IdOperadorPostal" />
+          <ScalarProperty Name="TEM_Descripcion" ColumnName="TEM_Descripcion" />
+          <ScalarProperty Name="ZON_Descripcion" ColumnName="ZON_Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValorPesoDeclarado_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ValorPesoDeclarado_TAR">
+        <MappingFragment StoreEntitySet="ValorPesoDeclarado_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="VMD_CreadoPor" ColumnName="VMD_CreadoPor" />
+          <ScalarProperty Name="VMD_FechaGrabacion" ColumnName="VMD_FechaGrabacion" />
+          <ScalarProperty Name="VMD_ValorMaximoDeclarado" ColumnName="VMD_ValorMaximoDeclarado" />
+          <ScalarProperty Name="VMD_ValorMinimoDeclarado" ColumnName="VMD_ValorMinimoDeclarado" />
+          <ScalarProperty Name="VMD_PesoFinal" ColumnName="VMD_PesoFinal" />
+          <ScalarProperty Name="VMD_PesoInicial" ColumnName="VMD_PesoInicial" />
+          <ScalarProperty Name="VMD_IdListaPrecios" ColumnName="VMD_IdListaPrecios" />
+          <ScalarProperty Name="VMD_IdValorMinimoDeclarado" ColumnName="VMD_IdValorMinimoDeclarado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioInternacionalHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioInternacionalHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioInternacionalHist_TAR">
+          <ScalarProperty Name="PIN_TipoCambio" ColumnName="PIN_TipoCambio" />
+          <ScalarProperty Name="PIN_CambiadoPor" ColumnName="PIN_CambiadoPor" />
+          <ScalarProperty Name="PIN_FechaCambio" ColumnName="PIN_FechaCambio" />
+          <ScalarProperty Name="PIN_CreadoPor" ColumnName="PIN_CreadoPor" />
+          <ScalarProperty Name="PIN_FechaGrabacion" ColumnName="PIN_FechaGrabacion" />
+          <ScalarProperty Name="PIN_Valor" ColumnName="PIN_Valor" />
+          <ScalarProperty Name="PIN_Peso" ColumnName="PIN_Peso" />
+          <ScalarProperty Name="PIN_IdTipoEmpaque" ColumnName="PIN_IdTipoEmpaque" />
+          <ScalarProperty Name="PIN_IdZona" ColumnName="PIN_IdZona" />
+          <ScalarProperty Name="PIN_IdListaPrecioServicio" ColumnName="PIN_IdListaPrecioServicio" />
+          <ScalarProperty Name="PIN_IdPrecioInternalcional" ColumnName="PIN_IdPrecioInternalcional" />
+          <ScalarProperty Name="PIN_IdAuditoria" ColumnName="PIN_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaExterna_PAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.CuentaExterna_PAR">
+        <MappingFragment StoreEntitySet="CuentaExterna_PAR">
+          <ScalarProperty Name="CEX_CreadoPor" ColumnName="CEX_CreadoPor" />
+          <ScalarProperty Name="CEX_FechaGrabacion" ColumnName="CEX_FechaGrabacion" />
+          <ScalarProperty Name="CEX_Codigo" ColumnName="CEX_Codigo" />
+          <ScalarProperty Name="CEX_IdNaturaleza" ColumnName="CEX_IdNaturaleza" />
+          <ScalarProperty Name="CEX_Descripcion" ColumnName="CEX_Descripcion" />
+          <ScalarProperty Name="CEX_IdCuentaExterna" ColumnName="CEX_IdCuentaExterna" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioMensajeria_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioMensajeria_TAR">
+        <MappingFragment StoreEntitySet="ServicioMensajeria_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="SME_CreadoPor" ColumnName="SME_CreadoPor" />
+          <ScalarProperty Name="SME_FechaGrabacion" ColumnName="SME_FechaGrabacion" />
+          <ScalarProperty Name="SME_PesoMaximo" ColumnName="SME_PesoMaximo" />
+          <ScalarProperty Name="SME_PesoMínimo" ColumnName="SME_PesoMínimo" />
+          <ScalarProperty Name="SME_IdServicio" ColumnName="SME_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioTrayecto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioTrayecto_TAR">
+        <MappingFragment StoreEntitySet="ServicioTrayecto_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="STR_CreadoPor" ColumnName="STR_CreadoPor" />
+          <ScalarProperty Name="STR_FechaGrabacion" ColumnName="STR_FechaGrabacion" />
+          <ScalarProperty Name="STR_TiempoEntrega" ColumnName="STR_TiempoEntrega" />
+          <ScalarProperty Name="STR_IdServicio" ColumnName="STR_IdServicio" />
+          <ScalarProperty Name="STR_IdTrayecto" ColumnName="STR_IdTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrayectoSubTrayecto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TrayectoSubTrayecto_TAR">
+        <MappingFragment StoreEntitySet="TrayectoSubTrayecto_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="TRS_CreadoPor" ColumnName="TRS_CreadoPor" />
+          <ScalarProperty Name="TRS_FechaGrabacion" ColumnName="TRS_FechaGrabacion" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTrayectoSubTrayecto" ColumnName="TRS_IdTrayectoSubTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTrayeSubTraValorAdic_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTrayeSubTraValorAdic_TAR">
+        <MappingFragment StoreEntitySet="PrecioTrayeSubTraValorAdic_TAR">
+          <ScalarProperty Name="PTV_CreadoPor" ColumnName="PTV_CreadoPor" />
+          <ScalarProperty Name="PTV_FechaGrabacion" ColumnName="PTV_FechaGrabacion" />
+          <ScalarProperty Name="PTV_Valor" ColumnName="PTV_Valor" />
+          <ScalarProperty Name="PTV_IdTipoValorAdicional" ColumnName="PTV_IdTipoValorAdicional" />
+          <ScalarProperty Name="PTV_IdPrecioTrayectoSubTrayect" ColumnName="PTV_IdPrecioTrayectoSubTrayect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrayectSubTrayectValorAdi_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TrayectSubTrayectValorAdi_VTAR">
+        <MappingFragment StoreEntitySet="TrayectSubTrayectValorAdi_VTAR">
+          <ScalarProperty Name="PTR_IdTrayectoSubTrayecto" ColumnName="PTR_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTV_IdPrecioTrayectoSubTrayect" ColumnName="PTV_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="TST_IdTipoSubTrayecto" ColumnName="TST_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TTR_IdTipoTrayecto" ColumnName="TTR_IdTipoTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTrayectoSubTrayecto" ColumnName="TRS_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="IdPrecioTrayecto" ColumnName="IdPrecioTrayecto" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTV_IdTipoValorAdicional" ColumnName="PTV_IdTipoValorAdicional" />
+          <ScalarProperty Name="ServicioRetorno" ColumnName="ServicioRetorno" />
+          <ScalarProperty Name="Trayecto" ColumnName="Trayecto" />
+          <ScalarProperty Name="SubTrayecto" ColumnName="SubTrayecto" />
+          <ScalarProperty Name="KiloAdicional" ColumnName="KiloAdicional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperadorPostalZona_PAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.OperadorPostalZona_PAR">
+        <MappingFragment StoreEntitySet="OperadorPostalZona_PAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="OPZ_CreadoPor" ColumnName="OPZ_CreadoPor" />
+          <ScalarProperty Name="OPZ_FechaGrabacion" ColumnName="OPZ_FechaGrabacion" />
+          <ScalarProperty Name="OPZ_TiempoEntrega" ColumnName="OPZ_TiempoEntrega" />
+          <ScalarProperty Name="OPZ_IdOperadorPostal" ColumnName="OPZ_IdOperadorPostal" />
+          <ScalarProperty Name="OPZ_IdZona" ColumnName="OPZ_IdZona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CampoTipoValorAdicional_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.CampoTipoValorAdicional_TAR">
+        <MappingFragment StoreEntitySet="CampoTipoValorAdicional_TAR">
+          <ScalarProperty Name="CTA_CreadoPor" ColumnName="CTA_CreadoPor" />
+          <ScalarProperty Name="CTA_FechaGrabacion" ColumnName="CTA_FechaGrabacion" />
+          <ScalarProperty Name="CTA_TipoDato" ColumnName="CTA_TipoDato" />
+          <ScalarProperty Name="CTA_Display" ColumnName="CTA_Display" />
+          <ScalarProperty Name="CTA_IdCampo" ColumnName="CTA_IdCampo" />
+          <ScalarProperty Name="CTA_IdTipoValorAdicional" ColumnName="CTA_IdTipoValorAdicional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTrayectoRango_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTrayectoRango_TAR">
+        <MappingFragment StoreEntitySet="PrecioTrayectoRango_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="PPR_CreadoPor" ColumnName="PPR_CreadoPor" />
+          <ScalarProperty Name="PPR_FechaGrabacion" ColumnName="PPR_FechaGrabacion" />
+          <ScalarProperty Name="PPR_Porcentaje" ColumnName="PPR_Porcentaje" />
+          <ScalarProperty Name="PPR_Valor" ColumnName="PPR_Valor" />
+          <ScalarProperty Name="PPR_Final" ColumnName="PPR_Final" />
+          <ScalarProperty Name="PPR_Inicial" ColumnName="PPR_Inicial" />
+          <ScalarProperty Name="PPR_IdPrecioTrayecto" ColumnName="PPR_IdPrecioTrayecto" />
+          <ScalarProperty Name="PRR_IdPrecioTrayectoRango" ColumnName="PRR_IdPrecioTrayectoRango" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioValorAdicional_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioValorAdicional_TAR">
+        <MappingFragment StoreEntitySet="PrecioValorAdicional_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="PVA_CreadoPor" ColumnName="PVA_CreadoPor" />
+          <ScalarProperty Name="PVA_FechaGrabacion" ColumnName="PVA_FechaGrabacion" />
+          <ScalarProperty Name="PVA_Valor" ColumnName="PVA_Valor" />
+          <ScalarProperty Name="PVA_IdTipoValorAdicional" ColumnName="PVA_IdTipoValorAdicional" />
+          <ScalarProperty Name="PVA_IdPrecioServicio" ColumnName="PVA_IdPrecioServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequisitoServicio_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.RequisitoServicio_TAR">
+        <MappingFragment StoreEntitySet="RequisitoServicio_TAR">
+          <ScalarProperty Name="RES_CreadoPor" ColumnName="RES_CreadoPor" />
+          <ScalarProperty Name="RES_FechaGrabacion" ColumnName="RES_FechaGrabacion" />
+          <ScalarProperty Name="RES_Descripcion" ColumnName="RES_Descripcion" />
+          <ScalarProperty Name="RES_IdServicio" ColumnName="RES_IdServicio" />
+          <ScalarProperty Name="RES_IdRequisitoServicio" ColumnName="RES_IdRequisitoServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioImpuesto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioImpuesto_TAR">
+        <MappingFragment StoreEntitySet="ServicioImpuesto_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="SEI_CreadoPor" ColumnName="SEI_CreadoPor" />
+          <ScalarProperty Name="SEI_FechaGrabacion" ColumnName="SEI_FechaGrabacion" />
+          <ScalarProperty Name="SEI_IdImpuesto" ColumnName="SEI_IdImpuesto" />
+          <ScalarProperty Name="SEI_IdServicio" ColumnName="SEI_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioRango_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioRango_TAR">
+        <MappingFragment StoreEntitySet="PrecioRango_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="PRA_CreadoPor" ColumnName="PRA_CreadoPor" />
+          <ScalarProperty Name="PRA_FechaGrabacion" ColumnName="PRA_FechaGrabacion" />
+          <ScalarProperty Name="PRA_Porcentaje" ColumnName="PRA_Porcentaje" />
+          <ScalarProperty Name="PRA_Valor" ColumnName="PRA_Valor" />
+          <ScalarProperty Name="PRA_Final" ColumnName="PRA_Final" />
+          <ScalarProperty Name="PRA_Inicial" ColumnName="PRA_Inicial" />
+          <ScalarProperty Name="PRA_IdListaPrecioServicio" ColumnName="PRA_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRA_IdPrecioRango" ColumnName="PRA_IdPrecioRango" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioImpuestos_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioImpuestos_VTAR">
+        <MappingFragment StoreEntitySet="ServicioImpuestos_VTAR">
+          <ScalarProperty Name="UNE_IdCuentaExterna" ColumnName="UNE_IdCuentaExterna" />
+          <ScalarProperty Name="UNE_Descripcion" ColumnName="UNE_Descripcion" />
+          <ScalarProperty Name="UNE_Nombre" ColumnName="UNE_Nombre" />
+          <ScalarProperty Name="UNE_IdUnidad" ColumnName="UNE_IdUnidad" />
+          <ScalarProperty Name="IMP_IdCuentaExterna" ColumnName="IMP_IdCuentaExterna" />
+          <ScalarProperty Name="IMP_Valor" ColumnName="IMP_Valor" />
+          <ScalarProperty Name="IMP_Descripcion" ColumnName="IMP_Descripcion" />
+          <ScalarProperty Name="SER_AplicaRetenciones" ColumnName="SER_AplicaRetenciones" />
+          <ScalarProperty Name="SER_IdentificadorInterno" ColumnName="SER_IdentificadorInterno" />
+          <ScalarProperty Name="SER_HoraFinVenta" ColumnName="SER_HoraFinVenta" />
+          <ScalarProperty Name="SER_HoraInicioVenta" ColumnName="SER_HoraInicioVenta" />
+          <ScalarProperty Name="SER_IdCuentaExterna" ColumnName="SER_IdCuentaExterna" />
+          <ScalarProperty Name="SER_Descripcion" ColumnName="SER_Descripcion" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SEI_IdImpuesto" ColumnName="SEI_IdImpuesto" />
+          <ScalarProperty Name="SEI_IdServicio" ColumnName="SEI_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidad_PAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Localidad_PAR">
+        <MappingFragment StoreEntitySet="Localidad_PAR">
+          <ScalarProperty Name="LOC_AplicaDireccionEstandar" ColumnName="LOC_AplicaDireccionEstandar" />
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="LOC_DHLActivo" ColumnName="LOC_DHLActivo" />
+          <ScalarProperty Name="LOC_CreadoPor" ColumnName="LOC_CreadoPor" />
+          <ScalarProperty Name="LOC_FechaGrabacion" ColumnName="LOC_FechaGrabacion" />
+          <ScalarProperty Name="LOC_CodigoPostal" ColumnName="LOC_CodigoPostal" />
+          <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="LOC_IdAncestroTercerGrado" ColumnName="LOC_IdAncestroTercerGrado" />
+          <ScalarProperty Name="LOC_IdAncestroSegundoGrado" ColumnName="LOC_IdAncestroSegundoGrado" />
+          <ScalarProperty Name="LOC_IdAncestroPrimerGrado" ColumnName="LOC_IdAncestroPrimerGrado" />
+          <ScalarProperty Name="LOC_IdTipo" ColumnName="LOC_IdTipo" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaPrecioCampoValorAdd_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ListaPrecioCampoValorAdd_VTAR">
+        <MappingFragment StoreEntitySet="ListaPrecioCampoValorAdd_VTAR">
+          <ScalarProperty Name="TVA_IdServicio" ColumnName="TVA_IdServicio" />
+          <ScalarProperty Name="TVA_Descripcion" ColumnName="TVA_Descripcion" />
+          <ScalarProperty Name="CTA_TipoDato" ColumnName="CTA_TipoDato" />
+          <ScalarProperty Name="CTA_Display" ColumnName="CTA_Display" />
+          <ScalarProperty Name="CTA_IdCampo" ColumnName="CTA_IdCampo" />
+          <ScalarProperty Name="CTA_IdTipoValorAdicional" ColumnName="CTA_IdTipoValorAdicional" />
+          <ScalarProperty Name="PVA_Valor" ColumnName="PVA_Valor" />
+          <ScalarProperty Name="PVA_IdTipoValorAdicional" ColumnName="PVA_IdTipoValorAdicional" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecioServicio" ColumnName="LPS_IdListaPrecioServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioCentroCorrespondencia_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioCentroCorrespondencia_TAR">
+        <MappingFragment StoreEntitySet="PrecioCentroCorrespondencia_TAR">
+          <ScalarProperty Name="POP_CreadoPor" ColumnName="POP_CreadoPor" />
+          <ScalarProperty Name="POP_FechaGrabacion" ColumnName="POP_FechaGrabacion" />
+          <ScalarProperty Name="POP_Valor" ColumnName="POP_Valor" />
+          <ScalarProperty Name="POP_IdListaPrecioServicio" ColumnName="POP_IdListaPrecioServicio" />
+          <ScalarProperty Name="POP_IdPrecioServiCentroCorresp" ColumnName="POP_IdPrecioServiCentroCorresp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioCentroCorrespondencia_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioCentroCorrespondencia_TAR">
+        <MappingFragment StoreEntitySet="ServicioCentroCorrespondencia_TAR">
+          <ScalarProperty Name="SCC_CreadoPor" ColumnName="SCC_CreadoPor" />
+          <ScalarProperty Name="SCC_FechaGrabacion" ColumnName="SCC_FechaGrabacion" />
+          <ScalarProperty Name="SCC_Descripcion" ColumnName="SCC_Descripcion" />
+          <ScalarProperty Name="SCC_Concepto" ColumnName="SCC_Concepto" />
+          <ScalarProperty Name="SCC_IdServicio" ColumnName="SCC_IdServicio" />
+          <ScalarProperty Name="SCC_IdServCentroCorrespondencia" ColumnName="SCC_IdServCentroCorrespondencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioCentroCorrespon_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioCentroCorrespon_VTAR">
+        <MappingFragment StoreEntitySet="ServicioCentroCorrespon_VTAR">
+          <ScalarProperty Name="POP_Valor" ColumnName="POP_Valor" />
+          <ScalarProperty Name="POP_IdListaPrecioServicio" ColumnName="POP_IdListaPrecioServicio" />
+          <ScalarProperty Name="POP_IdPrecioServiCentroCorresp" ColumnName="POP_IdPrecioServiCentroCorresp" />
+          <ScalarProperty Name="SCC_IdServicio" ColumnName="SCC_IdServicio" />
+          <ScalarProperty Name="SCC_Descripcion" ColumnName="SCC_Descripcion" />
+          <ScalarProperty Name="SCC_Concepto" ColumnName="SCC_Concepto" />
+          <ScalarProperty Name="SCC_IdServCentroCorrespondencia" ColumnName="SCC_IdServCentroCorrespondencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTramite_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTramite_TAR">
+        <MappingFragment StoreEntitySet="PrecioTramite_TAR">
+          <ScalarProperty Name="PRT_CreadoPor" ColumnName="PRT_CreadoPor" />
+          <ScalarProperty Name="PRT_FechaGrabacion" ColumnName="PRT_FechaGrabacion" />
+          <ScalarProperty Name="PRT_ValorAdicionalPorDocumento" ColumnName="PRT_ValorAdicionalPorDocumento" />
+          <ScalarProperty Name="PRT_ValorAdicionalLocal" ColumnName="PRT_ValorAdicionalLocal" />
+          <ScalarProperty Name="PRT_Valor" ColumnName="PRT_Valor" />
+          <ScalarProperty Name="PRT_IdListaPrecioServicio" ColumnName="PRT_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRT_IdTramite" ColumnName="PRT_IdTramite" />
+          <ScalarProperty Name="PRT_IdPrecioTramite" ColumnName="PRT_IdPrecioTramite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequisitoTramite_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.RequisitoTramite_TAR">
+        <MappingFragment StoreEntitySet="RequisitoTramite_TAR">
+          <ScalarProperty Name="REQ_CreadoPor" ColumnName="REQ_CreadoPor" />
+          <ScalarProperty Name="REQ_FechaGrabacion" ColumnName="REQ_FechaGrabacion" />
+          <ScalarProperty Name="REQ_IdTramite" ColumnName="REQ_IdTramite" />
+          <ScalarProperty Name="REQ_Descripcion" ColumnName="REQ_Descripcion" />
+          <ScalarProperty Name="REQ_IdRequisitoServicio" ColumnName="REQ_IdRequisitoServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tramite_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Tramite_TAR">
+        <MappingFragment StoreEntitySet="Tramite_TAR">
+          <ScalarProperty Name="TRA_CreadoPor" ColumnName="TRA_CreadoPor" />
+          <ScalarProperty Name="TRA_FechaGrabacion" ColumnName="TRA_FechaGrabacion" />
+          <ScalarProperty Name="TRA_Duracion" ColumnName="TRA_Duracion" />
+          <ScalarProperty Name="TRA_Descripcion" ColumnName="TRA_Descripcion" />
+          <ScalarProperty Name="TRA_Nombre" ColumnName="TRA_Nombre" />
+          <ScalarProperty Name="TRA_IdTipoTramite" ColumnName="TRA_IdTipoTramite" />
+          <ScalarProperty Name="TRA_IdServicio" ColumnName="TRA_IdServicio" />
+          <ScalarProperty Name="TRA_IdTramite" ColumnName="TRA_IdTramite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TramiteImpuesto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TramiteImpuesto_TAR">
+        <MappingFragment StoreEntitySet="TramiteImpuesto_TAR">
+          <ScalarProperty Name="TRI_CreadoPor" ColumnName="TRI_CreadoPor" />
+          <ScalarProperty Name="TRI_FechaGrabacion" ColumnName="TRI_FechaGrabacion" />
+          <ScalarProperty Name="TRI_IdImpuesto" ColumnName="TRI_IdImpuesto" />
+          <ScalarProperty Name="TRI_IdTramite" ColumnName="TRI_IdTramite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioTramites_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioTramites_VTAR">
+        <MappingFragment StoreEntitySet="ServicioTramites_VTAR">
+          <ScalarProperty Name="PRT_ValorAdicionalPorDocumento" ColumnName="PRT_ValorAdicionalPorDocumento" />
+          <ScalarProperty Name="PRT_ValorAdicionalLocal" ColumnName="PRT_ValorAdicionalLocal" />
+          <ScalarProperty Name="PRT_Valor" ColumnName="PRT_Valor" />
+          <ScalarProperty Name="PRT_IdListaPrecioServicio" ColumnName="PRT_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRT_IdTramite" ColumnName="PRT_IdTramite" />
+          <ScalarProperty Name="PRT_IdPrecioTramite" ColumnName="PRT_IdPrecioTramite" />
+          <ScalarProperty Name="TRA_Duracion" ColumnName="TRA_Duracion" />
+          <ScalarProperty Name="TRA_Descripcion" ColumnName="TRA_Descripcion" />
+          <ScalarProperty Name="TRA_Nombre" ColumnName="TRA_Nombre" />
+          <ScalarProperty Name="TRA_IdTipoTramite" ColumnName="TRA_IdTipoTramite" />
+          <ScalarProperty Name="TRA_IdServicio" ColumnName="TRA_IdServicio" />
+          <ScalarProperty Name="TRA_IdTramite" ColumnName="TRA_IdTramite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTramite_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoTramite_TAR">
+        <MappingFragment StoreEntitySet="TipoTramite_TAR">
+          <ScalarProperty Name="TIT_CreadoPor" ColumnName="TIT_CreadoPor" />
+          <ScalarProperty Name="TIT_FechaGrabacion" ColumnName="TIT_FechaGrabacion" />
+          <ScalarProperty Name="TIT_Descripcion" ColumnName="TIT_Descripcion" />
+          <ScalarProperty Name="TIT_IdTipoTramite" ColumnName="TIT_IdTipoTramite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExcepcionTrayectoLocalida_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ExcepcionTrayectoLocalida_VTAR">
+        <MappingFragment StoreEntitySet="ExcepcionTrayectoLocalida_VTAR">
+          <ScalarProperty Name="TTR_Descripcion" ColumnName="TTR_Descripcion" />
+          <ScalarProperty Name="TST_Descripcion" ColumnName="TST_Descripcion" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTrayectoSubTrayecto" ColumnName="TRS_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTR_Valor" ColumnName="PTR_Valor" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTR_IdPrecioTrayectoSubTrayect" ColumnName="PTR_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="PTR_IdTrayectoSubTrayecto" ColumnName="PTR_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="LOC_IdTipo" ColumnName="LOC_IdTipo" />
+          <ScalarProperty Name="EXT_TiempoEntrega" ColumnName="EXT_TiempoEntrega" />
+          <ScalarProperty Name="EXT_IdLocalidadOrigen" ColumnName="EXT_IdLocalidadOrigen" />
+          <ScalarProperty Name="EXT_IdPrecioTrayectoSubTrayect" ColumnName="EXT_IdPrecioTrayectoSubTrayect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidades_VPAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Localidades_VPAR">
+        <MappingFragment StoreEntitySet="Localidades_VPAR">
+          <ScalarProperty Name="LOC_CodigoPostal" ColumnName="LOC_CodigoPostal" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="LOC_NombreCortoTercero" ColumnName="LOC_NombreCortoTercero" />
+          <ScalarProperty Name="LOC_NombreTercero" ColumnName="LOC_NombreTercero" />
+          <ScalarProperty Name="LOC_IdTipoTerceroDesc" ColumnName="LOC_IdTipoTerceroDesc" />
+          <ScalarProperty Name="LOC_IdTipoTercero" ColumnName="LOC_IdTipoTercero" />
+          <ScalarProperty Name="LOC_IdAncestroTercerGrado" ColumnName="LOC_IdAncestroTercerGrado" />
+          <ScalarProperty Name="LOC_NombreCortoSegundo" ColumnName="LOC_NombreCortoSegundo" />
+          <ScalarProperty Name="LOC_NombreSegundo" ColumnName="LOC_NombreSegundo" />
+          <ScalarProperty Name="LOC_IdTipoSegundoDesc" ColumnName="LOC_IdTipoSegundoDesc" />
+          <ScalarProperty Name="LOC_IdTipoSegundo" ColumnName="LOC_IdTipoSegundo" />
+          <ScalarProperty Name="LOC_IdAncestroSegundoGrado" ColumnName="LOC_IdAncestroSegundoGrado" />
+          <ScalarProperty Name="LOC_NombreCortoPrimero" ColumnName="LOC_NombreCortoPrimero" />
+          <ScalarProperty Name="LOC_NombrePrimero" ColumnName="LOC_NombrePrimero" />
+          <ScalarProperty Name="LOC_IdTipoPrimeroDesc" ColumnName="LOC_IdTipoPrimeroDesc" />
+          <ScalarProperty Name="LOC_IdTipoPrimero" ColumnName="LOC_IdTipoPrimero" />
+          <ScalarProperty Name="LOC_IdAncestroPrimerGrado" ColumnName="LOC_IdAncestroPrimerGrado" />
+          <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="TLO_Descripcion" ColumnName="TLO_Descripcion" />
+          <ScalarProperty Name="LOC_IdTipo" ColumnName="LOC_IdTipo" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaPrecioSrvPrecioRango_VCLI">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ListaPrecioSrvPrecioRango_VCLI">
+        <MappingFragment StoreEntitySet="ListaPrecioSrvPrecioRango_VCLI">
+          <ScalarProperty Name="PRA_IdPrecioRango" ColumnName="PRA_IdPrecioRango" />
+          <ScalarProperty Name="PRA_Porcentaje" ColumnName="PRA_Porcentaje" />
+          <ScalarProperty Name="PRA_Valor" ColumnName="PRA_Valor" />
+          <ScalarProperty Name="PRA_Final" ColumnName="PRA_Final" />
+          <ScalarProperty Name="PRA_Inicial" ColumnName="PRA_Inicial" />
+          <ScalarProperty Name="PRA_IdListaPrecioServicio" ColumnName="PRA_IdListaPrecioServicio" />
+          <ScalarProperty Name="LPS_PrimaSeguros" ColumnName="LPS_PrimaSeguros" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecioServicio" ColumnName="LPS_IdListaPrecioServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioExcepcionTrayeHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioExcepcionTrayeHist_TAR">
+        <MappingFragment StoreEntitySet="ServicioExcepcionTrayeHist_TAR">
+          <ScalarProperty Name="SET_TipoCambio" ColumnName="SET_TipoCambio" />
+          <ScalarProperty Name="SET_CambiadoPor" ColumnName="SET_CambiadoPor" />
+          <ScalarProperty Name="SET_FechaCambio" ColumnName="SET_FechaCambio" />
+          <ScalarProperty Name="SET_CreadoPor" ColumnName="SET_CreadoPor" />
+          <ScalarProperty Name="SET_FechaGrabacion" ColumnName="SET_FechaGrabacion" />
+          <ScalarProperty Name="SET_TiempoEntrega" ColumnName="SET_TiempoEntrega" />
+          <ScalarProperty Name="SET_IdServicio" ColumnName="SET_IdServicio" />
+          <ScalarProperty Name="SET_IdExcepionTrayecto" ColumnName="SET_IdExcepionTrayecto" />
+          <ScalarProperty Name="SET_IdAuditoria" ColumnName="SET_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExcepcionTrayecto_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ExcepcionTrayecto_VTAR">
+        <MappingFragment StoreEntitySet="ExcepcionTrayecto_VTAR">
+          <ScalarProperty Name="TTR_Descripcion" ColumnName="TTR_Descripcion" />
+          <ScalarProperty Name="TST_Descripcion" ColumnName="TST_Descripcion" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="EXT_IdListaPrecios" ColumnName="EXT_IdListaPrecios" />
+          <ScalarProperty Name="EXT_IdTrayectoSubTrayecto" ColumnName="EXT_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="EXT_IdLocalidadDestino" ColumnName="EXT_IdLocalidadDestino" />
+          <ScalarProperty Name="EXT_IdLocalidadOrigen" ColumnName="EXT_IdLocalidadOrigen" />
+          <ScalarProperty Name="EXT_IdExcepionTrayecto" ColumnName="EXT_IdExcepionTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValorPesoDeclaradoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ValorPesoDeclaradoHist_TAR">
+        <MappingFragment StoreEntitySet="ValorPesoDeclaradoHist_TAR">
+          <ScalarProperty Name="VMD_TipoCambio" ColumnName="VMD_TipoCambio" />
+          <ScalarProperty Name="VMD_CambiadoPor" ColumnName="VMD_CambiadoPor" />
+          <ScalarProperty Name="VMD_FechaCambio" ColumnName="VMD_FechaCambio" />
+          <ScalarProperty Name="VMD_CreadoPor" ColumnName="VMD_CreadoPor" />
+          <ScalarProperty Name="VMD_FechaGrabacion" ColumnName="VMD_FechaGrabacion" />
+          <ScalarProperty Name="VMD_ValorMaximoDeclarado" ColumnName="VMD_ValorMaximoDeclarado" />
+          <ScalarProperty Name="VMD_ValorMinimoDeclarado" ColumnName="VMD_ValorMinimoDeclarado" />
+          <ScalarProperty Name="VMD_PesoFinal" ColumnName="VMD_PesoFinal" />
+          <ScalarProperty Name="VMD_PesoInicial" ColumnName="VMD_PesoInicial" />
+          <ScalarProperty Name="VMD_IdListaPrecios" ColumnName="VMD_IdListaPrecios" />
+          <ScalarProperty Name="VMD_IdValorMinimoDeclarado" ColumnName="VMD_IdValorMinimoDeclarado" />
+          <ScalarProperty Name="VMD_IdAuditoria" ColumnName="VMD_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaPreciosHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ListaPreciosHist_TAR">
+        <MappingFragment StoreEntitySet="ListaPreciosHist_TAR">
+          <ScalarProperty Name="LIP_TipoCambio" ColumnName="LIP_TipoCambio" />
+          <ScalarProperty Name="LIP_CambiadoPor" ColumnName="LIP_CambiadoPor" />
+          <ScalarProperty Name="LIP_FechaCambio" ColumnName="LIP_FechaCambio" />
+          <ScalarProperty Name="LIP_CreadoPor" ColumnName="LIP_CreadoPor" />
+          <ScalarProperty Name="LIP_FechaGrabacion" ColumnName="LIP_FechaGrabacion" />
+          <ScalarProperty Name="LIP_EsListaCliente" ColumnName="LIP_EsListaCliente" />
+          <ScalarProperty Name="LIP_IdMoneda" ColumnName="LIP_IdMoneda" />
+          <ScalarProperty Name="LIP_EsTarifaPlena" ColumnName="LIP_EsTarifaPlena" />
+          <ScalarProperty Name="LIP_Estado" ColumnName="LIP_Estado" />
+          <ScalarProperty Name="LIP_Fin" ColumnName="LIP_Fin" />
+          <ScalarProperty Name="LIP_Inicio" ColumnName="LIP_Inicio" />
+          <ScalarProperty Name="LIP_Nombre" ColumnName="LIP_Nombre" />
+          <ScalarProperty Name="LIP_IdListaPrecios" ColumnName="LIP_IdListaPrecios" />
+          <ScalarProperty Name="LIP_IdAuditoria" ColumnName="LIP_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioRangoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioRangoHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioRangoHist_TAR">
+          <ScalarProperty Name="PRA_TipoCambio" ColumnName="PRA_TipoCambio" />
+          <ScalarProperty Name="PRA_CambiadoPor" ColumnName="PRA_CambiadoPor" />
+          <ScalarProperty Name="PRA_FechaCambio" ColumnName="PRA_FechaCambio" />
+          <ScalarProperty Name="PRA_CreadoPor" ColumnName="PRA_CreadoPor" />
+          <ScalarProperty Name="PRA_FechaGrabacion" ColumnName="PRA_FechaGrabacion" />
+          <ScalarProperty Name="PRA_Porcentaje" ColumnName="PRA_Porcentaje" />
+          <ScalarProperty Name="PRA_Valor" ColumnName="PRA_Valor" />
+          <ScalarProperty Name="PRA_Final" ColumnName="PRA_Final" />
+          <ScalarProperty Name="PRA_Inicial" ColumnName="PRA_Inicial" />
+          <ScalarProperty Name="PRA_IdListaPrecioServicio" ColumnName="PRA_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRA_IdPrecioRango" ColumnName="PRA_IdPrecioRango" />
+          <ScalarProperty Name="PRA_IdAuditoria" ColumnName="PRA_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequisitoServicioHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.RequisitoServicioHist_TAR">
+        <MappingFragment StoreEntitySet="RequisitoServicioHist_TAR">
+          <ScalarProperty Name="RES_TipoCambio" ColumnName="RES_TipoCambio" />
+          <ScalarProperty Name="RES_CambiadoPor" ColumnName="RES_CambiadoPor" />
+          <ScalarProperty Name="RES_FechaCambio" ColumnName="RES_FechaCambio" />
+          <ScalarProperty Name="RES_CreadoPor" ColumnName="RES_CreadoPor" />
+          <ScalarProperty Name="RES_FechaGrabacion" ColumnName="RES_FechaGrabacion" />
+          <ScalarProperty Name="RES_Descripcion" ColumnName="RES_Descripcion" />
+          <ScalarProperty Name="RES_IdServicio" ColumnName="RES_IdServicio" />
+          <ScalarProperty Name="RES_IdRequisitoServicio" ColumnName="RES_IdRequisitoServicio" />
+          <ScalarProperty Name="RES_IdAuditoria" ColumnName="RES_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioCentroCorresponHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioCentroCorresponHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioCentroCorresponHist_TAR">
+          <ScalarProperty Name="POP_TipoCambio" ColumnName="POP_TipoCambio" />
+          <ScalarProperty Name="POP_CambiadoPor" ColumnName="POP_CambiadoPor" />
+          <ScalarProperty Name="POP_FechaCambio" ColumnName="POP_FechaCambio" />
+          <ScalarProperty Name="POP_CreadoPor" ColumnName="POP_CreadoPor" />
+          <ScalarProperty Name="POP_FechaGrabacion" ColumnName="POP_FechaGrabacion" />
+          <ScalarProperty Name="POP_Valor" ColumnName="POP_Valor" />
+          <ScalarProperty Name="POP_IdListaPrecioServicio" ColumnName="POP_IdListaPrecioServicio" />
+          <ScalarProperty Name="POP_IdPrecioServiCentroCorresp" ColumnName="POP_IdPrecioServiCentroCorresp" />
+          <ScalarProperty Name="POP_IdAuditoria" ColumnName="POP_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioValorAdicionalHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioValorAdicionalHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioValorAdicionalHist_TAR">
+          <ScalarProperty Name="PVA_TipoCambio" ColumnName="PVA_TipoCambio" />
+          <ScalarProperty Name="PVA_CambiadoPor" ColumnName="PVA_CambiadoPor" />
+          <ScalarProperty Name="PVA_FechaCambio" ColumnName="PVA_FechaCambio" />
+          <ScalarProperty Name="PVA_CreadoPor" ColumnName="PVA_CreadoPor" />
+          <ScalarProperty Name="PVA_FechaGrabacion" ColumnName="PVA_FechaGrabacion" />
+          <ScalarProperty Name="PVA_Valor" ColumnName="PVA_Valor" />
+          <ScalarProperty Name="PVA_IdTipoValorAdicional" ColumnName="PVA_IdTipoValorAdicional" />
+          <ScalarProperty Name="PVA_IdPrecioServicio" ColumnName="PVA_IdPrecioServicio" />
+          <ScalarProperty Name="PVA_IdAuditoria" ColumnName="PVA_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTramiteHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTramiteHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioTramiteHist_TAR">
+          <ScalarProperty Name="PRT_TipoCambio" ColumnName="PRT_TipoCambio" />
+          <ScalarProperty Name="PRT_CambiadoPor" ColumnName="PRT_CambiadoPor" />
+          <ScalarProperty Name="PRT_FechaCambio" ColumnName="PRT_FechaCambio" />
+          <ScalarProperty Name="PRT_CreadoPor" ColumnName="PRT_CreadoPor" />
+          <ScalarProperty Name="PRT_FechaGrabacion" ColumnName="PRT_FechaGrabacion" />
+          <ScalarProperty Name="PRT_ValorAdicionalPorDocumento" ColumnName="PRT_ValorAdicionalPorDocumento" />
+          <ScalarProperty Name="PRT_ValorAdicionalLocal" ColumnName="PRT_ValorAdicionalLocal" />
+          <ScalarProperty Name="PRT_Valor" ColumnName="PRT_Valor" />
+          <ScalarProperty Name="PRT_IdListaPrecioServicio" ColumnName="PRT_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRT_IdTramite" ColumnName="PRT_IdTramite" />
+          <ScalarProperty Name="PRT_IdPrecioTramite" ColumnName="PRT_IdPrecioTramite" />
+          <ScalarProperty Name="PRT_IdAuditoria" ColumnName="PRT_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioFormaPagoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioFormaPagoHist_TAR">
+        <MappingFragment StoreEntitySet="ServicioFormaPagoHist_TAR">
+          <ScalarProperty Name="SFP_TipoCambio" ColumnName="SFP_TipoCambio" />
+          <ScalarProperty Name="SFP_CambiadoPor" ColumnName="SFP_CambiadoPor" />
+          <ScalarProperty Name="SFP_FechaCambio" ColumnName="SFP_FechaCambio" />
+          <ScalarProperty Name="SFP_CreadoPor" ColumnName="SFP_CreadoPor" />
+          <ScalarProperty Name="SFP_FechaGrabacion" ColumnName="SFP_FechaGrabacion" />
+          <ScalarProperty Name="SFP_IdFormaPago" ColumnName="SFP_IdFormaPago" />
+          <ScalarProperty Name="SFP_IdServicio" ColumnName="SFP_IdServicio" />
+          <ScalarProperty Name="SFP_IdAuditoria" ColumnName="SFP_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequisitoTramiteHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.RequisitoTramiteHist_TAR">
+        <MappingFragment StoreEntitySet="RequisitoTramiteHist_TAR">
+          <ScalarProperty Name="REQ_TipoCambio" ColumnName="REQ_TipoCambio" />
+          <ScalarProperty Name="REQ_CambiadoPor" ColumnName="REQ_CambiadoPor" />
+          <ScalarProperty Name="REQ_FechaCambio" ColumnName="REQ_FechaCambio" />
+          <ScalarProperty Name="REQ_CreadoPor" ColumnName="REQ_CreadoPor" />
+          <ScalarProperty Name="REQ_FechaGrabacion" ColumnName="REQ_FechaGrabacion" />
+          <ScalarProperty Name="REQ_IdTramite" ColumnName="REQ_IdTramite" />
+          <ScalarProperty Name="REQ_Descripcion" ColumnName="REQ_Descripcion" />
+          <ScalarProperty Name="REQ_IdRequisitoServicio" ColumnName="REQ_IdRequisitoServicio" />
+          <ScalarProperty Name="PEQ_IdAuditoria" ColumnName="PEQ_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioCtroCorrespondHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioCtroCorrespondHist_TAR">
+        <MappingFragment StoreEntitySet="ServicioCtroCorrespondHist_TAR">
+          <ScalarProperty Name="SCC_TipoCambio" ColumnName="SCC_TipoCambio" />
+          <ScalarProperty Name="SCC_CambiadoPor" ColumnName="SCC_CambiadoPor" />
+          <ScalarProperty Name="SCC_FechaCambio" ColumnName="SCC_FechaCambio" />
+          <ScalarProperty Name="SCC_CreadoPor" ColumnName="SCC_CreadoPor" />
+          <ScalarProperty Name="SCC_FechaGrabacion" ColumnName="SCC_FechaGrabacion" />
+          <ScalarProperty Name="SCC_Descripcion" ColumnName="SCC_Descripcion" />
+          <ScalarProperty Name="SCC_Concepto" ColumnName="SCC_Concepto" />
+          <ScalarProperty Name="SCC_IdServicio" ColumnName="SCC_IdServicio" />
+          <ScalarProperty Name="SCC_IdServCentroCorrespondencia" ColumnName="SCC_IdServCentroCorrespondencia" />
+          <ScalarProperty Name="SCC_IdAuditoria" ColumnName="SCC_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioMensajeriaHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioMensajeriaHist_TAR">
+        <MappingFragment StoreEntitySet="ServicioMensajeriaHist_TAR">
+          <ScalarProperty Name="SME_TipoCambio" ColumnName="SME_TipoCambio" />
+          <ScalarProperty Name="SME_CambiadoPor" ColumnName="SME_CambiadoPor" />
+          <ScalarProperty Name="SME_FechaCambio" ColumnName="SME_FechaCambio" />
+          <ScalarProperty Name="SME_CreadoPor" ColumnName="SME_CreadoPor" />
+          <ScalarProperty Name="SME_FechaGrabacion" ColumnName="SME_FechaGrabacion" />
+          <ScalarProperty Name="SME_PesoMaximo" ColumnName="SME_PesoMaximo" />
+          <ScalarProperty Name="SME_PesoMínimo" ColumnName="SME_PesoMínimo" />
+          <ScalarProperty Name="SME_IdServicio" ColumnName="SME_IdServicio" />
+          <ScalarProperty Name="SME_IdAuditoria" ColumnName="SME_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSubTrayectoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoSubTrayectoHist_TAR">
+        <MappingFragment StoreEntitySet="TipoSubTrayectoHist_TAR">
+          <ScalarProperty Name="TST_TipoCambio" ColumnName="TST_TipoCambio" />
+          <ScalarProperty Name="TST_CambiadoPor" ColumnName="TST_CambiadoPor" />
+          <ScalarProperty Name="TST_FechaCambio" ColumnName="TST_FechaCambio" />
+          <ScalarProperty Name="TST_CreadoPor" ColumnName="TST_CreadoPor" />
+          <ScalarProperty Name="TST_FechaGrabacion" ColumnName="TST_FechaGrabacion" />
+          <ScalarProperty Name="TST_Descripcion" ColumnName="TST_Descripcion" />
+          <ScalarProperty Name="TST_IdTipoSubTrayecto" ColumnName="TST_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TST_IdAuditoria" ColumnName="TST_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoValorAdicionalHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoValorAdicionalHist_TAR">
+        <MappingFragment StoreEntitySet="TipoValorAdicionalHist_TAR">
+          <ScalarProperty Name="TVA_TipoCambio" ColumnName="TVA_TipoCambio" />
+          <ScalarProperty Name="TVA_CambiadoPor" ColumnName="TVA_CambiadoPor" />
+          <ScalarProperty Name="TVA_FechaCambio" ColumnName="TVA_FechaCambio" />
+          <ScalarProperty Name="TVA_CreadoPor" ColumnName="TVA_CreadoPor" />
+          <ScalarProperty Name="TVA_FechaGrabacion" ColumnName="TVA_FechaGrabacion" />
+          <ScalarProperty Name="TVA_IdServicio" ColumnName="TVA_IdServicio" />
+          <ScalarProperty Name="TVA_Descripcion" ColumnName="TVA_Descripcion" />
+          <ScalarProperty Name="TVA_IdTipoValorAdicional" ColumnName="TVA_IdTipoValorAdicional" />
+          <ScalarProperty Name="TVA_IdAuditoria" ColumnName="TVA_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioTrayectoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioTrayectoHist_TAR">
+        <MappingFragment StoreEntitySet="ServicioTrayectoHist_TAR">
+          <ScalarProperty Name="STR_TipoCambio" ColumnName="STR_TipoCambio" />
+          <ScalarProperty Name="STR_CambiadoPor" ColumnName="STR_CambiadoPor" />
+          <ScalarProperty Name="STR_FechaCambio" ColumnName="STR_FechaCambio" />
+          <ScalarProperty Name="STR_CreadoPor" ColumnName="STR_CreadoPor" />
+          <ScalarProperty Name="STR_FechaGrabacion" ColumnName="STR_FechaGrabacion" />
+          <ScalarProperty Name="STR_TiempoEntrega" ColumnName="STR_TiempoEntrega" />
+          <ScalarProperty Name="STR_IdServicio" ColumnName="STR_IdServicio" />
+          <ScalarProperty Name="STR_IdTrayecto" ColumnName="STR_IdTrayecto" />
+          <ScalarProperty Name="STR_IdAuditoria" ColumnName="STR_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEnvioHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoEnvioHist_TAR">
+        <MappingFragment StoreEntitySet="TipoEnvioHist_TAR">
+          <ScalarProperty Name="TEN_TipoCambio" ColumnName="TEN_TipoCambio" />
+          <ScalarProperty Name="TEN_CambiadoPor" ColumnName="TEN_CambiadoPor" />
+          <ScalarProperty Name="TEN_FechaCambio" ColumnName="TEN_FechaCambio" />
+          <ScalarProperty Name="TEN_CreadoPor" ColumnName="TEN_CreadoPor" />
+          <ScalarProperty Name="TEN_FechaGrabacion" ColumnName="TEN_FechaGrabacion" />
+          <ScalarProperty Name="TEN_CodigoMinisterio" ColumnName="TEN_CodigoMinisterio" />
+          <ScalarProperty Name="TEN_PesoMaximo" ColumnName="TEN_PesoMaximo" />
+          <ScalarProperty Name="TEN_PesoMinimo" ColumnName="TEN_PesoMinimo" />
+          <ScalarProperty Name="TEN_Descripcion" ColumnName="TEN_Descripcion" />
+          <ScalarProperty Name="TEN_Nombre" ColumnName="TEN_Nombre" />
+          <ScalarProperty Name="TEN_IdTipoEnvio" ColumnName="TEN_IdTipoEnvio" />
+          <ScalarProperty Name="TEN_IdAuditoria" ColumnName="TEN_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTrayectoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoTrayectoHist_TAR">
+        <MappingFragment StoreEntitySet="TipoTrayectoHist_TAR">
+          <ScalarProperty Name="TTR_TipoCambio" ColumnName="TTR_TipoCambio" />
+          <ScalarProperty Name="TTR_CambiadoPor" ColumnName="TTR_CambiadoPor" />
+          <ScalarProperty Name="TTR_FechaCambio" ColumnName="TTR_FechaCambio" />
+          <ScalarProperty Name="TTR_CreadoPor" ColumnName="TTR_CreadoPor" />
+          <ScalarProperty Name="TTR_FechaGrabacion" ColumnName="TTR_FechaGrabacion" />
+          <ScalarProperty Name="TTR_Descripcion" ColumnName="TTR_Descripcion" />
+          <ScalarProperty Name="TTR_IdTipoTrayecto" ColumnName="TTR_IdTipoTrayecto" />
+          <ScalarProperty Name="TTR_IdAuditoria" ColumnName="TTR_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrayectoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TrayectoHist_TAR">
+        <MappingFragment StoreEntitySet="TrayectoHist_TAR">
+          <ScalarProperty Name="TRA_TipoCambio" ColumnName="TRA_TipoCambio" />
+          <ScalarProperty Name="TRA_CambiadoPor" ColumnName="TRA_CambiadoPor" />
+          <ScalarProperty Name="TRA_FechaCambio" ColumnName="TRA_FechaCambio" />
+          <ScalarProperty Name="TRA_CreadoPor" ColumnName="TRA_CreadoPor" />
+          <ScalarProperty Name="TRA_FechaGrabacion" ColumnName="TRA_FechaGrabacion" />
+          <ScalarProperty Name="TRA_IdTrayectoSubTrayecto" ColumnName="TRA_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TRA_IdLocalidadDestino" ColumnName="TRA_IdLocalidadDestino" />
+          <ScalarProperty Name="TRA_IdLocalidadOrigen" ColumnName="TRA_IdLocalidadOrigen" />
+          <ScalarProperty Name="TRA_IdTrayecto" ColumnName="TRA_IdTrayecto" />
+          <ScalarProperty Name="TRA_IdAuditoria" ColumnName="TRA_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTraSubTraVlrAdiHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTraSubTraVlrAdiHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioTraSubTraVlrAdiHist_TAR">
+          <ScalarProperty Name="PTV_TipoCambio" ColumnName="PTV_TipoCambio" />
+          <ScalarProperty Name="PTV_CambiadoPor" ColumnName="PTV_CambiadoPor" />
+          <ScalarProperty Name="PTV_FechaCambio" ColumnName="PTV_FechaCambio" />
+          <ScalarProperty Name="PTV_CreadoPor" ColumnName="PTV_CreadoPor" />
+          <ScalarProperty Name="PTV_FechaGrabacion" ColumnName="PTV_FechaGrabacion" />
+          <ScalarProperty Name="PTV_Valor" ColumnName="PTV_Valor" />
+          <ScalarProperty Name="PTV_IdTipoValorAdicional" ColumnName="PTV_IdTipoValorAdicional" />
+          <ScalarProperty Name="PTV_IdPrecioTrayectoSubTrayect" ColumnName="PTV_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="PTV_IdAuditoria" ColumnName="PTV_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TramiteHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TramiteHist_TAR">
+        <MappingFragment StoreEntitySet="TramiteHist_TAR">
+          <ScalarProperty Name="TRA_TipoCambio" ColumnName="TRA_TipoCambio" />
+          <ScalarProperty Name="TRA_CambiadoPor" ColumnName="TRA_CambiadoPor" />
+          <ScalarProperty Name="TRA_FechaCambio" ColumnName="TRA_FechaCambio" />
+          <ScalarProperty Name="TRA_CreadoPor" ColumnName="TRA_CreadoPor" />
+          <ScalarProperty Name="TRA_FechaGrabacion" ColumnName="TRA_FechaGrabacion" />
+          <ScalarProperty Name="TRA_Duracion" ColumnName="TRA_Duracion" />
+          <ScalarProperty Name="TRA_Descripcion" ColumnName="TRA_Descripcion" />
+          <ScalarProperty Name="TRA_Nombre" ColumnName="TRA_Nombre" />
+          <ScalarProperty Name="TRA_IdTipoTramite" ColumnName="TRA_IdTipoTramite" />
+          <ScalarProperty Name="TRA_IdServicio" ColumnName="TRA_IdServicio" />
+          <ScalarProperty Name="TRA_IdTramite" ColumnName="TRA_IdTramite" />
+          <ScalarProperty Name="TRA_IdAuditoria" ColumnName="TRA_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioImpuestoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ServicioImpuestoHist_TAR">
+        <MappingFragment StoreEntitySet="ServicioImpuestoHist_TAR">
+          <ScalarProperty Name="SEI_TipoCambio" ColumnName="SEI_TipoCambio" />
+          <ScalarProperty Name="SEI_CambiadoPor" ColumnName="SEI_CambiadoPor" />
+          <ScalarProperty Name="SEI_FechaCambio" ColumnName="SEI_FechaCambio" />
+          <ScalarProperty Name="SEI_CreadoPor" ColumnName="SEI_CreadoPor" />
+          <ScalarProperty Name="SEI_FechaGrabacion" ColumnName="SEI_FechaGrabacion" />
+          <ScalarProperty Name="SEI_IdImpuesto" ColumnName="SEI_IdImpuesto" />
+          <ScalarProperty Name="SEI_IdServicio" ColumnName="SEI_IdServicio" />
+          <ScalarProperty Name="SEI_IdAuditoria" ColumnName="SEI_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDestino_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoDestino_TAR">
+        <MappingFragment StoreEntitySet="TipoDestino_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="TID_CreadoPor" ColumnName="TID_CreadoPor" />
+          <ScalarProperty Name="TID_FechaGrabacion" ColumnName="TID_FechaGrabacion" />
+          <ScalarProperty Name="TID_TipoDestino" ColumnName="TID_TipoDestino" />
+          <ScalarProperty Name="TID_IdTipoDestino" ColumnName="TID_IdTipoDestino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trayecto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Trayecto_TAR">
+        <MappingFragment StoreEntitySet="Trayecto_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="TRA_CreadoPor" ColumnName="TRA_CreadoPor" />
+          <ScalarProperty Name="TRA_FechaGrabacion" ColumnName="TRA_FechaGrabacion" />
+          <ScalarProperty Name="TRA_IdTrayectoSubTrayecto" ColumnName="TRA_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TRA_IdLocalidadDestino" ColumnName="TRA_IdLocalidadDestino" />
+          <ScalarProperty Name="TRA_IdLocalidadOrigen" ColumnName="TRA_IdLocalidadOrigen" />
+          <ScalarProperty Name="TRA_IdTrayecto" ColumnName="TRA_IdTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEnvio_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoEnvio_TAR">
+        <MappingFragment StoreEntitySet="TipoEnvio_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="TEN_CreadoPor" ColumnName="TEN_CreadoPor" />
+          <ScalarProperty Name="TEN_FechaGrabacion" ColumnName="TEN_FechaGrabacion" />
+          <ScalarProperty Name="TEN_Estado" ColumnName="TEN_Estado" />
+          <ScalarProperty Name="TEN_CodigoMinisterio" ColumnName="TEN_CodigoMinisterio" />
+          <ScalarProperty Name="TEN_PesoMaximo" ColumnName="TEN_PesoMaximo" />
+          <ScalarProperty Name="TEN_PesoMinimo" ColumnName="TEN_PesoMinimo" />
+          <ScalarProperty Name="TEN_Descripcion" ColumnName="TEN_Descripcion" />
+          <ScalarProperty Name="TEN_Nombre" ColumnName="TEN_Nombre" />
+          <ScalarProperty Name="TEN_IdTipoEnvio" ColumnName="TEN_IdTipoEnvio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEmpaque_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoEmpaque_TAR">
+        <MappingFragment StoreEntitySet="TipoEmpaque_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="TEM_Kilos" ColumnName="TEM_Kilos" />
+          <ScalarProperty Name="TEM_Internacional" ColumnName="TEM_Internacional" />
+          <ScalarProperty Name="TEM_Observacion" ColumnName="TEM_Observacion" />
+          <ScalarProperty Name="TEM_CreadoPor" ColumnName="TEM_CreadoPor" />
+          <ScalarProperty Name="TEM_FechaGrabacion" ColumnName="TEM_FechaGrabacion" />
+          <ScalarProperty Name="TEM_Descripcion" ColumnName="TEM_Descripcion" />
+          <ScalarProperty Name="TEM_IdTipoEmpaque" ColumnName="TEM_IdTipoEmpaque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrayectServicio_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TrayectServicio_VTAR">
+        <MappingFragment StoreEntitySet="TrayectServicio_VTAR">
+          <ScalarProperty Name="C23" ColumnName="23" />
+          <ScalarProperty Name="C22" ColumnName="22" />
+          <ScalarProperty Name="C21" ColumnName="21" />
+          <ScalarProperty Name="C20" ColumnName="20" />
+          <ScalarProperty Name="C19" ColumnName="19" />
+          <ScalarProperty Name="C17" ColumnName="17" />
+          <ScalarProperty Name="C16" ColumnName="16" />
+          <ScalarProperty Name="C15" ColumnName="15" />
+          <ScalarProperty Name="C14" ColumnName="14" />
+          <ScalarProperty Name="C13" ColumnName="13" />
+          <ScalarProperty Name="C12" ColumnName="12" />
+          <ScalarProperty Name="C11" ColumnName="11" />
+          <ScalarProperty Name="C10" ColumnName="10" />
+          <ScalarProperty Name="C9" ColumnName="9" />
+          <ScalarProperty Name="C8" ColumnName="8" />
+          <ScalarProperty Name="C7" ColumnName="7" />
+          <ScalarProperty Name="C6" ColumnName="6" />
+          <ScalarProperty Name="C5" ColumnName="5" />
+          <ScalarProperty Name="C4" ColumnName="4" />
+          <ScalarProperty Name="C3" ColumnName="3" />
+          <ScalarProperty Name="C2" ColumnName="2" />
+          <ScalarProperty Name="C1" ColumnName="1" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="TST_Descripcion" ColumnName="TST_Descripcion" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TTR_Descripcion" ColumnName="TTR_Descripcion" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="TRA_IdTrayectoSubTrayecto" ColumnName="TRA_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TRA_IdLocalidadDestino" ColumnName="TRA_IdLocalidadDestino" />
+          <ScalarProperty Name="TRA_IdLocalidadOrigen" ColumnName="TRA_IdLocalidadOrigen" />
+          <ScalarProperty Name="STR_IdTrayecto" ColumnName="STR_IdTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoValorAdicional_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoValorAdicional_TAR">
+        <MappingFragment StoreEntitySet="TipoValorAdicional_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="TVA_EsEmbalaje" ColumnName="TVA_EsEmbalaje" />
+          <ScalarProperty Name="TVA_CreadoPor" ColumnName="TVA_CreadoPor" />
+          <ScalarProperty Name="TVA_FechaGrabacion" ColumnName="TVA_FechaGrabacion" />
+          <ScalarProperty Name="TVA_IdServicio" ColumnName="TVA_IdServicio" />
+          <ScalarProperty Name="TVA_Descripcion" ColumnName="TVA_Descripcion" />
+          <ScalarProperty Name="TVA_IdTipoValorAdicional" ColumnName="TVA_IdTipoValorAdicional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioValorAdicional_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioValorAdicional_VTAR">
+        <MappingFragment StoreEntitySet="PrecioValorAdicional_VTAR">
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="TVA_EsEmbalaje" ColumnName="TVA_EsEmbalaje" />
+          <ScalarProperty Name="PVA_Valor" ColumnName="PVA_Valor" />
+          <ScalarProperty Name="PVA_IdTipoValorAdicional" ColumnName="PVA_IdTipoValorAdicional" />
+          <ScalarProperty Name="PVA_IdPrecioServicio" ColumnName="PVA_IdPrecioServicio" />
+          <ScalarProperty Name="TVA_IdServicio" ColumnName="TVA_IdServicio" />
+          <ScalarProperty Name="TVA_Descripcion" ColumnName="TVA_Descripcion" />
+          <ScalarProperty Name="TVA_IdTipoValorAdicional" ColumnName="TVA_IdTipoValorAdicional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTrayecto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTrayecto_TAR">
+        <MappingFragment StoreEntitySet="PrecioTrayecto_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="PTR_Porcentaje" ColumnName="PTR_Porcentaje" />
+          <ScalarProperty Name="PTR_CreadoPor" ColumnName="PTR_CreadoPor" />
+          <ScalarProperty Name="PTR_FechaGrabacion" ColumnName="PTR_FechaGrabacion" />
+          <ScalarProperty Name="PTR_ValorFijo" ColumnName="PTR_ValorFijo" />
+          <ScalarProperty Name="PTR_IdTrayectoSubTrayecto" ColumnName="PTR_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTR_IdPrecioTrayectoSubTrayect" ColumnName="PTR_IdPrecioTrayectoSubTrayect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListaPrecios_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ListaPrecios_TAR">
+        <MappingFragment StoreEntitySet="ListaPrecios_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="LIP_CreadoPor" ColumnName="LIP_CreadoPor" />
+          <ScalarProperty Name="LIP_FechaGrabacion" ColumnName="LIP_FechaGrabacion" />
+          <ScalarProperty Name="LIP_IdListaPreciosBase" ColumnName="LIP_IdListaPreciosBase" />
+          <ScalarProperty Name="LIP_EsListaCliente" ColumnName="LIP_EsListaCliente" />
+          <ScalarProperty Name="LIP_IdMoneda" ColumnName="LIP_IdMoneda" />
+          <ScalarProperty Name="LIP_EsTarifaPlena" ColumnName="LIP_EsTarifaPlena" />
+          <ScalarProperty Name="LIP_Estado" ColumnName="LIP_Estado" />
+          <ScalarProperty Name="LIP_Fin" ColumnName="LIP_Fin" />
+          <ScalarProperty Name="LIP_Inicio" ColumnName="LIP_Inicio" />
+          <ScalarProperty Name="LIP_Nombre" ColumnName="LIP_Nombre" />
+          <ScalarProperty Name="LIP_IdListaPrecios" ColumnName="LIP_IdListaPrecios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrayectoPrecioMensajeria_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TrayectoPrecioMensajeria_VTAR">
+        <MappingFragment StoreEntitySet="TrayectoPrecioMensajeria_VTAR">
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="PrecioBase" ColumnName="PrecioBase" />
+          <ScalarProperty Name="LIP_IdListaPreciosBase" ColumnName="LIP_IdListaPreciosBase" />
+          <ScalarProperty Name="PTR_Porcentaje" ColumnName="PTR_Porcentaje" />
+          <ScalarProperty Name="PTR_ValorFijo" ColumnName="PTR_ValorFijo" />
+          <ScalarProperty Name="PTR_IdTrayectoSubTrayecto" ColumnName="PTR_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="PTR_IdPrecioTrayectoSubTrayect" ColumnName="PTR_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="TRS_IdTrayectoSubTrayecto" ColumnName="TRS_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TST_Descripcion" ColumnName="TST_Descripcion" />
+          <ScalarProperty Name="TST_IdTipoSubTrayecto" ColumnName="TST_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TTR_Descripcion" ColumnName="TTR_Descripcion" />
+          <ScalarProperty Name="TTR_IdTipoTrayecto" ColumnName="TTR_IdTipoTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTrayectoRangoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTrayectoRangoHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioTrayectoRangoHist_TAR">
+          <ScalarProperty Name="PPR_TipoCambio" ColumnName="PPR_TipoCambio" />
+          <ScalarProperty Name="PPR_CambiadoPor" ColumnName="PPR_CambiadoPor" />
+          <ScalarProperty Name="PPR_FechaCambio" ColumnName="PPR_FechaCambio" />
+          <ScalarProperty Name="PPR_CreadoPor" ColumnName="PPR_CreadoPor" />
+          <ScalarProperty Name="PPR_FechaGrabacion" ColumnName="PPR_FechaGrabacion" />
+          <ScalarProperty Name="PPR_Porcentaje" ColumnName="PPR_Porcentaje" />
+          <ScalarProperty Name="PPR_Valor" ColumnName="PPR_Valor" />
+          <ScalarProperty Name="PPR_Final" ColumnName="PPR_Final" />
+          <ScalarProperty Name="PPR_Inicial" ColumnName="PPR_Inicial" />
+          <ScalarProperty Name="PPR_IdPrecioTrayecto" ColumnName="PPR_IdPrecioTrayecto" />
+          <ScalarProperty Name="PRR_IdPrecioTrayectoRango" ColumnName="PRR_IdPrecioTrayectoRango" />
+          <ScalarProperty Name="PPR_IdAuditoria" ColumnName="PPR_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTrayectoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTrayectoHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioTrayectoHist_TAR">
+          <ScalarProperty Name="PTR_TipoCambio" ColumnName="PTR_TipoCambio" />
+          <ScalarProperty Name="PTR_CambiadoPor" ColumnName="PTR_CambiadoPor" />
+          <ScalarProperty Name="PTR_Porcentaje" ColumnName="PTR_Porcentaje" />
+          <ScalarProperty Name="PTR_FechaCambio" ColumnName="PTR_FechaCambio" />
+          <ScalarProperty Name="PTR_CreadoPor" ColumnName="PTR_CreadoPor" />
+          <ScalarProperty Name="PTR_FechaGrabacion" ColumnName="PTR_FechaGrabacion" />
+          <ScalarProperty Name="PTR_ValorFijo" ColumnName="PTR_ValorFijo" />
+          <ScalarProperty Name="PTR_IdTrayectoSubTrayecto" ColumnName="PTR_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTR_IdPrecioTrayectoSubTrayect" ColumnName="PTR_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="PTR_IdAuditoria" ColumnName="PTR_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParametrosTarifas_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ParametrosTarifas_TAR">
+        <MappingFragment StoreEntitySet="ParametrosTarifas_TAR">
+          <ScalarProperty Name="PAT_CreadoPor" ColumnName="PAT_CreadoPor" />
+          <ScalarProperty Name="PAT_FechaGrabacion" ColumnName="PAT_FechaGrabacion" />
+          <ScalarProperty Name="PAT_Descripcion" ColumnName="PAT_Descripcion" />
+          <ScalarProperty Name="PAT_ValorParametro" ColumnName="PAT_ValorParametro" />
+          <ScalarProperty Name="PAT_IdParametro" ColumnName="PAT_IdParametro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormasPago_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.FormasPago_TAR">
+        <MappingFragment StoreEntitySet="FormasPago_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="FOP_AplicaFacturacion" ColumnName="FOP_AplicaFacturacion" />
+          <ScalarProperty Name="FOP_CreadoPor" ColumnName="FOP_CreadoPor" />
+          <ScalarProperty Name="FOP_FechaGrabacion" ColumnName="FOP_FechaGrabacion" />
+          <ScalarProperty Name="FOP_AceptaMixto" ColumnName="FOP_AceptaMixto" />
+          <ScalarProperty Name="FOP_Descripcion" ColumnName="FOP_Descripcion" />
+          <ScalarProperty Name="FOP_IdFormaPago" ColumnName="FOP_IdFormaPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioInternacional_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioInternacional_TAR">
+        <MappingFragment StoreEntitySet="PrecioInternacional_TAR">
+          <ScalarProperty Name="PIN_CreadoPor" ColumnName="PIN_CreadoPor" />
+          <ScalarProperty Name="PIN_FechaGrabacion" ColumnName="PIN_FechaGrabacion" />
+          <ScalarProperty Name="PIN_Valor" ColumnName="PIN_Valor" />
+          <ScalarProperty Name="PIN_Peso" ColumnName="PIN_Peso" />
+          <ScalarProperty Name="PIN_IdTipoEmpaque" ColumnName="PIN_IdTipoEmpaque" />
+          <ScalarProperty Name="PIN_IdZona" ColumnName="PIN_IdZona" />
+          <ScalarProperty Name="PIN_IdListaPrecioServicio" ColumnName="PIN_IdListaPrecioServicio" />
+          <ScalarProperty Name="PIN_IdPrecioInternalcional" ColumnName="PIN_IdPrecioInternalcional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiempoEntrega_KOM">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TiempoEntrega_KOM">
+        <MappingFragment StoreEntitySet="TiempoEntrega_KOM">
+          <ScalarProperty Name="TEK_TiempoEntrega" ColumnName="TEK_TiempoEntrega" />
+          <ScalarProperty Name="TEK_Nombre" ColumnName="TEK_Nombre" />
+          <ScalarProperty Name="TEK_IdLocalidad" ColumnName="TEK_IdLocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEntrega_MEN">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoEntrega_MEN">
+        <MappingFragment StoreEntitySet="TipoEntrega_MEN">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="TIE_CreadoPor" ColumnName="TIE_CreadoPor" />
+          <ScalarProperty Name="TIE_FechaGrabacion" ColumnName="TIE_FechaGrabacion" />
+          <ScalarProperty Name="TIE_Descripcion" ColumnName="TIE_Descripcion" />
+          <ScalarProperty Name="TIE_IdTipoEntrega" ColumnName="TIE_IdTipoEntrega" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioServicioExcepcionTrayectoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioServicioExcepcionTrayectoHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioServicioExcepcionTrayectoHist_TAR">
+          <ScalarProperty Name="SET_TipoCambio" ColumnName="SET_TipoCambio" />
+          <ScalarProperty Name="SET_CambiadoPor" ColumnName="SET_CambiadoPor" />
+          <ScalarProperty Name="SET_FechaCambio" ColumnName="SET_FechaCambio" />
+          <ScalarProperty Name="SET_CreadoPor" ColumnName="SET_CreadoPor" />
+          <ScalarProperty Name="SET_FechaGrabacion" ColumnName="SET_FechaGrabacion" />
+          <ScalarProperty Name="SET_EsDestinoTodoElPais" ColumnName="SET_EsDestinoTodoElPais" />
+          <ScalarProperty Name="SET_EsOrigenTodoElPais" ColumnName="SET_EsOrigenTodoElPais" />
+          <ScalarProperty Name="SET_ValorKiloAdicional" ColumnName="SET_ValorKiloAdicional" />
+          <ScalarProperty Name="SET_ValorKiloInicial" ColumnName="SET_ValorKiloInicial" />
+          <ScalarProperty Name="SET_IdLocalidadDestino" ColumnName="SET_IdLocalidadDestino" />
+          <ScalarProperty Name="SET_IdLocalidadOrigen" ColumnName="SET_IdLocalidadOrigen" />
+          <ScalarProperty Name="SET_IdListaPrecioServicio" ColumnName="SET_IdListaPrecioServicio" />
+          <ScalarProperty Name="SET_IdPrecioServicioExcepionTrayecto" ColumnName="SET_IdPrecioServicioExcepionTrayecto" />
+          <ScalarProperty Name="SET_IdAuditoria" ColumnName="SET_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPrecioTraySubTraMensajeria_TAR" FunctionName="DESARROLLOModel.Store.paObtenerPrecioTraySubTraMensajeria_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerPrecioTraySubTraMensajeriaRS_TAR">
+          <ScalarProperty Name="TTR_IdTipoTrayecto" ColumnName="TTR_IdTipoTrayecto" />
+          <ScalarProperty Name="TTR_Descripcion" ColumnName="TTR_Descripcion" />
+          <ScalarProperty Name="TST_IdTipoSubTrayecto" ColumnName="TST_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TST_Descripcion" ColumnName="TST_Descripcion" />
+          <ScalarProperty Name="TRS_IdTrayectoSubTrayecto" ColumnName="TRS_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTR_IdPrecioTrayectoSubTrayect" ColumnName="PTR_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTR_IdTrayectoSubTrayecto" ColumnName="PTR_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTR_ValorFijo" ColumnName="PTR_ValorFijo" />
+          <ScalarProperty Name="PTR_Porcentaje" ColumnName="PTR_Porcentaje" />
+          <ScalarProperty Name="LIP_IdListaPreciosBase" ColumnName="LIP_IdListaPreciosBase" />
+          <ScalarProperty Name="PrecioBase" ColumnName="PrecioBase" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="PrecioServicioExcepcionTrayecto_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioServicioExcepcionTrayecto_VTAR">
+        <MappingFragment StoreEntitySet="PrecioServicioExcepcionTrayecto_VTAR">
+          <ScalarProperty Name="NombreLocalidadDestino" ColumnName="NombreLocalidadDestino" />
+          <ScalarProperty Name="NombreLocalidadOrigen" ColumnName="NombreLocalidadOrigen" />
+          <ScalarProperty Name="SET_CreadoPor" ColumnName="SET_CreadoPor" />
+          <ScalarProperty Name="SET_FechaGrabacion" ColumnName="SET_FechaGrabacion" />
+          <ScalarProperty Name="SET_EsDestinoTodoElPais" ColumnName="SET_EsDestinoTodoElPais" />
+          <ScalarProperty Name="SET_EsOrigenTodoElPais" ColumnName="SET_EsOrigenTodoElPais" />
+          <ScalarProperty Name="SET_ValorKiloAdicional" ColumnName="SET_ValorKiloAdicional" />
+          <ScalarProperty Name="SET_ValorKiloInicial" ColumnName="SET_ValorKiloInicial" />
+          <ScalarProperty Name="SET_IdLocalidadDestino" ColumnName="SET_IdLocalidadDestino" />
+          <ScalarProperty Name="SET_IdLocalidadOrigen" ColumnName="SET_IdLocalidadOrigen" />
+          <ScalarProperty Name="SET_IdListaPrecioServicio" ColumnName="SET_IdListaPrecioServicio" />
+          <ScalarProperty Name="SET_IdPrecioServicioExcepionTrayecto" ColumnName="SET_IdPrecioServicioExcepionTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerTrayectSubTrayectValorAdi_TAR" FunctionName="DESARROLLOModel.Store.paObtenerTrayectSubTrayectValorAdi_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerTrayectSubTrayectValorAdiRS_TAR">
+          <ScalarProperty Name="KiloAdicional" ColumnName="KiloAdicional" />
+          <ScalarProperty Name="SubTrayecto" ColumnName="SubTrayecto" />
+          <ScalarProperty Name="Trayecto" ColumnName="Trayecto" />
+          <ScalarProperty Name="ServicioRetorno" ColumnName="ServicioRetorno" />
+          <ScalarProperty Name="PTV_IdTipoValorAdicional" ColumnName="PTV_IdTipoValorAdicional" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+          <ScalarProperty Name="IdPrecioTrayecto" ColumnName="IdPrecioTrayecto" />
+          <ScalarProperty Name="TRS_IdTrayectoSubTrayecto" ColumnName="TRS_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="TTR_IdTipoTrayecto" ColumnName="TTR_IdTipoTrayecto" />
+          <ScalarProperty Name="TST_IdTipoSubTrayecto" ColumnName="TST_IdTipoSubTrayecto" />
+          <ScalarProperty Name="PTV_IdPrecioTrayectoSubTrayect" ColumnName="PTV_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="PTR_IdTrayectoSubTrayecto" ColumnName="PTR_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTR_Porcentaje" ColumnName="PTR_Porcentaje" />
+          <ScalarProperty Name="ValorMensajeriaBase" ColumnName="ValorMensajeriaBase" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="PrecioServicioExcepcionTrayecto_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioServicioExcepcionTrayecto_TAR">
+        <MappingFragment StoreEntitySet="PrecioServicioExcepcionTrayecto_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="SET_CreadoPor" ColumnName="SET_CreadoPor" />
+          <ScalarProperty Name="SET_FechaGrabacion" ColumnName="SET_FechaGrabacion" />
+          <ScalarProperty Name="SET_EsDestinoTodoElPais" ColumnName="SET_EsDestinoTodoElPais" />
+          <ScalarProperty Name="SET_EsOrigenTodoElPais" ColumnName="SET_EsOrigenTodoElPais" />
+          <ScalarProperty Name="SET_ValorKiloAdicional" ColumnName="SET_ValorKiloAdicional" />
+          <ScalarProperty Name="SET_ValorKiloInicial" ColumnName="SET_ValorKiloInicial" />
+          <ScalarProperty Name="SET_IdLocalidadDestino" ColumnName="SET_IdLocalidadDestino" />
+          <ScalarProperty Name="SET_IdLocalidadOrigen" ColumnName="SET_IdLocalidadOrigen" />
+          <ScalarProperty Name="SET_IdListaPrecioServicio" ColumnName="SET_IdListaPrecioServicio" />
+          <ScalarProperty Name="SET_IdPrecioServicioExcepionTrayecto" ColumnName="SET_IdPrecioServicioExcepionTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioSvExcepTrayRango_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioSvExcepTrayRango_TAR">
+        <MappingFragment StoreEntitySet="PrecioSvExcepTrayRango_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="PTR_CreadoPor" ColumnName="PTR_CreadoPor" />
+          <ScalarProperty Name="PTR_FechaGrabacion" ColumnName="PTR_FechaGrabacion" />
+          <ScalarProperty Name="PTR_Final" ColumnName="PTR_Final" />
+          <ScalarProperty Name="PTR_Inicial" ColumnName="PTR_Inicial" />
+          <ScalarProperty Name="PTR_IdPrecioSvcExcTrayecto" ColumnName="PTR_IdPrecioSvcExcTrayecto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paActualizarPreciosTrayectosBaseMensajeria_TAR" FunctionName="DESARROLLOModel.Store.paActualizarPreciosTrayectosBaseMensajeria_TAR" />
+    <FunctionImportMapping FunctionImportName="paAdicionarTraySubTraySvcBaseMen_TAR" FunctionName="DESARROLLOModel.Store.paAdicionarTraySubTraySvcBaseMen_TAR" />
+    <FunctionImportMapping FunctionImportName="paEliminarServicioListaPrecios_TAR" FunctionName="DESARROLLOModel.Store.paEliminarServicioListaPrecios_TAR" />
+    <FunctionImportMapping FunctionImportName="paEliminarTraySubTraySvcBaseMen_TAR" FunctionName="DESARROLLOModel.Store.paEliminarTraySubTraySvcBaseMen_TAR" />
+    <FunctionImportMapping FunctionImportName="paGuardarListaPrecios_TAR" FunctionName="DESARROLLOModel.Store.paGuardarListaPrecios_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paGuardarListaPreciosRS_TAR">
+          <ScalarProperty Name="ListaPrecios" ColumnName="ListaPrecios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paGuardarListaPreciosServicioUNegMensajeria_TAR" FunctionName="DESARROLLOModel.Store.paGuardarListaPreciosServicioUNegMensajeria_TAR" />
+    <FunctionImportMapping FunctionImportName="paObtenerPreTraSubValAdi_TAR" FunctionName="DESARROLLOModel.Store.paObtenerPreTraSubValAdi_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerPreTraSubValAdiRS_TAR">
+          <ScalarProperty Name="PTV_IdPrecioTrayectoSubTrayect" ColumnName="PTV_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="PTV_IdTipoValorAdicional" ColumnName="PTV_IdTipoValorAdicional" />
+          <ScalarProperty Name="PTV_Valor" ColumnName="PTV_Valor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPrecioCtrCorrespondencia_TAR" FunctionName="DESARROLLOModel.Store.paPrecioCtrCorrespondencia_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paPrecioCtrCorrespondenciaRS_TAR">
+          <ScalarProperty Name="SCC_IdServCentroCorrespondencia" ColumnName="SCC_IdServCentroCorrespondencia" />
+          <ScalarProperty Name="SCC_IdServicio" ColumnName="SCC_IdServicio" />
+          <ScalarProperty Name="SCC_Concepto" ColumnName="SCC_Concepto" />
+          <ScalarProperty Name="SCC_Descripcion" ColumnName="SCC_Descripcion" />
+          <ScalarProperty Name="POP_IdPrecioServiCentroCorresp" ColumnName="POP_IdPrecioServiCentroCorresp" />
+          <ScalarProperty Name="POP_IdListaPrecioServicio" ColumnName="POP_IdListaPrecioServicio" />
+          <ScalarProperty Name="POP_Valor" ColumnName="POP_Valor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPrecioExTrayecto_TAR" FunctionName="DESARROLLOModel.Store.paPrecioExTrayecto_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paPrecioExTrayectoRS_TAR">
+          <ScalarProperty Name="TRA_IdTrayecto" ColumnName="TRA_IdTrayecto" />
+          <ScalarProperty Name="TRA_IdLocalidadOrigen" ColumnName="TRA_IdLocalidadOrigen" />
+          <ScalarProperty Name="TRA_IdLocalidadDestino" ColumnName="TRA_IdLocalidadDestino" />
+          <ScalarProperty Name="TRA_IdTrayectoSubTrayecto" ColumnName="TRA_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TRA_FechaGrabacion" ColumnName="TRA_FechaGrabacion" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="PTR_ValorFijo" ColumnName="PTR_ValorFijo" />
+          <ScalarProperty Name="PTR_Porcentaje" ColumnName="PTR_Porcentaje" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPrecioInternacional_TAR" FunctionName="DESARROLLOModel.Store.paPrecioInternacional_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paPrecioInternacionalRS_TAR">
+          <ScalarProperty Name="PIN_IdPrecioInternalcional" ColumnName="PIN_IdPrecioInternalcional" />
+          <ScalarProperty Name="PIN_IdListaPrecioServicio" ColumnName="PIN_IdListaPrecioServicio" />
+          <ScalarProperty Name="PIN_IdTipoEmpaque" ColumnName="PIN_IdTipoEmpaque" />
+          <ScalarProperty Name="PIN_Peso" ColumnName="PIN_Peso" />
+          <ScalarProperty Name="PIN_Valor" ColumnName="PIN_Valor" />
+          <ScalarProperty Name="LZO_IdLocalidad" ColumnName="LZO_IdLocalidad" />
+          <ScalarProperty Name="PIN_IdZona" ColumnName="PIN_IdZona" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPrecioRango_TAR" FunctionName="DESARROLLOModel.Store.paPrecioRango_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paPrecioRangoRS_TAR">
+          <ScalarProperty Name="PRA_IdPrecioRango" ColumnName="PRA_IdPrecioRango" />
+          <ScalarProperty Name="PRA_IdListaPrecioServicio" ColumnName="PRA_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRA_Inicial" ColumnName="PRA_Inicial" />
+          <ScalarProperty Name="PRA_Final" ColumnName="PRA_Final" />
+          <ScalarProperty Name="PRA_Valor" ColumnName="PRA_Valor" />
+          <ScalarProperty Name="PRA_Porcentaje" ColumnName="PRA_Porcentaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPrecioRapiPromo_TAR" FunctionName="DESARROLLOModel.Store.paPrecioRapiPromo_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paPrecioRapiPromoRS_TAR">
+          <ScalarProperty Name="PRA_IdPrecioRango" ColumnName="PRA_IdPrecioRango" />
+          <ScalarProperty Name="PRA_IdListaPrecioServicio" ColumnName="PRA_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRA_Inicial" ColumnName="PRA_Inicial" />
+          <ScalarProperty Name="PRA_Final" ColumnName="PRA_Final" />
+          <ScalarProperty Name="PRA_Valor" ColumnName="PRA_Valor" />
+          <ScalarProperty Name="PRA_Porcentaje" ColumnName="PRA_Porcentaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPrecioTramite_TAR" FunctionName="DESARROLLOModel.Store.paPrecioTramite_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paPrecioTramiteRS_TAR">
+          <ScalarProperty Name="PRT_IdPrecioTramite" ColumnName="PRT_IdPrecioTramite" />
+          <ScalarProperty Name="PRT_IdListaPrecioServicio" ColumnName="PRT_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRT_Valor" ColumnName="PRT_Valor" />
+          <ScalarProperty Name="PRT_ValorAdicionalLocal" ColumnName="PRT_ValorAdicionalLocal" />
+          <ScalarProperty Name="PRT_ValorAdicionalPorDocumento" ColumnName="PRT_ValorAdicionalPorDocumento" />
+          <ScalarProperty Name="TRA_IdTramite" ColumnName="TRA_IdTramite" />
+          <ScalarProperty Name="TRA_IdServicio" ColumnName="TRA_IdServicio" />
+          <ScalarProperty Name="TRA_IdTipoTramite" ColumnName="TRA_IdTipoTramite" />
+          <ScalarProperty Name="TRA_Nombre" ColumnName="TRA_Nombre" />
+          <ScalarProperty Name="TRI_IdImpuesto" ColumnName="TRI_IdImpuesto" />
+          <ScalarProperty Name="IMP_IdImpuesto" ColumnName="IMP_IdImpuesto" />
+          <ScalarProperty Name="IMP_Descripcion" ColumnName="IMP_Descripcion" />
+          <ScalarProperty Name="IMP_Valor" ColumnName="IMP_Valor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPrecioTrayecto_TAR" FunctionName="DESARROLLOModel.Store.paPrecioTrayecto_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paPrecioTrayectoRS_TAR">
+          <ScalarProperty Name="TRA_IdTrayecto" ColumnName="TRA_IdTrayecto" />
+          <ScalarProperty Name="TRA_IdLocalidadOrigen" ColumnName="TRA_IdLocalidadOrigen" />
+          <ScalarProperty Name="TRA_IdTrayectoSubTrayecto" ColumnName="TRA_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TRA_IdLocalidadDestino" ColumnName="TRA_IdLocalidadDestino" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="STR_IdTrayecto" ColumnName="STR_IdTrayecto" />
+          <ScalarProperty Name="STR_IdServicio" ColumnName="STR_IdServicio" />
+          <ScalarProperty Name="PTR_IdTrayectoSubTrayecto" ColumnName="PTR_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="PTR_ValorFijo" ColumnName="PTR_ValorFijo" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPrecioTrayectoRango_TAR" FunctionName="DESARROLLOModel.Store.paPrecioTrayectoRango_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paPrecioTrayectoRango_TAR_Result">
+          <ScalarProperty Name="TRA_IdLocalidadOrigen" ColumnName="TRA_IdLocalidadOrigen" />
+          <ScalarProperty Name="TRA_IdTrayectoSubTrayecto" ColumnName="TRA_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TRA_IdLocalidadDestino" ColumnName="TRA_IdLocalidadDestino" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+          <ScalarProperty Name="STR_IdTrayecto" ColumnName="STR_IdTrayecto" />
+          <ScalarProperty Name="STR_IdServicio" ColumnName="STR_IdServicio" />
+          <ScalarProperty Name="PTR_ValorFijo" ColumnName="PTR_ValorFijo" />
+          <ScalarProperty Name="PTR_IdListaPrecioServicio" ColumnName="PTR_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTR_IdPrecioTrayectoSubTrayect" ColumnName="PTR_IdPrecioTrayectoSubTrayect" />
+          <ScalarProperty Name="PRR_IdPrecioTrayectoRango" ColumnName="PRR_IdPrecioTrayectoRango" />
+          <ScalarProperty Name="PPR_Inicial" ColumnName="PPR_Inicial" />
+          <ScalarProperty Name="PPR_Final" ColumnName="PPR_Final" />
+          <ScalarProperty Name="PPR_Valor" ColumnName="PPR_Valor" />
+          <ScalarProperty Name="PPR_Porcentaje" ColumnName="PPR_Porcentaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paValidarExTrayectoCliente_TAR" FunctionName="DESARROLLOModel.Store.paValidarExTrayectoCliente_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paValidarExTrayectoClienteRS_TAR">
+          <ScalarProperty Name="LPS_PrimaSeguros" ColumnName="LPS_PrimaSeguros" />
+          <ScalarProperty Name="LPS_IdListaPrecioServicio" ColumnName="LPS_IdListaPrecioServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="SET_IdPrecioServicioExcepionTrayecto" ColumnName="SET_IdPrecioServicioExcepionTrayecto" />
+          <ScalarProperty Name="SET_IdLocalidadOrigen" ColumnName="SET_IdLocalidadOrigen" />
+          <ScalarProperty Name="SET_IdLocalidadDestino" ColumnName="SET_IdLocalidadDestino" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paValidarServicioTrayectoDestino_TAR" FunctionName="DESARROLLOModel.Store.paValidarServicioTrayectoDestino_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paValidarServicioTrayectoDestinoRS_TAR">
+          <ScalarProperty Name="TRA_IdTrayecto" ColumnName="TRA_IdTrayecto" />
+          <ScalarProperty Name="STR_IdTrayecto" ColumnName="STR_IdTrayecto" />
+          <ScalarProperty Name="STR_IdServicio" ColumnName="STR_IdServicio" />
+          <ScalarProperty Name="STR_TiempoEntrega" ColumnName="STR_TiempoEntrega" />
+          <ScalarProperty Name="TRA_IdLocalidadOrigen" ColumnName="TRA_IdLocalidadOrigen" />
+          <ScalarProperty Name="TRA_IdLocalidadDestino" ColumnName="TRA_IdLocalidadDestino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paValidarServicioTrayectoOrigen_TAR" FunctionName="DESARROLLOModel.Store.paValidarServicioTrayectoOrigen_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paValidarServicioTrayectoOrigenRS_TAR">
+          <ScalarProperty Name="STR_IdTrayecto" ColumnName="STR_IdTrayecto" />
+          <ScalarProperty Name="STR_IdServicio" ColumnName="STR_IdServicio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paValidarTrayectoCliente_TAR" FunctionName="DESARROLLOModel.Store.paValidarTrayectoCliente_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paValidarTrayectoClienteRS_TAR">
+          <ScalarProperty Name="LPS_PrimaSeguros" ColumnName="LPS_PrimaSeguros" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+          <ScalarProperty Name="STR_IdServicio" ColumnName="STR_IdServicio" />
+          <ScalarProperty Name="STR_IdTrayecto" ColumnName="STR_IdTrayecto" />
+          <ScalarProperty Name="STR_TiempoEntrega" ColumnName="STR_TiempoEntrega" />
+          <ScalarProperty Name="TRA_IdLocalidadOrigen" ColumnName="TRA_IdLocalidadOrigen" />
+          <ScalarProperty Name="TRA_IdLocalidadDestino" ColumnName="TRA_IdLocalidadDestino" />
+          <ScalarProperty Name="TRA_IdTrayectoSubTrayecto" ColumnName="TRA_IdTrayectoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoSubTrayecto" ColumnName="TRS_IdTipoSubTrayecto" />
+          <ScalarProperty Name="TRS_IdTipoTrayecto" ColumnName="TRS_IdTipoTrayecto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPrecioRangosClienteContado_CLI" FunctionName="DESARROLLOModel.Store.paObtenerPrecioRangosClienteContado_CLI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerPrecioRangosClienteContadoRS_CLI">
+          <ScalarProperty Name="CON_IdContrato" ColumnName="CON_IdContrato" />
+          <ScalarProperty Name="CON_NumeroContrato" ColumnName="CON_NumeroContrato" />
+          <ScalarProperty Name="CON_NombreContrato" ColumnName="CON_NombreContrato" />
+          <ScalarProperty Name="LIP_IdListaPrecios" ColumnName="LIP_IdListaPrecios" />
+          <ScalarProperty Name="LIP_Nombre" ColumnName="LIP_Nombre" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="PRA_IdListaPrecioServicio" ColumnName="PRA_IdListaPrecioServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecioServicio" ColumnName="LPS_IdListaPrecioServicio" />
+          <ScalarProperty Name="PRA_Inicial" ColumnName="PRA_Inicial" />
+          <ScalarProperty Name="PRA_Final" ColumnName="PRA_Final" />
+          <ScalarProperty Name="PRA_Valor" ColumnName="PRA_Valor" />
+          <ScalarProperty Name="PRA_Porcentaje" ColumnName="PRA_Porcentaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerExTrayecto_TAR" FunctionName="DESARROLLOModel.Store.paObtenerExTrayecto_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerExTrayecto_TAR_Result">
+          <ScalarProperty Name="SET_IdPrecioServicioExcepionTrayecto" ColumnName="SET_IdPrecioServicioExcepionTrayecto" />
+          <ScalarProperty Name="SET_IdListaPrecioServicio" ColumnName="SET_IdListaPrecioServicio" />
+          <ScalarProperty Name="SET_IdLocalidadOrigen" ColumnName="SET_IdLocalidadOrigen" />
+          <ScalarProperty Name="SET_IdLocalidadDestino" ColumnName="SET_IdLocalidadDestino" />
+          <ScalarProperty Name="SET_FechaGrabacion" ColumnName="SET_FechaGrabacion" />
+          <ScalarProperty Name="SET_CreadoPor" ColumnName="SET_CreadoPor" />
+          <ScalarProperty Name="SET_ValorKiloInicial" ColumnName="SET_ValorKiloInicial" />
+          <ScalarProperty Name="SET_ValorKiloAdicional" ColumnName="SET_ValorKiloAdicional" />
+          <ScalarProperty Name="SET_EsOrigenTodoElPais" ColumnName="SET_EsOrigenTodoElPais" />
+          <ScalarProperty Name="SET_EsDestinoTodoElPais" ColumnName="SET_EsDestinoTodoElPais" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="LPS_PrimaSeguros" ColumnName="LPS_PrimaSeguros" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="PTR_Inicial" ColumnName="PTR_Inicial" />
+          <ScalarProperty Name="PTR_Final" ColumnName="PTR_Final" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="PrecioSvExcTrayRangoHist_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioSvExcTrayRangoHist_TAR">
+        <MappingFragment StoreEntitySet="PrecioSvExcTrayRangoHist_TAR">
+          <ScalarProperty Name="PTR_TipoCambio" ColumnName="PTR_TipoCambio" />
+          <ScalarProperty Name="PTR_CambiadoPor" ColumnName="PTR_CambiadoPor" />
+          <ScalarProperty Name="PTR_FechaCambio" ColumnName="PTR_FechaCambio" />
+          <ScalarProperty Name="PTR_CreadoPor" ColumnName="PTR_CreadoPor" />
+          <ScalarProperty Name="PTR_FechaGrabacion" ColumnName="PTR_FechaGrabacion" />
+          <ScalarProperty Name="PTR_Final" ColumnName="PTR_Final" />
+          <ScalarProperty Name="PTR_Inicial" ColumnName="PTR_Inicial" />
+          <ScalarProperty Name="PTR_IdPrecioSvcExcTrayecto" ColumnName="PTR_IdPrecioSvcExcTrayecto" />
+          <ScalarProperty Name="PTR_IdPrecioExcepcionRango" ColumnName="PTR_IdPrecioExcepcionRango" />
+          <ScalarProperty Name="SET_IdAuditoria" ColumnName="SET_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicio_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Servicio_TAR">
+        <MappingFragment StoreEntitySet="Servicio_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="SER_CodigoPrimaERP" ColumnName="SER_CodigoPrimaERP" />
+          <ScalarProperty Name="SER_CreadoPor" ColumnName="SER_CreadoPor" />
+          <ScalarProperty Name="SER_FechaGrabacion" ColumnName="SER_FechaGrabacion" />
+          <ScalarProperty Name="SER_Estado" ColumnName="SER_Estado" />
+          <ScalarProperty Name="SER_CodigoERP" ColumnName="SER_CodigoERP" />
+          <ScalarProperty Name="SER_CodigoIntMensajero" ColumnName="SER_CodigoIntMensajero" />
+          <ScalarProperty Name="SER_IdConceptoCaja" ColumnName="SER_IdConceptoCaja" />
+          <ScalarProperty Name="SER_AplicaRetenciones" ColumnName="SER_AplicaRetenciones" />
+          <ScalarProperty Name="SER_IdentificadorInterno" ColumnName="SER_IdentificadorInterno" />
+          <ScalarProperty Name="SER_HoraFinVenta" ColumnName="SER_HoraFinVenta" />
+          <ScalarProperty Name="SER_HoraInicioVenta" ColumnName="SER_HoraInicioVenta" />
+          <ScalarProperty Name="SER_IdCuentaExterna" ColumnName="SER_IdCuentaExterna" />
+          <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+          <ScalarProperty Name="SER_Descripcion" ColumnName="SER_Descripcion" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SER_IdServicio" ColumnName="SER_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTipoEntRango_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTipoEntRango_TAR">
+        <MappingFragment StoreEntitySet="PrecioTipoEntRango_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="PTR_CreadoPor" ColumnName="PTR_CreadoPor" />
+          <ScalarProperty Name="PTR_FechaGrabacion" ColumnName="PTR_FechaGrabacion" />
+          <ScalarProperty Name="PTR_Final" ColumnName="PTR_Final" />
+          <ScalarProperty Name="PTR_Inicial" ColumnName="PTR_Inicial" />
+          <ScalarProperty Name="PTR_IdPrecioTipoEntrega" ColumnName="PTR_IdPrecioTipoEntrega" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioTipoEntrega_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioTipoEntrega_TAR">
+        <MappingFragment StoreEntitySet="PrecioTipoEntrega_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="PTE_FechaGrabacion" ColumnName="PTE_FechaGrabacion" />
+          <ScalarProperty Name="PTE_CreadoPor" ColumnName="PTE_CreadoPor" />
+          <ScalarProperty Name="PTE_ValorKiloAdicional" ColumnName="PTE_ValorKiloAdicional" />
+          <ScalarProperty Name="PTE_ValorKiloInicial" ColumnName="PTE_ValorKiloInicial" />
+          <ScalarProperty Name="PTE_IdListaPrecioServicio" ColumnName="PTE_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTE_IdTipoEntrega" ColumnName="PTE_IdTipoEntrega" />
+          <ScalarProperty Name="PTE_IdPrecioTipoEntrega" ColumnName="PTE_IdPrecioTipoEntrega" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecioServicioTipoEntrega_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.PrecioServicioTipoEntrega_VTAR">
+        <MappingFragment StoreEntitySet="PrecioServicioTipoEntrega_VTAR">
+          <ScalarProperty Name="PTE_ValorKiloAdicional" ColumnName="PTE_ValorKiloAdicional" />
+          <ScalarProperty Name="PTE_ValorKiloInicial" ColumnName="PTE_ValorKiloInicial" />
+          <ScalarProperty Name="PTE_FechaGrabacion" ColumnName="PTE_FechaGrabacion" />
+          <ScalarProperty Name="PTE_CreadoPor" ColumnName="PTE_CreadoPor" />
+          <ScalarProperty Name="PTE_IdListaPrecioServicio" ColumnName="PTE_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTE_IdTipoEntrega" ColumnName="PTE_IdTipoEntrega" />
+          <ScalarProperty Name="PTE_IdPrecioTipoEntrega" ColumnName="PTE_IdPrecioTipoEntrega" />
+          <ScalarProperty Name="TIE_Descripcion" ColumnName="TIE_Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPrecioTipoEntregaListaPrecios_TAR" FunctionName="DESARROLLOModel.Store.paObtenerPrecioTipoEntregaListaPrecios_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerPrecioTipoEntregaListaPrecios_TAR_Result">
+          <ScalarProperty Name="LPS_IdListaPrecioServicio" ColumnName="LPS_IdListaPrecioServicio" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="LPS_PrimaSeguros" ColumnName="LPS_PrimaSeguros" />
+          <ScalarProperty Name="LPS_Estado" ColumnName="LPS_Estado" />
+          <ScalarProperty Name="PTE_IdPrecioTipoEntrega" ColumnName="PTE_IdPrecioTipoEntrega" />
+          <ScalarProperty Name="PTE_IdTipoEntrega" ColumnName="PTE_IdTipoEntrega" />
+          <ScalarProperty Name="PTE_IdListaPrecioServicio" ColumnName="PTE_IdListaPrecioServicio" />
+          <ScalarProperty Name="PTE_ValorKiloInicial" ColumnName="PTE_ValorKiloInicial" />
+          <ScalarProperty Name="PTE_ValorKiloAdicional" ColumnName="PTE_ValorKiloAdicional" />
+          <ScalarProperty Name="PTR_Inicial" ColumnName="PTR_Inicial" />
+          <ScalarProperty Name="PTR_Final" ColumnName="PTR_Final" />
+          <ScalarProperty Name="PTR_IdPrecioTipoEntrega" ColumnName="PTR_IdPrecioTipoEntrega" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ListaPrecioServicio_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ListaPrecioServicio_TAR">
+        <MappingFragment StoreEntitySet="ListaPrecioServicio_TAR">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="LPS_IgnorarPrima" ColumnName="LPS_IgnorarPrima" />
+          <ScalarProperty Name="LPS_Estado" ColumnName="LPS_Estado" />
+          <ScalarProperty Name="LPS_CreadoPor" ColumnName="LPS_CreadoPor" />
+          <ScalarProperty Name="LPS_FechaGrabacion" ColumnName="LPS_FechaGrabacion" />
+          <ScalarProperty Name="LPS_PrimaSeguros" ColumnName="LPS_PrimaSeguros" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecioServicio" ColumnName="LPS_IdListaPrecioServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPrimaSeguro_TAR" FunctionName="DESARROLLOModel.Store.paObtenerPrimaSeguro_TAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerPrimaSeguro_TAR_Result">
+          <ScalarProperty Name="LPS_PrimaSeguros" ColumnName="LPS_PrimaSeguros" />
+          <ScalarProperty Name="LPS_IdServicio" ColumnName="LPS_IdServicio" />
+          <ScalarProperty Name="LPS_IdListaPrecios" ColumnName="LPS_IdListaPrecios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ContabilizacionServicioFormaPago_TAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ContabilizacionServicioFormaPago_TAR">
+        <MappingFragment StoreEntitySet="ContabilizacionServicioFormaPago_TAR">
+          <ScalarProperty Name="CSFP_IdFormaPago" ColumnName="CSFP_IdFormaPago" />
+          <ScalarProperty Name="CSFP_IdTipoServicio" ColumnName="CSFP_IdTipoServicio" />
+          <ScalarProperty Name="CSFP_FechaCreacion" ColumnName="CSFP_FechaCreacion" />
+          <ScalarProperty Name="CSFP_CreadoPor" ColumnName="CSFP_CreadoPor" />
+          <ScalarProperty Name="CSFP_EfectivasTipoCreditoCredito" ColumnName="CSFP_EfectivasTipoCreditoCredito" />
+          <ScalarProperty Name="CSFP_EfectivasTipoCreditoDebito" ColumnName="CSFP_EfectivasTipoCreditoDebito" />
+          <ScalarProperty Name="CSFP_EfectivasTipoDebitoCredito" ColumnName="CSFP_EfectivasTipoDebitoCredito" />
+          <ScalarProperty Name="CSFP_EfectivasTipoDebidoDebito" ColumnName="CSFP_EfectivasTipoDebidoDebito" />
+          <ScalarProperty Name="CSFP_VentasCredito" ColumnName="CSFP_VentasCredito" />
+          <ScalarProperty Name="CSFP_VentasDebito" ColumnName="CSFP_VentasDebito" />
+          <ScalarProperty Name="CSFP_IdContabilidadServicioPago" ColumnName="CSFP_IdContabilidadServicioPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContabilizacionServicioFormaPago_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ContabilizacionServicioFormaPago_VTAR">
+        <MappingFragment StoreEntitySet="ContabilizacionServicioFormaPago_VTAR">
+          <ScalarProperty Name="CSFP_IdContabilidadServicioPago" ColumnName="CSFP_IdContabilidadServicioPago" />
+          <ScalarProperty Name="CSFP_EfectivasTipoCreditoCredito" ColumnName="CSFP_EfectivasTipoCreditoCredito" />
+          <ScalarProperty Name="CSFP_EfectivasTipoCreditoDebito" ColumnName="CSFP_EfectivasTipoCreditoDebito" />
+          <ScalarProperty Name="CSFP_EfectivasTipoDebitoCredito" ColumnName="CSFP_EfectivasTipoDebitoCredito" />
+          <ScalarProperty Name="CSFP_EfectivasTipoDebidoDebito" ColumnName="CSFP_EfectivasTipoDebidoDebito" />
+          <ScalarProperty Name="CSFP_VentasCredito" ColumnName="CSFP_VentasCredito" />
+          <ScalarProperty Name="CSFP_VentasDebito" ColumnName="CSFP_VentasDebito" />
+          <ScalarProperty Name="FOP_Descripcion" ColumnName="FOP_Descripcion" />
+          <ScalarProperty Name="FOP_IdFormaPago" ColumnName="FOP_IdFormaPago" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SER_IdServicio" ColumnName="SER_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormasPagoServicio_VTAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.FormasPagoServicio_VTAR">
+        <MappingFragment StoreEntitySet="FormasPagoServicio_VTAR">
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="FOP_AceptaMixto" ColumnName="FOP_AceptaMixto" />
+          <ScalarProperty Name="FOP_Descripcion" ColumnName="FOP_Descripcion" />
+          <ScalarProperty Name="SFP_IdFormaPago" ColumnName="SFP_IdFormaPago" />
+          <ScalarProperty Name="SFP_IdServicio" ColumnName="SFP_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

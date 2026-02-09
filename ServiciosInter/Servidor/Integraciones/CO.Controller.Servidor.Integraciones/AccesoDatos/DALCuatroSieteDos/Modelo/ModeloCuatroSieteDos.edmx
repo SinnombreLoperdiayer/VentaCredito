@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloCuatroSieteDosNS.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModeloCuatroSieteDosNSStoreContainer">
+          <EntitySet Name="TransaccionesAliados472" EntityType="ModeloCuatroSieteDosNS.Store.TransaccionesAliados472" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="TransaccionesAliados472">
+          <Key>
+            <PropertyRef Name="IdTransaccionesAliados" />
+          </Key>
+          <Property Name="IdTransaccionesAliados" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NumeroFactura" Type="nvarchar" MaxLength="50" />
+          <Property Name="PeriodoReportado" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodigoOficinaAdmisión" Type="nvarchar" MaxLength="50" />
+          <Property Name="FechaAdmisión" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdentificacionImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrimerNombreImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="SegundoNombreImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrimerApellidoImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="SegundoApellidoImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="CiudadImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="DireccionImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="TelefonoImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="CelularImpositor" Type="nvarchar" MaxLength="50" />
+          <Property Name="MontoOperación" Type="nvarchar" MaxLength="50" />
+          <Property Name="PorteComision" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodigoOficinaPago" Type="nvarchar" MaxLength="50" />
+          <Property Name="Estado" Type="nvarchar" MaxLength="50" />
+          <Property Name="IdentificacionDestinatario" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrimerNombreDestino" Type="nvarchar" MaxLength="50" />
+          <Property Name="SegundoNombreDestino" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrimerApellidoDestino" Type="nvarchar" MaxLength="50" />
+          <Property Name="SegundoApellidoDestino" Type="nvarchar" MaxLength="50" />
+          <Property Name="CiudadDestino" Type="nvarchar" MaxLength="50" />
+          <Property Name="DireccionDestino" Type="nvarchar" MaxLength="50" />
+          <Property Name="TelefonoDestino" Type="nvarchar" MaxLength="50" />
+          <Property Name="CelularDestino" Type="nvarchar" MaxLength="50" />
+          <Property Name="FechaPago" Type="nvarchar" MaxLength="50" />
+          <Property Name="FechaRecuperacion" Type="nvarchar" MaxLength="50" />
+          <Property Name="TipoIdRemitente" Type="nvarchar" MaxLength="50" />
+          <Property Name="TipoIdDestinatario" Type="nvarchar" MaxLength="50" />
+          <Property Name="Observaciones" Type="nvarchar" MaxLength="50" />
+          <Property Name="DescripcionError" Type="varchar" MaxLength="5000" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModeloCuatroSieteDosNS" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModeloCuatroSieteDos" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TransaccionesAliados472" EntityType="ModeloCuatroSieteDosNS.TransaccionesAliados472" />
+        </EntityContainer>
+        <EntityType Name="TransaccionesAliados472">
+          <Key>
+            <PropertyRef Name="IdTransaccionesAliados" />
+          </Key>
+          <Property Type="Decimal" Name="IdTransaccionesAliados" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="NumeroFactura" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PeriodoReportado" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CodigoOficinaAdmisión" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FechaAdmisión" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdentificacionImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimerNombreImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SegundoNombreImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimerApellidoImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SegundoApellidoImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CiudadImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DireccionImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TelefonoImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CelularImpositor" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MontoOperación" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PorteComision" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CodigoOficinaPago" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Estado" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IdentificacionDestinatario" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimerNombreDestino" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SegundoNombreDestino" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PrimerApellidoDestino" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SegundoApellidoDestino" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CiudadDestino" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DireccionDestino" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TelefonoDestino" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CelularDestino" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FechaPago" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FechaRecuperacion" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TipoIdRemitente" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TipoIdDestinatario" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Observaciones" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DescripcionError" MaxLength="5000" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModeloCuatroSieteDosNSStoreContainer" CdmEntityContainer="ModeloCuatroSieteDos">
+          <EntitySetMapping Name="TransaccionesAliados472">
+            <EntityTypeMapping TypeName="ModeloCuatroSieteDosNS.TransaccionesAliados472">
+              <MappingFragment StoreEntitySet="TransaccionesAliados472">
+                <ScalarProperty Name="DescripcionError" ColumnName="DescripcionError" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="TipoIdDestinatario" ColumnName="TipoIdDestinatario" />
+                <ScalarProperty Name="TipoIdRemitente" ColumnName="TipoIdRemitente" />
+                <ScalarProperty Name="FechaRecuperacion" ColumnName="FechaRecuperacion" />
+                <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+                <ScalarProperty Name="CelularDestino" ColumnName="CelularDestino" />
+                <ScalarProperty Name="TelefonoDestino" ColumnName="TelefonoDestino" />
+                <ScalarProperty Name="DireccionDestino" ColumnName="DireccionDestino" />
+                <ScalarProperty Name="CiudadDestino" ColumnName="CiudadDestino" />
+                <ScalarProperty Name="SegundoApellidoDestino" ColumnName="SegundoApellidoDestino" />
+                <ScalarProperty Name="PrimerApellidoDestino" ColumnName="PrimerApellidoDestino" />
+                <ScalarProperty Name="SegundoNombreDestino" ColumnName="SegundoNombreDestino" />
+                <ScalarProperty Name="PrimerNombreDestino" ColumnName="PrimerNombreDestino" />
+                <ScalarProperty Name="IdentificacionDestinatario" ColumnName="IdentificacionDestinatario" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="CodigoOficinaPago" ColumnName="CodigoOficinaPago" />
+                <ScalarProperty Name="PorteComision" ColumnName="PorteComision" />
+                <ScalarProperty Name="MontoOperación" ColumnName="MontoOperación" />
+                <ScalarProperty Name="CelularImpositor" ColumnName="CelularImpositor" />
+                <ScalarProperty Name="TelefonoImpositor" ColumnName="TelefonoImpositor" />
+                <ScalarProperty Name="DireccionImpositor" ColumnName="DireccionImpositor" />
+                <ScalarProperty Name="CiudadImpositor" ColumnName="CiudadImpositor" />
+                <ScalarProperty Name="SegundoApellidoImpositor" ColumnName="SegundoApellidoImpositor" />
+                <ScalarProperty Name="PrimerApellidoImpositor" ColumnName="PrimerApellidoImpositor" />
+                <ScalarProperty Name="SegundoNombreImpositor" ColumnName="SegundoNombreImpositor" />
+                <ScalarProperty Name="PrimerNombreImpositor" ColumnName="PrimerNombreImpositor" />
+                <ScalarProperty Name="IdentificacionImpositor" ColumnName="IdentificacionImpositor" />
+                <ScalarProperty Name="FechaAdmisión" ColumnName="FechaAdmisión" />
+                <ScalarProperty Name="CodigoOficinaAdmisión" ColumnName="CodigoOficinaAdmisión" />
+                <ScalarProperty Name="PeriodoReportado" ColumnName="PeriodoReportado" />
+                <ScalarProperty Name="NumeroFactura" ColumnName="NumeroFactura" />
+                <ScalarProperty Name="IdTransaccionesAliados" ColumnName="IdTransaccionesAliados" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloCuatroSieteDos" ZoomLevel="84">
+        <EntityTypeShape EntityType="ModeloCuatroSieteDosNS.TransaccionesAliados472" Width="3.125" PointX="10.375" PointY="25.875" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

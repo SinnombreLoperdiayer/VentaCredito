@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.LogisticaInversa.Telemercadeo.LIAdministradorTelemercadeo" Collapsed="true">
+    <Position X="1.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAAAAAAAEAAAIAAAAAAIAAAAAgAAAgBBCEAAA=</HashCode>
+      <FileName>LIAdministradorTelemercadeo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.LogisticaInversa.Telemercadeo.LIConfiguradorTelemercadeo" Collapsed="true">
+    <Position X="1.75" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgAAAAAAAAEAAAIAAAAAAIAAAAAgAAAgBBCEAAA=</HashCode>
+      <FileName>LIConfiguradorTelemercadeo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.LogisticaInversa.Telemercadeo.LIFachadaTelemercadeo" Collapsed="true">
+    <Position X="4.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LIFachadaTelemercadeo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

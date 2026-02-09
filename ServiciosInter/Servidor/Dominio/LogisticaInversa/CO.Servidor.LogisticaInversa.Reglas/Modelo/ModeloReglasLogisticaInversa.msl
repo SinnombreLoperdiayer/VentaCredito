@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="ModeloReglasLogisticaInversa" />
+  <Alias Key="Target" Value="ModeloReglasLogisticaInversa.Store" />
+  <EntityContainerMapping CdmEntityContainer="EntidadesReglasLogisticaInversa" StorageEntityContainer="ModeloReglasLogisticaInversaStoreContainer">
+    <EntitySetMapping Name="GestionGuiaTelemercadeo_LOI">
+      <EntityTypeMapping TypeName="ModeloReglasLogisticaInversa.GestionGuiaTelemercadeo_LOI">
+        <MappingFragment StoreEntitySet="GestionGuiaTelemercadeo_LOI">
+          <ScalarProperty Name="GGT_CreadoPor" ColumnName="GGT_CreadoPor" />
+          <ScalarProperty Name="GGT_FechaGrabacion" ColumnName="GGT_FechaGrabacion" />
+          <ScalarProperty Name="GGT_IdEstadoGuiaLog" ColumnName="GGT_IdEstadoGuiaLog" />
+          <ScalarProperty Name="GGT_Observacion" ColumnName="GGT_Observacion" />
+          <ScalarProperty Name="GGT_NuevaDireccionEnvio" ColumnName="GGT_NuevaDireccionEnvio" />
+          <ScalarProperty Name="GGT_NuevoContaco" ColumnName="GGT_NuevoContaco" />
+          <ScalarProperty Name="GGT_NuevoTelefono" ColumnName="GGT_NuevoTelefono" />
+          <ScalarProperty Name="GGT_IdParentestoConDestinatari" ColumnName="GGT_IdParentestoConDestinatari" />
+          <ScalarProperty Name="GGT_PersonaContesta" ColumnName="GGT_PersonaContesta" />
+          <ScalarProperty Name="GGT_TelefonoMarcado" ColumnName="GGT_TelefonoMarcado" />
+          <ScalarProperty Name="GGT_IdResultadoTelemercadeo" ColumnName="GGT_IdResultadoTelemercadeo" />
+          <ScalarProperty Name="GGT_NumeroGuia" ColumnName="GGT_NumeroGuia" />
+          <ScalarProperty Name="GGT_IdAdminisionMensajeria" ColumnName="GGT_IdAdminisionMensajeria" />
+          <ScalarProperty Name="GGT_IdGestionGuiaTelemercadeo" ColumnName="GGT_IdGestionGuiaTelemercadeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paBuscarDireccionMensajeria_MEN" FunctionName="ModeloReglasLogisticaInversa.Store.paBuscarDireccionMensajeria_MEN" />
+  </EntityContainerMapping>
+</Mapping>

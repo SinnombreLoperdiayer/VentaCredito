@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB778F75-ABE2-4144-9DFB-3D1E4D87369C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.GestionGiros.Configuracion.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.GestionGiros.Configuracion.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GIRepositorioConfiguracionGiros.cs" />
+    <Compile Include="Modelo\ClasificacionPorIngresos_GIR.cs">
+      <DependentUpon>ModeloConfiguracionGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloConfiguracionGiros.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloConfiguracionGiros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloConfiguracionGiros.Context.Extensions.cs">
+      <DependentUpon>ModeloConfiguracionGiros.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloConfiguracionGiros.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloConfiguracionGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloConfiguracionGiros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloConfiguracionGiros.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MotivoInactivacionGiros_GIR.cs">
+      <DependentUpon>ModeloConfiguracionGiros.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloConfiguracionGiros.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloConfiguracionGiros.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloConfiguracionGiros.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloConfiguracionGiros.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloConfiguracionGiros.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloConfiguracionGiros.msl" />
+    <EmbeddedResource Include="Modelo\ModeloConfiguracionGiros.ssdl" />
+    <None Include="Modelo\ModeloConfiguracionGiros.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloConfiguracionGiros.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloConfiguracionGiros.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloConfiguracionGiros.csdl" "/inmsl:$(TargetDir)Modelo/ModeloConfiguracionGiros.msl" "/outviews:$(ProjectDir)Modelo/ModeloConfiguracionGiros.Views.cs"
+
+XCOPY  "$(TargetDir)Modelo/ModeloConfiguracionGiros.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloConfiguracionGiros.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloConfiguracionGiros.msl" "$(ProjectDir)Modelo" /F /R /Y
+</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+XCOPY  "$(TargetDir)Modelo/ModeloConfiguracionGiros.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloConfiguracionGiros.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloConfiguracionGiros.msl" "$(ProjectDir)Modelo" /F /R /Y
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

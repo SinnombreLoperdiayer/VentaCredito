@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F157C4C8-1456-43CF-BFDA-AA886246EBCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.ControlCuentas.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.ControlCuentas.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCRepositorio.cs" />
+    <Compile Include="CCRepositorioApp.cs" />
+    <Compile Include="Modelo\AlmacenControlCuentas_CCU.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CCGuiaMenAlmacen.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloControlCuentas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloControlCuentas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloControlCuentas.Context.Extensions.cs">
+      <DependentUpon>ModeloControlCuentas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloControlCuentas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloControlCuentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloControlCuentas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGiroAlmacen.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaMenAgencia.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaMenAlmacenCliente_CCU_Result.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaMenAlmacen_CCU_Result.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerMovCajaAlmacen.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerOtrosMovCaja_CCU_Result.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerPagoGiroAlmacen.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoOperacion_CCU.cs">
+      <DependentUpon>ModeloControlCuentas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloControlCuentas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloControlCuentas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloControlCuentas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloControlCuentas.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Modelo\ModeloControlCuentas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloControlCuentas.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Modelo\ModeloControlCuentas.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloControlCuentas.msl" />
+    <EmbeddedResource Include="Modelo\ModeloControlCuentas.ssdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.ControlCuentas.Comun\CO.Servidor.ControlCuentas.Comun.csproj">
+      <Project>{5582183F-C221-4A34-B938-298DEEDFA282}</Project>
+      <Name>CO.Servidor.ControlCuentas.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloControlCuentas.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloControlCuentas.csdl" "/inmsl:$(TargetDir)Modelo/ModeloControlCuentas.msl" "/outviews:$(ProjectDir)Modelo/ModeloControlCuentas.Views.cs"
+
+
+XCOPY  "$(TargetDir)Modelo/ModeloControlCuentas.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloControlCuentas.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloControlCuentas.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY  "$(TargetDir)Modelo/ModeloControlCuentas.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloControlCuentas.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloControlCuentas.msl" "$(ProjectDir)Modelo" /F /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

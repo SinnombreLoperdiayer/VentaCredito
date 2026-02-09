@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E40DEF3B-8FB9-4CDF-883E-4D7BCD6863D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.Produccion.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.Produccion.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelo\CargaNovedadesProduccion_PRO.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicios_PUA.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LiquidacionProduccion_PRO.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidad_PAR.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NovedadCentroServicio_PRO.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paConsultarLiquidaciones_PRO_Result.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RetencionConcepto_PRO.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RetencionLiqGlobal_PRO.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RetencionLiqXCiudad_PRO.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RetencionXCiudadConcepto_PRO.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Retencion_TAR.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Servicio_TAR.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRRepositorio.cs" />
+    <Compile Include="Modelo\ModeloProduccion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloProduccion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloProduccion.Context.Extensions.cs">
+      <DependentUpon>ModeloProduccion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloProduccion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloProduccion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloProduccion.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MotivoNovedad_PRO.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRObtenerNovedadTipoNoved.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerCenSvcSinPrograLiqui.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerComisionConcepto.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerComisionPuntosAcargo.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerLiquidacionNovedad.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerLiquidaComiConcepto.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerLiquidaComiPtoAcargo.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerLiquidaIngresosFijos.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerLiquidaProduAprobadas.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerLiquidaProduccion.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerLiquidaRetenConce.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerLiquidaRetenNovedad.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerRetencionNovedad.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerRetencionServicio.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PRpaObtenerUltLiquidacionCentroSvc.cs">
+      <DependentUpon>ModeloProduccion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PRRepositorioDeprecated.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.Produccion.Comun\CO.Servidor.Produccion.Comun.csproj">
+      <Project>{B4B602E5-4353-406F-BF6A-17E3BB37784C}</Project>
+      <Name>CO.Servidor.Produccion.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloProduccion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloProduccion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloProduccion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloProduccion.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloProduccion.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloProduccion.msl" />
+    <EmbeddedResource Include="Modelo\ModeloProduccion.ssdl" />
+    <None Include="Modelo\ModeloProduccion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloProduccion.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloProduccion.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloProduccion.csdl" "/inmsl:$(TargetDir)Modelo/ModeloProduccion.msl" "/outviews:$(ProjectDir)Modelo/ModeloProduccion.Views.cs"
+
+XCOPY  "$(TargetDir)Modelo/ModeloProduccion.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloProduccion.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloProduccion.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY  "$(TargetDir)Modelo/ModeloProduccion.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloProduccion.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloProduccion.msl" "$(ProjectDir)Modelo" /F /R /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.Admisiones.Giros.ADFachadaAdmisionesGiros" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ADFachadaAdmisionesGiros.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.252" Collapsed="true" />
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Venta.GIVentaGiros" Collapsed="true">
+    <Position X="1.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgYAmEAAAAAAAAAAAAEAAAAQAAAAEAAEAAAEAAAEAAA=</HashCode>
+      <FileName>Venta\GIVentaGiros.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Pago.PGPagosGiros" Collapsed="true">
+    <Position X="3.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAEAAAwCAQAAAAAAABAAAQEAAAAAAAAAAgAAEAAA=</HashCode>
+      <FileName>Pago\PGPagosGiros.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Comun.GIConstantesAdmisionesGiros" Collapsed="true">
+    <Position X="13" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Comun.MensajesAdmisionesGiros" Collapsed="true">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Datos.GIRepositorio" Collapsed="true">
+    <Position X="14.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Datos.PGRepositorio" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Framework.Servidor.Comun.ControllerBase" Collapsed="true">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Venta.GIAdmisionGiroConvenio">
+    <Position X="8.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Venta\GIAdmisionGiroConvenio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Dispersion.GISolicitudDispersion" Collapsed="true">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Dispersion\GISolicitudDispersion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Admisiones.Giros.Dispersion.GIDispersion" Collapsed="true">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAIAAAAAAAAAABAAAACAAAIAAAAAAA=</HashCode>
+      <FileName>Dispersion\GIDispersion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GISolicitudDispersion" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="CO.Servidor.Admisiones.Giros.Comun.EnumTipoErrorAdmisionesGiros" Collapsed="true">
+    <Position X="11.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="CO.Servidor.Admisiones.Giros.Comun.GIEnumEstadosGiro" Collapsed="true">
+    <Position X="13" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

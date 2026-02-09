@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EX_000" xml:space="preserve">
+    <value>Mensaje de error {0} no se encuentra configurado.</value>
+  </data>
+  <data name="EX_001" xml:space="preserve">
+    <value>El tipo de vinculación seleccionado no coincide con el tipo de vinculación registrado en NovaSoft </value>
+  </data>
+  <data name="EX_002" xml:space="preserve">
+    <value>No existe registro en la base de datos para la persona seleccionada</value>
+  </data>
+  <data name="EX_003" xml:space="preserve">
+    <value>El mensajero seleccionado no existe</value>
+  </data>
+  <data name="EX_004" xml:space="preserve">
+    <value>No se puede activar el mensajero. El contrato no esta vigente</value>
+  </data>
+  <data name="EX_005" xml:space="preserve">
+    <value>Ingrese el estado del empaque</value>
+  </data>
+  <data name="EX_006" xml:space="preserve">
+    <value>La Guía ya se encuentra registrada en el sistema</value>
+  </data>
+  <data name="EX_007" xml:space="preserve">
+    <value>Núm guía: {0}, peso admisión: {1}, peso ingreso: {2}, punto origen: {3}, punto destino: {4}</value>
+    <comment>Mensaje para la diferencia en el peso de la guía</comment>
+  </data>
+  <data name="EX_008" xml:space="preserve">
+    <value>Contrato: {0}, id punto: {1}</value>
+    <comment>Mensaje para cliente con presupuesto vencido</comment>
+  </data>
+  <data name="EX_009" xml:space="preserve">
+    <value>Número de guía: {0}, id punto: {1}</value>
+    <comment>Mensaje para guía no provisionada</comment>
+  </data>
+  <data name="EX_010" xml:space="preserve">
+    <value>Número de guía: {0}, novedad: {1}, IdCliente: {2} </value>
+    <comment>Mensaje para la falla de falta de bolsa de seguridad</comment>
+  </data>
+  <data name="EX_011" xml:space="preserve">
+    <value>Código del punto: {0}, Nombre del punto: {1}, Dirección del punto: {2}, Num de Guías sin recoger: {3}</value>
+    <comment>Mensaje para la falla de las guías sin planillar</comment>
+  </data>
+  <data name="EX_012" xml:space="preserve">
+    <value>La guía no se encuentra capturada en sistema</value>
+    <comment>Mensajer de error para las guias que no estan capturadas en sistema</comment>
+  </data>
+  <data name="EX_013" xml:space="preserve">
+    <value>La ciudad de asignacion es diferente a la ciudad de destino del envio</value>
+    <comment>Mensaje de error cuando la ciudad de asignacion es diferente a la ciudad de destino del envio</comment>
+  </data>
+  <data name="EX_014" xml:space="preserve">
+    <value>No se puedo guardar el envío. La guía ya fue asignada o esta descargada</value>
+    <comment>Mensaje de error cuando la guia ya fue asignada a un mensajero o esta descargada</comment>
+  </data>
+  <data name="EX_015" xml:space="preserve">
+    <value>El envío ya fue entregado o se encuentra en devolución</value>
+    <comment>Mensaje de error para los envios que ya se entregaron o estan en devolución</comment>
+  </data>
+  <data name="EX_016" xml:space="preserve">
+    <value>El envío no se encuentra asignado o esta asignado a otra planilla</value>
+    <comment>Mensaje de error para los envios asignados a otra planilla o no estan planillados</comment>
+  </data>
+  <data name="EX_017" xml:space="preserve">
+    <value>No se puede cerrar la planilla. La planilla tiene envíos sin verificar</value>
+    <comment>Mensaje de error para el cierre de la planilla</comment>
+  </data>
+  <data name="EX_018" xml:space="preserve">
+    <value>La verificación la debe hacer un usuario diferente al que realizó la asignación</value>
+    <comment>Mensajer de error cuando el usuario que va a realizar la verificacion es el mismo que realizo la asignación</comment>
+  </data>
+  <data name="EX_019" xml:space="preserve">
+    <value>No se puede abrir la planilla. La fecha actual es diferente a la fecha de creación de la planilla</value>
+    <comment>Mensaje de error para la apertura de la planilla.</comment>
+  </data>
+  <data name="EX_020" xml:space="preserve">
+    <value>La guía ya fue verificada</value>
+    <comment>Mensaje de error para las guías que ya fueron verificadas</comment>
+  </data>
+  <data name="EX_021" xml:space="preserve">
+    <value>No se puede registrar el envío. El envío ya fue registrado</value>
+    <comment>Mensaje de error para los envío que ya se encuentran registrados en la misma planilla y la misma agencia</comment>
+  </data>
+  <data name="EX_022" xml:space="preserve">
+    <value>No se puede registrar el envío. El envío se encuentra en estado {0}, y no es posible registrarlo en estado {1}</value>
+    <comment>Mensaje de error para la transicion de los estados</comment>
+  </data>
+  <data name="EX_023" xml:space="preserve">
+    <value>No se pudo crear la solicitud</value>
+    <comment>Mensaje de error para la creacion de la solicitud de recogida</comment>
+  </data>
+  <data name="EX_024" xml:space="preserve">
+    <value>Error al asignar un consecutivo para la planilla de recogidas</value>
+    <comment>Mensaje de  error al crear una consecutivo para la planilla de recogidas</comment>
+  </data>
+  <data name="EX_025" xml:space="preserve">
+    <value>No existe la planilla de recogidas número {0}</value>
+    <comment>Mensaje de error cuando no existe la planilla ingresada</comment>
+  </data>
+  <data name="EX_026" xml:space="preserve">
+    <value>La recogida {0} ya está descargada</value>
+    <comment>Mensaje de error para la recogida que se encuentre descargada</comment>
+  </data>
+  <data name="EX_027" xml:space="preserve">
+    <value>Número Recogida:{0}, Motivo apertura:{1}</value>
+    <comment>Mensaje de error para la apertura de las recogidas</comment>
+  </data>
+  <data name="EX_028" xml:space="preserve">
+    <value>Error al cambiar estado de la guía</value>
+    <comment>Mensaje de error al cambiar estado de la guía</comment>
+  </data>
+  <data name="EX_029" xml:space="preserve">
+    <value>La operación no se puede realizar, ya que existe una transacción de caja asociada.</value>
+    <comment>Mensaje de error al intentar deshacer la entrega de una guía alcobro</comment>
+  </data>
+  <data name="EX_030" xml:space="preserve">
+    <value>El centro de servicios destino del envío no se apoya en el Centro Logistico donde se esta haciendo la asignación</value>
+    <comment>Mensaje de error para los envios que no se apoyan en el centro logistico de la asignacion </comment>
+  </data>
+  <data name="EX_031" xml:space="preserve">
+    <value>La guía no se encuentra supervisada</value>
+  </data>
+  <data name="EX_032" xml:space="preserve">
+    <value>Ingrese el envío en la sección de carga</value>
+  </data>
+  <data name="EX_033" xml:space="preserve">
+    <value>Ingrese el envío en la sección de mensajeria</value>
+  </data>
+  <data name="EX_034" xml:space="preserve">
+    <value>No se puede realizar la operación, la planilla esta cerrada o no existe en la agencia</value>
+  </data>
+  <data name="EX_035" xml:space="preserve">
+    <value>No es posible dar ingreso a la guía, ya que corresponde a un reenvío al cobro y debe primero ser pagada</value>
+  </data>
+  <data name="EX_036" xml:space="preserve">
+    <value>No es posible dar ingreso a la guía, ya que corresponde a un reenvío al cobro y debe primero ser pagada</value>
+    <comment>Mensaje de error al ingresar a centro de acopio para los envios al cobro no pagos</comment>
+  </data>
+  <data name="EX_037" xml:space="preserve">
+    <value>La guía ya se encuentra descargada</value>
+    <comment>Indica que la guia ya se encuentra descargada</comment>
+  </data>
+  <data name="EX_038" xml:space="preserve">
+    <value>Parametro {0} no existe</value>
+  </data>
+  <data name="EX_039" xml:space="preserve">
+    <value>No se puede provisionar la tula/contenedor, ya que aun se encuentra asignada a un centro de servicios</value>
+    <comment>Mensaje de error al asignar una tula/contenedor</comment>
+  </data>
+  <data name="EX_040" xml:space="preserve">
+    <value>La ciudad origen de la guía no es la misma ciudad de ingreso. Por favor haga el ingreso por el menú de Ingreso a Centro de Acopio Nacional</value>
+  </data>
+  <data name="EX_041" xml:space="preserve">
+    <value>El número de guía ya se encuentra cargado en la planilla</value>
+  </data>
+  <data name="EX_042" xml:space="preserve">
+    <value>La pieza ingresada ya fue planillada</value>
+  </data>
+  <data name="EX_043" xml:space="preserve">
+    <value>El estado del consolidado no es valido</value>
+  </data>
+  <data name="EX_044" xml:space="preserve">
+    <value>La guía ya fué ingresada al centro de acopio</value>
+  </data>
+  <data name="EX_045" xml:space="preserve">
+    <value>La planilla ya fue asignada al mensajero: {0}</value>
+  </data>
+  <data name="EX_046" xml:space="preserve">
+    <value>Este numero de guia ya fue ingresado como sobrante en esta auditoria.</value>
+    <comment>mensaje que informa sobre una duplicidad al insertar un sobrante</comment>
+  </data>
+  <data name="EX_047" xml:space="preserve">
+    <value>La guía ya está asignada para Reclame en Oficina</value>
+  </data>
+  <data name="EX_048" xml:space="preserve">
+    <value>El envío no se encuentra en centro de acopio ni auditoria para asignación a mensajero.</value>
+  </data>
+  <data name="EX_049" xml:space="preserve">
+    <value>No se puedo guardar el envío. La guía está asignada a la planilla {0}</value>
+    <comment>Mensaje de error cuando la guia ya fue asignada a un mensajero </comment>
+  </data>
+  <data name="EX_050" xml:space="preserve">
+    <value>No es posible asignar a Mensajero. El envío se encuentra en estado Auditoría, su asignación debe ser realizada por Salida de Logística Inversa.</value>
+  </data>
+  <data name="EX_051" xml:space="preserve">
+    <value>El envío no es posible asignarlo a Mensajero, verifique el movimiento de inventario de bodegas a donde se encuentra asignado</value>
+  </data>
+  <data name="EX_052" xml:space="preserve">
+    <value>No es posible asignar a auditor. El envío no se encuentra en Auditoria, su asignacion debe ser realizada por asignación a mensajero</value>
+    <comment>Mensaje error al asignar guia en estado centro de acopio a auditor.</comment>
+  </data>
+  <data name="IN_001" xml:space="preserve">
+    <value>Activo</value>
+  </data>
+  <data name="IN_002" xml:space="preserve">
+    <value>Inactivo</value>
+  </data>
+  <data name="IN_003" xml:space="preserve">
+    <value>Suspendido</value>
+  </data>
+</root>

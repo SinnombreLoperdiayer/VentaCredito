@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F2ED0F4-EE2D-4918-B054-5E11710294D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.Servidor.Mensajeria.Datos</RootNamespace>
+    <AssemblyName>Framework.Servidor.Mensajeria.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MERepositorio.cs" />
+    <Compile Include="Modelo\AdjuntosMensajes_MEN.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Agencia_PUA.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CategoriaMensaje_MEN.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroLogistico_PUA.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicios_PUA.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentrosServicosRacol_VPUA.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MensajesEnviados_MEN.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloMensajeria.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloMensajeria.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloMensajeria.Context.Extensions.cs">
+      <DependentUpon>ModeloMensajeria.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloMensajeria.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloMensajeria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloMensajeria.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloMensajeria.Views.cs" />
+    <Compile Include="Modelo\PuntoServicio_PUA.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RegionalAdministrativa_PUA.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RespuestasMensajes_MEN.cs">
+      <DependentUpon>ModeloMensajeria.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloMensajeria.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloMensajeria.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo\ModeloMensajeria.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloMensajeria.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloMensajeria.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloMensajeria.msl" />
+    <EmbeddedResource Include="Modelo\ModeloMensajeria.ssdl" />
+    <None Include="Modelo\ModeloMensajeria.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloMensajeria.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloMensajeria.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloMensajeria.csdl" "/inmsl:$(TargetDir)Modelo/ModeloMensajeria.msl" "/outviews:$(ProjectDir)Modelo/ModeloMensajeria.Views.cs"
+XCOPY  "$(TargetDir)Modelo/ModeloMensajeria.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloMensajeria.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloMensajeria.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

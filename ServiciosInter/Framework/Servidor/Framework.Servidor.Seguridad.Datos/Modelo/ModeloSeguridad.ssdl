@@ -1,0 +1,1826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloSeguridad.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloSeguridadStoreContainer">
+    <EntitySet Name="Accion_SEG" EntityType="ModeloSeguridad.Store.Accion_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdministradorReportes_REP" EntityType="ModeloSeguridad.Store.AdministradorReportes_REP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdmisionValorAdicional_MEN" EntityType="ModeloSeguridad.Store.AdmisionValorAdicional_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuditoriaExcepciones_AUD" EntityType="ModeloSeguridad.Store.AuditoriaExcepciones_AUD" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cargo_SEG" EntityType="ModeloSeguridad.Store.Cargo_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CasaMatriz_ARE" EntityType="ModeloSeguridad.Store.CasaMatriz_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroLogistico_PUA" EntityType="ModeloSeguridad.Store.CentroLogistico_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicios_PUA" EntityType="ModeloSeguridad.Store.CentroServicios_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClienteCredito_CLI" EntityType="ModeloSeguridad.Store.ClienteCredito_CLI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CredencialUsuario_SEG" EntityType="ModeloSeguridad.Store.CredencialUsuario_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CredencialUsuarioHistorico_SEG" EntityType="ModeloSeguridad.Store.CredencialUsuarioHistorico_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Gestion_ARE" EntityType="ModeloSeguridad.Store.Gestion_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HistoricoIngresosUsuario_SEG" EntityType="ModeloSeguridad.Store.HistoricoIngresosUsuario_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidad_PAR" EntityType="ModeloSeguridad.Store.Localidad_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MacroProceso_ARE" EntityType="ModeloSeguridad.Store.MacroProceso_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MaqVersion_VER" EntityType="ModeloSeguridad.Store.MaqVersion_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MaqVersionHistorico_VER" EntityType="ModeloSeguridad.Store.MaqVersionHistorico_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Menu_SEG" EntityType="ModeloSeguridad.Store.Menu_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuHis_SEG" EntityType="ModeloSeguridad.Store.MenuHis_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuRol_SEG" EntityType="ModeloSeguridad.Store.MenuRol_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuRolAccion_SEG" EntityType="ModeloSeguridad.Store.MenuRolAccion_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuRolHis_SEG" EntityType="ModeloSeguridad.Store.MenuRolHis_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modulo_VER" EntityType="ModeloSeguridad.Store.Modulo_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParametrosFramework" EntityType="ModeloSeguridad.Store.ParametrosFramework" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonaExterna_PAR" EntityType="ModeloSeguridad.Store.PersonaExterna_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonaInterna_PAR" EntityType="ModeloSeguridad.Store.PersonaInterna_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonaInternaHistorico_PAR" EntityType="ModeloSeguridad.Store.PersonaInternaHistorico_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegionalAdministrativa_PUA" EntityType="ModeloSeguridad.Store.RegionalAdministrativa_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReportesRol_REP" EntityType="ModeloSeguridad.Store.ReportesRol_REP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rol_SEG" EntityType="ModeloSeguridad.Store.Rol_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sucursal_CLI" EntityType="ModeloSeguridad.Store.Sucursal_CLI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoIdentificacion_PAR" EntityType="ModeloSeguridad.Store.TipoIdentificacion_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuario_SEG" EntityType="ModeloSeguridad.Store.Usuario_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioCentroServicio_SEG" EntityType="ModeloSeguridad.Store.UsuarioCentroServicio_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioGestion_SEG" EntityType="ModeloSeguridad.Store.UsuarioGestion_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioHistorico_SEG" EntityType="ModeloSeguridad.Store.UsuarioHistorico_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioPersonaExterna_SEG" EntityType="ModeloSeguridad.Store.UsuarioPersonaExterna_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioPersonaExternaHist_SEG" EntityType="ModeloSeguridad.Store.UsuarioPersonaExternaHist_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioPersonaInterna_SEG" EntityType="ModeloSeguridad.Store.UsuarioPersonaInterna_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioPersonaInternaHist_SEG" EntityType="ModeloSeguridad.Store.UsuarioPersonaInternaHist_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioRol_SEG" EntityType="ModeloSeguridad.Store.UsuarioRol_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioRolHistorico_SEG" EntityType="ModeloSeguridad.Store.UsuarioRolHistorico_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UsuarioSucursal_SEG" EntityType="ModeloSeguridad.Store.UsuarioSucursal_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VersionCliente_VER" EntityType="ModeloSeguridad.Store.VersionCliente_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VersionClienteHist_VER" EntityType="ModeloSeguridad.Store.VersionClienteHist_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cargos_VSEG" EntityType="ModeloSeguridad.Store.Cargos_VSEG" store:Type="Views" store:Schema="dbo" store:Name="Cargos_VSEG">
+      <DefiningQuery>SELECT 
+      [Cargos_VSEG].[CAR_IdCargo] AS [CAR_IdCargo], 
+      [Cargos_VSEG].[CAR_Descripcion] AS [CAR_Descripcion], 
+      [Cargos_VSEG].[CAR_IdCargoReporta] AS [CAR_IdCargoReporta], 
+      [Cargos_VSEG].[CAR_DescripcionReporta] AS [CAR_DescripcionReporta]
+      FROM [dbo].[Cargos_VSEG] AS [Cargos_VSEG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CredencialUsuario_VSEG" EntityType="ModeloSeguridad.Store.CredencialUsuario_VSEG" store:Type="Views" store:Schema="dbo" store:Name="CredencialUsuario_VSEG">
+      <DefiningQuery>SELECT 
+      [CredencialUsuario_VSEG].[CRU_Clave] AS [CRU_Clave], 
+      [CredencialUsuario_VSEG].[CRU_FormatoClave] AS [CRU_FormatoClave], 
+      [CredencialUsuario_VSEG].[CRU_CantIntentosFallidosClave] AS [CRU_CantIntentosFallidosClave], 
+      [CredencialUsuario_VSEG].[CRU_ClaveBloqueada] AS [CRU_ClaveBloqueada], 
+      [CredencialUsuario_VSEG].[CRU_ClaveAnterior] AS [CRU_ClaveAnterior], 
+      [CredencialUsuario_VSEG].[CRU_DiasVencimiento] AS [CRU_DiasVencimiento], 
+      [CredencialUsuario_VSEG].[CRU_InicioIntentosFallidos] AS [CRU_InicioIntentosFallidos], 
+      [CredencialUsuario_VSEG].[CRU_IdCodigoUsuario] AS [CRU_IdCodigoUsuario], 
+      [CredencialUsuario_VSEG].[CRU_FechaUltimoCambioClave] AS [CRU_FechaUltimoCambioClave], 
+      [CredencialUsuario_VSEG].[CRU_FechaUltimoBloqueoClave] AS [CRU_FechaUltimoBloqueoClave], 
+      [CredencialUsuario_VSEG].[USU_IdUsuario] AS [USU_IdUsuario], 
+      [CredencialUsuario_VSEG].[USU_TipoUsuario] AS [USU_TipoUsuario], 
+      [CredencialUsuario_VSEG].[USU_EsUsuarioInterno] AS [USU_EsUsuarioInterno], 
+      [CredencialUsuario_VSEG].[USU_RequiereIdMaquina] AS [USU_RequiereIdMaquina], 
+      [CredencialUsuario_VSEG].[USU_Estado] AS [USU_Estado], 
+      [CredencialUsuario_VSEG].[USU_AutorizaCargaMasiva] AS [USU_AutorizaCargaMasiva], 
+      [CredencialUsuario_VSEG].[USU_AutorizaCargaMasivaICA] AS [USU_AutorizaCargaMasivaICA], 
+      [CredencialUsuario_VSEG].[USP_IdPersonaInterna] AS [USP_IdPersonaInterna]
+      FROM [dbo].[CredencialUsuario_VSEG] AS [CredencialUsuario_VSEG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EstadoActivoInactivo_VFRM" EntityType="ModeloSeguridad.Store.EstadoActivoInactivo_VFRM" store:Type="Views" store:Schema="dbo" store:Name="EstadoActivoInactivo_VFRM">
+      <DefiningQuery>SELECT 
+      [EstadoActivoInactivo_VFRM].[IdEstado] AS [IdEstado], 
+      [EstadoActivoInactivo_VFRM].[Estado] AS [Estado]
+      FROM [dbo].[EstadoActivoInactivo_VFRM] AS [EstadoActivoInactivo_VFRM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Localidades_VPAR" EntityType="ModeloSeguridad.Store.Localidades_VPAR" store:Type="Views" store:Schema="dbo" store:Name="Localidades_VPAR">
+      <DefiningQuery>SELECT 
+      [Localidades_VPAR].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [Localidades_VPAR].[LOC_IdTipo] AS [LOC_IdTipo], 
+      [Localidades_VPAR].[TLO_Descripcion] AS [TLO_Descripcion], 
+      [Localidades_VPAR].[LOC_Nombre] AS [LOC_Nombre], 
+      [Localidades_VPAR].[LOC_NombreCorto] AS [LOC_NombreCorto], 
+      [Localidades_VPAR].[LOC_IdAncestroPrimerGrado] AS [LOC_IdAncestroPrimerGrado], 
+      [Localidades_VPAR].[LOC_IdTipoPrimero] AS [LOC_IdTipoPrimero], 
+      [Localidades_VPAR].[LOC_IdTipoPrimeroDesc] AS [LOC_IdTipoPrimeroDesc], 
+      [Localidades_VPAR].[LOC_NombrePrimero] AS [LOC_NombrePrimero], 
+      [Localidades_VPAR].[LOC_NombreCortoPrimero] AS [LOC_NombreCortoPrimero], 
+      [Localidades_VPAR].[LOC_IdAncestroSegundoGrado] AS [LOC_IdAncestroSegundoGrado], 
+      [Localidades_VPAR].[LOC_IdTipoSegundo] AS [LOC_IdTipoSegundo], 
+      [Localidades_VPAR].[LOC_IdTipoSegundoDesc] AS [LOC_IdTipoSegundoDesc], 
+      [Localidades_VPAR].[LOC_NombreSegundo] AS [LOC_NombreSegundo], 
+      [Localidades_VPAR].[LOC_NombreCortoSegundo] AS [LOC_NombreCortoSegundo], 
+      [Localidades_VPAR].[LOC_IdAncestroTercerGrado] AS [LOC_IdAncestroTercerGrado], 
+      [Localidades_VPAR].[LOC_IdTipoTercero] AS [LOC_IdTipoTercero], 
+      [Localidades_VPAR].[LOC_IdTipoTerceroDesc] AS [LOC_IdTipoTerceroDesc], 
+      [Localidades_VPAR].[LOC_NombreTercero] AS [LOC_NombreTercero], 
+      [Localidades_VPAR].[LOC_NombreCortoTercero] AS [LOC_NombreCortoTercero], 
+      [Localidades_VPAR].[NombreCompleto] AS [NombreCompleto], 
+      [Localidades_VPAR].[LOC_CodigoPostal] AS [LOC_CodigoPostal]
+      FROM [dbo].[Localidades_VPAR] AS [Localidades_VPAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TiposAutenticacion_VSEG" EntityType="ModeloSeguridad.Store.TiposAutenticacion_VSEG" store:Type="Views" store:Schema="dbo" store:Name="TiposAutenticacion_VSEG">
+      <DefiningQuery>SELECT 
+      [TiposAutenticacion_VSEG].[Id] AS [Id], 
+      [TiposAutenticacion_VSEG].[Descripcion] AS [Descripcion]
+      FROM [dbo].[TiposAutenticacion_VSEG] AS [TiposAutenticacion_VSEG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TipoUsuario_VSEG" EntityType="ModeloSeguridad.Store.TipoUsuario_VSEG" store:Type="Views" store:Schema="dbo" store:Name="TipoUsuario_VSEG">
+      <DefiningQuery>SELECT 
+      [TipoUsuario_VSEG].[IdTipoUsuario] AS [IdTipoUsuario], 
+      [TipoUsuario_VSEG].[Descripcion] AS [Descripcion]
+      FROM [dbo].[TipoUsuario_VSEG] AS [TipoUsuario_VSEG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UsuarioClienteCredito_VSEG" EntityType="ModeloSeguridad.Store.UsuarioClienteCredito_VSEG" store:Type="Views" store:Schema="dbo" store:Name="UsuarioClienteCredito_VSEG">
+      <DefiningQuery>SELECT 
+      [UsuarioClienteCredito_VSEG].[PEE_FechaExpedicionDocumento] AS [PEE_FechaExpedicionDocumento], 
+      [UsuarioClienteCredito_VSEG].[USU_IdCodigoUsuario] AS [USU_IdCodigoUsuario], 
+      [UsuarioClienteCredito_VSEG].[USU_IdUsuario] AS [USU_IdUsuario], 
+      [UsuarioClienteCredito_VSEG].[USU_Estado] AS [USU_Estado], 
+      [UsuarioClienteCredito_VSEG].[USU_RequiereIdMaquina] AS [USU_RequiereIdMaquina], 
+      [UsuarioClienteCredito_VSEG].[CLI_Estado] AS [CLI_Estado], 
+      [UsuarioClienteCredito_VSEG].[PEE_IdPersonaExterna] AS [PEE_IdPersonaExterna], 
+      [UsuarioClienteCredito_VSEG].[TII_Descripcion] AS [TII_Descripcion], 
+      [UsuarioClienteCredito_VSEG].[PEE_Identificacion] AS [PEE_Identificacion], 
+      [UsuarioClienteCredito_VSEG].[PEE_IdTipoIdentificacion] AS [PEE_IdTipoIdentificacion], 
+      [UsuarioClienteCredito_VSEG].[PEE_DigitoVerificacion] AS [PEE_DigitoVerificacion], 
+      [UsuarioClienteCredito_VSEG].[PEE_PrimerNombre] AS [PEE_PrimerNombre], 
+      [UsuarioClienteCredito_VSEG].[PEE_SegundoNombre] AS [PEE_SegundoNombre], 
+      [UsuarioClienteCredito_VSEG].[PEE_PrimerApellido] AS [PEE_PrimerApellido], 
+      [UsuarioClienteCredito_VSEG].[PEE_SegundoApellido] AS [PEE_SegundoApellido], 
+      [UsuarioClienteCredito_VSEG].[PEE_Direccion] AS [PEE_Direccion], 
+      [UsuarioClienteCredito_VSEG].[PEE_Municipio] AS [PEE_Municipio], 
+      [UsuarioClienteCredito_VSEG].[PEE_Telefono] AS [PEE_Telefono], 
+      [UsuarioClienteCredito_VSEG].[PEE_NumeroCelular] AS [PEE_NumeroCelular], 
+      [UsuarioClienteCredito_VSEG].[CLI_IdCliente] AS [CLI_IdCliente], 
+      [UsuarioClienteCredito_VSEG].[CLI_RazonSocial] AS [CLI_RazonSocial], 
+      [UsuarioClienteCredito_VSEG].[CLI_Nit] AS [CLI_Nit], 
+      [UsuarioClienteCredito_VSEG].[CLI_DigitoVerificacion] AS [CLI_DigitoVerificacion], 
+      [UsuarioClienteCredito_VSEG].[CLI_Telefono] AS [CLI_Telefono], 
+      [UsuarioClienteCredito_VSEG].[CLI_Direccion] AS [CLI_Direccion], 
+      [UsuarioClienteCredito_VSEG].[USU_AutorizaCargaMasiva] AS [USU_AutorizaCargaMasiva]
+      FROM [dbo].[UsuarioClienteCredito_VSEG] AS [UsuarioClienteCredito_VSEG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UsuarioInterno_VSEG" EntityType="ModeloSeguridad.Store.UsuarioInterno_VSEG" store:Type="Views" store:Schema="dbo" store:Name="UsuarioInterno_VSEG">
+      <DefiningQuery>SELECT 
+      [UsuarioInterno_VSEG].[USU_IdCodigoUsuario] AS [USU_IdCodigoUsuario], 
+      [UsuarioInterno_VSEG].[USU_IdUsuario] AS [USU_IdUsuario], 
+      [UsuarioInterno_VSEG].[USU_Estado] AS [USU_Estado], 
+      [UsuarioInterno_VSEG].[USU_TipoUsuario] AS [USU_TipoUsuario], 
+      [UsuarioInterno_VSEG].[USU_RequiereIdMaquina] AS [USU_RequiereIdMaquina], 
+      [UsuarioInterno_VSEG].[USU_Comentarios] AS [USU_Comentarios], 
+      [UsuarioInterno_VSEG].[USU_EsUsuarioInterno] AS [USU_EsUsuarioInterno], 
+      [UsuarioInterno_VSEG].[USP_IdPersonaInterna] AS [USP_IdPersonaInterna], 
+      [UsuarioInterno_VSEG].[PEI_IdTipoIdentificacion] AS [PEI_IdTipoIdentificacion], 
+      [UsuarioInterno_VSEG].[PEI_Identificacion] AS [PEI_Identificacion], 
+      [UsuarioInterno_VSEG].[PEI_IdCargo] AS [PEI_IdCargo], 
+      [UsuarioInterno_VSEG].[PEI_Nombre] AS [PEI_Nombre], 
+      [UsuarioInterno_VSEG].[PEI_PrimerApellido] AS [PEI_PrimerApellido], 
+      [UsuarioInterno_VSEG].[PEI_SegundoApellido] AS [PEI_SegundoApellido], 
+      [UsuarioInterno_VSEG].[PEI_Direccion] AS [PEI_Direccion], 
+      [UsuarioInterno_VSEG].[PEI_Municipio] AS [PEI_Municipio], 
+      [UsuarioInterno_VSEG].[PEI_Telefono] AS [PEI_Telefono], 
+      [UsuarioInterno_VSEG].[PEI_Email] AS [PEI_Email], 
+      [UsuarioInterno_VSEG].[PEI_IdRegionalAdm] AS [PEI_IdRegionalAdm], 
+      [UsuarioInterno_VSEG].[PEI_Comentarios] AS [PEI_Comentarios], 
+      [UsuarioInterno_VSEG].[REA_Descripcion] AS [REA_Descripcion], 
+      [UsuarioInterno_VSEG].[CAR_Descripcion] AS [CAR_Descripcion], 
+      [UsuarioInterno_VSEG].[CAR_IdCargoReporta] AS [CAR_IdCargoReporta], 
+      [UsuarioInterno_VSEG].[CES_IdMunicipio] AS [CES_IdMunicipio]
+      FROM [dbo].[UsuarioInterno_VSEG] AS [UsuarioInterno_VSEG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UsuarioPersonaInterna_VSEG" EntityType="ModeloSeguridad.Store.UsuarioPersonaInterna_VSEG" store:Type="Views" store:Schema="dbo" store:Name="UsuarioPersonaInterna_VSEG">
+      <DefiningQuery>SELECT 
+      [UsuarioPersonaInterna_VSEG].[USU_IdCodigoUsuario] AS [USU_IdCodigoUsuario], 
+      [UsuarioPersonaInterna_VSEG].[PEI_IdPersonaInterna] AS [PEI_IdPersonaInterna], 
+      [UsuarioPersonaInterna_VSEG].[USU_IdUsuario] AS [USU_IdUsuario], 
+      [UsuarioPersonaInterna_VSEG].[PEI_PrimerApellido] AS [PEI_PrimerApellido], 
+      [UsuarioPersonaInterna_VSEG].[PEI_SegundoApellido] AS [PEI_SegundoApellido], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Direccion] AS [PEI_Direccion], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Email] AS [PEI_Email], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Nombre] AS [PEI_Nombre], 
+      [UsuarioPersonaInterna_VSEG].[USU_RequiereIdMaquina] AS [USU_RequiereIdMaquina], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Telefono] AS [PEI_Telefono], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Identificacion] AS [PEI_Identificacion], 
+      [UsuarioPersonaInterna_VSEG].[TII_Descripcion] AS [TII_Descripcion], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Municipio] AS [PEI_Municipio], 
+      [UsuarioPersonaInterna_VSEG].[CAR_Descripcion] AS [CAR_Descripcion], 
+      [UsuarioPersonaInterna_VSEG].[PEI_IdCargo] AS [PEI_IdCargo], 
+      [UsuarioPersonaInterna_VSEG].[PEI_IdTipoIdentificacion] AS [PEI_IdTipoIdentificacion], 
+      [UsuarioPersonaInterna_VSEG].[USU_Estado] AS [USU_Estado], 
+      [UsuarioPersonaInterna_VSEG].[PEI_IdRegionalAdm] AS [PEI_IdRegionalAdm], 
+      [UsuarioPersonaInterna_VSEG].[REA_Descripcion] AS [REA_Descripcion], 
+      [UsuarioPersonaInterna_VSEG].[USU_EsCajeroPpal] AS [USU_EsCajeroPpal], 
+      [UsuarioPersonaInterna_VSEG].[USU_AutorizaCargaMasiva] AS [USU_AutorizaCargaMasiva], 
+      [UsuarioPersonaInterna_VSEG].[USU_AutorizaCargaMasivaICA] AS [USU_AutorizaCargaMasivaICA]
+      FROM [dbo].[UsuarioPersonaInterna_VSEG] AS [UsuarioPersonaInterna_VSEG]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Cargo_SEG_Cargo_SEG" Association="ModeloSeguridad.Store.FK_Cargo_SEG_Cargo_SEG">
+      <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+      <End Role="Cargo_SEG1" EntitySet="Cargo_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroLogistico_PUA_PuntoAtencion_PUA" Association="ModeloSeguridad.Store.FK_CentroLogistico_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" Association="ModeloSeguridad.Store.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicios_PUA_Localidad_PAR" Association="ModeloSeguridad.Store.FK_CentroServicios_PUA_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteCredito_CLI_Localidad_PAR" Association="ModeloSeguridad.Store.FK_ClienteCredito_CLI_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="ClienteCredito_CLI" EntitySet="ClienteCredito_CLI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CredencialUsuario_SEG_Usuario_SEG" Association="ModeloSeguridad.Store.FK_CredencialUsuario_SEG_Usuario_SEG">
+      <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+      <End Role="CredencialUsuario_SEG" EntitySet="CredencialUsuario_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gestion_ARE_MacroProceso_ARE" Association="ModeloSeguridad.Store.FK_Gestion_ARE_MacroProceso_ARE">
+      <End Role="MacroProceso_ARE" EntitySet="MacroProceso_ARE" />
+      <End Role="Gestion_ARE" EntitySet="Gestion_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="ModeloSeguridad.Store.FK_Localidad_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="ModeloSeguridad.Store.FK_Localidad_PAR_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="ModeloSeguridad.Store.FK_Localidad_PAR_Localidad_PAR2">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MacroProceso_ARE_CasaMatriz_ARE" Association="ModeloSeguridad.Store.FK_MacroProceso_ARE_CasaMatriz_ARE">
+      <End Role="CasaMatriz_ARE" EntitySet="CasaMatriz_ARE" />
+      <End Role="MacroProceso_ARE" EntitySet="MacroProceso_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Menu_SEG_Modulo_VER1" Association="ModeloSeguridad.Store.FK_Menu_SEG_Modulo_VER1">
+      <End Role="Modulo_VER" EntitySet="Modulo_VER" />
+      <End Role="Menu_SEG" EntitySet="Menu_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuRol_SEG_Menu_SEG" Association="ModeloSeguridad.Store.FK_MenuRol_SEG_Menu_SEG">
+      <End Role="Menu_SEG" EntitySet="Menu_SEG" />
+      <End Role="MenuRol_SEG" EntitySet="MenuRol_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuRolAccion_SEG_Accion_SEG" Association="ModeloSeguridad.Store.FK_MenuRolAccion_SEG_Accion_SEG">
+      <End Role="Accion_SEG" EntitySet="Accion_SEG" />
+      <End Role="MenuRolAccion_SEG" EntitySet="MenuRolAccion_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuRolAccion_SEG_MenuRol_SEG" Association="ModeloSeguridad.Store.FK_MenuRolAccion_SEG_MenuRol_SEG">
+      <End Role="MenuRol_SEG" EntitySet="MenuRol_SEG" />
+      <End Role="MenuRolAccion_SEG" EntitySet="MenuRolAccion_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Modulo_Rol_SEG_Rol_SEG" Association="ModeloSeguridad.Store.FK_Modulo_Rol_SEG_Rol_SEG">
+      <End Role="Rol_SEG" EntitySet="Rol_SEG" />
+      <End Role="MenuRol_SEG" EntitySet="MenuRol_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaExterna_PAR_Localidad_PAR" Association="ModeloSeguridad.Store.FK_PersonaExterna_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="PersonaExterna_PAR" EntitySet="PersonaExterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaExterna_PAR_TipoIdentificacion_PAR" Association="ModeloSeguridad.Store.FK_PersonaExterna_PAR_TipoIdentificacion_PAR">
+      <End Role="TipoIdentificacion_PAR" EntitySet="TipoIdentificacion_PAR" />
+      <End Role="PersonaExterna_PAR" EntitySet="PersonaExterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaInterna_PAR_Cargo_SEG" Association="ModeloSeguridad.Store.FK_PersonaInterna_PAR_Cargo_SEG">
+      <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+      <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaInterna_PAR_Localidad_PAR" Association="ModeloSeguridad.Store.FK_PersonaInterna_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaInterna_PAR_RegionalAdministrativa_PUA" Association="ModeloSeguridad.Store.FK_PersonaInterna_PAR_RegionalAdministrativa_PUA">
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+      <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaInterna_PAR_TipoIdentificacion_PAR" Association="ModeloSeguridad.Store.FK_PersonaInterna_PAR_TipoIdentificacion_PAR">
+      <End Role="TipoIdentificacion_PAR" EntitySet="TipoIdentificacion_PAR" />
+      <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegionalAdministrativa_PUA_CasaMatriz_ARE" Association="ModeloSeguridad.Store.FK_RegionalAdministrativa_PUA_CasaMatriz_ARE">
+      <End Role="CasaMatriz_ARE" EntitySet="CasaMatriz_ARE" />
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA" Association="ModeloSeguridad.Store.FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportesRol_REP_AdministradorReportes_REP" Association="ModeloSeguridad.Store.FK_ReportesRol_REP_AdministradorReportes_REP">
+      <End Role="AdministradorReportes_REP" EntitySet="AdministradorReportes_REP" />
+      <End Role="ReportesRol_REP" EntitySet="ReportesRol_REP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReportesRol_REP_Rol_SEG" Association="ModeloSeguridad.Store.FK_ReportesRol_REP_Rol_SEG">
+      <End Role="Rol_SEG" EntitySet="Rol_SEG" />
+      <End Role="ReportesRol_REP" EntitySet="ReportesRol_REP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sucursal_CLI_CentroServicios_PUA" Association="ModeloSeguridad.Store.FK_Sucursal_CLI_CentroServicios_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="Sucursal_CLI" EntitySet="Sucursal_CLI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sucursal_CLI_ClienteCredito_CLI" Association="ModeloSeguridad.Store.FK_Sucursal_CLI_ClienteCredito_CLI">
+      <End Role="ClienteCredito_CLI" EntitySet="ClienteCredito_CLI" />
+      <End Role="Sucursal_CLI" EntitySet="Sucursal_CLI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sucursal_CLI_Localidad_PAR" Association="ModeloSeguridad.Store.FK_Sucursal_CLI_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Sucursal_CLI" EntitySet="Sucursal_CLI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioCentroServicio_SEG_CentroServicios_PUA" Association="ModeloSeguridad.Store.FK_UsuarioCentroServicio_SEG_CentroServicios_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="UsuarioCentroServicio_SEG" EntitySet="UsuarioCentroServicio_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioCentroServicio_SEG_Usuario_SEG" Association="ModeloSeguridad.Store.FK_UsuarioCentroServicio_SEG_Usuario_SEG">
+      <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+      <End Role="UsuarioCentroServicio_SEG" EntitySet="UsuarioCentroServicio_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioGestion_SEG_Gestion_ARE" Association="ModeloSeguridad.Store.FK_UsuarioGestion_SEG_Gestion_ARE">
+      <End Role="Gestion_ARE" EntitySet="Gestion_ARE" />
+      <End Role="UsuarioGestion_SEG" EntitySet="UsuarioGestion_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioGestion_SEG_Usuario_SEG" Association="ModeloSeguridad.Store.FK_UsuarioGestion_SEG_Usuario_SEG">
+      <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+      <End Role="UsuarioGestion_SEG" EntitySet="UsuarioGestion_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPersonaExterna_SEG_PersonaExterna_PAR" Association="ModeloSeguridad.Store.FK_UsuarioPersonaExterna_SEG_PersonaExterna_PAR">
+      <End Role="PersonaExterna_PAR" EntitySet="PersonaExterna_PAR" />
+      <End Role="UsuarioPersonaExterna_SEG" EntitySet="UsuarioPersonaExterna_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPersonaExterna_SEG_Usuario_SEG" Association="ModeloSeguridad.Store.FK_UsuarioPersonaExterna_SEG_Usuario_SEG">
+      <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+      <End Role="UsuarioPersonaExterna_SEG" EntitySet="UsuarioPersonaExterna_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR" Association="ModeloSeguridad.Store.FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR">
+      <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+      <End Role="UsuarioPersonaInterna_SEG" EntitySet="UsuarioPersonaInterna_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioPersonaInterna_SEG_Usuario_SEG" Association="ModeloSeguridad.Store.FK_UsuarioPersonaInterna_SEG_Usuario_SEG">
+      <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+      <End Role="UsuarioPersonaInterna_SEG" EntitySet="UsuarioPersonaInterna_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioRol_SEG_Rol_SEG" Association="ModeloSeguridad.Store.FK_UsuarioRol_SEG_Rol_SEG">
+      <End Role="Rol_SEG" EntitySet="Rol_SEG" />
+      <End Role="UsuarioRol_SEG" EntitySet="UsuarioRol_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioRol_SEG_Usuario_SEG" Association="ModeloSeguridad.Store.FK_UsuarioRol_SEG_Usuario_SEG">
+      <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+      <End Role="UsuarioRol_SEG" EntitySet="UsuarioRol_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioSucursal_SEG_Sucursal_CLI" Association="ModeloSeguridad.Store.FK_UsuarioSucursal_SEG_Sucursal_CLI">
+      <End Role="Sucursal_CLI" EntitySet="Sucursal_CLI" />
+      <End Role="UsuarioSucursal_SEG" EntitySet="UsuarioSucursal_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioSucursal_SEG_Usuario_SEG" Association="ModeloSeguridad.Store.FK_UsuarioSucursal_SEG_Usuario_SEG">
+      <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+      <End Role="UsuarioSucursal_SEG" EntitySet="UsuarioSucursal_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VersionCliente_VER_ClienteCredito_CLI" Association="ModeloSeguridad.Store.FK_VersionCliente_VER_ClienteCredito_CLI">
+      <End Role="ClienteCredito_CLI" EntitySet="ClienteCredito_CLI" />
+      <End Role="VersionCliente_VER" EntitySet="VersionCliente_VER" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Accion_SEG">
+    <Key>
+      <PropertyRef Name="ACC_IdAccion" />
+    </Key>
+    <Property Name="ACC_IdAccion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ACC_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ACC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ACC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AdministradorReportes_REP">
+    <Key>
+      <PropertyRef Name="ADR_IdReporte" />
+    </Key>
+    <Property Name="ADR_IdReporte" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ADR_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADR_NombreReporte" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADR_ReportPath" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="ADR_ReportServerUrl" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="ADR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ADR_CreadoPor" Type="nchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="AdmisionValorAdicional_MEN">
+    <Key>
+      <PropertyRef Name="AVA_IdAdminisionMensajeria" />
+      <PropertyRef Name="AVA_IdTipoValorAdicional" />
+    </Key>
+    <Property Name="AVA_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="AVA_IdTipoValorAdicional" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="AVA_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="AVA_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="AVA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="AVA_CreadoPor" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AuditoriaExcepciones_AUD">
+    <Key>
+      <PropertyRef Name="AUE_IdError" />
+    </Key>
+    <Property Name="AUE_IdError" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AUE_Modulo" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="AUE_Tipo" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="AUE_Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="AUE_Mensaje" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="AUE_StackTrace" Type="text" Nullable="false" />
+    <Property Name="AUE_InnerException" Type="text" />
+    <Property Name="AUE_FechaError" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cargo_SEG">
+    <Key>
+      <PropertyRef Name="CAR_IdCargo" />
+    </Key>
+    <Property Name="CAR_IdCargo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CAR_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CAR_IdCargoReporta" Type="int" />
+    <Property Name="CAR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CAR_CodigoNovasoft" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CasaMatriz_ARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+    </Key>
+    <Property Name="CAM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAM_Nit" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CAM_CodigoSucursalERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Sigla" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CAM_Telefono" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CAM_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CAM_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_CodigoMinisterio" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CAM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroLogistico_PUA">
+    <Key>
+      <PropertyRef Name="CEL_IdCentroLogistico" />
+    </Key>
+    <Property Name="CEL_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="CEL_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="CEL_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CEL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicios_PUA">
+    <Key>
+      <PropertyRef Name="CES_IdCentroServicios" />
+    </Key>
+    <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CES_Tipo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CES_IdPropietario" Type="int" Nullable="false" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Telefono2" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Fax" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Barrio" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdMunicipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_IdPersonaResponsable" Type="bigint" Nullable="false" />
+    <Property Name="CES_Latitud" Type="numeric" Scale="6" />
+    <Property Name="CES_Longitud" Type="numeric" Scale="6" />
+    <Property Name="CES_Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_Sistematizada" Type="bit" Nullable="false" />
+    <Property Name="CES_IdCentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdTipoPropiedad" Type="smallint" Nullable="false" />
+    <Property Name="CES_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_VolumenMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_AdmiteFormaPagoAlCobro" Type="bit" Nullable="false" />
+    <Property Name="CES_VendePrepago" Type="bit" Nullable="false" />
+    <Property Name="CES_ClasGirosPorIngresos" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_PuedeRecibirGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_PuedePagarGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_TopeMaximoPorGiros" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_BaseInicialCaja" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CES_TopeMaximoPorPagos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_CodigoBodega" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdClasificadorCanalVenta" Type="smallint" Nullable="false" />
+    <Property Name="CES_CodigoSPN" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ClienteCredito_CLI">
+    <Key>
+      <PropertyRef Name="CLI_IdCliente" />
+    </Key>
+    <Property Name="CLI_IdCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CLI_Nit" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_DigitoVerificacion" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CLI_RazonSocial" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CLI_TipoSociedad" Type="smallint" Nullable="false" />
+    <Property Name="CLI_IdRepresentanteLegal" Type="bigint" Nullable="false" />
+    <Property Name="CLI_RegimenContributivo" Type="smallint" Nullable="false" />
+    <Property Name="CLI_FechaConstitucion" Type="datetime" Nullable="false" />
+    <Property Name="CLI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CLI_NombreGerenteGeneral" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CLI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CLI_Telefono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_Fax" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_ActividadEconomica" Type="smallint" Nullable="false" />
+    <Property Name="CLI_SegmentoMercado" Type="smallint" Nullable="false" />
+    <Property Name="CLI_FechaVinculacion" Type="datetime" Nullable="false" />
+    <Property Name="CLI_TopeMaximoCredito" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CLI_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CLI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CLI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_IdTipoSectorCliente" Type="smallint" Nullable="false" />
+    <Property Name="CLI_AplicaConvenio" Type="bit" />
+  </EntityType>
+  <EntityType Name="CredencialUsuario_SEG">
+    <Key>
+      <PropertyRef Name="CRU_IdCodigoUsuario" />
+    </Key>
+    <Property Name="CRU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="CRU_Clave" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CRU_FormatoClave" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="CRU_ClaveBloqueada" Type="bit" Nullable="false" />
+    <Property Name="CRU_ClaveAnterior" Type="varchar" MaxLength="50" />
+    <Property Name="CRU_FechaUltimoCambioClave" Type="datetime" Nullable="false" />
+    <Property Name="CRU_FechaUltimoBloqueoClave" Type="datetime" />
+    <Property Name="CRU_CantIntentosFallidosClave" Type="smallint" Nullable="false" />
+    <Property Name="CRU_DiasVencimiento" Type="int" Nullable="false" />
+    <Property Name="CRU_InicioIntentosFallidos" Type="datetime" />
+    <Property Name="CRU_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CUR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CredencialUsuarioHistorico_SEG">
+    <Key>
+      <PropertyRef Name="CRU_IdAuditoria" />
+    </Key>
+    <Property Name="CRU_IdAuditoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CRU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="CRU_Clave" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CRU_FormatoClave" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="CRU_ClaveBloqueada" Type="bit" Nullable="false" />
+    <Property Name="CRU_ClaveAnterior" Type="varchar" MaxLength="50" />
+    <Property Name="CRU_FechaUltimoCambioClave" Type="datetime" Nullable="false" />
+    <Property Name="CRU_FechaUltimoBloqueoClave" Type="datetime" />
+    <Property Name="CRU_CantIntentosFallidosClave" Type="smallint" Nullable="false" />
+    <Property Name="CRU_DiasVencimiento" Type="int" Nullable="false" />
+    <Property Name="CRU_InicioIntentosFallidos" Type="datetime" />
+    <Property Name="CRU_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CRU_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CRU_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="CRU_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CRU_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Gestion_ARE">
+    <Key>
+      <PropertyRef Name="GES_CodigoGestion" />
+    </Key>
+    <Property Name="GES_CodigoGestion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GES_IdGestion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="GES_IdMacroProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_CodigoBodegaERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="GES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HistoricoIngresosUsuario_SEG">
+    <Key>
+      <PropertyRef Name="HIU_IdHistoricoIngresosUsuario" />
+    </Key>
+    <Property Name="HIU_IdHistoricoIngresosUsuario" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HIU_Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="HIU_TipoLocacion" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="HIU_IdLocacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="HIU_DescripcionLocacion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="HIU_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Localidad_PAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LOC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_DHLActivo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MacroProceso_ARE">
+    <Key>
+      <PropertyRef Name="MAP_IdMacroProceso" />
+    </Key>
+    <Property Name="MAP_IdMacroProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MAP_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAP_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="MAP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MaqVersion_VER">
+    <Key>
+      <PropertyRef Name="MAV_MaquinaVersionId" />
+    </Key>
+    <Property Name="MAV_MaquinaVersionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAV_MaquinaId" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="MAV_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MAV_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MAV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAV_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MAV_Observaciones" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="MaqVersionHistorico_VER">
+    <Key>
+      <PropertyRef Name="MAV_IdAuditoria" />
+    </Key>
+    <Property Name="MAV_IdAuditoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAV_MaquinaVersionId" Type="int" Nullable="false" />
+    <Property Name="MAV_MaquinaId" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="MAV_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MAV_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MAV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAV_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MAV_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="MAV_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MAV_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Menu_SEG">
+    <Key>
+      <PropertyRef Name="MEN_IdMenu" />
+    </Key>
+    <Property Name="MEN_IdMenu" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MEN_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MEN_Etiqueta" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MEN_Assembly" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MEN_NameSpace" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MEN_UserControl" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MEN_UrlRelativa" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MEN_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="MEN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MEN_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MEN_AplicaPunto" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaAgencia" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaCol" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaRacol" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaGestion" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaCliente" Type="bit" Nullable="false" />
+    <Property Name="MEN_MenuWPF" Type="varchar" MaxLength="200" />
+    <Property Name="MEN_UrlImagenPub" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MenuHis_SEG">
+    <Key>
+      <PropertyRef Name="MEN_IdAuditoria" />
+    </Key>
+    <Property Name="MEN_IdAuditoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MEN_IdMenu" Type="int" Nullable="false" />
+    <Property Name="MEN_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MEN_Etiqueta" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MEN_Assembly" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MEN_NameSpace" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MEN_UserControl" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MEN_UrlRelativa" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MEN_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="MEN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MEN_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MEN_AplicaPunto" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaAgencia" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaCol" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaRacol" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaGestion" Type="bit" Nullable="false" />
+    <Property Name="MEN_AplicaCliente" Type="bit" Nullable="false" />
+    <Property Name="MEN_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MEN_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="MEN_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MenuRol_SEG">
+    <Key>
+      <PropertyRef Name="MER_IdMenuRol" />
+    </Key>
+    <Property Name="MER_IdMenuRol" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MER_IdMenu" Type="int" Nullable="false" />
+    <Property Name="MER_IdRol" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MER_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MER_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MenuRolAccion_SEG">
+    <Key>
+      <PropertyRef Name="MRA_IdMenuRolAccion" />
+    </Key>
+    <Property Name="MRA_IdMenuRolAccion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MRA_IdMenuRol" Type="int" Nullable="false" />
+    <Property Name="MRA_IdAccion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MRA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MRA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MenuRolHis_SEG">
+    <Key>
+      <PropertyRef Name="MER_IdAuditoria" />
+    </Key>
+    <Property Name="MER_IdAuditoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MER_IdMenu" Type="int" Nullable="false" />
+    <Property Name="MER_IdRol" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MER_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MER_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MER_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MER_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="MER_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Modulo_VER">
+    <Key>
+      <PropertyRef Name="MOD_IdModulo" />
+    </Key>
+    <Property Name="MOD_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MOD_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MOD_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParametrosFramework">
+    <Key>
+      <PropertyRef Name="PAR_IdParametro" />
+    </Key>
+    <Property Name="PAR_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PAR_ValorParametro" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAR_ModuloFR" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAR_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PersonaExterna_PAR">
+    <Key>
+      <PropertyRef Name="PEE_IdPersonaExterna" />
+    </Key>
+    <Property Name="PEE_IdPersonaExterna" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PEE_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="PEE_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEE_DigitoVerificacion" Type="char" MaxLength="1" />
+    <Property Name="PEE_FechaExpedicionDocumento" Type="datetime" Nullable="false" />
+    <Property Name="PEE_PrimerNombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEE_SegundoNombre" Type="varchar" MaxLength="50" />
+    <Property Name="PEE_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEE_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEE_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEE_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PEE_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEE_NumeroCelular" Type="varchar" MaxLength="25" />
+    <Property Name="PEE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PEE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PEE_Email" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="PersonaInterna_PAR">
+    <Key>
+      <PropertyRef Name="PEI_IdPersonaInterna" />
+    </Key>
+    <Property Name="PEI_IdPersonaInterna" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PEI_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_IdCargo" Type="int" Nullable="false" />
+    <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PEI_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_Email" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_IdRegionalAdm" Type="bigint" />
+    <Property Name="PEI_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PEI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PEI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PersonaInternaHistorico_PAR">
+    <Key>
+      <PropertyRef Name="PEI_IdAuditoria" />
+    </Key>
+    <Property Name="PEI_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PEI_IdPersonaInterna" Type="bigint" Nullable="false" />
+    <Property Name="PEI_IdTipoIdentificacion" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_IdCargo" Type="int" Nullable="false" />
+    <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PEI_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_Email" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_IdRegionalAdm" Type="bigint" />
+    <Property Name="PEI_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PEI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PEI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PEI_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PEI_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PEI_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RegionalAdministrativa_PUA">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+    </Key>
+    <Property Name="REA_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="REA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="REA_CodigoExternoSucursal" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REA_IdCasaMatriz" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReportesRol_REP">
+    <Key>
+      <PropertyRef Name="RER_IdReporte" />
+      <PropertyRef Name="RER_IdRol" />
+    </Key>
+    <Property Name="RER_IdReporte" Type="int" Nullable="false" />
+    <Property Name="RER_IdRol" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="RER_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RER_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Rol_SEG">
+    <Key>
+      <PropertyRef Name="ROL_IdRol" />
+    </Key>
+    <Property Name="ROL_IdRol" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="ROL_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ROL_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="ROL_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ROL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Sucursal_CLI">
+    <Key>
+      <PropertyRef Name="SUC_IdSucursal" />
+    </Key>
+    <Property Name="SUC_IdSucursal" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SUC_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="SUC_ClienteCredito" Type="int" Nullable="false" />
+    <Property Name="SUC_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SUC_Zona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SUC_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="SUC_Telefono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SUC_Fax" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SUC_Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SUC_NombreContacto" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="SUC_AgenciaEncargada" Type="bigint" Nullable="false" />
+    <Property Name="SUC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SUC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SUC_IdBodega" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="TipoIdentificacion_PAR">
+    <Key>
+      <PropertyRef Name="TII_IdTipoIdentificacion" />
+    </Key>
+    <Property Name="TII_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="TII_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TII_Estado" Type="char" MaxLength="3" />
+    <Property Name="TII_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TII_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TII_IdMnisterio" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario_SEG">
+    <Key>
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+    </Key>
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="USU_TipoUsuario" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="USU_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="USU_EsUsuarioInterno" Type="bit" Nullable="false" />
+    <Property Name="USU_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USU_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_EsCajeroPpal" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasivaICA" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioCentroServicio_SEG">
+    <Key>
+      <PropertyRef Name="UCS_IdCodigoUsuario" />
+      <PropertyRef Name="UCS_IdCentroServicios" />
+    </Key>
+    <Property Name="UCS_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="UCS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="UCS_Caja" Type="int" Nullable="false" />
+    <Property Name="UCS_NombreCentroServicios" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="UCS_ImpresionPOS" Type="bit" Nullable="false" />
+    <Property Name="UCS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="UCS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UsuarioGestion_SEG">
+    <Key>
+      <PropertyRef Name="USG_IdCodigoUsuario" />
+      <PropertyRef Name="USG_CodigoGestion" />
+    </Key>
+    <Property Name="USG_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USG_CodigoGestion" Type="bigint" Nullable="false" />
+    <Property Name="USG_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="USG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UsuarioHistorico_SEG">
+    <Key>
+      <PropertyRef Name="USU_IdAuditoria" />
+    </Key>
+    <Property Name="USU_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="USU_TipoUsuario" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="USU_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="USU_EsUsuarioInterno" Type="bit" Nullable="false" />
+    <Property Name="USU_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USU_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="USU_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_EsCajeroPpal" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasivaICA" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioPersonaExterna_SEG">
+    <Key>
+      <PropertyRef Name="USP_IdCodigoUsuario" />
+    </Key>
+    <Property Name="USP_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USP_IdPersonaExterna" Type="bigint" Nullable="false" />
+    <Property Name="USP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UsuarioPersonaExternaHist_SEG">
+    <Key>
+      <PropertyRef Name="USP_IdAuditoria" />
+    </Key>
+    <Property Name="USP_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USP_IdPersonaExterna" Type="bigint" Nullable="false" />
+    <Property Name="USP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USP_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USP_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USP_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="USP_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="UsuarioPersonaInterna_SEG">
+    <Key>
+      <PropertyRef Name="USP_IdCodigoUsuario" />
+    </Key>
+    <Property Name="USP_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USP_IdPersonaInterna" Type="bigint" Nullable="false" />
+    <Property Name="USP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UsuarioPersonaInternaHist_SEG">
+    <Key>
+      <PropertyRef Name="USP_IdAuditoria" />
+    </Key>
+    <Property Name="USP_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USP_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USP_IdPersonaInterna" Type="bigint" Nullable="false" />
+    <Property Name="USP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USP_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USP_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USP_FechaCambio" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioRol_SEG">
+    <Key>
+      <PropertyRef Name="USR_IdCodigoUsuario" />
+      <PropertyRef Name="USR_IdRol" />
+    </Key>
+    <Property Name="USR_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USR_IdRol" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="USR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UsuarioRolHistorico_SEG">
+    <Key>
+      <PropertyRef Name="USR_IdAuditoria" />
+    </Key>
+    <Property Name="USR_IdAuditoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USR_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USR_IdRol" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="USR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USR_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="USR_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USR_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="UsuarioSucursal_SEG">
+    <Key>
+      <PropertyRef Name="USS_IdCodigoUsuario" />
+      <PropertyRef Name="USS_IdSucursal" />
+    </Key>
+    <Property Name="USS_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USS_IdSucursal" Type="int" Nullable="false" />
+    <Property Name="USS_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="USS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="VersionCliente_VER">
+    <Key>
+      <PropertyRef Name="VEC_IdCliente" />
+      <PropertyRef Name="VEC_IdVersion" />
+    </Key>
+    <Property Name="VEC_IdCliente" Type="int" Nullable="false" />
+    <Property Name="VEC_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VEC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VEC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="VersionClienteHist_VER">
+    <Key>
+      <PropertyRef Name="VEC_IdAuditoria" />
+    </Key>
+    <Property Name="VEC_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VEC_IdCliente" Type="int" Nullable="false" />
+    <Property Name="VEC_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VEC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VEC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VEC_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VEC_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.Cargos_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Cargos_VSEG">
+    <Key>
+      <PropertyRef Name="CAR_IdCargo" />
+      <PropertyRef Name="CAR_Descripcion" />
+      <PropertyRef Name="CAR_DescripcionReporta" />
+    </Key>
+    <Property Name="CAR_IdCargo" Type="int" Nullable="false" />
+    <Property Name="CAR_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CAR_IdCargoReporta" Type="int" />
+    <Property Name="CAR_DescripcionReporta" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.CredencialUsuario_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CredencialUsuario_VSEG">
+    <Key>
+      <PropertyRef Name="CRU_Clave" />
+      <PropertyRef Name="CRU_FormatoClave" />
+      <PropertyRef Name="CRU_CantIntentosFallidosClave" />
+      <PropertyRef Name="CRU_ClaveBloqueada" />
+      <PropertyRef Name="CRU_DiasVencimiento" />
+      <PropertyRef Name="CRU_IdCodigoUsuario" />
+      <PropertyRef Name="CRU_FechaUltimoCambioClave" />
+      <PropertyRef Name="USU_IdUsuario" />
+      <PropertyRef Name="USU_TipoUsuario" />
+      <PropertyRef Name="USU_EsUsuarioInterno" />
+      <PropertyRef Name="USU_RequiereIdMaquina" />
+      <PropertyRef Name="USU_Estado" />
+      <PropertyRef Name="USU_AutorizaCargaMasiva" />
+      <PropertyRef Name="USU_AutorizaCargaMasivaICA" />
+    </Key>
+    <Property Name="CRU_Clave" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CRU_FormatoClave" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="CRU_CantIntentosFallidosClave" Type="smallint" Nullable="false" />
+    <Property Name="CRU_ClaveBloqueada" Type="bit" Nullable="false" />
+    <Property Name="CRU_ClaveAnterior" Type="varchar" MaxLength="50" />
+    <Property Name="CRU_DiasVencimiento" Type="int" Nullable="false" />
+    <Property Name="CRU_InicioIntentosFallidos" Type="datetime" />
+    <Property Name="CRU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="CRU_FechaUltimoCambioClave" Type="datetime" Nullable="false" />
+    <Property Name="CRU_FechaUltimoBloqueoClave" Type="datetime" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_TipoUsuario" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="USU_EsUsuarioInterno" Type="bit" Nullable="false" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasivaICA" Type="bit" Nullable="false" />
+    <Property Name="USP_IdPersonaInterna" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.EstadoActivoInactivo_VFRM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="EstadoActivoInactivo_VFRM">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+      <PropertyRef Name="Estado" />
+    </Key>
+    <Property Name="IdEstado" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="8" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.Localidades_VPAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Localidades_VPAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="LOC_IdTipo" />
+      <PropertyRef Name="TLO_Descripcion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_NombreCorto" />
+      <PropertyRef Name="LOC_CodigoPostal" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="TLO_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoPrimero" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoPrimeroDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombrePrimero" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoPrimero" Type="varchar" MaxLength="4" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoSegundo" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoSegundoDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombreSegundo" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoSegundo" Type="varchar" MaxLength="4" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoTercero" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoTerceroDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombreTercero" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoTercero" Type="varchar" MaxLength="4" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="110" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.TiposAutenticacion_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TiposAutenticacion_VSEG">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Descripcion" />
+    </Key>
+    <Property Name="Id" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="14" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.TipoUsuario_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TipoUsuario_VSEG">
+    <Key>
+      <PropertyRef Name="IdTipoUsuario" />
+      <PropertyRef Name="Descripcion" />
+    </Key>
+    <Property Name="IdTipoUsuario" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.UsuarioClienteCredito_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="UsuarioClienteCredito_VSEG">
+    <Key>
+      <PropertyRef Name="PEE_FechaExpedicionDocumento" />
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+      <PropertyRef Name="USU_IdUsuario" />
+      <PropertyRef Name="USU_Estado" />
+      <PropertyRef Name="USU_RequiereIdMaquina" />
+      <PropertyRef Name="CLI_Estado" />
+      <PropertyRef Name="PEE_IdPersonaExterna" />
+      <PropertyRef Name="TII_Descripcion" />
+      <PropertyRef Name="PEE_Identificacion" />
+      <PropertyRef Name="PEE_IdTipoIdentificacion" />
+      <PropertyRef Name="PEE_PrimerNombre" />
+      <PropertyRef Name="PEE_PrimerApellido" />
+      <PropertyRef Name="PEE_Direccion" />
+      <PropertyRef Name="PEE_Municipio" />
+      <PropertyRef Name="PEE_Telefono" />
+      <PropertyRef Name="CLI_IdCliente" />
+      <PropertyRef Name="CLI_RazonSocial" />
+      <PropertyRef Name="CLI_Nit" />
+      <PropertyRef Name="CLI_DigitoVerificacion" />
+      <PropertyRef Name="CLI_Telefono" />
+      <PropertyRef Name="CLI_Direccion" />
+      <PropertyRef Name="USU_AutorizaCargaMasiva" />
+    </Key>
+    <Property Name="PEE_FechaExpedicionDocumento" Type="datetime" Nullable="false" />
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="CLI_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PEE_IdPersonaExterna" Type="bigint" Nullable="false" />
+    <Property Name="TII_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEE_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEE_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="PEE_DigitoVerificacion" Type="char" MaxLength="1" />
+    <Property Name="PEE_PrimerNombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEE_SegundoNombre" Type="varchar" MaxLength="50" />
+    <Property Name="PEE_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEE_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEE_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEE_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PEE_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEE_NumeroCelular" Type="varchar" MaxLength="25" />
+    <Property Name="CLI_IdCliente" Type="int" Nullable="false" />
+    <Property Name="CLI_RazonSocial" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CLI_Nit" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_DigitoVerificacion" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CLI_Telefono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.UsuarioInterno_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="UsuarioInterno_VSEG">
+    <Key>
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+      <PropertyRef Name="USU_IdUsuario" />
+      <PropertyRef Name="USU_Estado" />
+      <PropertyRef Name="USU_TipoUsuario" />
+      <PropertyRef Name="USU_RequiereIdMaquina" />
+      <PropertyRef Name="USU_Comentarios" />
+      <PropertyRef Name="USU_EsUsuarioInterno" />
+      <PropertyRef Name="USP_IdPersonaInterna" />
+      <PropertyRef Name="PEI_IdTipoIdentificacion" />
+      <PropertyRef Name="PEI_Identificacion" />
+      <PropertyRef Name="PEI_IdCargo" />
+      <PropertyRef Name="PEI_Nombre" />
+      <PropertyRef Name="PEI_PrimerApellido" />
+      <PropertyRef Name="PEI_Direccion" />
+      <PropertyRef Name="PEI_Municipio" />
+      <PropertyRef Name="PEI_Telefono" />
+      <PropertyRef Name="PEI_Comentarios" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="CAR_Descripcion" />
+      <PropertyRef Name="CES_IdMunicipio" />
+    </Key>
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="USU_TipoUsuario" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="USU_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="USU_EsUsuarioInterno" Type="bit" Nullable="false" />
+    <Property Name="USP_IdPersonaInterna" Type="bigint" Nullable="false" />
+    <Property Name="PEI_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_IdCargo" Type="int" Nullable="false" />
+    <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PEI_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_Email" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_IdRegionalAdm" Type="bigint" />
+    <Property Name="PEI_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CAR_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CAR_IdCargoReporta" Type="int" />
+    <Property Name="CES_IdMunicipio" Type="varchar" Nullable="false" MaxLength="8" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.UsuarioPersonaInterna_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="UsuarioPersonaInterna_VSEG">
+    <Key>
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+      <PropertyRef Name="PEI_IdPersonaInterna" />
+      <PropertyRef Name="USU_IdUsuario" />
+      <PropertyRef Name="PEI_PrimerApellido" />
+      <PropertyRef Name="PEI_Direccion" />
+      <PropertyRef Name="PEI_Nombre" />
+      <PropertyRef Name="USU_RequiereIdMaquina" />
+      <PropertyRef Name="PEI_Telefono" />
+      <PropertyRef Name="PEI_Identificacion" />
+      <PropertyRef Name="TII_Descripcion" />
+      <PropertyRef Name="PEI_Municipio" />
+      <PropertyRef Name="CAR_Descripcion" />
+      <PropertyRef Name="PEI_IdCargo" />
+      <PropertyRef Name="PEI_IdTipoIdentificacion" />
+      <PropertyRef Name="USU_Estado" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="USU_EsCajeroPpal" />
+      <PropertyRef Name="USU_AutorizaCargaMasiva" />
+      <PropertyRef Name="USU_AutorizaCargaMasivaICA" />
+    </Key>
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="PEI_IdPersonaInterna" Type="bigint" Nullable="false" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEI_Email" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="PEI_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TII_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CAR_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_IdCargo" Type="int" Nullable="false" />
+    <Property Name="PEI_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PEI_IdRegionalAdm" Type="bigint" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_EsCajeroPpal" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasivaICA" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Cargo_SEG_Cargo_SEG">
+    <End Role="Cargo_SEG" Type="ModeloSeguridad.Store.Cargo_SEG" Multiplicity="0..1" />
+    <End Role="Cargo_SEG1" Type="ModeloSeguridad.Store.Cargo_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo_SEG">
+        <PropertyRef Name="CAR_IdCargo" />
+      </Principal>
+      <Dependent Role="Cargo_SEG1">
+        <PropertyRef Name="CAR_IdCargoReporta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroLogistico_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloSeguridad.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="CentroLogistico_PUA" Type="ModeloSeguridad.Store.CentroLogistico_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdCentroLogistico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloSeguridad.Store.RegionalAdministrativa_PUA" Multiplicity="1" />
+    <End Role="CentroLogistico_PUA" Type="ModeloSeguridad.Store.CentroLogistico_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Principal>
+      <Dependent Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicios_PUA_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="CentroServicios_PUA" Type="ModeloSeguridad.Store.CentroServicios_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteCredito_CLI_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="ClienteCredito_CLI" Type="ModeloSeguridad.Store.ClienteCredito_CLI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="ClienteCredito_CLI">
+        <PropertyRef Name="CLI_Municipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CredencialUsuario_SEG_Usuario_SEG">
+    <End Role="Usuario_SEG" Type="ModeloSeguridad.Store.Usuario_SEG" Multiplicity="1" />
+    <End Role="CredencialUsuario_SEG" Type="ModeloSeguridad.Store.CredencialUsuario_SEG" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_SEG">
+        <PropertyRef Name="USU_IdCodigoUsuario" />
+      </Principal>
+      <Dependent Role="CredencialUsuario_SEG">
+        <PropertyRef Name="CRU_IdCodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gestion_ARE_MacroProceso_ARE">
+    <End Role="MacroProceso_ARE" Type="ModeloSeguridad.Store.MacroProceso_ARE" Multiplicity="1" />
+    <End Role="Gestion_ARE" Type="ModeloSeguridad.Store.Gestion_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MacroProceso_ARE">
+        <PropertyRef Name="MAP_IdMacroProceso" />
+      </Principal>
+      <Dependent Role="Gestion_ARE">
+        <PropertyRef Name="GES_IdMacroProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+    <End Role="Localidad_PAR" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+    <End Role="Localidad_PAR" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MacroProceso_ARE_CasaMatriz_ARE">
+    <End Role="CasaMatriz_ARE" Type="ModeloSeguridad.Store.CasaMatriz_ARE" Multiplicity="1" />
+    <End Role="MacroProceso_ARE" Type="ModeloSeguridad.Store.MacroProceso_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasaMatriz_ARE">
+        <PropertyRef Name="CAM_IdCasaMatriz" />
+      </Principal>
+      <Dependent Role="MacroProceso_ARE">
+        <PropertyRef Name="MAP_IdCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Menu_SEG_Modulo_VER1">
+    <End Role="Modulo_VER" Type="ModeloSeguridad.Store.Modulo_VER" Multiplicity="1" />
+    <End Role="Menu_SEG" Type="ModeloSeguridad.Store.Menu_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo_VER">
+        <PropertyRef Name="MOD_IdModulo" />
+      </Principal>
+      <Dependent Role="Menu_SEG">
+        <PropertyRef Name="MEN_IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuRol_SEG_Menu_SEG">
+    <End Role="Menu_SEG" Type="ModeloSeguridad.Store.Menu_SEG" Multiplicity="1" />
+    <End Role="MenuRol_SEG" Type="ModeloSeguridad.Store.MenuRol_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu_SEG">
+        <PropertyRef Name="MEN_IdMenu" />
+      </Principal>
+      <Dependent Role="MenuRol_SEG">
+        <PropertyRef Name="MER_IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuRolAccion_SEG_Accion_SEG">
+    <End Role="Accion_SEG" Type="ModeloSeguridad.Store.Accion_SEG" Multiplicity="1" />
+    <End Role="MenuRolAccion_SEG" Type="ModeloSeguridad.Store.MenuRolAccion_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Accion_SEG">
+        <PropertyRef Name="ACC_IdAccion" />
+      </Principal>
+      <Dependent Role="MenuRolAccion_SEG">
+        <PropertyRef Name="MRA_IdAccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuRolAccion_SEG_MenuRol_SEG">
+    <End Role="MenuRol_SEG" Type="ModeloSeguridad.Store.MenuRol_SEG" Multiplicity="1" />
+    <End Role="MenuRolAccion_SEG" Type="ModeloSeguridad.Store.MenuRolAccion_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MenuRol_SEG">
+        <PropertyRef Name="MER_IdMenuRol" />
+      </Principal>
+      <Dependent Role="MenuRolAccion_SEG">
+        <PropertyRef Name="MRA_IdMenuRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Modulo_Rol_SEG_Rol_SEG">
+    <End Role="Rol_SEG" Type="ModeloSeguridad.Store.Rol_SEG" Multiplicity="1" />
+    <End Role="MenuRol_SEG" Type="ModeloSeguridad.Store.MenuRol_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol_SEG">
+        <PropertyRef Name="ROL_IdRol" />
+      </Principal>
+      <Dependent Role="MenuRol_SEG">
+        <PropertyRef Name="MER_IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaExterna_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="PersonaExterna_PAR" Type="ModeloSeguridad.Store.PersonaExterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="PersonaExterna_PAR">
+        <PropertyRef Name="PEE_Municipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaExterna_PAR_TipoIdentificacion_PAR">
+    <End Role="TipoIdentificacion_PAR" Type="ModeloSeguridad.Store.TipoIdentificacion_PAR" Multiplicity="1" />
+    <End Role="PersonaExterna_PAR" Type="ModeloSeguridad.Store.PersonaExterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion_PAR">
+        <PropertyRef Name="TII_IdTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="PersonaExterna_PAR">
+        <PropertyRef Name="PEE_IdTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaInterna_PAR_Cargo_SEG">
+    <End Role="Cargo_SEG" Type="ModeloSeguridad.Store.Cargo_SEG" Multiplicity="1" />
+    <End Role="PersonaInterna_PAR" Type="ModeloSeguridad.Store.PersonaInterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo_SEG">
+        <PropertyRef Name="CAR_IdCargo" />
+      </Principal>
+      <Dependent Role="PersonaInterna_PAR">
+        <PropertyRef Name="PEI_IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaInterna_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="PersonaInterna_PAR" Type="ModeloSeguridad.Store.PersonaInterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="PersonaInterna_PAR">
+        <PropertyRef Name="PEI_Municipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaInterna_PAR_RegionalAdministrativa_PUA">
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloSeguridad.Store.RegionalAdministrativa_PUA" Multiplicity="0..1" />
+    <End Role="PersonaInterna_PAR" Type="ModeloSeguridad.Store.PersonaInterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Principal>
+      <Dependent Role="PersonaInterna_PAR">
+        <PropertyRef Name="PEI_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaInterna_PAR_TipoIdentificacion_PAR">
+    <End Role="TipoIdentificacion_PAR" Type="ModeloSeguridad.Store.TipoIdentificacion_PAR" Multiplicity="1" />
+    <End Role="PersonaInterna_PAR" Type="ModeloSeguridad.Store.PersonaInterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion_PAR">
+        <PropertyRef Name="TII_IdTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="PersonaInterna_PAR">
+        <PropertyRef Name="PEI_IdTipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegionalAdministrativa_PUA_CasaMatriz_ARE">
+    <End Role="CasaMatriz_ARE" Type="ModeloSeguridad.Store.CasaMatriz_ARE" Multiplicity="1" />
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloSeguridad.Store.RegionalAdministrativa_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasaMatriz_ARE">
+        <PropertyRef Name="CAM_IdCasaMatriz" />
+      </Principal>
+      <Dependent Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloSeguridad.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloSeguridad.Store.RegionalAdministrativa_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportesRol_REP_AdministradorReportes_REP">
+    <End Role="AdministradorReportes_REP" Type="ModeloSeguridad.Store.AdministradorReportes_REP" Multiplicity="1" />
+    <End Role="ReportesRol_REP" Type="ModeloSeguridad.Store.ReportesRol_REP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdministradorReportes_REP">
+        <PropertyRef Name="ADR_IdReporte" />
+      </Principal>
+      <Dependent Role="ReportesRol_REP">
+        <PropertyRef Name="RER_IdReporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReportesRol_REP_Rol_SEG">
+    <End Role="Rol_SEG" Type="ModeloSeguridad.Store.Rol_SEG" Multiplicity="1" />
+    <End Role="ReportesRol_REP" Type="ModeloSeguridad.Store.ReportesRol_REP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol_SEG">
+        <PropertyRef Name="ROL_IdRol" />
+      </Principal>
+      <Dependent Role="ReportesRol_REP">
+        <PropertyRef Name="RER_IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sucursal_CLI_CentroServicios_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloSeguridad.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="Sucursal_CLI" Type="ModeloSeguridad.Store.Sucursal_CLI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="Sucursal_CLI">
+        <PropertyRef Name="SUC_AgenciaEncargada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sucursal_CLI_ClienteCredito_CLI">
+    <End Role="ClienteCredito_CLI" Type="ModeloSeguridad.Store.ClienteCredito_CLI" Multiplicity="1" />
+    <End Role="Sucursal_CLI" Type="ModeloSeguridad.Store.Sucursal_CLI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteCredito_CLI">
+        <PropertyRef Name="CLI_IdCliente" />
+      </Principal>
+      <Dependent Role="Sucursal_CLI">
+        <PropertyRef Name="SUC_ClienteCredito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sucursal_CLI_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloSeguridad.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="Sucursal_CLI" Type="ModeloSeguridad.Store.Sucursal_CLI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Sucursal_CLI">
+        <PropertyRef Name="SUC_Municipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioCentroServicio_SEG_CentroServicios_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloSeguridad.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="UsuarioCentroServicio_SEG" Type="ModeloSeguridad.Store.UsuarioCentroServicio_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="UsuarioCentroServicio_SEG">
+        <PropertyRef Name="UCS_IdCentroServicios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioCentroServicio_SEG_Usuario_SEG">
+    <End Role="Usuario_SEG" Type="ModeloSeguridad.Store.Usuario_SEG" Multiplicity="1" />
+    <End Role="UsuarioCentroServicio_SEG" Type="ModeloSeguridad.Store.UsuarioCentroServicio_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_SEG">
+        <PropertyRef Name="USU_IdCodigoUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioCentroServicio_SEG">
+        <PropertyRef Name="UCS_IdCodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioGestion_SEG_Gestion_ARE">
+    <End Role="Gestion_ARE" Type="ModeloSeguridad.Store.Gestion_ARE" Multiplicity="1" />
+    <End Role="UsuarioGestion_SEG" Type="ModeloSeguridad.Store.UsuarioGestion_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gestion_ARE">
+        <PropertyRef Name="GES_CodigoGestion" />
+      </Principal>
+      <Dependent Role="UsuarioGestion_SEG">
+        <PropertyRef Name="USG_CodigoGestion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioGestion_SEG_Usuario_SEG">
+    <End Role="Usuario_SEG" Type="ModeloSeguridad.Store.Usuario_SEG" Multiplicity="1" />
+    <End Role="UsuarioGestion_SEG" Type="ModeloSeguridad.Store.UsuarioGestion_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_SEG">
+        <PropertyRef Name="USU_IdCodigoUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioGestion_SEG">
+        <PropertyRef Name="USG_IdCodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPersonaExterna_SEG_PersonaExterna_PAR">
+    <End Role="PersonaExterna_PAR" Type="ModeloSeguridad.Store.PersonaExterna_PAR" Multiplicity="1" />
+    <End Role="UsuarioPersonaExterna_SEG" Type="ModeloSeguridad.Store.UsuarioPersonaExterna_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonaExterna_PAR">
+        <PropertyRef Name="PEE_IdPersonaExterna" />
+      </Principal>
+      <Dependent Role="UsuarioPersonaExterna_SEG">
+        <PropertyRef Name="USP_IdPersonaExterna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPersonaExterna_SEG_Usuario_SEG">
+    <End Role="Usuario_SEG" Type="ModeloSeguridad.Store.Usuario_SEG" Multiplicity="1" />
+    <End Role="UsuarioPersonaExterna_SEG" Type="ModeloSeguridad.Store.UsuarioPersonaExterna_SEG" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_SEG">
+        <PropertyRef Name="USU_IdCodigoUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioPersonaExterna_SEG">
+        <PropertyRef Name="USP_IdCodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR">
+    <End Role="PersonaInterna_PAR" Type="ModeloSeguridad.Store.PersonaInterna_PAR" Multiplicity="1" />
+    <End Role="UsuarioPersonaInterna_SEG" Type="ModeloSeguridad.Store.UsuarioPersonaInterna_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PersonaInterna_PAR">
+        <PropertyRef Name="PEI_IdPersonaInterna" />
+      </Principal>
+      <Dependent Role="UsuarioPersonaInterna_SEG">
+        <PropertyRef Name="USP_IdPersonaInterna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioPersonaInterna_SEG_Usuario_SEG">
+    <End Role="Usuario_SEG" Type="ModeloSeguridad.Store.Usuario_SEG" Multiplicity="1" />
+    <End Role="UsuarioPersonaInterna_SEG" Type="ModeloSeguridad.Store.UsuarioPersonaInterna_SEG" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_SEG">
+        <PropertyRef Name="USU_IdCodigoUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioPersonaInterna_SEG">
+        <PropertyRef Name="USP_IdCodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioRol_SEG_Rol_SEG">
+    <End Role="Rol_SEG" Type="ModeloSeguridad.Store.Rol_SEG" Multiplicity="1" />
+    <End Role="UsuarioRol_SEG" Type="ModeloSeguridad.Store.UsuarioRol_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol_SEG">
+        <PropertyRef Name="ROL_IdRol" />
+      </Principal>
+      <Dependent Role="UsuarioRol_SEG">
+        <PropertyRef Name="USR_IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioRol_SEG_Usuario_SEG">
+    <End Role="Usuario_SEG" Type="ModeloSeguridad.Store.Usuario_SEG" Multiplicity="1" />
+    <End Role="UsuarioRol_SEG" Type="ModeloSeguridad.Store.UsuarioRol_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_SEG">
+        <PropertyRef Name="USU_IdCodigoUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioRol_SEG">
+        <PropertyRef Name="USR_IdCodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioSucursal_SEG_Sucursal_CLI">
+    <End Role="Sucursal_CLI" Type="ModeloSeguridad.Store.Sucursal_CLI" Multiplicity="1" />
+    <End Role="UsuarioSucursal_SEG" Type="ModeloSeguridad.Store.UsuarioSucursal_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sucursal_CLI">
+        <PropertyRef Name="SUC_IdSucursal" />
+      </Principal>
+      <Dependent Role="UsuarioSucursal_SEG">
+        <PropertyRef Name="USS_IdSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioSucursal_SEG_Usuario_SEG">
+    <End Role="Usuario_SEG" Type="ModeloSeguridad.Store.Usuario_SEG" Multiplicity="1" />
+    <End Role="UsuarioSucursal_SEG" Type="ModeloSeguridad.Store.UsuarioSucursal_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_SEG">
+        <PropertyRef Name="USU_IdCodigoUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioSucursal_SEG">
+        <PropertyRef Name="USS_IdCodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VersionCliente_VER_ClienteCredito_CLI">
+    <End Role="ClienteCredito_CLI" Type="ModeloSeguridad.Store.ClienteCredito_CLI" Multiplicity="1" />
+    <End Role="VersionCliente_VER" Type="ModeloSeguridad.Store.VersionCliente_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteCredito_CLI">
+        <PropertyRef Name="CLI_IdCliente" />
+      </Principal>
+      <Dependent Role="VersionCliente_VER">
+        <PropertyRef Name="VEC_IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paObtenerCajasYCajerosPorPunto_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCentroSvc" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerCajerosPorPuntoYPerfil_SEG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCentroSvc" Type="bigint" Mode="In" />
+    <Parameter Name="IdRol" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerUsrCtrSvcCargo_SEG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="FiltroUsuario" Type="varchar" Mode="In" />
+    <Parameter Name="FiltroIdentificacion" Type="varchar" Mode="In" />
+    <Parameter Name="FiltroRacol" Type="varchar" Mode="In" />
+    <Parameter Name="FiltroNombre" Type="varchar" Mode="In" />
+    <Parameter Name="FiltroEstado" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

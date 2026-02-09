@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DESARROLLOModelStoreContainer" CdmEntityContainer="FacturacionEntities">
+    <EntitySetMapping Name="ConceptoProgramado_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ConceptoProgramado_FAC">
+        <MappingFragment StoreEntitySet="ConceptoProgramado_FAC">
+          <ScalarProperty Name="COP_CreadoPor" ColumnName="COP_CreadoPor" />
+          <ScalarProperty Name="COP_FechaGrabacion" ColumnName="COP_FechaGrabacion" />
+          <ScalarProperty Name="COP_Total" ColumnName="COP_Total" />
+          <ScalarProperty Name="COP_TotalImpuestos" ColumnName="COP_TotalImpuestos" />
+          <ScalarProperty Name="COP_TotalNeto" ColumnName="COP_TotalNeto" />
+          <ScalarProperty Name="COP_ValorUnitario" ColumnName="COP_ValorUnitario" />
+          <ScalarProperty Name="COP_DescripcionConcepto" ColumnName="COP_DescripcionConcepto" />
+          <ScalarProperty Name="COP_Cantidad" ColumnName="COP_Cantidad" />
+          <ScalarProperty Name="COP_DescripcionSucursal" ColumnName="COP_DescripcionSucursal" />
+          <ScalarProperty Name="COP_IdSucursal" ColumnName="COP_IdSucursal" />
+          <ScalarProperty Name="COP_IdServicio" ColumnName="COP_IdServicio" />
+          <ScalarProperty Name="COP_IdProgramacion" ColumnName="COP_IdProgramacion" />
+          <ScalarProperty Name="COP_IdConceptoProg" ColumnName="COP_IdConceptoProg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeduccionesFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.DeduccionesFactura_FAC">
+        <MappingFragment StoreEntitySet="DeduccionesFactura_FAC">
+          <ScalarProperty Name="DEF_CreadoPor" ColumnName="DEF_CreadoPor" />
+          <ScalarProperty Name="DEF_FechaGrabacion" ColumnName="DEF_FechaGrabacion" />
+          <ScalarProperty Name="DEF_TotalCalculado" ColumnName="DEF_TotalCalculado" />
+          <ScalarProperty Name="DEF_TarifaPorcentual" ColumnName="DEF_TarifaPorcentual" />
+          <ScalarProperty Name="DEF_ValorFijo" ColumnName="DEF_ValorFijo" />
+          <ScalarProperty Name="DEF_ValorPorMonto" ColumnName="DEF_ValorPorMonto" />
+          <ScalarProperty Name="DEF_BaseCalculo" ColumnName="DEF_BaseCalculo" />
+          <ScalarProperty Name="DEF_Descripcion" ColumnName="DEF_Descripcion" />
+          <ScalarProperty Name="DEF_NumeroFactura" ColumnName="DEF_NumeroFactura" />
+          <ScalarProperty Name="DEF_IdDeduccion" ColumnName="DEF_IdDeduccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DescuentosFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.DescuentosFactura_FAC">
+        <MappingFragment StoreEntitySet="DescuentosFactura_FAC">
+          <ScalarProperty Name="DEF_CreadoPor" ColumnName="DEF_CreadoPor" />
+          <ScalarProperty Name="DEF_FechaGrabacion" ColumnName="DEF_FechaGrabacion" />
+          <ScalarProperty Name="DEF_Motivo" ColumnName="DEF_Motivo" />
+          <ScalarProperty Name="DEF_Valor" ColumnName="DEF_Valor" />
+          <ScalarProperty Name="DEF_NumeroFactura" ColumnName="DEF_NumeroFactura" />
+          <ScalarProperty Name="DEF_IdDescuento" ColumnName="DEF_IdDescuento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleXOperFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.DetalleXOperFactura_FAC">
+        <MappingFragment StoreEntitySet="DetalleXOperFactura_FAC">
+          <ScalarProperty Name="DOF_CreadoPor" ColumnName="DOF_CreadoPor" />
+          <ScalarProperty Name="DOF_FechaGrabacion" ColumnName="DOF_FechaGrabacion" />
+          <ScalarProperty Name="DOF_FechaOperacion" ColumnName="DOF_FechaOperacion" />
+          <ScalarProperty Name="DOF_ValorTotal" ColumnName="DOF_ValorTotal" />
+          <ScalarProperty Name="DOF_ValorImpuestos" ColumnName="DOF_ValorImpuestos" />
+          <ScalarProperty Name="DOF_PorcImpuestos" ColumnName="DOF_PorcImpuestos" />
+          <ScalarProperty Name="DOF_ValorServicio" ColumnName="DOF_ValorServicio" />
+          <ScalarProperty Name="DOF_NombreSucursal" ColumnName="DOF_NombreSucursal" />
+          <ScalarProperty Name="DOF_IdSucursal" ColumnName="DOF_IdSucursal" />
+          <ScalarProperty Name="DOF_NumeroFactura" ColumnName="DOF_NumeroFactura" />
+          <ScalarProperty Name="DOF_NumeroOperacion" ColumnName="DOF_NumeroOperacion" />
+          <ScalarProperty Name="DOF_IdServicio" ColumnName="DOF_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleXServicioFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.DetalleXServicioFactura_FAC">
+        <MappingFragment StoreEntitySet="DetalleXServicioFactura_FAC">
+          <ScalarProperty Name="DSF_CreadoPor" ColumnName="DSF_CreadoPor" />
+          <ScalarProperty Name="DSF_FechaGrabacion" ColumnName="DSF_FechaGrabacion" />
+          <ScalarProperty Name="DSF_ConceptoManual" ColumnName="DSF_ConceptoManual" />
+          <ScalarProperty Name="DSF_Total" ColumnName="DSF_Total" />
+          <ScalarProperty Name="DSF_TotalImpuestos" ColumnName="DSF_TotalImpuestos" />
+          <ScalarProperty Name="DSF_TotalNeto" ColumnName="DSF_TotalNeto" />
+          <ScalarProperty Name="DSF_ValorUnitario" ColumnName="DSF_ValorUnitario" />
+          <ScalarProperty Name="DSF_DescripcionConcepto" ColumnName="DSF_DescripcionConcepto" />
+          <ScalarProperty Name="DSF_Cantidad" ColumnName="DSF_Cantidad" />
+          <ScalarProperty Name="DSF_DescripcionSucursal" ColumnName="DSF_DescripcionSucursal" />
+          <ScalarProperty Name="DSF_IdSucursal" ColumnName="DSF_IdSucursal" />
+          <ScalarProperty Name="DSF_IdServicio" ColumnName="DSF_IdServicio" />
+          <ScalarProperty Name="DSF_NumeroFactura" ColumnName="DSF_NumeroFactura" />
+          <ScalarProperty Name="DSF_IdDetallexServFactura" ColumnName="DSF_IdDetallexServFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExclusionesProgramacion_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ExclusionesProgramacion_FAC">
+        <MappingFragment StoreEntitySet="ExclusionesProgramacion_FAC">
+          <ScalarProperty Name="EXP_CreadoPor" ColumnName="EXP_CreadoPor" />
+          <ScalarProperty Name="EXP_FechaGrabacion" ColumnName="EXP_FechaGrabacion" />
+          <ScalarProperty Name="EXP_FechaOperacion" ColumnName="EXP_FechaOperacion" />
+          <ScalarProperty Name="EXP_Valor" ColumnName="EXP_Valor" />
+          <ScalarProperty Name="EXP_IdProgramacion" ColumnName="EXP_IdProgramacion" />
+          <ScalarProperty Name="EXP_NombreServicio" ColumnName="EXP_NombreServicio" />
+          <ScalarProperty Name="EXP_NumeroOperacion" ColumnName="EXP_NumeroOperacion" />
+          <ScalarProperty Name="EXP_IdServicio" ColumnName="EXP_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImpConceptoProgramado_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ImpConceptoProgramado_FAC">
+        <MappingFragment StoreEntitySet="ImpConceptoProgramado_FAC">
+          <ScalarProperty Name="ICP_CreadoPor" ColumnName="ICP_CreadoPor" />
+          <ScalarProperty Name="ICP_FechaGrabacion" ColumnName="ICP_FechaGrabacion" />
+          <ScalarProperty Name="ICP_Total" ColumnName="ICP_Total" />
+          <ScalarProperty Name="ICP_ValorPorc" ColumnName="ICP_ValorPorc" />
+          <ScalarProperty Name="ICP_BaseCalculo" ColumnName="ICP_BaseCalculo" />
+          <ScalarProperty Name="ICP_Descripcion" ColumnName="ICP_Descripcion" />
+          <ScalarProperty Name="ICP_IdImpuesto" ColumnName="ICP_IdImpuesto" />
+          <ScalarProperty Name="ICP_IdConceptoProg" ColumnName="ICP_IdConceptoProg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImpuestosDetalleFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ImpuestosDetalleFactura_FAC">
+        <MappingFragment StoreEntitySet="ImpuestosDetalleFactura_FAC">
+          <ScalarProperty Name="IDF_CreadoPor" ColumnName="IDF_CreadoPor" />
+          <ScalarProperty Name="IDF_FechaGrabacion" ColumnName="IDF_FechaGrabacion" />
+          <ScalarProperty Name="IDF_Total" ColumnName="IDF_Total" />
+          <ScalarProperty Name="IDF_ValorPorc" ColumnName="IDF_ValorPorc" />
+          <ScalarProperty Name="IDF_BaseCalculo" ColumnName="IDF_BaseCalculo" />
+          <ScalarProperty Name="IDF_Descripcion" ColumnName="IDF_Descripcion" />
+          <ScalarProperty Name="IDF_IdImpuesto" ColumnName="IDF_IdImpuesto" />
+          <ScalarProperty Name="IDF_IdDetalleFactura" ColumnName="IDF_IdDetalleFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoAnulacionFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.MotivoAnulacionFactura_FAC">
+        <MappingFragment StoreEntitySet="MotivoAnulacionFactura_FAC">
+          <ScalarProperty Name="MAF_CreadoPor" ColumnName="MAF_CreadoPor" />
+          <ScalarProperty Name="MAF_FechaGrabacion" ColumnName="MAF_FechaGrabacion" />
+          <ScalarProperty Name="MAF_DescripcionMotivo" ColumnName="MAF_DescripcionMotivo" />
+          <ScalarProperty Name="MAF_IdMotivo" ColumnName="MAF_IdMotivo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgramacionFacturaHist_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ProgramacionFacturaHist_FAC">
+        <MappingFragment StoreEntitySet="ProgramacionFacturaHist_FAC">
+          <ScalarProperty Name="PRF_TipoCambio" ColumnName="PRF_TipoCambio" />
+          <ScalarProperty Name="PRF_CambiadoPor" ColumnName="PRF_CambiadoPor" />
+          <ScalarProperty Name="PRF_FechaCambio" ColumnName="PRF_FechaCambio" />
+          <ScalarProperty Name="PRF_CreadoPor" ColumnName="PRF_CreadoPor" />
+          <ScalarProperty Name="PRF_FechaGrabacion" ColumnName="PRF_FechaGrabacion" />
+          <ScalarProperty Name="PRF_FechaEjecucion" ColumnName="PRF_FechaEjecucion" />
+          <ScalarProperty Name="PRF_Ejecutado" ColumnName="PRF_Ejecutado" />
+          <ScalarProperty Name="PRF_FechaProgramacion" ColumnName="PRF_FechaProgramacion" />
+          <ScalarProperty Name="PRF_DiaCorte" ColumnName="PRF_DiaCorte" />
+          <ScalarProperty Name="PRF_DescAgrupamiento" ColumnName="PRF_DescAgrupamiento" />
+          <ScalarProperty Name="PRF_IdAgrupamiento" ColumnName="PRF_IdAgrupamiento" />
+          <ScalarProperty Name="PRF_DescContrato" ColumnName="PRF_DescContrato" />
+          <ScalarProperty Name="PRF_IdContrato" ColumnName="PRF_IdContrato" />
+          <ScalarProperty Name="PRF_RazonSocialCliente" ColumnName="PRF_RazonSocialCliente" />
+          <ScalarProperty Name="PRF_IdCliente" ColumnName="PRF_IdCliente" />
+          <ScalarProperty Name="PRF_NombreRacol" ColumnName="PRF_NombreRacol" />
+          <ScalarProperty Name="PRF_IdRacol" ColumnName="PRF_IdRacol" />
+          <ScalarProperty Name="PRF_IdProgramacion" ColumnName="PRF_IdProgramacion" />
+          <ScalarProperty Name="PRF_IdAuditoria" ColumnName="PRF_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RetencionesFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.RetencionesFactura_FAC">
+        <MappingFragment StoreEntitySet="RetencionesFactura_FAC">
+          <ScalarProperty Name="REF_IdServicio" ColumnName="REF_IdServicio" />
+          <ScalarProperty Name="REF_CreadoPor" ColumnName="REF_CreadoPor" />
+          <ScalarProperty Name="REF_FechaGrabacion" ColumnName="REF_FechaGrabacion" />
+          <ScalarProperty Name="REF_ValorLiquidado" ColumnName="REF_ValorLiquidado" />
+          <ScalarProperty Name="REF_ValorPorMonto" ColumnName="REF_ValorPorMonto" />
+          <ScalarProperty Name="REF_TarifaPorcentual" ColumnName="REF_TarifaPorcentual" />
+          <ScalarProperty Name="REF_ValorFijo" ColumnName="REF_ValorFijo" />
+          <ScalarProperty Name="REF_BaseCalculo" ColumnName="REF_BaseCalculo" />
+          <ScalarProperty Name="REF_BaseMinima" ColumnName="REF_BaseMinima" />
+          <ScalarProperty Name="REF_Descripcion" ColumnName="REF_Descripcion" />
+          <ScalarProperty Name="REF_IdRetencion" ColumnName="REF_IdRetencion" />
+          <ScalarProperty Name="REF_NumeroFactura" ColumnName="REF_NumeroFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidad_PAR">
+      <EntityTypeMapping TypeName="DESARROLLOModel.Localidad_PAR">
+        <MappingFragment StoreEntitySet="Localidad_PAR">
+          <ScalarProperty Name="LOC_CreadoPor" ColumnName="LOC_CreadoPor" />
+          <ScalarProperty Name="LOC_FechaGrabacion" ColumnName="LOC_FechaGrabacion" />
+          <ScalarProperty Name="LOC_CodigoPostal" ColumnName="LOC_CodigoPostal" />
+          <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="LOC_IdAncestroTercerGrado" ColumnName="LOC_IdAncestroTercerGrado" />
+          <ScalarProperty Name="LOC_IdAncestroSegundoGrado" ColumnName="LOC_IdAncestroSegundoGrado" />
+          <ScalarProperty Name="LOC_IdAncestroPrimerGrado" ColumnName="LOC_IdAncestroPrimerGrado" />
+          <ScalarProperty Name="LOC_IdTipo" ColumnName="LOC_IdTipo" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResumenFacturaAut_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ResumenFacturaAut_FAC">
+        <MappingFragment StoreEntitySet="ResumenFacturaAut_FAC">
+          <ScalarProperty Name="RFA_CreadoPor" ColumnName="RFA_CreadoPor" />
+          <ScalarProperty Name="RFA_FechaGrabacion" ColumnName="RFA_FechaGrabacion" />
+          <ScalarProperty Name="RFA_IdProgramacion" ColumnName="RFA_IdProgramacion" />
+          <ScalarProperty Name="RFA_DiaRadicacion" ColumnName="RFA_DiaRadicacion" />
+          <ScalarProperty Name="RFA_DiaFacturacion" ColumnName="RFA_DiaFacturacion" />
+          <ScalarProperty Name="RFA_DiaPago" ColumnName="RFA_DiaPago" />
+          <ScalarProperty Name="RFA_FechaCorte" ColumnName="RFA_FechaCorte" />
+          <ScalarProperty Name="RFA_NombreAgrupamientoFactura" ColumnName="RFA_NombreAgrupamientoFactura" />
+          <ScalarProperty Name="RFA_IdAgrupamientoFactura" ColumnName="RFA_IdAgrupamientoFactura" />
+          <ScalarProperty Name="RFA_NumeroFactura" ColumnName="RFA_NumeroFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paDesmarcarOperaciones_FAC" FunctionName="DESARROLLOModel.Store.paDesmarcarOperaciones_FAC" />
+    <EntitySetMapping Name="ProgramacionFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ProgramacionFactura_FAC">
+        <MappingFragment StoreEntitySet="ProgramacionFactura_FAC">
+          <ScalarProperty Name="PRF_CreadoPor" ColumnName="PRF_CreadoPor" />
+          <ScalarProperty Name="PRF_FechaGrabacion" ColumnName="PRF_FechaGrabacion" />
+          <ScalarProperty Name="PRF_FechaEjecucion" ColumnName="PRF_FechaEjecucion" />
+          <ScalarProperty Name="PRF_Ejecutado" ColumnName="PRF_Ejecutado" />
+          <ScalarProperty Name="PRF_Tipo" ColumnName="PRF_Tipo" />
+          <ScalarProperty Name="PRF_FechaReprogramacion" ColumnName="PRF_FechaReprogramacion" />
+          <ScalarProperty Name="PRF_UsuarioReprograma" ColumnName="PRF_UsuarioReprograma" />
+          <ScalarProperty Name="PRF_FechaProgramacion" ColumnName="PRF_FechaProgramacion" />
+          <ScalarProperty Name="PRF_DiaCorte" ColumnName="PRF_DiaCorte" />
+          <ScalarProperty Name="PRF_DescAgrupamiento" ColumnName="PRF_DescAgrupamiento" />
+          <ScalarProperty Name="PRF_IdAgrupamiento" ColumnName="PRF_IdAgrupamiento" />
+          <ScalarProperty Name="PRF_DescContrato" ColumnName="PRF_DescContrato" />
+          <ScalarProperty Name="PRF_IdContrato" ColumnName="PRF_IdContrato" />
+          <ScalarProperty Name="PRF_RazonSocialCliente" ColumnName="PRF_RazonSocialCliente" />
+          <ScalarProperty Name="PRF_IdCliente" ColumnName="PRF_IdCliente" />
+          <ScalarProperty Name="PRF_NombreRacol" ColumnName="PRF_NombreRacol" />
+          <ScalarProperty Name="PRF_IdRacol" ColumnName="PRF_IdRacol" />
+          <ScalarProperty Name="PRF_IdProgramacion" ColumnName="PRF_IdProgramacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoNota_VFAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.TipoNota_VFAC">
+        <MappingFragment StoreEntitySet="TipoNota_VFAC">
+          <ScalarProperty Name="TIN_NombreTipoNota" ColumnName="TIN_NombreTipoNota" />
+          <ScalarProperty Name="TIN_IdTipoNota" ColumnName="TIN_IdTipoNota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadosFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.EstadosFactura_FAC">
+        <MappingFragment StoreEntitySet="EstadosFactura_FAC">
+          <ScalarProperty Name="ESF_CreadoPor" ColumnName="ESF_CreadoPor" />
+          <ScalarProperty Name="ESF_FechaGrabacion" ColumnName="ESF_FechaGrabacion" />
+          <ScalarProperty Name="ESF_Observaciones" ColumnName="ESF_Observaciones" />
+          <ScalarProperty Name="ESF_DescripcionEstado" ColumnName="ESF_DescripcionEstado" />
+          <ScalarProperty Name="ESF_Estado" ColumnName="ESF_Estado" />
+          <ScalarProperty Name="ESF_NumeroFactura" ColumnName="ESF_NumeroFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoAnulacionGuia_MEN">
+      <EntityTypeMapping TypeName="DESARROLLOModel.MotivoAnulacionGuia_MEN">
+        <MappingFragment StoreEntitySet="MotivoAnulacionGuia_MEN">
+          <ScalarProperty Name="MAG_CreadoPor" ColumnName="MAG_CreadoPor" />
+          <ScalarProperty Name="MAG_FechaGrabacion" ColumnName="MAG_FechaGrabacion" />
+          <ScalarProperty Name="MAG_Descripcion" ColumnName="MAG_Descripcion" />
+          <ScalarProperty Name="MAG_IdMotivoAnulaciónGuia" ColumnName="MAG_IdMotivoAnulaciónGuia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DescripcionNotasFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.DescripcionNotasFactura_FAC">
+        <MappingFragment StoreEntitySet="DescripcionNotasFactura_FAC">
+          <ScalarProperty Name="DNF_CreadorPor" ColumnName="DNF_CreadorPor" />
+          <ScalarProperty Name="DNF_FechaGrabacion" ColumnName="DNF_FechaGrabacion" />
+          <ScalarProperty Name="DNF_Descripcion" ColumnName="DNF_Descripcion" />
+          <ScalarProperty Name="DNF_IdDescripcion" ColumnName="DNF_IdDescripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoFacturaAnulada_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.EstadoFacturaAnulada_FAC">
+        <MappingFragment StoreEntitySet="EstadoFacturaAnulada_FAC">
+          <ScalarProperty Name="EFA_CreadoPor" ColumnName="EFA_CreadoPor" />
+          <ScalarProperty Name="EFA_FechaGrabacion" ColumnName="EFA_FechaGrabacion" />
+          <ScalarProperty Name="EFA_IdResponsable" ColumnName="EFA_IdResponsable" />
+          <ScalarProperty Name="EFA_IdMotivo" ColumnName="EFA_IdMotivo" />
+          <ScalarProperty Name="EFA_Estado" ColumnName="EFA_Estado" />
+          <ScalarProperty Name="EFA_NumeroFactura" ColumnName="EFA_NumeroFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResponsableFacturacion_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ResponsableFacturacion_FAC">
+        <MappingFragment StoreEntitySet="ResponsableFacturacion_FAC">
+          <ScalarProperty Name="RFA_CreadoPor" ColumnName="RFA_CreadoPor" />
+          <ScalarProperty Name="RFA_FechaGrabacion" ColumnName="RFA_FechaGrabacion" />
+          <ScalarProperty Name="RFA_DescripcionResponsable" ColumnName="RFA_DescripcionResponsable" />
+          <ScalarProperty Name="RFA_IdResponsable" ColumnName="RFA_IdResponsable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoNota_VFAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.EstadoNota_VFAC">
+        <MappingFragment StoreEntitySet="EstadoNota_VFAC">
+          <ScalarProperty Name="ENF_Descripcion" ColumnName="ENF_Descripcion" />
+          <ScalarProperty Name="ENF_IdEstado" ColumnName="ENF_IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResumenFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.ResumenFactura_FAC">
+        <MappingFragment StoreEntitySet="ResumenFactura_FAC">
+          <ScalarProperty Name="REF_GuiaInternaAsociada" ColumnName="REF_GuiaInternaAsociada" />
+          <ScalarProperty Name="REF_CreadoPor" ColumnName="REF_CreadoPor" />
+          <ScalarProperty Name="REF_FechaGrabacion" ColumnName="REF_FechaGrabacion" />
+          <ScalarProperty Name="ESF_DescEstadoActual" ColumnName="ESF_DescEstadoActual" />
+          <ScalarProperty Name="REF_ValorTotal" ColumnName="REF_ValorTotal" />
+          <ScalarProperty Name="REF_ValorDescuentos" ColumnName="REF_ValorDescuentos" />
+          <ScalarProperty Name="REF_ValorImpuestos" ColumnName="REF_ValorImpuestos" />
+          <ScalarProperty Name="REF_ValorNeto" ColumnName="REF_ValorNeto" />
+          <ScalarProperty Name="REF_DirigidoA" ColumnName="REF_DirigidoA" />
+          <ScalarProperty Name="REF_TelefonoRadicacion" ColumnName="REF_TelefonoRadicacion" />
+          <ScalarProperty Name="REF_DireccionRadicacion" ColumnName="REF_DireccionRadicacion" />
+          <ScalarProperty Name="REF_NombreRacol" ColumnName="REF_NombreRacol" />
+          <ScalarProperty Name="REF_IdRacol" ColumnName="REF_IdRacol" />
+          <ScalarProperty Name="REF_CiudadRadicacion" ColumnName="REF_CiudadRadicacion" />
+          <ScalarProperty Name="REF_PlazoPago" ColumnName="REF_PlazoPago" />
+          <ScalarProperty Name="REF_FormaPago" ColumnName="REF_FormaPago" />
+          <ScalarProperty Name="REF_NumeroContrato" ColumnName="REF_NumeroContrato" />
+          <ScalarProperty Name="REF_NombreContrato" ColumnName="REF_NombreContrato" />
+          <ScalarProperty Name="REF_IdContrato" ColumnName="REF_IdContrato" />
+          <ScalarProperty Name="REF_RazonSocial" ColumnName="REF_RazonSocial" />
+          <ScalarProperty Name="REF_IdCliente" ColumnName="REF_IdCliente" />
+          <ScalarProperty Name="REF_TipoFacturacion" ColumnName="REF_TipoFacturacion" />
+          <ScalarProperty Name="REF_NumeroFactura" ColumnName="REF_NumeroFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotasFactura_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.NotasFactura_FAC">
+        <MappingFragment StoreEntitySet="NotasFactura_FAC">
+          <ScalarProperty Name="NOF_EstadoNota" ColumnName="NOF_EstadoNota" />
+          <ScalarProperty Name="NOF_IdResponsable" ColumnName="NOF_IdResponsable" />
+          <ScalarProperty Name="NOF_IdDescripcion" ColumnName="NOF_IdDescripcion" />
+          <ScalarProperty Name="NOF_CreadoPor" ColumnName="NOF_CreadoPor" />
+          <ScalarProperty Name="NOF_FechaGrabacion" ColumnName="NOF_FechaGrabacion" />
+          <ScalarProperty Name="NOF_Observaciones" ColumnName="NOF_Observaciones" />
+          <ScalarProperty Name="NOF_ValorNota" ColumnName="NOF_ValorNota" />
+          <ScalarProperty Name="NOF_TipoNota" ColumnName="NOF_TipoNota" />
+          <ScalarProperty Name="NOF_IdDetallexServFactura" ColumnName="NOF_IdDetallexServFactura" />
+          <ScalarProperty Name="NOF_NumeroFactura" ColumnName="NOF_NumeroFactura" />
+          <ScalarProperty Name="NOF_IdNota" ColumnName="NOF_IdNota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotasFacturaHist_FAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.NotasFacturaHist_FAC">
+        <MappingFragment StoreEntitySet="NotasFacturaHist_FAC">
+          <ScalarProperty Name="NOF_EstadoNota" ColumnName="NOF_EstadoNota" />
+          <ScalarProperty Name="NOF_IdResponsable" ColumnName="NOF_IdResponsable" />
+          <ScalarProperty Name="NOF_IdDescripcion" ColumnName="NOF_IdDescripcion" />
+          <ScalarProperty Name="NOF_TipoCambio" ColumnName="NOF_TipoCambio" />
+          <ScalarProperty Name="NOF_CambiadoPor" ColumnName="NOF_CambiadoPor" />
+          <ScalarProperty Name="NOF_FechaCambio" ColumnName="NOF_FechaCambio" />
+          <ScalarProperty Name="NOF_CreadoPor" ColumnName="NOF_CreadoPor" />
+          <ScalarProperty Name="NOF_FechaGrabacion" ColumnName="NOF_FechaGrabacion" />
+          <ScalarProperty Name="NOF_Observaciones" ColumnName="NOF_Observaciones" />
+          <ScalarProperty Name="NOF_ValorNota" ColumnName="NOF_ValorNota" />
+          <ScalarProperty Name="NOF_TipoNota" ColumnName="NOF_TipoNota" />
+          <ScalarProperty Name="NOF_IdDetallexServFactura" ColumnName="NOF_IdDetallexServFactura" />
+          <ScalarProperty Name="NOF_NumeroFactura" ColumnName="NOF_NumeroFactura" />
+          <ScalarProperty Name="NOF_IdNota" ColumnName="NOF_IdNota" />
+          <ScalarProperty Name="NOF_IdAuditoria" ColumnName="NOF_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SucursalesAgenciasRacoles_VFAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.SucursalesAgenciasRacoles_VFAC">
+        <MappingFragment StoreEntitySet="SucursalesAgenciasRacoles_VFAC">
+          <ScalarProperty Name="REA_IdCasaMatriz" ColumnName="REA_IdCasaMatriz" />
+          <ScalarProperty Name="AGE_IdTipoAgencia" ColumnName="AGE_IdTipoAgencia" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="AGE_IdAgencia" ColumnName="AGE_IdAgencia" />
+          <ScalarProperty Name="SUC_Municipio" ColumnName="SUC_Municipio" />
+          <ScalarProperty Name="SUC_ClienteCredito" ColumnName="SUC_ClienteCredito" />
+          <ScalarProperty Name="SUC_Nombre" ColumnName="SUC_Nombre" />
+          <ScalarProperty Name="SUC_IdSucursal" ColumnName="SUC_IdSucursal" />
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+          <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerFacturasImpresion_FAC" FunctionName="DESARROLLOModel.Store.paObtenerFacturasImpresion_FAC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerFacturasImpresion_FAC_Result">
+          <ScalarProperty Name="REF_NumeroFactura" ColumnName="REF_NumeroFactura" />
+          <ScalarProperty Name="REF_RazonSocial" ColumnName="REF_RazonSocial" />
+          <ScalarProperty Name="REF_DireccionRadicacion" ColumnName="REF_DireccionRadicacion" />
+          <ScalarProperty Name="fechaEmision" ColumnName="fechaEmision" />
+          <ScalarProperty Name="fechaVencimiento" ColumnName="fechaVencimiento" />
+          <ScalarProperty Name="REF_FormaPago" ColumnName="REF_FormaPago" />
+          <ScalarProperty Name="REF_ValorNeto" ColumnName="REF_ValorNeto" />
+          <ScalarProperty Name="REF_ValorDescuentos" ColumnName="REF_ValorDescuentos" />
+          <ScalarProperty Name="REF_ValorImpuestos" ColumnName="REF_ValorImpuestos" />
+          <ScalarProperty Name="REF_ValorTotal" ColumnName="REF_ValorTotal" />
+          <ScalarProperty Name="REF_NombreContrato" ColumnName="REF_NombreContrato" />
+          <ScalarProperty Name="REF_NumeroContrato" ColumnName="REF_NumeroContrato" />
+          <ScalarProperty Name="REF_IdContrato" ColumnName="REF_IdContrato" />
+          <ScalarProperty Name="REF_IdCliente" ColumnName="REF_IdCliente" />
+          <ScalarProperty Name="REF_TipoFacturacion" ColumnName="REF_TipoFacturacion" />
+          <ScalarProperty Name="REF_PlazoPago" ColumnName="REF_PlazoPago" />
+          <ScalarProperty Name="REF_IdRacol" ColumnName="REF_IdRacol" />
+          <ScalarProperty Name="REF_NombreRacol" ColumnName="REF_NombreRacol" />
+          <ScalarProperty Name="REF_CiudadRadicacion" ColumnName="REF_CiudadRadicacion" />
+          <ScalarProperty Name="REF_TelefonoRadicacion" ColumnName="REF_TelefonoRadicacion" />
+          <ScalarProperty Name="REF_DirigidoA" ColumnName="REF_DirigidoA" />
+          <ScalarProperty Name="REF_GuiaInternaAsociada" ColumnName="REF_GuiaInternaAsociada" />
+          <ScalarProperty Name="ESF_DescEstadoActual" ColumnName="ESF_DescEstadoActual" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerFacturasImpresionFiltro_FAC" FunctionName="DESARROLLOModel.Store.paObtenerFacturasImpresionFiltro_FAC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DESARROLLOModel.paObtenerFacturasImpresionFiltro_FAC_Result">
+          <ScalarProperty Name="REF_NumeroFactura" ColumnName="REF_NumeroFactura" />
+          <ScalarProperty Name="REF_RazonSocial" ColumnName="REF_RazonSocial" />
+          <ScalarProperty Name="REF_DireccionRadicacion" ColumnName="REF_DireccionRadicacion" />
+          <ScalarProperty Name="fechaEmision" ColumnName="fechaEmision" />
+          <ScalarProperty Name="fechaVencimiento" ColumnName="fechaVencimiento" />
+          <ScalarProperty Name="REF_FormaPago" ColumnName="REF_FormaPago" />
+          <ScalarProperty Name="REF_ValorNeto" ColumnName="REF_ValorNeto" />
+          <ScalarProperty Name="REF_ValorDescuentos" ColumnName="REF_ValorDescuentos" />
+          <ScalarProperty Name="REF_ValorImpuestos" ColumnName="REF_ValorImpuestos" />
+          <ScalarProperty Name="REF_ValorTotal" ColumnName="REF_ValorTotal" />
+          <ScalarProperty Name="REF_NombreContrato" ColumnName="REF_NombreContrato" />
+          <ScalarProperty Name="REF_NumeroContrato" ColumnName="REF_NumeroContrato" />
+          <ScalarProperty Name="REF_IdContrato" ColumnName="REF_IdContrato" />
+          <ScalarProperty Name="REF_IdCliente" ColumnName="REF_IdCliente" />
+          <ScalarProperty Name="REF_TipoFacturacion" ColumnName="REF_TipoFacturacion" />
+          <ScalarProperty Name="REF_PlazoPago" ColumnName="REF_PlazoPago" />
+          <ScalarProperty Name="REF_IdRacol" ColumnName="REF_IdRacol" />
+          <ScalarProperty Name="REF_NombreRacol" ColumnName="REF_NombreRacol" />
+          <ScalarProperty Name="REF_CiudadRadicacion" ColumnName="REF_CiudadRadicacion" />
+          <ScalarProperty Name="REF_TelefonoRadicacion" ColumnName="REF_TelefonoRadicacion" />
+          <ScalarProperty Name="REF_DirigidoA" ColumnName="REF_DirigidoA" />
+          <ScalarProperty Name="REF_GuiaInternaAsociada" ColumnName="REF_GuiaInternaAsociada" />
+          <ScalarProperty Name="ESF_DescEstadoActual" ColumnName="ESF_DescEstadoActual" />
+          <ScalarProperty Name="REF_CreadoPor" ColumnName="REF_CreadoPor" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="DetalleXOperFactura_VFAC">
+      <EntityTypeMapping TypeName="DESARROLLOModel.DetalleXOperFactura_VFAC">
+        <MappingFragment StoreEntitySet="DetalleXOperFactura_VFAC">
+          <ScalarProperty Name="NombreServicio" ColumnName="NombreServicio" />
+          <ScalarProperty Name="REF_RazonSocial" ColumnName="REF_RazonSocial" />
+          <ScalarProperty Name="DOF_CreadoPor" ColumnName="DOF_CreadoPor" />
+          <ScalarProperty Name="DOF_FechaGrabacion" ColumnName="DOF_FechaGrabacion" />
+          <ScalarProperty Name="DOF_FechaOperacion" ColumnName="DOF_FechaOperacion" />
+          <ScalarProperty Name="DOF_ValorTotal" ColumnName="DOF_ValorTotal" />
+          <ScalarProperty Name="DOF_ValorImpuestos" ColumnName="DOF_ValorImpuestos" />
+          <ScalarProperty Name="DOF_PorcImpuestos" ColumnName="DOF_PorcImpuestos" />
+          <ScalarProperty Name="DOF_ValorServicio" ColumnName="DOF_ValorServicio" />
+          <ScalarProperty Name="DOF_NombreSucursal" ColumnName="DOF_NombreSucursal" />
+          <ScalarProperty Name="DOF_IdSucursal" ColumnName="DOF_IdSucursal" />
+          <ScalarProperty Name="DOF_NumeroFactura" ColumnName="DOF_NumeroFactura" />
+          <ScalarProperty Name="DOF_NumeroOperacion" ColumnName="DOF_NumeroOperacion" />
+          <ScalarProperty Name="DOF_IdServicio" ColumnName="DOF_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paAsociarGuiasCreditoAFactura" FunctionName="DESARROLLOModel.Store.paAsociarGuiasCreditoAFactura" />
+    <FunctionImportMapping FunctionImportName="paDesasociarGuiaDeFactura" FunctionName="DESARROLLOModel.Store.paDesasociarGuiaDeFactura" />
+    <FunctionImportMapping FunctionImportName="paFacturarCliente_FAC" FunctionName="DESARROLLOModel.Store.paFacturarCliente_FAC" />
+  </EntityContainerMapping>
+</Mapping>

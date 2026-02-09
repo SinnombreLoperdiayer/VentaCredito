@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Contado.ADAdmisionContado" Collapsed="true">
+    <Position X="24.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEYEAAAJAAAAgAAAAAAAAggQgADAIABEACABBAgFQgA=</HashCode>
+      <FileName>Contado\ADAdmisionContado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Credito.ADAdmisionCredito" Collapsed="true">
+    <Position X="26.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEYEAAABAAAAgAAAAAAEAAgAAADAIAAEACABBAAEAgA=</HashCode>
+      <FileName>Credito\ADAdmisionCredito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Servicios.ADAdmisionServicio" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\ADAdmisionServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.ADFachadaAdmisionesMensajeria" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.75" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ogKOAAJDoAIIAIIwGJIBIy4ZgIDmYMQ2gCBpBAgQQiA=</HashCode>
+      <FileName>ADFachadaAdmisionesMensajeria.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.GuiaInterna.ADAdmisionGuiaInterna" Collapsed="true">
+    <Position X="5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAIAAAAAAAQAAAAAAACAEAAAAAAAAAEAAA=</HashCode>
+      <FileName>GuiaInterna\ADAdmisionGuiaInterna.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.ADConsultas" Collapsed="true">
+    <Position X="24.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ogQKAAJAIAAAAAIQEBAAAQIJCACEAAQAgABgAAAUAAA=</HashCode>
+      <FileName>ADConsultas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.ADAdmisionMensajeria" Collapsed="true">
+    <Position X="14.75" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAgAAAAAAAAAIAAAIAAAAAAAAAEAAA=</HashCode>
+      <FileName>ADAdmisionMensajeria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Motivos.ADAdmisionMotivos" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAEAAA=</HashCode>
+      <FileName>Motivos\ADAdmisionMotivos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Novedades.ADNovedades" Collapsed="true">
+    <Position X="24.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAIAAAAAAAABAAAAAAAAAAAiAAAAAAAEAAA=</HashCode>
+      <FileName>Novedades\ADNovedades.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Servicios.ADAdmisionInternacional" Collapsed="true">
+    <Position X="22" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Servicios\ADAdmisionInternacional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Servicios.ADAdmisionNotificacion" Collapsed="true">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\ADAdmisionNotificacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Servicios.ADAdmisionRapiEnvioContraPago" Collapsed="true">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\ADAdmisionRapiEnvioContraPago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Servicios.ADAdmisionRapiRadicado" Collapsed="true">
+    <Position X="17.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Servicios\ADAdmisionRapiRadicado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Volantes.ADAdmisionVolantes" Collapsed="true">
+    <Position X="19.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Volantes\ADAdmisionVolantes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Datos.ADRepositorio" Collapsed="true">
+    <Position X="26.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Comun.ADConstantes" Collapsed="true">
+    <Position X="24.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Comun.ADMensajesAdmisiones" Collapsed="true">
+    <Position X="27.5" Y="3.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.Adminisiones.Mensajeria.Comun.ADMensajesAdmisionesMensajeria" Collapsed="true">
+    <Position X="24.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="CO.Servidor.Adminisiones.Mensajeria.Comun.ADEnumTipoErrorMensajeria" Collapsed="true">
+    <Position X="27.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Diagrama de clases tarifas&#xD;&#xA;Creado por: Diego Toro&#xD;&#xA;Fecha creación: Nov 3/2011&#xD;&#xA;----------------------------------&#xD;&#xA;Modificaciones:&#xD;&#xA;">
+    <Position X="0.5" Y="0.5" Height="0.948" Width="2.283" />
+  </Comment>
+  <Class Name="CO.Servidor.Tarifas.TAAdministradorTarifas" Collapsed="true">
+    <Position X="0.5" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QIxAgYhagggnEeHUApCO0IohFjUgQQIQkjBUyQ8npoE=</HashCode>
+      <FileName>TAAdministradorTarifas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.TATarifa">
+    <Position X="4" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Tarifas\TATarifa.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TAListaPrecios" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicio">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\TAServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioCentroCorrespondencia">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAAACEAAAAAAAAAAAAAAAEAAAAQAAIEAAA=</HashCode>
+      <FileName>Servicios\TAServicioCentroCorrespondencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioMensajeria">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAIEAAA=</HashCode>
+      <FileName>Servicios\TAServicioMensajeria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioNotificaciones">
+    <Position X="17.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIEAAA=</HashCode>
+      <FileName>Servicios\TAServicioNotificaciones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioRapiAm">
+    <Position X="24.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAIEAAA=</HashCode>
+      <FileName>Servicios\TAServicioRapiAm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioRapiCarga">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgQAAAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAQAAIEAAA=</HashCode>
+      <FileName>Servicios\TAServicioRapiCarga.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioRapiCargaContraPago">
+    <Position X="13" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAIgAAAAAAAAAAAAAAAAAAAAAgAAAQAAIEAAE=</HashCode>
+      <FileName>Servicios\TAServicioRapiCargaContraPago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioRapiEnviosContraPago">
+    <Position X="19.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIGAAA=</HashCode>
+      <FileName>Servicios\TAServicioRapiEnviosContraPago.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioRapiHoy">
+    <Position X="26.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAQAAIEAAA=</HashCode>
+      <FileName>Servicios\TAServicioRapiHoy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioRapiPersonalizado">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIEAAA=</HashCode>
+      <FileName>Servicios\TAServicioRapiPersonalizado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioRapiPromocional">
+    <Position X="15.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAQAAoEAgA=</HashCode>
+      <FileName>Servicios\TAServicioRapiPromocional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServiciosRapiMasivos">
+    <Position X="22" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Servicios\TAServiciosRapiMasivos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioTramites">
+    <Position X="28.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAACAQAAIEAgA=</HashCode>
+      <FileName>Servicios\TAServicioTramites.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.TAListaPrecios">
+    <Position X="4.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Tarifas\TAListaPrecios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.TAPrecio">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAEBAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tarifas\TAPrecio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.InfoImpuestos">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAABAAEAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tarifas\InfoImpuestos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.TATrayecto">
+    <Position X="2.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAACAAAAAAAAAgAAAAgAAAIAEAAQBAKEAAA=</HashCode>
+      <FileName>Trayectos\TATrayecto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.TAAdministradorInternacional">
+    <Position X="0.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAACAAAAAAAAAAAIAAAAAAAAAAEAAEAAA=</HashCode>
+      <FileName>TAAdministradorInternacional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.TAFachadaTarifas">
+    <Position X="0.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAABAAAAEMAAKAIEAg4IAIAgQAAQACAABAAEACA=</HashCode>
+      <FileName>TAFachadaTarifas.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CO.Servidor.Tarifas.Servicios.TAServicioInternacional" Collapsed="true">
+    <Position X="6" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgQAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQEAIEAAA=</HashCode>
+      <FileName>Servicios\TAServicioInternacional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

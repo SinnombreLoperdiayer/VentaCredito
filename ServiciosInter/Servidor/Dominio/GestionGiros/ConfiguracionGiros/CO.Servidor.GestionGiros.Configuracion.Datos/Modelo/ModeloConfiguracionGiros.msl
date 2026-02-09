@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nsModeloConfiguracionGirosStoreContainer" CdmEntityContainer="ModeloConfiguracionGiros">
+    <EntitySetMapping Name="ClasificacionPorIngresos_GIR">
+      <EntityTypeMapping TypeName="nsModeloConfiguracionGiros.ClasificacionPorIngresos_GIR">
+        <MappingFragment StoreEntitySet="ClasificacionPorIngresos_GIR">
+          <ScalarProperty Name="CXI_IdClasificacion" ColumnName="CXI_IdClasificacion" />
+          <ScalarProperty Name="CXI_Descripcion" ColumnName="CXI_Descripcion" />
+          <ScalarProperty Name="CXI_FechaGrabacion" ColumnName="CXI_FechaGrabacion" />
+          <ScalarProperty Name="CXI_CreadoPor" ColumnName="CXI_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoInactivacionGiros_GIR">
+      <EntityTypeMapping TypeName="nsModeloConfiguracionGiros.MotivoInactivacionGiros_GIR">
+        <MappingFragment StoreEntitySet="MotivoInactivacionGiros_GIR">
+          <ScalarProperty Name="MIG_CreadoPor" ColumnName="MIG_CreadoPor" />
+          <ScalarProperty Name="MIG_FechaGrabacion" ColumnName="MIG_FechaGrabacion" />
+          <ScalarProperty Name="MIG_Descripcion" ColumnName="MIG_Descripcion" />
+          <ScalarProperty Name="MIG_IdMotivoInactivacion" ColumnName="MIG_IdMotivoInactivacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
