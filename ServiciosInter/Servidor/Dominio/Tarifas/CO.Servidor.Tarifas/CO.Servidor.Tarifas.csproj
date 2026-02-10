@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{159C2969-2750-4708-B310-A516C965D112}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.Tarifas</RootNamespace>
+    <AssemblyName>CO.Servidor.Tarifas</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ListaPrecios\TAListaPreciosConfigurador.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\TAServicioCargaExpressAerea.cs" />
+    <Compile Include="Servicios\TAServicioRapiRadicado.cs" />
+    <Compile Include="Servicios\TAServicioRapiValijas.cs" />
+    <Compile Include="Servicios\TAServicioRapiCargaConsolidado.cs" />
+    <Compile Include="Servicios\TAServicioRapiValoresCarga.cs" />
+    <Compile Include="Servicios\TAServicioRapiValoresMsj.cs" />
+    <Compile Include="Servicios\TAServicioCargaExpress.cs" />
+    <Compile Include="Servicios\TAServicioGiro.cs" />
+    <Compile Include="Servicios\TAServicioInternacional.cs" />
+    <Compile Include="Servicios\TAServicioRapiCargaContraPago.cs" />
+    <Compile Include="Servicios\TAServicioRapiEnviosContraPago.cs" />
+    <Compile Include="Servicios\TAServicio.cs" />
+    <Compile Include="Servicios\TAServicioCentroCorrespondencia.cs" />
+    <Compile Include="Servicios\TAServicioMensajeria.cs" />
+    <Compile Include="Servicios\TAServicioNotificaciones.cs" />
+    <Compile Include="Servicios\TAServicioRapiAm.cs" />
+    <Compile Include="Servicios\TAServicioRapiCarga.cs" />
+    <Compile Include="Servicios\TAServicioRapiHoy.cs" />
+    <Compile Include="Servicios\TAServicioRapiPersonalizado.cs" />
+    <Compile Include="Servicios\TAServicioRapiPromocional.cs" />
+    <Compile Include="Servicios\TAServicioRapiRadicadoOLD.cs" />
+    <Compile Include="Servicios\TAServicioRapiTulas.cs" />
+    <Compile Include="Servicios\TAServicioTramites.cs" />
+    <Compile Include="TAAdministradorInternacional.cs" />
+    <Compile Include="TAAdministradorTarifas.cs" />
+    <Compile Include="TAAdministradorTarifasCredito.cs" />
+    <Compile Include="TAAdministradorTarifasExt.cs" />
+    <Compile Include="TAFachadaKomprech.cs" />
+    <Compile Include="TAFachadaTarifas.cs" />
+    <Compile Include="Tarifas\InfoImpuestos.cs" />
+    <Compile Include="Tarifas\TAListaPrecios.cs" />
+    <Compile Include="Trayectos\TATrayecto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cdTarifasController.cd" />
+    <None Include="DiagramaClasesTarifas.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Seguridad\Framework.Servidor.Seguridad.csproj">
+      <Project>{7DBD8056-6F8C-408C-AA1A-18D254B03495}</Project>
+      <Name>Framework.Servidor.Seguridad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.Middleware\CO.Servidor.Dominio.Comun.Middleware.csproj">
+      <Project>{826b7134-398b-474f-9c60-3f433f0441f1}</Project>
+      <Name>CO.Servidor.Dominio.Comun.Middleware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512C6601-1C3C-455A-A91A-10906C2F2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.Tarifas.Comun\CO.Servidor.Tarifas.Comun.csproj">
+      <Project>{4D7E1F3C-0916-46BD-9DD4-578A2DFBA56C}</Project>
+      <Name>CO.Servidor.Tarifas.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.Tarifas.Datos\CO.Servidor.Tarifas.Datos.csproj">
+      <Project>{981C32FD-0749-43B8-978E-5FB84B970D4E}</Project>
+      <Name>CO.Servidor.Tarifas.Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Comun\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

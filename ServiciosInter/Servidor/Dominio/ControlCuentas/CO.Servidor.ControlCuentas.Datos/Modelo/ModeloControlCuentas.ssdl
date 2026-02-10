@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloControlCuentas.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloControlCuentasStoreContainer">
+    <EntitySet Name="AlmacenControlCuentas_CCU" EntityType="ModeloControlCuentas.Store.AlmacenControlCuentas_CCU" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoOperacion_CCU" EntityType="ModeloControlCuentas.Store.TipoOperacion_CCU" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AlmacenControlCuentas_CCU_TipoOperacion_CCU" Association="ModeloControlCuentas.Store.FK_AlmacenControlCuentas_CCU_TipoOperacion_CCU">
+      <End Role="TipoOperacion_CCU" EntitySet="TipoOperacion_CCU" />
+      <End Role="AlmacenControlCuentas_CCU" EntitySet="AlmacenControlCuentas_CCU" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AlmacenControlCuentas_CCU">
+    <Key>
+      <PropertyRef Name="AAC_IdAlmacenControCuentas" />
+    </Key>
+    <Property Name="AAC_IdAlmacenControCuentas" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AAC_IdRacol" Type="bigint" Nullable="false" />
+    <Property Name="AAC_IdOperacion" Type="bigint" Nullable="false" />
+    <Property Name="AAC_IdTipoOperacion" Type="smallint" Nullable="false" />
+    <Property Name="AAC_Caja" Type="bigint" Nullable="false" />
+    <Property Name="AAC_Lote" Type="int" Nullable="false" />
+    <Property Name="AAC_Posicion" Type="int" Nullable="false" />
+    <Property Name="AAC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="AAC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoOperacion_CCU">
+    <Key>
+      <PropertyRef Name="TOP_IdTipoOperacion" />
+    </Key>
+    <Property Name="TOP_IdTipoOperacion" Type="smallint" Nullable="false" />
+    <Property Name="TOP_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TOP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TOP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_AlmacenControlCuentas_CCU_TipoOperacion_CCU">
+    <End Role="TipoOperacion_CCU" Type="ModeloControlCuentas.Store.TipoOperacion_CCU" Multiplicity="1" />
+    <End Role="AlmacenControlCuentas_CCU" Type="ModeloControlCuentas.Store.AlmacenControlCuentas_CCU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoOperacion_CCU">
+        <PropertyRef Name="TOP_IdTipoOperacion" />
+      </Principal>
+      <Dependent Role="AlmacenControlCuentas_CCU">
+        <PropertyRef Name="AAC_IdTipoOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paCambioFPAlCobroCredito_CCU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroFactura" Type="bigint" Mode="In" />
+    <Parameter Name="IdCliente" Type="bigint" Mode="In" />
+    <Parameter Name="IdContrato" Type="int" Mode="In" />
+    <Parameter Name="IdSucursal" Type="int" Mode="In" />
+    <Parameter Name="QuienSolicita" Type="varchar" Mode="In" />
+    <Parameter Name="Observacion" Type="varchar" Mode="In" />
+    <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroAlmacen_CCU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAgencia" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiaMenAlmacen_CCU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAgencia" Type="bigint" Mode="In" />
+    <Parameter Name="IdMensajero" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IncluyeMensajero" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiaMenAlmacenCliente_CCU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdCliente" Type="int" Mode="In" />
+    <Parameter Name="IdSucursal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerMovCajaAlmacen_CCU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAgencia" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdConceptoCaja" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerOtrosMovCaja_CCU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAgencia" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paObtenerPagoGiroAlmacen_CCU" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAgencia" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+  </Function>
+</Schema>

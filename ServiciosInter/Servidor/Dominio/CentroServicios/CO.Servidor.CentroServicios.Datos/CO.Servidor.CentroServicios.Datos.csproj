@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F293D056-FC6B-47CA-ADE9-CACC463FD12A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.CentroServicios.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.CentroServicios.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mapper\MERepositorioMapper.cs" />
+    <Compile Include="Modelo\AcumuladosCentroServicios_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\AgenciaEncargadaMunicipio_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\AgenciaHist_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\AgenciasDeCentroLogistico_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Agencia_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Agencia_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ArchivosFramework.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ArchivosPropietario_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Banco_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroLogisDeRegionalAdmi_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroLogisticoHist_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroLogistico_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServiciosCentroSvcResponsable_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioServicio_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioServicio_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServiciosHist_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServiciosReporteDineroHist_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServiciosReporteDinero_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServiciosReporteDinero_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServiciosSrvUniNeg_VCOM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioSuministro_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicios_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentrosServicosRacol_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroSvcAdministradoComi_COM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroSvcLocalidadServici_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClasificacionPorIngresos_GIR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClasificadorCanalVenta_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClasificCanalVenta_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CodeudorCentroServicios_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CodeudorCentroServicio_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ConcesionarioBanco_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Dia_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DocumentoCentroServicio_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EstadoActivoInactivo_VFRM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\HorarioCentroServicio_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\HorarioRecogidaCentroSvc_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ListaNegra_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LocalidadesCol_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LocalidadesCtroLogistico_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidades_VPAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidad_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloCentroServicios.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloCentroServicios.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloCentroServicios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloCentroServicios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloCentroServicios.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloCentroServicios.Views.cs" />
+    <Compile Include="Modelo\MunicipioCentroLogistico_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MunicipioCentroLogistico_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MunicipioRegionalAdm_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MunicipiosSinAlCobroHist_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MunicipiosSinAlCobro_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MunicipiosSinAlCobro_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ObservacionCentroServicio_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerCentroServGirTran_GIR_Result.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerServActPorCSLisPrecioSinHora_Result.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerServActPorCSLisPrecio_Result.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtInfoAgenciasTrayecto_PUA_Result.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paValidarSuministroSerial_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paValidarSuministroSerial_PUA_Result.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaExterna_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaResponsableLegal_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaResponsableServicio_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Plantilla_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PropietariosCentrosServi_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Propietario_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PuntosDeAgencia_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PuntoServicioHist_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PuntoServiciosCol_VPUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PuntoServicio_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PUpaInfoAgenciaCiuOriDest.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RegionalAdministrativaHist_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RegionalAdministrativa_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RegionalAdministrativa_VCPO.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ServicioComisionReferencia_COM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ServicioDescuentoReferen_COM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Servicio_TAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalesAgencia_VCLI.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosCentroServicios_SUM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Suministro_SUM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoActividadEconomica_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoAgencia_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoCentroServicios_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoComisionFija_COM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoComision_COM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoCuentaBanco_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoDescuento_COM.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoIdentificacion_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoListaNegra_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoPropiedad_PUA.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoRegimenContributivo_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoSociedad_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UsuarioCentroServicioHist_SEG.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UsuarioCentroServicio_SEG.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UsuarioHistorico_SEG.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Usuario_SEG.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ZonaDeLocalidad_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Zona_PAR.cs">
+      <DependentUpon>ModeloCentroServicios.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PURepositorio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PURepositorioEXT.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.CentroServicios.Comun\CO.Servidor.CentroServicios.Comun.csproj">
+      <Project>{04BBAAC2-D203-4197-A9FE-2FF361087BFA}</Project>
+      <Name>CO.Servidor.CentroServicios.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloCentroServicios.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloCentroServicios.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloCentroServicios.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloCentroServicios.msl" />
+    <EmbeddedResource Include="Modelo\ModeloCentroServicios.ssdl" />
+    <None Include="Modelo\ModeloCentroServicios.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloCentroServicios.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Modelo\ModeloCentroServicios.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloCentroServicios.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloCentroServicios.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloCentroServicios.csdl" "/inmsl:$(TargetDir)Modelo/ModeloCentroServicios.msl" "/outviews:$(ProjectDir)Modelo/ModeloCentroServicios.Views.cs"
+
+XCOPY  "$(TargetDir)Modelo/ModeloCentroServicios.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloCentroServicios.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloCentroServicios.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

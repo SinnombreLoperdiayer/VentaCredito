@@ -1,0 +1,1743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloAgenda.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModeloAgendaStoreContainer">
+          <EntitySet Name="ArchivoAsignacionTarea_ASG" EntityType="ModeloAgenda.Store.ArchivoAsignacionTarea_ASG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ArchivosFramework" EntityType="ModeloAgenda.Store.ArchivosFramework" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AsignacionTarea_ASG" EntityType="ModeloAgenda.Store.AsignacionTarea_ASG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cargo_SEG" EntityType="ModeloAgenda.Store.Cargo_SEG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CentroLogistico_PUA" EntityType="ModeloAgenda.Store.CentroLogistico_PUA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EventoAsignacion_ASG" EntityType="ModeloAgenda.Store.EventoAsignacion_ASG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Falla_ASG" EntityType="ModeloAgenda.Store.Falla_ASG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FallaHistorico_ASG" EntityType="ModeloAgenda.Store.FallaHistorico_ASG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Modulo_VER" EntityType="ModeloAgenda.Store.Modulo_VER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ParametrosFramework" EntityType="ModeloAgenda.Store.ParametrosFramework" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PersonaInterna_PAR" EntityType="ModeloAgenda.Store.PersonaInterna_PAR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RegionalAdministrativa_PUA" EntityType="ModeloAgenda.Store.RegionalAdministrativa_PUA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SeguimientoAsignacionTareas_ASG" EntityType="ModeloAgenda.Store.SeguimientoAsignacionTareas_ASG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tarea_ASG" EntityType="ModeloAgenda.Store.Tarea_ASG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TareaHistorico_ASG" EntityType="ModeloAgenda.Store.TareaHistorico_ASG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario_SEG" EntityType="ModeloAgenda.Store.Usuario_SEG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioCentroServicio_SEG" EntityType="ModeloAgenda.Store.UsuarioCentroServicio_SEG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsuarioPersonaInterna_SEG" EntityType="ModeloAgenda.Store.UsuarioPersonaInterna_SEG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AsignacionTareaFalla_VASG" EntityType="ModeloAgenda.Store.AsignacionTareaFalla_VASG" store:Type="Views" store:Schema="dbo" store:Name="AsignacionTareaFalla_VASG">
+            <DefiningQuery>SELECT 
+      [AsignacionTareaFalla_VASG].[AST_IdAsignacionTarea] AS [AST_IdAsignacionTarea], 
+      [AsignacionTareaFalla_VASG].[AST_IdModulo] AS [AST_IdModulo], 
+      [AsignacionTareaFalla_VASG].[AST_DescripcionModulo] AS [AST_DescripcionModulo], 
+      [AsignacionTareaFalla_VASG].[AST_IdFalla] AS [AST_IdFalla], 
+      [AsignacionTareaFalla_VASG].[AST_DescripcionFalla] AS [AST_DescripcionFalla], 
+      [AsignacionTareaFalla_VASG].[AST_IdTarea] AS [AST_IdTarea], 
+      [AsignacionTareaFalla_VASG].[AST_TiempoEscalamiento] AS [AST_TiempoEscalamiento], 
+      [AsignacionTareaFalla_VASG].[AST_FechaVencimiento] AS [AST_FechaVencimiento], 
+      [AsignacionTareaFalla_VASG].[AST_DescripcionTarea] AS [AST_DescripcionTarea], 
+      [AsignacionTareaFalla_VASG].[AST_IdCargoResponsable] AS [AST_IdCargoResponsable], 
+      [AsignacionTareaFalla_VASG].[AST_DescCargoResponsable] AS [AST_DescCargoResponsable], 
+      [AsignacionTareaFalla_VASG].[AST_Comentarios] AS [AST_Comentarios], 
+      [AsignacionTareaFalla_VASG].[AST_UsuarioResponsable] AS [AST_UsuarioResponsable], 
+      [AsignacionTareaFalla_VASG].[AST_EstaAbierta] AS [AST_EstaAbierta], 
+      [AsignacionTareaFalla_VASG].[AST_FechaAsignacion] AS [AST_FechaAsignacion], 
+      [AsignacionTareaFalla_VASG].[FAL_Estado] AS [FAL_Estado], 
+      [AsignacionTareaFalla_VASG].[FAL_Descripcion] AS [FAL_Descripcion], 
+      [AsignacionTareaFalla_VASG].[FAL_EsEditable] AS [FAL_EsEditable], 
+      [AsignacionTareaFalla_VASG].[FAL_Tipo] AS [FAL_Tipo]
+      FROM [dbo].[AsignacionTareaFalla_VASG] AS [AsignacionTareaFalla_VASG]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="EstadoActivoInactivo_VFRM" EntityType="ModeloAgenda.Store.EstadoActivoInactivo_VFRM" store:Type="Views" store:Schema="dbo" store:Name="EstadoActivoInactivo_VFRM">
+            <DefiningQuery>SELECT 
+      [EstadoActivoInactivo_VFRM].[IdEstado] AS [IdEstado], 
+      [EstadoActivoInactivo_VFRM].[Estado] AS [Estado]
+      FROM [dbo].[EstadoActivoInactivo_VFRM] AS [EstadoActivoInactivo_VFRM]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Fallas_VASG" EntityType="ModeloAgenda.Store.Fallas_VASG" store:Type="Views" store:Schema="dbo" store:Name="Fallas_VASG">
+            <DefiningQuery>SELECT 
+      [Fallas_VASG].[FAL_IdFalla] AS [FAL_IdFalla], 
+      [Fallas_VASG].[FAL_IdModulo] AS [FAL_IdModulo], 
+      [Fallas_VASG].[FAL_Estado] AS [FAL_Estado], 
+      [Fallas_VASG].[FAL_Descripcion] AS [FAL_Descripcion], 
+      [Fallas_VASG].[FAL_EsEditable] AS [FAL_EsEditable], 
+      [Fallas_VASG].[FAL_Tipo] AS [FAL_Tipo], 
+      [Fallas_VASG].[FAL_FechaGrabacion] AS [FAL_FechaGrabacion], 
+      [Fallas_VASG].[FAL_CreadoPor] AS [FAL_CreadoPor], 
+      [Fallas_VASG].[MOD_Descripcion] AS [MOD_Descripcion]
+      FROM [dbo].[Fallas_VASG] AS [Fallas_VASG]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UsuarioInterno_VSEG" EntityType="ModeloAgenda.Store.UsuarioInterno_VSEG" store:Type="Views" store:Schema="dbo" store:Name="UsuarioInterno_VSEG">
+            <DefiningQuery>SELECT 
+      [UsuarioInterno_VSEG].[USU_IdCodigoUsuario] AS [USU_IdCodigoUsuario], 
+      [UsuarioInterno_VSEG].[USU_IdUsuario] AS [USU_IdUsuario], 
+      [UsuarioInterno_VSEG].[USU_Estado] AS [USU_Estado], 
+      [UsuarioInterno_VSEG].[USU_TipoUsuario] AS [USU_TipoUsuario], 
+      [UsuarioInterno_VSEG].[USU_RequiereIdMaquina] AS [USU_RequiereIdMaquina], 
+      [UsuarioInterno_VSEG].[USU_Comentarios] AS [USU_Comentarios], 
+      [UsuarioInterno_VSEG].[USU_EsUsuarioInterno] AS [USU_EsUsuarioInterno], 
+      [UsuarioInterno_VSEG].[USP_IdPersonaInterna] AS [USP_IdPersonaInterna], 
+      [UsuarioInterno_VSEG].[PEI_IdTipoIdentificacion] AS [PEI_IdTipoIdentificacion], 
+      [UsuarioInterno_VSEG].[PEI_Identificacion] AS [PEI_Identificacion], 
+      [UsuarioInterno_VSEG].[PEI_IdCargo] AS [PEI_IdCargo], 
+      [UsuarioInterno_VSEG].[PEI_Nombre] AS [PEI_Nombre], 
+      [UsuarioInterno_VSEG].[PEI_PrimerApellido] AS [PEI_PrimerApellido], 
+      [UsuarioInterno_VSEG].[PEI_SegundoApellido] AS [PEI_SegundoApellido], 
+      [UsuarioInterno_VSEG].[PEI_Direccion] AS [PEI_Direccion], 
+      [UsuarioInterno_VSEG].[PEI_Municipio] AS [PEI_Municipio], 
+      [UsuarioInterno_VSEG].[PEI_Telefono] AS [PEI_Telefono], 
+      [UsuarioInterno_VSEG].[PEI_Email] AS [PEI_Email], 
+      [UsuarioInterno_VSEG].[PEI_IdRegionalAdm] AS [PEI_IdRegionalAdm], 
+      [UsuarioInterno_VSEG].[PEI_Comentarios] AS [PEI_Comentarios], 
+      [UsuarioInterno_VSEG].[REA_Descripcion] AS [REA_Descripcion], 
+      [UsuarioInterno_VSEG].[CAR_Descripcion] AS [CAR_Descripcion], 
+      [UsuarioInterno_VSEG].[CAR_IdCargoReporta] AS [CAR_IdCargoReporta], 
+      [UsuarioInterno_VSEG].[CES_IdMunicipio] AS [CES_IdMunicipio]
+      FROM [dbo].[UsuarioInterno_VSEG] AS [UsuarioInterno_VSEG]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_ArchivoAsignacionTarea_ASG_ArchivosFramework" Association="ModeloAgenda.Store.FK_ArchivoAsignacionTarea_ASG_ArchivosFramework">
+            <End Role="ArchivosFramework" EntitySet="ArchivosFramework" />
+            <End Role="ArchivoAsignacionTarea_ASG" EntitySet="ArchivoAsignacionTarea_ASG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG" Association="ModeloAgenda.Store.FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG">
+            <End Role="AsignacionTarea_ASG" EntitySet="AsignacionTarea_ASG" />
+            <End Role="ArchivoAsignacionTarea_ASG" EntitySet="ArchivoAsignacionTarea_ASG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cargo_SEG_Cargo_SEG" Association="ModeloAgenda.Store.FK_Cargo_SEG_Cargo_SEG">
+            <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+            <End Role="Cargo_SEG1" EntitySet="Cargo_SEG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" Association="ModeloAgenda.Store.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+            <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+            <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonaInterna_PAR_Cargo_SEG" Association="ModeloAgenda.Store.FK_PersonaInterna_PAR_Cargo_SEG">
+            <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+            <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonaInterna_PAR_RegionalAdministrativa_PUA" Association="ModeloAgenda.Store.FK_PersonaInterna_PAR_RegionalAdministrativa_PUA">
+            <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+            <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG" Association="ModeloAgenda.Store.FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG">
+            <End Role="AsignacionTarea_ASG" EntitySet="AsignacionTarea_ASG" />
+            <End Role="SeguimientoAsignacionTareas_ASG" EntitySet="SeguimientoAsignacionTareas_ASG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG" Association="ModeloAgenda.Store.FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG">
+            <End Role="EventoAsignacion_ASG" EntitySet="EventoAsignacion_ASG" />
+            <End Role="SeguimientoAsignacionTareas_ASG" EntitySet="SeguimientoAsignacionTareas_ASG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tarea_ASG_Cargo_SEG" Association="ModeloAgenda.Store.FK_Tarea_ASG_Cargo_SEG">
+            <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+            <End Role="Tarea_ASG" EntitySet="Tarea_ASG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tarea_ASG_Falla_ASG" Association="ModeloAgenda.Store.FK_Tarea_ASG_Falla_ASG">
+            <End Role="Falla_ASG" EntitySet="Falla_ASG" />
+            <End Role="Tarea_ASG" EntitySet="Tarea_ASG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioCentroServicio_SEG_Usuario_SEG" Association="ModeloAgenda.Store.FK_UsuarioCentroServicio_SEG_Usuario_SEG">
+            <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+            <End Role="UsuarioCentroServicio_SEG" EntitySet="UsuarioCentroServicio_SEG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR" Association="ModeloAgenda.Store.FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR">
+            <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+            <End Role="UsuarioPersonaInterna_SEG" EntitySet="UsuarioPersonaInterna_SEG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioPersonaInterna_SEG_Usuario_SEG" Association="ModeloAgenda.Store.FK_UsuarioPersonaInterna_SEG_Usuario_SEG">
+            <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+            <End Role="UsuarioPersonaInterna_SEG" EntitySet="UsuarioPersonaInterna_SEG" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ArchivoAsignacionTarea_ASG">
+          <Key>
+            <PropertyRef Name="ARA_IdAsignacionTarea" />
+            <PropertyRef Name="ARA_IdArchivo" />
+          </Key>
+          <Property Name="ARA_IdAsignacionTarea" Type="bigint" Nullable="false" />
+          <Property Name="ARA_IdArchivo" Type="bigint" Nullable="false" />
+          <Property Name="ARA_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="ARA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ArchivosFramework">
+          <Key>
+            <PropertyRef Name="AFW_IdArchivo" />
+          </Key>
+          <Property Name="AFW_IdArchivo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AFW_NombreAdjunto" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AFW_Adjunto" Type="varbinary(max)" Nullable="false" />
+          <Property Name="AFW_IdAdjunto" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AFW_FechaCargaArchivo" Type="datetime" Nullable="false" />
+          <Property Name="AFW_Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AFW_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AsignacionTarea_ASG">
+          <Key>
+            <PropertyRef Name="AST_IdAsignacionTarea" />
+          </Key>
+          <Property Name="AST_IdAsignacionTarea" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AST_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="AST_DescripcionModulo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AST_IdFalla" Type="int" Nullable="false" />
+          <Property Name="AST_DescripcionFalla" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AST_IdTarea" Type="int" Nullable="false" />
+          <Property Name="AST_TiempoEscalamiento" Type="int" Nullable="false" />
+          <Property Name="AST_FechaVencimiento" Type="datetime" Nullable="false" />
+          <Property Name="AST_DescripcionTarea" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="AST_IdCargoResponsable" Type="int" Nullable="false" />
+          <Property Name="AST_DescCargoResponsable" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AST_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="AST_UsuarioResponsable" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AST_EstaAbierta" Type="bit" Nullable="false" />
+          <Property Name="AST_FechaAsignacion" Type="datetime" Nullable="false" />
+          <Property Name="AST_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Cargo_SEG">
+          <Key>
+            <PropertyRef Name="CAR_IdCargo" />
+          </Key>
+          <Property Name="CAR_IdCargo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CAR_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CAR_IdCargoReporta" Type="int" />
+          <Property Name="CAR_CodigoNovasoft" Type="varchar" MaxLength="10" />
+          <Property Name="CAR_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="CAR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CentroLogistico_PUA">
+          <Key>
+            <PropertyRef Name="CEL_IdCentroLogistico" />
+          </Key>
+          <Property Name="CEL_IdCentroLogistico" Type="bigint" Nullable="false" />
+          <Property Name="CEL_IdRegionalAdm" Type="bigint" Nullable="false" />
+          <Property Name="CEL_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="CEL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="EventoAsignacion_ASG">
+          <Key>
+            <PropertyRef Name="EVA_IdEvento" />
+          </Key>
+          <Property Name="EVA_IdEvento" Type="int" Nullable="false" />
+          <Property Name="EVA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="EVA_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="EVA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Falla_ASG">
+          <Key>
+            <PropertyRef Name="FAL_IdFalla" />
+          </Key>
+          <Property Name="FAL_IdFalla" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FAL_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FAL_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FAL_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FAL_EsEditable" Type="bit" Nullable="false" />
+          <Property Name="FAL_Tipo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FAL_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="FAL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="FallaHistorico_ASG">
+          <Key>
+            <PropertyRef Name="FAL_IdAuditoria" />
+          </Key>
+          <Property Name="FAL_IdAuditoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FAL_IdFalla" Type="int" Nullable="false" />
+          <Property Name="FAL_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FAL_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FAL_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FAL_EsEditable" Type="bit" Nullable="false" />
+          <Property Name="FAL_Tipo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FAL_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="FAL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FAL_FechaCambio" Type="datetime" Nullable="false" />
+          <Property Name="FAL_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FAL_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Modulo_VER">
+          <Key>
+            <PropertyRef Name="MOD_IdModulo" />
+          </Key>
+          <Property Name="MOD_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="MOD_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MOD_FechaGrabacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ParametrosFramework">
+          <Key>
+            <PropertyRef Name="PAR_IdParametro" />
+          </Key>
+          <Property Name="PAR_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PAR_ValorParametro" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PAR_ModuloFR" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PAR_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PAR_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="PAR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PersonaInterna_PAR">
+          <Key>
+            <PropertyRef Name="PEI_IdPersonaInterna" />
+          </Key>
+          <Property Name="PEI_IdPersonaInterna" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PEI_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="PEI_IdCargo" Type="int" Nullable="false" />
+          <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+          <Property Name="PEI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="PEI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="PEI_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="PEI_Email" Type="varchar" MaxLength="50" />
+          <Property Name="PEI_IdRegionalAdm" Type="bigint" />
+          <Property Name="PEI_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PEI_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="PEI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="RegionalAdministrativa_PUA">
+          <Key>
+            <PropertyRef Name="REA_IdRegionalAdm" />
+          </Key>
+          <Property Name="REA_IdRegionalAdm" Type="bigint" Nullable="false" />
+          <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="REA_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="REA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="REA_CodigoExternoSucursal" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="REA_IdCasaMatriz" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SeguimientoAsignacionTareas_ASG">
+          <Key>
+            <PropertyRef Name="SEA_IdSeguimientoAsg" />
+          </Key>
+          <Property Name="SEA_IdSeguimientoAsg" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SEA_IdAsignacionTarea" Type="bigint" Nullable="false" />
+          <Property Name="SEA_FechaEvento" Type="datetime" Nullable="false" />
+          <Property Name="SEA_IdEvento" Type="int" Nullable="false" />
+          <Property Name="SEA_UsuarioEvento" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SEA_IdCargoResponsable" Type="int" Nullable="false" />
+          <Property Name="SEA_DescCargoResponsable" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="SEA_UsuarioResponsable" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SEA_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="SEA_TiempoEscalamiento" Type="int" Nullable="false" />
+          <Property Name="SEA_TiempoExtension" Type="int" Nullable="false" />
+          <Property Name="SEA_FechaEscalamiento" Type="datetime" Nullable="false" />
+          <Property Name="SEA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Tarea_ASG">
+          <Key>
+            <PropertyRef Name="TAR_IdTarea" />
+          </Key>
+          <Property Name="TAR_IdTarea" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TAR_IdFalla" Type="int" Nullable="false" />
+          <Property Name="TAR_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="TAR_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TAR_CargoResponsable" Type="int" Nullable="false" />
+          <Property Name="TAR_TiempoEscalamiento" Type="int" Nullable="false" />
+          <Property Name="TAR_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="TAR_UsuarioInsercion" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TareaHistorico_ASG">
+          <Key>
+            <PropertyRef Name="TAR_IdAuditoria" />
+          </Key>
+          <Property Name="TAR_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TAR_IdTarea" Type="int" Nullable="false" />
+          <Property Name="TAR_IdFalla" Type="int" Nullable="false" />
+          <Property Name="TAR_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="TAR_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TAR_CargoResponsable" Type="int" Nullable="false" />
+          <Property Name="TAR_TiempoEscalamiento" Type="int" Nullable="false" />
+          <Property Name="TAR_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="TAR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TAR_FechaCambio" Type="datetime" Nullable="false" />
+          <Property Name="TAR_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TAR_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Usuario_SEG">
+          <Key>
+            <PropertyRef Name="USU_IdCodigoUsuario" />
+          </Key>
+          <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="USU_TipoUsuario" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+          <Property Name="USU_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="USU_EsUsuarioInterno" Type="bit" Nullable="false" />
+          <Property Name="USU_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="USU_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="USU_EsCajeroPpal" Type="bit" Nullable="false" />
+          <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+          <Property Name="USU_AutorizaCargaMasivaICA" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsuarioCentroServicio_SEG">
+          <Key>
+            <PropertyRef Name="UCS_IdCodigoUsuario" />
+            <PropertyRef Name="UCS_IdCentroServicios" />
+          </Key>
+          <Property Name="UCS_IdCodigoUsuario" Type="bigint" Nullable="false" />
+          <Property Name="UCS_IdCentroServicios" Type="bigint" Nullable="false" />
+          <Property Name="UCS_Caja" Type="int" Nullable="false" />
+          <Property Name="UCS_NombreCentroServicios" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="UCS_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="UCS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="UsuarioPersonaInterna_SEG">
+          <Key>
+            <PropertyRef Name="USP_IdCodigoUsuario" />
+          </Key>
+          <Property Name="USP_IdCodigoUsuario" Type="bigint" Nullable="false" />
+          <Property Name="USP_IdPersonaInterna" Type="bigint" Nullable="false" />
+          <Property Name="USP_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="USP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.AsignacionTareaFalla_VASG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="AsignacionTareaFalla_VASG">
+          <Key>
+            <PropertyRef Name="AST_IdAsignacionTarea" />
+            <PropertyRef Name="AST_IdModulo" />
+            <PropertyRef Name="AST_DescripcionModulo" />
+            <PropertyRef Name="AST_IdFalla" />
+            <PropertyRef Name="AST_DescripcionFalla" />
+            <PropertyRef Name="AST_IdTarea" />
+            <PropertyRef Name="AST_TiempoEscalamiento" />
+            <PropertyRef Name="AST_FechaVencimiento" />
+            <PropertyRef Name="AST_DescripcionTarea" />
+            <PropertyRef Name="AST_IdCargoResponsable" />
+            <PropertyRef Name="AST_DescCargoResponsable" />
+            <PropertyRef Name="AST_Comentarios" />
+            <PropertyRef Name="AST_UsuarioResponsable" />
+            <PropertyRef Name="AST_EstaAbierta" />
+            <PropertyRef Name="AST_FechaAsignacion" />
+          </Key>
+          <Property Name="AST_IdAsignacionTarea" Type="bigint" Nullable="false" />
+          <Property Name="AST_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="AST_DescripcionModulo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AST_IdFalla" Type="int" Nullable="false" />
+          <Property Name="AST_DescripcionFalla" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AST_IdTarea" Type="int" Nullable="false" />
+          <Property Name="AST_TiempoEscalamiento" Type="int" Nullable="false" />
+          <Property Name="AST_FechaVencimiento" Type="datetime" Nullable="false" />
+          <Property Name="AST_DescripcionTarea" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="AST_IdCargoResponsable" Type="int" Nullable="false" />
+          <Property Name="AST_DescCargoResponsable" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AST_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="AST_UsuarioResponsable" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AST_EstaAbierta" Type="bit" Nullable="false" />
+          <Property Name="AST_FechaAsignacion" Type="datetime" Nullable="false" />
+          <Property Name="FAL_Estado" Type="char" MaxLength="3" />
+          <Property Name="FAL_Descripcion" Type="varchar" MaxLength="50" />
+          <Property Name="FAL_EsEditable" Type="bit" />
+          <Property Name="FAL_Tipo" Type="char" MaxLength="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.EstadoActivoInactivo_VFRM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="EstadoActivoInactivo_VFRM">
+          <Key>
+            <PropertyRef Name="IdEstado" />
+            <PropertyRef Name="Estado" />
+          </Key>
+          <Property Name="IdEstado" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="Estado" Type="varchar" Nullable="false" MaxLength="8" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.Fallas_VASG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Fallas_VASG">
+          <Key>
+            <PropertyRef Name="FAL_IdFalla" />
+            <PropertyRef Name="FAL_IdModulo" />
+            <PropertyRef Name="FAL_Estado" />
+            <PropertyRef Name="FAL_Descripcion" />
+            <PropertyRef Name="FAL_EsEditable" />
+            <PropertyRef Name="FAL_FechaGrabacion" />
+            <PropertyRef Name="FAL_CreadoPor" />
+            <PropertyRef Name="MOD_Descripcion" />
+          </Key>
+          <Property Name="FAL_IdFalla" Type="int" Nullable="false" />
+          <Property Name="FAL_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FAL_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FAL_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FAL_EsEditable" Type="bit" Nullable="false" />
+          <Property Name="FAL_Tipo" Type="char" MaxLength="3" />
+          <Property Name="FAL_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="FAL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MOD_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.UsuarioInterno_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="UsuarioInterno_VSEG">
+          <Key>
+            <PropertyRef Name="USU_IdCodigoUsuario" />
+            <PropertyRef Name="USU_IdUsuario" />
+            <PropertyRef Name="USU_Estado" />
+            <PropertyRef Name="USU_TipoUsuario" />
+            <PropertyRef Name="USU_RequiereIdMaquina" />
+            <PropertyRef Name="USU_Comentarios" />
+            <PropertyRef Name="USU_EsUsuarioInterno" />
+            <PropertyRef Name="USP_IdPersonaInterna" />
+            <PropertyRef Name="PEI_IdTipoIdentificacion" />
+            <PropertyRef Name="PEI_Identificacion" />
+            <PropertyRef Name="PEI_IdCargo" />
+            <PropertyRef Name="PEI_Nombre" />
+            <PropertyRef Name="PEI_PrimerApellido" />
+            <PropertyRef Name="PEI_Direccion" />
+            <PropertyRef Name="PEI_Municipio" />
+            <PropertyRef Name="PEI_Telefono" />
+            <PropertyRef Name="PEI_Comentarios" />
+            <PropertyRef Name="REA_Descripcion" />
+            <PropertyRef Name="CAR_Descripcion" />
+            <PropertyRef Name="CES_IdMunicipio" />
+          </Key>
+          <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+          <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="USU_TipoUsuario" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+          <Property Name="USU_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="USU_EsUsuarioInterno" Type="bit" Nullable="false" />
+          <Property Name="USP_IdPersonaInterna" Type="bigint" Nullable="false" />
+          <Property Name="PEI_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="PEI_IdCargo" Type="int" Nullable="false" />
+          <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+          <Property Name="PEI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="PEI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="PEI_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="PEI_Email" Type="varchar" MaxLength="50" />
+          <Property Name="PEI_IdRegionalAdm" Type="bigint" />
+          <Property Name="PEI_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CAR_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CAR_IdCargoReporta" Type="int" />
+          <Property Name="CES_IdMunicipio" Type="varchar" Nullable="false" MaxLength="8" />
+        </EntityType>
+        <Association Name="FK_ArchivoAsignacionTarea_ASG_ArchivosFramework">
+          <End Role="ArchivosFramework" Type="ModeloAgenda.Store.ArchivosFramework" Multiplicity="1" />
+          <End Role="ArchivoAsignacionTarea_ASG" Type="ModeloAgenda.Store.ArchivoAsignacionTarea_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArchivosFramework">
+              <PropertyRef Name="AFW_IdArchivo" />
+            </Principal>
+            <Dependent Role="ArchivoAsignacionTarea_ASG">
+              <PropertyRef Name="ARA_IdArchivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG">
+          <End Role="AsignacionTarea_ASG" Type="ModeloAgenda.Store.AsignacionTarea_ASG" Multiplicity="1" />
+          <End Role="ArchivoAsignacionTarea_ASG" Type="ModeloAgenda.Store.ArchivoAsignacionTarea_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AsignacionTarea_ASG">
+              <PropertyRef Name="AST_IdAsignacionTarea" />
+            </Principal>
+            <Dependent Role="ArchivoAsignacionTarea_ASG">
+              <PropertyRef Name="ARA_IdAsignacionTarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cargo_SEG_Cargo_SEG">
+          <End Role="Cargo_SEG" Type="ModeloAgenda.Store.Cargo_SEG" Multiplicity="0..1" />
+          <End Role="Cargo_SEG1" Type="ModeloAgenda.Store.Cargo_SEG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_SEG">
+              <PropertyRef Name="CAR_IdCargo" />
+            </Principal>
+            <Dependent Role="Cargo_SEG1">
+              <PropertyRef Name="CAR_IdCargoReporta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+          <End Role="RegionalAdministrativa_PUA" Type="ModeloAgenda.Store.RegionalAdministrativa_PUA" Multiplicity="1" />
+          <End Role="CentroLogistico_PUA" Type="ModeloAgenda.Store.CentroLogistico_PUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegionalAdministrativa_PUA">
+              <PropertyRef Name="REA_IdRegionalAdm" />
+            </Principal>
+            <Dependent Role="CentroLogistico_PUA">
+              <PropertyRef Name="CEL_IdRegionalAdm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonaInterna_PAR_Cargo_SEG">
+          <End Role="Cargo_SEG" Type="ModeloAgenda.Store.Cargo_SEG" Multiplicity="1" />
+          <End Role="PersonaInterna_PAR" Type="ModeloAgenda.Store.PersonaInterna_PAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_SEG">
+              <PropertyRef Name="CAR_IdCargo" />
+            </Principal>
+            <Dependent Role="PersonaInterna_PAR">
+              <PropertyRef Name="PEI_IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonaInterna_PAR_RegionalAdministrativa_PUA">
+          <End Role="RegionalAdministrativa_PUA" Type="ModeloAgenda.Store.RegionalAdministrativa_PUA" Multiplicity="0..1" />
+          <End Role="PersonaInterna_PAR" Type="ModeloAgenda.Store.PersonaInterna_PAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegionalAdministrativa_PUA">
+              <PropertyRef Name="REA_IdRegionalAdm" />
+            </Principal>
+            <Dependent Role="PersonaInterna_PAR">
+              <PropertyRef Name="PEI_IdRegionalAdm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG">
+          <End Role="AsignacionTarea_ASG" Type="ModeloAgenda.Store.AsignacionTarea_ASG" Multiplicity="1" />
+          <End Role="SeguimientoAsignacionTareas_ASG" Type="ModeloAgenda.Store.SeguimientoAsignacionTareas_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AsignacionTarea_ASG">
+              <PropertyRef Name="AST_IdAsignacionTarea" />
+            </Principal>
+            <Dependent Role="SeguimientoAsignacionTareas_ASG">
+              <PropertyRef Name="SEA_IdAsignacionTarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG">
+          <End Role="EventoAsignacion_ASG" Type="ModeloAgenda.Store.EventoAsignacion_ASG" Multiplicity="1" />
+          <End Role="SeguimientoAsignacionTareas_ASG" Type="ModeloAgenda.Store.SeguimientoAsignacionTareas_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventoAsignacion_ASG">
+              <PropertyRef Name="EVA_IdEvento" />
+            </Principal>
+            <Dependent Role="SeguimientoAsignacionTareas_ASG">
+              <PropertyRef Name="SEA_IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tarea_ASG_Cargo_SEG">
+          <End Role="Cargo_SEG" Type="ModeloAgenda.Store.Cargo_SEG" Multiplicity="1" />
+          <End Role="Tarea_ASG" Type="ModeloAgenda.Store.Tarea_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_SEG">
+              <PropertyRef Name="CAR_IdCargo" />
+            </Principal>
+            <Dependent Role="Tarea_ASG">
+              <PropertyRef Name="TAR_CargoResponsable" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tarea_ASG_Falla_ASG">
+          <End Role="Falla_ASG" Type="ModeloAgenda.Store.Falla_ASG" Multiplicity="1" />
+          <End Role="Tarea_ASG" Type="ModeloAgenda.Store.Tarea_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Falla_ASG">
+              <PropertyRef Name="FAL_IdFalla" />
+            </Principal>
+            <Dependent Role="Tarea_ASG">
+              <PropertyRef Name="TAR_IdFalla" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioCentroServicio_SEG_Usuario_SEG">
+          <End Role="Usuario_SEG" Type="ModeloAgenda.Store.Usuario_SEG" Multiplicity="1" />
+          <End Role="UsuarioCentroServicio_SEG" Type="ModeloAgenda.Store.UsuarioCentroServicio_SEG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_SEG">
+              <PropertyRef Name="USU_IdCodigoUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioCentroServicio_SEG">
+              <PropertyRef Name="UCS_IdCodigoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR">
+          <End Role="PersonaInterna_PAR" Type="ModeloAgenda.Store.PersonaInterna_PAR" Multiplicity="1" />
+          <End Role="UsuarioPersonaInterna_SEG" Type="ModeloAgenda.Store.UsuarioPersonaInterna_SEG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaInterna_PAR">
+              <PropertyRef Name="PEI_IdPersonaInterna" />
+            </Principal>
+            <Dependent Role="UsuarioPersonaInterna_SEG">
+              <PropertyRef Name="USP_IdPersonaInterna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioPersonaInterna_SEG_Usuario_SEG">
+          <End Role="Usuario_SEG" Type="ModeloAgenda.Store.Usuario_SEG" Multiplicity="1" />
+          <End Role="UsuarioPersonaInterna_SEG" Type="ModeloAgenda.Store.UsuarioPersonaInterna_SEG" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_SEG">
+              <PropertyRef Name="USU_IdCodigoUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioPersonaInterna_SEG">
+              <PropertyRef Name="USP_IdCodigoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModeloAgenda" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EntidadesAgenda" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FallaHistorico_ASG" EntityType="ModeloAgenda.FallaHistorico_ASG" />
+          <EntitySet Name="TareaHistorico_ASG" EntityType="ModeloAgenda.TareaHistorico_ASG" />
+          <EntitySet Name="EstadoActivoInactivo_VFRM" EntityType="ModeloAgenda.EstadoActivoInactivo_VFRM" />
+          <EntitySet Name="EventoAsignacion_ASG" EntityType="ModeloAgenda.EventoAsignacion_ASG" />
+          <EntitySet Name="ArchivosFramework" EntityType="ModeloAgenda.ArchivosFramework" />
+          <EntitySet Name="ArchivoAsignacionTarea_ASG" EntityType="ModeloAgenda.ArchivoAsignacionTarea_ASG" />
+          <AssociationSet Name="FK_ArchivoAsignacionTarea_ASG_ArchivosFramework" Association="ModeloAgenda.FK_ArchivoAsignacionTarea_ASG_ArchivosFramework">
+            <End Role="ArchivosFramework" EntitySet="ArchivosFramework" />
+            <End Role="ArchivoAsignacionTarea_ASG" EntitySet="ArchivoAsignacionTarea_ASG" />
+          </AssociationSet>
+          <EntitySet Name="ParametrosFramework" EntityType="ModeloAgenda.ParametrosFramework" />
+          <EntitySet Name="Tarea_ASG" EntityType="ModeloAgenda.Tarea_ASG" />
+          <EntitySet Name="Cargo_SEG" EntityType="ModeloAgenda.Cargo_SEG" />
+          <AssociationSet Name="FK_Cargo_SEG_Cargo_SEG" Association="ModeloAgenda.FK_Cargo_SEG_Cargo_SEG">
+            <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+            <End Role="Cargo_SEG1" EntitySet="Cargo_SEG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tarea_ASG_Cargo_SEG" Association="ModeloAgenda.FK_Tarea_ASG_Cargo_SEG">
+            <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+            <End Role="Tarea_ASG" EntitySet="Tarea_ASG" />
+          </AssociationSet>
+          <EntitySet Name="Fallas_VASG" EntityType="ModeloAgenda.Fallas_VASG" />
+          <EntitySet Name="CentroLogistico_PUA" EntityType="ModeloAgenda.CentroLogistico_PUA" />
+          <EntitySet Name="PersonaInterna_PAR" EntityType="ModeloAgenda.PersonaInterna_PAR" />
+          <AssociationSet Name="FK_PersonaInterna_PAR_Cargo_SEG" Association="ModeloAgenda.FK_PersonaInterna_PAR_Cargo_SEG">
+            <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+            <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+          </AssociationSet>
+          <EntitySet Name="UsuarioPersonaInterna_SEG" EntityType="ModeloAgenda.UsuarioPersonaInterna_SEG" />
+          <AssociationSet Name="FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR" Association="ModeloAgenda.FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR">
+            <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+            <End Role="UsuarioPersonaInterna_SEG" EntitySet="UsuarioPersonaInterna_SEG" />
+          </AssociationSet>
+          <EntitySet Name="Falla_ASG" EntityType="ModeloAgenda.Falla_ASG" />
+          <EntitySet Name="Usuario_SEG" EntityType="ModeloAgenda.Usuario_SEG" />
+          <AssociationSet Name="FK_Tarea_ASG_Falla_ASG" Association="ModeloAgenda.FK_Tarea_ASG_Falla_ASG">
+            <End Role="Falla_ASG" EntitySet="Falla_ASG" />
+            <End Role="Tarea_ASG" EntitySet="Tarea_ASG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioPersonaInterna_SEG_Usuario_SEG" Association="ModeloAgenda.FK_UsuarioPersonaInterna_SEG_Usuario_SEG">
+            <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+            <End Role="UsuarioPersonaInterna_SEG" EntitySet="UsuarioPersonaInterna_SEG" />
+          </AssociationSet>
+          <EntitySet Name="Modulo_VER" EntityType="ModeloAgenda.Modulo_VER" />
+          <EntitySet Name="AsignacionTarea_ASG" EntityType="ModeloAgenda.AsignacionTarea_ASG" />
+          <AssociationSet Name="FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG" Association="ModeloAgenda.FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG">
+            <End Role="AsignacionTarea_ASG" EntitySet="AsignacionTarea_ASG" />
+            <End Role="ArchivoAsignacionTarea_ASG" EntitySet="ArchivoAsignacionTarea_ASG" />
+          </AssociationSet>
+          <EntitySet Name="SeguimientoAsignacionTareas_ASG" EntityType="ModeloAgenda.SeguimientoAsignacionTareas_ASG" />
+          <AssociationSet Name="FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG" Association="ModeloAgenda.FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG">
+            <End Role="AsignacionTarea_ASG" EntitySet="AsignacionTarea_ASG" />
+            <End Role="SeguimientoAsignacionTareas_ASG" EntitySet="SeguimientoAsignacionTareas_ASG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG" Association="ModeloAgenda.FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG">
+            <End Role="EventoAsignacion_ASG" EntitySet="EventoAsignacion_ASG" />
+            <End Role="SeguimientoAsignacionTareas_ASG" EntitySet="SeguimientoAsignacionTareas_ASG" />
+          </AssociationSet>
+          <EntitySet Name="UsuarioCentroServicio_SEG" EntityType="ModeloAgenda.UsuarioCentroServicio_SEG" />
+          <AssociationSet Name="FK_UsuarioCentroServicio_SEG_Usuario_SEG" Association="ModeloAgenda.FK_UsuarioCentroServicio_SEG_Usuario_SEG">
+            <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+            <End Role="UsuarioCentroServicio_SEG" EntitySet="UsuarioCentroServicio_SEG" />
+          </AssociationSet>
+          <EntitySet Name="AsignacionTareaFalla_VASG" EntityType="ModeloAgenda.AsignacionTareaFalla_VASG" />
+          <EntitySet Name="UsuarioInterno_VSEG" EntityType="ModeloAgenda.UsuarioInterno_VSEG" />
+          <EntitySet Name="RegionalAdministrativa_PUA" EntityType="ModeloAgenda.RegionalAdministrativa_PUA" />
+          <AssociationSet Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" Association="ModeloAgenda.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+            <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+            <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PersonaInterna_PAR_RegionalAdministrativa_PUA" Association="ModeloAgenda.FK_PersonaInterna_PAR_RegionalAdministrativa_PUA">
+            <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+            <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="FallaHistorico_ASG">
+          <Key>
+            <PropertyRef Name="FAL_IdAuditoria" />
+          </Key>
+          <Property Name="FAL_IdAuditoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FAL_IdFalla" Type="Int32" Nullable="false" />
+          <Property Name="FAL_IdModulo" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="FAL_Estado" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="FAL_Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FAL_EsEditable" Type="Boolean" Nullable="false" />
+          <Property Name="FAL_Tipo" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="FAL_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FAL_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FAL_FechaCambio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FAL_CambiadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FAL_TipoCambio" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TareaHistorico_ASG">
+          <Key>
+            <PropertyRef Name="TAR_IdAuditoria" />
+          </Key>
+          <Property Name="TAR_IdAuditoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TAR_IdTarea" Type="Int32" Nullable="false" />
+          <Property Name="TAR_IdFalla" Type="Int32" Nullable="false" />
+          <Property Name="TAR_Estado" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="TAR_Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TAR_CargoResponsable" Type="Int32" Nullable="false" />
+          <Property Name="TAR_TiempoEscalamiento" Type="Int32" Nullable="false" />
+          <Property Name="TAR_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TAR_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TAR_FechaCambio" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TAR_CambiadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TAR_TipoCambio" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="EstadoActivoInactivo_VFRM">
+          <Key>
+            <PropertyRef Name="IdEstado" />
+            <PropertyRef Name="Estado" />
+          </Key>
+          <Property Type="String" Name="IdEstado" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Estado" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EventoAsignacion_ASG">
+          <Key>
+            <PropertyRef Name="EVA_IdEvento" />
+          </Key>
+          <Property Type="Int32" Name="EVA_IdEvento" Nullable="false" />
+          <Property Type="String" Name="EVA_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="EVA_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="EVA_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SeguimientoAsignacionTareas_ASG" Relationship="ModeloAgenda.FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG" FromRole="EventoAsignacion_ASG" ToRole="SeguimientoAsignacionTareas_ASG" />
+        </EntityType>
+        <EntityType Name="ArchivosFramework">
+          <Key>
+            <PropertyRef Name="AFW_IdArchivo" />
+          </Key>
+          <Property Type="Int64" Name="AFW_IdArchivo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="AFW_NombreAdjunto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="AFW_Adjunto" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="Guid" Name="AFW_IdAdjunto" Nullable="false" />
+          <Property Type="DateTime" Name="AFW_FechaCargaArchivo" Nullable="false" Precision="3" />
+          <Property Type="String" Name="AFW_Usuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AFW_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ArchivoAsignacionTarea_ASG" Relationship="ModeloAgenda.FK_ArchivoAsignacionTarea_ASG_ArchivosFramework" FromRole="ArchivosFramework" ToRole="ArchivoAsignacionTarea_ASG" />
+        </EntityType>
+        <EntityType Name="ArchivoAsignacionTarea_ASG">
+          <Key>
+            <PropertyRef Name="ARA_IdAsignacionTarea" />
+            <PropertyRef Name="ARA_IdArchivo" />
+          </Key>
+          <Property Type="Int64" Name="ARA_IdAsignacionTarea" Nullable="false" />
+          <Property Type="Int64" Name="ARA_IdArchivo" Nullable="false" />
+          <Property Type="DateTime" Name="ARA_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ARA_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ArchivosFramework" Relationship="ModeloAgenda.FK_ArchivoAsignacionTarea_ASG_ArchivosFramework" FromRole="ArchivoAsignacionTarea_ASG" ToRole="ArchivosFramework" />
+          <NavigationProperty Name="AsignacionTarea_ASG" Relationship="ModeloAgenda.FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG" FromRole="ArchivoAsignacionTarea_ASG" ToRole="AsignacionTarea_ASG" />
+        </EntityType>
+        <Association Name="FK_ArchivoAsignacionTarea_ASG_ArchivosFramework">
+          <End Type="ModeloAgenda.ArchivosFramework" Role="ArchivosFramework" Multiplicity="1" />
+          <End Type="ModeloAgenda.ArchivoAsignacionTarea_ASG" Role="ArchivoAsignacionTarea_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ArchivosFramework">
+              <PropertyRef Name="AFW_IdArchivo" />
+            </Principal>
+            <Dependent Role="ArchivoAsignacionTarea_ASG">
+              <PropertyRef Name="ARA_IdArchivo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ParametrosFramework">
+          <Key>
+            <PropertyRef Name="PAR_IdParametro" />
+          </Key>
+          <Property Type="String" Name="PAR_IdParametro" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAR_ValorParametro" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAR_ModuloFR" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAR_Descripcion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PAR_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="PAR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Tarea_ASG">
+          <Key>
+            <PropertyRef Name="TAR_IdTarea" />
+          </Key>
+          <Property Type="Int32" Name="TAR_IdTarea" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="TAR_IdFalla" Nullable="false" />
+          <Property Type="String" Name="TAR_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="TAR_Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="TAR_CargoResponsable" Nullable="false" />
+          <Property Type="Int32" Name="TAR_TiempoEscalamiento" Nullable="false" />
+          <Property Type="DateTime" Name="TAR_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="TAR_UsuarioInsercion" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cargo_SEG" Relationship="ModeloAgenda.FK_Tarea_ASG_Cargo_SEG" FromRole="Tarea_ASG" ToRole="Cargo_SEG" />
+          <NavigationProperty Name="Falla_ASG" Relationship="ModeloAgenda.FK_Tarea_ASG_Falla_ASG" FromRole="Tarea_ASG" ToRole="Falla_ASG" />
+        </EntityType>
+        <EntityType Name="Cargo_SEG">
+          <Key>
+            <PropertyRef Name="CAR_IdCargo" />
+          </Key>
+          <Property Type="Int32" Name="CAR_IdCargo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CAR_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CAR_IdCargoReporta" />
+          <Property Type="DateTime" Name="CAR_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CAR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cargo_SEG1" Relationship="ModeloAgenda.FK_Cargo_SEG_Cargo_SEG" FromRole="Cargo_SEG" ToRole="Cargo_SEG1" />
+          <NavigationProperty Name="Cargo_SEG2" Relationship="ModeloAgenda.FK_Cargo_SEG_Cargo_SEG" FromRole="Cargo_SEG1" ToRole="Cargo_SEG" />
+          <NavigationProperty Name="Tarea_ASG" Relationship="ModeloAgenda.FK_Tarea_ASG_Cargo_SEG" FromRole="Cargo_SEG" ToRole="Tarea_ASG" />
+          <NavigationProperty Name="PersonaInterna_PAR" Relationship="ModeloAgenda.FK_PersonaInterna_PAR_Cargo_SEG" FromRole="Cargo_SEG" ToRole="PersonaInterna_PAR" />
+          <Property Type="String" Name="CAR_CodigoNovasoft" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_Cargo_SEG_Cargo_SEG">
+          <End Type="ModeloAgenda.Cargo_SEG" Role="Cargo_SEG" Multiplicity="0..1" />
+          <End Type="ModeloAgenda.Cargo_SEG" Role="Cargo_SEG1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_SEG">
+              <PropertyRef Name="CAR_IdCargo" />
+            </Principal>
+            <Dependent Role="Cargo_SEG1">
+              <PropertyRef Name="CAR_IdCargoReporta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tarea_ASG_Cargo_SEG">
+          <End Type="ModeloAgenda.Cargo_SEG" Role="Cargo_SEG" Multiplicity="1" />
+          <End Type="ModeloAgenda.Tarea_ASG" Role="Tarea_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_SEG">
+              <PropertyRef Name="CAR_IdCargo" />
+            </Principal>
+            <Dependent Role="Tarea_ASG">
+              <PropertyRef Name="TAR_CargoResponsable" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Fallas_VASG">
+          <Key>
+            <PropertyRef Name="FAL_IdFalla" />
+            <PropertyRef Name="FAL_IdModulo" />
+            <PropertyRef Name="FAL_Estado" />
+            <PropertyRef Name="FAL_Descripcion" />
+            <PropertyRef Name="FAL_EsEditable" />
+            <PropertyRef Name="FAL_FechaGrabacion" />
+            <PropertyRef Name="FAL_CreadoPor" />
+            <PropertyRef Name="MOD_Descripcion" />
+          </Key>
+          <Property Type="Int32" Name="FAL_IdFalla" Nullable="false" />
+          <Property Type="String" Name="FAL_IdModulo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="FAL_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="FAL_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="FAL_EsEditable" Nullable="false" />
+          <Property Type="String" Name="FAL_Tipo" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="FAL_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="FAL_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MOD_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CentroLogistico_PUA">
+          <Key>
+            <PropertyRef Name="CEL_IdCentroLogistico" />
+          </Key>
+          <Property Type="Int64" Name="CEL_IdCentroLogistico" Nullable="false" />
+          <Property Type="Int64" Name="CEL_IdRegionalAdm" Nullable="false" />
+          <Property Type="DateTime" Name="CEL_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="CEL_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="RegionalAdministrativa_PUA" Relationship="ModeloAgenda.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" FromRole="CentroLogistico_PUA" ToRole="RegionalAdministrativa_PUA" />
+        </EntityType>
+        <EntityType Name="PersonaInterna_PAR">
+          <Key>
+            <PropertyRef Name="PEI_IdPersonaInterna" />
+          </Key>
+          <Property Type="Int64" Name="PEI_IdPersonaInterna" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PEI_IdTipoIdentificacion" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Identificacion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PEI_IdCargo" Nullable="false" />
+          <Property Type="String" Name="PEI_Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_PrimerApellido" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_SegundoApellido" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Municipio" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Telefono" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Email" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="PEI_IdRegionalAdm" />
+          <Property Type="String" Name="PEI_Comentarios" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PEI_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="PEI_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cargo_SEG" Relationship="ModeloAgenda.FK_PersonaInterna_PAR_Cargo_SEG" FromRole="PersonaInterna_PAR" ToRole="Cargo_SEG" />
+          <NavigationProperty Name="UsuarioPersonaInterna_SEG" Relationship="ModeloAgenda.FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR" FromRole="PersonaInterna_PAR" ToRole="UsuarioPersonaInterna_SEG" />
+          <NavigationProperty Name="RegionalAdministrativa_PUA" Relationship="ModeloAgenda.FK_PersonaInterna_PAR_RegionalAdministrativa_PUA" FromRole="PersonaInterna_PAR" ToRole="RegionalAdministrativa_PUA" />
+        </EntityType>
+        <Association Name="FK_PersonaInterna_PAR_Cargo_SEG">
+          <End Type="ModeloAgenda.Cargo_SEG" Role="Cargo_SEG" Multiplicity="1" />
+          <End Type="ModeloAgenda.PersonaInterna_PAR" Role="PersonaInterna_PAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargo_SEG">
+              <PropertyRef Name="CAR_IdCargo" />
+            </Principal>
+            <Dependent Role="PersonaInterna_PAR">
+              <PropertyRef Name="PEI_IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UsuarioPersonaInterna_SEG">
+          <Key>
+            <PropertyRef Name="USP_IdCodigoUsuario" />
+          </Key>
+          <Property Type="Int64" Name="USP_IdCodigoUsuario" Nullable="false" />
+          <Property Type="Int64" Name="USP_IdPersonaInterna" Nullable="false" />
+          <Property Type="DateTime" Name="USP_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="USP_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PersonaInterna_PAR" Relationship="ModeloAgenda.FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR" FromRole="UsuarioPersonaInterna_SEG" ToRole="PersonaInterna_PAR" />
+          <NavigationProperty Name="Usuario_SEG" Relationship="ModeloAgenda.FK_UsuarioPersonaInterna_SEG_Usuario_SEG" FromRole="UsuarioPersonaInterna_SEG" ToRole="Usuario_SEG" />
+        </EntityType>
+        <Association Name="FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR">
+          <End Type="ModeloAgenda.PersonaInterna_PAR" Role="PersonaInterna_PAR" Multiplicity="1" />
+          <End Type="ModeloAgenda.UsuarioPersonaInterna_SEG" Role="UsuarioPersonaInterna_SEG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaInterna_PAR">
+              <PropertyRef Name="PEI_IdPersonaInterna" />
+            </Principal>
+            <Dependent Role="UsuarioPersonaInterna_SEG">
+              <PropertyRef Name="USP_IdPersonaInterna" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Falla_ASG">
+          <Key>
+            <PropertyRef Name="FAL_IdFalla" />
+          </Key>
+          <Property Type="Int32" Name="FAL_IdFalla" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FAL_IdModulo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="FAL_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="FAL_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="FAL_EsEditable" Nullable="false" />
+          <Property Type="String" Name="FAL_Tipo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="FAL_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="FAL_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tarea_ASG" Relationship="ModeloAgenda.FK_Tarea_ASG_Falla_ASG" FromRole="Falla_ASG" ToRole="Tarea_ASG" />
+        </EntityType>
+        <EntityType Name="Usuario_SEG">
+          <Key>
+            <PropertyRef Name="USU_IdCodigoUsuario" />
+          </Key>
+          <Property Type="Int64" Name="USU_IdCodigoUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="USU_IdUsuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USU_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="USU_TipoUsuario" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="USU_RequiereIdMaquina" Nullable="false" />
+          <Property Type="String" Name="USU_Comentarios" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="USU_EsUsuarioInterno" Nullable="false" />
+          <Property Type="DateTime" Name="USU_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="USU_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UsuarioPersonaInterna_SEG" Relationship="ModeloAgenda.FK_UsuarioPersonaInterna_SEG_Usuario_SEG" FromRole="Usuario_SEG" ToRole="UsuarioPersonaInterna_SEG" />
+          <Property Type="Boolean" Name="USU_EsCajeroPpal" Nullable="false" />
+          <NavigationProperty Name="UsuarioCentroServicio_SEG" Relationship="ModeloAgenda.FK_UsuarioCentroServicio_SEG_Usuario_SEG" FromRole="Usuario_SEG" ToRole="UsuarioCentroServicio_SEG" />
+          <Property Type="Boolean" Name="USU_AutorizaCargaMasiva" Nullable="false" />
+          <Property Type="Boolean" Name="USU_AutorizaCargaMasivaICA" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Tarea_ASG_Falla_ASG">
+          <End Type="ModeloAgenda.Falla_ASG" Role="Falla_ASG" Multiplicity="1" />
+          <End Type="ModeloAgenda.Tarea_ASG" Role="Tarea_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Falla_ASG">
+              <PropertyRef Name="FAL_IdFalla" />
+            </Principal>
+            <Dependent Role="Tarea_ASG">
+              <PropertyRef Name="TAR_IdFalla" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioPersonaInterna_SEG_Usuario_SEG">
+          <End Type="ModeloAgenda.Usuario_SEG" Role="Usuario_SEG" Multiplicity="1" />
+          <End Type="ModeloAgenda.UsuarioPersonaInterna_SEG" Role="UsuarioPersonaInterna_SEG" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_SEG">
+              <PropertyRef Name="USU_IdCodigoUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioPersonaInterna_SEG">
+              <PropertyRef Name="USP_IdCodigoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Modulo_VER">
+          <Key>
+            <PropertyRef Name="MOD_IdModulo" />
+          </Key>
+          <Property Type="String" Name="MOD_IdModulo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="MOD_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MOD_FechaGrabacion" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="AsignacionTarea_ASG">
+          <Key>
+            <PropertyRef Name="AST_IdAsignacionTarea" />
+          </Key>
+          <Property Type="Int64" Name="AST_IdAsignacionTarea" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="AST_IdModulo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="AST_DescripcionModulo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AST_IdFalla" Nullable="false" />
+          <Property Type="String" Name="AST_DescripcionFalla" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AST_IdTarea" Nullable="false" />
+          <Property Type="Int32" Name="AST_TiempoEscalamiento" Nullable="false" />
+          <Property Type="DateTime" Name="AST_FechaVencimiento" Nullable="false" Precision="3" />
+          <Property Type="String" Name="AST_DescripcionTarea" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AST_IdCargoResponsable" Nullable="false" />
+          <Property Type="String" Name="AST_DescCargoResponsable" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AST_Comentarios" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AST_UsuarioResponsable" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="AST_EstaAbierta" Nullable="false" />
+          <Property Type="DateTime" Name="AST_FechaAsignacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="AST_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ArchivoAsignacionTarea_ASG" Relationship="ModeloAgenda.FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG" FromRole="AsignacionTarea_ASG" ToRole="ArchivoAsignacionTarea_ASG" />
+          <NavigationProperty Name="SeguimientoAsignacionTareas_ASG" Relationship="ModeloAgenda.FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG" FromRole="AsignacionTarea_ASG" ToRole="SeguimientoAsignacionTareas_ASG" />
+        </EntityType>
+        <Association Name="FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG">
+          <End Type="ModeloAgenda.AsignacionTarea_ASG" Role="AsignacionTarea_ASG" Multiplicity="1" />
+          <End Type="ModeloAgenda.ArchivoAsignacionTarea_ASG" Role="ArchivoAsignacionTarea_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AsignacionTarea_ASG">
+              <PropertyRef Name="AST_IdAsignacionTarea" />
+            </Principal>
+            <Dependent Role="ArchivoAsignacionTarea_ASG">
+              <PropertyRef Name="ARA_IdAsignacionTarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SeguimientoAsignacionTareas_ASG">
+          <Key>
+            <PropertyRef Name="SEA_IdSeguimientoAsg" />
+          </Key>
+          <Property Type="Int64" Name="SEA_IdSeguimientoAsg" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="SEA_IdAsignacionTarea" Nullable="false" />
+          <Property Type="DateTime" Name="SEA_FechaEvento" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="SEA_IdEvento" Nullable="false" />
+          <Property Type="String" Name="SEA_UsuarioEvento" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SEA_IdCargoResponsable" Nullable="false" />
+          <Property Type="String" Name="SEA_DescCargoResponsable" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SEA_UsuarioResponsable" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SEA_Comentarios" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SEA_TiempoEscalamiento" Nullable="false" />
+          <Property Type="Int32" Name="SEA_TiempoExtension" Nullable="false" />
+          <Property Type="DateTime" Name="SEA_FechaEscalamiento" Nullable="false" Precision="3" />
+          <Property Type="String" Name="SEA_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AsignacionTarea_ASG" Relationship="ModeloAgenda.FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG" FromRole="SeguimientoAsignacionTareas_ASG" ToRole="AsignacionTarea_ASG" />
+          <NavigationProperty Name="EventoAsignacion_ASG" Relationship="ModeloAgenda.FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG" FromRole="SeguimientoAsignacionTareas_ASG" ToRole="EventoAsignacion_ASG" />
+        </EntityType>
+        <Association Name="FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG">
+          <End Type="ModeloAgenda.AsignacionTarea_ASG" Role="AsignacionTarea_ASG" Multiplicity="1" />
+          <End Type="ModeloAgenda.SeguimientoAsignacionTareas_ASG" Role="SeguimientoAsignacionTareas_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AsignacionTarea_ASG">
+              <PropertyRef Name="AST_IdAsignacionTarea" />
+            </Principal>
+            <Dependent Role="SeguimientoAsignacionTareas_ASG">
+              <PropertyRef Name="SEA_IdAsignacionTarea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG">
+          <End Type="ModeloAgenda.EventoAsignacion_ASG" Role="EventoAsignacion_ASG" Multiplicity="1" />
+          <End Type="ModeloAgenda.SeguimientoAsignacionTareas_ASG" Role="SeguimientoAsignacionTareas_ASG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventoAsignacion_ASG">
+              <PropertyRef Name="EVA_IdEvento" />
+            </Principal>
+            <Dependent Role="SeguimientoAsignacionTareas_ASG">
+              <PropertyRef Name="SEA_IdEvento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UsuarioCentroServicio_SEG">
+          <Key>
+            <PropertyRef Name="UCS_IdCodigoUsuario" />
+            <PropertyRef Name="UCS_IdCentroServicios" />
+          </Key>
+          <Property Type="Int64" Name="UCS_IdCodigoUsuario" Nullable="false" />
+          <Property Type="Int64" Name="UCS_IdCentroServicios" Nullable="false" />
+          <Property Type="Int32" Name="UCS_Caja" Nullable="false" />
+          <Property Type="String" Name="UCS_NombreCentroServicios" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="UCS_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="UCS_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Usuario_SEG" Relationship="ModeloAgenda.FK_UsuarioCentroServicio_SEG_Usuario_SEG" FromRole="UsuarioCentroServicio_SEG" ToRole="Usuario_SEG" />
+        </EntityType>
+        <Association Name="FK_UsuarioCentroServicio_SEG_Usuario_SEG">
+          <End Type="ModeloAgenda.Usuario_SEG" Role="Usuario_SEG" Multiplicity="1" />
+          <End Type="ModeloAgenda.UsuarioCentroServicio_SEG" Role="UsuarioCentroServicio_SEG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario_SEG">
+              <PropertyRef Name="USU_IdCodigoUsuario" />
+            </Principal>
+            <Dependent Role="UsuarioCentroServicio_SEG">
+              <PropertyRef Name="UCS_IdCodigoUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AsignacionTareaFalla_VASG">
+          <Key>
+            <PropertyRef Name="AST_IdAsignacionTarea" />
+            <PropertyRef Name="AST_IdModulo" />
+            <PropertyRef Name="AST_DescripcionModulo" />
+            <PropertyRef Name="AST_IdFalla" />
+            <PropertyRef Name="AST_DescripcionFalla" />
+            <PropertyRef Name="AST_IdTarea" />
+            <PropertyRef Name="AST_TiempoEscalamiento" />
+            <PropertyRef Name="AST_FechaVencimiento" />
+            <PropertyRef Name="AST_DescripcionTarea" />
+            <PropertyRef Name="AST_IdCargoResponsable" />
+            <PropertyRef Name="AST_DescCargoResponsable" />
+            <PropertyRef Name="AST_Comentarios" />
+            <PropertyRef Name="AST_UsuarioResponsable" />
+            <PropertyRef Name="AST_EstaAbierta" />
+            <PropertyRef Name="AST_FechaAsignacion" />
+          </Key>
+          <Property Type="Int64" Name="AST_IdAsignacionTarea" Nullable="false" />
+          <Property Type="String" Name="AST_IdModulo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="AST_DescripcionModulo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AST_IdFalla" Nullable="false" />
+          <Property Type="String" Name="AST_DescripcionFalla" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AST_IdTarea" Nullable="false" />
+          <Property Type="Int32" Name="AST_TiempoEscalamiento" Nullable="false" />
+          <Property Type="DateTime" Name="AST_FechaVencimiento" Nullable="false" Precision="3" />
+          <Property Type="String" Name="AST_DescripcionTarea" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="AST_IdCargoResponsable" Nullable="false" />
+          <Property Type="String" Name="AST_DescCargoResponsable" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AST_Comentarios" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AST_UsuarioResponsable" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="AST_EstaAbierta" Nullable="false" />
+          <Property Type="DateTime" Name="AST_FechaAsignacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="FAL_Estado" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="FAL_Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="FAL_EsEditable" />
+          <Property Type="String" Name="FAL_Tipo" MaxLength="3" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UsuarioInterno_VSEG">
+          <Key>
+            <PropertyRef Name="USU_IdCodigoUsuario" />
+            <PropertyRef Name="USU_IdUsuario" />
+            <PropertyRef Name="USU_Estado" />
+            <PropertyRef Name="USU_TipoUsuario" />
+            <PropertyRef Name="USU_RequiereIdMaquina" />
+            <PropertyRef Name="USU_Comentarios" />
+            <PropertyRef Name="USU_EsUsuarioInterno" />
+            <PropertyRef Name="USP_IdPersonaInterna" />
+            <PropertyRef Name="PEI_IdTipoIdentificacion" />
+            <PropertyRef Name="PEI_Identificacion" />
+            <PropertyRef Name="PEI_IdCargo" />
+            <PropertyRef Name="PEI_Nombre" />
+            <PropertyRef Name="PEI_PrimerApellido" />
+            <PropertyRef Name="PEI_Direccion" />
+            <PropertyRef Name="PEI_Municipio" />
+            <PropertyRef Name="PEI_Telefono" />
+            <PropertyRef Name="PEI_Comentarios" />
+            <PropertyRef Name="REA_Descripcion" />
+            <PropertyRef Name="CAR_Descripcion" />
+            <PropertyRef Name="CES_IdMunicipio" />
+          </Key>
+          <Property Type="Int64" Name="USU_IdCodigoUsuario" Nullable="false" />
+          <Property Type="String" Name="USU_IdUsuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USU_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="USU_TipoUsuario" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="Boolean" Name="USU_RequiereIdMaquina" Nullable="false" />
+          <Property Type="String" Name="USU_Comentarios" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="USU_EsUsuarioInterno" Nullable="false" />
+          <Property Type="Int64" Name="USP_IdPersonaInterna" Nullable="false" />
+          <Property Type="String" Name="PEI_IdTipoIdentificacion" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Identificacion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PEI_IdCargo" Nullable="false" />
+          <Property Type="String" Name="PEI_Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_PrimerApellido" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_SegundoApellido" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Municipio" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Telefono" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PEI_Email" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="PEI_IdRegionalAdm" />
+          <Property Type="String" Name="PEI_Comentarios" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CAR_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CAR_IdCargoReporta" />
+          <Property Type="String" Name="CES_IdMunicipio" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="RegionalAdministrativa_PUA">
+          <Key>
+            <PropertyRef Name="REA_IdRegionalAdm" />
+          </Key>
+          <Property Type="Int64" Name="REA_IdRegionalAdm" Nullable="false" />
+          <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="REA_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="REA_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REA_CodigoExternoSucursal" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="REA_IdCasaMatriz" Nullable="false" />
+          <NavigationProperty Name="CentroLogistico_PUA" Relationship="ModeloAgenda.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" FromRole="RegionalAdministrativa_PUA" ToRole="CentroLogistico_PUA" />
+          <NavigationProperty Name="PersonaInterna_PAR" Relationship="ModeloAgenda.FK_PersonaInterna_PAR_RegionalAdministrativa_PUA" FromRole="RegionalAdministrativa_PUA" ToRole="PersonaInterna_PAR" />
+        </EntityType>
+        <Association Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+          <End Type="ModeloAgenda.RegionalAdministrativa_PUA" Role="RegionalAdministrativa_PUA" Multiplicity="1" />
+          <End Type="ModeloAgenda.CentroLogistico_PUA" Role="CentroLogistico_PUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegionalAdministrativa_PUA">
+              <PropertyRef Name="REA_IdRegionalAdm" />
+            </Principal>
+            <Dependent Role="CentroLogistico_PUA">
+              <PropertyRef Name="CEL_IdRegionalAdm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PersonaInterna_PAR_RegionalAdministrativa_PUA">
+          <End Type="ModeloAgenda.RegionalAdministrativa_PUA" Role="RegionalAdministrativa_PUA" Multiplicity="0..1" />
+          <End Type="ModeloAgenda.PersonaInterna_PAR" Role="PersonaInterna_PAR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegionalAdministrativa_PUA">
+              <PropertyRef Name="REA_IdRegionalAdm" />
+            </Principal>
+            <Dependent Role="PersonaInterna_PAR">
+              <PropertyRef Name="PEI_IdRegionalAdm" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModeloAgendaStoreContainer" CdmEntityContainer="EntidadesAgenda">
+          <EntitySetMapping Name="FallaHistorico_ASG"><EntityTypeMapping TypeName="ModeloAgenda.FallaHistorico_ASG"><MappingFragment StoreEntitySet="FallaHistorico_ASG">
+            <ScalarProperty Name="FAL_IdAuditoria" ColumnName="FAL_IdAuditoria" />
+            <ScalarProperty Name="FAL_IdFalla" ColumnName="FAL_IdFalla" />
+            <ScalarProperty Name="FAL_IdModulo" ColumnName="FAL_IdModulo" />
+            <ScalarProperty Name="FAL_Estado" ColumnName="FAL_Estado" />
+            <ScalarProperty Name="FAL_Descripcion" ColumnName="FAL_Descripcion" />
+            <ScalarProperty Name="FAL_EsEditable" ColumnName="FAL_EsEditable" />
+            <ScalarProperty Name="FAL_Tipo" ColumnName="FAL_Tipo" />
+            <ScalarProperty Name="FAL_FechaGrabacion" ColumnName="FAL_FechaGrabacion" />
+            <ScalarProperty Name="FAL_CreadoPor" ColumnName="FAL_CreadoPor" />
+            <ScalarProperty Name="FAL_FechaCambio" ColumnName="FAL_FechaCambio" />
+            <ScalarProperty Name="FAL_CambiadoPor" ColumnName="FAL_CambiadoPor" />
+            <ScalarProperty Name="FAL_TipoCambio" ColumnName="FAL_TipoCambio" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TareaHistorico_ASG"><EntityTypeMapping TypeName="ModeloAgenda.TareaHistorico_ASG"><MappingFragment StoreEntitySet="TareaHistorico_ASG">
+            <ScalarProperty Name="TAR_IdAuditoria" ColumnName="TAR_IdAuditoria" />
+            <ScalarProperty Name="TAR_IdTarea" ColumnName="TAR_IdTarea" />
+            <ScalarProperty Name="TAR_IdFalla" ColumnName="TAR_IdFalla" />
+            <ScalarProperty Name="TAR_Estado" ColumnName="TAR_Estado" />
+            <ScalarProperty Name="TAR_Descripcion" ColumnName="TAR_Descripcion" />
+            <ScalarProperty Name="TAR_CargoResponsable" ColumnName="TAR_CargoResponsable" />
+            <ScalarProperty Name="TAR_TiempoEscalamiento" ColumnName="TAR_TiempoEscalamiento" />
+            <ScalarProperty Name="TAR_FechaGrabacion" ColumnName="TAR_FechaGrabacion" />
+            <ScalarProperty Name="TAR_CreadoPor" ColumnName="TAR_CreadoPor" />
+            <ScalarProperty Name="TAR_FechaCambio" ColumnName="TAR_FechaCambio" />
+            <ScalarProperty Name="TAR_CambiadoPor" ColumnName="TAR_CambiadoPor" />
+            <ScalarProperty Name="TAR_TipoCambio" ColumnName="TAR_TipoCambio" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EstadoActivoInactivo_VFRM">
+            <EntityTypeMapping TypeName="ModeloAgenda.EstadoActivoInactivo_VFRM">
+              <MappingFragment StoreEntitySet="EstadoActivoInactivo_VFRM">
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventoAsignacion_ASG">
+            <EntityTypeMapping TypeName="ModeloAgenda.EventoAsignacion_ASG">
+              <MappingFragment StoreEntitySet="EventoAsignacion_ASG">
+                <ScalarProperty Name="EVA_CreadoPor" ColumnName="EVA_CreadoPor" />
+                <ScalarProperty Name="EVA_FechaGrabacion" ColumnName="EVA_FechaGrabacion" />
+                <ScalarProperty Name="EVA_Descripcion" ColumnName="EVA_Descripcion" />
+                <ScalarProperty Name="EVA_IdEvento" ColumnName="EVA_IdEvento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArchivosFramework">
+            <EntityTypeMapping TypeName="ModeloAgenda.ArchivosFramework">
+              <MappingFragment StoreEntitySet="ArchivosFramework">
+                <ScalarProperty Name="AFW_Descripcion" ColumnName="AFW_Descripcion" />
+                <ScalarProperty Name="AFW_Usuario" ColumnName="AFW_Usuario" />
+                <ScalarProperty Name="AFW_FechaCargaArchivo" ColumnName="AFW_FechaCargaArchivo" />
+                <ScalarProperty Name="AFW_IdAdjunto" ColumnName="AFW_IdAdjunto" />
+                <ScalarProperty Name="AFW_Adjunto" ColumnName="AFW_Adjunto" />
+                <ScalarProperty Name="AFW_NombreAdjunto" ColumnName="AFW_NombreAdjunto" />
+                <ScalarProperty Name="AFW_IdArchivo" ColumnName="AFW_IdArchivo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArchivoAsignacionTarea_ASG">
+            <EntityTypeMapping TypeName="ModeloAgenda.ArchivoAsignacionTarea_ASG">
+              <MappingFragment StoreEntitySet="ArchivoAsignacionTarea_ASG">
+                <ScalarProperty Name="ARA_CreadoPor" ColumnName="ARA_CreadoPor" />
+                <ScalarProperty Name="ARA_FechaGrabacion" ColumnName="ARA_FechaGrabacion" />
+                <ScalarProperty Name="ARA_IdArchivo" ColumnName="ARA_IdArchivo" />
+                <ScalarProperty Name="ARA_IdAsignacionTarea" ColumnName="ARA_IdAsignacionTarea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParametrosFramework">
+            <EntityTypeMapping TypeName="ModeloAgenda.ParametrosFramework">
+              <MappingFragment StoreEntitySet="ParametrosFramework">
+                <ScalarProperty Name="PAR_CreadoPor" ColumnName="PAR_CreadoPor" />
+                <ScalarProperty Name="PAR_FechaGrabacion" ColumnName="PAR_FechaGrabacion" />
+                <ScalarProperty Name="PAR_Descripcion" ColumnName="PAR_Descripcion" />
+                <ScalarProperty Name="PAR_ModuloFR" ColumnName="PAR_ModuloFR" />
+                <ScalarProperty Name="PAR_ValorParametro" ColumnName="PAR_ValorParametro" />
+                <ScalarProperty Name="PAR_IdParametro" ColumnName="PAR_IdParametro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tarea_ASG">
+            <EntityTypeMapping TypeName="ModeloAgenda.Tarea_ASG">
+              <MappingFragment StoreEntitySet="Tarea_ASG">
+                <ScalarProperty Name="TAR_UsuarioInsercion" ColumnName="TAR_UsuarioInsercion" />
+                <ScalarProperty Name="TAR_FechaGrabacion" ColumnName="TAR_FechaGrabacion" />
+                <ScalarProperty Name="TAR_TiempoEscalamiento" ColumnName="TAR_TiempoEscalamiento" />
+                <ScalarProperty Name="TAR_CargoResponsable" ColumnName="TAR_CargoResponsable" />
+                <ScalarProperty Name="TAR_Descripcion" ColumnName="TAR_Descripcion" />
+                <ScalarProperty Name="TAR_Estado" ColumnName="TAR_Estado" />
+                <ScalarProperty Name="TAR_IdFalla" ColumnName="TAR_IdFalla" />
+                <ScalarProperty Name="TAR_IdTarea" ColumnName="TAR_IdTarea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargo_SEG">
+            <EntityTypeMapping TypeName="ModeloAgenda.Cargo_SEG">
+              <MappingFragment StoreEntitySet="Cargo_SEG">
+                <ScalarProperty Name="CAR_CodigoNovasoft" ColumnName="CAR_CodigoNovasoft" />
+                <ScalarProperty Name="CAR_CreadoPor" ColumnName="CAR_CreadoPor" />
+                <ScalarProperty Name="CAR_FechaGrabacion" ColumnName="CAR_FechaGrabacion" />
+                <ScalarProperty Name="CAR_IdCargoReporta" ColumnName="CAR_IdCargoReporta" />
+                <ScalarProperty Name="CAR_Descripcion" ColumnName="CAR_Descripcion" />
+                <ScalarProperty Name="CAR_IdCargo" ColumnName="CAR_IdCargo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fallas_VASG">
+            <EntityTypeMapping TypeName="ModeloAgenda.Fallas_VASG">
+              <MappingFragment StoreEntitySet="Fallas_VASG">
+                <ScalarProperty Name="MOD_Descripcion" ColumnName="MOD_Descripcion" />
+                <ScalarProperty Name="FAL_CreadoPor" ColumnName="FAL_CreadoPor" />
+                <ScalarProperty Name="FAL_FechaGrabacion" ColumnName="FAL_FechaGrabacion" />
+                <ScalarProperty Name="FAL_Tipo" ColumnName="FAL_Tipo" />
+                <ScalarProperty Name="FAL_EsEditable" ColumnName="FAL_EsEditable" />
+                <ScalarProperty Name="FAL_Descripcion" ColumnName="FAL_Descripcion" />
+                <ScalarProperty Name="FAL_Estado" ColumnName="FAL_Estado" />
+                <ScalarProperty Name="FAL_IdModulo" ColumnName="FAL_IdModulo" />
+                <ScalarProperty Name="FAL_IdFalla" ColumnName="FAL_IdFalla" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CentroLogistico_PUA">
+            <EntityTypeMapping TypeName="ModeloAgenda.CentroLogistico_PUA">
+              <MappingFragment StoreEntitySet="CentroLogistico_PUA">
+                <ScalarProperty Name="CEL_CreadoPor" ColumnName="CEL_CreadoPor" />
+                <ScalarProperty Name="CEL_FechaGrabacion" ColumnName="CEL_FechaGrabacion" />
+                <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+                <ScalarProperty Name="CEL_IdCentroLogistico" ColumnName="CEL_IdCentroLogistico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonaInterna_PAR">
+            <EntityTypeMapping TypeName="ModeloAgenda.PersonaInterna_PAR">
+              <MappingFragment StoreEntitySet="PersonaInterna_PAR">
+                <ScalarProperty Name="PEI_CreadoPor" ColumnName="PEI_CreadoPor" />
+                <ScalarProperty Name="PEI_FechaGrabacion" ColumnName="PEI_FechaGrabacion" />
+                <ScalarProperty Name="PEI_Comentarios" ColumnName="PEI_Comentarios" />
+                <ScalarProperty Name="PEI_IdRegionalAdm" ColumnName="PEI_IdRegionalAdm" />
+                <ScalarProperty Name="PEI_Email" ColumnName="PEI_Email" />
+                <ScalarProperty Name="PEI_Telefono" ColumnName="PEI_Telefono" />
+                <ScalarProperty Name="PEI_Municipio" ColumnName="PEI_Municipio" />
+                <ScalarProperty Name="PEI_Direccion" ColumnName="PEI_Direccion" />
+                <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+                <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+                <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+                <ScalarProperty Name="PEI_IdCargo" ColumnName="PEI_IdCargo" />
+                <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+                <ScalarProperty Name="PEI_IdTipoIdentificacion" ColumnName="PEI_IdTipoIdentificacion" />
+                <ScalarProperty Name="PEI_IdPersonaInterna" ColumnName="PEI_IdPersonaInterna" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioPersonaInterna_SEG">
+            <EntityTypeMapping TypeName="ModeloAgenda.UsuarioPersonaInterna_SEG">
+              <MappingFragment StoreEntitySet="UsuarioPersonaInterna_SEG">
+                <ScalarProperty Name="USP_CreadoPor" ColumnName="USP_CreadoPor" />
+                <ScalarProperty Name="USP_FechaGrabacion" ColumnName="USP_FechaGrabacion" />
+                <ScalarProperty Name="USP_IdPersonaInterna" ColumnName="USP_IdPersonaInterna" />
+                <ScalarProperty Name="USP_IdCodigoUsuario" ColumnName="USP_IdCodigoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Falla_ASG">
+            <EntityTypeMapping TypeName="ModeloAgenda.Falla_ASG">
+              <MappingFragment StoreEntitySet="Falla_ASG">
+                <ScalarProperty Name="FAL_CreadoPor" ColumnName="FAL_CreadoPor" />
+                <ScalarProperty Name="FAL_FechaGrabacion" ColumnName="FAL_FechaGrabacion" />
+                <ScalarProperty Name="FAL_Tipo" ColumnName="FAL_Tipo" />
+                <ScalarProperty Name="FAL_EsEditable" ColumnName="FAL_EsEditable" />
+                <ScalarProperty Name="FAL_Descripcion" ColumnName="FAL_Descripcion" />
+                <ScalarProperty Name="FAL_Estado" ColumnName="FAL_Estado" />
+                <ScalarProperty Name="FAL_IdModulo" ColumnName="FAL_IdModulo" />
+                <ScalarProperty Name="FAL_IdFalla" ColumnName="FAL_IdFalla" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario_SEG">
+            <EntityTypeMapping TypeName="ModeloAgenda.Usuario_SEG">
+              <MappingFragment StoreEntitySet="Usuario_SEG">
+                <ScalarProperty Name="USU_AutorizaCargaMasivaICA" ColumnName="USU_AutorizaCargaMasivaICA" />
+                <ScalarProperty Name="USU_AutorizaCargaMasiva" ColumnName="USU_AutorizaCargaMasiva" />
+                <ScalarProperty Name="USU_EsCajeroPpal" ColumnName="USU_EsCajeroPpal" />
+                <ScalarProperty Name="USU_CreadoPor" ColumnName="USU_CreadoPor" />
+                <ScalarProperty Name="USU_FechaGrabacion" ColumnName="USU_FechaGrabacion" />
+                <ScalarProperty Name="USU_EsUsuarioInterno" ColumnName="USU_EsUsuarioInterno" />
+                <ScalarProperty Name="USU_Comentarios" ColumnName="USU_Comentarios" />
+                <ScalarProperty Name="USU_RequiereIdMaquina" ColumnName="USU_RequiereIdMaquina" />
+                <ScalarProperty Name="USU_TipoUsuario" ColumnName="USU_TipoUsuario" />
+                <ScalarProperty Name="USU_Estado" ColumnName="USU_Estado" />
+                <ScalarProperty Name="USU_IdUsuario" ColumnName="USU_IdUsuario" />
+                <ScalarProperty Name="USU_IdCodigoUsuario" ColumnName="USU_IdCodigoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modulo_VER">
+            <EntityTypeMapping TypeName="ModeloAgenda.Modulo_VER">
+              <MappingFragment StoreEntitySet="Modulo_VER">
+                <ScalarProperty Name="MOD_FechaGrabacion" ColumnName="MOD_FechaGrabacion" />
+                <ScalarProperty Name="MOD_Descripcion" ColumnName="MOD_Descripcion" />
+                <ScalarProperty Name="MOD_IdModulo" ColumnName="MOD_IdModulo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AsignacionTarea_ASG">
+            <EntityTypeMapping TypeName="ModeloAgenda.AsignacionTarea_ASG">
+              <MappingFragment StoreEntitySet="AsignacionTarea_ASG">
+                <ScalarProperty Name="AST_CreadoPor" ColumnName="AST_CreadoPor" />
+                <ScalarProperty Name="AST_FechaAsignacion" ColumnName="AST_FechaAsignacion" />
+                <ScalarProperty Name="AST_EstaAbierta" ColumnName="AST_EstaAbierta" />
+                <ScalarProperty Name="AST_UsuarioResponsable" ColumnName="AST_UsuarioResponsable" />
+                <ScalarProperty Name="AST_Comentarios" ColumnName="AST_Comentarios" />
+                <ScalarProperty Name="AST_DescCargoResponsable" ColumnName="AST_DescCargoResponsable" />
+                <ScalarProperty Name="AST_IdCargoResponsable" ColumnName="AST_IdCargoResponsable" />
+                <ScalarProperty Name="AST_DescripcionTarea" ColumnName="AST_DescripcionTarea" />
+                <ScalarProperty Name="AST_FechaVencimiento" ColumnName="AST_FechaVencimiento" />
+                <ScalarProperty Name="AST_TiempoEscalamiento" ColumnName="AST_TiempoEscalamiento" />
+                <ScalarProperty Name="AST_IdTarea" ColumnName="AST_IdTarea" />
+                <ScalarProperty Name="AST_DescripcionFalla" ColumnName="AST_DescripcionFalla" />
+                <ScalarProperty Name="AST_IdFalla" ColumnName="AST_IdFalla" />
+                <ScalarProperty Name="AST_DescripcionModulo" ColumnName="AST_DescripcionModulo" />
+                <ScalarProperty Name="AST_IdModulo" ColumnName="AST_IdModulo" />
+                <ScalarProperty Name="AST_IdAsignacionTarea" ColumnName="AST_IdAsignacionTarea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SeguimientoAsignacionTareas_ASG">
+            <EntityTypeMapping TypeName="ModeloAgenda.SeguimientoAsignacionTareas_ASG">
+              <MappingFragment StoreEntitySet="SeguimientoAsignacionTareas_ASG">
+                <ScalarProperty Name="SEA_CreadoPor" ColumnName="SEA_CreadoPor" />
+                <ScalarProperty Name="SEA_FechaEscalamiento" ColumnName="SEA_FechaEscalamiento" />
+                <ScalarProperty Name="SEA_TiempoExtension" ColumnName="SEA_TiempoExtension" />
+                <ScalarProperty Name="SEA_TiempoEscalamiento" ColumnName="SEA_TiempoEscalamiento" />
+                <ScalarProperty Name="SEA_Comentarios" ColumnName="SEA_Comentarios" />
+                <ScalarProperty Name="SEA_UsuarioResponsable" ColumnName="SEA_UsuarioResponsable" />
+                <ScalarProperty Name="SEA_DescCargoResponsable" ColumnName="SEA_DescCargoResponsable" />
+                <ScalarProperty Name="SEA_IdCargoResponsable" ColumnName="SEA_IdCargoResponsable" />
+                <ScalarProperty Name="SEA_UsuarioEvento" ColumnName="SEA_UsuarioEvento" />
+                <ScalarProperty Name="SEA_IdEvento" ColumnName="SEA_IdEvento" />
+                <ScalarProperty Name="SEA_FechaEvento" ColumnName="SEA_FechaEvento" />
+                <ScalarProperty Name="SEA_IdAsignacionTarea" ColumnName="SEA_IdAsignacionTarea" />
+                <ScalarProperty Name="SEA_IdSeguimientoAsg" ColumnName="SEA_IdSeguimientoAsg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioCentroServicio_SEG">
+            <EntityTypeMapping TypeName="ModeloAgenda.UsuarioCentroServicio_SEG">
+              <MappingFragment StoreEntitySet="UsuarioCentroServicio_SEG">
+                <ScalarProperty Name="UCS_CreadoPor" ColumnName="UCS_CreadoPor" />
+                <ScalarProperty Name="UCS_FechaGrabacion" ColumnName="UCS_FechaGrabacion" />
+                <ScalarProperty Name="UCS_NombreCentroServicios" ColumnName="UCS_NombreCentroServicios" />
+                <ScalarProperty Name="UCS_Caja" ColumnName="UCS_Caja" />
+                <ScalarProperty Name="UCS_IdCentroServicios" ColumnName="UCS_IdCentroServicios" />
+                <ScalarProperty Name="UCS_IdCodigoUsuario" ColumnName="UCS_IdCodigoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AsignacionTareaFalla_VASG">
+            <EntityTypeMapping TypeName="ModeloAgenda.AsignacionTareaFalla_VASG">
+              <MappingFragment StoreEntitySet="AsignacionTareaFalla_VASG">
+                <ScalarProperty Name="FAL_Tipo" ColumnName="FAL_Tipo" />
+                <ScalarProperty Name="FAL_EsEditable" ColumnName="FAL_EsEditable" />
+                <ScalarProperty Name="FAL_Descripcion" ColumnName="FAL_Descripcion" />
+                <ScalarProperty Name="FAL_Estado" ColumnName="FAL_Estado" />
+                <ScalarProperty Name="AST_FechaAsignacion" ColumnName="AST_FechaAsignacion" />
+                <ScalarProperty Name="AST_EstaAbierta" ColumnName="AST_EstaAbierta" />
+                <ScalarProperty Name="AST_UsuarioResponsable" ColumnName="AST_UsuarioResponsable" />
+                <ScalarProperty Name="AST_Comentarios" ColumnName="AST_Comentarios" />
+                <ScalarProperty Name="AST_DescCargoResponsable" ColumnName="AST_DescCargoResponsable" />
+                <ScalarProperty Name="AST_IdCargoResponsable" ColumnName="AST_IdCargoResponsable" />
+                <ScalarProperty Name="AST_DescripcionTarea" ColumnName="AST_DescripcionTarea" />
+                <ScalarProperty Name="AST_FechaVencimiento" ColumnName="AST_FechaVencimiento" />
+                <ScalarProperty Name="AST_TiempoEscalamiento" ColumnName="AST_TiempoEscalamiento" />
+                <ScalarProperty Name="AST_IdTarea" ColumnName="AST_IdTarea" />
+                <ScalarProperty Name="AST_DescripcionFalla" ColumnName="AST_DescripcionFalla" />
+                <ScalarProperty Name="AST_IdFalla" ColumnName="AST_IdFalla" />
+                <ScalarProperty Name="AST_DescripcionModulo" ColumnName="AST_DescripcionModulo" />
+                <ScalarProperty Name="AST_IdModulo" ColumnName="AST_IdModulo" />
+                <ScalarProperty Name="AST_IdAsignacionTarea" ColumnName="AST_IdAsignacionTarea" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsuarioInterno_VSEG">
+            <EntityTypeMapping TypeName="ModeloAgenda.UsuarioInterno_VSEG">
+              <MappingFragment StoreEntitySet="UsuarioInterno_VSEG">
+                <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+                <ScalarProperty Name="CAR_IdCargoReporta" ColumnName="CAR_IdCargoReporta" />
+                <ScalarProperty Name="CAR_Descripcion" ColumnName="CAR_Descripcion" />
+                <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+                <ScalarProperty Name="PEI_Comentarios" ColumnName="PEI_Comentarios" />
+                <ScalarProperty Name="PEI_IdRegionalAdm" ColumnName="PEI_IdRegionalAdm" />
+                <ScalarProperty Name="PEI_Email" ColumnName="PEI_Email" />
+                <ScalarProperty Name="PEI_Telefono" ColumnName="PEI_Telefono" />
+                <ScalarProperty Name="PEI_Municipio" ColumnName="PEI_Municipio" />
+                <ScalarProperty Name="PEI_Direccion" ColumnName="PEI_Direccion" />
+                <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+                <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+                <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+                <ScalarProperty Name="PEI_IdCargo" ColumnName="PEI_IdCargo" />
+                <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+                <ScalarProperty Name="PEI_IdTipoIdentificacion" ColumnName="PEI_IdTipoIdentificacion" />
+                <ScalarProperty Name="USP_IdPersonaInterna" ColumnName="USP_IdPersonaInterna" />
+                <ScalarProperty Name="USU_EsUsuarioInterno" ColumnName="USU_EsUsuarioInterno" />
+                <ScalarProperty Name="USU_Comentarios" ColumnName="USU_Comentarios" />
+                <ScalarProperty Name="USU_RequiereIdMaquina" ColumnName="USU_RequiereIdMaquina" />
+                <ScalarProperty Name="USU_TipoUsuario" ColumnName="USU_TipoUsuario" />
+                <ScalarProperty Name="USU_Estado" ColumnName="USU_Estado" />
+                <ScalarProperty Name="USU_IdUsuario" ColumnName="USU_IdUsuario" />
+                <ScalarProperty Name="USU_IdCodigoUsuario" ColumnName="USU_IdCodigoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegionalAdministrativa_PUA">
+            <EntityTypeMapping TypeName="ModeloAgenda.RegionalAdministrativa_PUA">
+              <MappingFragment StoreEntitySet="RegionalAdministrativa_PUA">
+                <ScalarProperty Name="REA_IdCasaMatriz" ColumnName="REA_IdCasaMatriz" />
+                <ScalarProperty Name="REA_CodigoExternoSucursal" ColumnName="REA_CodigoExternoSucursal" />
+                <ScalarProperty Name="REA_CreadoPor" ColumnName="REA_CreadoPor" />
+                <ScalarProperty Name="REA_FechaGrabacion" ColumnName="REA_FechaGrabacion" />
+                <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+                <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloAgenda" ZoomLevel="102">
+        <EntityTypeShape EntityType="ModeloAgenda.FallaHistorico_ASG" Width="2.125" PointX="8.375" PointY="3.25" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloAgenda.TareaHistorico_ASG" Width="1.5" PointX="9.125" PointY="7.5" Height="3.3263964843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModeloAgenda.EstadoActivoInactivo_VFRM" Width="2.25" PointX="17.5" PointY="0.5" Height="1.4033821614583388" />
+        <EntityTypeShape EntityType="ModeloAgenda.EventoAsignacion_ASG" Width="2" PointX="0.5" PointY="7.125" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="ModeloAgenda.ArchivosFramework" Width="1.875" PointX="2.25" PointY="0.75" Height="2.5571907552083331" />
+        <EntityTypeShape EntityType="ModeloAgenda.ArchivoAsignacionTarea_ASG" Width="2.75" PointX="5.5" PointY="0.75" Height="1.9210009765625" />
+        <AssociationConnector Association="ModeloAgenda.FK_ArchivoAsignacionTarea_ASG_ArchivosFramework" >
+          <ConnectorPoint PointX="4.125" PointY="0.75" />
+          <ConnectorPoint PointX="4.5" PointY="0.375" />
+          <ConnectorPoint PointX="5.125" PointY="0.375" />
+          <ConnectorPoint PointX="5.5" PointY="0.75" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloAgenda.ParametrosFramework" Width="1.5" PointX="8.5" PointY="0.75" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="ModeloAgenda.Tarea_ASG" Width="1.75" PointX="15.375" PointY="0.5" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="ModeloAgenda.Cargo_SEG" Width="1.5" PointX="12.25" PointY="3.75" Height="2.7494921875000031" />
+        <AssociationConnector Association="ModeloAgenda.FK_Cargo_SEG_Cargo_SEG" >
+          <ConnectorPoint PointX="12.25" PointY="4.5912914663461537" />
+          <ConnectorPoint PointX="12" PointY="4.5912914663461537" />
+          <ConnectorPoint PointX="12" PointY="5.3401672175480766" />
+          <ConnectorPoint PointX="12.25" PointY="5.3401672175480766" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloAgenda.FK_Tarea_ASG_Cargo_SEG" >
+          <ConnectorPoint PointX="13.75" PointY="4.957021484375" />
+          <ConnectorPoint PointX="16.25" PointY="4.957021484375" />
+          <ConnectorPoint PointX="16.25" PointY="3.0783902994791661" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloAgenda.Fallas_VASG" Width="1.5" PointX="3.375" PointY="8.75" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="ModeloAgenda.CentroLogistico_PUA" Width="1.5" PointX="6.875" PointY="15.375" Height="2.172587890624996" />
+        <EntityTypeShape EntityType="ModeloAgenda.PersonaInterna_PAR" Width="1.5" PointX="6.875" PointY="9.125" Height="4.6725065104166674" />
+        <AssociationConnector Association="ModeloAgenda.FK_PersonaInterna_PAR_Cargo_SEG" >
+          <ConnectorPoint PointX="13.34375" PointY="6.16404296875" />
+          <ConnectorPoint PointX="13.34375" PointY="10.57854248046875" />
+          <ConnectorPoint PointX="11.208333333333334" PointY="10.57854248046875" />
+          <ConnectorPoint PointX="11.041666666666666" PointY="10.57854248046875" />
+          <ConnectorPoint PointX="10.958333333333334" PointY="10.57854248046875" />
+          <ConnectorPoint PointX="10.791666666666666" PointY="10.57854248046875" />
+          <ConnectorPoint PointX="8.375" PointY="10.57854248046875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloAgenda.UsuarioPersonaInterna_SEG" Width="1.5" PointX="14.25" PointY="9.25" Height="1.921000976562496" />
+        <AssociationConnector Association="ModeloAgenda.FK_UsuarioPersonaInterna_SEG_PersonaInterna_PAR" >
+          <ConnectorPoint PointX="8.375" PointY="12.24705028125" />
+          <ConnectorPoint PointX="10.791666666666666" PointY="12.24705028125" />
+          <ConnectorPoint PointX="10.958333333333334" PointY="12.24705028125" />
+          <ConnectorPoint PointX="11.125" PointY="12.24705028125" />
+          <ConnectorPoint PointX="11.125" PointY="10.5" />
+          <ConnectorPoint PointX="13.666666666666666" PointY="10.5" />
+          <ConnectorPoint PointX="13.833333333333334" PointY="10.5" />
+          <ConnectorPoint PointX="14" PointY="10.5" />
+          <ConnectorPoint PointX="14" PointY="11.672587890625" />
+          <ConnectorPoint PointX="15" PointY="11.672587890625" />
+          <ConnectorPoint PointX="15" PointY="11.422587890625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloAgenda.Falla_ASG" Width="1.5" PointX="13.5" PointY="0.75" Height="2.414042968749996" />
+        <EntityTypeShape EntityType="ModeloAgenda.Usuario_SEG" Width="1.5" PointX="0.75" PointY="13.75" Height="2.5783902994791674" />
+        <AssociationConnector Association="ModeloAgenda.FK_Tarea_ASG_Falla_ASG" >
+          <ConnectorPoint PointX="15" PointY="1.9141951497395828" />
+          <ConnectorPoint PointX="15.375" PointY="1.9141951497395828" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloAgenda.FK_UsuarioPersonaInterna_SEG_Usuario_SEG" >
+          <ConnectorPoint PointX="2.25" PointY="15.494944661458334" />
+          <ConnectorPoint PointX="5.291666666666667" PointY="15.494944661458334" />
+          <ConnectorPoint PointX="5.458333333333333" PointY="15.494944661458334" />
+          <ConnectorPoint PointX="6.625" PointY="15.494944661458334" />
+          <ConnectorPoint PointX="6.625" PointY="15.125" />
+          <ConnectorPoint PointX="10.875" PointY="15.125" />
+          <ConnectorPoint PointX="10.875" PointY="10.25" />
+          <ConnectorPoint PointX="13.75" PointY="10.25" />
+          <ConnectorPoint PointX="13.75" PointY="11.672587890625" />
+          <ConnectorPoint PointX="15" PointY="11.672587890625" />
+          <ConnectorPoint PointX="15" PointY="11.422587890625" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloAgenda.Modulo_VER" Width="1.5" PointX="11.375" PointY="7.75" Height="1.4279589843750067" />
+        <EntityTypeShape EntityType="ModeloAgenda.AsignacionTarea_ASG" Width="1.5" PointX="0.5" PointY="2.5" Height="3.8931689453125102" />
+        <AssociationConnector Association="ModeloAgenda.FK_ArchivoAsignacionTarea_ASG_AsignacionTarea_ASG" >
+          <ConnectorPoint PointX="1.25" PointY="2.5" />
+          <ConnectorPoint PointX="1.25" PointY="0.5" />
+          <ConnectorPoint PointX="4.291666666666667" PointY="0.49999999999999944" />
+          <ConnectorPoint PointX="4.458333333333333" PointY="0.5" />
+          <ConnectorPoint PointX="5.125" PointY="0.5" />
+          <ConnectorPoint PointX="5.125" PointY="1.7417524882812507" />
+          <ConnectorPoint PointX="5.5" PointY="1.7417524882812507" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloAgenda.SeguimientoAsignacionTareas_ASG" Width="1.5" PointX="3.25" PointY="0.75" Height="3.4001269531250102" />
+        <AssociationConnector Association="ModeloAgenda.FK_SeguimientoAsignacionTareas_ASG_AsignacionTarea_ASG" >
+          <ConnectorPoint PointX="2" PointY="4.0114957682291665" />
+          <ConnectorPoint PointX="3.25" PointY="4.0114957682291665" />
+        </AssociationConnector>
+        <AssociationConnector Association="ModeloAgenda.FK_SeguimientoAsignacionTareas_ASG_EventoAsignacion_ASG" >
+          <ConnectorPoint PointX="2.5" PointY="7.125" />
+          <ConnectorPoint PointX="2.875" PointY="6.75" />
+          <ConnectorPoint PointX="3.8749995" PointY="6.75" />
+          <ConnectorPoint PointX="3.8749995" PointY="4.65330078125" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloAgenda.UsuarioCentroServicio_SEG" Width="1.5" PointX="3" PointY="16.25" Height="2.3648893229166674" />
+        <AssociationConnector Association="ModeloAgenda.FK_UsuarioCentroServicio_SEG_Usuario_SEG" >
+          <ConnectorPoint PointX="2.25" PointY="16.663198242187498" />
+          <ConnectorPoint PointX="3" PointY="16.663198242187498" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ModeloAgenda.AsignacionTareaFalla_VASG" Width="1.5" PointX="13.375" PointY="12.75" Height="4.6725065104166674" />
+        <EntityTypeShape EntityType="ModeloAgenda.UsuarioInterno_VSEG" Width="1.5" PointX="5.4212909887643956" PointY="27.528721524183045" />
+        <EntityTypeShape EntityType="ModeloAgenda.RegionalAdministrativa_PUA" Width="1.5" PointX="5.4132620810592833" PointY="30.551472663204873" />
+        <AssociationConnector Association="ModeloAgenda.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" />
+        <AssociationConnector Association="ModeloAgenda.FK_PersonaInterna_PAR_RegionalAdministrativa_PUA" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

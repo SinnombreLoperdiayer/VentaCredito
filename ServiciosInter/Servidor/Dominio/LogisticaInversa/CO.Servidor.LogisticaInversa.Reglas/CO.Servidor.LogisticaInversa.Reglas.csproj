@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61BCC2D5-D4BA-4F85-9337-E22F7636AA32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.LogisticaInversa.Reglas</RootNamespace>
+    <AssemblyName>CO.Servidor.LogisticaInversa.Reglas</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CambioEstado\LOIReglaCorreoDevolucion.cs" />
+    <Compile Include="LOIReglasRepositorio.cs" />
+    <Compile Include="Modelo\GestionGuiaTelemercadeo_LOI.cs">
+      <DependentUpon>ModeloReglasLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloReglasLogisticaInversa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloReglasLogisticaInversa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloReglasLogisticaInversa.Context.Extensions.cs">
+      <DependentUpon>ModeloReglasLogisticaInversa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloReglasLogisticaInversa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloReglasLogisticaInversa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloReglasLogisticaInversa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloReglasLogisticaInversa.edmx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Modelo\ModeloReglasLogisticaInversa.Views.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telemercadeo\LOIReglaDireccionNoExiste.cs" />
+    <Compile Include="Telemercadeo\LOIReglaEnvioRechazado.cs" />
+    <Compile Include="Telemercadeo\LOIReglaCambioCiudadDestino.cs" />
+    <Compile Include="Telemercadeo\LOIReglaDestinatarioFallecido.cs" />
+    <Compile Include="Telemercadeo\LOIReglaDireccionActualizada.cs" />
+    <Compile Include="Telemercadeo\LOIReglaDireccionCorrecta.cs" />
+    <Compile Include="Telemercadeo\LOIReglaFueradeServicio.cs" />
+    <Compile Include="Telemercadeo\LOIReglaMensajeBuzon.cs" />
+    <Compile Include="Telemercadeo\LOIReglaNoComunicacion.cs" />
+    <Compile Include="Telemercadeo\LOIReglaNoContestan.cs" />
+    <Compile Include="Telemercadeo\LOIReglaNoInformacion.cs" />
+    <Compile Include="Telemercadeo\LOIReglaNoTelefono.cs" />
+    <Compile Include="Telemercadeo\LOIReglaNoTelemercadeo.cs" />
+    <Compile Include="Telemercadeo\LOIReglaPeticionRemitente.cs" />
+    <Compile Include="Telemercadeo\LOIReglaReclamarOficina.cs" />
+    <Compile Include="Telemercadeo\LOIReglaTitularNoCorresponde.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloReglasLogisticaInversa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloReglasLogisticaInversa.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloReglasLogisticaInversa.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloReglasLogisticaInversa.msl" />
+    <EmbeddedResource Include="Modelo\ModeloReglasLogisticaInversa.ssdl" />
+    <None Include="Modelo\ModeloReglasLogisticaInversa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloReglasLogisticaInversa.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW.Datos\Framework.Servidor.ParametrosFW.Datos.csproj">
+      <Project>{5ab9d9ba-56ec-4cdb-9f7b-4ec3f1c05dca}</Project>
+      <Name>Framework.Servidor.ParametrosFW.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96b9e8eb-58ea-419f-894c-23361249c964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.LogisticaInversa.Comun\CO.Servidor.LogisticaInversa.Comun.csproj">
+      <Project>{32988092-BE2B-4B09-92E9-49B3595C3640}</Project>
+      <Name>CO.Servidor.LogisticaInversa.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloReglasLogisticaInversa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloReglasLogisticaInversa.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloReglasLogisticaInversa.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloReglasLogisticaInversa.csdl" "/inmsl:$(TargetDir)Modelo/ModeloReglasLogisticaInversa.msl" "/outviews:$(ProjectDir)Modelo/ModeloReglasLogisticaInversa.Views.cs"
+XCOPY  "$(TargetDir)Modelo/ModeloReglasLogisticaInversa.csdl" "$(ProjectDir)Modelo" /F /R /Y
+XCOPY "$(TargetDir)Modelo/ModeloReglasLogisticaInversa.ssdl" "$(ProjectDir)Modelo" /F /R /Y
+XCOPY "$(TargetDir)Modelo/ModeloReglasLogisticaInversa.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

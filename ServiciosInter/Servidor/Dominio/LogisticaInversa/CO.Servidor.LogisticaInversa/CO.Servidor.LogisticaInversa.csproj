@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB71F16B-2228-45CF-B3EF-9179D87DE981}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.LogisticaInversa</RootNamespace>
+    <AssemblyName>CO.Servidor.LogisticaInversa</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agencias\LIAgencias.cs" />
+    <Compile Include="DigitalizacionRapiradicados\LIDigitalizacionRapiradicados.cs" />
+    <Compile Include="LIAdministradorLogisticaInversa.cs" />
+    <Compile Include="DigitalizacionArchivo\LIDigitalizacionArchivo.cs" />
+    <Compile Include="LIFachadaLogisticaInversa.cs" />
+    <Compile Include="Notificaciones\LINotificaciones.cs" />
+    <Compile Include="Notificaciones\LOICertificacionWeb.cs" />
+    <Compile Include="Notificaciones\LOINotificaciones.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DiagramaClasesLogisticaInversa.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Integraciones\CO.Controller.Servidor.Integraciones\CO.Controller.Servidor.Integraciones.csproj">
+      <Project>{e17bbdce-da6f-495b-9b60-6f2623cd4cfa}</Project>
+      <Name>CO.Controller.Servidor.Integraciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admisiones\Mensajeria\CO.Servidor.Adminisiones.Mensajeria.Comun\CO.Servidor.Adminisiones.Mensajeria.Comun.csproj">
+      <Project>{0dd14ed4-8be9-4536-9744-501371626a63}</Project>
+      <Name>CO.Servidor.Adminisiones.Mensajeria.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Admisiones\Mensajeria\CO.Servidor.Adminisiones.Mensajeria\CO.Servidor.Admisiones.Mensajeria.csproj">
+      <Project>{35D306F9-EC79-40D1-A8D6-8A495863AB03}</Project>
+      <Name>CO.Servidor.Admisiones.Mensajeria</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.AdmEstadosGuia\CO.Servidor.Dominio.Comun.AdmEstadosGuia.csproj">
+      <Project>{0FC1794B-1536-4BBC-9641-B91AC94A5A3D}</Project>
+      <Name>CO.Servidor.Dominio.Comun.AdmEstadosGuia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.Middleware\CO.Servidor.Dominio.Comun.Middleware.csproj">
+      <Project>{826b7134-398b-474f-9c60-3f433f0441f1}</Project>
+      <Name>CO.Servidor.Dominio.Comun.Middleware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512C6601-1C3C-455A-A91A-10906C2F2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Middleware.Helper\CO.Servidor.Dominio.Middleware.Helper.csproj">
+      <Project>{8fce741f-512b-4925-b861-df4b531ff321}</Project>
+      <Name>CO.Servidor.Dominio.Middleware.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.LogisticaInversa.Comun\CO.Servidor.LogisticaInversa.Comun.csproj">
+      <Project>{32988092-BE2B-4B09-92E9-49B3595C3640}</Project>
+      <Name>CO.Servidor.LogisticaInversa.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.LogisticaInversa.Datos\CO.Servidor.LogisticaInversa.Datos.csproj">
+      <Project>{0DD59536-D8E2-4A1B-9AFA-8B6B43A8EF40}</Project>
+      <Name>CO.Servidor.LogisticaInversa.Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

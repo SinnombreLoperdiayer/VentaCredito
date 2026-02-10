@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE2A2263-3618-4A32-9761-2BEA8EFFF56E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.Facturacion.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.Facturacion.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FAFacturacionAudit.cs" />
+    <Compile Include="FARepositorioConsFactura.cs" />
+    <Compile Include="FARepositorioFacManual.cs" />
+    <Compile Include="FARepositorioImpresion.cs" />
+    <Compile Include="FARepositorioProgrFactura.cs" />
+    <Compile Include="Modelo\ConceptoProgramado_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DeduccionesFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DescripcionNotasFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DescuentosFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DetalleXOperFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DetalleXOperFactura_VFAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DetalleXServicioFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EstadoFacturaAnulada_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EstadoNota_VFAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EstadosFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ExclusionesProgramacion_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ImpConceptoProgramado_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ImpuestosDetalleFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidad_PAR.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloFacturacion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloFacturacion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloFacturacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloFacturacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloFacturacion.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloFacturacion.Views.cs" />
+    <Compile Include="Modelo\MotivoAnulacionFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\MotivoAnulacionGuia_MEN.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NotasFacturaHist_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NotasFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerFacturasImpresionFiltro_FAC_Result.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerFacturasImpresion_FAC_Result.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProgramacionFacturaHist_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ProgramacionFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ResponsableFacturacion_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ResumenFacturaAut_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ResumenFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RetencionesFactura_FAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalesAgenciasRacoles_VFAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoNota_VFAC.cs">
+      <DependentUpon>ModeloFacturacion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloFacturacion.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloFacturacion.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloFacturacion.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloFacturacion.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloFacturacion.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloFacturacion.msl" />
+    <EmbeddedResource Include="Modelo\ModeloFacturacion.ssdl" />
+    <None Include="Modelo\ModeloFacturacion.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloFacturacion.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.Middleware\CO.Servidor.Dominio.Comun.Middleware.csproj">
+      <Project>{826B7134-398B-474F-9C60-3F433F0441F1}</Project>
+      <Name>CO.Servidor.Dominio.Comun.Middleware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512C6601-1C3C-455A-A91A-10906C2F2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.Facturacion.Comun\CO.Servidor.Facturacion.Comun.csproj">
+      <Project>{509A5382-B84F-48C3-BCB1-4B137763FCFD}</Project>
+      <Name>CO.Servidor.Facturacion.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloFacturacion.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloFacturacion.csdl" "/inmsl:$(TargetDir)Modelo/ModeloFacturacion.msl" "/outviews:$(ProjectDir)Modelo/ModeloFacturacion.Views.cs"
+
+XCOPY  "$(TargetDir)Modelo/ModeloFacturacion.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloFacturacion.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloFacturacion.msl" "$(ProjectDir)Modelo" /F /R /Y
+</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY  "$(TargetDir)Modelo/ModeloFacturacion.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloFacturacion.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+
+XCOPY "$(TargetDir)Modelo/ModeloFacturacion.msl" "$(ProjectDir)Modelo" /F /R /Y
+</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

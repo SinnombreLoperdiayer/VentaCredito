@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloExcepcionesNS.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModeloExcepcionesNSStoreContainer">
+          <EntitySet Name="AuditoriaExcepciones_AUD" EntityType="ModeloExcepcionesNS.Store.AuditoriaExcepciones_AUD" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Instrumentacion_AUD" EntityType="ModeloExcepcionesNS.Store.Instrumentacion_AUD" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InstrumentacionModulo_AUD" EntityType="ModeloExcepcionesNS.Store.InstrumentacionModulo_AUD" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="AuditoriaExcepciones_AUD">
+          <Key>
+            <PropertyRef Name="AUE_IdError" />
+          </Key>
+          <Property Name="AUE_IdError" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AUE_Modulo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AUE_Tipo" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="AUE_Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="AUE_Mensaje" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="AUE_StackTrace" Type="text" Nullable="false" />
+          <Property Name="AUE_InnerException" Type="text" />
+          <Property Name="AUE_FechaError" Type="datetime" Nullable="false" />
+          <Property Name="AUE_Assembly" Type="varchar" MaxLength="500" />
+          <Property Name="AUE_Metodo" Type="varchar" MaxLength="1000" />
+          <Property Name="AUE_Parametros" Type="text" />
+        </EntityType>
+        <EntityType Name="Instrumentacion_AUD">
+          <Key>
+            <PropertyRef Name="INS_IdInstrumentacion" />
+          </Key>
+          <Property Name="INS_IdInstrumentacion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="INS_Modulo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="INS_Metodo" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="INS_Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="INS_FechaInicio" Type="datetime" Nullable="false" />
+          <Property Name="INS_FechaFin" Type="datetime" Nullable="false" />
+          <Property Name="INS_TiempoTotalMs" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+          <Property Name="INS_CallStack" Type="varchar" Nullable="false" />
+          <Property Name="INS_FechaGrabacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InstrumentacionModulo_AUD">
+          <Key>
+            <PropertyRef Name="IdModulo" />
+          </Key>
+          <Property Name="IdModulo" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="FechaGrabacion" Type="datetime" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModeloExcepcionesNS" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModeloExcepciones" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AuditoriaExcepciones_AUD" EntityType="ModeloExcepcionesNS.AuditoriaExcepciones_AUD" />
+          <EntitySet Name="InstrumentacionModulo_AUD" EntityType="ModeloExcepcionesNS.InstrumentacionModulo_AUD" />
+          <EntitySet Name="Instrumentacion_AUD" EntityType="ModeloExcepcionesNS.Instrumentacion_AUD" />
+        </EntityContainer>
+        <EntityType Name="AuditoriaExcepciones_AUD">
+          <Key>
+            <PropertyRef Name="AUE_IdError" />
+          </Key>
+          <Property Type="Int64" Name="AUE_IdError" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="AUE_Modulo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AUE_Tipo" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AUE_Usuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AUE_Mensaje" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AUE_StackTrace" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AUE_InnerException" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="AUE_FechaError" Nullable="false" Precision="3" />
+          <Property Type="String" Name="AUE_Assembly" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AUE_Metodo" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AUE_Parametros" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="InstrumentacionModulo_AUD">
+          <Key>
+            <PropertyRef Name="IdModulo" />
+          </Key>
+          <Property Type="String" Name="IdModulo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="FechaGrabacion" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Instrumentacion_AUD">
+          <Key>
+            <PropertyRef Name="INS_IdInstrumentacion" />
+          </Key>
+          <Property Type="Int64" Name="INS_IdInstrumentacion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="INS_Modulo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INS_Metodo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="INS_Usuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="INS_FechaInicio" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="INS_FechaFin" Nullable="false" Precision="3" />
+          <Property Type="Decimal" Name="INS_TiempoTotalMs" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="String" Name="INS_CallStack" Nullable="false" MaxLength="8000" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="INS_FechaGrabacion" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModeloExcepcionesNSStoreContainer" CdmEntityContainer="ModeloExcepciones">
+          <EntitySetMapping Name="AuditoriaExcepciones_AUD">
+            <EntityTypeMapping TypeName="ModeloExcepcionesNS.AuditoriaExcepciones_AUD">
+              <MappingFragment StoreEntitySet="AuditoriaExcepciones_AUD">
+                <ScalarProperty Name="AUE_Parametros" ColumnName="AUE_Parametros" />
+                <ScalarProperty Name="AUE_Metodo" ColumnName="AUE_Metodo" />
+                <ScalarProperty Name="AUE_Assembly" ColumnName="AUE_Assembly" />
+                <ScalarProperty Name="AUE_FechaError" ColumnName="AUE_FechaError" />
+                <ScalarProperty Name="AUE_InnerException" ColumnName="AUE_InnerException" />
+                <ScalarProperty Name="AUE_StackTrace" ColumnName="AUE_StackTrace" />
+                <ScalarProperty Name="AUE_Mensaje" ColumnName="AUE_Mensaje" />
+                <ScalarProperty Name="AUE_Usuario" ColumnName="AUE_Usuario" />
+                <ScalarProperty Name="AUE_Tipo" ColumnName="AUE_Tipo" />
+                <ScalarProperty Name="AUE_Modulo" ColumnName="AUE_Modulo" />
+                <ScalarProperty Name="AUE_IdError" ColumnName="AUE_IdError" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InstrumentacionModulo_AUD">
+            <EntityTypeMapping TypeName="ModeloExcepcionesNS.InstrumentacionModulo_AUD">
+              <MappingFragment StoreEntitySet="InstrumentacionModulo_AUD">
+                <ScalarProperty Name="FechaGrabacion" ColumnName="FechaGrabacion" />
+                <ScalarProperty Name="IdModulo" ColumnName="IdModulo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Instrumentacion_AUD">
+            <EntityTypeMapping TypeName="ModeloExcepcionesNS.Instrumentacion_AUD">
+              <MappingFragment StoreEntitySet="Instrumentacion_AUD">
+                <ScalarProperty Name="INS_FechaGrabacion" ColumnName="INS_FechaGrabacion" />
+                <ScalarProperty Name="INS_CallStack" ColumnName="INS_CallStack" />
+                <ScalarProperty Name="INS_TiempoTotalMs" ColumnName="INS_TiempoTotalMs" />
+                <ScalarProperty Name="INS_FechaFin" ColumnName="INS_FechaFin" />
+                <ScalarProperty Name="INS_FechaInicio" ColumnName="INS_FechaInicio" />
+                <ScalarProperty Name="INS_Usuario" ColumnName="INS_Usuario" />
+                <ScalarProperty Name="INS_Metodo" ColumnName="INS_Metodo" />
+                <ScalarProperty Name="INS_Modulo" ColumnName="INS_Modulo" />
+                <ScalarProperty Name="INS_IdInstrumentacion" ColumnName="INS_IdInstrumentacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloExcepciones">
+        <EntityTypeShape EntityType="ModeloExcepcionesNS.AuditoriaExcepciones_AUD" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083326" />
+        <EntityTypeShape EntityType="ModeloExcepcionesNS.InstrumentacionModulo_AUD" Width="2.375" PointX="8.375" PointY="3" />
+        <EntityTypeShape EntityType="ModeloExcepcionesNS.Instrumentacion_AUD" Width="1.5" PointX="0.75" PointY="4.75" Height="2.7494921874999996" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BE1EFE3-562C-4FF9-ABDF-F9B13D60A7FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.OperacionNacional.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.OperacionNacional.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelo\ConsolidadosManifiestos_VOPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\GuiasManifestadas_VOPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoConGuiaNov_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoConNoGuiaNov_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoConsoNovedad_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoOpeAgeConsolidado_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoOpeAgeGuiaNovedades_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoOpeAgeGuiaNo_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoOperaAgencGuiaNoReg_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoOperativoAgenciGuia_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\IngresoSalidaTransportador_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManfiestoOperaNacioConsoli_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManifiestoOperNalTerrestre_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NovedadDescargueConso_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NovedadesEnviosSueltos_OPU.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NovedadEstacionRuta_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NovedadOperativo_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerConManAbVehGuiInt_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerConsolidadosManif_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerConsolOpNacIdGui_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerConsoManifAbiVehi_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerDesOriRutaEstaRut_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerDetalleManifiesto_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerEnvConsManifiesto_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerEnviConsoManiVehi_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerEnviosConsolidado_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerEnviosManifiesto_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerEnviosSueltManifi_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerEnvManfConsolidad_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerEnvSuelManifiesto_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerEnvSuelManifiVehi_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerIngrEnvNoRegAgenc_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerIngresoEnvioAgenc_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerIngSalTransporDet.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerManifiestosLocali_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerManifiestVehiculo_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerTotCieOperatManif_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerUltRutaConduPlaca.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCrearIngresoGuiaConAdmiMensaj_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCrearIngresoGuiaNOAdmiMensaj_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCrearIngresoGuiaNOAdmiMensaj_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerCantEnviosManRuta_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerConsolidadosUrbRegNal_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerEnvConsManifiestoCiudadManifestada_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerEnvSuelManifiestoCiudadManifestada_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaIngresadaConsolidado_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerIngAgenVehiTipOpeRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerIngAgenVehiTipOpe_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerIngresoConsolidado_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerIngresoConYSinNumeroGuia_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerManifAbiertosCiudadOrigVehiculo_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerManOpnConNovRuta_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerManOpnHabilitados_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerManOpnNacConPlacaRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerManOpnNacConPlaca_OPN1_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerManOpnNacSinPlacaRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerManOpnNacSinPlaca_OPN1_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerNovedadesIngresosGuia_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerPendientesXManifestar_OPN_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paPesoTotalEnviosManifiesto_OPU_Result.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ParametrosOperacionNacional_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PesoTotalEnviosManifiesto_VOPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RangoPesoCasillero_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TrayectoCasilleroPesoHis_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TrayectoCasilleroPeso_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TrayectoCasilleroPeso_VOPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TrayectoCasillero_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\VehiculosHabilitadosManifiestoSinIngresoAgenciaPorRacol_VOPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ONRepositorioAuditoria.cs" />
+    <Compile Include="ONRepositorioEXT1.cs" />
+    <Compile Include="Modelo\IngresoVehiculoRacol_VOPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManfiestoOpeNacConDetalle_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManfiestoOperaNacioGuia_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManfiestoOpnNacEliminaHist_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManifiestoOperacionNaciona_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ManifiestoOpnNacHist_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloOperacionNacional.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloOperacionNacional.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloOperacionNacional.Context.Extensions.cs">
+      <DependentUpon>ModeloOperacionNacional.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloOperacionNacional.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloOperacionNacional.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloOperacionNacional.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ONpaObtenerIngSalidaTranspor.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCrearConsoManiOpnNacRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ONRepositorioExt.cs" />
+    <Compile Include="Modelo\paAdicionarGuiaManiElimHistRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCrearConsoDetaManiOpnNacRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCrearGuiaSueltaManiRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCrearManifiestoOpnNacRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerConsecutivoRS_PAR.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaConsoManiRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaMenNumeroGuiaRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiasConsolidadoRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiasSueltasManiRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerGuiaSueltaManiRS_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paVerificarCiudadDentroRutRS_RUT.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoConsolidadoDetalle_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoConsolidado_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoMotivoElimancionGuia_OPN.cs">
+      <DependentUpon>ModeloOperacionNacional.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ONRepositorio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Integraciones\CO.Controller.Servidor.Integraciones\CO.Controller.Servidor.Integraciones.csproj">
+      <Project>{e17bbdce-da6f-495b-9b60-6f2623cd4cfa}</Project>
+      <Name>CO.Controller.Servidor.Integraciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.AdmEstadosGuia\CO.Servidor.Dominio.Comun.AdmEstadosGuia.csproj">
+      <Project>{0fc1794b-1536-4bbc-9641-b91ac94a5a3d}</Project>
+      <Name>CO.Servidor.Dominio.Comun.AdmEstadosGuia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ParametrosOperacion\CO.Servidor.ParametrosOperacion.Comun\CO.Servidor.ParametrosOperacion.Comun.csproj">
+      <Project>{93286AE7-BC1B-4C02-8CC0-13B83F5E2545}</Project>
+      <Name>CO.Servidor.ParametrosOperacion.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.OperacionNacional.Comun\CO.Servidor.OperacionNacional.Comun.csproj">
+      <Project>{70582899-414A-476B-8280-83C56F912728}</Project>
+      <Name>CO.Servidor.OperacionNacional.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloOperacionNacional.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloOperacionNacional.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloOperacionNacional.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloOperacionNacional.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Modelo\ModeloOperacionNacional.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloOperacionNacional.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

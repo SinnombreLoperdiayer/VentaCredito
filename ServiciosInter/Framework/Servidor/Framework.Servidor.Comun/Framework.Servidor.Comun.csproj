@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.Servidor.Comun</RootNamespace>
+    <AssemblyName>Framework.Servidor.Comun</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.105.2.3\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache.cs" />
+    <Compile Include="COAdministradorConexionesDbFramework.cs" />
+    <Compile Include="COConstantesModulos.cs" />
+    <Compile Include="COEncripcion.cs" />
+    <Compile Include="CoEnumTipoNovedadRaps.cs" />
+    <Compile Include="COLambdaComparer.cs" />
+    <Compile Include="ConstantesServicios.cs" />
+    <Compile Include="ControllerBase.cs" />
+    <Compile Include="COUsuariosSistema.cs" />
+    <Compile Include="DataAnnotations\COEnumTipoControlFiltro.cs" />
+    <Compile Include="ConstantesFramework.cs" />
+    <Compile Include="DataAnnotations\DynamicRangeAttribute.cs" />
+    <Compile Include="DataAnnotations\DynamicValidationAttribute.cs" />
+    <Compile Include="DataAnnotations\Exceptions\InvalidAttributeApplicationException.cs" />
+    <Compile Include="DataAnnotations\Exceptions\InvalidDynamicRangeException.cs" />
+    <Compile Include="DataAnnotations\Exceptions\PropertyNotFoundException.cs" />
+    <Compile Include="DataAnnotations\FiltrableAttribute.cs" />
+    <Compile Include="DataAnnotations\MetadataTypeAttribute.cs" />
+    <Compile Include="DataAnnotations\CampoOrdenamientoAttribute.cs" />
+    <Compile Include="DataAnnotations\PropertyAccessor.cs" />
+    <Compile Include="DataAnnotations\Resource.Designer.cs" />
+    <Compile Include="DataAnnotations\ValidationErrorInfo.cs" />
+    <Compile Include="Datos\BulkCopyController.cs" />
+    <Compile Include="Datos\DataExtensionsController.cs" />
+    <Compile Include="EncryptQueryStrings\CryptoQueryStringHandler.cs" />
+    <Compile Include="EncryptQueryStrings\Encryption64.cs" />
+    <Compile Include="EnumEstadoRegistro.cs" />
+    <Compile Include="COEnumMotorBaseDatos.cs" />
+    <Compile Include="COFabricaConexionesDb.cs" />
+    <Compile Include="Extensiones.cs" />
+    <Compile Include="ICOAdministradorDbConexion.cs" />
+    <Compile Include="Reglas\ClavesReglas.cs" />
+    <Compile Include="Reglas\IReglaNegocio.cs" />
+    <Compile Include="ITarea.cs" />
+    <Compile Include="COMetadataCollectionFramework.cs" />
+    <Compile Include="COMetadataConfigurationElementFramework.cs" />
+    <Compile Include="COMetadataConfigurationSectionFramework.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppServidor.cs" />
+    <Compile Include="Util\CalcularRetencion.cs" />
+    <Compile Include="Util\ConversorNumLetras.cs" />
+    <Compile Include="Util\ConvertirNumerosLetras.cs" />
+    <Compile Include="Util\CorreoElectronico.cs" />
+    <Compile Include="Util\InformacionSMTP.cs" />
+    <Compile Include="Util\Serializacion.cs" />
+    <Compile Include="Util\Utilidades.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataAnnotations\Resource.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

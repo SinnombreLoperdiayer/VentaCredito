@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="COServidorSolicitudesDatosModeloStoreContainer" CdmEntityContainer="ModeloSolicitudes">
+    <EntitySetMapping Name="SolicitudCambioAgenciaDestino_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.SolicitudCambioAgenciaDestino_GIR">
+        <MappingFragment StoreEntitySet="SolicitudCambioAgenciaDestino_GIR">
+          <ScalarProperty Name="SCA_IdSolicitudGiro" ColumnName="SCA_IdSolicitudGiro" />
+          <ScalarProperty Name="SCA_IdCentroServiciosActual" ColumnName="SCA_IdCentroServiciosActual" />
+          <ScalarProperty Name="SCA_DescCentroServiciosActual" ColumnName="SCA_DescCentroServiciosActual" />
+          <ScalarProperty Name="SCA_IdCentroServiciosNuevo" ColumnName="SCA_IdCentroServiciosNuevo" />
+          <ScalarProperty Name="SCA_DescCentroServiciosNuevo" ColumnName="SCA_DescCentroServiciosNuevo" />
+          <ScalarProperty Name="SCA_FechaGrabacion" ColumnName="SCA_FechaGrabacion" />
+          <ScalarProperty Name="SCA_CreadoPor" ColumnName="SCA_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSolicitud_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.TipoSolicitud_GIR">
+        <MappingFragment StoreEntitySet="TipoSolicitud_GIR">
+          <ScalarProperty Name="TIS_CreadoPor" ColumnName="TIS_CreadoPor" />
+          <ScalarProperty Name="TIS_FechaGrabacion" ColumnName="TIS_FechaGrabacion" />
+          <ScalarProperty Name="TIS_Descripcion" ColumnName="TIS_Descripcion" />
+          <ScalarProperty Name="TIS_IdTipoSolicitud" ColumnName="TIS_IdTipoSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocsCambioDestinatario_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.DocsCambioDestinatario_GIR">
+        <MappingFragment StoreEntitySet="DocsCambioDestinatario_GIR">
+          <ScalarProperty Name="DCD_CreadoPor" ColumnName="DCD_CreadoPor" />
+          <ScalarProperty Name="DCD_FechaGrabacion" ColumnName="DCD_FechaGrabacion" />
+          <ScalarProperty Name="DCD_Descripcion" ColumnName="DCD_Descripcion" />
+          <ScalarProperty Name="DCD_IdDocumento" ColumnName="DCD_IdDocumento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudCambioDestinatario_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.SolicitudCambioDestinatario_GIR">
+        <MappingFragment StoreEntitySet="SolicitudCambioDestinatario_GIR">
+          <ScalarProperty Name="SCD_CreadoPor" ColumnName="SCD_CreadoPor" />
+          <ScalarProperty Name="SCD_FechaGrabacion" ColumnName="SCD_FechaGrabacion" />
+          <ScalarProperty Name="SCD_TipoIdReclamaNueva" ColumnName="SCD_TipoIdReclamaNueva" />
+          <ScalarProperty Name="SCD_TipoIdReclamaActual" ColumnName="SCD_TipoIdReclamaActual" />
+          <ScalarProperty Name="SCD_OcupacionNueva" ColumnName="SCD_OcupacionNueva" />
+          <ScalarProperty Name="SCD_OcupacionActual" ColumnName="SCD_OcupacionActual" />
+          <ScalarProperty Name="SCD_EmailNuevo" ColumnName="SCD_EmailNuevo" />
+          <ScalarProperty Name="SCD_EmailActual" ColumnName="SCD_EmailActual" />
+          <ScalarProperty Name="SCD_DireccionNueva" ColumnName="SCD_DireccionNueva" />
+          <ScalarProperty Name="SCD_DireccionActual" ColumnName="SCD_DireccionActual" />
+          <ScalarProperty Name="SCD_TelefonoNuevo" ColumnName="SCD_TelefonoNuevo" />
+          <ScalarProperty Name="SCD_TelefonoActual" ColumnName="SCD_TelefonoActual" />
+          <ScalarProperty Name="SCD_Apellido2Nuevo" ColumnName="SCD_Apellido2Nuevo" />
+          <ScalarProperty Name="SCD_Apellido2Actual" ColumnName="SCD_Apellido2Actual" />
+          <ScalarProperty Name="SCD_Apellido1Nuevo" ColumnName="SCD_Apellido1Nuevo" />
+          <ScalarProperty Name="SCD_Apellido1Actual" ColumnName="SCD_Apellido1Actual" />
+          <ScalarProperty Name="SCD_NombreNuevo" ColumnName="SCD_NombreNuevo" />
+          <ScalarProperty Name="SCD_NombreActual" ColumnName="SCD_NombreActual" />
+          <ScalarProperty Name="SCD_IdentificacionNueva" ColumnName="SCD_IdentificacionNueva" />
+          <ScalarProperty Name="SCD_IdentificacionActual" ColumnName="SCD_IdentificacionActual" />
+          <ScalarProperty Name="SCD_TipoDocNuevo" ColumnName="SCD_TipoDocNuevo" />
+          <ScalarProperty Name="SCD_TipoDocActual" ColumnName="SCD_TipoDocActual" />
+          <ScalarProperty Name="SCD_IdSolicitudGiro" ColumnName="SCD_IdSolicitudGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GirosPeatonPeaton_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.GirosPeatonPeaton_GIR">
+        <MappingFragment StoreEntitySet="GirosPeatonPeaton_GIR">
+          <ScalarProperty Name="GPP_CreadoPor" ColumnName="GPP_CreadoPor" />
+          <ScalarProperty Name="GPP_FechaGrabacion" ColumnName="GPP_FechaGrabacion" />
+          <ScalarProperty Name="GPP_TipoIdentificacionReclamoGiro" ColumnName="GPP_TipoIdentificacionReclamoGiro" />
+          <ScalarProperty Name="GPP_OcupacionDestinatario" ColumnName="GPP_OcupacionDestinatario" />
+          <ScalarProperty Name="GPP_EmailDestinatario" ColumnName="GPP_EmailDestinatario" />
+          <ScalarProperty Name="GPP_DireccionDestinatario" ColumnName="GPP_DireccionDestinatario" />
+          <ScalarProperty Name="GPP_TelefonoDestinatario" ColumnName="GPP_TelefonoDestinatario" />
+          <ScalarProperty Name="GPP_Apellido2Destinatario" ColumnName="GPP_Apellido2Destinatario" />
+          <ScalarProperty Name="GPP_Apellido1Destinatario" ColumnName="GPP_Apellido1Destinatario" />
+          <ScalarProperty Name="GPP_NombreDestinatario" ColumnName="GPP_NombreDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdDestinatario" ColumnName="GPP_TipoIdDestinatario" />
+          <ScalarProperty Name="GPP_IdDestinatario" ColumnName="GPP_IdDestinatario" />
+          <ScalarProperty Name="GPP_OcupacionRemitente" ColumnName="GPP_OcupacionRemitente" />
+          <ScalarProperty Name="GPP_EmailRemitente" ColumnName="GPP_EmailRemitente" />
+          <ScalarProperty Name="GPP_DireccionRemitente" ColumnName="GPP_DireccionRemitente" />
+          <ScalarProperty Name="GPP_TelefonoRemitente" ColumnName="GPP_TelefonoRemitente" />
+          <ScalarProperty Name="GPP_Apellido2Remitente" ColumnName="GPP_Apellido2Remitente" />
+          <ScalarProperty Name="GPP_Apellido1Remitente" ColumnName="GPP_Apellido1Remitente" />
+          <ScalarProperty Name="GPP_NombreRemitente" ColumnName="GPP_NombreRemitente" />
+          <ScalarProperty Name="GPP_TipoIdRemitente" ColumnName="GPP_TipoIdRemitente" />
+          <ScalarProperty Name="GPP_IdRemitente" ColumnName="GPP_IdRemitente" />
+          <ScalarProperty Name="GPP_IdAdmisionGiro" ColumnName="GPP_IdAdmisionGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadosGiro_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.EstadosGiro_GIR">
+        <MappingFragment StoreEntitySet="EstadosGiro_GIR">
+          <ScalarProperty Name="ESG_CreadoPor" ColumnName="ESG_CreadoPor" />
+          <ScalarProperty Name="ESG_FechaGrabacion" ColumnName="ESG_FechaGrabacion" />
+          <ScalarProperty Name="ESG_Estado" ColumnName="ESG_Estado" />
+          <ScalarProperty Name="ESG_IdAdmisionGiro" ColumnName="ESG_IdAdmisionGiro" />
+          <ScalarProperty Name="ESG_IdEstadosGiro" ColumnName="ESG_IdEstadosGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerUltimoEstadoGiro_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerUltimoEstadoGiro_GIR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.GIUltimoEstadoGiro">
+          <ScalarProperty Name="ESG_IdEstadosGiro" ColumnName="ESG_IdEstadosGiro" />
+          <ScalarProperty Name="ESG_IdAdmisionGiro" ColumnName="ESG_IdAdmisionGiro" />
+          <ScalarProperty Name="ESG_Estado" ColumnName="ESG_Estado" />
+          <ScalarProperty Name="ESG_FechaGrabacion" ColumnName="ESG_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MotivoSolicitud_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.MotivoSolicitud_GIR">
+        <MappingFragment StoreEntitySet="MotivoSolicitud_GIR">
+          <ScalarProperty Name="MOS_RetornaFlete" ColumnName="MOS_RetornaFlete" />
+          <ScalarProperty Name="MOS_CreadoPor" ColumnName="MOS_CreadoPor" />
+          <ScalarProperty Name="MOS_FechaGrabacion" ColumnName="MOS_FechaGrabacion" />
+          <ScalarProperty Name="MOS_EsEditable" ColumnName="MOS_EsEditable" />
+          <ScalarProperty Name="MOS_IdTipoSolicitud" ColumnName="MOS_IdTipoSolicitud" />
+          <ScalarProperty Name="MOS_Descripcion" ColumnName="MOS_Descripcion" />
+          <ScalarProperty Name="MOS_IdMotivoSolicitud" ColumnName="MOS_IdMotivoSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoSolicitud_VGIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.MotivoSolicitud_VGIR">
+        <MappingFragment StoreEntitySet="MotivoSolicitud_VGIR">
+          <ScalarProperty Name="MOS_RetornaFlete" ColumnName="MOS_RetornaFlete" />
+          <ScalarProperty Name="MOS_EsEditable" ColumnName="MOS_EsEditable" />
+          <ScalarProperty Name="MOS_CreadoPor" ColumnName="MOS_CreadoPor" />
+          <ScalarProperty Name="MOS_FechaGrabacion" ColumnName="MOS_FechaGrabacion" />
+          <ScalarProperty Name="MOS_IdTipoSolicitud" ColumnName="MOS_IdTipoSolicitud" />
+          <ScalarProperty Name="MOS_Descripcion" ColumnName="MOS_Descripcion" />
+          <ScalarProperty Name="MOS_IdMotivoSolicitud" ColumnName="MOS_IdMotivoSolicitud" />
+          <ScalarProperty Name="TIS_Descripcion" ColumnName="TIS_Descripcion" />
+          <ScalarProperty Name="TIS_IdTipoSolicitud" ColumnName="TIS_IdTipoSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoSolicitudHist_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.MotivoSolicitudHist_GIR">
+        <MappingFragment StoreEntitySet="MotivoSolicitudHist_GIR">
+          <ScalarProperty Name="MOS_TipoCambio" ColumnName="MOS_TipoCambio" />
+          <ScalarProperty Name="MOS_CambiadoPor" ColumnName="MOS_CambiadoPor" />
+          <ScalarProperty Name="MOS_FechaCambio" ColumnName="MOS_FechaCambio" />
+          <ScalarProperty Name="MOS_CreadoPor" ColumnName="MOS_CreadoPor" />
+          <ScalarProperty Name="MOS_FechaGrabacion" ColumnName="MOS_FechaGrabacion" />
+          <ScalarProperty Name="MOS_EsEditable" ColumnName="MOS_EsEditable" />
+          <ScalarProperty Name="MOS_IdTipoSolicitud" ColumnName="MOS_IdTipoSolicitud" />
+          <ScalarProperty Name="MOS_Descripcion" ColumnName="MOS_Descripcion" />
+          <ScalarProperty Name="MOS_IdMotivoSolicitud" ColumnName="MOS_IdMotivoSolicitud" />
+          <ScalarProperty Name="MOS_IdAuditoria" ColumnName="MOS_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudGiro_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.SolicitudGiro_GIR">
+        <MappingFragment StoreEntitySet="SolicitudGiro_GIR">
+          <ScalarProperty Name="SOG_IdGiro" ColumnName="SOG_IdGiro" />
+          <ScalarProperty Name="SOG_CreadoPor" ColumnName="SOG_CreadoPor" />
+          <ScalarProperty Name="SOG_FechaGrabacion" ColumnName="SOG_FechaGrabacion" />
+          <ScalarProperty Name="SOG_Observaciones" ColumnName="SOG_Observaciones" />
+          <ScalarProperty Name="SOG_NombreCentroServicioSolicita" ColumnName="SOG_NombreCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_IdCentroServicioSolicita" ColumnName="SOG_IdCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_DescripcionRegionalAdm" ColumnName="SOG_DescripcionRegionalAdm" />
+          <ScalarProperty Name="SOG_IdRegionalAdm" ColumnName="SOG_IdRegionalAdm" />
+          <ScalarProperty Name="SOG_Estado" ColumnName="SOG_Estado" />
+          <ScalarProperty Name="SOG_DescripcionMotivoSolicitud" ColumnName="SOG_DescripcionMotivoSolicitud" />
+          <ScalarProperty Name="SOG_IdMotivoSolicitud" ColumnName="SOG_IdMotivoSolicitud" />
+          <ScalarProperty Name="SOG_DescripcionTipoSolicitud" ColumnName="SOG_DescripcionTipoSolicitud" />
+          <ScalarProperty Name="SOG_IdTipoSolicitud" ColumnName="SOG_IdTipoSolicitud" />
+          <ScalarProperty Name="SOG_IdAdmisionGiro" ColumnName="SOG_IdAdmisionGiro" />
+          <ScalarProperty Name="SOG_IdSolicitudGiro" ColumnName="SOG_IdSolicitudGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerInfoSolicitudGiro_GGI" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerInfoSolicitudGiro_GGI">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.InfoSolicitudGiro_GGI">
+          <ScalarProperty Name="SOG_IdSolicitudGiro" ColumnName="SOG_IdSolicitudGiro" />
+          <ScalarProperty Name="SOG_DescripcionTipoSolicitud" ColumnName="SOG_DescripcionTipoSolicitud" />
+          <ScalarProperty Name="SOG_Estado" ColumnName="SOG_Estado" />
+          <ScalarProperty Name="SOG_IdGiro" ColumnName="SOG_IdGiro" />
+          <ScalarProperty Name="SOG_IdCentroServicioSolicita" ColumnName="SOG_IdCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_NombreCentroServicioSolicita" ColumnName="SOG_NombreCentroServicioSolicita" />
+          <ScalarProperty Name="SCA_IdCentroServiciosActual" ColumnName="SCA_IdCentroServiciosActual" />
+          <ScalarProperty Name="SCA_DescCentroServiciosActual" ColumnName="SCA_DescCentroServiciosActual" />
+          <ScalarProperty Name="SCA_IdCentroServiciosNuevo" ColumnName="SCA_IdCentroServiciosNuevo" />
+          <ScalarProperty Name="SCA_DescCentroServiciosNuevo" ColumnName="SCA_DescCentroServiciosNuevo" />
+          <ScalarProperty Name="GPP_IdRemitente" ColumnName="GPP_IdRemitente" />
+          <ScalarProperty Name="GPP_TipoIdRemitente" ColumnName="GPP_TipoIdRemitente" />
+          <ScalarProperty Name="GPP_NombreRemitente" ColumnName="GPP_NombreRemitente" />
+          <ScalarProperty Name="GPP_Apellido1Remitente" ColumnName="GPP_Apellido1Remitente" />
+          <ScalarProperty Name="GPP_Apellido2Remitente" ColumnName="GPP_Apellido2Remitente" />
+          <ScalarProperty Name="GPP_TelefonoRemitente" ColumnName="GPP_TelefonoRemitente" />
+          <ScalarProperty Name="GPP_DireccionRemitente" ColumnName="GPP_DireccionRemitente" />
+          <ScalarProperty Name="GPP_EmailRemitente" ColumnName="GPP_EmailRemitente" />
+          <ScalarProperty Name="GPP_OcupacionRemitente" ColumnName="GPP_OcupacionRemitente" />
+          <ScalarProperty Name="GPP_IdDestinatario" ColumnName="GPP_IdDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdDestinatario" ColumnName="GPP_TipoIdDestinatario" />
+          <ScalarProperty Name="GPP_NombreDestinatario" ColumnName="GPP_NombreDestinatario" />
+          <ScalarProperty Name="GPP_Apellido1Destinatario" ColumnName="GPP_Apellido1Destinatario" />
+          <ScalarProperty Name="GPP_Apellido2Destinatario" ColumnName="GPP_Apellido2Destinatario" />
+          <ScalarProperty Name="GPP_TelefonoDestinatario" ColumnName="GPP_TelefonoDestinatario" />
+          <ScalarProperty Name="GPP_DireccionDestinatario" ColumnName="GPP_DireccionDestinatario" />
+          <ScalarProperty Name="GPP_EmailDestinatario" ColumnName="GPP_EmailDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdentificacionReclamoGiro" ColumnName="GPP_TipoIdentificacionReclamoGiro" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+          <ScalarProperty Name="GPP_OcupacionDestinatario" ColumnName="GPP_OcupacionDestinatario" />
+          <ScalarProperty Name="SOG_Observaciones" ColumnName="SOG_Observaciones" />
+          <ScalarProperty Name="SOG_IdTipoSolicitud" ColumnName="SOG_IdTipoSolicitud" />
+          <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+          <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+          <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+          <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SolicitudAnulacion_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.SolicitudAnulacion_GIR">
+        <MappingFragment StoreEntitySet="SolicitudAnulacion_GIR">
+          <ScalarProperty Name="SOA_CreadoPor" ColumnName="SOA_CreadoPor" />
+          <ScalarProperty Name="SOA_FechaGrabacion" ColumnName="SOA_FechaGrabacion" />
+          <ScalarProperty Name="SOA_NoDocumento" ColumnName="SOA_NoDocumento" />
+          <ScalarProperty Name="SOA_IdSolicitudGiro" ColumnName="SOA_IdSolicitudGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudesAtendidas_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.SolicitudesAtendidas_GIR">
+        <MappingFragment StoreEntitySet="SolicitudesAtendidas_GIR">
+          <ScalarProperty Name="SOA_NumeroAtencion" ColumnName="SOA_NumeroAtencion" />
+          <ScalarProperty Name="SOA_CreadoPor" ColumnName="SOA_CreadoPor" />
+          <ScalarProperty Name="SOA_FechaGrabacion" ColumnName="SOA_FechaGrabacion" />
+          <ScalarProperty Name="SOA_ObservacionesAtencion" ColumnName="SOA_ObservacionesAtencion" />
+          <ScalarProperty Name="SOA_FechaAtencion" ColumnName="SOA_FechaAtencion" />
+          <ScalarProperty Name="SOA_NombreUsuarioQueAtendio" ColumnName="SOA_NombreUsuarioQueAtendio" />
+          <ScalarProperty Name="SOA_UsuarioQueAtendio" ColumnName="SOA_UsuarioQueAtendio" />
+          <ScalarProperty Name="SOA_IdSolicitudGiro" ColumnName="SOA_IdSolicitudGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudesPorGiro_VGIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.SolicitudesPorGiro_VGIR">
+        <MappingFragment StoreEntitySet="SolicitudesPorGiro_VGIR">
+          <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+          <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+          <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+          <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+          <ScalarProperty Name="SOG_IdGiro" ColumnName="SOG_IdGiro" />
+          <ScalarProperty Name="ADG_Transmitido" ColumnName="ADG_Transmitido" />
+          <ScalarProperty Name="UltimoEstadoGiro" ColumnName="UltimoEstadoGiro" />
+          <ScalarProperty Name="SOG_CreadoPor" ColumnName="SOG_CreadoPor" />
+          <ScalarProperty Name="SOG_DescripcionRegionalAdm" ColumnName="SOG_DescripcionRegionalAdm" />
+          <ScalarProperty Name="SOG_IdRegionalAdm" ColumnName="SOG_IdRegionalAdm" />
+          <ScalarProperty Name="SOG_Estado" ColumnName="SOG_Estado" />
+          <ScalarProperty Name="SOG_FechaGrabacion" ColumnName="SOG_FechaGrabacion" />
+          <ScalarProperty Name="SOG_NombreCentroServicioSolicita" ColumnName="SOG_NombreCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_IdCentroServicioSolicita" ColumnName="SOG_IdCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_DescripcionTipoSolicitud" ColumnName="SOG_DescripcionTipoSolicitud" />
+          <ScalarProperty Name="SOG_IdTipoSolicitud" ColumnName="SOG_IdTipoSolicitud" />
+          <ScalarProperty Name="SOG_IdAdmisionGiro" ColumnName="SOG_IdAdmisionGiro" />
+          <ScalarProperty Name="SOG_IdSolicitudGiro" ColumnName="SOG_IdSolicitudGiro" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGiroSinSolicitud_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerGiroSinSolicitud_GIR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.GiroSinSolicitud_GIR">
+          <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+          <ScalarProperty Name="UltimoEstadoGiro" ColumnName="UltimoEstadoGiro" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+          <ScalarProperty Name="GPP_NombreRemitente" ColumnName="GPP_NombreRemitente" />
+          <ScalarProperty Name="GPP_Apellido1Remitente" ColumnName="GPP_Apellido1Remitente" />
+          <ScalarProperty Name="GPP_Apellido2Remitente" ColumnName="GPP_Apellido2Remitente" />
+          <ScalarProperty Name="GPP_IdRemitente" ColumnName="GPP_IdRemitente" />
+          <ScalarProperty Name="GPP_IdDestinatario" ColumnName="GPP_IdDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdDestinatario" ColumnName="GPP_TipoIdDestinatario" />
+          <ScalarProperty Name="GPP_NombreDestinatario" ColumnName="GPP_NombreDestinatario" />
+          <ScalarProperty Name="GPP_Apellido1Destinatario" ColumnName="GPP_Apellido1Destinatario" />
+          <ScalarProperty Name="GPP_Apellido2Destinatario" ColumnName="GPP_Apellido2Destinatario" />
+          <ScalarProperty Name="GPP_TelefonoDestinatario" ColumnName="GPP_TelefonoDestinatario" />
+          <ScalarProperty Name="GPP_DireccionDestinatario" ColumnName="GPP_DireccionDestinatario" />
+          <ScalarProperty Name="GPP_EmailDestinatario" ColumnName="GPP_EmailDestinatario" />
+          <ScalarProperty Name="GPP_OcupacionDestinatario" ColumnName="GPP_OcupacionDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdentificacionReclamoGiro" ColumnName="GPP_TipoIdentificacionReclamoGiro" />
+          <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+          <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+          <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+          <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+          <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+          <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerAdmisionGiro_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerAdmisionGiro_GIR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.paObtenerAdmisionGiro_GIR">
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+          <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+          <ScalarProperty Name="ADG_PrefijoIdGiro" ColumnName="ADG_PrefijoIdGiro" />
+          <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+          <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+          <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+          <ScalarProperty Name="ESG_Estado" ColumnName="ESG_Estado" />
+          <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+          <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+          <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+          <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+          <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+          <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+          <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+          <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+          <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+          <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+          <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+          <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+          <ScalarProperty Name="ADG_NotificarPagoPorEmail" ColumnName="ADG_NotificarPagoPorEmail" />
+          <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+          <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+          <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+          <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+          <ScalarProperty Name="ADG_CreadoPor" ColumnName="ADG_CreadoPor" />
+          <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+          <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+          <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+          <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+          <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+          <ScalarProperty Name="ADG_Transmitido" ColumnName="ADG_Transmitido" />
+          <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SolicitudCambioValor_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.SolicitudCambioValor_GIR">
+        <MappingFragment StoreEntitySet="SolicitudCambioValor_GIR">
+          <ScalarProperty Name="SCV_CreadoPor" ColumnName="SCV_CreadoPor" />
+          <ScalarProperty Name="SCV_FechaGrabacion" ColumnName="SCV_FechaGrabacion" />
+          <ScalarProperty Name="SCV_ValorPorteDiferencia" ColumnName="SCV_ValorPorteDiferencia" />
+          <ScalarProperty Name="SCV_ValorPorteInicial" ColumnName="SCV_ValorPorteInicial" />
+          <ScalarProperty Name="SCV_ValorAAjustar" ColumnName="SCV_ValorAAjustar" />
+          <ScalarProperty Name="SCV_ValorRealGiro" ColumnName="SCV_ValorRealGiro" />
+          <ScalarProperty Name="SCV_IdSolicitudGiro" ColumnName="SCV_IdSolicitudGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGirosOrigenCentroSvcRacol_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerGirosOrigenCentroSvcRacol_GIR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.GIpaObtenerGirosOrigenCentroSvcRacol">
+          <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+          <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+          <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+          <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+          <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+          <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+          <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+          <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+          <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+          <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+          <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+          <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+          <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_TelefonoRemitente" ColumnName="ADG_TelefonoRemitente" />
+          <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+          <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+          <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+          <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+          <ScalarProperty Name="ADG_TelefonoDestinatario" ColumnName="ADG_TelefonoDestinatario" />
+          <ScalarProperty Name="ADG_DireccionRemitente" ColumnName="ADG_DireccionRemitente" />
+          <ScalarProperty Name="ADG_DireccionDestinatario" ColumnName="ADG_DireccionDestinatario" />
+          <ScalarProperty Name="ADG_EmailRemitente" ColumnName="ADG_EmailRemitente" />
+          <ScalarProperty Name="ADG_EmailDestinatario" ColumnName="ADG_EmailDestinatario" />
+          <ScalarProperty Name="UltimoEstado" ColumnName="UltimoEstado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGiroPeatonPeaton_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerGiroPeatonPeaton_GIR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.paObtenerGiroPeatonPeaton_GIR">
+          <ScalarProperty Name="GPP_IdAdmisionGiro" ColumnName="GPP_IdAdmisionGiro" />
+          <ScalarProperty Name="GPP_IdRemitente" ColumnName="GPP_IdRemitente" />
+          <ScalarProperty Name="GPP_TipoIdRemitente" ColumnName="GPP_TipoIdRemitente" />
+          <ScalarProperty Name="GPP_NombreRemitente" ColumnName="GPP_NombreRemitente" />
+          <ScalarProperty Name="GPP_Apellido1Remitente" ColumnName="GPP_Apellido1Remitente" />
+          <ScalarProperty Name="GPP_Apellido2Remitente" ColumnName="GPP_Apellido2Remitente" />
+          <ScalarProperty Name="GPP_TelefonoRemitente" ColumnName="GPP_TelefonoRemitente" />
+          <ScalarProperty Name="GPP_DireccionRemitente" ColumnName="GPP_DireccionRemitente" />
+          <ScalarProperty Name="GPP_EmailRemitente" ColumnName="GPP_EmailRemitente" />
+          <ScalarProperty Name="GPP_OcupacionRemitente" ColumnName="GPP_OcupacionRemitente" />
+          <ScalarProperty Name="GPP_IdDestinatario" ColumnName="GPP_IdDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdDestinatario" ColumnName="GPP_TipoIdDestinatario" />
+          <ScalarProperty Name="GPP_NombreDestinatario" ColumnName="GPP_NombreDestinatario" />
+          <ScalarProperty Name="GPP_Apellido1Destinatario" ColumnName="GPP_Apellido1Destinatario" />
+          <ScalarProperty Name="GPP_Apellido2Destinatario" ColumnName="GPP_Apellido2Destinatario" />
+          <ScalarProperty Name="GPP_TelefonoDestinatario" ColumnName="GPP_TelefonoDestinatario" />
+          <ScalarProperty Name="GPP_DireccionDestinatario" ColumnName="GPP_DireccionDestinatario" />
+          <ScalarProperty Name="GPP_EmailDestinatario" ColumnName="GPP_EmailDestinatario" />
+          <ScalarProperty Name="GPP_OcupacionDestinatario" ColumnName="GPP_OcupacionDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdentificacionReclamoGiro" ColumnName="GPP_TipoIdentificacionReclamoGiro" />
+          <ScalarProperty Name="GPP_FechaGrabacion" ColumnName="GPP_FechaGrabacion" />
+          <ScalarProperty Name="GPP_CreadoPor" ColumnName="GPP_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paInsertarEstadoGiro_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paInsertarEstadoGiro_GIR" />
+    <FunctionImportMapping FunctionImportName="paObtenerCentroServGirTran_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerCentroServGirTran_GIR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.GIpaObtenerCentroServGirTran">
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+          <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+          <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+          <ScalarProperty Name="CES_TopeMaximoPorPagos" ColumnName="CES_TopeMaximoPorPagos" />
+          <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+          <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+          <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CentroCostosRacol" ColumnName="CentroCostosRacol" />
+          <ScalarProperty Name="CodRacolERP" ColumnName="CodRacolERP" />
+          <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+          <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AdmisionGiros_GIR">
+      <EntityTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.AdmisionGiros_GIR">
+        <MappingFragment StoreEntitySet="AdmisionGiros_GIR">
+          <ScalarProperty Name="ADG_ObservacionesSolicitudes" ColumnName="ADG_ObservacionesSolicitudes" />
+          <ScalarProperty Name="ADG_EsProduccion" ColumnName="ADG_EsProduccion" />
+          <ScalarProperty Name="ADG_IdEstadosGiro" ColumnName="ADG_IdEstadosGiro" />
+          <ScalarProperty Name="ADG_TieneTelemercadeo" ColumnName="ADG_TieneTelemercadeo" />
+          <ScalarProperty Name="ADG_EmailDestinatario" ColumnName="ADG_EmailDestinatario" />
+          <ScalarProperty Name="ADG_EmailRemitente" ColumnName="ADG_EmailRemitente" />
+          <ScalarProperty Name="ADG_DireccionDestinatario" ColumnName="ADG_DireccionDestinatario" />
+          <ScalarProperty Name="ADG_DireccionRemitente" ColumnName="ADG_DireccionRemitente" />
+          <ScalarProperty Name="ADG_TelefonoDestinatario" ColumnName="ADG_TelefonoDestinatario" />
+          <ScalarProperty Name="ADG_TelefonoRemitente" ColumnName="ADG_TelefonoRemitente" />
+          <ScalarProperty Name="ADG_EstaPagado" ColumnName="ADG_EstaPagado" />
+          <ScalarProperty Name="ADG_NotificarPagoPorEmail" ColumnName="ADG_NotificarPagoPorEmail" />
+          <ScalarProperty Name="ADG_CreadoPor" ColumnName="ADG_CreadoPor" />
+          <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+          <ScalarProperty Name="ADG_Transmitido" ColumnName="ADG_Transmitido" />
+          <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+          <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+          <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+          <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+          <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+          <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+          <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+          <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+          <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+          <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+          <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+          <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+          <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+          <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+          <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+          <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+          <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+          <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+          <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+          <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+          <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+          <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+          <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+          <ScalarProperty Name="ADG_GuidDeChequeo" ColumnName="ADG_GuidDeChequeo" />
+          <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+          <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+          <ScalarProperty Name="ADG_PrefijoIdGiro" ColumnName="ADG_PrefijoIdGiro" />
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paModificarObservacionesGiros_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paModificarObservacionesGiros_GIR" />
+    <FunctionImportMapping FunctionImportName="paObtenerDetalleSolicitudGiro_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerDetalleSolicitudGiro_GIR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.GIpaObtenerDetalleSolicitudGiro_GIR">
+          <ScalarProperty Name="SOG_IdSolicitudGiro" ColumnName="SOG_IdSolicitudGiro" />
+          <ScalarProperty Name="SOG_Estado" ColumnName="SOG_Estado" />
+          <ScalarProperty Name="SOG_DescripcionTipoSolicitud" ColumnName="SOG_DescripcionTipoSolicitud" />
+          <ScalarProperty Name="SOG_IdMotivoSolicitud" ColumnName="SOG_IdMotivoSolicitud" />
+          <ScalarProperty Name="SOG_DescripcionMotivoSolicitud" ColumnName="SOG_DescripcionMotivoSolicitud" />
+          <ScalarProperty Name="SOG_Observaciones" ColumnName="SOG_Observaciones" />
+          <ScalarProperty Name="SOG_FechaGrabacion" ColumnName="SOG_FechaGrabacion" />
+          <ScalarProperty Name="SOG_CreadoPor" ColumnName="SOG_CreadoPor" />
+          <ScalarProperty Name="SOG_IdCentroServicioSolicita" ColumnName="SOG_IdCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_NombreCentroServicioSolicita" ColumnName="SOG_NombreCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_IdRegionalAdm" ColumnName="SOG_IdRegionalAdm" />
+          <ScalarProperty Name="SOG_DescripcionRegionalAdm" ColumnName="SOG_DescripcionRegionalAdm" />
+          <ScalarProperty Name="SCD_TipoDocActual" ColumnName="SCD_TipoDocActual" />
+          <ScalarProperty Name="SCD_TipoDocNuevo" ColumnName="SCD_TipoDocNuevo" />
+          <ScalarProperty Name="SCD_IdentificacionActual" ColumnName="SCD_IdentificacionActual" />
+          <ScalarProperty Name="SCD_IdentificacionNueva" ColumnName="SCD_IdentificacionNueva" />
+          <ScalarProperty Name="SCD_NombreActual" ColumnName="SCD_NombreActual" />
+          <ScalarProperty Name="SCD_NombreNuevo" ColumnName="SCD_NombreNuevo" />
+          <ScalarProperty Name="SCD_Apellido1Actual" ColumnName="SCD_Apellido1Actual" />
+          <ScalarProperty Name="SCD_Apellido1Nuevo" ColumnName="SCD_Apellido1Nuevo" />
+          <ScalarProperty Name="SCD_Apellido2Actual" ColumnName="SCD_Apellido2Actual" />
+          <ScalarProperty Name="SCD_Apellido2Nuevo" ColumnName="SCD_Apellido2Nuevo" />
+          <ScalarProperty Name="SCD_TelefonoActual" ColumnName="SCD_TelefonoActual" />
+          <ScalarProperty Name="SCD_TelefonoNuevo" ColumnName="SCD_TelefonoNuevo" />
+          <ScalarProperty Name="SCD_DireccionActual" ColumnName="SCD_DireccionActual" />
+          <ScalarProperty Name="SCD_DireccionNueva" ColumnName="SCD_DireccionNueva" />
+          <ScalarProperty Name="SCD_EmailActual" ColumnName="SCD_EmailActual" />
+          <ScalarProperty Name="SCD_EmailNuevo" ColumnName="SCD_EmailNuevo" />
+          <ScalarProperty Name="SCD_TipoIdReclamaActual" ColumnName="SCD_TipoIdReclamaActual" />
+          <ScalarProperty Name="SCD_TipoIdReclamaNueva" ColumnName="SCD_TipoIdReclamaNueva" />
+          <ScalarProperty Name="SCD_OcupacionActual" ColumnName="SCD_OcupacionActual" />
+          <ScalarProperty Name="SCD_OcupacionNueva" ColumnName="SCD_OcupacionNueva" />
+          <ScalarProperty Name="SOA_ObservacionesAtencion" ColumnName="SOA_ObservacionesAtencion" />
+          <ScalarProperty Name="SCA_IdCentroServiciosActual" ColumnName="SCA_IdCentroServiciosActual" />
+          <ScalarProperty Name="SCA_DescCentroServiciosActual" ColumnName="SCA_DescCentroServiciosActual" />
+          <ScalarProperty Name="SCA_IdCentroServiciosNuevo" ColumnName="SCA_IdCentroServiciosNuevo" />
+          <ScalarProperty Name="SCA_DescCentroServiciosNuevo" ColumnName="SCA_DescCentroServiciosNuevo" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+          <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+          <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+          <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+          <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+          <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+          <ScalarProperty Name="ADG_TelefonoRemitente" ColumnName="ADG_TelefonoRemitente" />
+          <ScalarProperty Name="ADG_DireccionRemitente" ColumnName="ADG_DireccionRemitente" />
+          <ScalarProperty Name="ADG_TelefonoDestinatario" ColumnName="ADG_TelefonoDestinatario" />
+          <ScalarProperty Name="ADG_DireccionDestinatario" ColumnName="ADG_DireccionDestinatario" />
+          <ScalarProperty Name="ADG_EmailRemitente" ColumnName="ADG_EmailRemitente" />
+          <ScalarProperty Name="ADG_EmailDestinatario" ColumnName="ADG_EmailDestinatario" />
+          <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+          <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+          <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+          <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+          <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+          <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+          <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+          <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+          <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+          <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+          <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+          <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+          <ScalarProperty Name="SOA_UsuarioQueAtendio" ColumnName="SOA_UsuarioQueAtendio" />
+          <ScalarProperty Name="SOA_NombreUsuarioQueAtendio" ColumnName="SOA_NombreUsuarioQueAtendio" />
+          <ScalarProperty Name="SOA_FechaAtencion" ColumnName="SOA_FechaAtencion" />
+          <ScalarProperty Name="SOG_IdTipoSolicitud" ColumnName="SOG_IdTipoSolicitud" />
+          <ScalarProperty Name="SOA_NumeroAtencion" ColumnName="SOA_NumeroAtencion" />
+          <ScalarProperty Name="GPP_IdAdmisionGiro" ColumnName="GPP_IdAdmisionGiro" />
+          <ScalarProperty Name="GPP_IdRemitente" ColumnName="GPP_IdRemitente" />
+          <ScalarProperty Name="GPP_TipoIdRemitente" ColumnName="GPP_TipoIdRemitente" />
+          <ScalarProperty Name="GPP_NombreRemitente" ColumnName="GPP_NombreRemitente" />
+          <ScalarProperty Name="GPP_Apellido1Remitente" ColumnName="GPP_Apellido1Remitente" />
+          <ScalarProperty Name="GPP_Apellido2Remitente" ColumnName="GPP_Apellido2Remitente" />
+          <ScalarProperty Name="GPP_TelefonoRemitente" ColumnName="GPP_TelefonoRemitente" />
+          <ScalarProperty Name="GPP_DireccionRemitente" ColumnName="GPP_DireccionRemitente" />
+          <ScalarProperty Name="GPP_EmailRemitente" ColumnName="GPP_EmailRemitente" />
+          <ScalarProperty Name="GPP_OcupacionRemitente" ColumnName="GPP_OcupacionRemitente" />
+          <ScalarProperty Name="GPP_IdDestinatario" ColumnName="GPP_IdDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdDestinatario" ColumnName="GPP_TipoIdDestinatario" />
+          <ScalarProperty Name="GPP_NombreDestinatario" ColumnName="GPP_NombreDestinatario" />
+          <ScalarProperty Name="GPP_Apellido1Destinatario" ColumnName="GPP_Apellido1Destinatario" />
+          <ScalarProperty Name="GPP_TelefonoDestinatario" ColumnName="GPP_TelefonoDestinatario" />
+          <ScalarProperty Name="GPP_Apellido2Destinatario" ColumnName="GPP_Apellido2Destinatario" />
+          <ScalarProperty Name="GPP_DireccionDestinatario" ColumnName="GPP_DireccionDestinatario" />
+          <ScalarProperty Name="GPP_EmailDestinatario" ColumnName="GPP_EmailDestinatario" />
+          <ScalarProperty Name="GPP_OcupacionDestinatario" ColumnName="GPP_OcupacionDestinatario" />
+          <ScalarProperty Name="GPP_TipoIdentificacionReclamoGiro" ColumnName="GPP_TipoIdentificacionReclamoGiro" />
+          <ScalarProperty Name="SCV_ValorRealGiro" ColumnName="SCV_ValorRealGiro" />
+          <ScalarProperty Name="SCV_ValorAAjustar" ColumnName="SCV_ValorAAjustar" />
+          <ScalarProperty Name="SCV_ValorPorteInicial" ColumnName="SCV_ValorPorteInicial" />
+          <ScalarProperty Name="SCV_ValorPorteDiferencia" ColumnName="SCV_ValorPorteDiferencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGiroSolicitud_GIR" FunctionName="CO.Servidor.Solicitudes.Datos.Modelo.Store.paObtenerGiroSolicitud_GIR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CO.Servidor.Solicitudes.Datos.Modelo.paObtenerGiroSolicitud_GIR_Result">
+          <ScalarProperty Name="SOG_IdSolicitudGiro" ColumnName="SOG_IdSolicitudGiro" />
+          <ScalarProperty Name="SOG_IdAdmisionGiro" ColumnName="SOG_IdAdmisionGiro" />
+          <ScalarProperty Name="SOG_IdTipoSolicitud" ColumnName="SOG_IdTipoSolicitud" />
+          <ScalarProperty Name="SOG_DescripcionTipoSolicitud" ColumnName="SOG_DescripcionTipoSolicitud" />
+          <ScalarProperty Name="SOG_IdMotivoSolicitud" ColumnName="SOG_IdMotivoSolicitud" />
+          <ScalarProperty Name="SOG_DescripcionMotivoSolicitud" ColumnName="SOG_DescripcionMotivoSolicitud" />
+          <ScalarProperty Name="SOG_Estado" ColumnName="SOG_Estado" />
+          <ScalarProperty Name="SOG_IdRegionalAdm" ColumnName="SOG_IdRegionalAdm" />
+          <ScalarProperty Name="SOG_DescripcionRegionalAdm" ColumnName="SOG_DescripcionRegionalAdm" />
+          <ScalarProperty Name="SOG_IdCentroServicioSolicita" ColumnName="SOG_IdCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_NombreCentroServicioSolicita" ColumnName="SOG_NombreCentroServicioSolicita" />
+          <ScalarProperty Name="SOG_Observaciones" ColumnName="SOG_Observaciones" />
+          <ScalarProperty Name="SOG_FechaGrabacion" ColumnName="SOG_FechaGrabacion" />
+          <ScalarProperty Name="SOG_CreadoPor" ColumnName="SOG_CreadoPor" />
+          <ScalarProperty Name="SOA_NombreUsuarioQueAtendio" ColumnName="SOA_NombreUsuarioQueAtendio" />
+          <ScalarProperty Name="SOA_FechaAtencion" ColumnName="SOA_FechaAtencion" />
+          <ScalarProperty Name="SOA_ObservacionesAtencion" ColumnName="SOA_ObservacionesAtencion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

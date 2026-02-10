@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloExploradorGiros" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EntidadesExploradorGiros" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TipoGiro_GIR" EntityType="ModeloExploradorGiros.TipoGiro_GIR" />
+    <FunctionImport Name="paVerificarNumeroGiro_GIR" ReturnType="Collection(Int64)">
+      <Parameter Name="numeroGiro" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGiroAdicionales_GIR" ReturnType="Collection(ModeloExploradorGiros.GIpaObtenerGiroAdicionales)">
+      <Parameter Name="IdGiro" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGiroImpuestos_GIR" ReturnType="Collection(ModeloExploradorGiros.GIpaObtenerGiroImpuestos)">
+      <Parameter Name="IdGiro" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGiroPeatonPeaton_GIR" ReturnType="Collection(ModeloExploradorGiros.GIpaObtenerGiroPeatonPeaton)">
+      <Parameter Name="IdAdmisionGiro" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paVerificarNumeroPago_GIR" ReturnType="Collection(Int64)">
+      <Parameter Name="numeroPago" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGiroPeatonConvenio_GIR" ReturnType="Collection(ModeloExploradorGiros.GIpaObtenerGiroPeatonConvenio)">
+      <Parameter Name="IdAdmisionGiro" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerHistoricoEstadosGiro_GIR" ReturnType="Collection(ModeloExploradorGiros.HistoricoEstadosGiro_GIR)">
+      <Parameter Name="idAdminGiro" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="GestionGiroTelemercadeo_GIR" EntityType="ModeloExploradorGiros.GestionGiroTelemercadeo_GIR" />
+    <EntitySet Name="ResultadoTelemercadeoGiro_GIR" EntityType="ModeloExploradorGiros.ResultadoTelemercadeoGiro_GIR" />
+    <AssociationSet Name="FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" Association="ModeloExploradorGiros.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR">
+      <End Role="ResultadoTelemercadeoGiro_GIR" EntitySet="ResultadoTelemercadeoGiro_GIR" />
+      <End Role="GestionGiroTelemercadeo_GIR" EntitySet="GestionGiroTelemercadeo_GIR" />
+    </AssociationSet>
+    <FunctionImport Name="paObtenerGiroExplorador_GIR" ReturnType="Collection(ModeloExploradorGiros.paObtenerGiroExplorador_GIR)">
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="IdGiro" Mode="In" Type="Int64" />
+      <Parameter Name="IdCentroSerOrigen" Mode="In" Type="Int64" />
+      <Parameter Name="IdCentroSerDestino" Mode="In" Type="Int64" />
+      <Parameter Name="FechaCreacionInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaCreacionFinal" Mode="In" Type="DateTime" />
+      <Parameter Name="IncluyeFiltroFecha" Mode="In" Type="Boolean" />
+      <Parameter Name="IdTipoIdentificacionRemitente" Mode="In" Type="String" />
+      <Parameter Name="IdRemitente" Mode="In" Type="String" />
+      <Parameter Name="IdTipoIdentificacionDestinatario" Mode="In" Type="String" />
+      <Parameter Name="IdDestinatario" Mode="In" Type="String" />
+      <Parameter Name="TotalRegistros" Mode="InOut" Type="Int64" />
+    </FunctionImport>
+    <EntitySet Name="AdmisionGiros_GIR" EntityType="ModeloExploradorGiros.AdmisionGiros_GIR" />
+    <AssociationSet Name="FK_GestionGiroTelemercadeo_GIR_AdmisionGiros_GIR" Association="ModeloExploradorGiros.FK_GestionGiroTelemercadeo_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="GestionGiroTelemercadeo_GIR" EntitySet="GestionGiroTelemercadeo_GIR" />
+    </AssociationSet>
+    <FunctionImport Name="paGenerarReporteUIAFGiros_GIR" ReturnType="Collection(ModeloExploradorGiros.paGenerarReporteUIAFGirosRS_GIR)">
+      <Parameter Name="FechaGeneracion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGiroInfoPago_GIR" ReturnType="Collection(ModeloExploradorGiros.paObtenerGiroInfoPago_GIR_Result)">
+      <Parameter Name="IdAdmisionGiro" Mode="In" Type="Int64" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="TipoGiro_GIR">
+    <Key>
+      <PropertyRef Name="TIG_IdTipoGiro" />
+    </Key>
+    <Property Type="String" Name="TIG_IdTipoGiro" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="TIG_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TIG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="TIG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="GIpaObtenerGiroAdicionales">
+    <Property Type="String" Name="IdServicioAdicional" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="DescripcionServicioAdicional" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="ValorAdicional" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="CAMPOADICIONAL" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="VALORCAMPOADICIONAL" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GIpaObtenerGiroImpuestos">
+    <Property Type="String" Name="DescripcionImpuesto" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="TarifaImpuesto" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ValorSobreBaseImpuesto" Nullable="false" Precision="16" Scale="4" />
+  </ComplexType>
+  <ComplexType Name="GIpaObtenerGiroPeatonPeaton">
+    <Property Type="Int64" Name="GPP_IdAdmisionGiro" Nullable="false" />
+    <Property Type="String" Name="GPP_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="GPP_TipoIdRemitente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="GPP_NombreRemitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_Apellido1Remitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_Apellido2Remitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_TelefonoRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="GPP_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="GPP_EmailRemitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_OcupacionRemitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="GPP_TipoIdDestinatario" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="GPP_NombreDestinatario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_Apellido1Destinatario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_Apellido2Destinatario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="GPP_DireccionDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="GPP_EmailDestinatario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_OcupacionDestinatario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPP_TipoIdentificacionReclamoGiro" Nullable="false" MaxLength="3" />
+    <Property Type="DateTime" Name="GPP_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="GPP_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="GIpaObtenerGiroPeatonConvenio">
+    <Property Type="Int64" Name="GPC_IdAdmisionGiro" Nullable="false" />
+    <Property Type="String" Name="GPC_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="GPC_TipoIdRemitente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="GPC_NombreRemitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPC_Apellido1Remitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPC_Apellido2Remitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPC_TelefonoRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="GPC_DireccionRemitente" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="GPC_EmailRemitente" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPC_OcupacionRemitente" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="GPC_IdConvenioDestinatario" Nullable="false" />
+    <Property Type="String" Name="GPC_NitConvenioDestinatario" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="GPC_RazonSocialConvenioDestinatario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GPC_TelefonoConvenioDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="GPC_DireccionConvenioDestinatario" Nullable="false" MaxLength="250" />
+    <Property Type="DateTime" Name="GPC_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="GPC_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="HistoricoEstadosGiro_GIR">
+    <Property Type="Int64" Name="ESG_IdEstadosGiro" Nullable="false" />
+    <Property Type="Int64" Name="ESG_IdAdmisionGiro" Nullable="false" />
+    <Property Type="String" Name="ESG_Estado" Nullable="false" MaxLength="3" />
+    <Property Type="DateTime" Name="ESG_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ESG_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="GestionGiroTelemercadeo_GIR">
+    <Key>
+      <PropertyRef Name="GTE_IdTelemercadeoGiro" />
+    </Key>
+    <Property Type="Int64" Name="GTE_IdTelemercadeoGiro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="GTE_IdAdmisionGiro" Nullable="false" />
+    <Property Type="Int64" Name="GTE_NumeroGiro" Nullable="false" />
+    <Property Type="Int16" Name="GTE_IdResultadoTelemercadeoGiro" Nullable="false" />
+    <Property Type="String" Name="GTE_TelefonoMarcado" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GTE_NuevoTelefono" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GTE_PersonaContesta" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="GTE_TipoCliente" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="GTE_Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="GTE_IdParentesco" Nullable="false" />
+    <Property Type="String" Name="GTE_DescripcionParentesco" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="GTE_EnviarEmailRemitente" Nullable="false" />
+    <Property Type="Boolean" Name="GTE_EnviarEmailDestinatario" Nullable="false" />
+    <Property Type="DateTime" Name="GTE_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="GTE_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ResultadoTelemercadeoGiro_GIR" Relationship="ModeloExploradorGiros.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" FromRole="GestionGiroTelemercadeo_GIR" ToRole="ResultadoTelemercadeoGiro_GIR" />
+    <NavigationProperty Name="AdmisionGiros_GIR" Relationship="ModeloExploradorGiros.FK_GestionGiroTelemercadeo_GIR_AdmisionGiros_GIR" FromRole="GestionGiroTelemercadeo_GIR" ToRole="AdmisionGiros_GIR" />
+  </EntityType>
+  <EntityType Name="ResultadoTelemercadeoGiro_GIR">
+    <Key>
+      <PropertyRef Name="RTG_IdResultadoTelemercadeoGiro" />
+    </Key>
+    <Property Type="Int16" Name="RTG_IdResultadoTelemercadeoGiro" Nullable="false" />
+    <Property Type="String" Name="RTG_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RTG_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="RTG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RTG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="GestionGiroTelemercadeo_GIR" Relationship="ModeloExploradorGiros.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" FromRole="ResultadoTelemercadeoGiro_GIR" ToRole="GestionGiroTelemercadeo_GIR" />
+  </EntityType>
+  <Association Name="FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR">
+    <End Type="ModeloExploradorGiros.ResultadoTelemercadeoGiro_GIR" Role="ResultadoTelemercadeoGiro_GIR" Multiplicity="1" />
+    <End Type="ModeloExploradorGiros.GestionGiroTelemercadeo_GIR" Role="GestionGiroTelemercadeo_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResultadoTelemercadeoGiro_GIR">
+        <PropertyRef Name="RTG_IdResultadoTelemercadeoGiro" />
+      </Principal>
+      <Dependent Role="GestionGiroTelemercadeo_GIR">
+        <PropertyRef Name="GTE_IdResultadoTelemercadeoGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paObtenerGiroExplorador_GIR">
+    <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+    <Property Type="String" Name="UltimoEstadoGiro" Nullable="true" MaxLength="3" />
+    <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+    <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+    <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+    <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="ADG_CreadoPor" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="AdmisionGiros_GIR">
+    <Key>
+      <PropertyRef Name="ADG_IdAdmisionGiro" />
+    </Key>
+    <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ADG_PrefijoIdGiro" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+    <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+    <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" />
+    <Property Type="String" Name="ADG_Observaciones" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ADG_Transmitido" Nullable="false" />
+    <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ADG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ADG_NotificarPagoPorEmail" />
+    <Property Type="Boolean" Name="ADG_EstaPagado" Nullable="false" />
+    <Property Type="String" Name="ADG_TelefonoRemitente" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_TelefonoDestinatario" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_DireccionRemitente" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_DireccionDestinatario" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_EmailRemitente" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADG_EmailDestinatario" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ADG_TieneTelemercadeo" Nullable="false" />
+    <Property Type="Int64" Name="ADG_IdEstadosGiro" Nullable="false" />
+    <Property Type="Boolean" Name="ADG_EsProduccion" Nullable="false" />
+    <NavigationProperty Name="GestionGiroTelemercadeo_GIR" Relationship="ModeloExploradorGiros.FK_GestionGiroTelemercadeo_GIR_AdmisionGiros_GIR" FromRole="AdmisionGiros_GIR" ToRole="GestionGiroTelemercadeo_GIR" />
+    <Property Type="String" Name="ADG_ObservacionesSolicitudes" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_GestionGiroTelemercadeo_GIR_AdmisionGiros_GIR">
+    <End Type="ModeloExploradorGiros.AdmisionGiros_GIR" Role="AdmisionGiros_GIR" Multiplicity="1" />
+    <End Type="ModeloExploradorGiros.GestionGiroTelemercadeo_GIR" Role="GestionGiroTelemercadeo_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="GestionGiroTelemercadeo_GIR">
+        <PropertyRef Name="GTE_IdAdmisionGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paGenerarReporteUIAFGirosRS_GIR">
+    <Property Type="String" Name="info" Nullable="true" MaxLength="678" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGiroInfoPago_GIR_Result">
+    <Property Type="Int64" Name="PAG_IdComprobantePago" Nullable="false" />
+    <Property Type="Boolean" Name="PAG_PagoAutorizadoPeaton" Nullable="false" />
+    <Property Type="Boolean" Name="PAG_PagoAutorizadoEmpresarial" Nullable="false" />
+    <Property Type="Boolean" Name="PAG_PagoAutomatico" Nullable="false" />
+    <Property Type="Int64" Name="PAG_IdCentroServiciosPagador" Nullable="false" />
+    <Property Type="String" Name="PAG_NombreCentroServicios" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="PAG_ValorPagado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="PAG_IdCobrador" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="PAG_TipoIdCobrador" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="PAG_NombreCobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_Apellido1Cobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_Apellido2Cobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_TelefonoCobrador" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="PAG_DireccionCobrador" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="PAG_EmailCobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_OcupacionCobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_Observaciones" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="PAG_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="PAG_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="Int64" Name="PAG_IdAdmisionGiro" Nullable="false" />
+    <Property Type="String" Name="LOC_IdLocalidad" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="LOC_Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="LOC_CodigoPostal" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="LOC_NombreSegundo" Nullable="true" MaxLength="100" />
+  </ComplexType>
+</Schema>

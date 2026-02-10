@@ -1,0 +1,1261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloRutasNS" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ModeloRutas" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FrecuenciaRuta_RUT" EntityType="ModeloRutasNS.FrecuenciaRuta_RUT" />
+    <EntitySet Name="EstacionRutaHist_RUT" EntityType="ModeloRutasNS.EstacionRutaHist_RUT" />
+    <EntitySet Name="LocalidadAdicionEnRutaHist_RUT" EntityType="ModeloRutasNS.LocalidadAdicionEnRutaHist_RUT" />
+    <EntitySet Name="CoberturaEstacionRuta_RUT" EntityType="ModeloRutasNS.CoberturaEstacionRuta_RUT" />
+    <EntitySet Name="CoberturaEstacionRutaHist_RUT" EntityType="ModeloRutasNS.CoberturaEstacionRutaHist_RUT" />
+    <EntitySet Name="EstacionRuta_RUT" EntityType="ModeloRutasNS.EstacionRuta_RUT" />
+    <EntitySet Name="FrecuenciaParadaEstaciHist_RUT" EntityType="ModeloRutasNS.FrecuenciaParadaEstaciHist_RUT" />
+    <EntitySet Name="FrecuenciaParadaEstacion_RUT" EntityType="ModeloRutasNS.FrecuenciaParadaEstacion_RUT" />
+    <EntitySet Name="FrecuenciaRutaHist_RUT" EntityType="ModeloRutasNS.FrecuenciaRutaHist_RUT" />
+    <AssociationSet Name="FK_CoberturaEstacionRuta_RUT_EstacionRuta_RUT" Association="ModeloRutasNS.FK_CoberturaEstacionRuta_RUT_EstacionRuta_RUT">
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+      <End Role="CoberturaEstacionRuta_RUT" EntitySet="CoberturaEstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FrecuenciaParadaEstacion_RUT_EstacionRuta_RUT" Association="ModeloRutasNS.FK_FrecuenciaParadaEstacion_RUT_EstacionRuta_RUT">
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+      <End Role="FrecuenciaParadaEstacion_RUT" EntitySet="FrecuenciaParadaEstacion_RUT" />
+    </AssociationSet>
+    <EntitySet Name="CoberturaEstaciones_VRUT" EntityType="ModeloRutasNS.CoberturaEstaciones_VRUT" />
+    <EntitySet Name="FrecuenciaEstaciones_VRUT" EntityType="ModeloRutasNS.FrecuenciaEstaciones_VRUT" />
+    <EntitySet Name="CoberturaManifieEnRutaHist_RUT" EntityType="ModeloRutasNS.CoberturaManifieEnRutaHist_RUT" />
+    <EntitySet Name="CoberturaManifiestaEnRuta_RUT" EntityType="ModeloRutasNS.CoberturaManifiestaEnRuta_RUT" />
+    <EntitySet Name="TipoVehiculo_CPO" EntityType="ModeloRutasNS.TipoVehiculo_CPO" />
+    <EntitySet Name="Localidad_PAR" EntityType="ModeloRutasNS.Localidad_PAR" />
+    <AssociationSet Name="FK_CoberturaEstacionRuta_RUT_Localidad_PAR" Association="ModeloRutasNS.FK_CoberturaEstacionRuta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="CoberturaEstacionRuta_RUT" EntitySet="CoberturaEstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstacionRuta_RUT_Localidad_PAR" Association="ModeloRutasNS.FK_EstacionRuta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR2">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <EntitySet Name="TipoRuta_RUT" EntityType="ModeloRutasNS.TipoRuta_RUT" />
+    <EntitySet Name="EmpresaTransMedioTransHist_RUT" EntityType="ModeloRutasNS.EmpresaTransMedioTransHist_RUT" />
+    <EntitySet Name="EmpresaTransporMedioTransp_RUT" EntityType="ModeloRutasNS.EmpresaTransporMedioTransp_RUT" />
+    <EntitySet Name="EmpresaTransportadoraHist_RUT" EntityType="ModeloRutasNS.EmpresaTransportadoraHist_RUT" />
+    <EntitySet Name="RutaEmpresaTransportadora_RUT" EntityType="ModeloRutasNS.RutaEmpresaTransportadora_RUT" />
+    <EntitySet Name="RutaHist_RUT" EntityType="ModeloRutasNS.RutaHist_RUT" />
+    <EntitySet Name="TipoTransporte_RUT" EntityType="ModeloRutasNS.TipoTransporte_RUT" />
+    <EntitySet Name="MedioTransporte_PAR" EntityType="ModeloRutasNS.MedioTransporte_PAR" />
+    <AssociationSet Name="FK_EmpresaTransporMedioTransp_RUT_MedioTransporte_PAR" Association="ModeloRutasNS.FK_EmpresaTransporMedioTransp_RUT_MedioTransporte_PAR">
+      <End Role="MedioTransporte_PAR" EntitySet="MedioTransporte_PAR" />
+      <End Role="EmpresaTransporMedioTransp_RUT" EntitySet="EmpresaTransporMedioTransp_RUT" />
+    </AssociationSet>
+    <EntitySet Name="MedioTransEmpresaTrans_VRUT" EntityType="ModeloRutasNS.MedioTransEmpresaTrans_VRUT" />
+    <EntitySet Name="RutaEmpresaTrans_VRUT" EntityType="ModeloRutasNS.RutaEmpresaTrans_VRUT" />
+    <EntitySet Name="EmpresaTransportadora_RUT" EntityType="ModeloRutasNS.EmpresaTransportadora_RUT" />
+    <AssociationSet Name="FK_EmpresaTransporMedioTransp_RUT_EmpresaTransportadora_RUT" Association="ModeloRutasNS.FK_EmpresaTransporMedioTransp_RUT_EmpresaTransportadora_RUT">
+      <End Role="EmpresaTransportadora_RUT" EntitySet="EmpresaTransportadora_RUT" />
+      <End Role="EmpresaTransporMedioTransp_RUT" EntitySet="EmpresaTransporMedioTransp_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpresaTransportadora_RUT_TipoTransporte_RUT" Association="ModeloRutasNS.FK_EmpresaTransportadora_RUT_TipoTransporte_RUT">
+      <End Role="TipoTransporte_RUT" EntitySet="TipoTransporte_RUT" />
+      <End Role="EmpresaTransportadora_RUT" EntitySet="EmpresaTransportadora_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RutaEmpresaTransportadora_RUT_EmpresaTransportadora_RUT" Association="ModeloRutasNS.FK_RutaEmpresaTransportadora_RUT_EmpresaTransportadora_RUT">
+      <End Role="EmpresaTransportadora_RUT" EntitySet="EmpresaTransportadora_RUT" />
+      <End Role="RutaEmpresaTransportadora_RUT" EntitySet="RutaEmpresaTransportadora_RUT" />
+    </AssociationSet>
+    <EntitySet Name="EstacionesYCiudAdiciRuta_VRUT" EntityType="ModeloRutasNS.EstacionesYCiudAdiciRuta_VRUT" />
+    <EntitySet Name="LocalidadAdicionalEnRuta_RUT" EntityType="ModeloRutasNS.LocalidadAdicionalEnRuta_RUT" />
+    <AssociationSet Name="FK_CoberturaManifiestaEnRuta_RUT_Localidad_PAR" Association="ModeloRutasNS.FK_CoberturaManifiestaEnRuta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="CoberturaManifiestaEnRuta_RUT" EntitySet="CoberturaManifiestaEnRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CoberturaManifiestaEnRuta_RUT_LocalidadManifiestaEnRuta_RUT" Association="ModeloRutasNS.FK_CoberturaManifiestaEnRuta_RUT_LocalidadManifiestaEnRuta_RUT">
+      <End Role="LocalidadAdicionalEnRuta_RUT" EntitySet="LocalidadAdicionalEnRuta_RUT" />
+      <End Role="CoberturaManifiestaEnRuta_RUT" EntitySet="CoberturaManifiestaEnRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocalidadRedespachoRuta_RUT_Localidad_PAR" Association="ModeloRutasNS.FK_LocalidadRedespachoRuta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="LocalidadAdicionalEnRuta_RUT" EntitySet="LocalidadAdicionalEnRuta_RUT" />
+    </AssociationSet>
+    <EntitySet Name="RutasEstacionRuta_VRUT" EntityType="ModeloRutasNS.RutasEstacionRuta_VRUT" />
+    <EntitySet Name="CiudadesRutas_VRUT" EntityType="ModeloRutasNS.CiudadesRutas_VRUT" />
+    <FunctionImport Name="paObtenerRutasEstacionRuta_RUT" ReturnType="Collection(ModeloRutasNS.paObtenerRutasEstacionRuta_RUTRS)">
+      <Parameter Name="IdLocalidadEstacion" Mode="In" Type="String" />
+      <Parameter Name="IdDia" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ParametrosRutas_RUT" EntityType="ModeloRutasNS.ParametrosRutas_RUT" />
+    <FunctionImport Name="paObtenerRutasEstacionRutaOriDest_RUT" ReturnType="Collection(ModeloRutasNS.paObtenerRutasEstacionRutaOriDest_RUT_RS)">
+      <Parameter Name="IdLocalidadEstacion" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Ruta_RUT" EntityType="ModeloRutasNS.Ruta_RUT" />
+    <EntitySet Name="Rutas_VRUT" EntityType="ModeloRutasNS.Rutas_VRUT" />
+    <AssociationSet Name="FK_EstacionRuta_RUT_Ruta_RUT" Association="ModeloRutasNS.FK_EstacionRuta_RUT_Ruta_RUT">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstacionRuta_RUT_Ruta_RUT1" Association="ModeloRutasNS.FK_EstacionRuta_RUT_Ruta_RUT1">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="EstacionRuta_RUT" EntitySet="EstacionRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FrecuenciaRuta_RUT_Ruta_RUT" Association="ModeloRutasNS.FK_FrecuenciaRuta_RUT_Ruta_RUT">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="FrecuenciaRuta_RUT" EntitySet="FrecuenciaRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_Localidad_PAR" Association="ModeloRutasNS.FK_Ruta_RUT_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_Localidad_PAR1" Association="ModeloRutasNS.FK_Ruta_RUT_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LocalidadRedespachoRuta_RUT_Ruta_RUT" Association="ModeloRutasNS.FK_LocalidadRedespachoRuta_RUT_Ruta_RUT">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="LocalidadAdicionalEnRuta_RUT" EntitySet="LocalidadAdicionalEnRuta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_MedioTransporte_PAR" Association="ModeloRutasNS.FK_Ruta_RUT_MedioTransporte_PAR">
+      <End Role="MedioTransporte_PAR" EntitySet="MedioTransporte_PAR" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_TipoRuta_RUT" Association="ModeloRutasNS.FK_Ruta_RUT_TipoRuta_RUT">
+      <End Role="TipoRuta_RUT" EntitySet="TipoRuta_RUT" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ruta_RUT_TipoVehiculo_CPO" Association="ModeloRutasNS.FK_Ruta_RUT_TipoVehiculo_CPO">
+      <End Role="TipoVehiculo_CPO" EntitySet="TipoVehiculo_CPO" />
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RutaEmpresaTransportadora_RUT_Ruta_RUT" Association="ModeloRutasNS.FK_RutaEmpresaTransportadora_RUT_Ruta_RUT">
+      <End Role="Ruta_RUT" EntitySet="Ruta_RUT" />
+      <End Role="RutaEmpresaTransportadora_RUT" EntitySet="RutaEmpresaTransportadora_RUT" />
+    </AssociationSet>
+    <EntitySet Name="EmpresaTransRacol_RUT" EntityType="ModeloRutasNS.EmpresaTransRacol_RUT" />
+    <AssociationSet Name="FK_EmpresaTransRacol_RUT_EmpresaTransportadora_RUT" Association="ModeloRutasNS.FK_EmpresaTransRacol_RUT_EmpresaTransportadora_RUT">
+      <End Role="EmpresaTransportadora_RUT" EntitySet="EmpresaTransportadora_RUT" />
+      <End Role="EmpresaTransRacol_RUT" EntitySet="EmpresaTransRacol_RUT" />
+    </AssociationSet>
+    <EntitySet Name="EmpresasTransportadorasMedioTransporte_VRUT" EntityType="ModeloRutasNS.EmpresasTransportadorasMedioTransporte_VRUT" />
+    <EntitySet Name="EmpresasTransportadorasRacolAsociado_VRUT" EntityType="ModeloRutasNS.EmpresasTransportadorasRacolAsociado_VRUT" />
+    <EntitySet Name="RegionalAdministrativa_VCPO" EntityType="ModeloRutasNS.RegionalAdministrativa_VCPO" />
+    <FunctionImport Name="paObtenerRacolsAsignarAEmpresaTransp_CPO" ReturnType="Collection(ModeloRutasNS.ObtenerRacolsAsignarAEmpresaTransp_CPO)">
+      <Parameter Name="IdEmpresaTransportadora" Mode="In" Type="Int16" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="FrecuenciaRuta_RUT">
+    <Key>
+      <PropertyRef Name="FRR_IdFrecuenciaRuta" />
+    </Key>
+    <Property Name="FRR_IdFrecuenciaRuta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FRR_IdRuta" Type="Int32" Nullable="false" />
+    <Property Name="FRR_IdDia" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+    <Property Name="FRR_HoraSalida" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FRR_HoraLlegada" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FRR_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FRR_CreadoPor" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Ruta_RUT" Relationship="ModeloRutasNS.FK_FrecuenciaRuta_RUT_Ruta_RUT" FromRole="FrecuenciaRuta_RUT" ToRole="Ruta_RUT" />
+  </EntityType>
+  <EntityType Name="EstacionRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="ESR_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="ESR_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ESR_IdEstacionRuta" Nullable="false" />
+    <Property Type="Int32" Name="ESR_IdRuta" Nullable="false" />
+    <Property Type="String" Name="ESR_IdLocalidadEstacion" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESR_NombreLocalidadEstacion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ESR_OrdenEnRuta" Nullable="false" />
+    <Property Type="Int16" Name="ESR_OrdenEnCasillero" Nullable="false" />
+    <Property Type="Decimal" Name="ESR_TiempoParada" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ESR_TiempoDeViajeDesdeAnterior" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ESR_PermiteEnganche" Nullable="false" />
+    <Property Type="Boolean" Name="ESR_RequierePrecintoRetorno" Nullable="false" />
+    <Property Type="DateTime" Name="ESR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ESR_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ESR_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ESR_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESR_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LocalidadAdicionEnRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="LMR_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="LMR_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="LMR_IdLocalidadManifiestEnRuta" Nullable="false" />
+    <Property Type="Int32" Name="LMR_IdRuta" Nullable="false" />
+    <Property Type="String" Name="LMR_IdLocalidadManifiesta" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LMR_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LMR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="LMR_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="LMR_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LMR_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CoberturaEstacionRuta_RUT">
+    <Key>
+      <PropertyRef Name="CER_IdCoberturaEstacionRuta" />
+    </Key>
+    <Property Type="Int32" Name="CER_IdCoberturaEstacionRuta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CER_IdEstacionRuta" Nullable="false" />
+    <Property Type="String" Name="CER_IdLocalidadCubierta" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CER_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CER_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EstacionRuta_RUT" Relationship="ModeloRutasNS.FK_CoberturaEstacionRuta_RUT_EstacionRuta_RUT" FromRole="CoberturaEstacionRuta_RUT" ToRole="EstacionRuta_RUT" />
+    <Property Type="String" Name="CER_NombreLocalidadEstacion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Localidad_PAR" Relationship="ModeloRutasNS.FK_CoberturaEstacionRuta_RUT_Localidad_PAR" FromRole="CoberturaEstacionRuta_RUT" ToRole="Localidad_PAR" />
+  </EntityType>
+  <EntityType Name="CoberturaEstacionRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="CER_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="CER_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CER_IdCoberturaEstacionRuta" Nullable="false" />
+    <Property Type="Int32" Name="CER_IdEstacionRuta" Nullable="false" />
+    <Property Type="String" Name="CER_IdLocalidadCubierta" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CER_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CER_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CER_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CER_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CER_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EstacionRuta_RUT">
+    <Key>
+      <PropertyRef Name="ESR_IdEstacionRuta" />
+    </Key>
+    <Property Type="Int32" Name="ESR_IdEstacionRuta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ESR_IdRuta" Nullable="false" />
+    <Property Type="String" Name="ESR_IdLocalidadEstacion" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESR_NombreLocalidadEstacion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ESR_OrdenEnRuta" Nullable="false" />
+    <Property Type="Int16" Name="ESR_OrdenEnCasillero" Nullable="false" />
+    <Property Type="Decimal" Name="ESR_TiempoParada" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ESR_TiempoDeViajeDesdeAnterior" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ESR_PermiteEnganche" Nullable="false" />
+    <Property Type="Boolean" Name="ESR_RequierePrecintoRetorno" Nullable="false" />
+    <Property Type="DateTime" Name="ESR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ESR_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CoberturaEstacionRuta_RUT" Relationship="ModeloRutasNS.FK_CoberturaEstacionRuta_RUT_EstacionRuta_RUT" FromRole="EstacionRuta_RUT" ToRole="CoberturaEstacionRuta_RUT" />
+    <NavigationProperty Name="FrecuenciaParadaEstacion_RUT" Relationship="ModeloRutasNS.FK_FrecuenciaParadaEstacion_RUT_EstacionRuta_RUT" FromRole="EstacionRuta_RUT" ToRole="FrecuenciaParadaEstacion_RUT" />
+    <NavigationProperty Name="Localidad_PAR" Relationship="ModeloRutasNS.FK_EstacionRuta_RUT_Localidad_PAR" FromRole="EstacionRuta_RUT" ToRole="Localidad_PAR" />
+    <NavigationProperty Name="Ruta_RUT" Relationship="ModeloRutasNS.FK_EstacionRuta_RUT_Ruta_RUT" FromRole="EstacionRuta_RUT" ToRole="Ruta_RUT" />
+    <NavigationProperty Name="Ruta_RUT1" Relationship="ModeloRutasNS.FK_EstacionRuta_RUT_Ruta_RUT1" FromRole="EstacionRuta_RUT" ToRole="Ruta_RUT" />
+  </EntityType>
+  <EntityType Name="FrecuenciaParadaEstaciHist_RUT">
+    <Key>
+      <PropertyRef Name="FRE_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="FRE_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="FRE_IdFrecuenciaParadaEstacion" Nullable="false" />
+    <Property Type="Int32" Name="FRE_IdEstacionRuta" Nullable="false" />
+    <Property Type="String" Name="FRE_IdDia" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="FRE_HoraLlegada" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="FRE_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="FRE_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FRR_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="FRR_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FRR_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FrecuenciaParadaEstacion_RUT">
+    <Key>
+      <PropertyRef Name="FRE_IdFrecuenciaParadaEstacion" />
+    </Key>
+    <Property Type="Int32" Name="FRE_IdFrecuenciaParadaEstacion" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="FRE_IdEstacionRuta" Nullable="false" />
+    <Property Type="String" Name="FRE_IdDia" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="FRE_HoraLlegada" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="FRE_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="FRE_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EstacionRuta_RUT" Relationship="ModeloRutasNS.FK_FrecuenciaParadaEstacion_RUT_EstacionRuta_RUT" FromRole="FrecuenciaParadaEstacion_RUT" ToRole="EstacionRuta_RUT" />
+  </EntityType>
+  <EntityType Name="FrecuenciaRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="FRR_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="FRR_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="FRR_IdFrecuenciaRuta" Nullable="false" />
+    <Property Type="Int32" Name="FRR_IdRuta" Nullable="false" />
+    <Property Type="String" Name="FRR_IdDia" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="FRR_HoraSalida" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="FRR_HoraLlegada" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="FRR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="FRR_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FRR_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="FRR_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FRR_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_CoberturaEstacionRuta_RUT_EstacionRuta_RUT">
+    <End Type="ModeloRutasNS.EstacionRuta_RUT" Role="EstacionRuta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.CoberturaEstacionRuta_RUT" Role="CoberturaEstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdEstacionRuta" />
+      </Principal>
+      <Dependent Role="CoberturaEstacionRuta_RUT">
+        <PropertyRef Name="CER_IdEstacionRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FrecuenciaParadaEstacion_RUT_EstacionRuta_RUT">
+    <End Type="ModeloRutasNS.EstacionRuta_RUT" Role="EstacionRuta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.FrecuenciaParadaEstacion_RUT" Role="FrecuenciaParadaEstacion_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdEstacionRuta" />
+      </Principal>
+      <Dependent Role="FrecuenciaParadaEstacion_RUT">
+        <PropertyRef Name="FRE_IdEstacionRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CoberturaEstaciones_VRUT">
+    <Key>
+      <PropertyRef Name="ESR_IdEstacionRuta" />
+      <PropertyRef Name="ESR_IdLocalidadEstacion" />
+      <PropertyRef Name="ESR_IdRuta" />
+      <PropertyRef Name="CER_IdCoberturaEstacionRuta" />
+      <PropertyRef Name="CER_IdEstacionRuta" />
+      <PropertyRef Name="CER_IdLocalidadCubierta" />
+      <PropertyRef Name="CER_NombreLocalidadEstacion" />
+    </Key>
+    <Property Type="Int32" Name="ESR_IdEstacionRuta" Nullable="false" />
+    <Property Type="String" Name="ESR_IdLocalidadEstacion" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ESR_IdRuta" Nullable="false" />
+    <Property Type="Int32" Name="CER_IdCoberturaEstacionRuta" Nullable="false" />
+    <Property Type="Int32" Name="CER_IdEstacionRuta" Nullable="false" />
+    <Property Type="String" Name="CER_IdLocalidadCubierta" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CER_NombreLocalidadEstacion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FrecuenciaEstaciones_VRUT">
+    <Key>
+      <PropertyRef Name="FRE_IdFrecuenciaParadaEstacion" />
+      <PropertyRef Name="FRE_IdEstacionRuta" />
+      <PropertyRef Name="FRE_IdDia" />
+      <PropertyRef Name="FRE_HoraLlegada" />
+      <PropertyRef Name="ESR_IdEstacionRuta" />
+      <PropertyRef Name="ESR_IdRuta" />
+      <PropertyRef Name="ESR_IdLocalidadEstacion" />
+    </Key>
+    <Property Type="Int32" Name="FRE_IdFrecuenciaParadaEstacion" Nullable="false" />
+    <Property Type="Int32" Name="FRE_IdEstacionRuta" Nullable="false" />
+    <Property Type="String" Name="FRE_IdDia" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="FRE_HoraLlegada" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="ESR_IdEstacionRuta" Nullable="false" />
+    <Property Type="Int32" Name="ESR_IdRuta" Nullable="false" />
+    <Property Type="String" Name="ESR_IdLocalidadEstacion" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CoberturaManifieEnRutaHist_RUT">
+    <Key>
+      <PropertyRef Name="CMR_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="CMR_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CMR_IdCoberturaManifiestaEnRut" Nullable="false" />
+    <Property Type="Int32" Name="CMR_IdLocalidadManifiestEnRuta" Nullable="false" />
+    <Property Type="String" Name="CMR_IdLocalidadCubierta" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CMR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CMR_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CMR_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CMR_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CMr_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CoberturaManifiestaEnRuta_RUT">
+    <Key>
+      <PropertyRef Name="CMR_IdCoberturaManifiestaEnRut" />
+    </Key>
+    <Property Type="Int32" Name="CMR_IdCoberturaManifiestaEnRut" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="CMR_IdLocalidadManifiestEnRuta" Nullable="false" />
+    <Property Type="String" Name="CMR_IdLocalidadCubierta" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CMR_NombreLocalidadCubierta" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CMR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="CMR_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Localidad_PAR" Relationship="ModeloRutasNS.FK_CoberturaManifiestaEnRuta_RUT_Localidad_PAR" FromRole="CoberturaManifiestaEnRuta_RUT" ToRole="Localidad_PAR" />
+    <NavigationProperty Name="LocalidadAdicionalEnRuta_RUT" Relationship="ModeloRutasNS.FK_CoberturaManifiestaEnRuta_RUT_LocalidadManifiestaEnRuta_RUT" FromRole="CoberturaManifiestaEnRuta_RUT" ToRole="LocalidadAdicionalEnRuta_RUT" />
+  </EntityType>
+  <EntityType Name="TipoVehiculo_CPO">
+    <Key>
+      <PropertyRef Name="TIV_IdTipoVehiculo" />
+    </Key>
+    <Property Type="Int16" Name="TIV_IdTipoVehiculo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TIV_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TIV_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="TIV_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ruta_RUT" Relationship="ModeloRutasNS.FK_Ruta_RUT_TipoVehiculo_CPO" FromRole="TipoVehiculo_CPO" ToRole="Ruta_RUT" />
+  </EntityType>
+  <EntityType Name="Localidad_PAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+    </Key>
+    <Property Type="String" Name="LOC_IdLocalidad" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_IdTipo" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_IdAncestroPrimerGrado" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_IdAncestroSegundoGrado" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_IdAncestroTercerGrado" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_NombreCorto" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LOC_CodigoPostal" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LOC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="LOC_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CoberturaEstacionRuta_RUT" Relationship="ModeloRutasNS.FK_CoberturaEstacionRuta_RUT_Localidad_PAR" FromRole="Localidad_PAR" ToRole="CoberturaEstacionRuta_RUT" />
+    <NavigationProperty Name="EstacionRuta_RUT" Relationship="ModeloRutasNS.FK_EstacionRuta_RUT_Localidad_PAR" FromRole="Localidad_PAR" ToRole="EstacionRuta_RUT" />
+    <NavigationProperty Name="Localidad_PAR1" Relationship="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR" FromRole="Localidad_PAR" ToRole="Localidad_PAR1" />
+    <NavigationProperty Name="Localidad_PAR2" Relationship="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR" FromRole="Localidad_PAR1" ToRole="Localidad_PAR" />
+    <NavigationProperty Name="Localidad_PAR11" Relationship="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR1" FromRole="Localidad_PAR" ToRole="Localidad_PAR1" />
+    <NavigationProperty Name="Localidad_PAR3" Relationship="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR1" FromRole="Localidad_PAR1" ToRole="Localidad_PAR" />
+    <NavigationProperty Name="Localidad_PAR12" Relationship="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR2" FromRole="Localidad_PAR" ToRole="Localidad_PAR1" />
+    <NavigationProperty Name="Localidad_PAR4" Relationship="ModeloRutasNS.FK_Localidad_PAR_Localidad_PAR2" FromRole="Localidad_PAR1" ToRole="Localidad_PAR" />
+    <NavigationProperty Name="CoberturaManifiestaEnRuta_RUT" Relationship="ModeloRutasNS.FK_CoberturaManifiestaEnRuta_RUT_Localidad_PAR" FromRole="Localidad_PAR" ToRole="CoberturaManifiestaEnRuta_RUT" />
+    <NavigationProperty Name="LocalidadAdicionalEnRuta_RUT" Relationship="ModeloRutasNS.FK_LocalidadRedespachoRuta_RUT_Localidad_PAR" FromRole="Localidad_PAR" ToRole="LocalidadAdicionalEnRuta_RUT" />
+    <NavigationProperty Name="Ruta_RUT" Relationship="ModeloRutasNS.FK_Ruta_RUT_Localidad_PAR" FromRole="Localidad_PAR" ToRole="Ruta_RUT" />
+    <NavigationProperty Name="Ruta_RUT1" Relationship="ModeloRutasNS.FK_Ruta_RUT_Localidad_PAR1" FromRole="Localidad_PAR" ToRole="Ruta_RUT" />
+    <Property Name="anchor" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LOC_DHLActivo" Type="Boolean" Nullable="false" />
+    <Property Name="LOC_AplicaDireccionEstandar" Type="Boolean" Nullable="false" />
+    <Property Name="LOC_Indicativo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="LOC_RadioRecogida" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CoberturaEstacionRuta_RUT_Localidad_PAR">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="1" />
+    <End Type="ModeloRutasNS.CoberturaEstacionRuta_RUT" Role="CoberturaEstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="CoberturaEstacionRuta_RUT">
+        <PropertyRef Name="CER_IdLocalidadCubierta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstacionRuta_RUT_Localidad_PAR">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="1" />
+    <End Type="ModeloRutasNS.EstacionRuta_RUT" Role="EstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdLocalidadEstacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="0..1" />
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="0..1" />
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="0..1" />
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TipoRuta_RUT">
+    <Key>
+      <PropertyRef Name="TRU_IdTipoRuta" />
+    </Key>
+    <Property Type="Int16" Name="TRU_IdTipoRuta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TRU_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TRU_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="TRU_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ruta_RUT" Relationship="ModeloRutasNS.FK_Ruta_RUT_TipoRuta_RUT" FromRole="TipoRuta_RUT" ToRole="Ruta_RUT" />
+  </EntityType>
+  <EntityType Name="EmpresaTransMedioTransHist_RUT">
+    <Key>
+      <PropertyRef Name="ETM_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="ETM_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int16" Name="ETM_IdMedioTranEmpresa" Nullable="false" />
+    <Property Type="Int16" Name="ETM_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="Int16" Name="ETM_IdMedioTransporte" Nullable="false" />
+    <Property Type="DateTime" Name="ETM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ETM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ETM_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ETM_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ETM_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EmpresaTransporMedioTransp_RUT">
+    <Key>
+      <PropertyRef Name="ETM_IdMedioTranEmpresa" />
+    </Key>
+    <Property Type="Int16" Name="ETM_IdMedioTranEmpresa" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int16" Name="ETM_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="Int16" Name="ETM_IdMedioTransporte" Nullable="false" />
+    <Property Type="DateTime" Name="ETM_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ETM_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MedioTransporte_PAR" Relationship="ModeloRutasNS.FK_EmpresaTransporMedioTransp_RUT_MedioTransporte_PAR" FromRole="EmpresaTransporMedioTransp_RUT" ToRole="MedioTransporte_PAR" />
+    <NavigationProperty Name="EmpresaTransportadora_RUT" Relationship="ModeloRutasNS.FK_EmpresaTransporMedioTransp_RUT_EmpresaTransportadora_RUT" FromRole="EmpresaTransporMedioTransp_RUT" ToRole="EmpresaTransportadora_RUT" />
+  </EntityType>
+  <EntityType Name="EmpresaTransportadoraHist_RUT">
+    <Key>
+      <PropertyRef Name="ERT_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="ERT_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int16" Name="ETR_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="String" Name="ETR_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ETR_IdTipoTransporte" />
+    <Property Type="DateTime" Name="ETR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ETR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ERT_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ERT_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ERT_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ERT_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RutaEmpresaTransportadora_RUT">
+    <Key>
+      <PropertyRef Name="RET_IdRuta" />
+      <PropertyRef Name="RET_IdEmpresaTransportadora" />
+    </Key>
+    <Property Type="Int32" Name="RET_IdRuta" Nullable="false" />
+    <Property Type="Int16" Name="RET_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="DateTime" Name="RET_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RET_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EmpresaTransportadora_RUT" Relationship="ModeloRutasNS.FK_RutaEmpresaTransportadora_RUT_EmpresaTransportadora_RUT" FromRole="RutaEmpresaTransportadora_RUT" ToRole="EmpresaTransportadora_RUT" />
+    <NavigationProperty Name="Ruta_RUT" Relationship="ModeloRutasNS.FK_RutaEmpresaTransportadora_RUT_Ruta_RUT" FromRole="RutaEmpresaTransportadora_RUT" ToRole="Ruta_RUT" />
+  </EntityType>
+  <EntityType Name="RutaHist_RUT">
+    <Key>
+      <PropertyRef Name="RUT_IdAuditoria" />
+    </Key>
+    <Property Type="Int64" Name="RUT_IdAuditoria" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="RUT_IdTipoRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="RUT_IdMedioTranEmpresa" Nullable="false" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Decimal" Name="RUT_CostoMensualTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="RUT_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RUT_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="RUT_FechaCambio" Nullable="false" Precision="3" />
+    <Property Type="String" Name="RUT_CambiadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_TipoCambio" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TipoTransporte_RUT">
+    <Key>
+      <PropertyRef Name="TIT_IdTipoTransporte" />
+    </Key>
+    <Property Type="Int16" Name="TIT_IdTipoTransporte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TIT_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TIT_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="TIT_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EmpresaTransportadora_RUT" Relationship="ModeloRutasNS.FK_EmpresaTransportadora_RUT_TipoTransporte_RUT" FromRole="TipoTransporte_RUT" ToRole="EmpresaTransportadora_RUT" />
+  </EntityType>
+  <EntityType Name="MedioTransporte_PAR">
+    <Key>
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+    </Key>
+    <Property Type="Int16" Name="MTR_IdMedioTransporte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="MTR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="MTR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EmpresaTransporMedioTransp_RUT" Relationship="ModeloRutasNS.FK_EmpresaTransporMedioTransp_RUT_MedioTransporte_PAR" FromRole="MedioTransporte_PAR" ToRole="EmpresaTransporMedioTransp_RUT" />
+    <NavigationProperty Name="Ruta_RUT" Relationship="ModeloRutasNS.FK_Ruta_RUT_MedioTransporte_PAR" FromRole="MedioTransporte_PAR" ToRole="Ruta_RUT" />
+  </EntityType>
+  <Association Name="FK_EmpresaTransporMedioTransp_RUT_MedioTransporte_PAR">
+    <End Type="ModeloRutasNS.MedioTransporte_PAR" Role="MedioTransporte_PAR" Multiplicity="1" />
+    <End Type="ModeloRutasNS.EmpresaTransporMedioTransp_RUT" Role="EmpresaTransporMedioTransp_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedioTransporte_PAR">
+        <PropertyRef Name="MTR_IdMedioTransporte" />
+      </Principal>
+      <Dependent Role="EmpresaTransporMedioTransp_RUT">
+        <PropertyRef Name="ETM_IdMedioTransporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="MedioTransEmpresaTrans_VRUT">
+    <Key>
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+      <PropertyRef Name="MTR_Descripcion" />
+      <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      <PropertyRef Name="ETR_Nombre" />
+      <PropertyRef Name="TIT_IdTipoTransporte" />
+      <PropertyRef Name="TIT_Descripcion" />
+      <PropertyRef Name="ETM_IdMedioTranEmpresa" />
+      <PropertyRef Name="ETM_IdEmpresaTransportadora" />
+      <PropertyRef Name="ETM_IdMedioTransporte" />
+    </Key>
+    <Property Type="Int16" Name="MTR_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ETR_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="String" Name="ETR_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ETR_IdTipoTransporte" />
+    <Property Type="Int16" Name="TIT_IdTipoTransporte" Nullable="false" />
+    <Property Type="String" Name="TIT_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ETM_IdMedioTranEmpresa" Nullable="false" />
+    <Property Type="Int16" Name="ETM_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="Int16" Name="ETM_IdMedioTransporte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RutaEmpresaTrans_VRUT">
+    <Key>
+      <PropertyRef Name="RUT_IdRuta" />
+      <PropertyRef Name="RUT_Nombre" />
+      <PropertyRef Name="RUT_IdTipoRuta" />
+      <PropertyRef Name="RUT_IdMedioTransporte" />
+      <PropertyRef Name="RUT_IdLocalidadOrigen" />
+      <PropertyRef Name="RUT_NombreLocalidadOrigen" />
+      <PropertyRef Name="RUT_IdLocalidadDestino" />
+      <PropertyRef Name="RUT_NombreLocalidadDestino" />
+      <PropertyRef Name="RUT_GeneraManifiestoMinisterio" />
+      <PropertyRef Name="RUT_CostoMensualTotal" />
+      <PropertyRef Name="RUT_IdTipoVehiculo" />
+      <PropertyRef Name="RUT_Estado" />
+      <PropertyRef Name="RET_IdRuta" />
+      <PropertyRef Name="RET_IdEmpresaTransportadora" />
+      <PropertyRef Name="TIT_IdTipoTransporte" />
+      <PropertyRef Name="TIT_Descripcion" />
+      <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      <PropertyRef Name="ETR_Nombre" />
+    </Key>
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="RUT_IdTipoRuta" Nullable="false" />
+    <Property Type="Int16" Name="RUT_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Decimal" Name="RUT_CostoMensualTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int16" Name="RUT_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="RUT_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="RET_IdRuta" Nullable="false" />
+    <Property Type="Int16" Name="RET_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="Int16" Name="TIT_IdTipoTransporte" Nullable="false" />
+    <Property Type="String" Name="TIT_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ETR_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="String" Name="ETR_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ETR_IdTipoTransporte" />
+  </EntityType>
+  <EntityType Name="EmpresaTransportadora_RUT">
+    <Key>
+      <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+    </Key>
+    <Property Type="Int16" Name="ETR_IdEmpresaTransportadora" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ETR_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ETR_IdTipoTransporte" Nullable="false" />
+    <Property Type="String" Name="ERT_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="DateTime" Name="ETR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ETR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EmpresaTransporMedioTransp_RUT" Relationship="ModeloRutasNS.FK_EmpresaTransporMedioTransp_RUT_EmpresaTransportadora_RUT" FromRole="EmpresaTransportadora_RUT" ToRole="EmpresaTransporMedioTransp_RUT" />
+    <NavigationProperty Name="TipoTransporte_RUT" Relationship="ModeloRutasNS.FK_EmpresaTransportadora_RUT_TipoTransporte_RUT" FromRole="EmpresaTransportadora_RUT" ToRole="TipoTransporte_RUT" />
+    <NavigationProperty Name="RutaEmpresaTransportadora_RUT" Relationship="ModeloRutasNS.FK_RutaEmpresaTransportadora_RUT_EmpresaTransportadora_RUT" FromRole="EmpresaTransportadora_RUT" ToRole="RutaEmpresaTransportadora_RUT" />
+    <NavigationProperty Name="EmpresaTransRacol_RUT" Relationship="ModeloRutasNS.FK_EmpresaTransRacol_RUT_EmpresaTransportadora_RUT" FromRole="EmpresaTransportadora_RUT" ToRole="EmpresaTransRacol_RUT" />
+  </EntityType>
+  <Association Name="FK_EmpresaTransporMedioTransp_RUT_EmpresaTransportadora_RUT">
+    <End Type="ModeloRutasNS.EmpresaTransportadora_RUT" Role="EmpresaTransportadora_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.EmpresaTransporMedioTransp_RUT" Role="EmpresaTransporMedioTransp_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaTransportadora_RUT">
+        <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      </Principal>
+      <Dependent Role="EmpresaTransporMedioTransp_RUT">
+        <PropertyRef Name="ETM_IdEmpresaTransportadora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpresaTransportadora_RUT_TipoTransporte_RUT">
+    <End Type="ModeloRutasNS.TipoTransporte_RUT" Role="TipoTransporte_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.EmpresaTransportadora_RUT" Role="EmpresaTransportadora_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTransporte_RUT">
+        <PropertyRef Name="TIT_IdTipoTransporte" />
+      </Principal>
+      <Dependent Role="EmpresaTransportadora_RUT">
+        <PropertyRef Name="ETR_IdTipoTransporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RutaEmpresaTransportadora_RUT_EmpresaTransportadora_RUT">
+    <End Type="ModeloRutasNS.EmpresaTransportadora_RUT" Role="EmpresaTransportadora_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.RutaEmpresaTransportadora_RUT" Role="RutaEmpresaTransportadora_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaTransportadora_RUT">
+        <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      </Principal>
+      <Dependent Role="RutaEmpresaTransportadora_RUT">
+        <PropertyRef Name="RET_IdEmpresaTransportadora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EstacionesYCiudAdiciRuta_VRUT">
+    <Key>
+      <PropertyRef Name="IdEstacion" />
+      <PropertyRef Name="IdRuta" />
+      <PropertyRef Name="IdCiudadEstacion" />
+      <PropertyRef Name="NombreEstacion" />
+      <PropertyRef Name="orden" />
+      <PropertyRef Name="RequierePrecintoRetorno" />
+      <PropertyRef Name="GeneraConsolidado" />
+      <PropertyRef Name="Tabla" />
+    </Key>
+    <Property Type="Int32" Name="IdEstacion" Nullable="false" />
+    <Property Type="Int32" Name="IdRuta" Nullable="false" />
+    <Property Type="String" Name="IdCiudadEstacion" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreEstacion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="orden" Nullable="false" />
+    <Property Type="Int32" Name="RequierePrecintoRetorno" Nullable="false" />
+    <Property Type="Int32" Name="GeneraConsolidado" Nullable="false" />
+    <Property Name="Tabla" Type="String" Nullable="false" MaxLength="28" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LocalidadAdicionalEnRuta_RUT">
+    <Key>
+      <PropertyRef Name="LMR_IdLocalidadManifiestEnRuta" />
+    </Key>
+    <Property Type="Int32" Name="LMR_IdLocalidadManifiestEnRuta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="LMR_IdRuta" Nullable="false" />
+    <Property Type="String" Name="LMR_IdLocalidadManifiesta" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LMR_NombreLocalidadManifiesta" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="LMR_GeneraConsolidado" Nullable="false" />
+    <Property Type="String" Name="LMR_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LMR_FechaGrabacion" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CoberturaManifiestaEnRuta_RUT" Relationship="ModeloRutasNS.FK_CoberturaManifiestaEnRuta_RUT_LocalidadManifiestaEnRuta_RUT" FromRole="LocalidadAdicionalEnRuta_RUT" ToRole="CoberturaManifiestaEnRuta_RUT" />
+    <NavigationProperty Name="Localidad_PAR" Relationship="ModeloRutasNS.FK_LocalidadRedespachoRuta_RUT_Localidad_PAR" FromRole="LocalidadAdicionalEnRuta_RUT" ToRole="Localidad_PAR" />
+    <NavigationProperty Name="Ruta_RUT" Relationship="ModeloRutasNS.FK_LocalidadRedespachoRuta_RUT_Ruta_RUT" FromRole="LocalidadAdicionalEnRuta_RUT" ToRole="Ruta_RUT" />
+  </EntityType>
+  <Association Name="FK_CoberturaManifiestaEnRuta_RUT_Localidad_PAR">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="1" />
+    <End Type="ModeloRutasNS.CoberturaManifiestaEnRuta_RUT" Role="CoberturaManifiestaEnRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="CoberturaManifiestaEnRuta_RUT">
+        <PropertyRef Name="CMR_IdLocalidadCubierta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CoberturaManifiestaEnRuta_RUT_LocalidadManifiestaEnRuta_RUT">
+    <End Type="ModeloRutasNS.LocalidadAdicionalEnRuta_RUT" Role="LocalidadAdicionalEnRuta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.CoberturaManifiestaEnRuta_RUT" Role="CoberturaManifiestaEnRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocalidadAdicionalEnRuta_RUT">
+        <PropertyRef Name="LMR_IdLocalidadManifiestEnRuta" />
+      </Principal>
+      <Dependent Role="CoberturaManifiestaEnRuta_RUT">
+        <PropertyRef Name="CMR_IdLocalidadManifiestEnRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocalidadRedespachoRuta_RUT_Localidad_PAR">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="1" />
+    <End Type="ModeloRutasNS.LocalidadAdicionalEnRuta_RUT" Role="LocalidadAdicionalEnRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="LocalidadAdicionalEnRuta_RUT">
+        <PropertyRef Name="LMR_IdLocalidadManifiesta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="RutasEstacionRuta_VRUT">
+    <Key>
+      <PropertyRef Name="RUT_IdRuta" />
+      <PropertyRef Name="RUT_Nombre" />
+      <PropertyRef Name="RUT_IdTipoRuta" />
+      <PropertyRef Name="RUT_IdMedioTransporte" />
+      <PropertyRef Name="RUT_IdLocalidadOrigen" />
+      <PropertyRef Name="RUT_NombreLocalidadOrigen" />
+      <PropertyRef Name="RUT_IdLocalidadDestino" />
+      <PropertyRef Name="RUT_NombreLocalidadDestino" />
+      <PropertyRef Name="RUT_GeneraManifiestoMinisterio" />
+      <PropertyRef Name="RUT_CostoMensualTotal" />
+      <PropertyRef Name="RUT_IdTipoVehiculo" />
+      <PropertyRef Name="RUT_Estado" />
+      <PropertyRef Name="ESR_IdEstacionRuta" />
+      <PropertyRef Name="ESR_IdLocalidadEstacion" />
+      <PropertyRef Name="ESR_NombreLocalidadEstacion" />
+      <PropertyRef Name="ESR_OrdenEnRuta" />
+      <PropertyRef Name="ESR_OrdenEnCasillero" />
+      <PropertyRef Name="ESR_TiempoParada" />
+      <PropertyRef Name="ESR_TiempoDeViajeDesdeAnterior" />
+      <PropertyRef Name="ESR_PermiteEnganche" />
+      <PropertyRef Name="ESR_RequierePrecintoRetorno" />
+      <PropertyRef Name="TRU_IdTipoRuta" />
+      <PropertyRef Name="TRU_Descripcion" />
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+      <PropertyRef Name="MTR_Descripcion" />
+      <PropertyRef Name="TIV_IdTipoVehiculo" />
+      <PropertyRef Name="TIV_Descripcion" />
+    </Key>
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="RUT_IdTipoRuta" Nullable="false" />
+    <Property Type="Int16" Name="RUT_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Decimal" Name="RUT_CostoMensualTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int16" Name="RUT_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="RUT_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="ESR_IdEstacionRuta" Nullable="false" />
+    <Property Type="String" Name="ESR_IdLocalidadEstacion" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESR_NombreLocalidadEstacion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="ESR_OrdenEnRuta" Nullable="false" />
+    <Property Type="Int16" Name="ESR_OrdenEnCasillero" Nullable="false" />
+    <Property Type="Decimal" Name="ESR_TiempoParada" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ESR_TiempoDeViajeDesdeAnterior" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ESR_PermiteEnganche" Nullable="false" />
+    <Property Type="Boolean" Name="ESR_RequierePrecintoRetorno" Nullable="false" />
+    <Property Type="Int16" Name="TRU_IdTipoRuta" Nullable="false" />
+    <Property Type="String" Name="TRU_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="MTR_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="TIV_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="TIV_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CiudadesRutas_VRUT">
+    <Key>
+      <PropertyRef Name="IdCiudadEstacion" />
+      <PropertyRef Name="IdRuta" />
+    </Key>
+    <Property Type="Int32" Name="IdCiudadEstacion" Nullable="false" />
+    <Property Type="String" Name="IdCiudadHija" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdRuta" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="paObtenerRutasEstacionRuta_RUT_Result">
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int16" Name="RUT_IdTipoRuta" Nullable="false" />
+    <Property Type="Int16" Name="RUT_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Decimal" Name="RUT_CostoMensualTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int16" Name="RUT_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="RUT_Estado" Nullable="false" MaxLength="3" />
+    <Property Type="Int32" Name="ESR_IdEstacionRuta" Nullable="true" />
+    <Property Type="String" Name="ESR_IdLocalidadEstacion" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="ESR_NombreLocalidadEstacion" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="ESR_OrdenEnRuta" Nullable="true" />
+    <Property Type="Int16" Name="ESR_OrdenEnCasillero" Nullable="true" />
+    <Property Type="Decimal" Name="ESR_TiempoParada" Nullable="true" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ESR_TiempoDeViajeDesdeAnterior" Nullable="true" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ESR_PermiteEnganche" Nullable="true" />
+    <Property Type="Boolean" Name="ESR_RequierePrecintoRetorno" Nullable="true" />
+    <Property Type="Int16" Name="TRU_IdTipoRuta" Nullable="false" />
+    <Property Type="String" Name="TRU_Descripcion" Nullable="false" MaxLength="25" />
+    <Property Type="Int16" Name="MTR_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" />
+    <Property Type="Int16" Name="TIV_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="TIV_Descripcion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="paObtenerRutasEstacionRuta_RUTRS">
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int16" Name="RUT_IdTipoRuta" Nullable="false" />
+    <Property Type="Int16" Name="RUT_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Decimal" Name="RUT_CostoMensualTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int16" Name="RUT_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="RUT_Estado" Nullable="false" MaxLength="3" />
+    <Property Type="Int32" Name="ESR_IdEstacionRuta" Nullable="true" />
+    <Property Type="String" Name="ESR_IdLocalidadEstacion" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="ESR_NombreLocalidadEstacion" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="ESR_OrdenEnRuta" Nullable="true" />
+    <Property Type="Int16" Name="ESR_OrdenEnCasillero" Nullable="true" />
+    <Property Type="Decimal" Name="ESR_TiempoParada" Nullable="true" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ESR_TiempoDeViajeDesdeAnterior" Nullable="true" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ESR_PermiteEnganche" Nullable="true" />
+    <Property Type="Boolean" Name="ESR_RequierePrecintoRetorno" Nullable="true" />
+    <Property Type="Int16" Name="TRU_IdTipoRuta" Nullable="false" />
+    <Property Type="String" Name="TRU_Descripcion" Nullable="false" MaxLength="25" />
+    <Property Type="Int16" Name="MTR_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" />
+    <Property Type="Int16" Name="TIV_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="TIV_Descripcion" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="RUT_RutaMasivos" Nullable="false" />
+    <Property Type="String" Name="FRR_IdDia" Nullable="false" MaxLength="3" />
+  </ComplexType>
+  <EntityType Name="ParametrosRutas_RUT">
+    <Key>
+      <PropertyRef Name="PRU_IdParametro" />
+    </Key>
+    <Property Type="String" Name="PRU_IdParametro" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRU_ValorParametro" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PRU_Descripcion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PRU_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="PRU_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="paObtenerRutasEstacionRutaOriDest_RUT_Result">
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int16" Name="RUT_IdTipoRuta" Nullable="false" />
+    <Property Type="Int16" Name="RUT_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Decimal" Name="RUT_CostoMensualTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int16" Name="RUT_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="RUT_Estado" Nullable="false" MaxLength="3" />
+    <Property Type="Int32" Name="ESR_IdEstacionRuta" Nullable="true" />
+    <Property Type="String" Name="ESR_IdLocalidadEstacion" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="ESR_NombreLocalidadEstacion" Nullable="true" MaxLength="100" />
+    <Property Type="Int16" Name="ESR_OrdenEnRuta" Nullable="true" />
+    <Property Type="Int16" Name="ESR_OrdenEnCasillero" Nullable="true" />
+    <Property Type="Decimal" Name="ESR_TiempoParada" Nullable="true" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ESR_TiempoDeViajeDesdeAnterior" Nullable="true" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ESR_PermiteEnganche" Nullable="true" />
+    <Property Type="Boolean" Name="ESR_RequierePrecintoRetorno" Nullable="true" />
+    <Property Type="Int16" Name="TRU_IdTipoRuta" Nullable="false" />
+    <Property Type="String" Name="TRU_Descripcion" Nullable="false" MaxLength="25" />
+    <Property Type="Int16" Name="MTR_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" />
+    <Property Type="Int16" Name="TIV_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="TIV_Descripcion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="paObtenerRutasEstacionRutaOriDest_RUT_RS">
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" />
+    <Property Type="Int16" Name="RUT_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Int16" Name="TRU_IdTipoRuta" Nullable="false" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" />
+  </ComplexType>
+  <EntityType Name="Ruta_RUT">
+    <Key>
+      <PropertyRef Name="RUT_IdRuta" />
+    </Key>
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="RUT_IdTipoRuta" Nullable="false" />
+    <Property Type="Int16" Name="RUT_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Decimal" Name="RUT_CostoMensualTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int16" Name="RUT_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="RUT_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="RUT_CreadoPor" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RUT_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="Boolean" Name="RUT_RutaMasivos" Nullable="false" />
+    <NavigationProperty Name="EstacionRuta_RUT" Relationship="ModeloRutasNS.FK_EstacionRuta_RUT_Ruta_RUT" FromRole="Ruta_RUT" ToRole="EstacionRuta_RUT" />
+    <NavigationProperty Name="EstacionRuta_RUT1" Relationship="ModeloRutasNS.FK_EstacionRuta_RUT_Ruta_RUT1" FromRole="Ruta_RUT" ToRole="EstacionRuta_RUT" />
+    <NavigationProperty Name="FrecuenciaRuta_RUT" Relationship="ModeloRutasNS.FK_FrecuenciaRuta_RUT_Ruta_RUT" FromRole="Ruta_RUT" ToRole="FrecuenciaRuta_RUT" />
+    <NavigationProperty Name="Localidad_PAR" Relationship="ModeloRutasNS.FK_Ruta_RUT_Localidad_PAR" FromRole="Ruta_RUT" ToRole="Localidad_PAR" />
+    <NavigationProperty Name="Localidad_PAR1" Relationship="ModeloRutasNS.FK_Ruta_RUT_Localidad_PAR1" FromRole="Ruta_RUT" ToRole="Localidad_PAR" />
+    <NavigationProperty Name="LocalidadAdicionalEnRuta_RUT" Relationship="ModeloRutasNS.FK_LocalidadRedespachoRuta_RUT_Ruta_RUT" FromRole="Ruta_RUT" ToRole="LocalidadAdicionalEnRuta_RUT" />
+    <NavigationProperty Name="MedioTransporte_PAR" Relationship="ModeloRutasNS.FK_Ruta_RUT_MedioTransporte_PAR" FromRole="Ruta_RUT" ToRole="MedioTransporte_PAR" />
+    <NavigationProperty Name="TipoRuta_RUT" Relationship="ModeloRutasNS.FK_Ruta_RUT_TipoRuta_RUT" FromRole="Ruta_RUT" ToRole="TipoRuta_RUT" />
+    <NavigationProperty Name="TipoVehiculo_CPO" Relationship="ModeloRutasNS.FK_Ruta_RUT_TipoVehiculo_CPO" FromRole="Ruta_RUT" ToRole="TipoVehiculo_CPO" />
+    <NavigationProperty Name="RutaEmpresaTransportadora_RUT" Relationship="ModeloRutasNS.FK_RutaEmpresaTransportadora_RUT_Ruta_RUT" FromRole="Ruta_RUT" ToRole="RutaEmpresaTransportadora_RUT" />
+  </EntityType>
+  <EntityType Name="Rutas_VRUT">
+    <Key>
+      <PropertyRef Name="RUT_IdRuta" />
+      <PropertyRef Name="RUT_Nombre" />
+      <PropertyRef Name="RUT_IdTipoRuta" />
+      <PropertyRef Name="RUT_IdMedioTransporte" />
+      <PropertyRef Name="RUT_IdLocalidadOrigen" />
+      <PropertyRef Name="RUT_NombreLocalidadOrigen" />
+      <PropertyRef Name="RUT_IdLocalidadDestino" />
+      <PropertyRef Name="RUT_NombreLocalidadDestino" />
+      <PropertyRef Name="RUT_GeneraManifiestoMinisterio" />
+      <PropertyRef Name="RUT_CostoMensualTotal" />
+      <PropertyRef Name="RUT_IdTipoVehiculo" />
+      <PropertyRef Name="RUT_Estado" />
+      <PropertyRef Name="TRU_IdTipoRuta" />
+      <PropertyRef Name="TRU_Descripcion" />
+      <PropertyRef Name="TIV_IdTipoVehiculo" />
+      <PropertyRef Name="TIV_Descripcion" />
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+      <PropertyRef Name="MTR_Descripcion" />
+      <PropertyRef Name="RUT_RutaMasivos" />
+    </Key>
+    <Property Type="Int32" Name="RUT_IdRuta" Nullable="false" />
+    <Property Type="String" Name="RUT_Nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="RUT_IdTipoRuta" Nullable="false" />
+    <Property Type="Int16" Name="RUT_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="RUT_IdLocalidadOrigen" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadOrigen" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_IdLocalidadDestino" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RUT_NombreLocalidadDestino" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="RUT_GeneraManifiestoMinisterio" Nullable="false" />
+    <Property Type="Decimal" Name="RUT_CostoMensualTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int16" Name="RUT_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="RUT_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int16" Name="TRU_IdTipoRuta" Nullable="false" />
+    <Property Type="String" Name="TRU_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="TIV_IdTipoVehiculo" Nullable="false" />
+    <Property Type="String" Name="TIV_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="MTR_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="RUT_RutaMasivos" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_EstacionRuta_RUT_Ruta_RUT">
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.EstacionRuta_RUT" Role="EstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstacionRuta_RUT_Ruta_RUT1">
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.EstacionRuta_RUT" Role="EstacionRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="EstacionRuta_RUT">
+        <PropertyRef Name="ESR_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FrecuenciaRuta_RUT_Ruta_RUT">
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.FrecuenciaRuta_RUT" Role="FrecuenciaRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="FrecuenciaRuta_RUT">
+        <PropertyRef Name="FRR_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_Localidad_PAR">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="1" />
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdLocalidadOrigen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_Localidad_PAR1">
+    <End Type="ModeloRutasNS.Localidad_PAR" Role="Localidad_PAR" Multiplicity="1" />
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdLocalidadDestino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LocalidadRedespachoRuta_RUT_Ruta_RUT">
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.LocalidadAdicionalEnRuta_RUT" Role="LocalidadAdicionalEnRuta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="LocalidadAdicionalEnRuta_RUT">
+        <PropertyRef Name="LMR_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_MedioTransporte_PAR">
+    <End Type="ModeloRutasNS.MedioTransporte_PAR" Role="MedioTransporte_PAR" Multiplicity="1" />
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedioTransporte_PAR">
+        <PropertyRef Name="MTR_IdMedioTransporte" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdMedioTransporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_TipoRuta_RUT">
+    <End Type="ModeloRutasNS.TipoRuta_RUT" Role="TipoRuta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoRuta_RUT">
+        <PropertyRef Name="TRU_IdTipoRuta" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdTipoRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ruta_RUT_TipoVehiculo_CPO">
+    <End Type="ModeloRutasNS.TipoVehiculo_CPO" Role="TipoVehiculo_CPO" Multiplicity="1" />
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoVehiculo_CPO">
+        <PropertyRef Name="TIV_IdTipoVehiculo" />
+      </Principal>
+      <Dependent Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdTipoVehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RutaEmpresaTransportadora_RUT_Ruta_RUT">
+    <End Type="ModeloRutasNS.Ruta_RUT" Role="Ruta_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.RutaEmpresaTransportadora_RUT" Role="RutaEmpresaTransportadora_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ruta_RUT">
+        <PropertyRef Name="RUT_IdRuta" />
+      </Principal>
+      <Dependent Role="RutaEmpresaTransportadora_RUT">
+        <PropertyRef Name="RET_IdRuta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EmpresaTransRacol_RUT">
+    <Key>
+      <PropertyRef Name="ETR_IdEmpresaTrans" />
+      <PropertyRef Name="ETR_IdRegionalAdm" />
+    </Key>
+    <Property Type="Int16" Name="ETR_IdEmpresaTrans" Nullable="false" />
+    <Property Type="Int64" Name="ETR_IdRegionalAdm" Nullable="false" />
+    <Property Type="DateTime" Name="ETR_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="ETR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="EmpresaTransportadora_RUT" Relationship="ModeloRutasNS.FK_EmpresaTransRacol_RUT_EmpresaTransportadora_RUT" FromRole="EmpresaTransRacol_RUT" ToRole="EmpresaTransportadora_RUT" />
+  </EntityType>
+  <Association Name="FK_EmpresaTransRacol_RUT_EmpresaTransportadora_RUT">
+    <End Type="ModeloRutasNS.EmpresaTransportadora_RUT" Role="EmpresaTransportadora_RUT" Multiplicity="1" />
+    <End Type="ModeloRutasNS.EmpresaTransRacol_RUT" Role="EmpresaTransRacol_RUT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaTransportadora_RUT">
+        <PropertyRef Name="ETR_IdEmpresaTransportadora" />
+      </Principal>
+      <Dependent Role="EmpresaTransRacol_RUT">
+        <PropertyRef Name="ETR_IdEmpresaTrans" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EmpresasTransportadorasMedioTransporte_VRUT">
+    <Key>
+      <PropertyRef Name="ETM_IdEmpresaTransportadora" />
+      <PropertyRef Name="MTR_IdMedioTransporte" />
+      <PropertyRef Name="MTR_Descripcion" />
+    </Key>
+    <Property Type="Int16" Name="ETM_IdEmpresaTransportadora" Nullable="false" />
+    <Property Type="Int16" Name="MTR_IdMedioTransporte" Nullable="false" />
+    <Property Type="String" Name="MTR_Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EmpresasTransportadorasRacolAsociado_VRUT">
+    <Key>
+      <PropertyRef Name="ETR_IdRegionalAdm" />
+      <PropertyRef Name="ETR_IdEmpresaTrans" />
+      <PropertyRef Name="REA_Descripcion" />
+    </Key>
+    <Property Type="Int64" Name="ETR_IdRegionalAdm" Nullable="false" />
+    <Property Type="Int16" Name="ETR_IdEmpresaTrans" Nullable="false" />
+    <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RegionalAdministrativa_VCPO">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="CES_IdCentroServicios" />
+      <PropertyRef Name="CES_Tipo" />
+      <PropertyRef Name="CES_DigitoVerificacion" />
+      <PropertyRef Name="CES_IdPropietario" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="CES_Barrio" />
+      <PropertyRef Name="CES_IdZona" />
+      <PropertyRef Name="CES_IdMunicipio" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CES_IdPersonaResponsable" />
+      <PropertyRef Name="CES_Email" />
+      <PropertyRef Name="CES_IdTipoPropiedad" />
+      <PropertyRef Name="CES_PesoMaximo" />
+      <PropertyRef Name="CES_VolumenMaximo" />
+      <PropertyRef Name="CES_AdmiteFormaPagoAlCobro" />
+      <PropertyRef Name="CES_VendePrepago" />
+      <PropertyRef Name="CES_ClasGirosPorIngresos" />
+      <PropertyRef Name="CES_PuedeRecibirGiros" />
+      <PropertyRef Name="CES_PuedePagarGiros" />
+      <PropertyRef Name="CES_TopeMaximoPorGiros" />
+      <PropertyRef Name="CES_BaseInicialCaja" />
+    </Key>
+    <Property Type="Int64" Name="REA_IdRegionalAdm" Nullable="false" />
+    <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="CES_IdCentroServicios" Nullable="false" />
+    <Property Type="String" Name="CES_Tipo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CES_DigitoVerificacion" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="CES_IdPropietario" Nullable="false" />
+    <Property Type="String" Name="CES_Nombre" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Telefono1" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Telefono2" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Fax" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Direccion" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Barrio" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_IdZona" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_IdMunicipio" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CES_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Int64" Name="CES_IdPersonaResponsable" Nullable="false" />
+    <Property Type="Decimal" Name="CES_Latitud" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="CES_Longitud" Precision="18" Scale="6" />
+    <Property Type="String" Name="CES_Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="CES_Sistematizada" Nullable="false" />
+    <Property Type="String" Name="CES_IdCentroCostos" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Type="Int16" Name="CES_IdTipoPropiedad" Nullable="false" />
+    <Property Type="Decimal" Name="CES_PesoMaximo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_VolumenMaximo" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="CES_AdmiteFormaPagoAlCobro" Nullable="false" />
+    <Property Type="Boolean" Name="CES_VendePrepago" Nullable="false" />
+    <Property Type="String" Name="CES_ClasGirosPorIngresos" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="CES_PuedeRecibirGiros" Nullable="false" />
+    <Property Type="Boolean" Name="CES_PuedePagarGiros" Nullable="false" />
+    <Property Type="Decimal" Name="CES_TopeMaximoPorGiros" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="CES_BaseInicialCaja" Nullable="false" Precision="16" Scale="4" />
+  </EntityType>
+  <ComplexType Name="ObtenerRacolsAsignarAEmpresaTransp_CPO">
+    <Property Type="Int64" Name="REA_IdRegionalAdm" Nullable="false" />
+    <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" />
+  </ComplexType>
+</Schema>

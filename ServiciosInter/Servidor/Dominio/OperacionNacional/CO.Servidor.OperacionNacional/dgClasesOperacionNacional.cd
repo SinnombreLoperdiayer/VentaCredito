@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.OperacionNacional.ONAdministradorEstadoGuia" Collapsed="true">
+    <Position X="4.25" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ONAdministradorEstadoGuia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionNacional.ONAdministradorOperacionNacional" Collapsed="true">
+    <Position X="1" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QRSMQEkBiEAEIgFAagBCCAQACCACAgAABTAIIAEUZGA=</HashCode>
+      <FileName>ONAdministradorOperacionNacional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionNacional.ONManejadorFallas" Collapsed="true">
+    <Position X="1.25" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>ONManejadorFallas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionNacional.ONManejadorIngresoManifiesto" Collapsed="true">
+    <Position X="1" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABQIQAAAACAAIABAAAIAAAAAAAAAAAAAAAAAAAAEJAA=</HashCode>
+      <FileName>ONManejadorIngresoManifiesto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionNacional.ONManejadorIngresoRuta" Collapsed="true">
+    <Position X="4.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEABCEAAAAAASAACCAAACAAAAgAABRAIAAAEAAA=</HashCode>
+      <FileName>ONManejadorIngresoRuta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionNacional.ONOperacionNacional" Collapsed="true">
+    <Position X="1.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QQSEACkAgAAEIAAAIAAAAAQACCASAgAAICAIIAEEAEE=</HashCode>
+      <FileName>ONOperacionNacional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionNacional.Datos.ONRepositorio" Collapsed="true">
+    <Position X="3" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.OperacionNacional.Comun.MensajesOperacionNacional" Collapsed="true">
+    <Position X="4" Y="5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CO.Servidor.OperacionNacional.Comun.OPConstantesOperacionNacional" Collapsed="true">
+    <Position X="6" Y="3.5" Width="2.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="CO.Servidor.OperacionNacional.Comun.EnumTipoErrorOperacionNacional" Collapsed="true">
+    <Position X="0.75" Y="5" Width="2.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

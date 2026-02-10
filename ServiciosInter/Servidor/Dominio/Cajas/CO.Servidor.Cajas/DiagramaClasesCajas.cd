@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.Cajas.CAAdministradorCajas" Collapsed="true">
+    <Position X="6" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DYQAAKEQFiSAGAgBBABAAAQICITyAEgAAAgBAQAECQA=</HashCode>
+      <FileName>CAAdministradorCajas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.CAFachadaCajas" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAgAAAAAgAAAAAgBABAAQAJQAAAAABAAAAAAA=</HashCode>
+      <FileName>CAFachadaCajas.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CO.Servidor.Cajas.CACaja" Collapsed="true">
+    <Position X="7.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYUAAOAQAgAQCAgBAABAgAABCADSISAgBEABAAAEAAA=</HashCode>
+      <FileName>CACaja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.CACierresAutomaticos" Collapsed="true">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>CACierresAutomaticos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.GestionCajas.GCAdministradorCajas" Collapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAFAAAAAUAAgAgAhAAAAACACGACAABAAAAAAEAAA=</HashCode>
+      <FileName>GestionCajas\GCAdministradorCajas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.Apertura.CAApertura" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IASAUABAAVAIAAABAAAAEAAAAAQABAEgAABAEAAGAAE=</HashCode>
+      <FileName>Apertura\CAApertura.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CajaBanco" />
+      <Property Name="CajaCasaMatriz" />
+      <Property Name="CajaOperacionNacional" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.Apertura.CARegistroTransaccion" Collapsed="true">
+    <Position X="6.75" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Apertura\CARegistroTransaccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.CajaFinanciera.CABanco" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>CajaFinanciera\CABanco.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.CajaFinanciera.CACajaCasaMatriz" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>CajaFinanciera\CACajaCasaMatriz.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.CajaFinanciera.CACajaOperacionNacional" Collapsed="true">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>CajaFinanciera\CACajaOperacionNacional.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.CACierreCaja.CACierreCaja" Collapsed="true">
+    <Position X="9.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAFASAAAAAAAAAAAQAAAAAAEAAAAAAAAAEAAA=</HashCode>
+      <FileName>CACierreCaja\CACierreCaja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.CACierreCaja.CACierreCajaGestion" Collapsed="true">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAADAAgAAAAAAAAAQAg=</HashCode>
+      <FileName>CACierreCaja\CACierreCajaGestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Cajas.Movimientos.MovimientoCaja" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Movimientos\MovimientoCaja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

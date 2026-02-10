@@ -1,0 +1,1458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloVersion.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloVersionStoreContainer">
+    <EntitySet Name="Agencia_PUA" EntityType="ModeloVersion.Store.Agencia_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cargo_SEG" EntityType="ModeloVersion.Store.Cargo_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CasaMatriz_ARE" EntityType="ModeloVersion.Store.CasaMatriz_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroLogistico_PUA" EntityType="ModeloVersion.Store.CentroLogistico_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServicios_PUA" EntityType="ModeloVersion.Store.CentroServicios_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClienteCredito_CLI" EntityType="ModeloVersion.Store.ClienteCredito_CLI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Gestion_ARE" EntityType="ModeloVersion.Store.Gestion_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HistoricoIngresosUsuario_SEG" EntityType="ModeloVersion.Store.HistoricoIngresosUsuario_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidad_PAR" EntityType="ModeloVersion.Store.Localidad_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MacroProceso_ARE" EntityType="ModeloVersion.Store.MacroProceso_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MaqVersion_VER" EntityType="ModeloVersion.Store.MaqVersion_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MenuCapacitacion_VER" EntityType="ModeloVersion.Store.MenuCapacitacion_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Modulo_VER" EntityType="ModeloVersion.Store.Modulo_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ModuloProceso_VER" EntityType="ModeloVersion.Store.ModuloProceso_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParametrosFramework" EntityType="ModeloVersion.Store.ParametrosFramework" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonaInterna_PAR" EntityType="ModeloVersion.Store.PersonaInterna_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proceso_VER" EntityType="ModeloVersion.Store.Proceso_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PuntoServicio_PUA" EntityType="ModeloVersion.Store.PuntoServicio_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegionalAdministrativa_PUA" EntityType="ModeloVersion.Store.RegionalAdministrativa_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sucursal_CLI" EntityType="ModeloVersion.Store.Sucursal_CLI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuario_SEG" EntityType="ModeloVersion.Store.Usuario_SEG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ValidacionMaq_VER" EntityType="ModeloVersion.Store.ValidacionMaq_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Version_VER" EntityType="ModeloVersion.Store.Version_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VersionCliente_VER" EntityType="ModeloVersion.Store.VersionCliente_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VersionClienteHist_VER" EntityType="ModeloVersion.Store.VersionClienteHist_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VersionGestion_VER" EntityType="ModeloVersion.Store.VersionGestion_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VersionRegionalAdmin_VER" EntityType="ModeloVersion.Store.VersionRegionalAdmin_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VersionServicios_VER" EntityType="ModeloVersion.Store.VersionServicios_VER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Agencia_VPUA" EntityType="ModeloVersion.Store.Agencia_VPUA" store:Type="Views" store:Schema="dbo" store:Name="Agencia_VPUA">
+      <DefiningQuery>SELECT 
+      [Agencia_VPUA].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [Agencia_VPUA].[LOC_Nombre] AS [LOC_Nombre], 
+      [Agencia_VPUA].[LOC_IdAncestroPrimerGrado] AS [LOC_IdAncestroPrimerGrado], 
+      [Agencia_VPUA].[CES_IdZona] AS [CES_IdZona], 
+      [Agencia_VPUA].[CES_Nombre] AS [CES_Nombre], 
+      [Agencia_VPUA].[CES_IdCentroServicios] AS [CES_IdCentroServicios], 
+      [Agencia_VPUA].[CES_Tipo] AS [CES_Tipo], 
+      [Agencia_VPUA].[CES_DigitoVerificacion] AS [CES_DigitoVerificacion], 
+      [Agencia_VPUA].[CES_IdPropietario] AS [CES_IdPropietario], 
+      [Agencia_VPUA].[CES_Telefono1] AS [CES_Telefono1], 
+      [Agencia_VPUA].[CES_Direccion] AS [CES_Direccion], 
+      [Agencia_VPUA].[CES_Estado] AS [CES_Estado], 
+      [Agencia_VPUA].[AGE_IdAgencia] AS [AGE_IdAgencia], 
+      [Agencia_VPUA].[LOC_IdAncestroSegundoGrado] AS [LOC_IdAncestroSegundoGrado], 
+      [Agencia_VPUA].[LOC_IdAncestroTercerGrado] AS [LOC_IdAncestroTercerGrado], 
+      [Agencia_VPUA].[LOC_CodigoPostal] AS [LOC_CodigoPostal], 
+      [Agencia_VPUA].[LOC_NombreCorto] AS [LOC_NombreCorto], 
+      [Agencia_VPUA].[AGE_NombreCentroLogistico] AS [AGE_NombreCentroLogistico], 
+      [Agencia_VPUA].[AGE_IdCentroLogistico] AS [AGE_IdCentroLogistico], 
+      [Agencia_VPUA].[CES_PesoMaximo] AS [CES_PesoMaximo], 
+      [Agencia_VPUA].[CES_AdmiteFormaPagoAlCobro] AS [CES_AdmiteFormaPagoAlCobro], 
+      [Agencia_VPUA].[CES_VolumenMaximo] AS [CES_VolumenMaximo], 
+      [Agencia_VPUA].[AGE_IdTipoAgencia] AS [AGE_IdTipoAgencia], 
+      [Agencia_VPUA].[CES_Sistematizada] AS [CES_Sistematizada]
+      FROM [dbo].[Agencia_VPUA] AS [Agencia_VPUA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CentroLogisDeRegionalAdmi_VPUA" EntityType="ModeloVersion.Store.CentroLogisDeRegionalAdmi_VPUA" store:Type="Views" store:Schema="dbo" store:Name="CentroLogisDeRegionalAdmi_VPUA">
+      <DefiningQuery>SELECT 
+      [CentroLogisDeRegionalAdmi_VPUA].[REA_IdRegionalAdm] AS [REA_IdRegionalAdm], 
+      [CentroLogisDeRegionalAdmi_VPUA].[REA_Descripcion] AS [REA_Descripcion], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Direccion] AS [CES_Direccion], 
+      [CentroLogisDeRegionalAdmi_VPUA].[LOC_Nombre] AS [LOC_Nombre], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Nombre] AS [CES_Nombre], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CES_Estado] AS [CES_Estado], 
+      [CentroLogisDeRegionalAdmi_VPUA].[CEL_IdCentroLogistico] AS [CEL_IdCentroLogistico]
+      FROM [dbo].[CentroLogisDeRegionalAdmi_VPUA] AS [CentroLogisDeRegionalAdmi_VPUA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Localidades_VPAR" EntityType="ModeloVersion.Store.Localidades_VPAR" store:Type="Views" store:Schema="dbo" store:Name="Localidades_VPAR">
+      <DefiningQuery>SELECT 
+      [Localidades_VPAR].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [Localidades_VPAR].[LOC_IdTipo] AS [LOC_IdTipo], 
+      [Localidades_VPAR].[TLO_Descripcion] AS [TLO_Descripcion], 
+      [Localidades_VPAR].[LOC_Nombre] AS [LOC_Nombre], 
+      [Localidades_VPAR].[LOC_NombreCorto] AS [LOC_NombreCorto], 
+      [Localidades_VPAR].[LOC_IdAncestroPrimerGrado] AS [LOC_IdAncestroPrimerGrado], 
+      [Localidades_VPAR].[LOC_IdTipoPrimero] AS [LOC_IdTipoPrimero], 
+      [Localidades_VPAR].[LOC_IdTipoPrimeroDesc] AS [LOC_IdTipoPrimeroDesc], 
+      [Localidades_VPAR].[LOC_NombrePrimero] AS [LOC_NombrePrimero], 
+      [Localidades_VPAR].[LOC_NombreCortoPrimero] AS [LOC_NombreCortoPrimero], 
+      [Localidades_VPAR].[LOC_IdAncestroSegundoGrado] AS [LOC_IdAncestroSegundoGrado], 
+      [Localidades_VPAR].[LOC_IdTipoSegundo] AS [LOC_IdTipoSegundo], 
+      [Localidades_VPAR].[LOC_IdTipoSegundoDesc] AS [LOC_IdTipoSegundoDesc], 
+      [Localidades_VPAR].[LOC_NombreSegundo] AS [LOC_NombreSegundo], 
+      [Localidades_VPAR].[LOC_NombreCortoSegundo] AS [LOC_NombreCortoSegundo], 
+      [Localidades_VPAR].[LOC_IdAncestroTercerGrado] AS [LOC_IdAncestroTercerGrado], 
+      [Localidades_VPAR].[LOC_IdTipoTercero] AS [LOC_IdTipoTercero], 
+      [Localidades_VPAR].[LOC_IdTipoTerceroDesc] AS [LOC_IdTipoTerceroDesc], 
+      [Localidades_VPAR].[LOC_NombreTercero] AS [LOC_NombreTercero], 
+      [Localidades_VPAR].[LOC_NombreCortoTercero] AS [LOC_NombreCortoTercero], 
+      [Localidades_VPAR].[NombreCompleto] AS [NombreCompleto], 
+      [Localidades_VPAR].[LOC_CodigoPostal] AS [LOC_CodigoPostal]
+      FROM [dbo].[Localidades_VPAR] AS [Localidades_VPAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PuntoServicio_VPUA" EntityType="ModeloVersion.Store.PuntoServicio_VPUA" store:Type="Views" store:Schema="dbo" store:Name="PuntoServicio_VPUA">
+      <DefiningQuery>SELECT 
+      [PuntoServicio_VPUA].[PUS_IdPuntoServicio] AS [PUS_IdPuntoServicio], 
+      [PuntoServicio_VPUA].[PUS_IdAgencia] AS [PUS_IdAgencia], 
+      [PuntoServicio_VPUA].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [PuntoServicio_VPUA].[LOC_Nombre] AS [LOC_Nombre], 
+      [PuntoServicio_VPUA].[LOC_IdAncestroPrimerGrado] AS [LOC_IdAncestroPrimerGrado], 
+      [PuntoServicio_VPUA].[CES_IdZona] AS [CES_IdZona], 
+      [PuntoServicio_VPUA].[CES_Nombre] AS [CES_Nombre], 
+      [PuntoServicio_VPUA].[CES_IdCentroServicios] AS [CES_IdCentroServicios], 
+      [PuntoServicio_VPUA].[CES_Tipo] AS [CES_Tipo], 
+      [PuntoServicio_VPUA].[CES_DigitoVerificacion] AS [CES_DigitoVerificacion], 
+      [PuntoServicio_VPUA].[CES_IdPropietario] AS [CES_IdPropietario], 
+      [PuntoServicio_VPUA].[CES_Telefono1] AS [CES_Telefono1], 
+      [PuntoServicio_VPUA].[CES_Direccion] AS [CES_Direccion], 
+      [PuntoServicio_VPUA].[CES_Estado] AS [CES_Estado], 
+      [PuntoServicio_VPUA].[LOC_IdAncestroSegundoGrado] AS [LOC_IdAncestroSegundoGrado], 
+      [PuntoServicio_VPUA].[LOC_IdAncestroTercerGrado] AS [LOC_IdAncestroTercerGrado], 
+      [PuntoServicio_VPUA].[LOC_NombreCorto] AS [LOC_NombreCorto], 
+      [PuntoServicio_VPUA].[LOC_CodigoPostal] AS [LOC_CodigoPostal]
+      FROM [dbo].[PuntoServicio_VPUA] AS [PuntoServicio_VPUA]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SucursalZonaLocalidad_VCLI" EntityType="ModeloVersion.Store.SucursalZonaLocalidad_VCLI" store:Type="Views" store:Schema="dbo" store:Name="SucursalZonaLocalidad_VCLI">
+      <DefiningQuery>SELECT 
+      [SucursalZonaLocalidad_VCLI].[SUC_IdSucursal] AS [SUC_IdSucursal], 
+      [SucursalZonaLocalidad_VCLI].[SUC_Nombre] AS [SUC_Nombre], 
+      [SucursalZonaLocalidad_VCLI].[SUC_ClienteCredito] AS [SUC_ClienteCredito], 
+      [SucursalZonaLocalidad_VCLI].[SUC_Municipio] AS [SUC_Municipio], 
+      [SucursalZonaLocalidad_VCLI].[SUC_Zona] AS [SUC_Zona], 
+      [SucursalZonaLocalidad_VCLI].[SUC_Direccion] AS [SUC_Direccion], 
+      [SucursalZonaLocalidad_VCLI].[SUC_Telefono] AS [SUC_Telefono], 
+      [SucursalZonaLocalidad_VCLI].[SUC_Fax] AS [SUC_Fax], 
+      [SucursalZonaLocalidad_VCLI].[SUC_Email] AS [SUC_Email], 
+      [SucursalZonaLocalidad_VCLI].[SUC_NombreContacto] AS [SUC_NombreContacto], 
+      [SucursalZonaLocalidad_VCLI].[SUC_AgenciaEncargada] AS [SUC_AgenciaEncargada], 
+      [SucursalZonaLocalidad_VCLI].[LOC_IdLocalidad] AS [LOC_IdLocalidad], 
+      [SucursalZonaLocalidad_VCLI].[LOC_IdAncestroPrimerGrado] AS [LOC_IdAncestroPrimerGrado], 
+      [SucursalZonaLocalidad_VCLI].[LOC_IdTipo] AS [LOC_IdTipo], 
+      [SucursalZonaLocalidad_VCLI].[LOC_IdAncestroSegundoGrado] AS [LOC_IdAncestroSegundoGrado], 
+      [SucursalZonaLocalidad_VCLI].[LOC_IdAncestroTercerGrado] AS [LOC_IdAncestroTercerGrado], 
+      [SucursalZonaLocalidad_VCLI].[LOC_Nombre] AS [LOC_Nombre], 
+      [SucursalZonaLocalidad_VCLI].[LOC_CodigoPostal] AS [LOC_CodigoPostal]
+      FROM [dbo].[SucursalZonaLocalidad_VCLI] AS [SucursalZonaLocalidad_VCLI]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UsuarioClienteCredito_VSEG" EntityType="ModeloVersion.Store.UsuarioClienteCredito_VSEG" store:Type="Views" store:Schema="dbo" store:Name="UsuarioClienteCredito_VSEG">
+      <DefiningQuery>SELECT 
+      [UsuarioClienteCredito_VSEG].[PEE_FechaExpedicionDocumento] AS [PEE_FechaExpedicionDocumento], 
+      [UsuarioClienteCredito_VSEG].[USU_IdCodigoUsuario] AS [USU_IdCodigoUsuario], 
+      [UsuarioClienteCredito_VSEG].[USU_IdUsuario] AS [USU_IdUsuario], 
+      [UsuarioClienteCredito_VSEG].[USU_Estado] AS [USU_Estado], 
+      [UsuarioClienteCredito_VSEG].[USU_RequiereIdMaquina] AS [USU_RequiereIdMaquina], 
+      [UsuarioClienteCredito_VSEG].[CLI_Estado] AS [CLI_Estado], 
+      [UsuarioClienteCredito_VSEG].[PEE_IdPersonaExterna] AS [PEE_IdPersonaExterna], 
+      [UsuarioClienteCredito_VSEG].[TII_Descripcion] AS [TII_Descripcion], 
+      [UsuarioClienteCredito_VSEG].[PEE_Identificacion] AS [PEE_Identificacion], 
+      [UsuarioClienteCredito_VSEG].[PEE_IdTipoIdentificacion] AS [PEE_IdTipoIdentificacion], 
+      [UsuarioClienteCredito_VSEG].[PEE_DigitoVerificacion] AS [PEE_DigitoVerificacion], 
+      [UsuarioClienteCredito_VSEG].[PEE_PrimerNombre] AS [PEE_PrimerNombre], 
+      [UsuarioClienteCredito_VSEG].[PEE_SegundoNombre] AS [PEE_SegundoNombre], 
+      [UsuarioClienteCredito_VSEG].[PEE_PrimerApellido] AS [PEE_PrimerApellido], 
+      [UsuarioClienteCredito_VSEG].[PEE_SegundoApellido] AS [PEE_SegundoApellido], 
+      [UsuarioClienteCredito_VSEG].[PEE_Direccion] AS [PEE_Direccion], 
+      [UsuarioClienteCredito_VSEG].[PEE_Municipio] AS [PEE_Municipio], 
+      [UsuarioClienteCredito_VSEG].[PEE_Telefono] AS [PEE_Telefono], 
+      [UsuarioClienteCredito_VSEG].[PEE_NumeroCelular] AS [PEE_NumeroCelular], 
+      [UsuarioClienteCredito_VSEG].[CLI_IdCliente] AS [CLI_IdCliente], 
+      [UsuarioClienteCredito_VSEG].[CLI_RazonSocial] AS [CLI_RazonSocial], 
+      [UsuarioClienteCredito_VSEG].[CLI_Nit] AS [CLI_Nit], 
+      [UsuarioClienteCredito_VSEG].[CLI_DigitoVerificacion] AS [CLI_DigitoVerificacion], 
+      [UsuarioClienteCredito_VSEG].[CLI_Telefono] AS [CLI_Telefono], 
+      [UsuarioClienteCredito_VSEG].[CLI_Direccion] AS [CLI_Direccion], 
+      [UsuarioClienteCredito_VSEG].[USU_AutorizaCargaMasiva] AS [USU_AutorizaCargaMasiva]
+      FROM [dbo].[UsuarioClienteCredito_VSEG] AS [UsuarioClienteCredito_VSEG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UsuarioPersonaInterna_VSEG" EntityType="ModeloVersion.Store.UsuarioPersonaInterna_VSEG" store:Type="Views" store:Schema="dbo" store:Name="UsuarioPersonaInterna_VSEG">
+      <DefiningQuery>SELECT 
+      [UsuarioPersonaInterna_VSEG].[USU_IdCodigoUsuario] AS [USU_IdCodigoUsuario], 
+      [UsuarioPersonaInterna_VSEG].[PEI_IdPersonaInterna] AS [PEI_IdPersonaInterna], 
+      [UsuarioPersonaInterna_VSEG].[USU_IdUsuario] AS [USU_IdUsuario], 
+      [UsuarioPersonaInterna_VSEG].[PEI_PrimerApellido] AS [PEI_PrimerApellido], 
+      [UsuarioPersonaInterna_VSEG].[PEI_SegundoApellido] AS [PEI_SegundoApellido], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Direccion] AS [PEI_Direccion], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Email] AS [PEI_Email], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Nombre] AS [PEI_Nombre], 
+      [UsuarioPersonaInterna_VSEG].[USU_RequiereIdMaquina] AS [USU_RequiereIdMaquina], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Telefono] AS [PEI_Telefono], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Identificacion] AS [PEI_Identificacion], 
+      [UsuarioPersonaInterna_VSEG].[TII_Descripcion] AS [TII_Descripcion], 
+      [UsuarioPersonaInterna_VSEG].[PEI_Municipio] AS [PEI_Municipio], 
+      [UsuarioPersonaInterna_VSEG].[CAR_Descripcion] AS [CAR_Descripcion], 
+      [UsuarioPersonaInterna_VSEG].[PEI_IdCargo] AS [PEI_IdCargo], 
+      [UsuarioPersonaInterna_VSEG].[PEI_IdTipoIdentificacion] AS [PEI_IdTipoIdentificacion], 
+      [UsuarioPersonaInterna_VSEG].[USU_Estado] AS [USU_Estado], 
+      [UsuarioPersonaInterna_VSEG].[PEI_IdRegionalAdm] AS [PEI_IdRegionalAdm], 
+      [UsuarioPersonaInterna_VSEG].[REA_Descripcion] AS [REA_Descripcion], 
+      [UsuarioPersonaInterna_VSEG].[USU_EsCajeroPpal] AS [USU_EsCajeroPpal], 
+      [UsuarioPersonaInterna_VSEG].[USU_AutorizaCargaMasiva] AS [USU_AutorizaCargaMasiva], 
+      [UsuarioPersonaInterna_VSEG].[USU_AutorizaCargaMasivaICA] AS [USU_AutorizaCargaMasivaICA]
+      FROM [dbo].[UsuarioPersonaInterna_VSEG] AS [UsuarioPersonaInterna_VSEG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VersionServicios_VVER" EntityType="ModeloVersion.Store.VersionServicios_VVER" store:Type="Views" store:Schema="dbo" store:Name="VersionServicios_VVER">
+      <DefiningQuery>SELECT 
+      [VersionServicios_VVER].[VES_IdVersion] AS [VES_IdVersion], 
+      [VersionServicios_VVER].[VES_IdModulo] AS [VES_IdModulo], 
+      [VersionServicios_VVER].[VES_UriAplicacion] AS [VES_UriAplicacion], 
+      [VersionServicios_VVER].[VES_UrlServicio] AS [VES_UrlServicio], 
+      [VersionServicios_VVER].[VES_TipoProxy] AS [VES_TipoProxy], 
+      [VersionServicios_VVER].[MOD_Descripcion] AS [MOD_Descripcion]
+      FROM [dbo].[VersionServicios_VVER] AS [VersionServicios_VVER]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Agencia_PUA_CentroLogistico_PUA" Association="ModeloVersion.Store.FK_Agencia_PUA_CentroLogistico_PUA">
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Agencia_PUA_PuntoAtencion_PUA" Association="ModeloVersion.Store.FK_Agencia_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cargo_SEG_Cargo_SEG" Association="ModeloVersion.Store.FK_Cargo_SEG_Cargo_SEG">
+      <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+      <End Role="Cargo_SEG1" EntitySet="Cargo_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroLogistico_PUA_PuntoAtencion_PUA" Association="ModeloVersion.Store.FK_CentroLogistico_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA" Association="ModeloVersion.Store.FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+      <End Role="CentroLogistico_PUA" EntitySet="CentroLogistico_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroServicios_PUA_Localidad_PAR" Association="ModeloVersion.Store.FK_CentroServicios_PUA_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClienteCredito_CLI_Localidad_PAR" Association="ModeloVersion.Store.FK_ClienteCredito_CLI_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="ClienteCredito_CLI" EntitySet="ClienteCredito_CLI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gestion_ARE_MacroProceso_ARE" Association="ModeloVersion.Store.FK_Gestion_ARE_MacroProceso_ARE">
+      <End Role="MacroProceso_ARE" EntitySet="MacroProceso_ARE" />
+      <End Role="Gestion_ARE" EntitySet="Gestion_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="ModeloVersion.Store.FK_Localidad_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="ModeloVersion.Store.FK_Localidad_PAR_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="ModeloVersion.Store.FK_Localidad_PAR_Localidad_PAR2">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MAC_VERSION_VERSION" Association="ModeloVersion.Store.FK_MAC_VERSION_VERSION">
+      <End Role="Version_VER" EntitySet="Version_VER" />
+      <End Role="MaqVersion_VER" EntitySet="MaqVersion_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MacroProceso_ARE_CasaMatriz_ARE" Association="ModeloVersion.Store.FK_MacroProceso_ARE_CasaMatriz_ARE">
+      <End Role="CasaMatriz_ARE" EntitySet="CasaMatriz_ARE" />
+      <End Role="MacroProceso_ARE" EntitySet="MacroProceso_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuCapacitacion_VER_Proceso_VER" Association="ModeloVersion.Store.FK_MenuCapacitacion_VER_Proceso_VER">
+      <End Role="Proceso_VER" EntitySet="Proceso_VER" />
+      <End Role="MenuCapacitacion_VER" EntitySet="MenuCapacitacion_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModuloProceso_VER_Modulo_VER" Association="ModeloVersion.Store.FK_ModuloProceso_VER_Modulo_VER">
+      <End Role="Modulo_VER" EntitySet="Modulo_VER" />
+      <End Role="ModuloProceso_VER" EntitySet="ModuloProceso_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModuloProceso_VER_Proceso_VER" Association="ModeloVersion.Store.FK_ModuloProceso_VER_Proceso_VER">
+      <End Role="Proceso_VER" EntitySet="Proceso_VER" />
+      <End Role="ModuloProceso_VER" EntitySet="ModuloProceso_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaInterna_PAR_Cargo_SEG" Association="ModeloVersion.Store.FK_PersonaInterna_PAR_Cargo_SEG">
+      <End Role="Cargo_SEG" EntitySet="Cargo_SEG" />
+      <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaInterna_PAR_Localidad_PAR" Association="ModeloVersion.Store.FK_PersonaInterna_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonaInterna_PAR_RegionalAdministrativa_PUA" Association="ModeloVersion.Store.FK_PersonaInterna_PAR_RegionalAdministrativa_PUA">
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+      <End Role="PersonaInterna_PAR" EntitySet="PersonaInterna_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PuntoServicio_PUA_Agencia_PUA" Association="ModeloVersion.Store.FK_PuntoServicio_PUA_Agencia_PUA">
+      <End Role="Agencia_PUA" EntitySet="Agencia_PUA" />
+      <End Role="PuntoServicio_PUA" EntitySet="PuntoServicio_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PuntoServicio_PUA_PuntoAtencion_PUA" Association="ModeloVersion.Store.FK_PuntoServicio_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="PuntoServicio_PUA" EntitySet="PuntoServicio_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegionalAdministrativa_PUA_CasaMatriz_ARE" Association="ModeloVersion.Store.FK_RegionalAdministrativa_PUA_CasaMatriz_ARE">
+      <End Role="CasaMatriz_ARE" EntitySet="CasaMatriz_ARE" />
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA" Association="ModeloVersion.Store.FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sucursal_CLI_CentroServicios_PUA" Association="ModeloVersion.Store.FK_Sucursal_CLI_CentroServicios_PUA">
+      <End Role="CentroServicios_PUA" EntitySet="CentroServicios_PUA" />
+      <End Role="Sucursal_CLI" EntitySet="Sucursal_CLI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sucursal_CLI_ClienteCredito_CLI" Association="ModeloVersion.Store.FK_Sucursal_CLI_ClienteCredito_CLI">
+      <End Role="ClienteCredito_CLI" EntitySet="ClienteCredito_CLI" />
+      <End Role="Sucursal_CLI" EntitySet="Sucursal_CLI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sucursal_CLI_Localidad_PAR" Association="ModeloVersion.Store.FK_Sucursal_CLI_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Sucursal_CLI" EntitySet="Sucursal_CLI" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ValidacionMaq_VER_MaqVersion_VER" Association="ModeloVersion.Store.FK_ValidacionMaq_VER_MaqVersion_VER">
+      <End Role="MaqVersion_VER" EntitySet="MaqVersion_VER" />
+      <End Role="ValidacionMaq_VER" EntitySet="ValidacionMaq_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VERSION_SERVICIOS_MODULO" Association="ModeloVersion.Store.FK_VERSION_SERVICIOS_MODULO">
+      <End Role="Modulo_VER" EntitySet="Modulo_VER" />
+      <End Role="VersionServicios_VER" EntitySet="VersionServicios_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VERSION_SERVICIOS_VERSION" Association="ModeloVersion.Store.FK_VERSION_SERVICIOS_VERSION">
+      <End Role="Version_VER" EntitySet="Version_VER" />
+      <End Role="VersionServicios_VER" EntitySet="VersionServicios_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VersionCliente_VER_ClienteCredito_CLI" Association="ModeloVersion.Store.FK_VersionCliente_VER_ClienteCredito_CLI">
+      <End Role="ClienteCredito_CLI" EntitySet="ClienteCredito_CLI" />
+      <End Role="VersionCliente_VER" EntitySet="VersionCliente_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VersionCliente_VER_Version_VER" Association="ModeloVersion.Store.FK_VersionCliente_VER_Version_VER">
+      <End Role="Version_VER" EntitySet="Version_VER" />
+      <End Role="VersionCliente_VER" EntitySet="VersionCliente_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VersionGestion_VER_Gestion_ARE" Association="ModeloVersion.Store.FK_VersionGestion_VER_Gestion_ARE">
+      <End Role="Gestion_ARE" EntitySet="Gestion_ARE" />
+      <End Role="VersionGestion_VER" EntitySet="VersionGestion_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VersionGestion_VER_Version_VER" Association="ModeloVersion.Store.FK_VersionGestion_VER_Version_VER">
+      <End Role="Version_VER" EntitySet="Version_VER" />
+      <End Role="VersionGestion_VER" EntitySet="VersionGestion_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VersionRegionalAdmin_VER_RegionalAdministrativa_PUA" Association="ModeloVersion.Store.FK_VersionRegionalAdmin_VER_RegionalAdministrativa_PUA">
+      <End Role="RegionalAdministrativa_PUA" EntitySet="RegionalAdministrativa_PUA" />
+      <End Role="VersionRegionalAdmin_VER" EntitySet="VersionRegionalAdmin_VER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VersionRegionalAdmin_VER_Version_VER" Association="ModeloVersion.Store.FK_VersionRegionalAdmin_VER_Version_VER">
+      <End Role="Version_VER" EntitySet="Version_VER" />
+      <End Role="VersionRegionalAdmin_VER" EntitySet="VersionRegionalAdmin_VER" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Agencia_PUA">
+    <Key>
+      <PropertyRef Name="AGE_IdAgencia" />
+    </Key>
+    <Property Name="AGE_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="AGE_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="AGE_IdTipoAgencia" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="AGE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="AGE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Cargo_SEG">
+    <Key>
+      <PropertyRef Name="CAR_IdCargo" />
+    </Key>
+    <Property Name="CAR_IdCargo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CAR_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CAR_IdCargoReporta" Type="int" />
+    <Property Name="CAR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CAR_CodigoNovasoft" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CasaMatriz_ARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+    </Key>
+    <Property Name="CAM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAM_Nit" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CAM_CodigoSucursalERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Sigla" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CAM_Telefono" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CAM_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CAM_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_CodigoMinisterio" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CAM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroLogistico_PUA">
+    <Key>
+      <PropertyRef Name="CEL_IdCentroLogistico" />
+    </Key>
+    <Property Name="CEL_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="CEL_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="CEL_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CEL_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroServicios_PUA">
+    <Key>
+      <PropertyRef Name="CES_IdCentroServicios" />
+    </Key>
+    <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CES_Tipo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CES_IdPropietario" Type="int" Nullable="false" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Telefono2" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Fax" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Barrio" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdMunicipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_IdPersonaResponsable" Type="bigint" Nullable="false" />
+    <Property Name="CES_Latitud" Type="numeric" Scale="6" />
+    <Property Name="CES_Longitud" Type="numeric" Scale="6" />
+    <Property Name="CES_Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_Sistematizada" Type="bit" Nullable="false" />
+    <Property Name="CES_IdCentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdTipoPropiedad" Type="smallint" Nullable="false" />
+    <Property Name="CES_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_VolumenMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_AdmiteFormaPagoAlCobro" Type="bit" Nullable="false" />
+    <Property Name="CES_VendePrepago" Type="bit" Nullable="false" />
+    <Property Name="CES_ClasGirosPorIngresos" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_PuedeRecibirGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_PuedePagarGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_TopeMaximoPorGiros" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_BaseInicialCaja" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CES_TopeMaximoPorPagos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_CodigoBodega" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdClasificadorCanalVenta" Type="smallint" Nullable="false" />
+    <Property Name="CES_CodigoSPN" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ClienteCredito_CLI">
+    <Key>
+      <PropertyRef Name="CLI_IdCliente" />
+    </Key>
+    <Property Name="CLI_IdCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CLI_Nit" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_DigitoVerificacion" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CLI_RazonSocial" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CLI_TipoSociedad" Type="smallint" Nullable="false" />
+    <Property Name="CLI_IdRepresentanteLegal" Type="bigint" Nullable="false" />
+    <Property Name="CLI_RegimenContributivo" Type="smallint" Nullable="false" />
+    <Property Name="CLI_FechaConstitucion" Type="datetime" Nullable="false" />
+    <Property Name="CLI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CLI_NombreGerenteGeneral" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CLI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CLI_Telefono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_Fax" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_ActividadEconomica" Type="smallint" Nullable="false" />
+    <Property Name="CLI_SegmentoMercado" Type="smallint" Nullable="false" />
+    <Property Name="CLI_FechaVinculacion" Type="datetime" Nullable="false" />
+    <Property Name="CLI_TopeMaximoCredito" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CLI_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CLI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CLI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_IdTipoSectorCliente" Type="smallint" Nullable="false" />
+    <Property Name="CLI_AplicaConvenio" Type="bit" />
+  </EntityType>
+  <EntityType Name="Gestion_ARE">
+    <Key>
+      <PropertyRef Name="GES_CodigoGestion" />
+    </Key>
+    <Property Name="GES_CodigoGestion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GES_IdGestion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="GES_IdMacroProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_CodigoBodegaERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="GES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="HistoricoIngresosUsuario_SEG">
+    <Key>
+      <PropertyRef Name="HIU_IdHistoricoIngresosUsuario" />
+    </Key>
+    <Property Name="HIU_IdHistoricoIngresosUsuario" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HIU_Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="HIU_TipoLocacion" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="HIU_IdLocacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="HIU_DescripcionLocacion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="HIU_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Localidad_PAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LOC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="MacroProceso_ARE">
+    <Key>
+      <PropertyRef Name="MAP_IdMacroProceso" />
+    </Key>
+    <Property Name="MAP_IdMacroProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MAP_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAP_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="MAP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MaqVersion_VER">
+    <Key>
+      <PropertyRef Name="MAV_MaquinaVersionId" />
+    </Key>
+    <Property Name="MAV_MaquinaVersionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAV_MaquinaId" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="MAV_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MAV_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MAV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAV_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MAV_Observaciones" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="MenuCapacitacion_VER">
+    <Key>
+      <PropertyRef Name="MEC_IdMenu" />
+    </Key>
+    <Property Name="MEC_IdMenu" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MEC_IdAncestro" Type="int" Nullable="false" />
+    <Property Name="MEC_IdProceso" Type="int" Nullable="false" />
+    <Property Name="MEC_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MEC_Target" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MEC_URL" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="MEC_AplicaUsuario" Type="bit" Nullable="false" />
+    <Property Name="MEC_Activo" Type="bit" Nullable="false" />
+    <Property Name="MEC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MEC_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modulo_VER">
+    <Key>
+      <PropertyRef Name="MOD_IdModulo" />
+    </Key>
+    <Property Name="MOD_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MOD_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MOD_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModuloProceso_VER">
+    <Key>
+      <PropertyRef Name="MOP_IdModProceso" />
+    </Key>
+    <Property Name="MOP_IdModProceso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MOP_IdProceso" Type="int" Nullable="false" />
+    <Property Name="MOP_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="MOP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MOP_FechaGrabacion" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParametrosFramework">
+    <Key>
+      <PropertyRef Name="PAR_IdParametro" />
+    </Key>
+    <Property Name="PAR_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PAR_ValorParametro" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAR_ModuloFR" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAR_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PersonaInterna_PAR">
+    <Key>
+      <PropertyRef Name="PEI_IdPersonaInterna" />
+    </Key>
+    <Property Name="PEI_IdPersonaInterna" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PEI_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_IdCargo" Type="int" Nullable="false" />
+    <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PEI_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_Email" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_IdRegionalAdm" Type="bigint" />
+    <Property Name="PEI_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PEI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PEI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Proceso_VER">
+    <Key>
+      <PropertyRef Name="PRO_IdProceso" />
+    </Key>
+    <Property Name="PRO_IdProceso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRO_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PRO_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PuntoServicio_PUA">
+    <Key>
+      <PropertyRef Name="PUS_IdPuntoServicio" />
+    </Key>
+    <Property Name="PUS_IdPuntoServicio" Type="bigint" Nullable="false" />
+    <Property Name="PUS_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="PUS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PUS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RegionalAdministrativa_PUA">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+    </Key>
+    <Property Name="REA_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="REA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="REA_CodigoExternoSucursal" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REA_IdCasaMatriz" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sucursal_CLI">
+    <Key>
+      <PropertyRef Name="SUC_IdSucursal" />
+    </Key>
+    <Property Name="SUC_IdSucursal" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SUC_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="SUC_ClienteCredito" Type="int" Nullable="false" />
+    <Property Name="SUC_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SUC_Zona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SUC_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="SUC_Telefono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SUC_Fax" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SUC_Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SUC_NombreContacto" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="SUC_AgenciaEncargada" Type="bigint" Nullable="false" />
+    <Property Name="SUC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="SUC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SUC_IdBodega" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Usuario_SEG">
+    <Key>
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+    </Key>
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="USU_TipoUsuario" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="USU_Comentarios" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="USU_EsUsuarioInterno" Type="bit" Nullable="false" />
+    <Property Name="USU_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="USU_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_EsCajeroPpal" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasivaICA" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ValidacionMaq_VER">
+    <Key>
+      <PropertyRef Name="VAM_TokenIngreso" />
+      <PropertyRef Name="VAM_MaquinaVersionId" />
+    </Key>
+    <Property Name="VAM_TokenIngreso" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="VAM_MaquinaVersionId" Type="int" Nullable="false" />
+    <Property Name="VAM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VAM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Version_VER">
+    <Key>
+      <PropertyRef Name="VER_IdVersion" />
+    </Key>
+    <Property Name="VER_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VER_BindingServicios" Type="xml" Nullable="false" />
+    <Property Name="VER_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VER_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="VersionCliente_VER">
+    <Key>
+      <PropertyRef Name="VEC_IdCliente" />
+      <PropertyRef Name="VEC_IdVersion" />
+    </Key>
+    <Property Name="VEC_IdCliente" Type="int" Nullable="false" />
+    <Property Name="VEC_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VEC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VEC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="VersionClienteHist_VER">
+    <Key>
+      <PropertyRef Name="VEC_IdAuditoria" />
+    </Key>
+    <Property Name="VEC_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VEC_IdCliente" Type="int" Nullable="false" />
+    <Property Name="VEC_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VEC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VEC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VEC_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VEC_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="VersionGestion_VER">
+    <Key>
+      <PropertyRef Name="VEG_CodigoGestion" />
+      <PropertyRef Name="VEG_IdVersion" />
+    </Key>
+    <Property Name="VEG_CodigoGestion" Type="bigint" Nullable="false" />
+    <Property Name="VEG_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VEG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VEG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="VersionRegionalAdmin_VER">
+    <Key>
+      <PropertyRef Name="VRA_IdRegionalAdm" />
+      <PropertyRef Name="VRA_IdVersion" />
+    </Key>
+    <Property Name="VRA_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="VRA_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VRA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VRA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="VersionServicios_VER">
+    <Key>
+      <PropertyRef Name="VES_IdVersion" />
+      <PropertyRef Name="VES_IdModulo" />
+    </Key>
+    <Property Name="VES_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VES_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="VES_UriAplicacion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="VES_UrlServicio" Type="varchar" Nullable="false" MaxLength="350" />
+    <Property Name="VES_TipoProxy" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="VES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.Agencia_VPUA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Agencia_VPUA">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_IdZona" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_IdCentroServicios" />
+      <PropertyRef Name="CES_Tipo" />
+      <PropertyRef Name="CES_DigitoVerificacion" />
+      <PropertyRef Name="CES_IdPropietario" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="AGE_IdAgencia" />
+      <PropertyRef Name="LOC_CodigoPostal" />
+      <PropertyRef Name="LOC_NombreCorto" />
+      <PropertyRef Name="AGE_NombreCentroLogistico" />
+      <PropertyRef Name="AGE_IdCentroLogistico" />
+      <PropertyRef Name="CES_PesoMaximo" />
+      <PropertyRef Name="CES_AdmiteFormaPagoAlCobro" />
+      <PropertyRef Name="CES_VolumenMaximo" />
+      <PropertyRef Name="AGE_IdTipoAgencia" />
+      <PropertyRef Name="CES_Sistematizada" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="CES_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CES_Tipo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CES_IdPropietario" Type="int" Nullable="false" />
+    <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="AGE_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="AGE_NombreCentroLogistico" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="AGE_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="CES_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_AdmiteFormaPagoAlCobro" Type="bit" Nullable="false" />
+    <Property Name="CES_VolumenMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="AGE_IdTipoAgencia" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_Sistematizada" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.CentroLogisDeRegionalAdmi_VPUA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CentroLogisDeRegionalAdmi_VPUA">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CEL_IdCentroLogistico" />
+    </Key>
+    <Property Name="REA_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CEL_IdCentroLogistico" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.Localidades_VPAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Localidades_VPAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="LOC_IdTipo" />
+      <PropertyRef Name="TLO_Descripcion" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_NombreCorto" />
+      <PropertyRef Name="LOC_CodigoPostal" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="TLO_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoPrimero" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoPrimeroDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombrePrimero" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoPrimero" Type="varchar" MaxLength="4" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoSegundo" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoSegundoDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombreSegundo" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoSegundo" Type="varchar" MaxLength="4" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipoTercero" Type="varchar" MaxLength="3" />
+    <Property Name="LOC_IdTipoTerceroDesc" Type="varchar" MaxLength="25" />
+    <Property Name="LOC_NombreTercero" Type="varchar" MaxLength="100" />
+    <Property Name="LOC_NombreCortoTercero" Type="varchar" MaxLength="4" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="110" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.PuntoServicio_VPUA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PuntoServicio_VPUA">
+    <Key>
+      <PropertyRef Name="PUS_IdPuntoServicio" />
+      <PropertyRef Name="PUS_IdAgencia" />
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="CES_IdZona" />
+      <PropertyRef Name="CES_Nombre" />
+      <PropertyRef Name="CES_IdCentroServicios" />
+      <PropertyRef Name="CES_Tipo" />
+      <PropertyRef Name="CES_DigitoVerificacion" />
+      <PropertyRef Name="CES_IdPropietario" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="LOC_NombreCorto" />
+      <PropertyRef Name="LOC_CodigoPostal" />
+    </Key>
+    <Property Name="PUS_IdPuntoServicio" Type="bigint" Nullable="false" />
+    <Property Name="PUS_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="CES_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CES_Tipo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CES_IdPropietario" Type="int" Nullable="false" />
+    <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.SucursalZonaLocalidad_VCLI' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SucursalZonaLocalidad_VCLI">
+    <Key>
+      <PropertyRef Name="SUC_IdSucursal" />
+      <PropertyRef Name="SUC_Nombre" />
+      <PropertyRef Name="SUC_ClienteCredito" />
+      <PropertyRef Name="SUC_Municipio" />
+      <PropertyRef Name="SUC_Zona" />
+      <PropertyRef Name="SUC_Direccion" />
+      <PropertyRef Name="SUC_Telefono" />
+      <PropertyRef Name="SUC_Fax" />
+      <PropertyRef Name="SUC_Email" />
+      <PropertyRef Name="SUC_NombreContacto" />
+      <PropertyRef Name="SUC_AgenciaEncargada" />
+      <PropertyRef Name="LOC_IdLocalidad" />
+      <PropertyRef Name="LOC_IdTipo" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_CodigoPostal" />
+    </Key>
+    <Property Name="SUC_IdSucursal" Type="int" Nullable="false" />
+    <Property Name="SUC_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="SUC_ClienteCredito" Type="int" Nullable="false" />
+    <Property Name="SUC_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="SUC_Zona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="SUC_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="SUC_Telefono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SUC_Fax" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="SUC_Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SUC_NombreContacto" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="SUC_AgenciaEncargada" Type="bigint" Nullable="false" />
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.UsuarioClienteCredito_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="UsuarioClienteCredito_VSEG">
+    <Key>
+      <PropertyRef Name="PEE_FechaExpedicionDocumento" />
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+      <PropertyRef Name="USU_IdUsuario" />
+      <PropertyRef Name="USU_Estado" />
+      <PropertyRef Name="USU_RequiereIdMaquina" />
+      <PropertyRef Name="CLI_Estado" />
+      <PropertyRef Name="PEE_IdPersonaExterna" />
+      <PropertyRef Name="TII_Descripcion" />
+      <PropertyRef Name="PEE_Identificacion" />
+      <PropertyRef Name="PEE_IdTipoIdentificacion" />
+      <PropertyRef Name="PEE_PrimerNombre" />
+      <PropertyRef Name="PEE_PrimerApellido" />
+      <PropertyRef Name="PEE_Direccion" />
+      <PropertyRef Name="PEE_Municipio" />
+      <PropertyRef Name="PEE_Telefono" />
+      <PropertyRef Name="CLI_IdCliente" />
+      <PropertyRef Name="CLI_RazonSocial" />
+      <PropertyRef Name="CLI_Nit" />
+      <PropertyRef Name="CLI_DigitoVerificacion" />
+      <PropertyRef Name="CLI_Telefono" />
+      <PropertyRef Name="CLI_Direccion" />
+      <PropertyRef Name="USU_AutorizaCargaMasiva" />
+    </Key>
+    <Property Name="PEE_FechaExpedicionDocumento" Type="datetime" Nullable="false" />
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="CLI_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PEE_IdPersonaExterna" Type="bigint" Nullable="false" />
+    <Property Name="TII_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEE_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEE_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="PEE_DigitoVerificacion" Type="char" MaxLength="1" />
+    <Property Name="PEE_PrimerNombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEE_SegundoNombre" Type="varchar" MaxLength="50" />
+    <Property Name="PEE_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEE_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEE_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEE_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PEE_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEE_NumeroCelular" Type="varchar" MaxLength="25" />
+    <Property Name="CLI_IdCliente" Type="int" Nullable="false" />
+    <Property Name="CLI_RazonSocial" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CLI_Nit" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_DigitoVerificacion" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CLI_Telefono" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CLI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.UsuarioPersonaInterna_VSEG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="UsuarioPersonaInterna_VSEG">
+    <Key>
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+      <PropertyRef Name="PEI_IdPersonaInterna" />
+      <PropertyRef Name="USU_IdUsuario" />
+      <PropertyRef Name="PEI_PrimerApellido" />
+      <PropertyRef Name="PEI_Direccion" />
+      <PropertyRef Name="PEI_Nombre" />
+      <PropertyRef Name="USU_RequiereIdMaquina" />
+      <PropertyRef Name="PEI_Telefono" />
+      <PropertyRef Name="PEI_Identificacion" />
+      <PropertyRef Name="TII_Descripcion" />
+      <PropertyRef Name="PEI_Municipio" />
+      <PropertyRef Name="CAR_Descripcion" />
+      <PropertyRef Name="PEI_IdCargo" />
+      <PropertyRef Name="PEI_IdTipoIdentificacion" />
+      <PropertyRef Name="USU_Estado" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="USU_EsCajeroPpal" />
+      <PropertyRef Name="USU_AutorizaCargaMasiva" />
+      <PropertyRef Name="USU_AutorizaCargaMasivaICA" />
+    </Key>
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="PEI_IdPersonaInterna" Type="bigint" Nullable="false" />
+    <Property Name="USU_IdUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PEI_Email" Type="varchar" MaxLength="50" />
+    <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_RequiereIdMaquina" Type="bit" Nullable="false" />
+    <Property Name="PEI_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TII_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CAR_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_IdCargo" Type="int" Nullable="false" />
+    <Property Name="PEI_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="USU_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="PEI_IdRegionalAdm" Type="bigint" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="USU_EsCajeroPpal" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasiva" Type="bit" Nullable="false" />
+    <Property Name="USU_AutorizaCargaMasivaICA" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLER2014.dbo.VersionServicios_VVER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="VersionServicios_VVER">
+    <Key>
+      <PropertyRef Name="VES_IdVersion" />
+      <PropertyRef Name="VES_IdModulo" />
+      <PropertyRef Name="VES_UriAplicacion" />
+      <PropertyRef Name="VES_UrlServicio" />
+      <PropertyRef Name="VES_TipoProxy" />
+      <PropertyRef Name="MOD_Descripcion" />
+    </Key>
+    <Property Name="VES_IdVersion" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="VES_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="VES_UriAplicacion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="VES_UrlServicio" Type="varchar" Nullable="false" MaxLength="350" />
+    <Property Name="VES_TipoProxy" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="MOD_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Agencia_PUA_CentroLogistico_PUA">
+    <End Role="CentroLogistico_PUA" Type="ModeloVersion.Store.CentroLogistico_PUA" Multiplicity="1" />
+    <End Role="Agencia_PUA" Type="ModeloVersion.Store.Agencia_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdCentroLogistico" />
+      </Principal>
+      <Dependent Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdCentroLogistico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Agencia_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloVersion.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="Agencia_PUA" Type="ModeloVersion.Store.Agencia_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdAgencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cargo_SEG_Cargo_SEG">
+    <End Role="Cargo_SEG" Type="ModeloVersion.Store.Cargo_SEG" Multiplicity="0..1" />
+    <End Role="Cargo_SEG1" Type="ModeloVersion.Store.Cargo_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo_SEG">
+        <PropertyRef Name="CAR_IdCargo" />
+      </Principal>
+      <Dependent Role="Cargo_SEG1">
+        <PropertyRef Name="CAR_IdCargoReporta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroLogistico_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloVersion.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="CentroLogistico_PUA" Type="ModeloVersion.Store.CentroLogistico_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdCentroLogistico" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroLogistico_PUA_RegionalAdministrativa_PUA">
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloVersion.Store.RegionalAdministrativa_PUA" Multiplicity="1" />
+    <End Role="CentroLogistico_PUA" Type="ModeloVersion.Store.CentroLogistico_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Principal>
+      <Dependent Role="CentroLogistico_PUA">
+        <PropertyRef Name="CEL_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroServicios_PUA_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="CentroServicios_PUA" Type="ModeloVersion.Store.CentroServicios_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClienteCredito_CLI_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="ClienteCredito_CLI" Type="ModeloVersion.Store.ClienteCredito_CLI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="ClienteCredito_CLI">
+        <PropertyRef Name="CLI_Municipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gestion_ARE_MacroProceso_ARE">
+    <End Role="MacroProceso_ARE" Type="ModeloVersion.Store.MacroProceso_ARE" Multiplicity="1" />
+    <End Role="Gestion_ARE" Type="ModeloVersion.Store.Gestion_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MacroProceso_ARE">
+        <PropertyRef Name="MAP_IdMacroProceso" />
+      </Principal>
+      <Dependent Role="Gestion_ARE">
+        <PropertyRef Name="GES_IdMacroProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+    <End Role="Localidad_PAR" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+    <End Role="Localidad_PAR" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MAC_VERSION_VERSION">
+    <End Role="Version_VER" Type="ModeloVersion.Store.Version_VER" Multiplicity="1" />
+    <End Role="MaqVersion_VER" Type="ModeloVersion.Store.MaqVersion_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Version_VER">
+        <PropertyRef Name="VER_IdVersion" />
+      </Principal>
+      <Dependent Role="MaqVersion_VER">
+        <PropertyRef Name="MAV_IdVersion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MacroProceso_ARE_CasaMatriz_ARE">
+    <End Role="CasaMatriz_ARE" Type="ModeloVersion.Store.CasaMatriz_ARE" Multiplicity="1" />
+    <End Role="MacroProceso_ARE" Type="ModeloVersion.Store.MacroProceso_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasaMatriz_ARE">
+        <PropertyRef Name="CAM_IdCasaMatriz" />
+      </Principal>
+      <Dependent Role="MacroProceso_ARE">
+        <PropertyRef Name="MAP_IdCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuCapacitacion_VER_Proceso_VER">
+    <End Role="Proceso_VER" Type="ModeloVersion.Store.Proceso_VER" Multiplicity="1" />
+    <End Role="MenuCapacitacion_VER" Type="ModeloVersion.Store.MenuCapacitacion_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proceso_VER">
+        <PropertyRef Name="PRO_IdProceso" />
+      </Principal>
+      <Dependent Role="MenuCapacitacion_VER">
+        <PropertyRef Name="MEC_IdProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModuloProceso_VER_Modulo_VER">
+    <End Role="Modulo_VER" Type="ModeloVersion.Store.Modulo_VER" Multiplicity="1" />
+    <End Role="ModuloProceso_VER" Type="ModeloVersion.Store.ModuloProceso_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo_VER">
+        <PropertyRef Name="MOD_IdModulo" />
+      </Principal>
+      <Dependent Role="ModuloProceso_VER">
+        <PropertyRef Name="MOP_IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModuloProceso_VER_Proceso_VER">
+    <End Role="Proceso_VER" Type="ModeloVersion.Store.Proceso_VER" Multiplicity="1" />
+    <End Role="ModuloProceso_VER" Type="ModeloVersion.Store.ModuloProceso_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proceso_VER">
+        <PropertyRef Name="PRO_IdProceso" />
+      </Principal>
+      <Dependent Role="ModuloProceso_VER">
+        <PropertyRef Name="MOP_IdProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaInterna_PAR_Cargo_SEG">
+    <End Role="Cargo_SEG" Type="ModeloVersion.Store.Cargo_SEG" Multiplicity="1" />
+    <End Role="PersonaInterna_PAR" Type="ModeloVersion.Store.PersonaInterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo_SEG">
+        <PropertyRef Name="CAR_IdCargo" />
+      </Principal>
+      <Dependent Role="PersonaInterna_PAR">
+        <PropertyRef Name="PEI_IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaInterna_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="PersonaInterna_PAR" Type="ModeloVersion.Store.PersonaInterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="PersonaInterna_PAR">
+        <PropertyRef Name="PEI_Municipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonaInterna_PAR_RegionalAdministrativa_PUA">
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloVersion.Store.RegionalAdministrativa_PUA" Multiplicity="0..1" />
+    <End Role="PersonaInterna_PAR" Type="ModeloVersion.Store.PersonaInterna_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Principal>
+      <Dependent Role="PersonaInterna_PAR">
+        <PropertyRef Name="PEI_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PuntoServicio_PUA_Agencia_PUA">
+    <End Role="Agencia_PUA" Type="ModeloVersion.Store.Agencia_PUA" Multiplicity="1" />
+    <End Role="PuntoServicio_PUA" Type="ModeloVersion.Store.PuntoServicio_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agencia_PUA">
+        <PropertyRef Name="AGE_IdAgencia" />
+      </Principal>
+      <Dependent Role="PuntoServicio_PUA">
+        <PropertyRef Name="PUS_IdAgencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PuntoServicio_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloVersion.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="PuntoServicio_PUA" Type="ModeloVersion.Store.PuntoServicio_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="PuntoServicio_PUA">
+        <PropertyRef Name="PUS_IdPuntoServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegionalAdministrativa_PUA_CasaMatriz_ARE">
+    <End Role="CasaMatriz_ARE" Type="ModeloVersion.Store.CasaMatriz_ARE" Multiplicity="1" />
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloVersion.Store.RegionalAdministrativa_PUA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasaMatriz_ARE">
+        <PropertyRef Name="CAM_IdCasaMatriz" />
+      </Principal>
+      <Dependent Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegionalAdministrativa_PUA_PuntoAtencion_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloVersion.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloVersion.Store.RegionalAdministrativa_PUA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sucursal_CLI_CentroServicios_PUA">
+    <End Role="CentroServicios_PUA" Type="ModeloVersion.Store.CentroServicios_PUA" Multiplicity="1" />
+    <End Role="Sucursal_CLI" Type="ModeloVersion.Store.Sucursal_CLI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CentroServicios_PUA">
+        <PropertyRef Name="CES_IdCentroServicios" />
+      </Principal>
+      <Dependent Role="Sucursal_CLI">
+        <PropertyRef Name="SUC_AgenciaEncargada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sucursal_CLI_ClienteCredito_CLI">
+    <End Role="ClienteCredito_CLI" Type="ModeloVersion.Store.ClienteCredito_CLI" Multiplicity="1" />
+    <End Role="Sucursal_CLI" Type="ModeloVersion.Store.Sucursal_CLI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteCredito_CLI">
+        <PropertyRef Name="CLI_IdCliente" />
+      </Principal>
+      <Dependent Role="Sucursal_CLI">
+        <PropertyRef Name="SUC_ClienteCredito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sucursal_CLI_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloVersion.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="Sucursal_CLI" Type="ModeloVersion.Store.Sucursal_CLI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Sucursal_CLI">
+        <PropertyRef Name="SUC_Municipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ValidacionMaq_VER_MaqVersion_VER">
+    <End Role="MaqVersion_VER" Type="ModeloVersion.Store.MaqVersion_VER" Multiplicity="1" />
+    <End Role="ValidacionMaq_VER" Type="ModeloVersion.Store.ValidacionMaq_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaqVersion_VER">
+        <PropertyRef Name="MAV_MaquinaVersionId" />
+      </Principal>
+      <Dependent Role="ValidacionMaq_VER">
+        <PropertyRef Name="VAM_MaquinaVersionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VERSION_SERVICIOS_MODULO">
+    <End Role="Modulo_VER" Type="ModeloVersion.Store.Modulo_VER" Multiplicity="1" />
+    <End Role="VersionServicios_VER" Type="ModeloVersion.Store.VersionServicios_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo_VER">
+        <PropertyRef Name="MOD_IdModulo" />
+      </Principal>
+      <Dependent Role="VersionServicios_VER">
+        <PropertyRef Name="VES_IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VERSION_SERVICIOS_VERSION">
+    <End Role="Version_VER" Type="ModeloVersion.Store.Version_VER" Multiplicity="1" />
+    <End Role="VersionServicios_VER" Type="ModeloVersion.Store.VersionServicios_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Version_VER">
+        <PropertyRef Name="VER_IdVersion" />
+      </Principal>
+      <Dependent Role="VersionServicios_VER">
+        <PropertyRef Name="VES_IdVersion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VersionCliente_VER_ClienteCredito_CLI">
+    <End Role="ClienteCredito_CLI" Type="ModeloVersion.Store.ClienteCredito_CLI" Multiplicity="1" />
+    <End Role="VersionCliente_VER" Type="ModeloVersion.Store.VersionCliente_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteCredito_CLI">
+        <PropertyRef Name="CLI_IdCliente" />
+      </Principal>
+      <Dependent Role="VersionCliente_VER">
+        <PropertyRef Name="VEC_IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VersionCliente_VER_Version_VER">
+    <End Role="Version_VER" Type="ModeloVersion.Store.Version_VER" Multiplicity="1" />
+    <End Role="VersionCliente_VER" Type="ModeloVersion.Store.VersionCliente_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Version_VER">
+        <PropertyRef Name="VER_IdVersion" />
+      </Principal>
+      <Dependent Role="VersionCliente_VER">
+        <PropertyRef Name="VEC_IdVersion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VersionGestion_VER_Gestion_ARE">
+    <End Role="Gestion_ARE" Type="ModeloVersion.Store.Gestion_ARE" Multiplicity="1" />
+    <End Role="VersionGestion_VER" Type="ModeloVersion.Store.VersionGestion_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gestion_ARE">
+        <PropertyRef Name="GES_CodigoGestion" />
+      </Principal>
+      <Dependent Role="VersionGestion_VER">
+        <PropertyRef Name="VEG_CodigoGestion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VersionGestion_VER_Version_VER">
+    <End Role="Version_VER" Type="ModeloVersion.Store.Version_VER" Multiplicity="1" />
+    <End Role="VersionGestion_VER" Type="ModeloVersion.Store.VersionGestion_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Version_VER">
+        <PropertyRef Name="VER_IdVersion" />
+      </Principal>
+      <Dependent Role="VersionGestion_VER">
+        <PropertyRef Name="VEG_IdVersion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VersionRegionalAdmin_VER_RegionalAdministrativa_PUA">
+    <End Role="RegionalAdministrativa_PUA" Type="ModeloVersion.Store.RegionalAdministrativa_PUA" Multiplicity="1" />
+    <End Role="VersionRegionalAdmin_VER" Type="ModeloVersion.Store.VersionRegionalAdmin_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegionalAdministrativa_PUA">
+        <PropertyRef Name="REA_IdRegionalAdm" />
+      </Principal>
+      <Dependent Role="VersionRegionalAdmin_VER">
+        <PropertyRef Name="VRA_IdRegionalAdm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VersionRegionalAdmin_VER_Version_VER">
+    <End Role="Version_VER" Type="ModeloVersion.Store.Version_VER" Multiplicity="1" />
+    <End Role="VersionRegionalAdmin_VER" Type="ModeloVersion.Store.VersionRegionalAdmin_VER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Version_VER">
+        <PropertyRef Name="VER_IdVersion" />
+      </Principal>
+      <Dependent Role="VersionRegionalAdmin_VER">
+        <PropertyRef Name="VRA_IdVersion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

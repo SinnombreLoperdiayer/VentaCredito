@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.RURutaOptimaCalculada">
+    <Position X="0.75" Y="0.75" Width="2.25" />
+    <AssociationLine Name="CaminoMasLargo" Type="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Camino">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.39" Y="0.102" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgQAAAA=</HashCode>
+      <FileName>Rutas\Optimizacion\RURutaOptimaCalculada.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CaminoMasCorto" />
+      <Property Name="CaminoMasLargo" />
+      <Property Name="Destino" />
+      <Property Name="Origen" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Vertice">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rutas\Optimizacion\Vertice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Frecuencia">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Rutas\Optimizacion\Frecuencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Ruta">
+    <Position X="6.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAAQAAEA=</HashCode>
+      <FileName>Rutas\Optimizacion\RutaArista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Camino">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rutas\Optimizacion\Camino.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CostosAristas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Arista">
+    <Position X="5" Y="3.25" Width="2" />
+    <AssociationLine Name="VerticeOrigen" Type="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Vertice">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.182" Y="0.477" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="VerticeDestino" Type="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Vertice">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.089" Y="0.362" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAABAAAAAAAAAAAAAAAgAgAAAAAAQAAAAA=</HashCode>
+      <FileName>Rutas\Optimizacion\Arista.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="VerticeOrigen" />
+      <Property Name="VerticeDestino" />
+      <Property Name="RutaArista" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Frecuencias" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.CostoArista">
+    <Position X="1" Y="5.5" Width="2" />
+    <AssociationLine Name="Arista" Type="CO.Servidor.Servicios.ContratoDatos.Rutas.Optimizacion.Arista" ManuallyRouted="true">
+      <Path>
+        <Point X="3" Y="6.34" />
+        <Point X="4.562" Y="6.34" />
+        <Point X="4.562" Y="3.802" />
+        <Point X="5" Y="3.802" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAABAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Rutas\Optimizacion\CostoArista.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Arista" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

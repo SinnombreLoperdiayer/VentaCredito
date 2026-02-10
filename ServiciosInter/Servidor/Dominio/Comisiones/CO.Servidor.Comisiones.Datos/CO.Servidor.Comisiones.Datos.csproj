@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53A784F8-515B-432B-A035-F6D80EA33F71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.Comisiones.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.Comisiones.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CMRepositorio.cs" />
+    <Compile Include="Modelo\AgenciasDeCentroLogistico_VPUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Agencia_PUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroLogisDeRegionalAdmi_VPUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroLogistico_PUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioComiFijaHist_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioComiFijas_VCOM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioComiFija_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioServicioDia_PUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioServicioHist_PUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioServicio_PUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioSrvComiHist_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioSrvComi_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicioSrvDescuento_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServiciosSrvUniNeg_VCOM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicios_PUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroSrvAdministComiHist_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroSrvComiFijaContrato_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroSrvComiFijaContrHist_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroSrvSrvDescuentoHist_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroSvcAdministradoComi_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroSvcComiFijaContrato_VCOM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CMComDescCentSvcSvc.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ComiAdmonCentroSvc_CAJ.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ComisionesServicioCenSrv_VCOM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ComisionFijaCentroServicios_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ComisionFijaCentroSvcContrato_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ComisionRealizadaPuntoYResponsable_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ComisionSrvCentroSrvAdmin_VCOM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DescuentosServicioCenSrv_VCOM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Dia_PAR.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\LiquidacionComisiones_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloComisiones.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloComisiones.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloComisiones.Context.Extensions.cs">
+      <DependentUpon>ModeloComisiones.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloComisiones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloComisiones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloComisiones.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloComisiones.Views.cs" />
+    <Compile Include="Modelo\ObtenerComCenSerServicio.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ObtenerComiCentroServicio.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerComiAdmonCentroSvc_CAJ_Result.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PuntosDeAgencia_VPUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PuntoServicio_PUA.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoComisionFija_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoComision_COM.cs">
+      <DependentUpon>ModeloComisiones.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloComisiones.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloComisiones.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo\ModeloComisiones.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloComisiones.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloComisiones.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloComisiones.msl" />
+    <EmbeddedResource Include="Modelo\ModeloComisiones.ssdl" />
+    <None Include="Modelo\ModeloComisiones.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloComisiones.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512c6601-1c3c-455a-a91a-10906c2f2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.Comisiones.Comun\CO.Servidor.Comisiones.Comun.csproj">
+      <Project>{85DC8DCA-ADEC-4F61-91B4-581A09B344D7}</Project>
+      <Name>CO.Servidor.Comisiones.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloComisiones.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloComisiones.csdl" "/inmsl:$(TargetDir)Modelo/ModeloComisiones.msl" "/outviews:$(ProjectDir)Modelo/ModeloComisiones.Views.cs"
+
+XCOPY "$(TargetDir)Modelo/ModeloComisiones.csdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloComisiones.ssdl" "$(ProjectDir)Modelo" /F /R /Y 
+XCOPY "$(TargetDir)Modelo/ModeloComisiones.msl" "$(ProjectDir)Modelo" /F /R /Y
+</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

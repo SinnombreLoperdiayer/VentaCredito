@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99378C91-8DFB-4542-B59A-B296179DF35A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.ControlCuentas</RootNamespace>
+    <AssemblyName>CO.Servidor.ControlCuentas</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Integraciones.Novasoft.Proxies">
+      <HintPath>..\..\..\..\ReferenciasExternas\Integraciones.Novasoft.Proxies.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCControlCuentas.cs" />
+    <Compile Include="CCAdministradorControlCuentas.cs" />
+    <Compile Include="CCControlCuentasExt.cs" />
+    <Compile Include="CCFachadaControlCuentas.cs" />
+    <Compile Include="CCNovedadesApp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Seguridad\Framework.Servidor.Seguridad.csproj">
+      <Project>{7DBD8056-6F8C-408C-AA1A-18D254B03495}</Project>
+      <Name>Framework.Servidor.Seguridad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Cajas\CO.Servidor.Cajas\CO.Servidor.Cajas.csproj">
+      <Project>{F7057F04-0407-4F4A-939D-9FA5E5EF727D}</Project>
+      <Name>CO.Servidor.Cajas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CentroServicios\CO.Servidor.CentroServicios\CO.Servidor.CentroServicios.csproj">
+      <Project>{A6791EAB-3F62-4C0A-8021-67A198BAF293}</Project>
+      <Name>CO.Servidor.CentroServicios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Clientes\CO.Servidor.Clientes\CO.Servidor.Clientes.csproj">
+      <Project>{A238D8A5-D39E-4903-8121-F64F58800069}</Project>
+      <Name>CO.Servidor.Clientes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.AdmEstadosGuia\CO.Servidor.Dominio.Comun.AdmEstadosGuia.csproj">
+      <Project>{0FC1794B-1536-4BBC-9641-B91AC94A5A3D}</Project>
+      <Name>CO.Servidor.Dominio.Comun.AdmEstadosGuia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun.Middleware\CO.Servidor.Dominio.Comun.Middleware.csproj">
+      <Project>{826B7134-398B-474F-9C60-3F433F0441F1}</Project>
+      <Name>CO.Servidor.Dominio.Comun.Middleware</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comun\CO.Servidor.Dominio.Comun\CO.Servidor.Dominio.Comun.csproj">
+      <Project>{512C6601-1C3C-455A-A91A-10906C2F2245}</Project>
+      <Name>CO.Servidor.Dominio.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OperacionUrbana\CO.Servidor.OperacionUrbana\CO.Servidor.OperacionUrbana.csproj">
+      <Project>{D0ED71AE-25C4-4DBB-9B85-38CCAA952590}</Project>
+      <Name>CO.Servidor.OperacionUrbana</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Raps\CO.Servidor.Raps.Comun.Integraciones\CO.Servidor.Raps.Comun.Integraciones.csproj">
+      <Project>{CEF6870F-E113-43F0-9ECD-6B8C1386ACA8}</Project>
+      <Name>CO.Servidor.Raps.Comun.Integraciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Raps\CO.Servidor.RAPS.Reglas.Parametros\CO.Servidor.RAPS.Reglas.Parametros.csproj">
+      <Project>{55BAEC43-DDED-4A87-B517-13C0B52BE6BB}</Project>
+      <Name>CO.Servidor.RAPS.Reglas.Parametros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Raps\CO.Servidor.Raps.Reglas.Responsables.Manuales\CO.Servidor.RAPS.Reglas.ResponsablesManuales.csproj">
+      <Project>{AFC4E497-611A-4B07-83BC-CB53916BB3B9}</Project>
+      <Name>CO.Servidor.RAPS.Reglas.ResponsablesManuales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Suministros\CO.Servidor.Suministros\CO.Servidor.Suministros.csproj">
+      <Project>{D1B97DC4-4070-4543-A6FE-61BB48B16FB2}</Project>
+      <Name>CO.Servidor.Suministros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.ControlCuentas.Comun\CO.Servidor.ControlCuentas.Comun.csproj">
+      <Project>{5582183F-C221-4A34-B938-298DEEDFA282}</Project>
+      <Name>CO.Servidor.ControlCuentas.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.ControlCuentas.Datos\CO.Servidor.ControlCuentas.Datos.csproj">
+      <Project>{F157C4C8-1456-43CF-BFDA-AA886246EBCA}</Project>
+      <Name>CO.Servidor.ControlCuentas.Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dgClasesControlCuentas.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

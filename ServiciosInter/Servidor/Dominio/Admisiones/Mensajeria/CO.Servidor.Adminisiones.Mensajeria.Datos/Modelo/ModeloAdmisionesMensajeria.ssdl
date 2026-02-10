@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloAdmisionesMensajeria.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloAdmisionesMensajeriaStoreContainer">
+    <EntitySet Name="AdminisionMensajeriaGuiaRelacion_MEN" EntityType="ModeloAdmisionesMensajeria.Store.AdminisionMensajeriaGuiaRelacion_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdmisionMensajeria_MEN" EntityType="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdmisionNotificaciones_MEN" EntityType="ModeloAdmisionesMensajeria.Store.AdmisionNotificaciones_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdmisionRotulos_MEN" EntityType="ModeloAdmisionesMensajeria.Store.AdmisionRotulos_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlCobrosVencidosxCol_MEN" EntityType="ModeloAdmisionesMensajeria.Store.AlCobrosVencidosxCol_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AlmacenGuia_LOI" EntityType="ModeloAdmisionesMensajeria.Store.AlmacenGuia_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadoGuia_MEN" EntityType="ModeloAdmisionesMensajeria.Store.EstadoGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadoGuiaTraza_MEN" EntityType="ModeloAdmisionesMensajeria.Store.EstadoGuiaTraza_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EvidenciaDevolucion_MEN" EntityType="ModeloAdmisionesMensajeria.Store.EvidenciaDevolucion_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidad_PAR" EntityType="ModeloAdmisionesMensajeria.Store.Localidad_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MensajeriaConvenioConvenio_MEN" EntityType="ModeloAdmisionesMensajeria.Store.MensajeriaConvenioConvenio_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MensajeriaConvenioPeaton_MEN" EntityType="ModeloAdmisionesMensajeria.Store.MensajeriaConvenioPeaton_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoAnulacionGuia_MEN" EntityType="ModeloAdmisionesMensajeria.Store.MotivoAnulacionGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoGuia_MEN" EntityType="ModeloAdmisionesMensajeria.Store.MotivoGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoGuiaCRC_MEN" EntityType="ModeloAdmisionesMensajeria.Store.MotivoGuiaCRC_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoGuiaTransicionEstado_MEN" EntityType="ModeloAdmisionesMensajeria.Store.MotivoGuiaTransicionEstado_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoNoUsoBolsaSegurid_MEN" EntityType="ModeloAdmisionesMensajeria.Store.MotivoNoUsoBolsaSegurid_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NovedadGuia_MEN" EntityType="ModeloAdmisionesMensajeria.Store.NovedadGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NovedadGuiaDatosAdicionale_MEN" EntityType="ModeloAdmisionesMensajeria.Store.NovedadGuiaDatosAdicionale_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ObjetoCirculacionProhibida_MEN" EntityType="ModeloAdmisionesMensajeria.Store.ObjetoCirculacionProhibida_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrdenServicioMasivo_MEN" EntityType="ModeloAdmisionesMensajeria.Store.OrdenServicioMasivo_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrdenServicioMasivoGuia_MEN" EntityType="ModeloAdmisionesMensajeria.Store.OrdenServicioMasivoGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParametrosAdmisiones_MEN" EntityType="ModeloAdmisionesMensajeria.Store.ParametrosAdmisiones_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanillaCertificacionesGuia_LOI" EntityType="ModeloAdmisionesMensajeria.Store.PlanillaCertificacionesGuia_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RecibidoGuia_LOI" EntityType="ModeloAdmisionesMensajeria.Store.RecibidoGuia_LOI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEntrega_MEN" EntityType="ModeloAdmisionesMensajeria.Store.TipoEntrega_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoEvidenciaDevolucion_MEN" EntityType="ModeloAdmisionesMensajeria.Store.TipoEvidenciaDevolucion_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FormasPagoGuia_VMEN" EntityType="ModeloAdmisionesMensajeria.Store.FormasPagoGuia_VMEN" store:Type="Views" store:Schema="dbo" store:Name="FormasPagoGuia_VMEN">
+      <DefiningQuery>SELECT 
+      [FormasPagoGuia_VMEN].[AGF_IdAdminisionMensajeria] AS [AGF_IdAdminisionMensajeria], 
+      [FormasPagoGuia_VMEN].[AGF_IdFormaPago] AS [AGF_IdFormaPago], 
+      [FormasPagoGuia_VMEN].[AGF_Valor] AS [AGF_Valor], 
+      [FormasPagoGuia_VMEN].[FOP_IdFormaPago] AS [FOP_IdFormaPago], 
+      [FormasPagoGuia_VMEN].[FOP_Descripcion] AS [FOP_Descripcion], 
+      [FormasPagoGuia_VMEN].[FOP_AceptaMixto] AS [FOP_AceptaMixto]
+      FROM [dbo].[FormasPagoGuia_VMEN] AS [FormasPagoGuia_VMEN]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AdminisionMensajeriaGuiaRelacion_MEN_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_AdminisionMensajeriaGuiaRelacion_MEN_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="AdminisionMensajeriaGuiaRelacion_MEN" EntitySet="AdminisionMensajeriaGuiaRelacion_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdminisionMensajeriaGuiaRelacion_MEN_AdmisionMensajeria_MEN1" Association="ModeloAdmisionesMensajeria.Store.FK_AdminisionMensajeriaGuiaRelacion_MEN_AdmisionMensajeria_MEN1">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="AdminisionMensajeriaGuiaRelacion_MEN" EntitySet="AdminisionMensajeriaGuiaRelacion_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdmisionNotificaciones_MEN_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_AdmisionNotificaciones_MEN_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="AdmisionNotificaciones_MEN" EntitySet="AdmisionNotificaciones_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdmisionRotulos_MEN_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_AdmisionRotulos_MEN_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="AdmisionRotulos_MEN" EntitySet="AdmisionRotulos_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadoGuiaTraza_MEN_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_EstadoGuiaTraza_MEN_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="EstadoGuiaTraza_MEN" EntitySet="EstadoGuiaTraza_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="ModeloAdmisionesMensajeria.Store.FK_Localidad_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="ModeloAdmisionesMensajeria.Store.FK_Localidad_PAR_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="ModeloAdmisionesMensajeria.Store.FK_Localidad_PAR_Localidad_PAR2">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MensajeriaConvenioConvenio_MEN_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_MensajeriaConvenioConvenio_MEN_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="MensajeriaConvenioConvenio_MEN" EntitySet="MensajeriaConvenioConvenio_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MensajeriaConvenioPeaton_MEN_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_MensajeriaConvenioPeaton_MEN_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="MensajeriaConvenioPeaton_MEN" EntitySet="MensajeriaConvenioPeaton_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotivoGuia_MEN_MotivoGuiaCRC_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_MotivoGuia_MEN_MotivoGuiaCRC_MEN">
+      <End Role="MotivoGuiaCRC_MEN" EntitySet="MotivoGuiaCRC_MEN" />
+      <End Role="MotivoGuia_MEN" EntitySet="MotivoGuia_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN">
+      <End Role="EstadoGuia_MEN" EntitySet="EstadoGuia_MEN" />
+      <End Role="MotivoGuiaTransicionEstado_MEN" EntitySet="MotivoGuiaTransicionEstado_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN1" Association="ModeloAdmisionesMensajeria.Store.FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN1">
+      <End Role="EstadoGuia_MEN" EntitySet="EstadoGuia_MEN" />
+      <End Role="MotivoGuiaTransicionEstado_MEN" EntitySet="MotivoGuiaTransicionEstado_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MotivoGuiaTranscionEstado_MEN_MotivoGuia_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_MotivoGuiaTranscionEstado_MEN_MotivoGuia_MEN">
+      <End Role="MotivoGuia_MEN" EntitySet="MotivoGuia_MEN" />
+      <End Role="MotivoGuiaTransicionEstado_MEN" EntitySet="MotivoGuiaTransicionEstado_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NovedadGuia_MEN_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_NovedadGuia_MEN_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="NovedadGuia_MEN" EntitySet="NovedadGuia_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NovedadGuiaDatosAdicionale_MEN_NovedadGuia_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_NovedadGuiaDatosAdicionale_MEN_NovedadGuia_MEN">
+      <End Role="NovedadGuia_MEN" EntitySet="NovedadGuia_MEN" />
+      <End Role="NovedadGuiaDatosAdicionale_MEN" EntitySet="NovedadGuiaDatosAdicionale_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrdenServicioMasivoGuia_MEN_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_OrdenServicioMasivoGuia_MEN_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="OrdenServicioMasivoGuia_MEN" EntitySet="OrdenServicioMasivoGuia_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrdenServicioMasivoGuia_MEN_OrdenServicioMasivo_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_OrdenServicioMasivoGuia_MEN_OrdenServicioMasivo_MEN">
+      <End Role="OrdenServicioMasivo_MEN" EntitySet="OrdenServicioMasivo_MEN" />
+      <End Role="OrdenServicioMasivoGuia_MEN" EntitySet="OrdenServicioMasivoGuia_MEN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecibidoGuia_LOI_AdmisionMensajeria_MEN" Association="ModeloAdmisionesMensajeria.Store.FK_RecibidoGuia_LOI_AdmisionMensajeria_MEN">
+      <End Role="AdmisionMensajeria_MEN" EntitySet="AdmisionMensajeria_MEN" />
+      <End Role="RecibidoGuia_LOI" EntitySet="RecibidoGuia_LOI" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AdminisionMensajeriaGuiaRelacion_MEN">
+    <Key>
+      <PropertyRef Name="AGR_NumeroRexpedicion" />
+    </Key>
+    <Property Name="AGR_NumeroRexpedicion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="AGR_IdAdminisionMensajeriaOriginal" Type="bigint" Nullable="false" />
+    <Property Name="AGR_IdAdminisionMensajeriaNueva" Type="bigint" Nullable="false" />
+    <Property Name="AGR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="AGR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AdmisionMensajeria_MEN">
+    <Key>
+      <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+    </Key>
+    <Property Name="ADM_IdAdminisionMensajeria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ADM_PrefijoNumeroGuia" Type="varchar" MaxLength="8" />
+    <Property Name="ADM_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="ADM_DigitoVerificacion" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_GuidDeChequeo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ADM_EsAutomatico" Type="bit" Nullable="false" />
+    <Property Name="ADM_IdUnidadNegocio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_IdServicio" Type="int" Nullable="false" />
+    <Property Name="ADM_NombreServicio" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADM_IdTipoEntrega" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADM_DescripcionTipoEntrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADM_IdCentroServicioOrigen" Type="bigint" Nullable="false" />
+    <Property Name="ADM_NombreCentroServicioOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="ADM_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdPaisOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_NombrePaisOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdCiudadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_NombreCiudadOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_CodigoPostalOrigen" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADM_IdPaisDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_NombrePaisDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADM_NombreCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_CodigoPostalDestino" Type="varchar" MaxLength="12" />
+    <Property Name="ADM_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADM_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_TipoCliente" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADM_DiasDeEntrega" Type="smallint" Nullable="false" />
+    <Property Name="ADM_FechaEstimadaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="ADM_ValorAdmision" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_ValorTotal" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_ValorTotalImpuestos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_ValorTotalRetenciones" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_ValorPrimaSeguro" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_ValorEmpaque" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_ValorAdicionales" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_ValorDeclarado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_DiceContener" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADM_Observaciones" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_NumeroPieza" Type="smallint" Nullable="false" />
+    <Property Name="ADM_TotalPiezas" Type="smallint" Nullable="false" />
+    <Property Name="ADM_FechaAdmision" Type="datetime" Nullable="false" />
+    <Property Name="ADM_Peso" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_PesoLiqVolumetrico" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_PesoLiqMasa" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADM_EsPesoVolumetrico" Type="bit" Nullable="false" />
+    <Property Name="ADM_NumeroBolsaSeguridad" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADM_IdMotivoNoUsoBolsaSegurida" Type="smallint" />
+    <Property Name="ADM_MotivoNoUsoBolsaSeguriDesc" Type="varchar" MaxLength="25" />
+    <Property Name="ADM_NoUsoaBolsaSeguridadObserv" Type="varchar" MaxLength="100" />
+    <Property Name="ADM_IdUnidadMedida" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="ADM_Largo" Type="numeric" Nullable="false" Precision="6" Scale="3" />
+    <Property Name="ADM_Ancho" Type="numeric" Nullable="false" Precision="6" Scale="3" />
+    <Property Name="ADM_Alto" Type="numeric" Nullable="false" Precision="6" Scale="3" />
+    <Property Name="ADM_EsRecomendado" Type="bit" Nullable="false" />
+    <Property Name="ADM_IdTipoEnvio" Type="smallint" Nullable="false" />
+    <Property Name="ADM_NombreTipoEnvio" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADM_AdmisionSistemaMensajero" Type="bit" Nullable="false" />
+    <Property Name="ADM_EsAlCobro" Type="bit" Nullable="false" />
+    <Property Name="ADM_EstaPagada" Type="bit" Nullable="false" />
+    <Property Name="ADM_FechaPago" Type="datetime" Nullable="false" />
+    <Property Name="ADM_IdTipoIdentificacionRemitente" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADM_IdRemitente" Type="varchar" MaxLength="25" />
+    <Property Name="ADM_NombreRemitente" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="ADM_TelefonoRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADM_DireccionRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADM_IdTipoIdentificacionDestinatario" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADM_IdDestinatario" Type="varchar" MaxLength="25" />
+    <Property Name="ADM_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="ADM_IdMensajero" Type="bigint" Nullable="false" />
+    <Property Name="ADM_NombreMensajero" Type="varchar" MaxLength="150" />
+    <Property Name="ADM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ADM_CreadoPor" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADM_EsSupervisada" Type="bit" Nullable="false" />
+    <Property Name="ADM_FechaSupervision" Type="datetime" Nullable="false" />
+    <Property Name="ADM_EmailRemitente" Type="varchar" MaxLength="50" />
+    <Property Name="ADM_EmailDestinatario" Type="varchar" MaxLength="50" />
+    <Property Name="ADM_CantidadReintentosEntrega" Type="int" Nullable="false" />
+    <Property Name="ADM_NotificarEntregaPorEmail" Type="bit" />
+    <Property Name="ADM_IdEstadoGuiaLog" Type="bigint" Nullable="false" />
+    <Property Name="ADM_EstaEntregada" Type="bit" Nullable="false" />
+    <Property Name="ADM_FechaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="ADM_IdEstadoGuiaLogGestion" Type="bigint" Nullable="false" />
+    <Property Name="ADM_NoPedido" Type="varchar" MaxLength="30" />
+    <Property Name="ADM_IdEstadoGuia" Type="smallint" />
+    <Property Name="ADM_DescripcionEstado" Type="varchar" MaxLength="25" />
+    <Property Name="ADM_IdLocalidadEstado" Type="varchar" MaxLength="8" />
+    <Property Name="ADM_NombreLocalidadEstado" Type="varchar" MaxLength="100" />
+    <Property Name="ADM_FechaGrabacionEstado" Type="datetime" />
+    <Property Name="ADM_FechaEstimadaEntregaNew" Type="datetime" />
+    <Property Name="ADM_IdCentroServicioEstado" Type="bigint" />
+    <Property Name="ADM_NombreCentroServicioEstado" Type="varchar" MaxLength="250" />
+    <Property Name="ADM_IdMovimientoInventario" Type="bigint" />
+    <Property Name="ADM_Impresa" Type="bit" />
+  </EntityType>
+  <EntityType Name="AdmisionNotificaciones_MEN">
+    <Key>
+      <PropertyRef Name="ADN_IdAdminisionMensajeria" />
+    </Key>
+    <Property Name="ADN_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="ADN_TipoIdDestinatario" Type="varchar" MaxLength="3" />
+    <Property Name="ADN_IdDestinatario" Type="varchar" MaxLength="25" />
+    <Property Name="ADN_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADN_Apellido1Destinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADN_Apellido2Destinatario" Type="varchar" MaxLength="50" />
+    <Property Name="ADN_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADN_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADN_EmailDestinatario" Type="varchar" MaxLength="50" />
+    <Property Name="ADN_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADN_NombreCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADN_ReclamaEnOficina" Type="bit" Nullable="false" />
+    <Property Name="ADN_IdTipoDestino" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADN_TipoDestino" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ADN_CreadoPor" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADN_NumeroGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="ADN_EstaDevuelta" Type="bit" />
+  </EntityType>
+  <EntityType Name="AdmisionRotulos_MEN">
+    <Key>
+      <PropertyRef Name="ADR_IdAdminisionMensajeria" />
+      <PropertyRef Name="ADR_NumeroPieza" />
+    </Key>
+    <Property Name="ADR_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="ADR_NumeroPieza" Type="smallint" Nullable="false" />
+    <Property Name="ADR_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="ADR_TotalPiezas" Type="smallint" Nullable="false" />
+    <Property Name="ADR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ADR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AlCobrosVencidosxCol_MEN">
+    <Key>
+      <PropertyRef Name="AVC_IdAlCobro" />
+    </Key>
+    <Property Name="AVC_IdAlCobro" Type="bigint" Nullable="false" />
+    <Property Name="AVC_NumeroAlCobro" Type="bigint" Nullable="false" />
+    <Property Name="AVC_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="AVC_IdCSDestinoAlCobro" Type="bigint" Nullable="false" />
+    <Property Name="AVC_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="AVC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="AVC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AlmacenGuia_LOI">
+    <Key>
+      <PropertyRef Name="ARG_IdArchivo" />
+    </Key>
+    <Property Name="ARG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="ARG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="ARG_Caja" Type="bigint" Nullable="false" />
+    <Property Name="ARG_Lote" Type="int" Nullable="false" />
+    <Property Name="ARG_Posicion" Type="int" Nullable="false" />
+    <Property Name="ARG_DatosEdicion" Type="char" MaxLength="3" />
+    <Property Name="ARG_DatosEntrega" Type="char" MaxLength="3" />
+    <Property Name="ARG_EstadoFisicoGuia" Type="char" MaxLength="3" />
+    <Property Name="ARG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ARG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ARG_FechaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="ARG_FechaArchivo" Type="datetime" Nullable="false" />
+    <Property Name="ARG_UsuarioArchiva" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ARG_IdCentroLogArchiva" Type="bigint" />
+    <Property Name="ARG_Decodificada" Type="bit" />
+    <Property Name="ARG_Manual" Type="bit" />
+    <Property Name="ARG_IdArchivo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ARG_CarpetaImagen" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstadoGuia_MEN">
+    <Key>
+      <PropertyRef Name="ESG_IdEstadoGuia" />
+    </Key>
+    <Property Name="ESG_IdEstadoGuia" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ESG_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ESG_EsVisible" Type="bit" Nullable="false" />
+    <Property Name="ESG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ESG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ESG_PermiteDevolver" Type="bit" />
+  </EntityType>
+  <EntityType Name="EstadoGuiaTraza_MEN">
+    <Key>
+      <PropertyRef Name="EGT_IdEstadoGuiaLog" />
+    </Key>
+    <Property Name="EGT_IdEstadoGuiaLog" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EGT_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="EGT_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="EGT_IdEstadoGuia" Type="smallint" Nullable="false" />
+    <Property Name="EGT_DescripcionEstado" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="EGT_EsVisible" Type="bit" Nullable="false" />
+    <Property Name="EGT_Observacion" Type="varchar" MaxLength="250" />
+    <Property Name="EGT_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="EGT_NombreLocalidad" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="EGT_IdModulo" Type="nchar" MaxLength="10" />
+    <Property Name="EGT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="EGT_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="EGT_IdCentroServicio" Type="bigint" />
+    <Property Name="EGT_NombreCentroServicio" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="EvidenciaDevolucion_MEN">
+    <Key>
+      <PropertyRef Name="VOD_IdEvidenciaDevolucion" />
+    </Key>
+    <Property Name="VOD_IdEvidenciaDevolucion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="VOD_IdEstadoGuiaLog" Type="bigint" Nullable="false" />
+    <Property Name="VOD_NumeroEvidencia" Type="bigint" Nullable="false" />
+    <Property Name="VOD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="VOD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VOD_IdTipoEvidenciaDevolucion" Type="smallint" Nullable="false" />
+    <Property Name="VOD_EstaDigitalizado" Type="bit" Nullable="false" />
+    <Property Name="VOD_DescripcionTipoEvidenciaDevolucion" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Localidad_PAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LOC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="LOC_DHLActivo" Type="bit" Nullable="false" />
+    <Property Name="LOC_AplicaDireccionEstandar" Type="bit" Nullable="false" />
+    <Property Name="LOC_Indicativo" Type="varchar" MaxLength="2" />
+    <Property Name="LOC_RadioRecogida" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MensajeriaConvenioConvenio_MEN">
+    <Key>
+      <PropertyRef Name="MCC_IdAdminisionMensajeria" />
+    </Key>
+    <Property Name="MCC_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="MCC_FacturaRemitente" Type="bit" Nullable="false" />
+    <Property Name="MCC_IdConvenioRemitente" Type="int" Nullable="false" />
+    <Property Name="MCC_NitConvenioRemitente" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MCC_RazonSocialConvenioRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MCC_IdContratoConvenioRemite" Type="int" Nullable="false" />
+    <Property Name="MCC_IdConvenioDestinatario" Type="int" Nullable="false" />
+    <Property Name="MCC_NitConvenioDestinatario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MCC_RazonSocialConDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MCC_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MCC_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="MCC_EmailDestinatario" Type="varchar" MaxLength="50" />
+    <Property Name="MCC_IdSucursalRecogida" Type="int" />
+    <Property Name="MCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MCC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MensajeriaConvenioPeaton_MEN">
+    <Key>
+      <PropertyRef Name="MCP_IdAdminisionMensajeria" />
+    </Key>
+    <Property Name="MCP_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="MCP_IdConvenioRemitente" Type="int" Nullable="false" />
+    <Property Name="MCP_NitConvenioRemitente" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MCP_RazonSocialConvenioRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MCP_IdContratoConvenioRemite" Type="int" Nullable="false" />
+    <Property Name="MCP_IdTipoIdDestinatario" Type="varchar" MaxLength="3" />
+    <Property Name="MCP_IdDestinatario" Type="varchar" MaxLength="25" />
+    <Property Name="MCP_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MCP_Apellido1Destinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MCP_Apellido2Destinatario" Type="varchar" MaxLength="50" />
+    <Property Name="MCP_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MCP_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="MCP_EmailDestinatario" Type="varchar" MaxLength="50" />
+    <Property Name="MCP_IdSucursalRecogida" Type="int" />
+    <Property Name="MCP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MCP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MotivoAnulacionGuia_MEN">
+    <Key>
+      <PropertyRef Name="MAG_IdMotivoAnulaciónGuia" />
+    </Key>
+    <Property Name="MAG_IdMotivoAnulaciónGuia" Type="smallint" Nullable="false" />
+    <Property Name="MAG_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MotivoGuia_MEN">
+    <Key>
+      <PropertyRef Name="MOG_IdMotivoGuia" />
+    </Key>
+    <Property Name="MOG_IdMotivoGuia" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MOG_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MOG_IdTipoMotivoGuia" Type="smallint" Nullable="false" />
+    <Property Name="MOG_EsVisible" Type="bit" Nullable="false" />
+    <Property Name="MOG_SeReporta" Type="bit" Nullable="false" />
+    <Property Name="MOG_SolicitaEscaneo" Type="bit" Nullable="false" />
+    <Property Name="MOG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MOG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MOG_IdMotivoGuiaCRC" Type="smallint" Nullable="false" />
+    <Property Name="MOG_CausaSupervision" Type="bit" Nullable="false" />
+    <Property Name="MOG_NombreAssembly" Type="varchar" MaxLength="100" />
+    <Property Name="MOG_Namespace" Type="varchar" MaxLength="100" />
+    <Property Name="MOG_NombreClase" Type="varchar" MaxLength="50" />
+    <Property Name="MOG_TiempoAfectacion" Type="smallint" Nullable="false" />
+    <Property Name="MOG_IntentoEntrega" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MotivoGuiaCRC_MEN">
+    <Key>
+      <PropertyRef Name="MGC_IdMotivoGuiaCRC" />
+    </Key>
+    <Property Name="MGC_IdMotivoGuiaCRC" Type="smallint" Nullable="false" />
+    <Property Name="MGC_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MGC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MGC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MotivoGuiaTransicionEstado_MEN">
+    <Key>
+      <PropertyRef Name="MGT_IdMotivoGuiaTransicionEsta" />
+    </Key>
+    <Property Name="MGT_IdMotivoGuiaTransicionEsta" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MGT_IdMotivoGuia" Type="smallint" Nullable="false" />
+    <Property Name="MGT_IdEstadoGuiaDesde" Type="smallint" Nullable="false" />
+    <Property Name="MGT_IdEstadoGuiaHasta" Type="smallint" Nullable="false" />
+    <Property Name="MGT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MGT_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="MGT_IntentoEntrega" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MotivoNoUsoBolsaSegurid_MEN">
+    <Key>
+      <PropertyRef Name="MAB_IdMotivoNoUsoBolsaSegurida" />
+    </Key>
+    <Property Name="MAB_IdMotivoNoUsoBolsaSegurida" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAB_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MAB_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAB_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="NovedadGuia_MEN">
+    <Key>
+      <PropertyRef Name="NOG_IdNovedadGuia" />
+    </Key>
+    <Property Name="NOG_IdNovedadGuia" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="NOG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="NOG_IdTipoNovedad" Type="smallint" Nullable="false" />
+    <Property Name="NOG_TipoResponsable" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NOG_NombreResponsable" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="NOG_IdentificacionResponsable" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="NOG_CargoResponsable" Type="varchar" MaxLength="100" />
+    <Property Name="NOG_Observacion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="NOG_QuienSolicita" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="NOG_IdModulo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="NOG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="NOG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NOG_ErrorDocFisico" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NovedadGuiaDatosAdicionale_MEN">
+    <Key>
+      <PropertyRef Name="NDA_IdNoveGuiaDatosAdicionales" />
+    </Key>
+    <Property Name="NDA_IdNoveGuiaDatosAdicionales" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NDA_IdNovedadGuia" Type="bigint" Nullable="false" />
+    <Property Name="NDA_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="NDA_Valor" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="NDA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="NDA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ObjetoCirculacionProhibida_MEN">
+    <Key>
+      <PropertyRef Name="OCP_IdObjetoCiruculaProhibida" />
+    </Key>
+    <Property Name="OCP_IdObjetoCiruculaProhibida" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OCP_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="OCP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="OCP_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="OrdenServicioMasivo_MEN">
+    <Key>
+      <PropertyRef Name="OSM_IdOrdenServicioMasivo" />
+    </Key>
+    <Property Name="OSM_IdOrdenServicioMasivo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OSM_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="OSM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="OSM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="OSM_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="OSM_NombreCentroServicios" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="OSM_IdSucursalCliente" Type="int" />
+    <Property Name="OSM_NombreSucursalCliente" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="OrdenServicioMasivoGuia_MEN">
+    <Key>
+      <PropertyRef Name="OSG_IdAdminisionMensajeria" />
+      <PropertyRef Name="OSG_IdOrdenServicio" />
+    </Key>
+    <Property Name="OSG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="OSG_IdOrdenServicio" Type="bigint" Nullable="false" />
+    <Property Name="OSG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="OSG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="OSG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ParametrosAdmisiones_MEN">
+    <Key>
+      <PropertyRef Name="PAM_IdParametro" />
+    </Key>
+    <Property Name="PAM_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PAM_ValorParametro" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAM_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="PlanillaCertificacionesGuia_LOI">
+    <Key>
+      <PropertyRef Name="PLG_IdPlanillaCertificacionesGuia" />
+    </Key>
+    <Property Name="PLG_IdPlanillaCertificacionesGuia" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PLG_IdPlanillaCertificaciones" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="PLG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdAdminisionGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="PLG_NumeroGuiaInterna" Type="bigint" Nullable="false" />
+    <Property Name="PLG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="PLG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PLG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RecibidoGuia_LOI">
+    <Key>
+      <PropertyRef Name="REG_IdAdminisionMensajeria" />
+    </Key>
+    <Property Name="REG_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="REG_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="REG_RecibidoPor" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REG_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REG_Telefono" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REG_OtrosDatos" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REG_FechaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="REG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoEntrega_MEN">
+    <Key>
+      <PropertyRef Name="TIE_IdTipoEntrega" />
+    </Key>
+    <Property Name="TIE_IdTipoEntrega" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TIE_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TIE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIE_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="anchor" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TipoEvidenciaDevolucion_MEN">
+    <Key>
+      <PropertyRef Name="TIV_IdTipoEvidenciaDevolucion" />
+    </Key>
+    <Property Name="TIV_IdTipoEvidenciaDevolucion" Type="smallint" Nullable="false" />
+    <Property Name="TIV_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TIV_IdSuministro" Type="int" Nullable="false" />
+    <Property Name="TIV_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TIV_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'Icontroller.dbo.FormasPagoGuia_VMEN' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="FormasPagoGuia_VMEN">
+    <Key>
+      <PropertyRef Name="AGF_IdAdminisionMensajeria" />
+      <PropertyRef Name="AGF_IdFormaPago" />
+      <PropertyRef Name="AGF_Valor" />
+      <PropertyRef Name="FOP_IdFormaPago" />
+      <PropertyRef Name="FOP_Descripcion" />
+      <PropertyRef Name="FOP_AceptaMixto" />
+    </Key>
+    <Property Name="AGF_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="AGF_IdFormaPago" Type="smallint" Nullable="false" />
+    <Property Name="AGF_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="FOP_IdFormaPago" Type="smallint" Nullable="false" />
+    <Property Name="FOP_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="FOP_AceptaMixto" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AdminisionMensajeriaGuiaRelacion_MEN_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="AdminisionMensajeriaGuiaRelacion_MEN" Type="ModeloAdmisionesMensajeria.Store.AdminisionMensajeriaGuiaRelacion_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="AdminisionMensajeriaGuiaRelacion_MEN">
+        <PropertyRef Name="AGR_IdAdminisionMensajeriaOriginal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdminisionMensajeriaGuiaRelacion_MEN_AdmisionMensajeria_MEN1">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="AdminisionMensajeriaGuiaRelacion_MEN" Type="ModeloAdmisionesMensajeria.Store.AdminisionMensajeriaGuiaRelacion_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="AdminisionMensajeriaGuiaRelacion_MEN">
+        <PropertyRef Name="AGR_IdAdminisionMensajeriaNueva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdmisionNotificaciones_MEN_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="AdmisionNotificaciones_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionNotificaciones_MEN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="AdmisionNotificaciones_MEN">
+        <PropertyRef Name="ADN_IdAdminisionMensajeria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdmisionRotulos_MEN_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="AdmisionRotulos_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionRotulos_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="AdmisionRotulos_MEN">
+        <PropertyRef Name="ADR_IdAdminisionMensajeria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadoGuiaTraza_MEN_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="EstadoGuiaTraza_MEN" Type="ModeloAdmisionesMensajeria.Store.EstadoGuiaTraza_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="EstadoGuiaTraza_MEN">
+        <PropertyRef Name="EGT_IdAdminisionMensajeria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="ModeloAdmisionesMensajeria.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloAdmisionesMensajeria.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+    <End Role="Localidad_PAR" Type="ModeloAdmisionesMensajeria.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloAdmisionesMensajeria.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+    <End Role="Localidad_PAR" Type="ModeloAdmisionesMensajeria.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="ModeloAdmisionesMensajeria.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MensajeriaConvenioConvenio_MEN_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="MensajeriaConvenioConvenio_MEN" Type="ModeloAdmisionesMensajeria.Store.MensajeriaConvenioConvenio_MEN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="MensajeriaConvenioConvenio_MEN">
+        <PropertyRef Name="MCC_IdAdminisionMensajeria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MensajeriaConvenioPeaton_MEN_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="MensajeriaConvenioPeaton_MEN" Type="ModeloAdmisionesMensajeria.Store.MensajeriaConvenioPeaton_MEN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="MensajeriaConvenioPeaton_MEN">
+        <PropertyRef Name="MCP_IdAdminisionMensajeria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotivoGuia_MEN_MotivoGuiaCRC_MEN">
+    <End Role="MotivoGuiaCRC_MEN" Type="ModeloAdmisionesMensajeria.Store.MotivoGuiaCRC_MEN" Multiplicity="1" />
+    <End Role="MotivoGuia_MEN" Type="ModeloAdmisionesMensajeria.Store.MotivoGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MotivoGuiaCRC_MEN">
+        <PropertyRef Name="MGC_IdMotivoGuiaCRC" />
+      </Principal>
+      <Dependent Role="MotivoGuia_MEN">
+        <PropertyRef Name="MOG_IdMotivoGuiaCRC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN">
+    <End Role="EstadoGuia_MEN" Type="ModeloAdmisionesMensajeria.Store.EstadoGuia_MEN" Multiplicity="1" />
+    <End Role="MotivoGuiaTransicionEstado_MEN" Type="ModeloAdmisionesMensajeria.Store.MotivoGuiaTransicionEstado_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoGuia_MEN">
+        <PropertyRef Name="ESG_IdEstadoGuia" />
+      </Principal>
+      <Dependent Role="MotivoGuiaTransicionEstado_MEN">
+        <PropertyRef Name="MGT_IdEstadoGuiaDesde" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotivoGuiaTranscionEstado_MEN_EstadoGuia_MEN1">
+    <End Role="EstadoGuia_MEN" Type="ModeloAdmisionesMensajeria.Store.EstadoGuia_MEN" Multiplicity="1" />
+    <End Role="MotivoGuiaTransicionEstado_MEN" Type="ModeloAdmisionesMensajeria.Store.MotivoGuiaTransicionEstado_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadoGuia_MEN">
+        <PropertyRef Name="ESG_IdEstadoGuia" />
+      </Principal>
+      <Dependent Role="MotivoGuiaTransicionEstado_MEN">
+        <PropertyRef Name="MGT_IdEstadoGuiaHasta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MotivoGuiaTranscionEstado_MEN_MotivoGuia_MEN">
+    <End Role="MotivoGuia_MEN" Type="ModeloAdmisionesMensajeria.Store.MotivoGuia_MEN" Multiplicity="1" />
+    <End Role="MotivoGuiaTransicionEstado_MEN" Type="ModeloAdmisionesMensajeria.Store.MotivoGuiaTransicionEstado_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MotivoGuia_MEN">
+        <PropertyRef Name="MOG_IdMotivoGuia" />
+      </Principal>
+      <Dependent Role="MotivoGuiaTransicionEstado_MEN">
+        <PropertyRef Name="MGT_IdMotivoGuia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NovedadGuia_MEN_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="NovedadGuia_MEN" Type="ModeloAdmisionesMensajeria.Store.NovedadGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="NovedadGuia_MEN">
+        <PropertyRef Name="NOG_IdAdminisionMensajeria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NovedadGuiaDatosAdicionale_MEN_NovedadGuia_MEN">
+    <End Role="NovedadGuia_MEN" Type="ModeloAdmisionesMensajeria.Store.NovedadGuia_MEN" Multiplicity="1" />
+    <End Role="NovedadGuiaDatosAdicionale_MEN" Type="ModeloAdmisionesMensajeria.Store.NovedadGuiaDatosAdicionale_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NovedadGuia_MEN">
+        <PropertyRef Name="NOG_IdNovedadGuia" />
+      </Principal>
+      <Dependent Role="NovedadGuiaDatosAdicionale_MEN">
+        <PropertyRef Name="NDA_IdNovedadGuia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrdenServicioMasivoGuia_MEN_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="OrdenServicioMasivoGuia_MEN" Type="ModeloAdmisionesMensajeria.Store.OrdenServicioMasivoGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="OrdenServicioMasivoGuia_MEN">
+        <PropertyRef Name="OSG_IdAdminisionMensajeria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrdenServicioMasivoGuia_MEN_OrdenServicioMasivo_MEN">
+    <End Role="OrdenServicioMasivo_MEN" Type="ModeloAdmisionesMensajeria.Store.OrdenServicioMasivo_MEN" Multiplicity="1" />
+    <End Role="OrdenServicioMasivoGuia_MEN" Type="ModeloAdmisionesMensajeria.Store.OrdenServicioMasivoGuia_MEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenServicioMasivo_MEN">
+        <PropertyRef Name="OSM_IdOrdenServicioMasivo" />
+      </Principal>
+      <Dependent Role="OrdenServicioMasivoGuia_MEN">
+        <PropertyRef Name="OSG_IdOrdenServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecibidoGuia_LOI_AdmisionMensajeria_MEN">
+    <End Role="AdmisionMensajeria_MEN" Type="ModeloAdmisionesMensajeria.Store.AdmisionMensajeria_MEN" Multiplicity="1" />
+    <End Role="RecibidoGuia_LOI" Type="ModeloAdmisionesMensajeria.Store.RecibidoGuia_LOI" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionMensajeria_MEN">
+        <PropertyRef Name="ADM_IdAdminisionMensajeria" />
+      </Principal>
+      <Dependent Role="RecibidoGuia_LOI">
+        <PropertyRef Name="REG_IdAdminisionMensajeria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fcAgenciaRecibeGiros_GIR" ReturnType="bit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAgencia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="fcCalcularFechaDeSalidaMan_OPN" ReturnType="datetime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaCentroAcopio" Type="datetime" Mode="In" />
+    <Parameter Name="IdRuta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fcCalcularImpuestosXServicio_FAC" ReturnType="decimal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ValorBase" Type="decimal" Mode="In" />
+    <Parameter Name="IdServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fcCalcularRetencion_FAC" ReturnType="decimal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BaseMinima" Type="decimal" Mode="In" />
+    <Parameter Name="ValorPorcentual" Type="decimal" Mode="In" />
+    <Parameter Name="ValorFijo" Type="decimal" Mode="In" />
+    <Parameter Name="Valorx1000" Type="decimal" Mode="In" />
+    <Parameter Name="BaseCalculo" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerCantEnviConsolida_OPN" ReturnType="decimal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroConolidado" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerDiasFestivos_PAR" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdPais" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerDiasHabiles_PAR" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdPais" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerDiasHabilesComiFija_PRO" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fechaUltimaLiquidacion" Type="datetime" Mode="In" />
+    <Parameter Name="fechaCorte" Type="datetime" Mode="In" />
+    <Parameter Name="fechaFinContrato" Type="datetime" Mode="In" />
+    <Parameter Name="fechaInicioComision" Type="datetime" Mode="In" />
+    <Parameter Name="idContrato" Type="bigint" Mode="In" />
+    <Parameter Name="idPais" Type="varchar" Mode="In" />
+    <Parameter Name="diasHabilesMes" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerEmpresasTransRuta_RUT" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idRuta" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerEstUltPrograLiquiCenSvc_OPN" ReturnType="bit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerFechaUltLiquiCenSvc_OPN" ReturnType="datetime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerFormasPagoGuia_MEN" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="admisionMensajeria" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="fcObtenerIdClientexAdmision_MEN" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paActualizaDestinoAdmMens_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="NombreCentroServicioDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdPaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="NombrePaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="NombreCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="CodigoPostalDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ValorTransporte" Type="numeric" Mode="In" />
+    <Parameter Name="ValorPrima" Type="numeric" Mode="In" />
+    <Parameter Name="FormaPago" Type="char" Mode="In" />
+  </Function>
+  <Function Name="paActualizaEntregado_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionMensajeria" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paActualizaEsAlCobroAdmMen_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="EsAlCobro" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paActualizarDatosBasicosGuia_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmision" Type="bigint" Mode="In" />
+    <Parameter Name="IdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="NombreRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="TelefonoRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="DireccionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="DireccionDestinatario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paActualizarFormPagoAdmMen_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="IdFormaPagoAnterior" Type="smallint" Mode="In" />
+    <Parameter Name="IdFormaPagoNueva" Type="smallint" Mode="In" />
+    <Parameter Name="Valor" Type="numeric" Mode="In" />
+    <Parameter Name="FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="FechaCambio" Type="datetime" Mode="In" />
+    <Parameter Name="CambiadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="TipoCambio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paActualizarGuiaComoPagada_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="EstadoPagada" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="paActualizarGuiaSupervision_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionMensajeria" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paActualizarNotificacion_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paActualizarPesoAdmMen_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="valorPeso" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="paActualizarRapiradicadosGuia_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroRadicado" Type="bigint" Mode="In" />
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paActualizarReintenEntreAdmiMen_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paActualizarServicioAdmMen_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="idServicio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paActualizarValoresAdmMen_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="valorPrimaSeguro" Type="numeric" Mode="In" />
+    <Parameter Name="valorTransporte" Type="numeric" Mode="In" />
+    <Parameter Name="valorTotal" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="paActualizarValorTotalAdmMen_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="valorTotalTransporte" Type="numeric" Mode="In" />
+    <Parameter Name="ValorTotalPrima" Type="numeric" Mode="In" />
+    <Parameter Name="ValorComercial" Type="numeric" Mode="In" />
+  </Function>
+  <Function Name="paConsultarDireccionesLocalidadDestinatario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idLocalidadDestinatario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmConvenioConvenio_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCC_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="MCC_FacturaRemitente" Type="bit" Mode="In" />
+    <Parameter Name="MCC_IdConvenioRemitente" Type="int" Mode="In" />
+    <Parameter Name="MCC_NitConvenioRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MCC_RazonSocialConvenioRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MCC_IdContratoConvenioRemite" Type="int" Mode="In" />
+    <Parameter Name="MCC_IdConvenioDestinatario" Type="int" Mode="In" />
+    <Parameter Name="MCC_NitConvenioDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCC_RazonSocialConDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCC_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCC_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCC_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCC_IdSucursalRecogida" Type="int" Mode="In" />
+    <Parameter Name="MCC_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmiConvenioPeaton_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MCP_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="MCP_IdConvenioRemitente" Type="int" Mode="In" />
+    <Parameter Name="MCP_NitConvenioRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_RazonSocialConvenioRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_IdContratoConvenioRemite" Type="int" Mode="In" />
+    <Parameter Name="MCP_IdTipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_Apellido1Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_Apellido2Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MCP_IdSucursalRecogida" Type="int" Mode="In" />
+    <Parameter Name="MCP_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmiGuiaFormaPago_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AGF_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="AGF_IdFormaPago" Type="smallint" Mode="In" />
+    <Parameter Name="AGF_Valor" Type="numeric" Mode="In" />
+    <Parameter Name="AGF_CreadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="AGF_NumeroAsociado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmiPeatonConvenio_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MPC_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="MPC_IdConvenio" Type="int" Mode="In" />
+    <Parameter Name="MPC_NitConvenio" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_RazonSocialConvenio" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_IdTipoIdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_IdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_NombreRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_Apellido1Remitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_Apellido2Remitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_TelefonoRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_DireccionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_IdSucursal" Type="int" Mode="In" />
+    <Parameter Name="MPC_IdContratoConvenio" Type="int" Mode="In" />
+    <Parameter Name="MPC_EmailRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPC_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmiPeatonPeaton_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MPP_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="MPP_IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="MPP_NombreCentroServicioOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_IdTipoIdentificacionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_IdentificacionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_NombreRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_Apellido1Remitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_Apellido2Remitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_TelefonoRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_DireccionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_EmailRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_Apellido1Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_Apellido2Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="MPP_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmiRapiEnvContPago_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ARP_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="ARP_TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_Apellido1Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_Apellido2Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_IdCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_NombreCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_IdTipoDestino" Type="char" Mode="In" />
+    <Parameter Name="ARP_TipoDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_ValorARecaudar" Type="numeric" Mode="In" />
+    <Parameter Name="ARP_DescripcionProducto" Type="varchar" Mode="In" />
+    <Parameter Name="ARP_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmiRapiRadicado_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ARR_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="ARR_TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_Apellido1Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_Apellido2Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_IdCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_NombreCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_NumeroFolios" Type="smallint" Mode="In" />
+    <Parameter Name="ARR_ConsecutivoRadicado" Type="smallint" Mode="In" />
+    <Parameter Name="ARR_CodigoRapiRadicado" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_ReclamaEnOficina" Type="bit" Mode="In" />
+    <Parameter Name="ARR_CreadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_IdTipoDestino" Type="char" Mode="In" />
+    <Parameter Name="ARR_TipoDestino" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmisionMensajeria_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADM_NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_DigitoVerificacion" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_GuidDeChequeo" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_EsAutomatico" Type="bit" Mode="In" />
+    <Parameter Name="ADM_IdUnidadNegocio" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdServicio" Type="int" Mode="In" />
+    <Parameter Name="ADM_NombreServicio" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdTipoEntrega" Type="char" Mode="In" />
+    <Parameter Name="ADM_DescripcionTipoEntrega" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_NombreCentroServicioOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_NombreCentroServicioDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdPaisOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NombrePaisOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdCiudadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NombreCiudadOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_CodigoPostalOrigen" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdPaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NombrePaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NombreCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_CodigoPostalDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_TipoCliente" Type="char" Mode="In" />
+    <Parameter Name="ADM_DiasDeEntrega" Type="smallint" Mode="In" />
+    <Parameter Name="ADM_FechaEstimadaEntrega" Type="datetime" Mode="In" />
+    <Parameter Name="ADM_ValorAdmision" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_ValorTotal" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_ValorTotalImpuestos" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_ValorTotalRetenciones" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_ValorPrimaSeguro" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_ValorEmpaque" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_ValorAdicionales" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_ValorDeclarado" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_DiceContener" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_Observaciones" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NumeroPieza" Type="smallint" Mode="In" />
+    <Parameter Name="ADM_TotalPiezas" Type="smallint" Mode="In" />
+    <Parameter Name="ADM_FechaAdmision" Type="datetime" Mode="In" />
+    <Parameter Name="ADM_Peso" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_PesoLiqVolumetrico" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_PesoLiqMasa" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_EsPesoVolumetrico" Type="bit" Mode="In" />
+    <Parameter Name="ADM_NumeroBolsaSeguridad" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdMotivoNoUsoBolsaSegurida" Type="smallint" Mode="In" />
+    <Parameter Name="ADM_MotivoNoUsoBolsaSeguriDesc" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NoUsoaBolsaSeguridadObserv" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdUnidadMedida" Type="char" Mode="In" />
+    <Parameter Name="ADM_Largo" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_Ancho" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_Alto" Type="numeric" Mode="In" />
+    <Parameter Name="ADM_EsRecomendado" Type="bit" Mode="In" />
+    <Parameter Name="ADM_IdTipoEnvio" Type="smallint" Mode="In" />
+    <Parameter Name="ADM_NombreTipoEnvio" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_AdmisionSistemaMensajero" Type="bit" Mode="In" />
+    <Parameter Name="ADM_EsAlCobro" Type="bit" Mode="In" />
+    <Parameter Name="ADM_CreadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="EGT_IdEstadoGuia" Type="smallint" Mode="In" />
+    <Parameter Name="EGT_ObservacionEstadoGuia" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdTipoIdentificacionRemitente" Type="char" Mode="In" />
+    <Parameter Name="ADM_IdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NombreRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdTipoIdentificacionDestinatario" Type="char" Mode="In" />
+    <Parameter Name="ADM_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_TelefonoRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_DireccionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="EGT_IdLocalidad" Type="varchar" Mode="In" />
+    <Parameter Name="EGT_NombreLocalidad" Type="varchar" Mode="In" />
+    <Parameter Name="EGT_IdModulo" Type="nchar" Mode="In" />
+    <Parameter Name="ADM_IdMensajero" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_NombreMensajero" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_EstaPagada" Type="bit" Mode="In" />
+    <Parameter Name="ADM_FechaPago" Type="datetime" Mode="In" />
+    <Parameter Name="ADM_PrefijoNumeroGuia" Type="varchar" Mode="In" />
+    <Parameter Name="AMD_EsSupervisada" Type="bit" Mode="In" />
+    <Parameter Name="AMD_FechaSupervision" Type="datetime" Mode="In" />
+    <Parameter Name="AMD_EmailRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="AMD_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_NotificarEntregaPorEmail" Type="bit" Mode="In" />
+    <Parameter Name="NoPedido" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmisionNotificacio_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADN_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="ADN_TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_Apellido1Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_Apellido2Destinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_EmailDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_IdCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_NombreCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ARR_ReclamaEnOficina" Type="bit" Mode="In" />
+    <Parameter Name="ADN_IdTipoDestino" Type="char" Mode="In" />
+    <Parameter Name="ADN_TipoDestino" Type="varchar" Mode="In" />
+    <Parameter Name="ADN_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmisionNotificaciones_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmisionTipoEmpaque_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ATE_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="ATE_IdTipoEmpaque" Type="int" Mode="In" />
+    <Parameter Name="ATE_DescripcionTipoEmpaque" Type="varchar" Mode="In" />
+    <Parameter Name="ATE_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearAdmiValorAdicional_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AVA_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="AVA_IdTipoValorAdicional" Type="char" Mode="In" />
+    <Parameter Name="AVA_Descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="AVA_Valor" Type="numeric" Mode="In" />
+    <Parameter Name="AVA_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearGuiaInterna_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AGI_IdAdmisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="AGI_IdGestionOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="AGI_DescripcionGestionOrig" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_IdGestionDestino" Type="bigint" Mode="In" />
+    <Parameter Name="AGI_DescripcionGestionDest" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_NombreRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_TelefonoRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_DireccionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_NombreDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_TelefonoDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_Contenido" Type="varchar" Mode="In" />
+    <Parameter Name="AGI_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="AGI_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paDestDeseaRecibirNotifiMsjTexto_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DAE_Identificacion" Type="varchar" Mode="In" />
+    <Parameter Name="DAE_TipoIdentificacion" Type="varchar" Mode="In" />
+    <Parameter Name="DAE_IdClienteCredito" Type="int" Mode="In" />
+    <Parameter Name="ADM_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_NoPedido" Type="varchar" Mode="In" />
+    <Parameter Name="AEM_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEliminarAdmision_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="FechaCambio" Type="datetime" Mode="In" />
+    <Parameter Name="CambiadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="TipoCambio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEliminarGuiaInterna_Men" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGuiaInterna" Type="bigint" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Accion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paEliminarTrazaGuia_Men" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paIngresarGuiaNoRegCentroAcopio_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="IdAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paInsertarAdmisionInternacional_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmision" Type="bigint" Mode="In" />
+    <Parameter Name="NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="NumeroGuiaDHL" Type="bigint" Mode="In" />
+    <Parameter Name="FechaEstimadaEntregaDHL" Type="datetime" Mode="In" />
+    <Parameter Name="IdPaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="NombrePaisDestino" Type="varchar" Mode="In" />
+    <Parameter Name="IdDivPolitica" Type="varchar" Mode="In" />
+    <Parameter Name="NombreDivPolitica" Type="varchar" Mode="In" />
+    <Parameter Name="IdCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="NombreCiudadDestino" Type="varchar" Mode="In" />
+    <Parameter Name="CodigoPostalDestino" Type="varchar" Mode="In" />
+    <Parameter Name="DireccionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdTipoEmpaque" Type="int" Mode="In" />
+    <Parameter Name="ResponseDHL" Type="varbinary(max)" Mode="In" />
+    <Parameter Name="RequestTarifa" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ResponseTarifa" Type="varchar(max)" Mode="In" />
+    <Parameter Name="RequestGuia" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ResponseGuia" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TipoEmpaqueNombre" Type="varchar" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarAdmMenHistorico_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionMensajeria" Type="bigint" Mode="In" />
+    <Parameter Name="FechaCambio" Type="datetime" Mode="In" />
+    <Parameter Name="CambiadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="TipoCambio" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmCapturaNotificacionManual_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADM_NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="EstadoEntrega" Type="smallint" Mode="In" />
+    <Parameter Name="EstadoDevolucion" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmiMenUltEstado_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmiRapiRadicado_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmisionMensajeria" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisioConvPeaton_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionConvConv_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionFormaPago_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionGuiaNotificacion_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionMensajeri_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionMensajeriaCliente_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionPorId_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionPorOS_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="NoOS" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmisionRapiradicados_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Agencia" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="Estado" Type="int" Mode="In" />
+    <Parameter Name="Nit" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmMenPeatonConvenio_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmMenPeatonPeaton_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmMenPorDestinatarioHoy_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADM_IdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdTipoIdentificacionDestinatario" Type="char" Mode="In" />
+    <Parameter Name="ADM_IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmMenPorNumGuiaHoy_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADM_NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmMenPorRemitenteHoy_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADM_IdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="ADM_IdTipoIdentificacionRemitente" Type="char" Mode="In" />
+    <Parameter Name="ADM_IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="ADM_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmRapiEnvioContraPago_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAdmision" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAdmRapiradicado_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerArchivoAlmacenAdm_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADM_NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="EstadoEntrega" Type="smallint" Mode="In" />
+    <Parameter Name="EstadoDevolucion" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerCasillerosTrayectos_OPN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="paObtenerFormasPagoAdmMen_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdminisionMensajeria" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiaAlCobPorFchaNoPgda_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="centroServicio" Type="bigint" Mode="In" />
+    <Parameter Name="idEstadoEntregado" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiasEnCentroAcopioDeLocalidad_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="localidad" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="PaObtenerGuiasInternasNot_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPlanilla" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiasIntPlanCert_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="planillas" Type="varchar" Mode="In" />
+    <Parameter Name="idCol" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiasParaCapturaAutomatica_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdFormaPago" Type="smallint" Mode="In" />
+    <Parameter Name="FechaInicio" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFin" Type="datetime" Mode="In" />
+    <Parameter Name="IdCliente" Type="int" Mode="In" />
+    <Parameter Name="IdRacol" Type="bigint" Mode="In" />
+    <Parameter Name="EstadoEntrega" Type="smallint" Mode="In" />
+    <Parameter Name="IdServicioNotificaciones" Type="int" Mode="In" />
+    <Parameter Name="IdTipoEnvioCertificacion" Type="smallint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGuiaValorAdicional_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerIdNotificaciones_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AgenciaOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="AgenciaDestino" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="Nit" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerNotificacion_LOI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADM_NumeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="PaObtenerNotificacionesEntregaCes_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCentroLogistico" Type="bigint" Mode="In" />
+    <Parameter Name="IdCentroLogisticoDestino" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="PaObtenerNotificacionesEntregaCre_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="idCol" Type="bigint" Mode="In" />
+    <Parameter Name="idSucursal" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerNotificacionesRecibido_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="AgenciaOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="AgenciaDestino" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="Nit" Type="varchar" Mode="In" />
+    <Parameter Name="Totalizado" Type="bit" Mode="In" />
+    <Parameter Name="TotalRegistros" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="paObtenerNumeroGuiaPorGuid_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ADM_GuidDeChequeo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRangoGuiaInterna_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroInicial" Type="bigint" Mode="In" />
+    <Parameter Name="NumeroFinal" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRapiradicadosGuia_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerUltimoEstadoIVR_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerValAdicioAdm_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AVA_IdAdminisionMensajeria" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paVerificarNumeroGuia_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="numeroGuia" Type="bigint" Mode="In" />
+  </Function>
+</Schema>

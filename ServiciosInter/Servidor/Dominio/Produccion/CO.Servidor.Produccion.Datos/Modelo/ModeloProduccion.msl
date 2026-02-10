@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloDesarrolloStoreContainer" CdmEntityContainer="ModeloProduccion">
+    <FunctionImportMapping FunctionImportName="paObtenerNovedadTipoNoved_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerNovedadTipoNoved_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRObtenerNovedadTipoNoved">
+          <ScalarProperty Name="NCS_IdCentroServicios" ColumnName="NCS_IdCentroServicios" />
+          <ScalarProperty Name="ValorNovedad" ColumnName="ValorNovedad" />
+          <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+          <ScalarProperty Name="MNO_IdMotivoNovedad" ColumnName="MNO_IdMotivoNovedad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerUltLiquidacionCentroSvc_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerUltLiquidacionCentroSvc_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerUltLiquidacionCentroSvc">
+          <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+          <ScalarProperty Name="LPR_TotalComisionVenta" ColumnName="LPR_TotalComisionVenta" />
+          <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+          <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+          <ScalarProperty Name="LPR_TotalComisionVentaPorOtros" ColumnName="LPR_TotalComisionVentaPorOtros" />
+          <ScalarProperty Name="LPR_TotalIngresosFijos" ColumnName="LPR_TotalIngresosFijos" />
+          <ScalarProperty Name="LPR_TotalNovedadReintegro" ColumnName="LPR_TotalNovedadReintegro" />
+          <ScalarProperty Name="LPR_TotalNovedadDescuento" ColumnName="LPR_TotalNovedadDescuento" />
+          <ScalarProperty Name="LPR_TotalRetencionesConcepto" ColumnName="LPR_TotalRetencionesConcepto" />
+          <ScalarProperty Name="LPR_TotalRetencionesReintegro" ColumnName="LPR_TotalRetencionesReintegro" />
+          <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+          <ScalarProperty Name="LPR_NumeroGiro" ColumnName="LPR_NumeroGiro" />
+          <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+          <ScalarProperty Name="LPR_EstaAprobada" ColumnName="LPR_EstaAprobada" />
+          <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+          <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+          <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+          <ScalarProperty Name="LPR_SaldoFinalCaja" ColumnName="LPR_SaldoFinalCaja" />
+          <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+          <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paActualizaEstLiquidacion_PRO" FunctionName="ModeloDesarrollo.Store.paActualizaEstLiquidacion_PRO" />
+    <FunctionImportMapping FunctionImportName="paObtenerLiquidacionNovedad_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidacionNovedad_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidacionNovedad">
+          <ScalarProperty Name="NCS_IdCentroServicios" ColumnName="NCS_IdCentroServicios" />
+          <ScalarProperty Name="ValorNovedad" ColumnName="ValorNovedad" />
+          <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+          <ScalarProperty Name="MNO_IdMotivoNovedad" ColumnName="MNO_IdMotivoNovedad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearLiquidaIngresosFijos_PRO" FunctionName="ModeloDesarrollo.Store.paCrearLiquidaIngresosFijos_PRO" />
+    <FunctionImportMapping FunctionImportName="paObtenerLiquidaIngresosFijos_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaIngresosFijos_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaIngresosFijos">
+          <ScalarProperty Name="LIF_IdTipoComisionFija" ColumnName="LIF_IdTipoComisionFija" />
+          <ScalarProperty Name="LIF_DescripcionTipoComi" ColumnName="LIF_DescripcionTipoComi" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+          <ScalarProperty Name="LIF_ValorLiquidado" ColumnName="LIF_ValorLiquidado" />
+          <ScalarProperty Name="LIF_DiasHabilesLiquidados" ColumnName="LIF_DiasHabilesLiquidados" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerLiquidaProduccion_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaProduccion_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaProduccion">
+          <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+          <ScalarProperty Name="LPR_TotalComisionVenta" ColumnName="LPR_TotalComisionVenta" />
+          <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+          <ScalarProperty Name="LPR_TotalComisionVentaPorOtros" ColumnName="LPR_TotalComisionVentaPorOtros" />
+          <ScalarProperty Name="LPR_TotalIngresosFijos" ColumnName="LPR_TotalIngresosFijos" />
+          <ScalarProperty Name="LPR_TotalNovedadReintegro" ColumnName="LPR_TotalNovedadReintegro" />
+          <ScalarProperty Name="LPR_TotalNovedadDescuento" ColumnName="LPR_TotalNovedadDescuento" />
+          <ScalarProperty Name="LPR_TotalRetencionesConcepto" ColumnName="LPR_TotalRetencionesConcepto" />
+          <ScalarProperty Name="LPR_TotalRetencionesReintegro" ColumnName="LPR_TotalRetencionesReintegro" />
+          <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+          <ScalarProperty Name="LPR_NumeroGiro" ColumnName="LPR_NumeroGiro" />
+          <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+          <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+          <ScalarProperty Name="LPR_EstaAprobada" ColumnName="LPR_EstaAprobada" />
+          <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+          <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+          <ScalarProperty Name="LPR_SaldoFinalCaja" ColumnName="LPR_SaldoFinalCaja" />
+          <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+          <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+          <ScalarProperty Name="LPR_FechaGrabacion" ColumnName="LPR_FechaGrabacion" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paActualizaLiquidaAprobada_PRO" FunctionName="ModeloDesarrollo.Store.paActualizaLiquidaAprobada_PRO" />
+    <FunctionImportMapping FunctionImportName="paObtenerCenSvcSinPrograLiqui_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerCenSvcSinPrograLiqui_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerCenSvcSinPrograLiqui">
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+          <ScalarProperty Name="NombreRacol" ColumnName="NombreRacol" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="estadoProgramacion" ColumnName="estadoProgramacion" />
+          <ScalarProperty Name="FechaUltimaLiquidacion" ColumnName="FechaUltimaLiquidacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRetencionNovedad_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerRetencionNovedad_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerRetencionNovedad">
+          <ScalarProperty Name="NCS_IdMotivoNovedad" ColumnName="NCS_IdMotivoNovedad" />
+          <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+          <ScalarProperty Name="RNC_IdRetencion" ColumnName="RNC_IdRetencion" />
+          <ScalarProperty Name="RNC_Descripcion" ColumnName="RNC_Descripcion" />
+          <ScalarProperty Name="RNC_TarifaPorcentual" ColumnName="RNC_TarifaPorcentual" />
+          <ScalarProperty Name="RNC_ValorFijo" ColumnName="RNC_ValorFijo" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+          <ScalarProperty Name="ValorRetencion" ColumnName="ValorRetencion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerLiquidaRetenNovedad_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaRetenNovedad_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaRetenNovedad">
+          <ScalarProperty Name="NCS_IdMotivoNovedad" ColumnName="NCS_IdMotivoNovedad" />
+          <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+          <ScalarProperty Name="RNC_IdRetencion" ColumnName="RNC_IdRetencion" />
+          <ScalarProperty Name="RNC_Descripcion" ColumnName="RNC_Descripcion" />
+          <ScalarProperty Name="RNC_TarifaPorcentual" ColumnName="RNC_TarifaPorcentual" />
+          <ScalarProperty Name="RNC_ValorFijo" ColumnName="RNC_ValorFijo" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+          <ScalarProperty Name="ValorRetencion" ColumnName="ValorRetencion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerComisionConcepto_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerComisionConcepto_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerComisionConcepto">
+          <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+          <ScalarProperty Name="LIC_IdTipoComision" ColumnName="LIC_IdTipoComision" />
+          <ScalarProperty Name="UNE_Nombre" ColumnName="UNE_Nombre" />
+          <ScalarProperty Name="TCO_Descripcion" ColumnName="TCO_Descripcion" />
+          <ScalarProperty Name="LIC_PorcentajeComisionVenta" ColumnName="LIC_PorcentajeComisionVenta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+          <ScalarProperty Name="ValorComisionVenta" ColumnName="ValorComisionVenta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerComisionPuntosAcargo_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerComisionPuntosAcargo_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerComisionPuntosAcargo">
+          <ScalarProperty Name="LIC_IdCentroServiciosVenta" ColumnName="LIC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="LIC_NombreCentroServiciosVenta" ColumnName="LIC_NombreCentroServiciosVenta" />
+          <ScalarProperty Name="ValorComision" ColumnName="ValorComision" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerLiquidaComiConcepto_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaComiConcepto_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaComiConcepto">
+          <ScalarProperty Name="LPG_IdUnidadNegocio" ColumnName="LPG_IdUnidadNegocio" />
+          <ScalarProperty Name="LPG_NombreUnidadNegocio" ColumnName="LPG_NombreUnidadNegocio" />
+          <ScalarProperty Name="LPG_DescripcionTipoComision" ColumnName="LPG_DescripcionTipoComision" />
+          <ScalarProperty Name="LPG_IdTipoComision" ColumnName="LPG_IdTipoComision" />
+          <ScalarProperty Name="LPG_PorcentajeComision" ColumnName="LPG_PorcentajeComision" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+          <ScalarProperty Name="ValorComisionVenta" ColumnName="ValorComisionVenta" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRetencionServicio_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerRetencionServicio_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerRetencionServicio">
+          <ScalarProperty Name="LIC_IdServicio" ColumnName="LIC_IdServicio" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="CCR_IdRetencion" ColumnName="CCR_IdRetencion" />
+          <ScalarProperty Name="LIC_IdTipoComision" ColumnName="LIC_IdTipoComision" />
+          <ScalarProperty Name="TCO_Descripcion" ColumnName="TCO_Descripcion" />
+          <ScalarProperty Name="RET_Descripcion" ColumnName="RET_Descripcion" />
+          <ScalarProperty Name="CCR_ValorFijo" ColumnName="CCR_ValorFijo" />
+          <ScalarProperty Name="CCR_TarifaPorcentual" ColumnName="CCR_TarifaPorcentual" />
+          <ScalarProperty Name="CCR_Base" ColumnName="CCR_Base" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+          <ScalarProperty Name="RetencionLiquidada" ColumnName="RetencionLiquidada" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearLiquidacionProducci_PRO" FunctionName="ModeloDesarrollo.Store.paCrearLiquidacionProducci_PRO" />
+    <FunctionImportMapping FunctionImportName="paObtenerLiquidaRetenConce_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaRetenConce_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaRetenConce">
+          <ScalarProperty Name="LPR_IdRetencion" ColumnName="LPR_IdRetencion" />
+          <ScalarProperty Name="LPR_DescripcionRetencion" ColumnName="LPR_DescripcionRetencion" />
+          <ScalarProperty Name="LPR_TarifaPorcentualRetencion" ColumnName="LPR_TarifaPorcentualRetencion" />
+          <ScalarProperty Name="LPR_ValorFijoRetencion" ColumnName="LPR_ValorFijoRetencion" />
+          <ScalarProperty Name="LPR_BaseRetencion" ColumnName="LPR_BaseRetencion" />
+          <ScalarProperty Name="LPR_ValorRetencionLiquidado" ColumnName="LPR_ValorRetencionLiquidado" />
+          <ScalarProperty Name="LPR_IdServicio" ColumnName="LPR_IdServicio" />
+          <ScalarProperty Name="LPR_DescripcionServicio" ColumnName="LPR_DescripcionServicio" />
+          <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerLiquidaComiPtoAcargo_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaComiPtoAcargo_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaComiPtoAcargo">
+          <ScalarProperty Name="LIC_IdCentroServiciosVenta" ColumnName="LIC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="LIC_NombreCentroServiciosVenta" ColumnName="LIC_NombreCentroServiciosVenta" />
+          <ScalarProperty Name="ValorComision" ColumnName="ValorComision" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearLiquidacionesAgrupadas_PRO" FunctionName="ModeloDesarrollo.Store.paCrearLiquidacionesAgrupadas_PRO" />
+    <FunctionImportMapping FunctionImportName="paObtenerLiquidaProduAprobadas_PRO" FunctionName="ModeloDesarrollo.Store.paObtenerLiquidaProduAprobadas_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.PRpaObtenerLiquidaProduAprobadas">
+          <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+          <ScalarProperty Name="LPR_TotalComisionVenta" ColumnName="LPR_TotalComisionVenta" />
+          <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+          <ScalarProperty Name="LPR_TotalComisionVentaPorOtros" ColumnName="LPR_TotalComisionVentaPorOtros" />
+          <ScalarProperty Name="LPR_TotalIngresosFijos" ColumnName="LPR_TotalIngresosFijos" />
+          <ScalarProperty Name="LPR_TotalNovedadReintegro" ColumnName="LPR_TotalNovedadReintegro" />
+          <ScalarProperty Name="LPR_TotalNovedadDescuento" ColumnName="LPR_TotalNovedadDescuento" />
+          <ScalarProperty Name="LPR_TotalRetencionesConcepto" ColumnName="LPR_TotalRetencionesConcepto" />
+          <ScalarProperty Name="LPR_TotalRetencionesReintegro" ColumnName="LPR_TotalRetencionesReintegro" />
+          <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+          <ScalarProperty Name="LPR_NumeroGiro" ColumnName="LPR_NumeroGiro" />
+          <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+          <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+          <ScalarProperty Name="LPR_EstaAprobada" ColumnName="LPR_EstaAprobada" />
+          <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+          <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+          <ScalarProperty Name="LPR_SaldoFinalCaja" ColumnName="LPR_SaldoFinalCaja" />
+          <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+          <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+          <ScalarProperty Name="LPR_FechaGrabacion" ColumnName="LPR_FechaGrabacion" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+          <ScalarProperty Name="PRC_IdProgramacion" ColumnName="PRC_IdProgramacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MotivoNovedad_PRO">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.MotivoNovedad_PRO">
+        <MappingFragment StoreEntitySet="MotivoNovedad_PRO">
+          <ScalarProperty Name="MNO_CreadoPor" ColumnName="MNO_CreadoPor" />
+          <ScalarProperty Name="MNO_FechaGrabacion" ColumnName="MNO_FechaGrabacion" />
+          <ScalarProperty Name="MNO_Estado" ColumnName="MNO_Estado" />
+          <ScalarProperty Name="MNO_EsVisible" ColumnName="MNO_EsVisible" />
+          <ScalarProperty Name="MNO_Descripcion" ColumnName="MNO_Descripcion" />
+          <ScalarProperty Name="MNO_IdTipoNovedad" ColumnName="MNO_IdTipoNovedad" />
+          <ScalarProperty Name="MNO_IdMotivoNovedad" ColumnName="MNO_IdMotivoNovedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RetencionLiqGlobal_PRO">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.RetencionLiqGlobal_PRO">
+        <MappingFragment StoreEntitySet="RetencionLiqGlobal_PRO">
+          <ScalarProperty Name="REL_CreadoPor" ColumnName="REL_CreadoPor" />
+          <ScalarProperty Name="REL_FechaGrabacion" ColumnName="REL_FechaGrabacion" />
+          <ScalarProperty Name="REL_CuentaContableNovasoft" ColumnName="REL_CuentaContableNovasoft" />
+          <ScalarProperty Name="REL_PorcRetencion" ColumnName="REL_PorcRetencion" />
+          <ScalarProperty Name="REL_BaseRetencion" ColumnName="REL_BaseRetencion" />
+          <ScalarProperty Name="REL_TextoDelConcepto" ColumnName="REL_TextoDelConcepto" />
+          <ScalarProperty Name="REL_IdRetencion" ColumnName="REL_IdRetencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidad_PAR">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.Localidad_PAR">
+        <MappingFragment StoreEntitySet="Localidad_PAR">
+          <ScalarProperty Name="LOC_CreadoPor" ColumnName="LOC_CreadoPor" />
+          <ScalarProperty Name="LOC_FechaGrabacion" ColumnName="LOC_FechaGrabacion" />
+          <ScalarProperty Name="LOC_CodigoPostal" ColumnName="LOC_CodigoPostal" />
+          <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="LOC_IdAncestroTercerGrado" ColumnName="LOC_IdAncestroTercerGrado" />
+          <ScalarProperty Name="LOC_IdAncestroSegundoGrado" ColumnName="LOC_IdAncestroSegundoGrado" />
+          <ScalarProperty Name="LOC_IdAncestroPrimerGrado" ColumnName="LOC_IdAncestroPrimerGrado" />
+          <ScalarProperty Name="LOC_IdTipo" ColumnName="LOC_IdTipo" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Retencion_TAR">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.Retencion_TAR">
+        <MappingFragment StoreEntitySet="Retencion_TAR">
+          <ScalarProperty Name="RET_CreadoPor" ColumnName="RET_CreadoPor" />
+          <ScalarProperty Name="RET_FechaGrabacion" ColumnName="RET_FechaGrabacion" />
+          <ScalarProperty Name="RET_Descripcion" ColumnName="RET_Descripcion" />
+          <ScalarProperty Name="RET_IdRetencion" ColumnName="RET_IdRetencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CargaNovedadesProduccion_PRO">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.CargaNovedadesProduccion_PRO">
+        <MappingFragment StoreEntitySet="CargaNovedadesProduccion_PRO">
+          <ScalarProperty Name="NCS_AnoVigencia" ColumnName="NCS_AnoVigencia" />
+          <ScalarProperty Name="NCS_MesVigencia" ColumnName="NCS_MesVigencia" />
+          <ScalarProperty Name="NCS_Cargada" ColumnName="NCS_Cargada" />
+          <ScalarProperty Name="NCS_CreadoPor" ColumnName="NCS_CreadoPor" />
+          <ScalarProperty Name="NCS_FechaGrabacion" ColumnName="NCS_FechaGrabacion" />
+          <ScalarProperty Name="NCS_Observacion" ColumnName="NCS_Observacion" />
+          <ScalarProperty Name="NCS_Cantidad" ColumnName="NCS_Cantidad" />
+          <ScalarProperty Name="NCS_Valor" ColumnName="NCS_Valor" />
+          <ScalarProperty Name="NCS_IdServicio" ColumnName="NCS_IdServicio" />
+          <ScalarProperty Name="NCS_IdCentroServicios" ColumnName="NCS_IdCentroServicios" />
+          <ScalarProperty Name="NCS_IdMotivoNovedad" ColumnName="NCS_IdMotivoNovedad" />
+          <ScalarProperty Name="CNP_IdNovedadProduccion" ColumnName="CNP_IdNovedadProduccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicios_PUA">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.CentroServicios_PUA">
+        <MappingFragment StoreEntitySet="CentroServicios_PUA">
+          <ScalarProperty Name="CES_CodigoSPN" ColumnName="CES_CodigoSPN" />
+          <ScalarProperty Name="CES_IdClasificadorCanalVenta" ColumnName="CES_IdClasificadorCanalVenta" />
+          <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+          <ScalarProperty Name="CES_TopeMaximoPorPagos" ColumnName="CES_TopeMaximoPorPagos" />
+          <ScalarProperty Name="CES_CreadoPor" ColumnName="CES_CreadoPor" />
+          <ScalarProperty Name="CES_FechaGrabacion" ColumnName="CES_FechaGrabacion" />
+          <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+          <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+          <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+          <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+          <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+          <ScalarProperty Name="CES_VendePrepago" ColumnName="CES_VendePrepago" />
+          <ScalarProperty Name="CES_AdmiteFormaPagoAlCobro" ColumnName="CES_AdmiteFormaPagoAlCobro" />
+          <ScalarProperty Name="CES_VolumenMaximo" ColumnName="CES_VolumenMaximo" />
+          <ScalarProperty Name="CES_PesoMaximo" ColumnName="CES_PesoMaximo" />
+          <ScalarProperty Name="CES_IdTipoPropiedad" ColumnName="CES_IdTipoPropiedad" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+          <ScalarProperty Name="CES_Email" ColumnName="CES_Email" />
+          <ScalarProperty Name="CES_Longitud" ColumnName="CES_Longitud" />
+          <ScalarProperty Name="CES_Latitud" ColumnName="CES_Latitud" />
+          <ScalarProperty Name="CES_IdPersonaResponsable" ColumnName="CES_IdPersonaResponsable" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+          <ScalarProperty Name="CES_IdZona" ColumnName="CES_IdZona" />
+          <ScalarProperty Name="CES_Barrio" ColumnName="CES_Barrio" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_Fax" ColumnName="CES_Fax" />
+          <ScalarProperty Name="CES_Telefono2" ColumnName="CES_Telefono2" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_IdPropietario" ColumnName="CES_IdPropietario" />
+          <ScalarProperty Name="CES_DigitoVerificacion" ColumnName="CES_DigitoVerificacion" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicio_TAR">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.Servicio_TAR">
+        <MappingFragment StoreEntitySet="Servicio_TAR">
+          <ScalarProperty Name="SER_CodigoPrimaERP" ColumnName="SER_CodigoPrimaERP" />
+          <ScalarProperty Name="SER_CreadoPor" ColumnName="SER_CreadoPor" />
+          <ScalarProperty Name="SER_FechaGrabacion" ColumnName="SER_FechaGrabacion" />
+          <ScalarProperty Name="SER_Estado" ColumnName="SER_Estado" />
+          <ScalarProperty Name="SER_CodigoERP" ColumnName="SER_CodigoERP" />
+          <ScalarProperty Name="SER_CodigoIntMensajero" ColumnName="SER_CodigoIntMensajero" />
+          <ScalarProperty Name="SER_IdConceptoCaja" ColumnName="SER_IdConceptoCaja" />
+          <ScalarProperty Name="SER_AplicaRetenciones" ColumnName="SER_AplicaRetenciones" />
+          <ScalarProperty Name="SER_IdentificadorInterno" ColumnName="SER_IdentificadorInterno" />
+          <ScalarProperty Name="SER_HoraFinVenta" ColumnName="SER_HoraFinVenta" />
+          <ScalarProperty Name="SER_HoraInicioVenta" ColumnName="SER_HoraInicioVenta" />
+          <ScalarProperty Name="SER_IdCuentaExterna" ColumnName="SER_IdCuentaExterna" />
+          <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+          <ScalarProperty Name="SER_Descripcion" ColumnName="SER_Descripcion" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SER_IdServicio" ColumnName="SER_IdServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NovedadCentroServicio_PRO">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.NovedadCentroServicio_PRO">
+        <MappingFragment StoreEntitySet="NovedadCentroServicio_PRO">
+          <ScalarProperty Name="NCS_IdCargaNovedad" ColumnName="NCS_IdCargaNovedad" />
+          <ScalarProperty Name="NCS_EstaAprobada" ColumnName="NCS_EstaAprobada" />
+          <ScalarProperty Name="NCS_CreadoPor" ColumnName="NCS_CreadoPor" />
+          <ScalarProperty Name="NCS_FechaGrabacion" ColumnName="NCS_FechaGrabacion" />
+          <ScalarProperty Name="NCS_Observacion" ColumnName="NCS_Observacion" />
+          <ScalarProperty Name="NCS_FechaAplicacionPr" ColumnName="NCS_FechaAplicacionPr" />
+          <ScalarProperty Name="NCS_IdProduccion" ColumnName="NCS_IdProduccion" />
+          <ScalarProperty Name="NCS_Valor" ColumnName="NCS_Valor" />
+          <ScalarProperty Name="NCS_NombreCentroServicios" ColumnName="NCS_NombreCentroServicios" />
+          <ScalarProperty Name="NCS_IdCentroServicios" ColumnName="NCS_IdCentroServicios" />
+          <ScalarProperty Name="NCS_IdMotivoNovedad" ColumnName="NCS_IdMotivoNovedad" />
+          <ScalarProperty Name="NCS_IdNovedadCentroServicios" ColumnName="NCS_IdNovedadCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RetencionConcepto_PRO">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.RetencionConcepto_PRO">
+        <MappingFragment StoreEntitySet="RetencionConcepto_PRO">
+          <ScalarProperty Name="REN_CreadoPor" ColumnName="REN_CreadoPor" />
+          <ScalarProperty Name="REN_FechaGrabacion" ColumnName="REN_FechaGrabacion" />
+          <ScalarProperty Name="REN_IdConcepto" ColumnName="REN_IdConcepto" />
+          <ScalarProperty Name="REN_TipoConcepto" ColumnName="REN_TipoConcepto" />
+          <ScalarProperty Name="REN_IdRetencion" ColumnName="REN_IdRetencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RetencionXCiudadConcepto_PRO">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.RetencionXCiudadConcepto_PRO">
+        <MappingFragment StoreEntitySet="RetencionXCiudadConcepto_PRO">
+          <ScalarProperty Name="RCN_CreadoPor" ColumnName="RCN_CreadoPor" />
+          <ScalarProperty Name="RCN_FechaGrabacion" ColumnName="RCN_FechaGrabacion" />
+          <ScalarProperty Name="RCN_IdConcepto" ColumnName="RCN_IdConcepto" />
+          <ScalarProperty Name="RCN_TipoConcepto" ColumnName="RCN_TipoConcepto" />
+          <ScalarProperty Name="RCN_IdRetencionCiudad" ColumnName="RCN_IdRetencionCiudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paLiquidacionProduccion_PRO" FunctionName="ModeloDesarrollo.Store.paLiquidacionProduccion_PRO" />
+    <FunctionImportMapping FunctionImportName="paAprobarLiquidaciones_PRO" FunctionName="ModeloDesarrollo.Store.paAprobarLiquidaciones_PRO" />
+    <FunctionImportMapping FunctionImportName="paEliminarLiqProduccion_PRO" FunctionName="ModeloDesarrollo.Store.paEliminarLiqProduccion_PRO" />
+    <FunctionImportMapping FunctionImportName="paCargarLiquidacionCaja_PRO" FunctionName="ModeloDesarrollo.Store.paCargarLiquidacionCaja_PRO" />
+    <FunctionImportMapping FunctionImportName="paConsultarLiquidaciones_PRO" FunctionName="ModeloDesarrollo.Store.paConsultarLiquidaciones_PRO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloDesarrollo.paConsultarLiquidaciones_PRO_Result">
+          <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+          <ScalarProperty Name="LPR_NumAMostrar" ColumnName="LPR_NumAMostrar" />
+          <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+          <ScalarProperty Name="NombreCentroServicios" ColumnName="NombreCentroServicios" />
+          <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+          <ScalarProperty Name="DescEstado" ColumnName="DescEstado" />
+          <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+          <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+          <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+          <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+          <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+          <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+          <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+          <ScalarProperty Name="LPR_FechaGrabacion" ColumnName="LPR_FechaGrabacion" />
+          <ScalarProperty Name="LPR_CreadoPor" ColumnName="LPR_CreadoPor" />
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Ano" ColumnName="Ano" />
+          <ScalarProperty Name="IdTransaccionCaja" ColumnName="IdTransaccionCaja" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="LiquidacionProduccion_PRO">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.LiquidacionProduccion_PRO">
+        <MappingFragment StoreEntitySet="LiquidacionProduccion_PRO">
+          <ScalarProperty Name="LPR_IdTransaccionCaja" ColumnName="LPR_IdTransaccionCaja" />
+          <ScalarProperty Name="LPR_NumAMostrar" ColumnName="LPR_NumAMostrar" />
+          <ScalarProperty Name="LPR_CreadoPor" ColumnName="LPR_CreadoPor" />
+          <ScalarProperty Name="LPR_FechaGrabacion" ColumnName="LPR_FechaGrabacion" />
+          <ScalarProperty Name="LPR_TotalDeducciones" ColumnName="LPR_TotalDeducciones" />
+          <ScalarProperty Name="LPR_TotalPagos" ColumnName="LPR_TotalPagos" />
+          <ScalarProperty Name="LPR_SaldoFinalCaja" ColumnName="LPR_SaldoFinalCaja" />
+          <ScalarProperty Name="LPR_UsuarioAprueba" ColumnName="LPR_UsuarioAprueba" />
+          <ScalarProperty Name="LPR_FechaAprobacion" ColumnName="LPR_FechaAprobacion" />
+          <ScalarProperty Name="LPR_EstaAprobada" ColumnName="LPR_EstaAprobada" />
+          <ScalarProperty Name="LPR_FechaFinCorte" ColumnName="LPR_FechaFinCorte" />
+          <ScalarProperty Name="LPR_FechaInicioCorte" ColumnName="LPR_FechaInicioCorte" />
+          <ScalarProperty Name="LPR_NumeroGiro" ColumnName="LPR_NumeroGiro" />
+          <ScalarProperty Name="LPR_NumeroGuiaInterna" ColumnName="LPR_NumeroGuiaInterna" />
+          <ScalarProperty Name="LPR_TotalRetencionesReintegro" ColumnName="LPR_TotalRetencionesReintegro" />
+          <ScalarProperty Name="LPR_TotalRetencionesConcepto" ColumnName="LPR_TotalRetencionesConcepto" />
+          <ScalarProperty Name="LPR_TotalNovedadDescuento" ColumnName="LPR_TotalNovedadDescuento" />
+          <ScalarProperty Name="LPR_TotalNovedadReintegro" ColumnName="LPR_TotalNovedadReintegro" />
+          <ScalarProperty Name="LPR_TotalIngresosFijos" ColumnName="LPR_TotalIngresosFijos" />
+          <ScalarProperty Name="LPR_TotalComisionVentaPorOtros" ColumnName="LPR_TotalComisionVentaPorOtros" />
+          <ScalarProperty Name="LPR_IdEstadoLiquidacionProduccion" ColumnName="LPR_IdEstadoLiquidacionProduccion" />
+          <ScalarProperty Name="LPR_IdCentroServicios" ColumnName="LPR_IdCentroServicios" />
+          <ScalarProperty Name="LPR_TotalComisionVenta" ColumnName="LPR_TotalComisionVenta" />
+          <ScalarProperty Name="LPR_IdLiquidacionProduccion" ColumnName="LPR_IdLiquidacionProduccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RetencionLiqXCiudad_PRO">
+      <EntityTypeMapping TypeName="ModeloDesarrollo.RetencionLiqXCiudad_PRO">
+        <MappingFragment StoreEntitySet="RetencionLiqXCiudad_PRO">
+          <ScalarProperty Name="REC_CreadoPor" ColumnName="REC_CreadoPor" />
+          <ScalarProperty Name="REC_FechaGrabacion" ColumnName="REC_FechaGrabacion" />
+          <ScalarProperty Name="REL_CuentaContableNovasoft" ColumnName="REL_CuentaContableNovasoft" />
+          <ScalarProperty Name="REL_PorcRetencion" ColumnName="REL_PorcRetencion" />
+          <ScalarProperty Name="REL_BaseRetencion" ColumnName="REL_BaseRetencion" />
+          <ScalarProperty Name="REL_TextoDelConcepto" ColumnName="REL_TextoDelConcepto" />
+          <ScalarProperty Name="REC_IdLocalidad" ColumnName="REC_IdLocalidad" />
+          <ScalarProperty Name="REC_IdRetencion" ColumnName="REC_IdRetencion" />
+          <ScalarProperty Name="REC_IdRetencionCiudad" ColumnName="REC_IdRetencionCiudad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

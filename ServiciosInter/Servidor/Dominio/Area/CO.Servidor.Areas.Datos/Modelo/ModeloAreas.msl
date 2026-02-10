@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloAreasStoreContainer" CdmEntityContainer="ModeloAreasEntity">
+    <EntitySetMapping Name="Banco_PAR">
+      <EntityTypeMapping TypeName="ModeloAreas.Banco_PAR">
+        <MappingFragment StoreEntitySet="Banco_PAR">
+          <ScalarProperty Name="BAN_IdBanco" ColumnName="BAN_IdBanco" />
+          <ScalarProperty Name="BAN_Descripcion" ColumnName="BAN_Descripcion" />
+          <ScalarProperty Name="BAN_FechaGrabacion" ColumnName="BAN_FechaGrabacion" />
+          <ScalarProperty Name="BAN_CreadoPor" ColumnName="BAN_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BancoCasaMatriz_ARE">
+      <EntityTypeMapping TypeName="ModeloAreas.BancoCasaMatriz_ARE">
+        <MappingFragment StoreEntitySet="BancoCasaMatriz_ARE">
+          <ScalarProperty Name="BAE_IdBancoCasaMatriz" ColumnName="BAE_IdBancoCasaMatriz" />
+          <ScalarProperty Name="BAE_IdBanco" ColumnName="BAE_IdBanco" />
+          <ScalarProperty Name="BAE_IdEmpresa" ColumnName="BAE_IdEmpresa" />
+          <ScalarProperty Name="BAE_FechaGrabacion" ColumnName="BAE_FechaGrabacion" />
+          <ScalarProperty Name="BAE_CreadoPor" ColumnName="BAE_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gestion_ARE">
+      <EntityTypeMapping TypeName="ModeloAreas.Gestion_ARE">
+        <MappingFragment StoreEntitySet="Gestion_ARE">
+          <ScalarProperty Name="GES_CodigoGestion" ColumnName="GES_CodigoGestion" />
+          <ScalarProperty Name="GES_IdGestion" ColumnName="GES_IdGestion" />
+          <ScalarProperty Name="GES_Descripcion" ColumnName="GES_Descripcion" />
+          <ScalarProperty Name="GES_IdMacroProceso" ColumnName="GES_IdMacroProceso" />
+          <ScalarProperty Name="GES_CentroCostos" ColumnName="GES_CentroCostos" />
+          <ScalarProperty Name="GES_CodigoBodegaERP" ColumnName="GES_CodigoBodegaERP" />
+          <ScalarProperty Name="GES_FechaGrabacion" ColumnName="GES_FechaGrabacion" />
+          <ScalarProperty Name="GES_CreadoPor" ColumnName="GES_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MacroProceso_ARE">
+      <EntityTypeMapping TypeName="ModeloAreas.MacroProceso_ARE">
+        <MappingFragment StoreEntitySet="MacroProceso_ARE">
+          <ScalarProperty Name="MAP_IdMacroProceso" ColumnName="MAP_IdMacroProceso" />
+          <ScalarProperty Name="MAP_Descripcion" ColumnName="MAP_Descripcion" />
+          <ScalarProperty Name="MAP_IdCasaMatriz" ColumnName="MAP_IdCasaMatriz" />
+          <ScalarProperty Name="MAP_FechaGrabacion" ColumnName="MAP_FechaGrabacion" />
+          <ScalarProperty Name="MAP_CreadoPor" ColumnName="MAP_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GestionesCasaMatriz_VARE">
+      <EntityTypeMapping TypeName="ModeloAreas.GestionesCasaMatriz_VARE">
+        <MappingFragment StoreEntitySet="GestionesCasaMatriz_VARE">
+          <ScalarProperty Name="CAM_IdCasaMatriz" ColumnName="CAM_IdCasaMatriz" />
+          <ScalarProperty Name="CAM_Nombre" ColumnName="CAM_Nombre" />
+          <ScalarProperty Name="MAP_IdMacroProceso" ColumnName="MAP_IdMacroProceso" />
+          <ScalarProperty Name="MAP_Descripcion" ColumnName="MAP_Descripcion" />
+          <ScalarProperty Name="GES_CodigoGestion" ColumnName="GES_CodigoGestion" />
+          <ScalarProperty Name="GES_IdGestion" ColumnName="GES_IdGestion" />
+          <ScalarProperty Name="GES_Descripcion" ColumnName="GES_Descripcion" />
+          <ScalarProperty Name="GES_CentroCostos" ColumnName="GES_CentroCostos" />
+          <ScalarProperty Name="GES_CodigoBodegaERP" ColumnName="GES_CodigoBodegaERP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaBancoCasaMatriz_ARE">
+      <EntityTypeMapping TypeName="ModeloAreas.CuentaBancoCasaMatriz_ARE">
+        <MappingFragment StoreEntitySet="CuentaBancoCasaMatriz_ARE">
+          <ScalarProperty Name="CBE_CreadoPor" ColumnName="CBE_CreadoPor" />
+          <ScalarProperty Name="CBE_FechaGrabacion" ColumnName="CBE_FechaGrabacion" />
+          <ScalarProperty Name="CBE_TipoCuenta" ColumnName="CBE_TipoCuenta" />
+          <ScalarProperty Name="CBE_NumeroCuenta" ColumnName="CBE_NumeroCuenta" />
+          <ScalarProperty Name="CBE_IdBancoEmpresa" ColumnName="CBE_IdBancoEmpresa" />
+          <ScalarProperty Name="CBE_IdCuentaBanco" ColumnName="CBE_IdCuentaBanco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoCuentaBanco_PAR">
+      <EntityTypeMapping TypeName="ModeloAreas.TipoCuentaBanco_PAR">
+        <MappingFragment StoreEntitySet="TipoCuentaBanco_PAR">
+          <ScalarProperty Name="TCB_CreadoPor" ColumnName="TCB_CreadoPor" />
+          <ScalarProperty Name="TCB_FechaGrabacion" ColumnName="TCB_FechaGrabacion" />
+          <ScalarProperty Name="TCB_Descripcion" ColumnName="TCB_Descripcion" />
+          <ScalarProperty Name="TCB_IdTipoCuenta" ColumnName="TCB_IdTipoCuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasaMatrizCuentaBanco_VARE">
+      <EntityTypeMapping TypeName="ModeloAreas.CasaMatrizCuentaBanco_VARE">
+        <MappingFragment StoreEntitySet="CasaMatrizCuentaBanco_VARE">
+          <ScalarProperty Name="TCB_Descripcion" ColumnName="TCB_Descripcion" />
+          <ScalarProperty Name="CBE_CreadoPor" ColumnName="CBE_CreadoPor" />
+          <ScalarProperty Name="CBE_FechaGrabacion" ColumnName="CBE_FechaGrabacion" />
+          <ScalarProperty Name="CBE_TipoCuenta" ColumnName="CBE_TipoCuenta" />
+          <ScalarProperty Name="CBE_NumeroCuenta" ColumnName="CBE_NumeroCuenta" />
+          <ScalarProperty Name="CBE_IdBancoEmpresa" ColumnName="CBE_IdBancoEmpresa" />
+          <ScalarProperty Name="CBE_IdCuentaBanco" ColumnName="CBE_IdCuentaBanco" />
+          <ScalarProperty Name="BAN_Descripcion" ColumnName="BAN_Descripcion" />
+          <ScalarProperty Name="BAE_IdBanco" ColumnName="BAE_IdBanco" />
+          <ScalarProperty Name="CAM_CreadoPor" ColumnName="CAM_CreadoPor" />
+          <ScalarProperty Name="CAM_FechaGrabacion" ColumnName="CAM_FechaGrabacion" />
+          <ScalarProperty Name="CAM_Estado" ColumnName="CAM_Estado" />
+          <ScalarProperty Name="CAM_CodigoMinisterio" ColumnName="CAM_CodigoMinisterio" />
+          <ScalarProperty Name="CAM_CentroCostos" ColumnName="CAM_CentroCostos" />
+          <ScalarProperty Name="CAM_IdLocalidad" ColumnName="CAM_IdLocalidad" />
+          <ScalarProperty Name="CAM_Telefono" ColumnName="CAM_Telefono" />
+          <ScalarProperty Name="CAM_Direccion" ColumnName="CAM_Direccion" />
+          <ScalarProperty Name="CAM_Sigla" ColumnName="CAM_Sigla" />
+          <ScalarProperty Name="CAM_CodigoSucursalERP" ColumnName="CAM_CodigoSucursalERP" />
+          <ScalarProperty Name="CAM_DigitoVerificacion" ColumnName="CAM_DigitoVerificacion" />
+          <ScalarProperty Name="CAM_Nit" ColumnName="CAM_Nit" />
+          <ScalarProperty Name="CAM_Nombre" ColumnName="CAM_Nombre" />
+          <ScalarProperty Name="CAM_IdCasaMatriz" ColumnName="CAM_IdCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcesosCasaMatriz_VARE">
+      <EntityTypeMapping TypeName="ModeloAreas.ProcesosCasaMatriz_VARE">
+        <MappingFragment StoreEntitySet="ProcesosCasaMatriz_VARE">
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="CAM_Estado" ColumnName="CAM_Estado" />
+          <ScalarProperty Name="CAM_CodigoMinisterio" ColumnName="CAM_CodigoMinisterio" />
+          <ScalarProperty Name="CAM_CentroCostos" ColumnName="CAM_CentroCostos" />
+          <ScalarProperty Name="CAM_IdLocalidad" ColumnName="CAM_IdLocalidad" />
+          <ScalarProperty Name="CAM_Telefono" ColumnName="CAM_Telefono" />
+          <ScalarProperty Name="CAM_Direccion" ColumnName="CAM_Direccion" />
+          <ScalarProperty Name="CAM_Sigla" ColumnName="CAM_Sigla" />
+          <ScalarProperty Name="CAM_CodigoSucursalERP" ColumnName="CAM_CodigoSucursalERP" />
+          <ScalarProperty Name="CAM_DigitoVerificacion" ColumnName="CAM_DigitoVerificacion" />
+          <ScalarProperty Name="CAM_Nit" ColumnName="CAM_Nit" />
+          <ScalarProperty Name="PRO_CodigoBodegaERP" ColumnName="PRO_CodigoBodegaERP" />
+          <ScalarProperty Name="PRO_CentroCostos" ColumnName="PRO_CentroCostos" />
+          <ScalarProperty Name="PRO_CodigoGestion" ColumnName="PRO_CodigoGestion" />
+          <ScalarProperty Name="PRO_Descripcion" ColumnName="PRO_Descripcion" />
+          <ScalarProperty Name="PRO_IdCodigoProceso" ColumnName="PRO_IdCodigoProceso" />
+          <ScalarProperty Name="PRO_IdProceso" ColumnName="PRO_IdProceso" />
+          <ScalarProperty Name="GES_CodigoBodegaERP" ColumnName="GES_CodigoBodegaERP" />
+          <ScalarProperty Name="GES_CentroCostos" ColumnName="GES_CentroCostos" />
+          <ScalarProperty Name="GES_Descripcion" ColumnName="GES_Descripcion" />
+          <ScalarProperty Name="GES_IdGestion" ColumnName="GES_IdGestion" />
+          <ScalarProperty Name="GES_CodigoGestion" ColumnName="GES_CodigoGestion" />
+          <ScalarProperty Name="MAP_Descripcion" ColumnName="MAP_Descripcion" />
+          <ScalarProperty Name="MAP_IdMacroProceso" ColumnName="MAP_IdMacroProceso" />
+          <ScalarProperty Name="CAM_Nombre" ColumnName="CAM_Nombre" />
+          <ScalarProperty Name="CAM_IdCasaMatriz" ColumnName="CAM_IdCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proceso_ARE">
+      <EntityTypeMapping TypeName="ModeloAreas.Proceso_ARE">
+        <MappingFragment StoreEntitySet="Proceso_ARE">
+          <ScalarProperty Name="PRO_CreadoPor" ColumnName="PRO_CreadoPor" />
+          <ScalarProperty Name="PRO_FechaGrabacion" ColumnName="PRO_FechaGrabacion" />
+          <ScalarProperty Name="PRO_CodigoBodegaERP" ColumnName="PRO_CodigoBodegaERP" />
+          <ScalarProperty Name="PRO_CentroCostos" ColumnName="PRO_CentroCostos" />
+          <ScalarProperty Name="PRO_CodigoGestion" ColumnName="PRO_CodigoGestion" />
+          <ScalarProperty Name="PRO_Descripcion" ColumnName="PRO_Descripcion" />
+          <ScalarProperty Name="PRO_IdCodigoProceso" ColumnName="PRO_IdCodigoProceso" />
+          <ScalarProperty Name="PRO_IdProceso" ColumnName="PRO_IdProceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasaMatriz_VARE">
+      <EntityTypeMapping TypeName="ModeloAreas.CasaMatriz_VARE">
+        <MappingFragment StoreEntitySet="CasaMatriz_VARE">
+          <ScalarProperty Name="NombreCompletoLocalidad" ColumnName="NombreCompletoLocalidad" />
+          <ScalarProperty Name="CAM_Estado" ColumnName="CAM_Estado" />
+          <ScalarProperty Name="CAM_CodigoMinisterio" ColumnName="CAM_CodigoMinisterio" />
+          <ScalarProperty Name="CAM_CentroCostos" ColumnName="CAM_CentroCostos" />
+          <ScalarProperty Name="CAM_IdLocalidad" ColumnName="CAM_IdLocalidad" />
+          <ScalarProperty Name="CAM_Telefono" ColumnName="CAM_Telefono" />
+          <ScalarProperty Name="CAM_Direccion" ColumnName="CAM_Direccion" />
+          <ScalarProperty Name="CAM_Sigla" ColumnName="CAM_Sigla" />
+          <ScalarProperty Name="CAM_CodigoSucursalERP" ColumnName="CAM_CodigoSucursalERP" />
+          <ScalarProperty Name="CAM_DigitoVerificacion" ColumnName="CAM_DigitoVerificacion" />
+          <ScalarProperty Name="CAM_Nit" ColumnName="CAM_Nit" />
+          <ScalarProperty Name="CAM_Nombre" ColumnName="CAM_Nombre" />
+          <ScalarProperty Name="CAM_IdCasaMatriz" ColumnName="CAM_IdCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasaMatriz_ARE">
+      <EntityTypeMapping TypeName="ModeloAreas.CasaMatriz_ARE">
+        <MappingFragment StoreEntitySet="CasaMatriz_ARE">
+          <ScalarProperty Name="CAM_CreadoPor" ColumnName="CAM_CreadoPor" />
+          <ScalarProperty Name="CAM_FechaGrabacion" ColumnName="CAM_FechaGrabacion" />
+          <ScalarProperty Name="CAM_Estado" ColumnName="CAM_Estado" />
+          <ScalarProperty Name="CAM_CodigoMinisterio" ColumnName="CAM_CodigoMinisterio" />
+          <ScalarProperty Name="CAM_CentroCostos" ColumnName="CAM_CentroCostos" />
+          <ScalarProperty Name="CAM_IdLocalidad" ColumnName="CAM_IdLocalidad" />
+          <ScalarProperty Name="CAM_Telefono" ColumnName="CAM_Telefono" />
+          <ScalarProperty Name="CAM_Direccion" ColumnName="CAM_Direccion" />
+          <ScalarProperty Name="CAM_Sigla" ColumnName="CAM_Sigla" />
+          <ScalarProperty Name="CAM_CodigoSucursalERP" ColumnName="CAM_CodigoSucursalERP" />
+          <ScalarProperty Name="CAM_DigitoVerificacion" ColumnName="CAM_DigitoVerificacion" />
+          <ScalarProperty Name="CAM_Nit" ColumnName="CAM_Nit" />
+          <ScalarProperty Name="CAM_Nombre" ColumnName="CAM_Nombre" />
+          <ScalarProperty Name="CAM_IdCasaMatriz" ColumnName="CAM_IdCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

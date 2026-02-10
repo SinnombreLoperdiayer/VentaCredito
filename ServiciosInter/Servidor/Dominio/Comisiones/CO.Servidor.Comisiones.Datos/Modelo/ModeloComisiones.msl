@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloComisionesStoreContainer" CdmEntityContainer="ModeloComisiones">
+    <EntitySetMapping Name="Agencia_PUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.Agencia_PUA">
+        <MappingFragment StoreEntitySet="Agencia_PUA">
+          <ScalarProperty Name="AGE_IdAgencia" ColumnName="AGE_IdAgencia" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="AGE_IdTipoAgencia" ColumnName="AGE_IdTipoAgencia" />
+          <ScalarProperty Name="AGE_FechaGrabacion" ColumnName="AGE_FechaGrabacion" />
+          <ScalarProperty Name="AGE_CreadoPor" ColumnName="AGE_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroLogistico_PUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroLogistico_PUA">
+        <MappingFragment StoreEntitySet="CentroLogistico_PUA">
+          <ScalarProperty Name="CEL_IdCentroLogistico" ColumnName="CEL_IdCentroLogistico" />
+          <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+          <ScalarProperty Name="CEL_FechaGrabacion" ColumnName="CEL_FechaGrabacion" />
+          <ScalarProperty Name="CEL_CreadoPor" ColumnName="CEL_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroSrvAdministComiHist_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroSrvAdministComiHist_COM">
+        <MappingFragment StoreEntitySet="CentroSrvAdministComiHist_COM">
+          <ScalarProperty Name="CSA_IdAuditoria" ColumnName="CSA_IdAuditoria" />
+          <ScalarProperty Name="CSA_IdCentroSvcAdministrado" ColumnName="CSA_IdCentroSvcAdministrado" />
+          <ScalarProperty Name="CSA_IdCentroServicioServicio" ColumnName="CSA_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSA_IdAgencia" ColumnName="CSA_IdAgencia" />
+          <ScalarProperty Name="CSA_IdTipoComision" ColumnName="CSA_IdTipoComision" />
+          <ScalarProperty Name="CSA_Valor" ColumnName="CSA_Valor" />
+          <ScalarProperty Name="CSA_Porcentaje" ColumnName="CSA_Porcentaje" />
+          <ScalarProperty Name="CSA_FechaGrabacion" ColumnName="CSA_FechaGrabacion" />
+          <ScalarProperty Name="CSA_CreadoPor" ColumnName="CSA_CreadoPor" />
+          <ScalarProperty Name="CSA_FechaCambio" ColumnName="CSA_FechaCambio" />
+          <ScalarProperty Name="CSA_CambiadoPor" ColumnName="CSA_CambiadoPor" />
+          <ScalarProperty Name="CSA_TipoCambio" ColumnName="CSA_TipoCambio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroSvcAdministradoComi_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroSvcAdministradoComi_COM">
+        <MappingFragment StoreEntitySet="CentroSvcAdministradoComi_COM">
+          <ScalarProperty Name="CSA_IdCentroSvcAdministrado" ColumnName="CSA_IdCentroSvcAdministrado" />
+          <ScalarProperty Name="CSA_IdCentroServicioServicio" ColumnName="CSA_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSA_IdAgencia" ColumnName="CSA_IdAgencia" />
+          <ScalarProperty Name="CSA_IdTipoComision" ColumnName="CSA_IdTipoComision" />
+          <ScalarProperty Name="CSA_ValorComision" ColumnName="CSA_ValorComision" />
+          <ScalarProperty Name="CSA_PorcentajeComision" ColumnName="CSA_PorcentajeComision" />
+          <ScalarProperty Name="CSA_FechaGrabacion" ColumnName="CSA_FechaGrabacion" />
+          <ScalarProperty Name="CSA_CreadoPor" ColumnName="CSA_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PuntoServicio_PUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.PuntoServicio_PUA">
+        <MappingFragment StoreEntitySet="PuntoServicio_PUA">
+          <ScalarProperty Name="PUS_IdPuntoServicio" ColumnName="PUS_IdPuntoServicio" />
+          <ScalarProperty Name="PUS_IdAgencia" ColumnName="PUS_IdAgencia" />
+          <ScalarProperty Name="PUS_FechaGrabacion" ColumnName="PUS_FechaGrabacion" />
+          <ScalarProperty Name="PUS_CreadoPor" ColumnName="PUS_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AgenciasDeCentroLogistico_VPUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.AgenciasDeCentroLogistico_VPUA">
+        <MappingFragment StoreEntitySet="AgenciasDeCentroLogistico_VPUA">
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="AGE_IdAgencia" ColumnName="AGE_IdAgencia" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="AGE_IdTipoAgencia" ColumnName="AGE_IdTipoAgencia" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroLogisDeRegionalAdmi_VPUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroLogisDeRegionalAdmi_VPUA">
+        <MappingFragment StoreEntitySet="CentroLogisDeRegionalAdmi_VPUA">
+          <ScalarProperty Name="CEL_IdCentroLogistico" ColumnName="CEL_IdCentroLogistico" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+          <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoComision_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.TipoComision_COM">
+        <MappingFragment StoreEntitySet="TipoComision_COM">
+          <ScalarProperty Name="TCO_CreadoPor" ColumnName="TCO_CreadoPor" />
+          <ScalarProperty Name="TCO_FechaGrabacion" ColumnName="TCO_FechaGrabacion" />
+          <ScalarProperty Name="TCO_Descripcion" ColumnName="TCO_Descripcion" />
+          <ScalarProperty Name="TCO_IdTipoComision" ColumnName="TCO_IdTipoComision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioComiFijas_VCOM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioComiFijas_VCOM">
+        <MappingFragment StoreEntitySet="CentroServicioComiFijas_VCOM">
+          <ScalarProperty Name="CSD_Estado" ColumnName="CSD_Estado" />
+          <ScalarProperty Name="CSD_FechaInicio" ColumnName="CSD_FechaInicio" />
+          <ScalarProperty Name="CSD_Valor" ColumnName="CSD_Valor" />
+          <ScalarProperty Name="CSD_Descripcion" ColumnName="CSD_Descripcion" />
+          <ScalarProperty Name="CSD_IdTipoComisionFija" ColumnName="CSD_IdTipoComisionFija" />
+          <ScalarProperty Name="CSD_IdCentroServicios" ColumnName="CSD_IdCentroServicios" />
+          <ScalarProperty Name="TCF_Descripcion" ColumnName="TCF_Descripcion" />
+          <ScalarProperty Name="TCF_IdTipoComisionFija" ColumnName="TCF_IdTipoComisionFija" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroSvcComiFijaContrato_VCOM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroSvcComiFijaContrato_VCOM">
+        <MappingFragment StoreEntitySet="CentroSvcComiFijaContrato_VCOM">
+          <ScalarProperty Name="CON_NumeroAsignacionPresupuest" ColumnName="CON_NumeroAsignacionPresupuest" />
+          <ScalarProperty Name="CON_SupervisorCuenta" ColumnName="CON_SupervisorCuenta" />
+          <ScalarProperty Name="CON_EjecutivoCuenta" ColumnName="CON_EjecutivoCuenta" />
+          <ScalarProperty Name="CON_ListaPrecios" ColumnName="CON_ListaPrecios" />
+          <ScalarProperty Name="CON_PresupuestoMensual" ColumnName="CON_PresupuestoMensual" />
+          <ScalarProperty Name="CON_PorcentajeAviso" ColumnName="CON_PorcentajeAviso" />
+          <ScalarProperty Name="CON_ValorContrato" ColumnName="CON_ValorContrato" />
+          <ScalarProperty Name="CON_FechaFin" ColumnName="CON_FechaFin" />
+          <ScalarProperty Name="CON_FechaInicio" ColumnName="CON_FechaInicio" />
+          <ScalarProperty Name="CON_ObjetoContrato" ColumnName="CON_ObjetoContrato" />
+          <ScalarProperty Name="CON_TelefonoGestorPago" ColumnName="CON_TelefonoGestorPago" />
+          <ScalarProperty Name="CON_CiudadGestorPago" ColumnName="CON_CiudadGestorPago" />
+          <ScalarProperty Name="CON_NombreGestorPago" ColumnName="CON_NombreGestorPago" />
+          <ScalarProperty Name="CON_TelefonoInterventor" ColumnName="CON_TelefonoInterventor" />
+          <ScalarProperty Name="CON_CiudadInterventor" ColumnName="CON_CiudadInterventor" />
+          <ScalarProperty Name="CON_NombreInterventor" ColumnName="CON_NombreInterventor" />
+          <ScalarProperty Name="CON_ClienteCredito" ColumnName="CON_ClienteCredito" />
+          <ScalarProperty Name="CLI_IdCliente" ColumnName="CLI_IdCliente" />
+          <ScalarProperty Name="CLI_RazonSocial" ColumnName="CLI_RazonSocial" />
+          <ScalarProperty Name="CON_NombreContrato" ColumnName="CON_NombreContrato" />
+          <ScalarProperty Name="CON_NumeroContrato" ColumnName="CON_NumeroContrato" />
+          <ScalarProperty Name="CON_IdContrato" ColumnName="CON_IdContrato" />
+          <ScalarProperty Name="CCC_Estado" ColumnName="CCC_Estado" />
+          <ScalarProperty Name="CCC_FechaInicio" ColumnName="CCC_FechaInicio" />
+          <ScalarProperty Name="CCC_Valor" ColumnName="CCC_Valor" />
+          <ScalarProperty Name="CCC_Descripcion" ColumnName="CCC_Descripcion" />
+          <ScalarProperty Name="CCC_IdContrato" ColumnName="CCC_IdContrato" />
+          <ScalarProperty Name="CCC_IdTipoComisionFija" ColumnName="CCC_IdTipoComisionFija" />
+          <ScalarProperty Name="CCC_IdCentroServicios" ColumnName="CCC_IdCentroServicios" />
+          <ScalarProperty Name="CCC_IdCentroSrvComFijaContrato" ColumnName="CCC_IdCentroSrvComFijaContrato" />
+          <ScalarProperty Name="TCF_Descripcion" ColumnName="TCF_Descripcion" />
+          <ScalarProperty Name="TCF_IdTipoComisionFija" ColumnName="TCF_IdTipoComisionFija" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComisionSrvCentroSrvAdmin_VCOM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.ComisionSrvCentroSrvAdmin_VCOM">
+        <MappingFragment StoreEntitySet="ComisionSrvCentroSrvAdmin_VCOM">
+          <ScalarProperty Name="CSA_PorcentajeComision" ColumnName="CSA_PorcentajeComision" />
+          <ScalarProperty Name="CSA_ValorComision" ColumnName="CSA_ValorComision" />
+          <ScalarProperty Name="CSA_IdTipoComision" ColumnName="CSA_IdTipoComision" />
+          <ScalarProperty Name="CSA_IdAgencia" ColumnName="CSA_IdAgencia" />
+          <ScalarProperty Name="CSA_IdCentroServicioServicio" ColumnName="CSA_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSA_IdCentroSvcAdministrado" ColumnName="CSA_IdCentroSvcAdministrado" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CSS_Estado" ColumnName="CSS_Estado" />
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="UNE_Descripcion" ColumnName="UNE_Descripcion" />
+          <ScalarProperty Name="SER_Descripcion" ColumnName="SER_Descripcion" />
+          <ScalarProperty Name="CSS_IdCentroServicioServicio" ColumnName="CSS_IdCentroServicioServicio" />
+          <ScalarProperty Name="TCO_Descripcion" ColumnName="TCO_Descripcion" />
+          <ScalarProperty Name="TCO_IdTipoComision" ColumnName="TCO_IdTipoComision" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SER_IdServicio" ColumnName="SER_IdServicio" />
+          <ScalarProperty Name="UNE_IdUnidad" ColumnName="UNE_IdUnidad" />
+          <ScalarProperty Name="UNE_Nombre" ColumnName="UNE_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dia_PAR">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.Dia_PAR">
+        <MappingFragment StoreEntitySet="Dia_PAR">
+          <ScalarProperty Name="DIA_CreadoPor" ColumnName="DIA_CreadoPor" />
+          <ScalarProperty Name="DIA_FechaGrabacion" ColumnName="DIA_FechaGrabacion" />
+          <ScalarProperty Name="DIA_NombreDia" ColumnName="DIA_NombreDia" />
+          <ScalarProperty Name="DIA_IdDia" ColumnName="DIA_IdDia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoComisionFija_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.TipoComisionFija_COM">
+        <MappingFragment StoreEntitySet="TipoComisionFija_COM">
+          <ScalarProperty Name="TCF_CreadoPor" ColumnName="TCF_CreadoPor" />
+          <ScalarProperty Name="TCF_FechaGrabacion" ColumnName="TCF_FechaGrabacion" />
+          <ScalarProperty Name="TCF_Descripcion" ColumnName="TCF_Descripcion" />
+          <ScalarProperty Name="TCF_IdTipoComisionFija" ColumnName="TCF_IdTipoComisionFija" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioSrvComiHist_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioSrvComiHist_COM">
+        <MappingFragment StoreEntitySet="CentroServicioSrvComiHist_COM">
+          <ScalarProperty Name="CCS_TipoCambio" ColumnName="CCS_TipoCambio" />
+          <ScalarProperty Name="CCS_CambiadoPor" ColumnName="CCS_CambiadoPor" />
+          <ScalarProperty Name="CCS_FechaCambio" ColumnName="CCS_FechaCambio" />
+          <ScalarProperty Name="CSC_CreadoPor" ColumnName="CSC_CreadoPor" />
+          <ScalarProperty Name="CSC_FechaGrabacion" ColumnName="CSC_FechaGrabacion" />
+          <ScalarProperty Name="CSC_Porcentaje" ColumnName="CSC_Porcentaje" />
+          <ScalarProperty Name="CSC_Valor" ColumnName="CSC_Valor" />
+          <ScalarProperty Name="CSC_IdTipoComision" ColumnName="CSC_IdTipoComision" />
+          <ScalarProperty Name="CSC_IdCentroServicioServicio" ColumnName="CSC_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSC_IdAuditoria" ColumnName="CSC_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroSrvComiFijaContrato_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroSrvComiFijaContrato_COM">
+        <MappingFragment StoreEntitySet="CentroSrvComiFijaContrato_COM">
+          <ScalarProperty Name="CCC_CreadoPor" ColumnName="CCC_CreadoPor" />
+          <ScalarProperty Name="CCC_FechaGrabacion" ColumnName="CCC_FechaGrabacion" />
+          <ScalarProperty Name="CCC_Estado" ColumnName="CCC_Estado" />
+          <ScalarProperty Name="CCC_FechaInicio" ColumnName="CCC_FechaInicio" />
+          <ScalarProperty Name="CCC_Valor" ColumnName="CCC_Valor" />
+          <ScalarProperty Name="CCC_Descripcion" ColumnName="CCC_Descripcion" />
+          <ScalarProperty Name="CCC_IdContrato" ColumnName="CCC_IdContrato" />
+          <ScalarProperty Name="CCC_IdTipoComisionFija" ColumnName="CCC_IdTipoComisionFija" />
+          <ScalarProperty Name="CCC_IdCentroServicios" ColumnName="CCC_IdCentroServicios" />
+          <ScalarProperty Name="CCC_IdCentroSrvComFijaContrato" ColumnName="CCC_IdCentroSrvComFijaContrato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroSrvComiFijaContrHist_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroSrvComiFijaContrHist_COM">
+        <MappingFragment StoreEntitySet="CentroSrvComiFijaContrHist_COM">
+          <ScalarProperty Name="CCC_TipoCambio" ColumnName="CCC_TipoCambio" />
+          <ScalarProperty Name="CCC_CambiadoPor" ColumnName="CCC_CambiadoPor" />
+          <ScalarProperty Name="CCC_FechaCambio" ColumnName="CCC_FechaCambio" />
+          <ScalarProperty Name="CCC_CreadoPor" ColumnName="CCC_CreadoPor" />
+          <ScalarProperty Name="CCC_FechaGrabacion" ColumnName="CCC_FechaGrabacion" />
+          <ScalarProperty Name="CCC_Estado" ColumnName="CCC_Estado" />
+          <ScalarProperty Name="CCC_FechaInicio" ColumnName="CCC_FechaInicio" />
+          <ScalarProperty Name="CCC_Valor" ColumnName="CCC_Valor" />
+          <ScalarProperty Name="CCC_Descripcion" ColumnName="CCC_Descripcion" />
+          <ScalarProperty Name="CCC_IdContrato" ColumnName="CCC_IdContrato" />
+          <ScalarProperty Name="CCC_IdTipoComisionFija" ColumnName="CCC_IdTipoComisionFija" />
+          <ScalarProperty Name="CCC_IdCentroServicios" ColumnName="CCC_IdCentroServicios" />
+          <ScalarProperty Name="CCC_IdCentroSrvComFijaContrato" ColumnName="CCC_IdCentroSrvComFijaContrato" />
+          <ScalarProperty Name="CCC_IdAuditoria" ColumnName="CCC_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioComiFija_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioComiFija_COM">
+        <MappingFragment StoreEntitySet="CentroServicioComiFija_COM">
+          <ScalarProperty Name="CSD_CreadoPor" ColumnName="CSD_CreadoPor" />
+          <ScalarProperty Name="CSD_FechaGrabacion" ColumnName="CSD_FechaGrabacion" />
+          <ScalarProperty Name="CSD_Estado" ColumnName="CSD_Estado" />
+          <ScalarProperty Name="CSD_FechaInicio" ColumnName="CSD_FechaInicio" />
+          <ScalarProperty Name="CSD_Valor" ColumnName="CSD_Valor" />
+          <ScalarProperty Name="CSD_Descripcion" ColumnName="CSD_Descripcion" />
+          <ScalarProperty Name="CSD_IdTipoComisionFija" ColumnName="CSD_IdTipoComisionFija" />
+          <ScalarProperty Name="CSD_IdCentroServicios" ColumnName="CSD_IdCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioComiFijaHist_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioComiFijaHist_COM">
+        <MappingFragment StoreEntitySet="CentroServicioComiFijaHist_COM">
+          <ScalarProperty Name="CSD_TipoCambio" ColumnName="CSD_TipoCambio" />
+          <ScalarProperty Name="CSD_CambiadoPor" ColumnName="CSD_CambiadoPor" />
+          <ScalarProperty Name="CSD_FechaCambio" ColumnName="CSD_FechaCambio" />
+          <ScalarProperty Name="CSD_CreadoPor" ColumnName="CSD_CreadoPor" />
+          <ScalarProperty Name="CSD_FechaGrabacion" ColumnName="CSD_FechaGrabacion" />
+          <ScalarProperty Name="CSD_Estado" ColumnName="CSD_Estado" />
+          <ScalarProperty Name="CSD_FechaInicio" ColumnName="CSD_FechaInicio" />
+          <ScalarProperty Name="CSD_Valor" ColumnName="CSD_Valor" />
+          <ScalarProperty Name="CSD_Descripcion" ColumnName="CSD_Descripcion" />
+          <ScalarProperty Name="CSD_IdTipoComisionFija" ColumnName="CSD_IdTipoComisionFija" />
+          <ScalarProperty Name="CSD_IdCentroServicios" ColumnName="CSD_IdCentroServicios" />
+          <ScalarProperty Name="CSD_IdAuditoria" ColumnName="CSD_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioSrvDescuento_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioSrvDescuento_COM">
+        <MappingFragment StoreEntitySet="CentroServicioSrvDescuento_COM">
+          <ScalarProperty Name="CSD_CreadoPor" ColumnName="CSD_CreadoPor" />
+          <ScalarProperty Name="CSD_FechaGrabacion" ColumnName="CSD_FechaGrabacion" />
+          <ScalarProperty Name="CSD_Descripcion" ColumnName="CSD_Descripcion" />
+          <ScalarProperty Name="CSD_PorcentajeDescuento" ColumnName="CSD_PorcentajeDescuento" />
+          <ScalarProperty Name="CSD_ValorDescuento" ColumnName="CSD_ValorDescuento" />
+          <ScalarProperty Name="CSD_ValorCriterioPenalizacion" ColumnName="CSD_ValorCriterioPenalizacion" />
+          <ScalarProperty Name="CSD_IdTipoDescuento" ColumnName="CSD_IdTipoDescuento" />
+          <ScalarProperty Name="CSD_IdCentroServicioServicio" ColumnName="CSD_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSD_IdCentroServiSrvDescuento" ColumnName="CSD_IdCentroServiSrvDescuento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroSrvSrvDescuentoHist_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroSrvSrvDescuentoHist_COM">
+        <MappingFragment StoreEntitySet="CentroSrvSrvDescuentoHist_COM">
+          <ScalarProperty Name="CSD_TipoCambio" ColumnName="CSD_TipoCambio" />
+          <ScalarProperty Name="CSD_CambiadoPor" ColumnName="CSD_CambiadoPor" />
+          <ScalarProperty Name="CSD_FechaCambio" ColumnName="CSD_FechaCambio" />
+          <ScalarProperty Name="CSD_CreadoPor" ColumnName="CSD_CreadoPor" />
+          <ScalarProperty Name="CSD_FechaGrabacion" ColumnName="CSD_FechaGrabacion" />
+          <ScalarProperty Name="CSD_Descripcion" ColumnName="CSD_Descripcion" />
+          <ScalarProperty Name="CSD_PorcentajeDescuento" ColumnName="CSD_PorcentajeDescuento" />
+          <ScalarProperty Name="CSD_ValorDescuento" ColumnName="CSD_ValorDescuento" />
+          <ScalarProperty Name="CSD_ValorCriterioPenalizacion" ColumnName="CSD_ValorCriterioPenalizacion" />
+          <ScalarProperty Name="CSD_IdTipoDescuento" ColumnName="CSD_IdTipoDescuento" />
+          <ScalarProperty Name="CSD_IdCentroServicioServicio" ColumnName="CSD_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSD_IdCentroServiSrvDescuento" ColumnName="CSD_IdCentroServiSrvDescuento" />
+          <ScalarProperty Name="CSD_IdAuditoria" ColumnName="CSD_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioServicioDia_PUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioServicioDia_PUA">
+        <MappingFragment StoreEntitySet="CentroServicioServicioDia_PUA">
+          <ScalarProperty Name="CSD_CreadoPor" ColumnName="CSD_CreadoPor" />
+          <ScalarProperty Name="CSD_FechaGrabacion" ColumnName="CSD_FechaGrabacion" />
+          <ScalarProperty Name="CSD_HoraFinal" ColumnName="CSD_HoraFinal" />
+          <ScalarProperty Name="CSD_HoraInicial" ColumnName="CSD_HoraInicial" />
+          <ScalarProperty Name="CSD_IdDia" ColumnName="CSD_IdDia" />
+          <ScalarProperty Name="CSD_IdCentroServicioServicio" ColumnName="CSD_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSD_IdCentroSrvSrvDia" ColumnName="CSD_IdCentroSrvSrvDia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioServicioHist_PUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioServicioHist_PUA">
+        <MappingFragment StoreEntitySet="CentroServicioServicioHist_PUA">
+          <ScalarProperty Name="CSS_TipoCambio" ColumnName="CSS_TipoCambio" />
+          <ScalarProperty Name="CSS_CambiadoPor" ColumnName="CSS_CambiadoPor" />
+          <ScalarProperty Name="CCS_FechaCambio" ColumnName="CCS_FechaCambio" />
+          <ScalarProperty Name="CSS_CreadoPor" ColumnName="CSS_CreadoPor" />
+          <ScalarProperty Name="CSS_FechaGrabacion" ColumnName="CSS_FechaGrabacion" />
+          <ScalarProperty Name="CSS_Estado" ColumnName="CSS_Estado" />
+          <ScalarProperty Name="CSS_FechaInicioVenta" ColumnName="CSS_FechaInicioVenta" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="CSS_IdCentroServicioServicio" ColumnName="CSS_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSS_IdAuditoria" ColumnName="CSS_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServiciosSrvUniNeg_VCOM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServiciosSrvUniNeg_VCOM">
+        <MappingFragment StoreEntitySet="CentroServiciosSrvUniNeg_VCOM">
+          <ScalarProperty Name="CSS_FechaInicioVenta" ColumnName="CSS_FechaInicioVenta" />
+          <ScalarProperty Name="SER_AplicaRetenciones" ColumnName="SER_AplicaRetenciones" />
+          <ScalarProperty Name="SER_IdentificadorInterno" ColumnName="SER_IdentificadorInterno" />
+          <ScalarProperty Name="SER_HoraFinVenta" ColumnName="SER_HoraFinVenta" />
+          <ScalarProperty Name="SER_HoraInicioVenta" ColumnName="SER_HoraInicioVenta" />
+          <ScalarProperty Name="SER_IdCuentaExterna" ColumnName="SER_IdCuentaExterna" />
+          <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CSS_Estado" ColumnName="CSS_Estado" />
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="UNE_Descripcion" ColumnName="UNE_Descripcion" />
+          <ScalarProperty Name="SER_Descripcion" ColumnName="SER_Descripcion" />
+          <ScalarProperty Name="CSS_IdCentroServicioServicio" ColumnName="CSS_IdCentroServicioServicio" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SER_IdServicio" ColumnName="SER_IdServicio" />
+          <ScalarProperty Name="UNE_IdUnidad" ColumnName="UNE_IdUnidad" />
+          <ScalarProperty Name="UNE_Nombre" ColumnName="UNE_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComisionesServicioCenSrv_VCOM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.ComisionesServicioCenSrv_VCOM">
+        <MappingFragment StoreEntitySet="ComisionesServicioCenSrv_VCOM">
+          <ScalarProperty Name="CSC_IdTipoComision" ColumnName="CSC_IdTipoComision" />
+          <ScalarProperty Name="CSC_IdCentroServicioServicio" ColumnName="CSC_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSS_FechaInicioVenta" ColumnName="CSS_FechaInicioVenta" />
+          <ScalarProperty Name="SER_AplicaRetenciones" ColumnName="SER_AplicaRetenciones" />
+          <ScalarProperty Name="SER_IdentificadorInterno" ColumnName="SER_IdentificadorInterno" />
+          <ScalarProperty Name="SER_HoraFinVenta" ColumnName="SER_HoraFinVenta" />
+          <ScalarProperty Name="SER_HoraInicioVenta" ColumnName="SER_HoraInicioVenta" />
+          <ScalarProperty Name="SER_IdCuentaExterna" ColumnName="SER_IdCuentaExterna" />
+          <ScalarProperty Name="SER_IdUnidadNegocio" ColumnName="SER_IdUnidadNegocio" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CSS_Estado" ColumnName="CSS_Estado" />
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="UNE_Descripcion" ColumnName="UNE_Descripcion" />
+          <ScalarProperty Name="SER_Descripcion" ColumnName="SER_Descripcion" />
+          <ScalarProperty Name="CSS_IdCentroServicioServicio" ColumnName="CSS_IdCentroServicioServicio" />
+          <ScalarProperty Name="TCO_Descripcion" ColumnName="TCO_Descripcion" />
+          <ScalarProperty Name="TCO_IdTipoComision" ColumnName="TCO_IdTipoComision" />
+          <ScalarProperty Name="CSC_Porcentaje" ColumnName="CSC_Porcentaje" />
+          <ScalarProperty Name="CSC_Valor" ColumnName="CSC_Valor" />
+          <ScalarProperty Name="SER_Nombre" ColumnName="SER_Nombre" />
+          <ScalarProperty Name="SER_IdServicio" ColumnName="SER_IdServicio" />
+          <ScalarProperty Name="UNE_IdUnidad" ColumnName="UNE_IdUnidad" />
+          <ScalarProperty Name="UNE_Nombre" ColumnName="UNE_Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DescuentosServicioCenSrv_VCOM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.DescuentosServicioCenSrv_VCOM">
+        <MappingFragment StoreEntitySet="DescuentosServicioCenSrv_VCOM">
+          <ScalarProperty Name="CSD_Descripcion" ColumnName="CSD_Descripcion" />
+          <ScalarProperty Name="CSD_PorcentajeDescuento" ColumnName="CSD_PorcentajeDescuento" />
+          <ScalarProperty Name="CSD_ValorDescuento" ColumnName="CSD_ValorDescuento" />
+          <ScalarProperty Name="CSD_ValorCriterioPenalizacion" ColumnName="CSD_ValorCriterioPenalizacion" />
+          <ScalarProperty Name="CSD_IdTipoDescuento" ColumnName="CSD_IdTipoDescuento" />
+          <ScalarProperty Name="CSD_IdCentroServicioServicio" ColumnName="CSD_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSD_IdCentroServiSrvDescuento" ColumnName="CSD_IdCentroServiSrvDescuento" />
+          <ScalarProperty Name="TDE_Descripcion" ColumnName="TDE_Descripcion" />
+          <ScalarProperty Name="TDE_IdTipoDescuento" ColumnName="TDE_IdTipoDescuento" />
+          <ScalarProperty Name="CSS_FechaInicioVenta" ColumnName="CSS_FechaInicioVenta" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CSS_Estado" ColumnName="CSS_Estado" />
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="CSS_IdCentroServicioServicio" ColumnName="CSS_IdCentroServicioServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PuntosDeAgencia_VPUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.PuntosDeAgencia_VPUA">
+        <MappingFragment StoreEntitySet="PuntosDeAgencia_VPUA">
+          <ScalarProperty Name="NombreAgencia" ColumnName="NombreAgencia" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="PUS_IdAgencia" ColumnName="PUS_IdAgencia" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicios_PUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicios_PUA">
+        <MappingFragment StoreEntitySet="CentroServicios_PUA">
+          <ScalarProperty Name="CES_IdClasificadorCanalVenta" ColumnName="CES_IdClasificadorCanalVenta" />
+          <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+          <ScalarProperty Name="CES_TopeMaximoPorPagos" ColumnName="CES_TopeMaximoPorPagos" />
+          <ScalarProperty Name="CES_CreadoPor" ColumnName="CES_CreadoPor" />
+          <ScalarProperty Name="CES_FechaGrabacion" ColumnName="CES_FechaGrabacion" />
+          <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+          <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+          <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+          <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+          <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+          <ScalarProperty Name="CES_VendePrepago" ColumnName="CES_VendePrepago" />
+          <ScalarProperty Name="CES_AdmiteFormaPagoAlCobro" ColumnName="CES_AdmiteFormaPagoAlCobro" />
+          <ScalarProperty Name="CES_VolumenMaximo" ColumnName="CES_VolumenMaximo" />
+          <ScalarProperty Name="CES_PesoMaximo" ColumnName="CES_PesoMaximo" />
+          <ScalarProperty Name="CES_IdTipoPropiedad" ColumnName="CES_IdTipoPropiedad" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+          <ScalarProperty Name="CES_Email" ColumnName="CES_Email" />
+          <ScalarProperty Name="CES_Longitud" ColumnName="CES_Longitud" />
+          <ScalarProperty Name="CES_Latitud" ColumnName="CES_Latitud" />
+          <ScalarProperty Name="CES_IdPersonaResponsable" ColumnName="CES_IdPersonaResponsable" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+          <ScalarProperty Name="CES_IdZona" ColumnName="CES_IdZona" />
+          <ScalarProperty Name="CES_Barrio" ColumnName="CES_Barrio" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_Fax" ColumnName="CES_Fax" />
+          <ScalarProperty Name="CES_Telefono2" ColumnName="CES_Telefono2" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_IdPropietario" ColumnName="CES_IdPropietario" />
+          <ScalarProperty Name="CES_DigitoVerificacion" ColumnName="CES_DigitoVerificacion" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioServicio_PUA">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioServicio_PUA">
+        <MappingFragment StoreEntitySet="CentroServicioServicio_PUA">
+          <ScalarProperty Name="CSS_CreadoPor" ColumnName="CSS_CreadoPor" />
+          <ScalarProperty Name="CSS_FechaGrabacion" ColumnName="CSS_FechaGrabacion" />
+          <ScalarProperty Name="CSS_Estado" ColumnName="CSS_Estado" />
+          <ScalarProperty Name="CSS_FechaInicioVenta" ColumnName="CSS_FechaInicioVenta" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="CSS_IdCentroServicioServicio" ColumnName="CSS_IdCentroServicioServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServicioSrvComi_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.CentroServicioSrvComi_COM">
+        <MappingFragment StoreEntitySet="CentroServicioSrvComi_COM">
+          <ScalarProperty Name="CSC_CreadoPor" ColumnName="CSC_CreadoPor" />
+          <ScalarProperty Name="CSC_FechaGrabacion" ColumnName="CSC_FechaGrabacion" />
+          <ScalarProperty Name="CSC_Porcentaje" ColumnName="CSC_Porcentaje" />
+          <ScalarProperty Name="CSC_Valor" ColumnName="CSC_Valor" />
+          <ScalarProperty Name="CSC_IdTipoComision" ColumnName="CSC_IdTipoComision" />
+          <ScalarProperty Name="CSC_IdCentroServicioServicio" ColumnName="CSC_IdCentroServicioServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComisionFijaCentroSvcContrato_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.ComisionFijaCentroSvcContrato_COM">
+        <MappingFragment StoreEntitySet="ComisionFijaCentroSvcContrato_COM">
+          <ScalarProperty Name="CCC_Valor" ColumnName="CCC_Valor" />
+          <ScalarProperty Name="CCC_IdCentroServicios" ColumnName="CCC_IdCentroServicios" />
+          <ScalarProperty Name="CON_FechaFin" ColumnName="CON_FechaFin" />
+          <ScalarProperty Name="CCC_FechaInicio" ColumnName="CCC_FechaInicio" />
+          <ScalarProperty Name="CCC_Estado" ColumnName="CCC_Estado" />
+          <ScalarProperty Name="CCC_IdContrato" ColumnName="CCC_IdContrato" />
+          <ScalarProperty Name="TCF_Descripcion" ColumnName="TCF_Descripcion" />
+          <ScalarProperty Name="CCC_IdTipoComisionFija" ColumnName="CCC_IdTipoComisionFija" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComisionFijaCentroServicios_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.ComisionFijaCentroServicios_COM">
+        <MappingFragment StoreEntitySet="ComisionFijaCentroServicios_COM">
+          <ScalarProperty Name="CSD_Estado" ColumnName="CSD_Estado" />
+          <ScalarProperty Name="CSD_FechaInicio" ColumnName="CSD_FechaInicio" />
+          <ScalarProperty Name="CSD_Valor" ColumnName="CSD_Valor" />
+          <ScalarProperty Name="CSD_Descripcion" ColumnName="CSD_Descripcion" />
+          <ScalarProperty Name="TCF_Descripcion" ColumnName="TCF_Descripcion" />
+          <ScalarProperty Name="CSD_IdTipoComisionFija" ColumnName="CSD_IdTipoComisionFija" />
+          <ScalarProperty Name="CSD_IdCentroServicios" ColumnName="CSD_IdCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LiquidacionComisiones_COM">
+      <EntityTypeMapping TypeName="ModeloComisionesNS.LiquidacionComisiones_COM">
+        <MappingFragment StoreEntitySet="LiquidacionComisiones_COM">
+          <ScalarProperty Name="LIC_EsRegistroValido" ColumnName="LIC_EsRegistroValido" />
+          <ScalarProperty Name="LIC_CreadoPor" ColumnName="LIC_CreadoPor" />
+          <ScalarProperty Name="LIC_FechaGrabacion" ColumnName="LIC_FechaGrabacion" />
+          <ScalarProperty Name="LIC_FechaProduccionResponsable" ColumnName="LIC_FechaProduccionResponsable" />
+          <ScalarProperty Name="LIC_NumeroProduccionResponsabl" ColumnName="LIC_NumeroProduccionResponsabl" />
+          <ScalarProperty Name="LIC_EstaAprobada" ColumnName="LIC_EstaAprobada" />
+          <ScalarProperty Name="LIC_NumeroProduccion" ColumnName="LIC_NumeroProduccion" />
+          <ScalarProperty Name="LIC_FechaProduccion" ColumnName="LIC_FechaProduccion" />
+          <ScalarProperty Name="LIC_PorcentajeComisionResponsable" ColumnName="LIC_PorcentajeComisionResponsable" />
+          <ScalarProperty Name="LIC_ValorFijoComisionResponsable" ColumnName="LIC_ValorFijoComisionResponsable" />
+          <ScalarProperty Name="LIC_ComisionResponsable" ColumnName="LIC_ComisionResponsable" />
+          <ScalarProperty Name="LIC_PorcentajeComisionVenta" ColumnName="LIC_PorcentajeComisionVenta" />
+          <ScalarProperty Name="LIC_ValorFijoComisionVenta" ColumnName="LIC_ValorFijoComisionVenta" />
+          <ScalarProperty Name="LIC_ComisionVenta" ColumnName="LIC_ComisionVenta" />
+          <ScalarProperty Name="LIC_ValorBaseComision" ColumnName="LIC_ValorBaseComision" />
+          <ScalarProperty Name="LIC_NombreCtroSvcsResponsable" ColumnName="LIC_NombreCtroSvcsResponsable" />
+          <ScalarProperty Name="LIC_IdCentroServiosResponsable" ColumnName="LIC_IdCentroServiosResponsable" />
+          <ScalarProperty Name="LIC_NombreCentroServiciosVenta" ColumnName="LIC_NombreCentroServiciosVenta" />
+          <ScalarProperty Name="LIC_IdCentroServiciosVenta" ColumnName="LIC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="LIC_IdTipoComision" ColumnName="LIC_IdTipoComision" />
+          <ScalarProperty Name="LIC_IdServicio" ColumnName="LIC_IdServicio" />
+          <ScalarProperty Name="LIC_NumeroOperacion" ColumnName="LIC_NumeroOperacion" />
+          <ScalarProperty Name="LIC_IdLiquidacionComision" ColumnName="LIC_IdLiquidacionComision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerComiCentroServicio_COM" FunctionName="ModeloComisiones.Store.paObtenerComiCentroServicio_COM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloComisionesNS.ObtenerComiCentroServicio">
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CSC_IdTipoComision" ColumnName="CSC_IdTipoComision" />
+          <ScalarProperty Name="CSC_Valor" ColumnName="CSC_Valor" />
+          <ScalarProperty Name="CSC_Porcentaje" ColumnName="CSC_Porcentaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerComCenSerServicio_COM" FunctionName="ModeloComisiones.Store.paObtenerComCenSerServicio_COM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloComisionesNS.ObtenerComCenSerServicio">
+          <ScalarProperty Name="CSA_IdCentroSvcAdministrado" ColumnName="CSA_IdCentroSvcAdministrado" />
+          <ScalarProperty Name="CSA_ValorComision" ColumnName="CSA_ValorComision" />
+          <ScalarProperty Name="CSA_PorcentajeComision" ColumnName="CSA_PorcentajeComision" />
+          <ScalarProperty Name="CSA_IdCentroServicioServicio" ColumnName="CSA_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSA_IdTipoComision" ColumnName="CSA_IdTipoComision" />
+          <ScalarProperty Name="CSA_IdAgencia" ColumnName="CSA_IdAgencia" />
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paInsertarLiquidacionComision_COM" FunctionName="ModeloComisiones.Store.paInsertarLiquidacionComision_COM" />
+    <FunctionImportMapping FunctionImportName="paObtenerComiAdmonCentroSvc_CAJ" FunctionName="ModeloComisiones.Store.paObtenerComiAdmonCentroSvc_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloComisionesNS.ComiAdmonCentroSvc_CAJ">
+          <ScalarProperty Name="CSA_IdCentroSvcAdministrado" ColumnName="CSA_IdCentroSvcAdministrado" />
+          <ScalarProperty Name="CSA_ValorComision" ColumnName="CSA_ValorComision" />
+          <ScalarProperty Name="CSA_PorcentajeComision" ColumnName="CSA_PorcentajeComision" />
+          <ScalarProperty Name="CSA_IdCentroServicioServicio" ColumnName="CSA_IdCentroServicioServicio" />
+          <ScalarProperty Name="CSA_IdTipoComision" ColumnName="CSA_IdTipoComision" />
+          <ScalarProperty Name="CSS_IdCentroServicios" ColumnName="CSS_IdCentroServicios" />
+          <ScalarProperty Name="CSS_IdServicio" ColumnName="CSS_IdServicio" />
+          <ScalarProperty Name="CSA_IdAgencia" ColumnName="CSA_IdAgencia" />
+          <ScalarProperty Name="NombreAgencia" ColumnName="NombreAgencia" />
+          <ScalarProperty Name="NombrePunto" ColumnName="NombrePunto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerComisionRealizadaPuntoYResponsable_COM" FunctionName="ModeloComisiones.Store.paObtenerComisionRealizadaPuntoYResponsable_COM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloComisionesNS.ComisionRealizadaPuntoYResponsable_COM">
+          <ScalarProperty Name="LIC_IdLiquidacionComision" ColumnName="LIC_IdLiquidacionComision" />
+          <ScalarProperty Name="LIC_NumeroOperacion" ColumnName="LIC_NumeroOperacion" />
+          <ScalarProperty Name="LIC_IdServicio" ColumnName="LIC_IdServicio" />
+          <ScalarProperty Name="LIC_IdTipoComision" ColumnName="LIC_IdTipoComision" />
+          <ScalarProperty Name="LIC_IdCentroServiciosVenta" ColumnName="LIC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="LIC_NombreCentroServiciosVenta" ColumnName="LIC_NombreCentroServiciosVenta" />
+          <ScalarProperty Name="LIC_IdCentroServiosResponsable" ColumnName="LIC_IdCentroServiosResponsable" />
+          <ScalarProperty Name="LIC_NombreCtroSvcsResponsable" ColumnName="LIC_NombreCtroSvcsResponsable" />
+          <ScalarProperty Name="LIC_ValorBaseComision" ColumnName="LIC_ValorBaseComision" />
+          <ScalarProperty Name="LIC_ComisionVenta" ColumnName="LIC_ComisionVenta" />
+          <ScalarProperty Name="LIC_ValorFijoComisionVenta" ColumnName="LIC_ValorFijoComisionVenta" />
+          <ScalarProperty Name="LIC_PorcentajeComisionVenta" ColumnName="LIC_PorcentajeComisionVenta" />
+          <ScalarProperty Name="LIC_ComisionResponsable" ColumnName="LIC_ComisionResponsable" />
+          <ScalarProperty Name="LIC_ValorFijoComisionResponsable" ColumnName="LIC_ValorFijoComisionResponsable" />
+          <ScalarProperty Name="LIC_PorcentajeComisionResponsable" ColumnName="LIC_PorcentajeComisionResponsable" />
+          <ScalarProperty Name="LIC_FechaProduccion" ColumnName="LIC_FechaProduccion" />
+          <ScalarProperty Name="LIC_NumeroProduccion" ColumnName="LIC_NumeroProduccion" />
+          <ScalarProperty Name="LIC_EstaAprobada" ColumnName="LIC_EstaAprobada" />
+          <ScalarProperty Name="LIC_NumeroProduccionResponsabl" ColumnName="LIC_NumeroProduccionResponsabl" />
+          <ScalarProperty Name="LIC_FechaProduccionResponsable" ColumnName="LIC_FechaProduccionResponsable" />
+          <ScalarProperty Name="LIC_FechaGrabacion" ColumnName="LIC_FechaGrabacion" />
+          <ScalarProperty Name="LIC_CreadoPor" ColumnName="LIC_CreadoPor" />
+          <ScalarProperty Name="LIC_EsRegistroValido" ColumnName="LIC_EsRegistroValido" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

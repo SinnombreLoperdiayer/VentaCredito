@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://181.48.226.126/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://181.48.226.126/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://181.48.226.126/">
+      <s:element name="wsSispDetalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pclave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pfecha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsSispDetalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsSispDetalleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsCargarCiudades">
+        <s:complexType />
+      </s:element>
+      <s:element name="wsCargarCiudadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wsCargarCiudadesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wssispguia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pclave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pguia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wssispguiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wssispguiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wssisptracking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pclave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pguia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wssisptrackingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wssisptrackingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WsImagen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pclave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pguia" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WsImagenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WsImagenResult" type="tns:RespuestaDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RespuestaDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Imagen" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="codigoFalla" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcionFalla" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WsCrearGuia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pclave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pnombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pdireccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PciudadDestino" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ptelefono" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pcantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Ppeso" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pdoctipo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pidentifica" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pv_declarado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pdicecontener" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pvalor" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pciu_origen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Preferencia" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pv_prima" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pradicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pempresa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WsCrearGuiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WsCrearGuiaResult" type="tns:RespuestaDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WsCrearGuias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pusuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pclave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="guias" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WsCrearGuiasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WsCrearGuiasResult" type="tns:RespuestaDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsValidarCiudad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PCodigoCiudad" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsValidarCiudadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsValidarCiudadResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wssisradica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Pidremite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pclave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pradiacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wssisradicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="wssisradicaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RespuestaDTO" nillable="true" type="tns:RespuestaDTO" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="wsSispDetalleSoapIn">
+    <wsdl:part name="parameters" element="tns:wsSispDetalle" />
+  </wsdl:message>
+  <wsdl:message name="wsSispDetalleSoapOut">
+    <wsdl:part name="parameters" element="tns:wsSispDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsCargarCiudadesSoapIn">
+    <wsdl:part name="parameters" element="tns:wsCargarCiudades" />
+  </wsdl:message>
+  <wsdl:message name="wsCargarCiudadesSoapOut">
+    <wsdl:part name="parameters" element="tns:wsCargarCiudadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="wssispguiaSoapIn">
+    <wsdl:part name="parameters" element="tns:wssispguia" />
+  </wsdl:message>
+  <wsdl:message name="wssispguiaSoapOut">
+    <wsdl:part name="parameters" element="tns:wssispguiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wssisptrackingSoapIn">
+    <wsdl:part name="parameters" element="tns:wssisptracking" />
+  </wsdl:message>
+  <wsdl:message name="wssisptrackingSoapOut">
+    <wsdl:part name="parameters" element="tns:wssisptrackingResponse" />
+  </wsdl:message>
+  <wsdl:message name="WsImagenSoapIn">
+    <wsdl:part name="parameters" element="tns:WsImagen" />
+  </wsdl:message>
+  <wsdl:message name="WsImagenSoapOut">
+    <wsdl:part name="parameters" element="tns:WsImagenResponse" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiaSoapIn">
+    <wsdl:part name="parameters" element="tns:WsCrearGuia" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiaSoapOut">
+    <wsdl:part name="parameters" element="tns:WsCrearGuiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiasSoapIn">
+    <wsdl:part name="parameters" element="tns:WsCrearGuias" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiasSoapOut">
+    <wsdl:part name="parameters" element="tns:WsCrearGuiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsValidarCiudadSoapIn">
+    <wsdl:part name="parameters" element="tns:wsValidarCiudad" />
+  </wsdl:message>
+  <wsdl:message name="wsValidarCiudadSoapOut">
+    <wsdl:part name="parameters" element="tns:wsValidarCiudadResponse" />
+  </wsdl:message>
+  <wsdl:message name="wssisradicaSoapIn">
+    <wsdl:part name="parameters" element="tns:wssisradica" />
+  </wsdl:message>
+  <wsdl:message name="wssisradicaSoapOut">
+    <wsdl:part name="parameters" element="tns:wssisradicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="wsSispDetalleHttpGetIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pfecha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsSispDetalleHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsCargarCiudadesHttpGetIn" />
+  <wsdl:message name="wsCargarCiudadesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wssispguiaHttpGetIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pguia" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wssispguiaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wssisptrackingHttpGetIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pguia" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wssisptrackingHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="WsImagenHttpGetIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pguia" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WsImagenHttpGetOut">
+    <wsdl:part name="Body" element="tns:RespuestaDTO" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiaHttpGetIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pnombre" type="s:string" />
+    <wsdl:part name="Pdireccion" type="s:string" />
+    <wsdl:part name="PciudadDestino" type="s:string" />
+    <wsdl:part name="Ptelefono" type="s:string" />
+    <wsdl:part name="Pcantidad" type="s:string" />
+    <wsdl:part name="Ppeso" type="s:string" />
+    <wsdl:part name="Pdoctipo" type="s:string" />
+    <wsdl:part name="Pidentifica" type="s:string" />
+    <wsdl:part name="Pv_declarado" type="s:string" />
+    <wsdl:part name="Pdicecontener" type="s:string" />
+    <wsdl:part name="Pvalor" type="s:string" />
+    <wsdl:part name="Pciu_origen" type="s:string" />
+    <wsdl:part name="Preferencia" type="s:string" />
+    <wsdl:part name="Pv_prima" type="s:string" />
+    <wsdl:part name="Pradicacion" type="s:string" />
+    <wsdl:part name="Pempresa" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiaHttpGetOut">
+    <wsdl:part name="Body" element="tns:RespuestaDTO" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiasHttpGetIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="guias" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiasHttpGetOut">
+    <wsdl:part name="Body" element="tns:RespuestaDTO" />
+  </wsdl:message>
+  <wsdl:message name="wsValidarCiudadHttpGetIn">
+    <wsdl:part name="PCodigoCiudad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsValidarCiudadHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="wssisradicaHttpGetIn">
+    <wsdl:part name="Pidremite" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pradiacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wssisradicaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsSispDetalleHttpPostIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pfecha" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsSispDetalleHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wsCargarCiudadesHttpPostIn" />
+  <wsdl:message name="wsCargarCiudadesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wssispguiaHttpPostIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pguia" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wssispguiaHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="wssisptrackingHttpPostIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pguia" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wssisptrackingHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="WsImagenHttpPostIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pguia" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WsImagenHttpPostOut">
+    <wsdl:part name="Body" element="tns:RespuestaDTO" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiaHttpPostIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pnombre" type="s:string" />
+    <wsdl:part name="Pdireccion" type="s:string" />
+    <wsdl:part name="PciudadDestino" type="s:string" />
+    <wsdl:part name="Ptelefono" type="s:string" />
+    <wsdl:part name="Pcantidad" type="s:string" />
+    <wsdl:part name="Ppeso" type="s:string" />
+    <wsdl:part name="Pdoctipo" type="s:string" />
+    <wsdl:part name="Pidentifica" type="s:string" />
+    <wsdl:part name="Pv_declarado" type="s:string" />
+    <wsdl:part name="Pdicecontener" type="s:string" />
+    <wsdl:part name="Pvalor" type="s:string" />
+    <wsdl:part name="Pciu_origen" type="s:string" />
+    <wsdl:part name="Preferencia" type="s:string" />
+    <wsdl:part name="Pv_prima" type="s:string" />
+    <wsdl:part name="Pradicacion" type="s:string" />
+    <wsdl:part name="Pempresa" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiaHttpPostOut">
+    <wsdl:part name="Body" element="tns:RespuestaDTO" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiasHttpPostIn">
+    <wsdl:part name="Pusuario" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="guias" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WsCrearGuiasHttpPostOut">
+    <wsdl:part name="Body" element="tns:RespuestaDTO" />
+  </wsdl:message>
+  <wsdl:message name="wsValidarCiudadHttpPostIn">
+    <wsdl:part name="PCodigoCiudad" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wsValidarCiudadHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="wssisradicaHttpPostIn">
+    <wsdl:part name="Pidremite" type="s:string" />
+    <wsdl:part name="Pclave" type="s:string" />
+    <wsdl:part name="Pradiacion" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="wssisradicaHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="sispostal1Soap">
+    <wsdl:operation name="wsSispDetalle">
+      <wsdl:input message="tns:wsSispDetalleSoapIn" />
+      <wsdl:output message="tns:wsSispDetalleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsCargarCiudades">
+      <wsdl:input message="tns:wsCargarCiudadesSoapIn" />
+      <wsdl:output message="tns:wsCargarCiudadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssispguia">
+      <wsdl:input message="tns:wssispguiaSoapIn" />
+      <wsdl:output message="tns:wssispguiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssisptracking">
+      <wsdl:input message="tns:wssisptrackingSoapIn" />
+      <wsdl:output message="tns:wssisptrackingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsImagen">
+      <wsdl:input message="tns:WsImagenSoapIn" />
+      <wsdl:output message="tns:WsImagenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuia">
+      <wsdl:input message="tns:WsCrearGuiaSoapIn" />
+      <wsdl:output message="tns:WsCrearGuiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuias">
+      <wsdl:input message="tns:WsCrearGuiasSoapIn" />
+      <wsdl:output message="tns:WsCrearGuiasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsValidarCiudad">
+      <wsdl:input message="tns:wsValidarCiudadSoapIn" />
+      <wsdl:output message="tns:wsValidarCiudadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssisradica">
+      <wsdl:input message="tns:wssisradicaSoapIn" />
+      <wsdl:output message="tns:wssisradicaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="sispostal1HttpGet">
+    <wsdl:operation name="wsSispDetalle">
+      <wsdl:input message="tns:wsSispDetalleHttpGetIn" />
+      <wsdl:output message="tns:wsSispDetalleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsCargarCiudades">
+      <wsdl:input message="tns:wsCargarCiudadesHttpGetIn" />
+      <wsdl:output message="tns:wsCargarCiudadesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssispguia">
+      <wsdl:input message="tns:wssispguiaHttpGetIn" />
+      <wsdl:output message="tns:wssispguiaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssisptracking">
+      <wsdl:input message="tns:wssisptrackingHttpGetIn" />
+      <wsdl:output message="tns:wssisptrackingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsImagen">
+      <wsdl:input message="tns:WsImagenHttpGetIn" />
+      <wsdl:output message="tns:WsImagenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuia">
+      <wsdl:input message="tns:WsCrearGuiaHttpGetIn" />
+      <wsdl:output message="tns:WsCrearGuiaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuias">
+      <wsdl:input message="tns:WsCrearGuiasHttpGetIn" />
+      <wsdl:output message="tns:WsCrearGuiasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsValidarCiudad">
+      <wsdl:input message="tns:wsValidarCiudadHttpGetIn" />
+      <wsdl:output message="tns:wsValidarCiudadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssisradica">
+      <wsdl:input message="tns:wssisradicaHttpGetIn" />
+      <wsdl:output message="tns:wssisradicaHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="sispostal1HttpPost">
+    <wsdl:operation name="wsSispDetalle">
+      <wsdl:input message="tns:wsSispDetalleHttpPostIn" />
+      <wsdl:output message="tns:wsSispDetalleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsCargarCiudades">
+      <wsdl:input message="tns:wsCargarCiudadesHttpPostIn" />
+      <wsdl:output message="tns:wsCargarCiudadesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssispguia">
+      <wsdl:input message="tns:wssispguiaHttpPostIn" />
+      <wsdl:output message="tns:wssispguiaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssisptracking">
+      <wsdl:input message="tns:wssisptrackingHttpPostIn" />
+      <wsdl:output message="tns:wssisptrackingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsImagen">
+      <wsdl:input message="tns:WsImagenHttpPostIn" />
+      <wsdl:output message="tns:WsImagenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuia">
+      <wsdl:input message="tns:WsCrearGuiaHttpPostIn" />
+      <wsdl:output message="tns:WsCrearGuiaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuias">
+      <wsdl:input message="tns:WsCrearGuiasHttpPostIn" />
+      <wsdl:output message="tns:WsCrearGuiasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wsValidarCiudad">
+      <wsdl:input message="tns:wsValidarCiudadHttpPostIn" />
+      <wsdl:output message="tns:wsValidarCiudadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="wssisradica">
+      <wsdl:input message="tns:wssisradicaHttpPostIn" />
+      <wsdl:output message="tns:wssisradicaHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="sispostal1Soap" type="tns:sispostal1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="wsSispDetalle">
+      <soap:operation soapAction="http://181.48.226.126/wsSispDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsCargarCiudades">
+      <soap:operation soapAction="http://181.48.226.126/wsCargarCiudades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssispguia">
+      <soap:operation soapAction="http://181.48.226.126/wssispguia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssisptracking">
+      <soap:operation soapAction="http://181.48.226.126/wssisptracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsImagen">
+      <soap:operation soapAction="http://181.48.226.126/WsImagen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuia">
+      <soap:operation soapAction="http://181.48.226.126/WsCrearGuia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuias">
+      <soap:operation soapAction="http://181.48.226.126/WsCrearGuias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsValidarCiudad">
+      <soap:operation soapAction="http://181.48.226.126/wsValidarCiudad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssisradica">
+      <soap:operation soapAction="http://181.48.226.126/wssisradica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="sispostal1Soap12" type="tns:sispostal1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="wsSispDetalle">
+      <soap12:operation soapAction="http://181.48.226.126/wsSispDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsCargarCiudades">
+      <soap12:operation soapAction="http://181.48.226.126/wsCargarCiudades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssispguia">
+      <soap12:operation soapAction="http://181.48.226.126/wssispguia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssisptracking">
+      <soap12:operation soapAction="http://181.48.226.126/wssisptracking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsImagen">
+      <soap12:operation soapAction="http://181.48.226.126/WsImagen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuia">
+      <soap12:operation soapAction="http://181.48.226.126/WsCrearGuia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuias">
+      <soap12:operation soapAction="http://181.48.226.126/WsCrearGuias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsValidarCiudad">
+      <soap12:operation soapAction="http://181.48.226.126/wsValidarCiudad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssisradica">
+      <soap12:operation soapAction="http://181.48.226.126/wssisradica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="sispostal1HttpGet" type="tns:sispostal1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="wsSispDetalle">
+      <http:operation location="/wsSispDetalle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsCargarCiudades">
+      <http:operation location="/wsCargarCiudades" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssispguia">
+      <http:operation location="/wssispguia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssisptracking">
+      <http:operation location="/wssisptracking" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsImagen">
+      <http:operation location="/WsImagen" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuia">
+      <http:operation location="/WsCrearGuia" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuias">
+      <http:operation location="/WsCrearGuias" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsValidarCiudad">
+      <http:operation location="/wsValidarCiudad" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssisradica">
+      <http:operation location="/wssisradica" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="sispostal1HttpPost" type="tns:sispostal1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="wsSispDetalle">
+      <http:operation location="/wsSispDetalle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsCargarCiudades">
+      <http:operation location="/wsCargarCiudades" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssispguia">
+      <http:operation location="/wssispguia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssisptracking">
+      <http:operation location="/wssisptracking" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsImagen">
+      <http:operation location="/WsImagen" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuia">
+      <http:operation location="/WsCrearGuia" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsCrearGuias">
+      <http:operation location="/WsCrearGuias" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wsValidarCiudad">
+      <http:operation location="/wsValidarCiudad" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="wssisradica">
+      <http:operation location="/wssisradica" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="sispostal1">
+    <wsdl:port name="sispostal1Soap" binding="tns:sispostal1Soap">
+      <soap:address location="http://190.85.35.205/ws_sispostal/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="sispostal1Soap12" binding="tns:sispostal1Soap12">
+      <soap12:address location="http://190.85.35.205/ws_sispostal/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="sispostal1HttpGet" binding="tns:sispostal1HttpGet">
+      <http:address location="http://190.85.35.205/ws_sispostal/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="sispostal1HttpPost" binding="tns:sispostal1HttpPost">
+      <http:address location="http://190.85.35.205/ws_sispostal/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

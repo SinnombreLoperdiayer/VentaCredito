@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloReportesStoreContainer" CdmEntityContainer="EntidadesReportes">
+    <EntitySetMapping Name="AdministradorReportes_REP">
+      <EntityTypeMapping TypeName="ModeloReportes.AdministradorReportes_REP">
+        <MappingFragment StoreEntitySet="AdministradorReportes_REP">
+          <ScalarProperty Name="ADR_CreadoPor" ColumnName="ADR_CreadoPor" />
+          <ScalarProperty Name="ADR_FechaGrabacion" ColumnName="ADR_FechaGrabacion" />
+          <ScalarProperty Name="ADR_ReportServerUrl" ColumnName="ADR_ReportServerUrl" />
+          <ScalarProperty Name="ADR_ReportPath" ColumnName="ADR_ReportPath" />
+          <ScalarProperty Name="ADR_NombreReporte" ColumnName="ADR_NombreReporte" />
+          <ScalarProperty Name="ADR_IdModulo" ColumnName="ADR_IdModulo" />
+          <ScalarProperty Name="ADR_IdReporte" ColumnName="ADR_IdReporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportesRol_REP">
+      <EntityTypeMapping TypeName="ModeloReportes.ReportesRol_REP">
+        <MappingFragment StoreEntitySet="ReportesRol_REP">
+          <ScalarProperty Name="RER_CreadoPor" ColumnName="RER_CreadoPor" />
+          <ScalarProperty Name="RER_FechaGrabacion" ColumnName="RER_FechaGrabacion" />
+          <ScalarProperty Name="RER_IdRol" ColumnName="RER_IdRol" />
+          <ScalarProperty Name="RER_IdReporte" ColumnName="RER_IdReporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol_SEG">
+      <EntityTypeMapping TypeName="ModeloReportes.Rol_SEG">
+        <MappingFragment StoreEntitySet="Rol_SEG">
+          <ScalarProperty Name="ROL_CreadoPor" ColumnName="ROL_CreadoPor" />
+          <ScalarProperty Name="ROL_FechaGrabacion" ColumnName="ROL_FechaGrabacion" />
+          <ScalarProperty Name="ROL_RequiereIdMaquina" ColumnName="ROL_RequiereIdMaquina" />
+          <ScalarProperty Name="ROL_Descripcion" ColumnName="ROL_Descripcion" />
+          <ScalarProperty Name="ROL_IdRol" ColumnName="ROL_IdRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario_SEG">
+      <EntityTypeMapping TypeName="ModeloReportes.Usuario_SEG">
+        <MappingFragment StoreEntitySet="Usuario_SEG">
+          <ScalarProperty Name="USU_CreadoPor" ColumnName="USU_CreadoPor" />
+          <ScalarProperty Name="USU_FechaGrabacion" ColumnName="USU_FechaGrabacion" />
+          <ScalarProperty Name="USU_EsUsuarioInterno" ColumnName="USU_EsUsuarioInterno" />
+          <ScalarProperty Name="USU_Comentarios" ColumnName="USU_Comentarios" />
+          <ScalarProperty Name="USU_RequiereIdMaquina" ColumnName="USU_RequiereIdMaquina" />
+          <ScalarProperty Name="USU_TipoUsuario" ColumnName="USU_TipoUsuario" />
+          <ScalarProperty Name="USU_Estado" ColumnName="USU_Estado" />
+          <ScalarProperty Name="USU_IdUsuario" ColumnName="USU_IdUsuario" />
+          <ScalarProperty Name="USU_IdCodigoUsuario" ColumnName="USU_IdCodigoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioRol_SEG">
+      <EntityTypeMapping TypeName="ModeloReportes.UsuarioRol_SEG">
+        <MappingFragment StoreEntitySet="UsuarioRol_SEG">
+          <ScalarProperty Name="USR_CreadoPor" ColumnName="USR_CreadoPor" />
+          <ScalarProperty Name="USR_FechaGrabacion" ColumnName="USR_FechaGrabacion" />
+          <ScalarProperty Name="USR_IdRol" ColumnName="USR_IdRol" />
+          <ScalarProperty Name="USR_IdCodigoUsuario" ColumnName="USR_IdCodigoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParametrosFramework">
+      <EntityTypeMapping TypeName="ModeloReportes.ParametrosFramework">
+        <MappingFragment StoreEntitySet="ParametrosFramework">
+          <ScalarProperty Name="PAR_CreadoPor" ColumnName="PAR_CreadoPor" />
+          <ScalarProperty Name="PAR_FechaGrabacion" ColumnName="PAR_FechaGrabacion" />
+          <ScalarProperty Name="PAR_Descripcion" ColumnName="PAR_Descripcion" />
+          <ScalarProperty Name="PAR_ModuloFR" ColumnName="PAR_ModuloFR" />
+          <ScalarProperty Name="PAR_ValorParametro" ColumnName="PAR_ValorParametro" />
+          <ScalarProperty Name="PAR_IdParametro" ColumnName="PAR_IdParametro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

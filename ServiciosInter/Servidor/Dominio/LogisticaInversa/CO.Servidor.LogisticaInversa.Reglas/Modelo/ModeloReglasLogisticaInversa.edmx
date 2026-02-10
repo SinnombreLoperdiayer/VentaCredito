@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloReglasLogisticaInversa.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModeloReglasLogisticaInversaStoreContainer">
+          <EntitySet Name="GestionGuiaTelemercadeo_LOI" EntityType="ModeloReglasLogisticaInversa.Store.GestionGuiaTelemercadeo_LOI" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="GestionGuiaTelemercadeo_LOI">
+          <Key>
+            <PropertyRef Name="GGT_IdGestionGuiaTelemercadeo" />
+          </Key>
+          <Property Name="GGT_IdGestionGuiaTelemercadeo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GGT_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+          <Property Name="GGT_NumeroGuia" Type="bigint" Nullable="false" />
+          <Property Name="GGT_IdResultadoTelemercadeo" Type="smallint" Nullable="false" />
+          <Property Name="GGT_TelefonoMarcado" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="GGT_PersonaContesta" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="GGT_IdParentestoConDestinatari" Type="smallint" Nullable="false" />
+          <Property Name="GGT_NuevoTelefono" Type="varchar" MaxLength="25" />
+          <Property Name="GGT_NuevoContaco" Type="varchar" MaxLength="150" />
+          <Property Name="GGT_NuevaDireccionEnvio" Type="varchar" MaxLength="250" />
+          <Property Name="GGT_Observacion" Type="varchar" MaxLength="250" />
+          <Property Name="GGT_IdEstadoGuiaLog" Type="bigint" Nullable="false" />
+          <Property Name="GGT_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="GGT_CreadoPor" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Function Name="paBuscarDireccionMensajeria_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Direccion" Type="varchar" Mode="In" />
+          <Parameter Name="EsDestinatario" Type="bit" Mode="In" />
+          <Parameter Name="Localidad" Type="varchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModeloReglasLogisticaInversa" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="EntidadesReglasLogisticaInversa" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GestionGuiaTelemercadeo_LOI" EntityType="ModeloReglasLogisticaInversa.GestionGuiaTelemercadeo_LOI" />
+          <FunctionImport Name="paBuscarDireccionMensajeria_MEN" ReturnType="Collection(Int64)">
+            <Parameter Name="Direccion" Mode="In" Type="String" />
+            <Parameter Name="EsDestinatario" Mode="In" Type="Boolean" />
+            <Parameter Name="Localidad" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="GestionGuiaTelemercadeo_LOI">
+          <Key>
+            <PropertyRef Name="GGT_IdGestionGuiaTelemercadeo" />
+          </Key>
+          <Property Type="Int64" Name="GGT_IdGestionGuiaTelemercadeo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="GGT_IdAdminisionMensajeria" Nullable="false" />
+          <Property Type="Int64" Name="GGT_NumeroGuia" Nullable="false" />
+          <Property Type="Int16" Name="GGT_IdResultadoTelemercadeo" Nullable="false" />
+          <Property Type="String" Name="GGT_TelefonoMarcado" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GGT_PersonaContesta" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="GGT_IdParentestoConDestinatari" Nullable="false" />
+          <Property Type="String" Name="GGT_NuevoTelefono" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GGT_NuevoContaco" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GGT_NuevaDireccionEnvio" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GGT_Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="GGT_IdEstadoGuiaLog" Nullable="false" />
+          <Property Type="DateTime" Name="GGT_FechaGrabacion" Nullable="false" Precision="3" />
+          <Property Type="String" Name="GGT_CreadoPor" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="ModeloReglasLogisticaInversa" />
+        <Alias Key="Target" Value="ModeloReglasLogisticaInversa.Store" />
+        <EntityContainerMapping CdmEntityContainer="EntidadesReglasLogisticaInversa" StorageEntityContainer="ModeloReglasLogisticaInversaStoreContainer">
+          <EntitySetMapping Name="GestionGuiaTelemercadeo_LOI">
+            <EntityTypeMapping TypeName="ModeloReglasLogisticaInversa.GestionGuiaTelemercadeo_LOI">
+              <MappingFragment StoreEntitySet="GestionGuiaTelemercadeo_LOI">
+                <ScalarProperty Name="GGT_CreadoPor" ColumnName="GGT_CreadoPor" />
+                <ScalarProperty Name="GGT_FechaGrabacion" ColumnName="GGT_FechaGrabacion" />
+                <ScalarProperty Name="GGT_IdEstadoGuiaLog" ColumnName="GGT_IdEstadoGuiaLog" />
+                <ScalarProperty Name="GGT_Observacion" ColumnName="GGT_Observacion" />
+                <ScalarProperty Name="GGT_NuevaDireccionEnvio" ColumnName="GGT_NuevaDireccionEnvio" />
+                <ScalarProperty Name="GGT_NuevoContaco" ColumnName="GGT_NuevoContaco" />
+                <ScalarProperty Name="GGT_NuevoTelefono" ColumnName="GGT_NuevoTelefono" />
+                <ScalarProperty Name="GGT_IdParentestoConDestinatari" ColumnName="GGT_IdParentestoConDestinatari" />
+                <ScalarProperty Name="GGT_PersonaContesta" ColumnName="GGT_PersonaContesta" />
+                <ScalarProperty Name="GGT_TelefonoMarcado" ColumnName="GGT_TelefonoMarcado" />
+                <ScalarProperty Name="GGT_IdResultadoTelemercadeo" ColumnName="GGT_IdResultadoTelemercadeo" />
+                <ScalarProperty Name="GGT_NumeroGuia" ColumnName="GGT_NumeroGuia" />
+                <ScalarProperty Name="GGT_IdAdminisionMensajeria" ColumnName="GGT_IdAdminisionMensajeria" />
+                <ScalarProperty Name="GGT_IdGestionGuiaTelemercadeo" ColumnName="GGT_IdGestionGuiaTelemercadeo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="paBuscarDireccionMensajeria_MEN" FunctionName="ModeloReglasLogisticaInversa.Store.paBuscarDireccionMensajeria_MEN" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="ModeloReglasLogisticaInversa" >
+        <EntityTypeShape EntityType="ModeloReglasLogisticaInversa.GestionGuiaTelemercadeo_LOI" Width="1.5" PointX="0.75" PointY="0.75" Height="3.2357796223958335" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

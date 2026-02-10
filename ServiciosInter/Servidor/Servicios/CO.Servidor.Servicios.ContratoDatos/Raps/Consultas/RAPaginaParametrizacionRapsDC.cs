@@ -1,0 +1,9 @@
+﻿using System.Runtime.Serialization;
+
+namespace CO.Servidor.Servicios.ContratoDatos.Raps.Consultas
+{
+    [DataContract(Namespace = "http://contrologis.com")] 
+	public class RAPaginaParametrizacionRapsDC		
+	{ 
+				[DataMember]			public long Registro { get; set; }			[DataMember]			public long IdParametrizacionRap { get; set; }			[DataMember]			public string Nombre { get; set; }			[DataMember]			public int IdSistemaFuente { get; set; }			[DataMember]			public string SistemaFuente { get; set; }			[DataMember]			public int IdTipoRap { get; set; }			[DataMember]			public string TipoRap { get; set; }			[DataMember]			public string DescripcionRaps { get; set; }			[DataMember]			public int IdProceso { get; set; }			[DataMember]			public string Proceso { get; set; }			[DataMember]			public bool UtilizaFormato { get; set; }			[DataMember]			public int IdFormato { get; set; }			[DataMember]			public string Formato { get; set; }			[DataMember]			public int IdTipoCierre { get; set; }			[DataMember]			public string TipoCierre { get; set; }			[DataMember]			public int IdCargoCierra { get; set; }			[DataMember]			public string CargoCierra { get; set; }			[DataMember]			public int IdCargoIncumplimiento { get; set; }			[DataMember]			public string CargoIncumplimiento { get; set; }			[DataMember]			public int IdOrigenRaps { get; set; }			[DataMember]			public string OrigenRaps { get; set; }			[DataMember]			public bool Estado { get; set; }			[DataMember]			public int IdGrupoUsuario { get; set; }			[DataMember]			public string GrupoUsuario { get; set; }			[DataMember]			public int IdClasificacion { get; set; }			[DataMember]			public string Clasificacion { get; set; }			[DataMember]			public int IdSubclasificacion { get; set; }			[DataMember]			public string Subclasificacion { get; set; }			[DataMember]			public int TotalPaginas { get; set; }	} 
+}

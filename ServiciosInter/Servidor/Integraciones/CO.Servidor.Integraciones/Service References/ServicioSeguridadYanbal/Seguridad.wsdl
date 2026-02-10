@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns3="http://to.csegtknint.ws.corp.yanbal.com" xmlns:tns="http://service.seguridad.ws.corp.yanbal.com" xmlns:tns2="http://to.gsegtknint.ws.corp.yanbal.com" xmlns:tns4="http://to.ercdrpt.ws.corp.yanbal.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Seguridad" targetNamespace="http://service.seguridad.ws.corp.yanbal.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://service.seguridad.ws.corp.yanbal.com">
+      <xsd:import schemaLocation="SolicitarToken.xsd" namespace="http://to.gsegtknint.ws.corp.yanbal.com" />
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://service.seguridad.ws.corp.yanbal.com">
+      <xsd:import schemaLocation="ValidarToken.xsd" namespace="http://to.csegtknint.ws.corp.yanbal.com" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="solicitarTokenResponse">
+    <wsdl:part name="parameters" element="tns2:solicitarTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarTokenResponse">
+    <wsdl:part name="parameters" element="tns3:validarTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="validarTokenRequest">
+    <wsdl:part name="parameters" element="tns3:validarTokenRequest" />
+  </wsdl:message>
+  <wsdl:message name="solicitarTokenRequest">
+    <wsdl:part name="parameters" element="tns2:solicitarTokenRequest" />
+  </wsdl:message>
+  <wsdl:portType name="WSSeguridadTokenImpl">
+    <wsdl:operation name="solicitarToken">
+      <wsdl:input message="tns:solicitarTokenRequest" />
+      <wsdl:output message="tns:solicitarTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="validarToken">
+      <wsdl:input message="tns:validarTokenRequest" />
+      <wsdl:output message="tns:validarTokenResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSeguridadSoapBinding" type="tns:WSSeguridadTokenImpl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="solicitarToken">
+      <soap:operation soapAction="solicitarToken" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarToken">
+      <soap:operation soapAction="validarToken" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSSeguridadService">
+    <wsdl:port name="obligacion" binding="tns:WSSeguridadSoapBinding">
+      <soap:address location="https://perms287.unique-yanbal.com:443/WSSeguridadWeb/WSSeguridadService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

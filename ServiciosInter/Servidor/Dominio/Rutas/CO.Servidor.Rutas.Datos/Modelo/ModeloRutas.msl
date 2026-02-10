@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloRutasNSStoreContainer" CdmEntityContainer="ModeloRutas">
+    <EntitySetMapping Name="FrecuenciaRuta_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.FrecuenciaRuta_RUT">
+        <MappingFragment StoreEntitySet="FrecuenciaRuta_RUT">
+          <ScalarProperty Name="FRR_IdFrecuenciaRuta" ColumnName="FRR_IdFrecuenciaRuta" />
+          <ScalarProperty Name="FRR_IdRuta" ColumnName="FRR_IdRuta" />
+          <ScalarProperty Name="FRR_IdDia" ColumnName="FRR_IdDia" />
+          <ScalarProperty Name="FRR_HoraSalida" ColumnName="FRR_HoraSalida" />
+          <ScalarProperty Name="FRR_HoraLlegada" ColumnName="FRR_HoraLlegada" />
+          <ScalarProperty Name="FRR_FechaGrabacion" ColumnName="FRR_FechaGrabacion" />
+          <ScalarProperty Name="FRR_CreadoPor" ColumnName="FRR_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstacionRutaHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EstacionRutaHist_RUT">
+        <MappingFragment StoreEntitySet="EstacionRutaHist_RUT">
+          <ScalarProperty Name="ESR_TipoCambio" ColumnName="ESR_TipoCambio" />
+          <ScalarProperty Name="ESR_CambiadoPor" ColumnName="ESR_CambiadoPor" />
+          <ScalarProperty Name="ESR_FechaCambio" ColumnName="ESR_FechaCambio" />
+          <ScalarProperty Name="ESR_CreadoPor" ColumnName="ESR_CreadoPor" />
+          <ScalarProperty Name="ESR_FechaGrabacion" ColumnName="ESR_FechaGrabacion" />
+          <ScalarProperty Name="ESR_RequierePrecintoRetorno" ColumnName="ESR_RequierePrecintoRetorno" />
+          <ScalarProperty Name="ESR_PermiteEnganche" ColumnName="ESR_PermiteEnganche" />
+          <ScalarProperty Name="ESR_TiempoDeViajeDesdeAnterior" ColumnName="ESR_TiempoDeViajeDesdeAnterior" />
+          <ScalarProperty Name="ESR_TiempoParada" ColumnName="ESR_TiempoParada" />
+          <ScalarProperty Name="ESR_OrdenEnCasillero" ColumnName="ESR_OrdenEnCasillero" />
+          <ScalarProperty Name="ESR_OrdenEnRuta" ColumnName="ESR_OrdenEnRuta" />
+          <ScalarProperty Name="ESR_NombreLocalidadEstacion" ColumnName="ESR_NombreLocalidadEstacion" />
+          <ScalarProperty Name="ESR_IdLocalidadEstacion" ColumnName="ESR_IdLocalidadEstacion" />
+          <ScalarProperty Name="ESR_IdRuta" ColumnName="ESR_IdRuta" />
+          <ScalarProperty Name="ESR_IdEstacionRuta" ColumnName="ESR_IdEstacionRuta" />
+          <ScalarProperty Name="ESR_IdAuditoria" ColumnName="ESR_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocalidadAdicionEnRutaHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.LocalidadAdicionEnRutaHist_RUT">
+        <MappingFragment StoreEntitySet="LocalidadAdicionEnRutaHist_RUT">
+          <ScalarProperty Name="LMR_TipoCambio" ColumnName="LMR_TipoCambio" />
+          <ScalarProperty Name="LMR_CambiadoPor" ColumnName="LMR_CambiadoPor" />
+          <ScalarProperty Name="LMR_FechaCambio" ColumnName="LMR_FechaCambio" />
+          <ScalarProperty Name="LMR_FechaGrabacion" ColumnName="LMR_FechaGrabacion" />
+          <ScalarProperty Name="LMR_CreadoPor" ColumnName="LMR_CreadoPor" />
+          <ScalarProperty Name="LMR_IdLocalidadManifiesta" ColumnName="LMR_IdLocalidadManifiesta" />
+          <ScalarProperty Name="LMR_IdRuta" ColumnName="LMR_IdRuta" />
+          <ScalarProperty Name="LMR_IdLocalidadManifiestEnRuta" ColumnName="LMR_IdLocalidadManifiestEnRuta" />
+          <ScalarProperty Name="LMR_IdAuditoria" ColumnName="LMR_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoberturaEstacionRuta_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.CoberturaEstacionRuta_RUT">
+        <MappingFragment StoreEntitySet="CoberturaEstacionRuta_RUT">
+          <ScalarProperty Name="CER_NombreLocalidadEstacion" ColumnName="CER_NombreLocalidadEstacion" />
+          <ScalarProperty Name="CER_CreadoPor" ColumnName="CER_CreadoPor" />
+          <ScalarProperty Name="CER_FechaGrabacion" ColumnName="CER_FechaGrabacion" />
+          <ScalarProperty Name="CER_IdLocalidadCubierta" ColumnName="CER_IdLocalidadCubierta" />
+          <ScalarProperty Name="CER_IdEstacionRuta" ColumnName="CER_IdEstacionRuta" />
+          <ScalarProperty Name="CER_IdCoberturaEstacionRuta" ColumnName="CER_IdCoberturaEstacionRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoberturaEstacionRutaHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.CoberturaEstacionRutaHist_RUT">
+        <MappingFragment StoreEntitySet="CoberturaEstacionRutaHist_RUT">
+          <ScalarProperty Name="CER_TipoCambio" ColumnName="CER_TipoCambio" />
+          <ScalarProperty Name="CER_CambiadoPor" ColumnName="CER_CambiadoPor" />
+          <ScalarProperty Name="CER_FechaCambio" ColumnName="CER_FechaCambio" />
+          <ScalarProperty Name="CER_CreadoPor" ColumnName="CER_CreadoPor" />
+          <ScalarProperty Name="CER_FechaGrabacion" ColumnName="CER_FechaGrabacion" />
+          <ScalarProperty Name="CER_IdLocalidadCubierta" ColumnName="CER_IdLocalidadCubierta" />
+          <ScalarProperty Name="CER_IdEstacionRuta" ColumnName="CER_IdEstacionRuta" />
+          <ScalarProperty Name="CER_IdCoberturaEstacionRuta" ColumnName="CER_IdCoberturaEstacionRuta" />
+          <ScalarProperty Name="CER_IdAuditoria" ColumnName="CER_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstacionRuta_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EstacionRuta_RUT">
+        <MappingFragment StoreEntitySet="EstacionRuta_RUT">
+          <ScalarProperty Name="ESR_CreadoPor" ColumnName="ESR_CreadoPor" />
+          <ScalarProperty Name="ESR_FechaGrabacion" ColumnName="ESR_FechaGrabacion" />
+          <ScalarProperty Name="ESR_RequierePrecintoRetorno" ColumnName="ESR_RequierePrecintoRetorno" />
+          <ScalarProperty Name="ESR_PermiteEnganche" ColumnName="ESR_PermiteEnganche" />
+          <ScalarProperty Name="ESR_TiempoDeViajeDesdeAnterior" ColumnName="ESR_TiempoDeViajeDesdeAnterior" />
+          <ScalarProperty Name="ESR_TiempoParada" ColumnName="ESR_TiempoParada" />
+          <ScalarProperty Name="ESR_OrdenEnCasillero" ColumnName="ESR_OrdenEnCasillero" />
+          <ScalarProperty Name="ESR_OrdenEnRuta" ColumnName="ESR_OrdenEnRuta" />
+          <ScalarProperty Name="ESR_NombreLocalidadEstacion" ColumnName="ESR_NombreLocalidadEstacion" />
+          <ScalarProperty Name="ESR_IdLocalidadEstacion" ColumnName="ESR_IdLocalidadEstacion" />
+          <ScalarProperty Name="ESR_IdRuta" ColumnName="ESR_IdRuta" />
+          <ScalarProperty Name="ESR_IdEstacionRuta" ColumnName="ESR_IdEstacionRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrecuenciaParadaEstaciHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.FrecuenciaParadaEstaciHist_RUT">
+        <MappingFragment StoreEntitySet="FrecuenciaParadaEstaciHist_RUT">
+          <ScalarProperty Name="FRR_TipoCambio" ColumnName="FRR_TipoCambio" />
+          <ScalarProperty Name="FRR_CambiadoPor" ColumnName="FRR_CambiadoPor" />
+          <ScalarProperty Name="FRR_FechaCambio" ColumnName="FRR_FechaCambio" />
+          <ScalarProperty Name="FRE_CreadoPor" ColumnName="FRE_CreadoPor" />
+          <ScalarProperty Name="FRE_FechaGrabacion" ColumnName="FRE_FechaGrabacion" />
+          <ScalarProperty Name="FRE_HoraLlegada" ColumnName="FRE_HoraLlegada" />
+          <ScalarProperty Name="FRE_IdDia" ColumnName="FRE_IdDia" />
+          <ScalarProperty Name="FRE_IdEstacionRuta" ColumnName="FRE_IdEstacionRuta" />
+          <ScalarProperty Name="FRE_IdFrecuenciaParadaEstacion" ColumnName="FRE_IdFrecuenciaParadaEstacion" />
+          <ScalarProperty Name="FRE_IdAuditoria" ColumnName="FRE_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrecuenciaParadaEstacion_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.FrecuenciaParadaEstacion_RUT">
+        <MappingFragment StoreEntitySet="FrecuenciaParadaEstacion_RUT">
+          <ScalarProperty Name="FRE_CreadoPor" ColumnName="FRE_CreadoPor" />
+          <ScalarProperty Name="FRE_FechaGrabacion" ColumnName="FRE_FechaGrabacion" />
+          <ScalarProperty Name="FRE_HoraLlegada" ColumnName="FRE_HoraLlegada" />
+          <ScalarProperty Name="FRE_IdDia" ColumnName="FRE_IdDia" />
+          <ScalarProperty Name="FRE_IdEstacionRuta" ColumnName="FRE_IdEstacionRuta" />
+          <ScalarProperty Name="FRE_IdFrecuenciaParadaEstacion" ColumnName="FRE_IdFrecuenciaParadaEstacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrecuenciaRutaHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.FrecuenciaRutaHist_RUT">
+        <MappingFragment StoreEntitySet="FrecuenciaRutaHist_RUT">
+          <ScalarProperty Name="FRR_TipoCambio" ColumnName="FRR_TipoCambio" />
+          <ScalarProperty Name="FRR_CambiadoPor" ColumnName="FRR_CambiadoPor" />
+          <ScalarProperty Name="FRR_FechaCambio" ColumnName="FRR_FechaCambio" />
+          <ScalarProperty Name="FRR_CreadoPor" ColumnName="FRR_CreadoPor" />
+          <ScalarProperty Name="FRR_FechaGrabacion" ColumnName="FRR_FechaGrabacion" />
+          <ScalarProperty Name="FRR_HoraLlegada" ColumnName="FRR_HoraLlegada" />
+          <ScalarProperty Name="FRR_HoraSalida" ColumnName="FRR_HoraSalida" />
+          <ScalarProperty Name="FRR_IdDia" ColumnName="FRR_IdDia" />
+          <ScalarProperty Name="FRR_IdRuta" ColumnName="FRR_IdRuta" />
+          <ScalarProperty Name="FRR_IdFrecuenciaRuta" ColumnName="FRR_IdFrecuenciaRuta" />
+          <ScalarProperty Name="FRR_IdAuditoria" ColumnName="FRR_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoberturaEstaciones_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.CoberturaEstaciones_VRUT">
+        <MappingFragment StoreEntitySet="CoberturaEstaciones_VRUT">
+          <ScalarProperty Name="CER_NombreLocalidadEstacion" ColumnName="CER_NombreLocalidadEstacion" />
+          <ScalarProperty Name="CER_IdLocalidadCubierta" ColumnName="CER_IdLocalidadCubierta" />
+          <ScalarProperty Name="CER_IdEstacionRuta" ColumnName="CER_IdEstacionRuta" />
+          <ScalarProperty Name="CER_IdCoberturaEstacionRuta" ColumnName="CER_IdCoberturaEstacionRuta" />
+          <ScalarProperty Name="ESR_IdRuta" ColumnName="ESR_IdRuta" />
+          <ScalarProperty Name="ESR_IdLocalidadEstacion" ColumnName="ESR_IdLocalidadEstacion" />
+          <ScalarProperty Name="ESR_IdEstacionRuta" ColumnName="ESR_IdEstacionRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrecuenciaEstaciones_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.FrecuenciaEstaciones_VRUT">
+        <MappingFragment StoreEntitySet="FrecuenciaEstaciones_VRUT">
+          <ScalarProperty Name="ESR_IdLocalidadEstacion" ColumnName="ESR_IdLocalidadEstacion" />
+          <ScalarProperty Name="ESR_IdRuta" ColumnName="ESR_IdRuta" />
+          <ScalarProperty Name="ESR_IdEstacionRuta" ColumnName="ESR_IdEstacionRuta" />
+          <ScalarProperty Name="FRE_HoraLlegada" ColumnName="FRE_HoraLlegada" />
+          <ScalarProperty Name="FRE_IdDia" ColumnName="FRE_IdDia" />
+          <ScalarProperty Name="FRE_IdEstacionRuta" ColumnName="FRE_IdEstacionRuta" />
+          <ScalarProperty Name="FRE_IdFrecuenciaParadaEstacion" ColumnName="FRE_IdFrecuenciaParadaEstacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoberturaManifieEnRutaHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.CoberturaManifieEnRutaHist_RUT">
+        <MappingFragment StoreEntitySet="CoberturaManifieEnRutaHist_RUT">
+          <ScalarProperty Name="CMr_TipoCambio" ColumnName="CMr_TipoCambio" />
+          <ScalarProperty Name="CMR_CambiadoPor" ColumnName="CMR_CambiadoPor" />
+          <ScalarProperty Name="CMR_FechaCambio" ColumnName="CMR_FechaCambio" />
+          <ScalarProperty Name="CMR_CreadoPor" ColumnName="CMR_CreadoPor" />
+          <ScalarProperty Name="CMR_FechaGrabacion" ColumnName="CMR_FechaGrabacion" />
+          <ScalarProperty Name="CMR_IdLocalidadCubierta" ColumnName="CMR_IdLocalidadCubierta" />
+          <ScalarProperty Name="CMR_IdLocalidadManifiestEnRuta" ColumnName="CMR_IdLocalidadManifiestEnRuta" />
+          <ScalarProperty Name="CMR_IdCoberturaManifiestaEnRut" ColumnName="CMR_IdCoberturaManifiestaEnRut" />
+          <ScalarProperty Name="CMR_IdAuditoria" ColumnName="CMR_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoberturaManifiestaEnRuta_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.CoberturaManifiestaEnRuta_RUT">
+        <MappingFragment StoreEntitySet="CoberturaManifiestaEnRuta_RUT">
+          <ScalarProperty Name="CMR_CreadoPor" ColumnName="CMR_CreadoPor" />
+          <ScalarProperty Name="CMR_FechaGrabacion" ColumnName="CMR_FechaGrabacion" />
+          <ScalarProperty Name="CMR_NombreLocalidadCubierta" ColumnName="CMR_NombreLocalidadCubierta" />
+          <ScalarProperty Name="CMR_IdLocalidadCubierta" ColumnName="CMR_IdLocalidadCubierta" />
+          <ScalarProperty Name="CMR_IdLocalidadManifiestEnRuta" ColumnName="CMR_IdLocalidadManifiestEnRuta" />
+          <ScalarProperty Name="CMR_IdCoberturaManifiestaEnRut" ColumnName="CMR_IdCoberturaManifiestaEnRut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoVehiculo_CPO">
+      <EntityTypeMapping TypeName="ModeloRutasNS.TipoVehiculo_CPO">
+        <MappingFragment StoreEntitySet="TipoVehiculo_CPO">
+          <ScalarProperty Name="TIV_CreadoPor" ColumnName="TIV_CreadoPor" />
+          <ScalarProperty Name="TIV_FechaGrabacion" ColumnName="TIV_FechaGrabacion" />
+          <ScalarProperty Name="TIV_Descripcion" ColumnName="TIV_Descripcion" />
+          <ScalarProperty Name="TIV_IdTipoVehiculo" ColumnName="TIV_IdTipoVehiculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidad_PAR">
+      <EntityTypeMapping TypeName="ModeloRutasNS.Localidad_PAR">
+        <MappingFragment StoreEntitySet="Localidad_PAR">
+          <ScalarProperty Name="LOC_RadioRecogida" ColumnName="LOC_RadioRecogida" />
+          <ScalarProperty Name="LOC_Indicativo" ColumnName="LOC_Indicativo" />
+          <ScalarProperty Name="LOC_AplicaDireccionEstandar" ColumnName="LOC_AplicaDireccionEstandar" />
+          <ScalarProperty Name="LOC_DHLActivo" ColumnName="LOC_DHLActivo" />
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="LOC_CreadoPor" ColumnName="LOC_CreadoPor" />
+          <ScalarProperty Name="LOC_FechaGrabacion" ColumnName="LOC_FechaGrabacion" />
+          <ScalarProperty Name="LOC_CodigoPostal" ColumnName="LOC_CodigoPostal" />
+          <ScalarProperty Name="LOC_NombreCorto" ColumnName="LOC_NombreCorto" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="LOC_IdAncestroTercerGrado" ColumnName="LOC_IdAncestroTercerGrado" />
+          <ScalarProperty Name="LOC_IdAncestroSegundoGrado" ColumnName="LOC_IdAncestroSegundoGrado" />
+          <ScalarProperty Name="LOC_IdAncestroPrimerGrado" ColumnName="LOC_IdAncestroPrimerGrado" />
+          <ScalarProperty Name="LOC_IdTipo" ColumnName="LOC_IdTipo" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoRuta_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.TipoRuta_RUT">
+        <MappingFragment StoreEntitySet="TipoRuta_RUT">
+          <ScalarProperty Name="TRU_CreadoPor" ColumnName="TRU_CreadoPor" />
+          <ScalarProperty Name="TRU_FechaGrabacion" ColumnName="TRU_FechaGrabacion" />
+          <ScalarProperty Name="TRU_Descripcion" ColumnName="TRU_Descripcion" />
+          <ScalarProperty Name="TRU_IdTipoRuta" ColumnName="TRU_IdTipoRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaTransMedioTransHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EmpresaTransMedioTransHist_RUT">
+        <MappingFragment StoreEntitySet="EmpresaTransMedioTransHist_RUT">
+          <ScalarProperty Name="ETM_TipoCambio" ColumnName="ETM_TipoCambio" />
+          <ScalarProperty Name="ETM_CambiadoPor" ColumnName="ETM_CambiadoPor" />
+          <ScalarProperty Name="ETM_FechaCambio" ColumnName="ETM_FechaCambio" />
+          <ScalarProperty Name="ETM_CreadoPor" ColumnName="ETM_CreadoPor" />
+          <ScalarProperty Name="ETM_FechaGrabacion" ColumnName="ETM_FechaGrabacion" />
+          <ScalarProperty Name="ETM_IdMedioTransporte" ColumnName="ETM_IdMedioTransporte" />
+          <ScalarProperty Name="ETM_IdEmpresaTransportadora" ColumnName="ETM_IdEmpresaTransportadora" />
+          <ScalarProperty Name="ETM_IdMedioTranEmpresa" ColumnName="ETM_IdMedioTranEmpresa" />
+          <ScalarProperty Name="ETM_IdAuditoria" ColumnName="ETM_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaTransporMedioTransp_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EmpresaTransporMedioTransp_RUT">
+        <MappingFragment StoreEntitySet="EmpresaTransporMedioTransp_RUT">
+          <ScalarProperty Name="ETM_CreadoPor" ColumnName="ETM_CreadoPor" />
+          <ScalarProperty Name="ETM_FechaGrabacion" ColumnName="ETM_FechaGrabacion" />
+          <ScalarProperty Name="ETM_IdMedioTransporte" ColumnName="ETM_IdMedioTransporte" />
+          <ScalarProperty Name="ETM_IdEmpresaTransportadora" ColumnName="ETM_IdEmpresaTransportadora" />
+          <ScalarProperty Name="ETM_IdMedioTranEmpresa" ColumnName="ETM_IdMedioTranEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaTransportadoraHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EmpresaTransportadoraHist_RUT">
+        <MappingFragment StoreEntitySet="EmpresaTransportadoraHist_RUT">
+          <ScalarProperty Name="ERT_Estado" ColumnName="ERT_Estado" />
+          <ScalarProperty Name="ERT_TipoCambio" ColumnName="ERT_TipoCambio" />
+          <ScalarProperty Name="ERT_CambiadoPor" ColumnName="ERT_CambiadoPor" />
+          <ScalarProperty Name="ERT_FechaCambio" ColumnName="ERT_FechaCambio" />
+          <ScalarProperty Name="ETR_CreadoPor" ColumnName="ETR_CreadoPor" />
+          <ScalarProperty Name="ETR_FechaGrabacion" ColumnName="ETR_FechaGrabacion" />
+          <ScalarProperty Name="ETR_IdTipoTransporte" ColumnName="ETR_IdTipoTransporte" />
+          <ScalarProperty Name="ETR_Nombre" ColumnName="ETR_Nombre" />
+          <ScalarProperty Name="ETR_IdEmpresaTransportadora" ColumnName="ETR_IdEmpresaTransportadora" />
+          <ScalarProperty Name="ERT_IdAuditoria" ColumnName="ERT_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RutaEmpresaTransportadora_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.RutaEmpresaTransportadora_RUT">
+        <MappingFragment StoreEntitySet="RutaEmpresaTransportadora_RUT">
+          <ScalarProperty Name="RET_CreadoPor" ColumnName="RET_CreadoPor" />
+          <ScalarProperty Name="RET_FechaGrabacion" ColumnName="RET_FechaGrabacion" />
+          <ScalarProperty Name="RET_IdEmpresaTransportadora" ColumnName="RET_IdEmpresaTransportadora" />
+          <ScalarProperty Name="RET_IdRuta" ColumnName="RET_IdRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RutaHist_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.RutaHist_RUT">
+        <MappingFragment StoreEntitySet="RutaHist_RUT">
+          <ScalarProperty Name="RUT_TipoCambio" ColumnName="RUT_TipoCambio" />
+          <ScalarProperty Name="RUT_CambiadoPor" ColumnName="RUT_CambiadoPor" />
+          <ScalarProperty Name="RUT_FechaCambio" ColumnName="RUT_FechaCambio" />
+          <ScalarProperty Name="RUT_FechaGrabacion" ColumnName="RUT_FechaGrabacion" />
+          <ScalarProperty Name="RUT_CreadoPor" ColumnName="RUT_CreadoPor" />
+          <ScalarProperty Name="RUT_CostoMensualTotal" ColumnName="RUT_CostoMensualTotal" />
+          <ScalarProperty Name="RUT_GeneraManifiestoMinisterio" ColumnName="RUT_GeneraManifiestoMinisterio" />
+          <ScalarProperty Name="RUT_IdMedioTranEmpresa" ColumnName="RUT_IdMedioTranEmpresa" />
+          <ScalarProperty Name="RUT_NombreLocalidadDestino" ColumnName="RUT_NombreLocalidadDestino" />
+          <ScalarProperty Name="RUT_IdLocalidadDestino" ColumnName="RUT_IdLocalidadDestino" />
+          <ScalarProperty Name="RUT_NombreLocalidadOrigen" ColumnName="RUT_NombreLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdLocalidadOrigen" ColumnName="RUT_IdLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdTipoRuta" ColumnName="RUT_IdTipoRuta" />
+          <ScalarProperty Name="RUT_Nombre" ColumnName="RUT_Nombre" />
+          <ScalarProperty Name="RUT_IdRuta" ColumnName="RUT_IdRuta" />
+          <ScalarProperty Name="RUT_IdAuditoria" ColumnName="RUT_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTransporte_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.TipoTransporte_RUT">
+        <MappingFragment StoreEntitySet="TipoTransporte_RUT">
+          <ScalarProperty Name="TIT_CreadoPor" ColumnName="TIT_CreadoPor" />
+          <ScalarProperty Name="TIT_FechaGrabacion" ColumnName="TIT_FechaGrabacion" />
+          <ScalarProperty Name="TIT_Descripcion" ColumnName="TIT_Descripcion" />
+          <ScalarProperty Name="TIT_IdTipoTransporte" ColumnName="TIT_IdTipoTransporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedioTransporte_PAR">
+      <EntityTypeMapping TypeName="ModeloRutasNS.MedioTransporte_PAR">
+        <MappingFragment StoreEntitySet="MedioTransporte_PAR">
+          <ScalarProperty Name="MTR_CreadoPor" ColumnName="MTR_CreadoPor" />
+          <ScalarProperty Name="MTR_FechaGrabacion" ColumnName="MTR_FechaGrabacion" />
+          <ScalarProperty Name="MTR_Descripcion" ColumnName="MTR_Descripcion" />
+          <ScalarProperty Name="MTR_IdMedioTransporte" ColumnName="MTR_IdMedioTransporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedioTransEmpresaTrans_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.MedioTransEmpresaTrans_VRUT">
+        <MappingFragment StoreEntitySet="MedioTransEmpresaTrans_VRUT">
+          <ScalarProperty Name="ETM_IdMedioTransporte" ColumnName="ETM_IdMedioTransporte" />
+          <ScalarProperty Name="ETM_IdEmpresaTransportadora" ColumnName="ETM_IdEmpresaTransportadora" />
+          <ScalarProperty Name="ETM_IdMedioTranEmpresa" ColumnName="ETM_IdMedioTranEmpresa" />
+          <ScalarProperty Name="TIT_Descripcion" ColumnName="TIT_Descripcion" />
+          <ScalarProperty Name="TIT_IdTipoTransporte" ColumnName="TIT_IdTipoTransporte" />
+          <ScalarProperty Name="ETR_IdTipoTransporte" ColumnName="ETR_IdTipoTransporte" />
+          <ScalarProperty Name="ETR_Nombre" ColumnName="ETR_Nombre" />
+          <ScalarProperty Name="ETR_IdEmpresaTransportadora" ColumnName="ETR_IdEmpresaTransportadora" />
+          <ScalarProperty Name="MTR_Descripcion" ColumnName="MTR_Descripcion" />
+          <ScalarProperty Name="MTR_IdMedioTransporte" ColumnName="MTR_IdMedioTransporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RutaEmpresaTrans_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.RutaEmpresaTrans_VRUT">
+        <MappingFragment StoreEntitySet="RutaEmpresaTrans_VRUT">
+          <ScalarProperty Name="ETR_IdTipoTransporte" ColumnName="ETR_IdTipoTransporte" />
+          <ScalarProperty Name="ETR_Nombre" ColumnName="ETR_Nombre" />
+          <ScalarProperty Name="ETR_IdEmpresaTransportadora" ColumnName="ETR_IdEmpresaTransportadora" />
+          <ScalarProperty Name="TIT_Descripcion" ColumnName="TIT_Descripcion" />
+          <ScalarProperty Name="TIT_IdTipoTransporte" ColumnName="TIT_IdTipoTransporte" />
+          <ScalarProperty Name="RET_IdEmpresaTransportadora" ColumnName="RET_IdEmpresaTransportadora" />
+          <ScalarProperty Name="RET_IdRuta" ColumnName="RET_IdRuta" />
+          <ScalarProperty Name="RUT_Estado" ColumnName="RUT_Estado" />
+          <ScalarProperty Name="RUT_IdTipoVehiculo" ColumnName="RUT_IdTipoVehiculo" />
+          <ScalarProperty Name="RUT_CostoMensualTotal" ColumnName="RUT_CostoMensualTotal" />
+          <ScalarProperty Name="RUT_GeneraManifiestoMinisterio" ColumnName="RUT_GeneraManifiestoMinisterio" />
+          <ScalarProperty Name="RUT_NombreLocalidadDestino" ColumnName="RUT_NombreLocalidadDestino" />
+          <ScalarProperty Name="RUT_IdLocalidadDestino" ColumnName="RUT_IdLocalidadDestino" />
+          <ScalarProperty Name="RUT_NombreLocalidadOrigen" ColumnName="RUT_NombreLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdLocalidadOrigen" ColumnName="RUT_IdLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdMedioTransporte" ColumnName="RUT_IdMedioTransporte" />
+          <ScalarProperty Name="RUT_IdTipoRuta" ColumnName="RUT_IdTipoRuta" />
+          <ScalarProperty Name="RUT_Nombre" ColumnName="RUT_Nombre" />
+          <ScalarProperty Name="RUT_IdRuta" ColumnName="RUT_IdRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaTransportadora_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EmpresaTransportadora_RUT">
+        <MappingFragment StoreEntitySet="EmpresaTransportadora_RUT">
+          <ScalarProperty Name="ETR_CreadoPor" ColumnName="ETR_CreadoPor" />
+          <ScalarProperty Name="ETR_FechaGrabacion" ColumnName="ETR_FechaGrabacion" />
+          <ScalarProperty Name="ERT_Estado" ColumnName="ERT_Estado" />
+          <ScalarProperty Name="ETR_IdTipoTransporte" ColumnName="ETR_IdTipoTransporte" />
+          <ScalarProperty Name="ETR_Nombre" ColumnName="ETR_Nombre" />
+          <ScalarProperty Name="ETR_IdEmpresaTransportadora" ColumnName="ETR_IdEmpresaTransportadora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstacionesYCiudAdiciRuta_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EstacionesYCiudAdiciRuta_VRUT">
+        <MappingFragment StoreEntitySet="EstacionesYCiudAdiciRuta_VRUT">
+          <ScalarProperty Name="Tabla" ColumnName="Tabla" />
+          <ScalarProperty Name="GeneraConsolidado" ColumnName="GeneraConsolidado" />
+          <ScalarProperty Name="RequierePrecintoRetorno" ColumnName="RequierePrecintoRetorno" />
+          <ScalarProperty Name="orden" ColumnName="orden" />
+          <ScalarProperty Name="NombreEstacion" ColumnName="NombreEstacion" />
+          <ScalarProperty Name="IdCiudadEstacion" ColumnName="IdCiudadEstacion" />
+          <ScalarProperty Name="IdRuta" ColumnName="IdRuta" />
+          <ScalarProperty Name="IdEstacion" ColumnName="IdEstacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocalidadAdicionalEnRuta_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.LocalidadAdicionalEnRuta_RUT">
+        <MappingFragment StoreEntitySet="LocalidadAdicionalEnRuta_RUT">
+          <ScalarProperty Name="LMR_FechaGrabacion" ColumnName="LMR_FechaGrabacion" />
+          <ScalarProperty Name="LMR_CreadoPor" ColumnName="LMR_CreadoPor" />
+          <ScalarProperty Name="LMR_GeneraConsolidado" ColumnName="LMR_GeneraConsolidado" />
+          <ScalarProperty Name="LMR_NombreLocalidadManifiesta" ColumnName="LMR_NombreLocalidadManifiesta" />
+          <ScalarProperty Name="LMR_IdLocalidadManifiesta" ColumnName="LMR_IdLocalidadManifiesta" />
+          <ScalarProperty Name="LMR_IdRuta" ColumnName="LMR_IdRuta" />
+          <ScalarProperty Name="LMR_IdLocalidadManifiestEnRuta" ColumnName="LMR_IdLocalidadManifiestEnRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RutasEstacionRuta_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.RutasEstacionRuta_VRUT">
+        <MappingFragment StoreEntitySet="RutasEstacionRuta_VRUT">
+          <ScalarProperty Name="TIV_Descripcion" ColumnName="TIV_Descripcion" />
+          <ScalarProperty Name="TIV_IdTipoVehiculo" ColumnName="TIV_IdTipoVehiculo" />
+          <ScalarProperty Name="MTR_Descripcion" ColumnName="MTR_Descripcion" />
+          <ScalarProperty Name="MTR_IdMedioTransporte" ColumnName="MTR_IdMedioTransporte" />
+          <ScalarProperty Name="TRU_Descripcion" ColumnName="TRU_Descripcion" />
+          <ScalarProperty Name="TRU_IdTipoRuta" ColumnName="TRU_IdTipoRuta" />
+          <ScalarProperty Name="ESR_RequierePrecintoRetorno" ColumnName="ESR_RequierePrecintoRetorno" />
+          <ScalarProperty Name="ESR_PermiteEnganche" ColumnName="ESR_PermiteEnganche" />
+          <ScalarProperty Name="ESR_TiempoDeViajeDesdeAnterior" ColumnName="ESR_TiempoDeViajeDesdeAnterior" />
+          <ScalarProperty Name="ESR_TiempoParada" ColumnName="ESR_TiempoParada" />
+          <ScalarProperty Name="ESR_OrdenEnCasillero" ColumnName="ESR_OrdenEnCasillero" />
+          <ScalarProperty Name="ESR_OrdenEnRuta" ColumnName="ESR_OrdenEnRuta" />
+          <ScalarProperty Name="ESR_NombreLocalidadEstacion" ColumnName="ESR_NombreLocalidadEstacion" />
+          <ScalarProperty Name="ESR_IdLocalidadEstacion" ColumnName="ESR_IdLocalidadEstacion" />
+          <ScalarProperty Name="ESR_IdEstacionRuta" ColumnName="ESR_IdEstacionRuta" />
+          <ScalarProperty Name="RUT_Estado" ColumnName="RUT_Estado" />
+          <ScalarProperty Name="RUT_IdTipoVehiculo" ColumnName="RUT_IdTipoVehiculo" />
+          <ScalarProperty Name="RUT_CostoMensualTotal" ColumnName="RUT_CostoMensualTotal" />
+          <ScalarProperty Name="RUT_GeneraManifiestoMinisterio" ColumnName="RUT_GeneraManifiestoMinisterio" />
+          <ScalarProperty Name="RUT_NombreLocalidadDestino" ColumnName="RUT_NombreLocalidadDestino" />
+          <ScalarProperty Name="RUT_IdLocalidadDestino" ColumnName="RUT_IdLocalidadDestino" />
+          <ScalarProperty Name="RUT_NombreLocalidadOrigen" ColumnName="RUT_NombreLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdLocalidadOrigen" ColumnName="RUT_IdLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdMedioTransporte" ColumnName="RUT_IdMedioTransporte" />
+          <ScalarProperty Name="RUT_IdTipoRuta" ColumnName="RUT_IdTipoRuta" />
+          <ScalarProperty Name="RUT_Nombre" ColumnName="RUT_Nombre" />
+          <ScalarProperty Name="RUT_IdRuta" ColumnName="RUT_IdRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CiudadesRutas_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.CiudadesRutas_VRUT">
+        <MappingFragment StoreEntitySet="CiudadesRutas_VRUT">
+          <ScalarProperty Name="IdRuta" ColumnName="IdRuta" />
+          <ScalarProperty Name="IdCiudadHija" ColumnName="IdCiudadHija" />
+          <ScalarProperty Name="IdCiudadEstacion" ColumnName="IdCiudadEstacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRutasEstacionRuta_RUT" FunctionName="ModeloRutasNS.Store.paObtenerRutasEstacionRuta_RUT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloRutasNS.paObtenerRutasEstacionRuta_RUTRS">
+          <ScalarProperty Name="RUT_IdRuta" ColumnName="RUT_IdRuta" />
+          <ScalarProperty Name="RUT_Nombre" ColumnName="RUT_Nombre" />
+          <ScalarProperty Name="RUT_IdTipoRuta" ColumnName="RUT_IdTipoRuta" />
+          <ScalarProperty Name="RUT_IdMedioTransporte" ColumnName="RUT_IdMedioTransporte" />
+          <ScalarProperty Name="RUT_IdLocalidadOrigen" ColumnName="RUT_IdLocalidadOrigen" />
+          <ScalarProperty Name="RUT_NombreLocalidadOrigen" ColumnName="RUT_NombreLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdLocalidadDestino" ColumnName="RUT_IdLocalidadDestino" />
+          <ScalarProperty Name="RUT_NombreLocalidadDestino" ColumnName="RUT_NombreLocalidadDestino" />
+          <ScalarProperty Name="RUT_GeneraManifiestoMinisterio" ColumnName="RUT_GeneraManifiestoMinisterio" />
+          <ScalarProperty Name="RUT_CostoMensualTotal" ColumnName="RUT_CostoMensualTotal" />
+          <ScalarProperty Name="RUT_IdTipoVehiculo" ColumnName="RUT_IdTipoVehiculo" />
+          <ScalarProperty Name="RUT_Estado" ColumnName="RUT_Estado" />
+          <ScalarProperty Name="ESR_IdEstacionRuta" ColumnName="ESR_IdEstacionRuta" />
+          <ScalarProperty Name="ESR_IdLocalidadEstacion" ColumnName="ESR_IdLocalidadEstacion" />
+          <ScalarProperty Name="ESR_NombreLocalidadEstacion" ColumnName="ESR_NombreLocalidadEstacion" />
+          <ScalarProperty Name="ESR_OrdenEnRuta" ColumnName="ESR_OrdenEnRuta" />
+          <ScalarProperty Name="ESR_OrdenEnCasillero" ColumnName="ESR_OrdenEnCasillero" />
+          <ScalarProperty Name="ESR_TiempoParada" ColumnName="ESR_TiempoParada" />
+          <ScalarProperty Name="ESR_TiempoDeViajeDesdeAnterior" ColumnName="ESR_TiempoDeViajeDesdeAnterior" />
+          <ScalarProperty Name="ESR_PermiteEnganche" ColumnName="ESR_PermiteEnganche" />
+          <ScalarProperty Name="ESR_RequierePrecintoRetorno" ColumnName="ESR_RequierePrecintoRetorno" />
+          <ScalarProperty Name="TRU_IdTipoRuta" ColumnName="TRU_IdTipoRuta" />
+          <ScalarProperty Name="TRU_Descripcion" ColumnName="TRU_Descripcion" />
+          <ScalarProperty Name="MTR_IdMedioTransporte" ColumnName="MTR_IdMedioTransporte" />
+          <ScalarProperty Name="MTR_Descripcion" ColumnName="MTR_Descripcion" />
+          <ScalarProperty Name="TIV_IdTipoVehiculo" ColumnName="TIV_IdTipoVehiculo" />
+          <ScalarProperty Name="TIV_Descripcion" ColumnName="TIV_Descripcion" />
+          <ScalarProperty Name="RUT_RutaMasivos" ColumnName="RUT_RutaMasivos" />
+          <ScalarProperty Name="FRR_IdDia" ColumnName="FRR_IdDia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ParametrosRutas_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.ParametrosRutas_RUT">
+        <MappingFragment StoreEntitySet="ParametrosRutas_RUT">
+          <ScalarProperty Name="PRU_CreadoPor" ColumnName="PRU_CreadoPor" />
+          <ScalarProperty Name="PRU_FechaGrabacion" ColumnName="PRU_FechaGrabacion" />
+          <ScalarProperty Name="PRU_Descripcion" ColumnName="PRU_Descripcion" />
+          <ScalarProperty Name="PRU_ValorParametro" ColumnName="PRU_ValorParametro" />
+          <ScalarProperty Name="PRU_IdParametro" ColumnName="PRU_IdParametro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRutasEstacionRutaOriDest_RUT" FunctionName="ModeloRutasNS.Store.paObtenerRutasEstacionRutaOriDest_RUT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloRutasNS.paObtenerRutasEstacionRutaOriDest_RUT_RS">
+          <ScalarProperty Name="RUT_IdRuta" ColumnName="RUT_IdRuta" />
+          <ScalarProperty Name="RUT_Nombre" ColumnName="RUT_Nombre" />
+          <ScalarProperty Name="RUT_IdMedioTransporte" ColumnName="RUT_IdMedioTransporte" />
+          <ScalarProperty Name="RUT_IdLocalidadOrigen" ColumnName="RUT_IdLocalidadOrigen" />
+          <ScalarProperty Name="RUT_NombreLocalidadOrigen" ColumnName="RUT_NombreLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdLocalidadDestino" ColumnName="RUT_IdLocalidadDestino" />
+          <ScalarProperty Name="RUT_NombreLocalidadDestino" ColumnName="RUT_NombreLocalidadDestino" />
+          <ScalarProperty Name="RUT_GeneraManifiestoMinisterio" ColumnName="RUT_GeneraManifiestoMinisterio" />
+          <ScalarProperty Name="TRU_IdTipoRuta" ColumnName="TRU_IdTipoRuta" />
+          <ScalarProperty Name="MTR_Descripcion" ColumnName="MTR_Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Ruta_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.Ruta_RUT">
+        <MappingFragment StoreEntitySet="Ruta_RUT">
+          <ScalarProperty Name="RUT_RutaMasivos" ColumnName="RUT_RutaMasivos" />
+          <ScalarProperty Name="RUT_FechaGrabacion" ColumnName="RUT_FechaGrabacion" />
+          <ScalarProperty Name="RUT_CreadoPor" ColumnName="RUT_CreadoPor" />
+          <ScalarProperty Name="RUT_Estado" ColumnName="RUT_Estado" />
+          <ScalarProperty Name="RUT_IdTipoVehiculo" ColumnName="RUT_IdTipoVehiculo" />
+          <ScalarProperty Name="RUT_CostoMensualTotal" ColumnName="RUT_CostoMensualTotal" />
+          <ScalarProperty Name="RUT_GeneraManifiestoMinisterio" ColumnName="RUT_GeneraManifiestoMinisterio" />
+          <ScalarProperty Name="RUT_NombreLocalidadDestino" ColumnName="RUT_NombreLocalidadDestino" />
+          <ScalarProperty Name="RUT_IdLocalidadDestino" ColumnName="RUT_IdLocalidadDestino" />
+          <ScalarProperty Name="RUT_NombreLocalidadOrigen" ColumnName="RUT_NombreLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdLocalidadOrigen" ColumnName="RUT_IdLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdMedioTransporte" ColumnName="RUT_IdMedioTransporte" />
+          <ScalarProperty Name="RUT_IdTipoRuta" ColumnName="RUT_IdTipoRuta" />
+          <ScalarProperty Name="RUT_Nombre" ColumnName="RUT_Nombre" />
+          <ScalarProperty Name="RUT_IdRuta" ColumnName="RUT_IdRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rutas_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.Rutas_VRUT">
+        <MappingFragment StoreEntitySet="Rutas_VRUT">
+          <ScalarProperty Name="RUT_RutaMasivos" ColumnName="RUT_RutaMasivos" />
+          <ScalarProperty Name="MTR_Descripcion" ColumnName="MTR_Descripcion" />
+          <ScalarProperty Name="MTR_IdMedioTransporte" ColumnName="MTR_IdMedioTransporte" />
+          <ScalarProperty Name="TIV_Descripcion" ColumnName="TIV_Descripcion" />
+          <ScalarProperty Name="TIV_IdTipoVehiculo" ColumnName="TIV_IdTipoVehiculo" />
+          <ScalarProperty Name="TRU_Descripcion" ColumnName="TRU_Descripcion" />
+          <ScalarProperty Name="TRU_IdTipoRuta" ColumnName="TRU_IdTipoRuta" />
+          <ScalarProperty Name="RUT_Estado" ColumnName="RUT_Estado" />
+          <ScalarProperty Name="RUT_IdTipoVehiculo" ColumnName="RUT_IdTipoVehiculo" />
+          <ScalarProperty Name="RUT_CostoMensualTotal" ColumnName="RUT_CostoMensualTotal" />
+          <ScalarProperty Name="RUT_GeneraManifiestoMinisterio" ColumnName="RUT_GeneraManifiestoMinisterio" />
+          <ScalarProperty Name="RUT_NombreLocalidadDestino" ColumnName="RUT_NombreLocalidadDestino" />
+          <ScalarProperty Name="RUT_IdLocalidadDestino" ColumnName="RUT_IdLocalidadDestino" />
+          <ScalarProperty Name="RUT_NombreLocalidadOrigen" ColumnName="RUT_NombreLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdLocalidadOrigen" ColumnName="RUT_IdLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdMedioTransporte" ColumnName="RUT_IdMedioTransporte" />
+          <ScalarProperty Name="RUT_IdTipoRuta" ColumnName="RUT_IdTipoRuta" />
+          <ScalarProperty Name="RUT_Nombre" ColumnName="RUT_Nombre" />
+          <ScalarProperty Name="RUT_IdRuta" ColumnName="RUT_IdRuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaTransRacol_RUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EmpresaTransRacol_RUT">
+        <MappingFragment StoreEntitySet="EmpresaTransRacol_RUT">
+          <ScalarProperty Name="ETR_CreadoPor" ColumnName="ETR_CreadoPor" />
+          <ScalarProperty Name="ETR_FechaGrabacion" ColumnName="ETR_FechaGrabacion" />
+          <ScalarProperty Name="ETR_IdRegionalAdm" ColumnName="ETR_IdRegionalAdm" />
+          <ScalarProperty Name="ETR_IdEmpresaTrans" ColumnName="ETR_IdEmpresaTrans" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresasTransportadorasMedioTransporte_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EmpresasTransportadorasMedioTransporte_VRUT">
+        <MappingFragment StoreEntitySet="EmpresasTransportadorasMedioTransporte_VRUT">
+          <ScalarProperty Name="MTR_Descripcion" ColumnName="MTR_Descripcion" />
+          <ScalarProperty Name="MTR_IdMedioTransporte" ColumnName="MTR_IdMedioTransporte" />
+          <ScalarProperty Name="ETM_IdEmpresaTransportadora" ColumnName="ETM_IdEmpresaTransportadora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresasTransportadorasRacolAsociado_VRUT">
+      <EntityTypeMapping TypeName="ModeloRutasNS.EmpresasTransportadorasRacolAsociado_VRUT">
+        <MappingFragment StoreEntitySet="EmpresasTransportadorasRacolAsociado_VRUT">
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+          <ScalarProperty Name="ETR_IdEmpresaTrans" ColumnName="ETR_IdEmpresaTrans" />
+          <ScalarProperty Name="ETR_IdRegionalAdm" ColumnName="ETR_IdRegionalAdm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegionalAdministrativa_VCPO">
+      <EntityTypeMapping TypeName="ModeloRutasNS.RegionalAdministrativa_VCPO">
+        <MappingFragment StoreEntitySet="RegionalAdministrativa_VCPO">
+          <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+          <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+          <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+          <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+          <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+          <ScalarProperty Name="CES_VendePrepago" ColumnName="CES_VendePrepago" />
+          <ScalarProperty Name="CES_AdmiteFormaPagoAlCobro" ColumnName="CES_AdmiteFormaPagoAlCobro" />
+          <ScalarProperty Name="CES_VolumenMaximo" ColumnName="CES_VolumenMaximo" />
+          <ScalarProperty Name="CES_PesoMaximo" ColumnName="CES_PesoMaximo" />
+          <ScalarProperty Name="CES_IdTipoPropiedad" ColumnName="CES_IdTipoPropiedad" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+          <ScalarProperty Name="CES_Email" ColumnName="CES_Email" />
+          <ScalarProperty Name="CES_Longitud" ColumnName="CES_Longitud" />
+          <ScalarProperty Name="CES_Latitud" ColumnName="CES_Latitud" />
+          <ScalarProperty Name="CES_IdPersonaResponsable" ColumnName="CES_IdPersonaResponsable" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+          <ScalarProperty Name="CES_IdZona" ColumnName="CES_IdZona" />
+          <ScalarProperty Name="CES_Barrio" ColumnName="CES_Barrio" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_Fax" ColumnName="CES_Fax" />
+          <ScalarProperty Name="CES_Telefono2" ColumnName="CES_Telefono2" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_IdPropietario" ColumnName="CES_IdPropietario" />
+          <ScalarProperty Name="CES_DigitoVerificacion" ColumnName="CES_DigitoVerificacion" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+          <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRacolsAsignarAEmpresaTransp_CPO" FunctionName="ModeloRutasNS.Store.paObtenerRacolsAsignarAEmpresaTransp_CPO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloRutasNS.ObtenerRacolsAsignarAEmpresaTransp_CPO">
+          <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+          <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

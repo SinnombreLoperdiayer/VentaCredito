@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B55CF7DD-4740-420B-96AC-7E8D9164CFD6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.Clientes.Datos</RootNamespace>
+    <AssemblyName>CO.Servidor.Clientes.Datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLRepositorio.cs" />
+    <Compile Include="CLRepositorioAudit.cs" />
+    <Compile Include="CLRepositorioExt.cs" />
+    <Compile Include="Modelo\AcumuladoGirosCliente_GIR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\AcumuladosContrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\AgrupacionFacturaSvcSucur_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\AgrupacionFactura_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Cargo_SEG.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CentroServicios_PUA.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CLClienteContado_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CliContadoArchivoCedulas_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClienteCondicionGiro_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClienteContadoDestFrecuen_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClienteContadoHist_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClienteContado_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClienteConvenioNal_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClienteCreditoHist_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClienteCredito_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClientesCreditoLocalidad_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClienteSucursalContrato_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CLpaConsumoPeriodo.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CLpaObtenerCliCreditoContratCondicionGiro.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CLpaObtenerCliCreditoDispersionFondosGiro.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CLpaObtenerSucursalSuminist.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CLpaObtenerSucursalSumSerial.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ContactosContrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ContratoCentrosCorrespondencia_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ContratoDescuentosFacturacion_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ContratoFacturacion_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ContratoHist_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ContratoRequisitosFacturacion_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ContratosServicios_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Contrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CupoDispersionCliente_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DeduccionesFacturacion_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DescuentosFactura_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DestinatarioFrecuente_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DocumentosClienteCredito_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DocumentosClienteCredito_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DocumentosContrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\EstadosCliente_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\HorarioRecogidasSucursalContrato_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\HorarioRecogidaSucursalContrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ListaPrecios_TAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidades_VPAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Localidad_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModalidadOtroSi_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloClientes.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloClientes.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloClientes.Context.Extensions.cs">
+      <DependentUpon>ModeloClientes.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloClientes.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloClientes.Views.cs" />
+    <Compile Include="Modelo\MotivoEstados_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NotacionesFacturacionHist_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\NotacionesFacturacion_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Ocupacion_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\OtroSiContratoHist_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\OtroSiContrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paCLObtenerConsumoPeriodo.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerCliContratoAgen_CLI_Result.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerClientesConvenioNal_CLI1_Result.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerClientesConvenioNal_CLI_Result.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerServActPorSucLisPrecio_CLI_Result.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerServActPorSuc_CLI_Result.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSucContrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\paObtenerSucursalesFacExcluidas_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ParametrosFacturaHist_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ParametrosFactura_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaExterna_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInternaCargoCenSer_VPAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaInterna_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonalContrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PersonaResponsableLegal_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ReferenciaUsoGuia_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ReferenciaUsoGuia_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RequisitosRadFactura_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RetencionTipoRegimenContributivo_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Retencion_TAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Servicio_TAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalContraCambioEstado_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalesAgencia_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalesClienteRacol_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalesContratoHist_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalesContrato_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalesContrato_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalHist_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SucursalServicios_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Sucursal_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SuministrosSucursal_VCLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoActividadEconomica_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoClienteCredito_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoIdentificacion_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoNotacionFacturacion_CLI.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoRegimenContributivo_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoSegmentoMercado_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TipoSociedad_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\VersionServicios_VVER.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ZonaDeLocalidad_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Zona_PAR.cs">
+      <DependentUpon>ModeloClientes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloClientes.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloClientes.Context.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Modelo\ModeloClientes.csdl" />
+    <EmbeddedResource Include="Modelo\ModeloClientes.msl" />
+    <EmbeddedResource Include="Modelo\ModeloClientes.ssdl" />
+    <None Include="Modelo\ModeloClientes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloClientes.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloClientes.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloClientes.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Excepciones\Framework.Servidor.Excepciones.csproj">
+      <Project>{FC12EF72-B64E-483F-A5AF-A928CE4AA0E8}</Project>
+      <Name>Framework.Servidor.Excepciones</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Servicios\CO.Servidor.Servicios.ContratoDatos\CO.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</Project>
+      <Name>CO.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Framework\Servidor\Framework.Servidor.ParametrosFW\Framework.Servidor.ParametrosFW.csproj">
+      <Project>{96B9E8EB-58EA-419F-894C-23361249C964}</Project>
+      <Name>Framework.Servidor.ParametrosFW</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CO.Servidor.Clientes.Comun\CO.Servidor.Clientes.Comun.csproj">
+      <Project>{893E4C48-E641-43DE-81DC-3E752A2DA3B6}</Project>
+      <Name>CO.Servidor.Clientes.Comun</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"%25windir%25\Microsoft.NET\Framework\v4.0.30319\EdmGen.exe" /nologo /language:CSharp /mode:ViewGeneration "/inssdl:$(TargetDir)Modelo/ModeloClientes.ssdl" "/incsdl:$(TargetDir)Modelo/ModeloClientes.csdl" "/inmsl:$(TargetDir)Modelo/ModeloClientes.msl" "/outviews:$(ProjectDir)Modelo/ModeloClientes.Views.cs"
+XCOPY  "$(TargetDir)Modelo/ModeloClientes.csdl" "$(ProjectDir)Modelo" /F /R /Y
+XCOPY "$(TargetDir)Modelo/ModeloClientes.ssdl" "$(ProjectDir)Modelo" /F /R /Y
+XCOPY "$(TargetDir)Modelo/ModeloClientes.msl" "$(ProjectDir)Modelo" /F /R /Y</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

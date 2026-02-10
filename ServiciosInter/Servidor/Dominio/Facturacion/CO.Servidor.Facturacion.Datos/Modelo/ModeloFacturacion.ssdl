@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DESARROLLOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DESARROLLOModelStoreContainer">
+    <EntitySet Name="ConceptoProgramado_FAC" EntityType="DESARROLLOModel.Store.ConceptoProgramado_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DeduccionesFactura_FAC" EntityType="DESARROLLOModel.Store.DeduccionesFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DescripcionNotasFactura_FAC" EntityType="DESARROLLOModel.Store.DescripcionNotasFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DescuentosFactura_FAC" EntityType="DESARROLLOModel.Store.DescuentosFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleXOperFactura_FAC" EntityType="DESARROLLOModel.Store.DetalleXOperFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleXServicioFactura_FAC" EntityType="DESARROLLOModel.Store.DetalleXServicioFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadoFacturaAnulada_FAC" EntityType="DESARROLLOModel.Store.EstadoFacturaAnulada_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EstadosFactura_FAC" EntityType="DESARROLLOModel.Store.EstadosFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExclusionesProgramacion_FAC" EntityType="DESARROLLOModel.Store.ExclusionesProgramacion_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImpConceptoProgramado_FAC" EntityType="DESARROLLOModel.Store.ImpConceptoProgramado_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ImpuestosDetalleFactura_FAC" EntityType="DESARROLLOModel.Store.ImpuestosDetalleFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Localidad_PAR" EntityType="DESARROLLOModel.Store.Localidad_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoAnulacionFactura_FAC" EntityType="DESARROLLOModel.Store.MotivoAnulacionFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MotivoAnulacionGuia_MEN" EntityType="DESARROLLOModel.Store.MotivoAnulacionGuia_MEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NotasFactura_FAC" EntityType="DESARROLLOModel.Store.NotasFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NotasFacturaHist_FAC" EntityType="DESARROLLOModel.Store.NotasFacturaHist_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProgramacionFactura_FAC" EntityType="DESARROLLOModel.Store.ProgramacionFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProgramacionFacturaHist_FAC" EntityType="DESARROLLOModel.Store.ProgramacionFacturaHist_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResponsableFacturacion_FAC" EntityType="DESARROLLOModel.Store.ResponsableFacturacion_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResumenFactura_FAC" EntityType="DESARROLLOModel.Store.ResumenFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResumenFacturaAut_FAC" EntityType="DESARROLLOModel.Store.ResumenFacturaAut_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RetencionesFactura_FAC" EntityType="DESARROLLOModel.Store.RetencionesFactura_FAC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleXOperFactura_VFAC" EntityType="DESARROLLOModel.Store.DetalleXOperFactura_VFAC" store:Type="Views" store:Schema="dbo" store:Name="DetalleXOperFactura_VFAC">
+      <DefiningQuery>SELECT 
+      [DetalleXOperFactura_VFAC].[DOF_IdServicio] AS [DOF_IdServicio], 
+      [DetalleXOperFactura_VFAC].[DOF_NumeroOperacion] AS [DOF_NumeroOperacion], 
+      [DetalleXOperFactura_VFAC].[DOF_NumeroFactura] AS [DOF_NumeroFactura], 
+      [DetalleXOperFactura_VFAC].[DOF_IdSucursal] AS [DOF_IdSucursal], 
+      [DetalleXOperFactura_VFAC].[DOF_NombreSucursal] AS [DOF_NombreSucursal], 
+      [DetalleXOperFactura_VFAC].[DOF_ValorServicio] AS [DOF_ValorServicio], 
+      [DetalleXOperFactura_VFAC].[DOF_PorcImpuestos] AS [DOF_PorcImpuestos], 
+      [DetalleXOperFactura_VFAC].[DOF_ValorImpuestos] AS [DOF_ValorImpuestos], 
+      [DetalleXOperFactura_VFAC].[DOF_ValorTotal] AS [DOF_ValorTotal], 
+      [DetalleXOperFactura_VFAC].[DOF_FechaOperacion] AS [DOF_FechaOperacion], 
+      [DetalleXOperFactura_VFAC].[DOF_FechaGrabacion] AS [DOF_FechaGrabacion], 
+      [DetalleXOperFactura_VFAC].[DOF_CreadoPor] AS [DOF_CreadoPor], 
+      [DetalleXOperFactura_VFAC].[REF_RazonSocial] AS [REF_RazonSocial], 
+      [DetalleXOperFactura_VFAC].[NombreServicio] AS [NombreServicio]
+      FROM [dbo].[DetalleXOperFactura_VFAC] AS [DetalleXOperFactura_VFAC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EstadoNota_VFAC" EntityType="DESARROLLOModel.Store.EstadoNota_VFAC" store:Type="Views" store:Schema="dbo" store:Name="EstadoNota_VFAC">
+      <DefiningQuery>SELECT 
+      [EstadoNota_VFAC].[ENF_IdEstado] AS [ENF_IdEstado], 
+      [EstadoNota_VFAC].[ENF_Descripcion] AS [ENF_Descripcion]
+      FROM [dbo].[EstadoNota_VFAC] AS [EstadoNota_VFAC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SucursalesAgenciasRacoles_VFAC" EntityType="DESARROLLOModel.Store.SucursalesAgenciasRacoles_VFAC" store:Type="Views" store:Schema="dbo" store:Name="SucursalesAgenciasRacoles_VFAC">
+      <DefiningQuery>SELECT 
+      [SucursalesAgenciasRacoles_VFAC].[REA_IdRegionalAdm] AS [REA_IdRegionalAdm], 
+      [SucursalesAgenciasRacoles_VFAC].[REA_Descripcion] AS [REA_Descripcion], 
+      [SucursalesAgenciasRacoles_VFAC].[SUC_IdSucursal] AS [SUC_IdSucursal], 
+      [SucursalesAgenciasRacoles_VFAC].[SUC_Nombre] AS [SUC_Nombre], 
+      [SucursalesAgenciasRacoles_VFAC].[SUC_ClienteCredito] AS [SUC_ClienteCredito], 
+      [SucursalesAgenciasRacoles_VFAC].[SUC_Municipio] AS [SUC_Municipio], 
+      [SucursalesAgenciasRacoles_VFAC].[AGE_IdAgencia] AS [AGE_IdAgencia], 
+      [SucursalesAgenciasRacoles_VFAC].[AGE_IdCentroLogistico] AS [AGE_IdCentroLogistico], 
+      [SucursalesAgenciasRacoles_VFAC].[AGE_IdTipoAgencia] AS [AGE_IdTipoAgencia], 
+      [SucursalesAgenciasRacoles_VFAC].[REA_IdCasaMatriz] AS [REA_IdCasaMatriz]
+      FROM [dbo].[SucursalesAgenciasRacoles_VFAC] AS [SucursalesAgenciasRacoles_VFAC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TipoNota_VFAC" EntityType="DESARROLLOModel.Store.TipoNota_VFAC" store:Type="Views" store:Schema="dbo" store:Name="TipoNota_VFAC">
+      <DefiningQuery>SELECT 
+      [TipoNota_VFAC].[TIN_IdTipoNota] AS [TIN_IdTipoNota], 
+      [TipoNota_VFAC].[TIN_NombreTipoNota] AS [TIN_NombreTipoNota]
+      FROM [dbo].[TipoNota_VFAC] AS [TipoNota_VFAC]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ConceptoProgramado_FAC_ProgramacionFactura_FAC" Association="DESARROLLOModel.Store.FK_ConceptoProgramado_FAC_ProgramacionFactura_FAC">
+      <End Role="ProgramacionFactura_FAC" EntitySet="ProgramacionFactura_FAC" />
+      <End Role="ConceptoProgramado_FAC" EntitySet="ConceptoProgramado_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DeduccionesFactura_FAC_ResumenFacturacion_FAC" Association="DESARROLLOModel.Store.FK_DeduccionesFactura_FAC_ResumenFacturacion_FAC">
+      <End Role="ResumenFactura_FAC" EntitySet="ResumenFactura_FAC" />
+      <End Role="DeduccionesFactura_FAC" EntitySet="DeduccionesFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DescuentosFactura_FAC_ResumenFacturacion_FAC" Association="DESARROLLOModel.Store.FK_DescuentosFactura_FAC_ResumenFacturacion_FAC">
+      <End Role="ResumenFactura_FAC" EntitySet="ResumenFactura_FAC" />
+      <End Role="DescuentosFactura_FAC" EntitySet="DescuentosFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleXOperFactura_FAC_ResumenFactura_FAC" Association="DESARROLLOModel.Store.FK_DetalleXOperFactura_FAC_ResumenFactura_FAC">
+      <End Role="ResumenFactura_FAC" EntitySet="ResumenFactura_FAC" />
+      <End Role="DetalleXOperFactura_FAC" EntitySet="DetalleXOperFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleXServicioFacturacion_FAC_ResumenFacturacion_FAC" Association="DESARROLLOModel.Store.FK_DetalleXServicioFacturacion_FAC_ResumenFacturacion_FAC">
+      <End Role="ResumenFactura_FAC" EntitySet="ResumenFactura_FAC" />
+      <End Role="DetalleXServicioFactura_FAC" EntitySet="DetalleXServicioFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadoFacturaAnulada_FAC_EstadosFactura_FAC" Association="DESARROLLOModel.Store.FK_EstadoFacturaAnulada_FAC_EstadosFactura_FAC">
+      <End Role="EstadosFactura_FAC" EntitySet="EstadosFactura_FAC" />
+      <End Role="EstadoFacturaAnulada_FAC" EntitySet="EstadoFacturaAnulada_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadoFacturaAnulada_FAC_MotivoAnulacionFactura_FAC" Association="DESARROLLOModel.Store.FK_EstadoFacturaAnulada_FAC_MotivoAnulacionFactura_FAC">
+      <End Role="MotivoAnulacionFactura_FAC" EntitySet="MotivoAnulacionFactura_FAC" />
+      <End Role="EstadoFacturaAnulada_FAC" EntitySet="EstadoFacturaAnulada_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadoFacturaAnulada_FAC_ResponsableFacturacion_FAC" Association="DESARROLLOModel.Store.FK_EstadoFacturaAnulada_FAC_ResponsableFacturacion_FAC">
+      <End Role="ResponsableFacturacion_FAC" EntitySet="ResponsableFacturacion_FAC" />
+      <End Role="EstadoFacturaAnulada_FAC" EntitySet="EstadoFacturaAnulada_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadosFactura_FAC_ResumenFactura_FAC" Association="DESARROLLOModel.Store.FK_EstadosFactura_FAC_ResumenFactura_FAC">
+      <End Role="ResumenFactura_FAC" EntitySet="ResumenFactura_FAC" />
+      <End Role="EstadosFactura_FAC" EntitySet="EstadosFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExclusionesProgramacion_FAC_ProgramacionFactura_FAC" Association="DESARROLLOModel.Store.FK_ExclusionesProgramacion_FAC_ProgramacionFactura_FAC">
+      <End Role="ProgramacionFactura_FAC" EntitySet="ProgramacionFactura_FAC" />
+      <End Role="ExclusionesProgramacion_FAC" EntitySet="ExclusionesProgramacion_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImpConceptoProgramado_FAC_ConceptoProgramado_FAC" Association="DESARROLLOModel.Store.FK_ImpConceptoProgramado_FAC_ConceptoProgramado_FAC">
+      <End Role="ConceptoProgramado_FAC" EntitySet="ConceptoProgramado_FAC" />
+      <End Role="ImpConceptoProgramado_FAC" EntitySet="ImpConceptoProgramado_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ImpuestosDetalleFactura_FAC_DetalleXServicioFacturacion_FAC" Association="DESARROLLOModel.Store.FK_ImpuestosDetalleFactura_FAC_DetalleXServicioFacturacion_FAC">
+      <End Role="DetalleXServicioFactura_FAC" EntitySet="DetalleXServicioFactura_FAC" />
+      <End Role="ImpuestosDetalleFactura_FAC" EntitySet="ImpuestosDetalleFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR" Association="DESARROLLOModel.Store.FK_Localidad_PAR_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR1" Association="DESARROLLOModel.Store.FK_Localidad_PAR_Localidad_PAR1">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidad_PAR_Localidad_PAR2" Association="DESARROLLOModel.Store.FK_Localidad_PAR_Localidad_PAR2">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="Localidad_PAR1" EntitySet="Localidad_PAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotasFactura_FAC_DescripcionNotasFactura_FAC" Association="DESARROLLOModel.Store.FK_NotasFactura_FAC_DescripcionNotasFactura_FAC">
+      <End Role="DescripcionNotasFactura_FAC" EntitySet="DescripcionNotasFactura_FAC" />
+      <End Role="NotasFactura_FAC" EntitySet="NotasFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotasFactura_FAC_DetalleXServicioFactura_FAC" Association="DESARROLLOModel.Store.FK_NotasFactura_FAC_DetalleXServicioFactura_FAC">
+      <End Role="DetalleXServicioFactura_FAC" EntitySet="DetalleXServicioFactura_FAC" />
+      <End Role="NotasFactura_FAC" EntitySet="NotasFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotasFactura_FAC_ResponsableFacturacion_FAC" Association="DESARROLLOModel.Store.FK_NotasFactura_FAC_ResponsableFacturacion_FAC">
+      <End Role="ResponsableFacturacion_FAC" EntitySet="ResponsableFacturacion_FAC" />
+      <End Role="NotasFactura_FAC" EntitySet="NotasFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResumenFacturaAut_FAC_ProgramacionFactura_FAC" Association="DESARROLLOModel.Store.FK_ResumenFacturaAut_FAC_ProgramacionFactura_FAC">
+      <End Role="ProgramacionFactura_FAC" EntitySet="ProgramacionFactura_FAC" />
+      <End Role="ResumenFacturaAut_FAC" EntitySet="ResumenFacturaAut_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResumenFacturacion_FAC_Localidad_PAR" Association="DESARROLLOModel.Store.FK_ResumenFacturacion_FAC_Localidad_PAR">
+      <End Role="Localidad_PAR" EntitySet="Localidad_PAR" />
+      <End Role="ResumenFactura_FAC" EntitySet="ResumenFactura_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResumenFacturacionAut_FAC_ResumenFacturacion_FAC" Association="DESARROLLOModel.Store.FK_ResumenFacturacionAut_FAC_ResumenFacturacion_FAC">
+      <End Role="ResumenFactura_FAC" EntitySet="ResumenFactura_FAC" />
+      <End Role="ResumenFacturaAut_FAC" EntitySet="ResumenFacturaAut_FAC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RetencionesFactura_FAC_ResumenFacturacion_FAC" Association="DESARROLLOModel.Store.FK_RetencionesFactura_FAC_ResumenFacturacion_FAC">
+      <End Role="ResumenFactura_FAC" EntitySet="ResumenFactura_FAC" />
+      <End Role="RetencionesFactura_FAC" EntitySet="RetencionesFactura_FAC" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ConceptoProgramado_FAC">
+    <Key>
+      <PropertyRef Name="COP_IdConceptoProg" />
+    </Key>
+    <Property Name="COP_IdConceptoProg" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="COP_IdProgramacion" Type="bigint" Nullable="false" />
+    <Property Name="COP_IdServicio" Type="int" Nullable="false" />
+    <Property Name="COP_IdSucursal" Type="int" Nullable="false" />
+    <Property Name="COP_DescripcionSucursal" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="COP_Cantidad" Type="int" Nullable="false" />
+    <Property Name="COP_DescripcionConcepto" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="COP_ValorUnitario" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="COP_TotalNeto" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="COP_TotalImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="COP_Total" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="COP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="COP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DeduccionesFactura_FAC">
+    <Key>
+      <PropertyRef Name="DEF_IdDeduccion" />
+      <PropertyRef Name="DEF_NumeroFactura" />
+    </Key>
+    <Property Name="DEF_IdDeduccion" Type="int" Nullable="false" />
+    <Property Name="DEF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="DEF_Descripcion" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="DEF_BaseCalculo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DEF_ValorPorMonto" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DEF_ValorFijo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DEF_TarifaPorcentual" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DEF_TotalCalculado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DEF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DEF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DescripcionNotasFactura_FAC">
+    <Key>
+      <PropertyRef Name="DNF_IdDescripcion" />
+    </Key>
+    <Property Name="DNF_IdDescripcion" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DNF_Descripcion" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="DNF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DNF_CreadorPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DescuentosFactura_FAC">
+    <Key>
+      <PropertyRef Name="DEF_IdDescuento" />
+      <PropertyRef Name="DEF_NumeroFactura" />
+    </Key>
+    <Property Name="DEF_IdDescuento" Type="smallint" Nullable="false" />
+    <Property Name="DEF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="DEF_Valor" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DEF_Motivo" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="DEF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DEF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DetalleXOperFactura_FAC">
+    <Key>
+      <PropertyRef Name="DOF_IdServicio" />
+      <PropertyRef Name="DOF_NumeroOperacion" />
+    </Key>
+    <Property Name="DOF_IdServicio" Type="int" Nullable="false" />
+    <Property Name="DOF_NumeroOperacion" Type="bigint" Nullable="false" />
+    <Property Name="DOF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="DOF_IdSucursal" Type="int" Nullable="false" />
+    <Property Name="DOF_NombreSucursal" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="DOF_ValorServicio" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DOF_PorcImpuestos" Type="numeric" Precision="38" Scale="18" StoreGeneratedPattern="Computed" />
+    <Property Name="DOF_ValorImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DOF_ValorTotal" Type="numeric" Precision="17" Scale="4" StoreGeneratedPattern="Computed" />
+    <Property Name="DOF_FechaOperacion" Type="datetime" Nullable="false" />
+    <Property Name="DOF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DOF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DetalleXServicioFactura_FAC">
+    <Key>
+      <PropertyRef Name="DSF_IdDetallexServFactura" />
+    </Key>
+    <Property Name="DSF_IdDetallexServFactura" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DSF_NumeroFactura" Type="bigint" />
+    <Property Name="DSF_IdServicio" Type="int" Nullable="false" />
+    <Property Name="DSF_IdSucursal" Type="int" Nullable="false" />
+    <Property Name="DSF_DescripcionSucursal" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="DSF_Cantidad" Type="int" Nullable="false" />
+    <Property Name="DSF_DescripcionConcepto" Type="varchar" Nullable="false" MaxLength="800" />
+    <Property Name="DSF_ValorUnitario" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DSF_TotalNeto" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DSF_TotalImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DSF_Total" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DSF_ConceptoManual" Type="bit" Nullable="false" />
+    <Property Name="DSF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DSF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="EstadoFacturaAnulada_FAC">
+    <Key>
+      <PropertyRef Name="EFA_NumeroFactura" />
+      <PropertyRef Name="EFA_Estado" />
+    </Key>
+    <Property Name="EFA_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="EFA_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="EFA_IdMotivo" Type="smallint" Nullable="false" />
+    <Property Name="EFA_IdResponsable" Type="smallint" Nullable="false" />
+    <Property Name="EFA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="EFA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="EstadosFactura_FAC">
+    <Key>
+      <PropertyRef Name="ESF_NumeroFactura" />
+      <PropertyRef Name="ESF_Estado" />
+    </Key>
+    <Property Name="ESF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="ESF_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ESF_DescripcionEstado" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ESF_Observaciones" Type="varchar" MaxLength="250" />
+    <Property Name="ESF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ESF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ExclusionesProgramacion_FAC">
+    <Key>
+      <PropertyRef Name="EXP_IdServicio" />
+      <PropertyRef Name="EXP_NumeroOperacion" />
+    </Key>
+    <Property Name="EXP_IdServicio" Type="int" Nullable="false" />
+    <Property Name="EXP_NumeroOperacion" Type="bigint" Nullable="false" />
+    <Property Name="EXP_NombreServicio" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="EXP_IdProgramacion" Type="bigint" Nullable="false" />
+    <Property Name="EXP_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="EXP_FechaOperacion" Type="datetime" Nullable="false" />
+    <Property Name="EXP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="EXP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ImpConceptoProgramado_FAC">
+    <Key>
+      <PropertyRef Name="ICP_IdConceptoProg" />
+      <PropertyRef Name="ICP_IdImpuesto" />
+    </Key>
+    <Property Name="ICP_IdConceptoProg" Type="int" Nullable="false" />
+    <Property Name="ICP_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="ICP_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ICP_BaseCalculo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ICP_ValorPorc" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ICP_Total" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ICP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ICP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ImpuestosDetalleFactura_FAC">
+    <Key>
+      <PropertyRef Name="IDF_IdDetalleFactura" />
+      <PropertyRef Name="IDF_IdImpuesto" />
+      <PropertyRef Name="IDF_ValorPorc" />
+    </Key>
+    <Property Name="IDF_IdDetalleFactura" Type="bigint" Nullable="false" />
+    <Property Name="IDF_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="IDF_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="IDF_BaseCalculo" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="IDF_ValorPorc" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="IDF_Total" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="IDF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="IDF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Localidad_PAR">
+    <Key>
+      <PropertyRef Name="LOC_IdLocalidad" />
+    </Key>
+    <Property Name="LOC_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="LOC_IdTipo" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_IdAncestroPrimerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroSegundoGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_IdAncestroTercerGrado" Type="varchar" MaxLength="8" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="LOC_CodigoPostal" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="LOC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="LOC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="MotivoAnulacionFactura_FAC">
+    <Key>
+      <PropertyRef Name="MAF_IdMotivo" />
+    </Key>
+    <Property Name="MAF_IdMotivo" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MAF_DescripcionMotivo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MAF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MotivoAnulacionGuia_MEN">
+    <Key>
+      <PropertyRef Name="MAG_IdMotivoAnulaciónGuia" />
+    </Key>
+    <Property Name="MAG_IdMotivoAnulaciónGuia" Type="smallint" Nullable="false" />
+    <Property Name="MAG_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="NotasFactura_FAC">
+    <Key>
+      <PropertyRef Name="NOF_IdNota" />
+    </Key>
+    <Property Name="NOF_IdNota" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="NOF_IdDetallexServFactura" Type="bigint" Nullable="false" />
+    <Property Name="NOF_TipoNota" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="NOF_ValorNota" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="NOF_Observaciones" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="NOF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="NOF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NOF_IdDescripcion" Type="smallint" Nullable="false" />
+    <Property Name="NOF_IdResponsable" Type="smallint" Nullable="false" />
+    <Property Name="NOF_EstadoNota" Type="char" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="NotasFacturaHist_FAC">
+    <Key>
+      <PropertyRef Name="NOF_IdAuditoria" />
+    </Key>
+    <Property Name="NOF_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NOF_IdNota" Type="bigint" Nullable="false" />
+    <Property Name="NOF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="NOF_IdDetallexServFactura" Type="bigint" Nullable="false" />
+    <Property Name="NOF_TipoNota" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="NOF_ValorNota" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="NOF_Observaciones" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="NOF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="NOF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NOF_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="NOF_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NOF_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="NOF_IdDescripcion" Type="smallint" Nullable="false" />
+    <Property Name="NOF_IdResponsable" Type="smallint" Nullable="false" />
+    <Property Name="NOF_EstadoNota" Type="char" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="ProgramacionFactura_FAC">
+    <Key>
+      <PropertyRef Name="PRF_IdProgramacion" />
+    </Key>
+    <Property Name="PRF_IdProgramacion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRF_IdRacol" Type="bigint" Nullable="false" />
+    <Property Name="PRF_NombreRacol" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PRF_IdCliente" Type="int" Nullable="false" />
+    <Property Name="PRF_RazonSocialCliente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PRF_IdContrato" Type="int" Nullable="false" />
+    <Property Name="PRF_DescContrato" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PRF_IdAgrupamiento" Type="int" Nullable="false" />
+    <Property Name="PRF_DescAgrupamiento" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PRF_FechaProgramacion" Type="datetime" Nullable="false" />
+    <Property Name="PRF_FechaEjecucion" Type="datetime" Nullable="false" />
+    <Property Name="PRF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PRF_Ejecutado" Type="bit" Nullable="false" />
+    <Property Name="PRF_DiaCorte" Type="smallint" Nullable="false" />
+    <Property Name="PRF_UsuarioReprograma" Type="varchar" MaxLength="20" />
+    <Property Name="PRF_FechaReprogramacion" Type="datetime" Nullable="false" />
+    <Property Name="PRF_Tipo" Type="char" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ProgramacionFacturaHist_FAC">
+    <Key>
+      <PropertyRef Name="PRF_IdAuditoria" />
+    </Key>
+    <Property Name="PRF_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRF_IdProgramacion" Type="bigint" Nullable="false" />
+    <Property Name="PRF_IdRacol" Type="bigint" Nullable="false" />
+    <Property Name="PRF_NombreRacol" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PRF_IdCliente" Type="int" Nullable="false" />
+    <Property Name="PRF_RazonSocialCliente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PRF_IdContrato" Type="int" Nullable="false" />
+    <Property Name="PRF_DescContrato" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PRF_IdAgrupamiento" Type="int" Nullable="false" />
+    <Property Name="PRF_DescAgrupamiento" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PRF_FechaProgramacion" Type="datetime" Nullable="false" />
+    <Property Name="PRF_FechaEjecucion" Type="datetime" Nullable="false" />
+    <Property Name="PRF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PRF_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="PRF_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PRF_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PRF_DiaCorte" Type="smallint" Nullable="false" />
+    <Property Name="PRF_Ejecutado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResponsableFacturacion_FAC">
+    <Key>
+      <PropertyRef Name="RFA_IdResponsable" />
+    </Key>
+    <Property Name="RFA_IdResponsable" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RFA_DescripcionResponsable" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="RFA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RFA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ResumenFactura_FAC">
+    <Key>
+      <PropertyRef Name="REF_NumeroFactura" />
+    </Key>
+    <Property Name="REF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="REF_TipoFacturacion" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="REF_IdCliente" Type="int" Nullable="false" />
+    <Property Name="REF_RazonSocial" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REF_IdContrato" Type="int" Nullable="false" />
+    <Property Name="REF_NombreContrato" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REF_NumeroContrato" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REF_FormaPago" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="REF_PlazoPago" Type="smallint" Nullable="false" />
+    <Property Name="REF_CiudadRadicacion" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="REF_IdRacol" Type="bigint" Nullable="false" />
+    <Property Name="REF_NombreRacol" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REF_DireccionRadicacion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REF_TelefonoRadicacion" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="REF_DirigidoA" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="REF_ValorNeto" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="REF_ValorImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="REF_ValorDescuentos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="REF_ValorTotal" Type="decimal" Scale="4" StoreGeneratedPattern="Computed" />
+    <Property Name="ESF_DescEstadoActual" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="REF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="REF_GuiaInternaAsociada" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ResumenFacturaAut_FAC">
+    <Key>
+      <PropertyRef Name="RFA_NumeroFactura" />
+    </Key>
+    <Property Name="RFA_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="RFA_IdAgrupamientoFactura" Type="int" Nullable="false" />
+    <Property Name="RFA_NombreAgrupamientoFactura" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="RFA_FechaCorte" Type="datetime" Nullable="false" />
+    <Property Name="RFA_DiaPago" Type="smallint" Nullable="false" />
+    <Property Name="RFA_DiaFacturacion" Type="smallint" Nullable="false" />
+    <Property Name="RFA_DiaRadicacion" Type="smallint" Nullable="false" />
+    <Property Name="RFA_IdProgramacion" Type="bigint" />
+    <Property Name="RFA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RFA_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RetencionesFactura_FAC">
+    <Key>
+      <PropertyRef Name="REF_NumeroFactura" />
+      <PropertyRef Name="REF_IdRetencion" />
+      <PropertyRef Name="REF_IdServicio" />
+    </Key>
+    <Property Name="REF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="REF_IdRetencion" Type="smallint" Nullable="false" />
+    <Property Name="REF_IdServicio" Type="int" Nullable="false" />
+    <Property Name="REF_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="REF_BaseMinima" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="REF_BaseCalculo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="REF_ValorFijo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="REF_TarifaPorcentual" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="REF_ValorPorMonto" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="REF_ValorLiquidado" Type="decimal" Precision="16" Scale="4" />
+    <Property Name="REF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="REF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.DetalleXOperFactura_VFAC' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="DetalleXOperFactura_VFAC">
+    <Key>
+      <PropertyRef Name="DOF_IdServicio" />
+      <PropertyRef Name="DOF_NumeroOperacion" />
+      <PropertyRef Name="DOF_NumeroFactura" />
+      <PropertyRef Name="DOF_IdSucursal" />
+      <PropertyRef Name="DOF_NombreSucursal" />
+      <PropertyRef Name="DOF_ValorServicio" />
+      <PropertyRef Name="DOF_ValorImpuestos" />
+      <PropertyRef Name="DOF_FechaOperacion" />
+      <PropertyRef Name="DOF_FechaGrabacion" />
+      <PropertyRef Name="DOF_CreadoPor" />
+      <PropertyRef Name="REF_RazonSocial" />
+      <PropertyRef Name="NombreServicio" />
+    </Key>
+    <Property Name="DOF_IdServicio" Type="int" Nullable="false" />
+    <Property Name="DOF_NumeroOperacion" Type="bigint" Nullable="false" />
+    <Property Name="DOF_NumeroFactura" Type="bigint" Nullable="false" />
+    <Property Name="DOF_IdSucursal" Type="int" Nullable="false" />
+    <Property Name="DOF_NombreSucursal" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="DOF_ValorServicio" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DOF_PorcImpuestos" Type="numeric" Precision="38" Scale="18" />
+    <Property Name="DOF_ValorImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="DOF_ValorTotal" Type="numeric" Precision="17" Scale="4" />
+    <Property Name="DOF_FechaOperacion" Type="datetime" Nullable="false" />
+    <Property Name="DOF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DOF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="REF_RazonSocial" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="NombreServicio" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.EstadoNota_VFAC' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="EstadoNota_VFAC">
+    <Key>
+      <PropertyRef Name="ENF_IdEstado" />
+      <PropertyRef Name="ENF_Descripcion" />
+    </Key>
+    <Property Name="ENF_IdEstado" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="ENF_Descripcion" Type="varchar" Nullable="false" MaxLength="7" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.SucursalesAgenciasRacoles_VFAC' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="SucursalesAgenciasRacoles_VFAC">
+    <Key>
+      <PropertyRef Name="REA_IdRegionalAdm" />
+      <PropertyRef Name="REA_Descripcion" />
+      <PropertyRef Name="SUC_IdSucursal" />
+      <PropertyRef Name="SUC_Nombre" />
+      <PropertyRef Name="SUC_ClienteCredito" />
+      <PropertyRef Name="SUC_Municipio" />
+      <PropertyRef Name="AGE_IdAgencia" />
+      <PropertyRef Name="AGE_IdCentroLogistico" />
+      <PropertyRef Name="AGE_IdTipoAgencia" />
+      <PropertyRef Name="REA_IdCasaMatriz" />
+    </Key>
+    <Property Name="REA_IdRegionalAdm" Type="bigint" Nullable="false" />
+    <Property Name="REA_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SUC_IdSucursal" Type="int" Nullable="false" />
+    <Property Name="SUC_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="SUC_ClienteCredito" Type="int" Nullable="false" />
+    <Property Name="SUC_Municipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="AGE_IdAgencia" Type="bigint" Nullable="false" />
+    <Property Name="AGE_IdCentroLogistico" Type="bigint" Nullable="false" />
+    <Property Name="AGE_IdTipoAgencia" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="REA_IdCasaMatriz" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.TipoNota_VFAC' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="TipoNota_VFAC">
+    <Key>
+      <PropertyRef Name="TIN_IdTipoNota" />
+      <PropertyRef Name="TIN_NombreTipoNota" />
+    </Key>
+    <Property Name="TIN_IdTipoNota" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="TIN_NombreTipoNota" Type="varchar" Nullable="false" MaxLength="7" />
+  </EntityType>
+  <Association Name="FK_ConceptoProgramado_FAC_ProgramacionFactura_FAC">
+    <End Role="ProgramacionFactura_FAC" Type="DESARROLLOModel.Store.ProgramacionFactura_FAC" Multiplicity="1" />
+    <End Role="ConceptoProgramado_FAC" Type="DESARROLLOModel.Store.ConceptoProgramado_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgramacionFactura_FAC">
+        <PropertyRef Name="PRF_IdProgramacion" />
+      </Principal>
+      <Dependent Role="ConceptoProgramado_FAC">
+        <PropertyRef Name="COP_IdProgramacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DeduccionesFactura_FAC_ResumenFacturacion_FAC">
+    <End Role="ResumenFactura_FAC" Type="DESARROLLOModel.Store.ResumenFactura_FAC" Multiplicity="1" />
+    <End Role="DeduccionesFactura_FAC" Type="DESARROLLOModel.Store.DeduccionesFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResumenFactura_FAC">
+        <PropertyRef Name="REF_NumeroFactura" />
+      </Principal>
+      <Dependent Role="DeduccionesFactura_FAC">
+        <PropertyRef Name="DEF_NumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DescuentosFactura_FAC_ResumenFacturacion_FAC">
+    <End Role="ResumenFactura_FAC" Type="DESARROLLOModel.Store.ResumenFactura_FAC" Multiplicity="1" />
+    <End Role="DescuentosFactura_FAC" Type="DESARROLLOModel.Store.DescuentosFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResumenFactura_FAC">
+        <PropertyRef Name="REF_NumeroFactura" />
+      </Principal>
+      <Dependent Role="DescuentosFactura_FAC">
+        <PropertyRef Name="DEF_NumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleXOperFactura_FAC_ResumenFactura_FAC">
+    <End Role="ResumenFactura_FAC" Type="DESARROLLOModel.Store.ResumenFactura_FAC" Multiplicity="1" />
+    <End Role="DetalleXOperFactura_FAC" Type="DESARROLLOModel.Store.DetalleXOperFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResumenFactura_FAC">
+        <PropertyRef Name="REF_NumeroFactura" />
+      </Principal>
+      <Dependent Role="DetalleXOperFactura_FAC">
+        <PropertyRef Name="DOF_NumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleXServicioFacturacion_FAC_ResumenFacturacion_FAC">
+    <End Role="ResumenFactura_FAC" Type="DESARROLLOModel.Store.ResumenFactura_FAC" Multiplicity="0..1" />
+    <End Role="DetalleXServicioFactura_FAC" Type="DESARROLLOModel.Store.DetalleXServicioFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResumenFactura_FAC">
+        <PropertyRef Name="REF_NumeroFactura" />
+      </Principal>
+      <Dependent Role="DetalleXServicioFactura_FAC">
+        <PropertyRef Name="DSF_NumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadoFacturaAnulada_FAC_EstadosFactura_FAC">
+    <End Role="EstadosFactura_FAC" Type="DESARROLLOModel.Store.EstadosFactura_FAC" Multiplicity="1" />
+    <End Role="EstadoFacturaAnulada_FAC" Type="DESARROLLOModel.Store.EstadoFacturaAnulada_FAC" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="EstadosFactura_FAC">
+        <PropertyRef Name="ESF_NumeroFactura" />
+        <PropertyRef Name="ESF_Estado" />
+      </Principal>
+      <Dependent Role="EstadoFacturaAnulada_FAC">
+        <PropertyRef Name="EFA_NumeroFactura" />
+        <PropertyRef Name="EFA_Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadoFacturaAnulada_FAC_MotivoAnulacionFactura_FAC">
+    <End Role="MotivoAnulacionFactura_FAC" Type="DESARROLLOModel.Store.MotivoAnulacionFactura_FAC" Multiplicity="1" />
+    <End Role="EstadoFacturaAnulada_FAC" Type="DESARROLLOModel.Store.EstadoFacturaAnulada_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MotivoAnulacionFactura_FAC">
+        <PropertyRef Name="MAF_IdMotivo" />
+      </Principal>
+      <Dependent Role="EstadoFacturaAnulada_FAC">
+        <PropertyRef Name="EFA_IdMotivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadoFacturaAnulada_FAC_ResponsableFacturacion_FAC">
+    <End Role="ResponsableFacturacion_FAC" Type="DESARROLLOModel.Store.ResponsableFacturacion_FAC" Multiplicity="1" />
+    <End Role="EstadoFacturaAnulada_FAC" Type="DESARROLLOModel.Store.EstadoFacturaAnulada_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponsableFacturacion_FAC">
+        <PropertyRef Name="RFA_IdResponsable" />
+      </Principal>
+      <Dependent Role="EstadoFacturaAnulada_FAC">
+        <PropertyRef Name="EFA_IdResponsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadosFactura_FAC_ResumenFactura_FAC">
+    <End Role="ResumenFactura_FAC" Type="DESARROLLOModel.Store.ResumenFactura_FAC" Multiplicity="1" />
+    <End Role="EstadosFactura_FAC" Type="DESARROLLOModel.Store.EstadosFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResumenFactura_FAC">
+        <PropertyRef Name="REF_NumeroFactura" />
+      </Principal>
+      <Dependent Role="EstadosFactura_FAC">
+        <PropertyRef Name="ESF_NumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExclusionesProgramacion_FAC_ProgramacionFactura_FAC">
+    <End Role="ProgramacionFactura_FAC" Type="DESARROLLOModel.Store.ProgramacionFactura_FAC" Multiplicity="1" />
+    <End Role="ExclusionesProgramacion_FAC" Type="DESARROLLOModel.Store.ExclusionesProgramacion_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgramacionFactura_FAC">
+        <PropertyRef Name="PRF_IdProgramacion" />
+      </Principal>
+      <Dependent Role="ExclusionesProgramacion_FAC">
+        <PropertyRef Name="EXP_IdProgramacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImpConceptoProgramado_FAC_ConceptoProgramado_FAC">
+    <End Role="ConceptoProgramado_FAC" Type="DESARROLLOModel.Store.ConceptoProgramado_FAC" Multiplicity="1" />
+    <End Role="ImpConceptoProgramado_FAC" Type="DESARROLLOModel.Store.ImpConceptoProgramado_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoProgramado_FAC">
+        <PropertyRef Name="COP_IdConceptoProg" />
+      </Principal>
+      <Dependent Role="ImpConceptoProgramado_FAC">
+        <PropertyRef Name="ICP_IdConceptoProg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ImpuestosDetalleFactura_FAC_DetalleXServicioFacturacion_FAC">
+    <End Role="DetalleXServicioFactura_FAC" Type="DESARROLLOModel.Store.DetalleXServicioFactura_FAC" Multiplicity="1" />
+    <End Role="ImpuestosDetalleFactura_FAC" Type="DESARROLLOModel.Store.ImpuestosDetalleFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleXServicioFactura_FAC">
+        <PropertyRef Name="DSF_IdDetallexServFactura" />
+      </Principal>
+      <Dependent Role="ImpuestosDetalleFactura_FAC">
+        <PropertyRef Name="IDF_IdDetalleFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroPrimerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR1">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroSegundoGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidad_PAR_Localidad_PAR2">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="0..1" />
+    <End Role="Localidad_PAR1" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="Localidad_PAR1">
+        <PropertyRef Name="LOC_IdAncestroTercerGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotasFactura_FAC_DescripcionNotasFactura_FAC">
+    <End Role="DescripcionNotasFactura_FAC" Type="DESARROLLOModel.Store.DescripcionNotasFactura_FAC" Multiplicity="1" />
+    <End Role="NotasFactura_FAC" Type="DESARROLLOModel.Store.NotasFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DescripcionNotasFactura_FAC">
+        <PropertyRef Name="DNF_IdDescripcion" />
+      </Principal>
+      <Dependent Role="NotasFactura_FAC">
+        <PropertyRef Name="NOF_IdDescripcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotasFactura_FAC_DetalleXServicioFactura_FAC">
+    <End Role="DetalleXServicioFactura_FAC" Type="DESARROLLOModel.Store.DetalleXServicioFactura_FAC" Multiplicity="1" />
+    <End Role="NotasFactura_FAC" Type="DESARROLLOModel.Store.NotasFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DetalleXServicioFactura_FAC">
+        <PropertyRef Name="DSF_IdDetallexServFactura" />
+      </Principal>
+      <Dependent Role="NotasFactura_FAC">
+        <PropertyRef Name="NOF_IdDetallexServFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotasFactura_FAC_ResponsableFacturacion_FAC">
+    <End Role="ResponsableFacturacion_FAC" Type="DESARROLLOModel.Store.ResponsableFacturacion_FAC" Multiplicity="1" />
+    <End Role="NotasFactura_FAC" Type="DESARROLLOModel.Store.NotasFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponsableFacturacion_FAC">
+        <PropertyRef Name="RFA_IdResponsable" />
+      </Principal>
+      <Dependent Role="NotasFactura_FAC">
+        <PropertyRef Name="NOF_IdResponsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResumenFacturaAut_FAC_ProgramacionFactura_FAC">
+    <End Role="ProgramacionFactura_FAC" Type="DESARROLLOModel.Store.ProgramacionFactura_FAC" Multiplicity="0..1" />
+    <End Role="ResumenFacturaAut_FAC" Type="DESARROLLOModel.Store.ResumenFacturaAut_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProgramacionFactura_FAC">
+        <PropertyRef Name="PRF_IdProgramacion" />
+      </Principal>
+      <Dependent Role="ResumenFacturaAut_FAC">
+        <PropertyRef Name="RFA_IdProgramacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResumenFacturacion_FAC_Localidad_PAR">
+    <End Role="Localidad_PAR" Type="DESARROLLOModel.Store.Localidad_PAR" Multiplicity="1" />
+    <End Role="ResumenFactura_FAC" Type="DESARROLLOModel.Store.ResumenFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidad_PAR">
+        <PropertyRef Name="LOC_IdLocalidad" />
+      </Principal>
+      <Dependent Role="ResumenFactura_FAC">
+        <PropertyRef Name="REF_CiudadRadicacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResumenFacturacionAut_FAC_ResumenFacturacion_FAC">
+    <End Role="ResumenFactura_FAC" Type="DESARROLLOModel.Store.ResumenFactura_FAC" Multiplicity="1" />
+    <End Role="ResumenFacturaAut_FAC" Type="DESARROLLOModel.Store.ResumenFacturaAut_FAC" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ResumenFactura_FAC">
+        <PropertyRef Name="REF_NumeroFactura" />
+      </Principal>
+      <Dependent Role="ResumenFacturaAut_FAC">
+        <PropertyRef Name="RFA_NumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RetencionesFactura_FAC_ResumenFacturacion_FAC">
+    <End Role="ResumenFactura_FAC" Type="DESARROLLOModel.Store.ResumenFactura_FAC" Multiplicity="1" />
+    <End Role="RetencionesFactura_FAC" Type="DESARROLLOModel.Store.RetencionesFactura_FAC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResumenFactura_FAC">
+        <PropertyRef Name="REF_NumeroFactura" />
+      </Principal>
+      <Dependent Role="RetencionesFactura_FAC">
+        <PropertyRef Name="REF_NumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paAsociarGuiasCreditoAFactura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="facturaDesde" Type="bigint" Mode="In" />
+    <Parameter Name="facturaHasta" Type="bigint" Mode="In" />
+    <Parameter Name="idCliente" Type="int" Mode="In" />
+    <Parameter Name="NumeroFactura" Type="bigint" Mode="In" />
+    <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paDesasociarGuiaDeFactura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumGuia" Type="bigint" Mode="In" />
+    <Parameter Name="NumFactura" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paDesmarcarOperaciones_FAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroFactura" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paFacturarCliente_FAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdProgramacion" Type="bigint" Mode="In" />
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroFactura" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerFacturasImpresion_FAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdCliente" Type="int" Mode="In" />
+    <Parameter Name="NumFacturaDesde" Type="bigint" Mode="In" />
+    <Parameter Name="NumFacturaHasta" Type="bigint" Mode="In" />
+    <Parameter Name="IdRacol" Type="int" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerFacturasImpresionFiltro_FAC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdCliente" Type="int" Mode="In" />
+    <Parameter Name="NumFacturaDesde" Type="bigint" Mode="In" />
+    <Parameter Name="NumFacturaHasta" Type="bigint" Mode="In" />
+    <Parameter Name="IdRacol" Type="int" Mode="In" />
+  </Function>
+</Schema>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntidadesServicioalClienteStoreContainer" CdmEntityContainer="EntidadesServicioalCliente">
+    <EntitySetMapping Name="MedioRecepcionSolicitud_SAC">
+      <EntityTypeMapping TypeName="ModeloServicioalClienteNS.MedioRecepcionSolicitud_SAC">
+        <MappingFragment StoreEntitySet="MedioRecepcionSolicitud_SAC">
+          <ScalarProperty Name="MRS_CreadoPor" ColumnName="MRS_CreadoPor" />
+          <ScalarProperty Name="MRS_FechaGrabacion" ColumnName="MRS_FechaGrabacion" />
+          <ScalarProperty Name="MRS_Descripcion" ColumnName="MRS_Descripcion" />
+          <ScalarProperty Name="MRS_IdMedio" ColumnName="MRS_IdMedio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeguimientoSolicitud_SAC">
+      <EntityTypeMapping TypeName="ModeloServicioalClienteNS.SeguimientoSolicitud_SAC">
+        <MappingFragment StoreEntitySet="SeguimientoSolicitud_SAC">
+          <ScalarProperty Name="SSO_CreadoPor" ColumnName="SSO_CreadoPor" />
+          <ScalarProperty Name="SSO_FechaGrabacion" ColumnName="SSO_FechaGrabacion" />
+          <ScalarProperty Name="SSO_Descripcion" ColumnName="SSO_Descripcion" />
+          <ScalarProperty Name="SSO_IdTipoSeguimiento" ColumnName="SSO_IdTipoSeguimiento" />
+          <ScalarProperty Name="SSO_IdSolicitud" ColumnName="SSO_IdSolicitud" />
+          <ScalarProperty Name="SSO_IdSeguimiento" ColumnName="SSO_IdSeguimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudEstados_SAC">
+      <EntityTypeMapping TypeName="ModeloServicioalClienteNS.SolicitudEstados_SAC">
+        <MappingFragment StoreEntitySet="SolicitudEstados_SAC">
+          <ScalarProperty Name="SES_IdEstadoSolicitud" ColumnName="SES_IdEstadoSolicitud" />
+          <ScalarProperty Name="SES_CreadoPor" ColumnName="SES_CreadoPor" />
+          <ScalarProperty Name="SES_FechaGrabacion" ColumnName="SES_FechaGrabacion" />
+          <ScalarProperty Name="SES_IdEstado" ColumnName="SES_IdEstado" />
+          <ScalarProperty Name="SES_IdSolicitud" ColumnName="SES_IdSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubTipoSolicitud_SAC">
+      <EntityTypeMapping TypeName="ModeloServicioalClienteNS.SubTipoSolicitud_SAC">
+        <MappingFragment StoreEntitySet="SubTipoSolicitud_SAC">
+          <ScalarProperty Name="STS_CreadoPor" ColumnName="STS_CreadoPor" />
+          <ScalarProperty Name="STS_FechaGrabacion" ColumnName="STS_FechaGrabacion" />
+          <ScalarProperty Name="STS_Descripcion" ColumnName="STS_Descripcion" />
+          <ScalarProperty Name="STS_IdTipoSolicitud" ColumnName="STS_IdTipoSolicitud" />
+          <ScalarProperty Name="STS_IdSubTipoSolicitud" ColumnName="STS_IdSubTipoSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSeguimientoSolicitud_SAC">
+      <EntityTypeMapping TypeName="ModeloServicioalClienteNS.TipoSeguimientoSolicitud_SAC">
+        <MappingFragment StoreEntitySet="TipoSeguimientoSolicitud_SAC">
+          <ScalarProperty Name="TSS_CreadoPor" ColumnName="TSS_CreadoPor" />
+          <ScalarProperty Name="TSS_FechaGrabacion" ColumnName="TSS_FechaGrabacion" />
+          <ScalarProperty Name="TSS_Descripcion" ColumnName="TSS_Descripcion" />
+          <ScalarProperty Name="TSS_IdTipoSeguimiento" ColumnName="TSS_IdTipoSeguimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoSolicitud_SAC">
+      <EntityTypeMapping TypeName="ModeloServicioalClienteNS.TipoSolicitud_SAC">
+        <MappingFragment StoreEntitySet="TipoSolicitud_SAC">
+          <ScalarProperty Name="TIS_CreadoPor" ColumnName="TIS_CreadoPor" />
+          <ScalarProperty Name="TIS_FechaGrabacion" ColumnName="TIS_FechaGrabacion" />
+          <ScalarProperty Name="TIS_Descripción" ColumnName="TIS_Descripción" />
+          <ScalarProperty Name="TIS_IdTipoSolicitud" ColumnName="TIS_IdTipoSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadosSolicitud_SAC">
+      <EntityTypeMapping TypeName="ModeloServicioalClienteNS.EstadosSolicitud_SAC">
+        <MappingFragment StoreEntitySet="EstadosSolicitud_SAC">
+          <ScalarProperty Name="ESO_CreadoPor" ColumnName="ESO_CreadoPor" />
+          <ScalarProperty Name="ESO_FechaGrabacion" ColumnName="ESO_FechaGrabacion" />
+          <ScalarProperty Name="ESO_OrdenEstado" ColumnName="ESO_OrdenEstado" />
+          <ScalarProperty Name="ESO_Descripción" ColumnName="ESO_Descripción" />
+          <ScalarProperty Name="ESO_IdEstado" ColumnName="ESO_IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_SAC">
+      <EntityTypeMapping TypeName="ModeloServicioalClienteNS.Solicitud_SAC">
+        <MappingFragment StoreEntitySet="Solicitud_SAC">
+          <ScalarProperty Name="SOL_FechaRadicacion" ColumnName="SOL_FechaRadicacion" />
+          <ScalarProperty Name="SOL_CreadoPor" ColumnName="SOL_CreadoPor" />
+          <ScalarProperty Name="SOL_FechaGrabacion" ColumnName="SOL_FechaGrabacion" />
+          <ScalarProperty Name="SOL_EmailReclamante" ColumnName="SOL_EmailReclamante" />
+          <ScalarProperty Name="SOL_DireccionReclamante" ColumnName="SOL_DireccionReclamante" />
+          <ScalarProperty Name="SOL_FaxReclamante" ColumnName="SOL_FaxReclamante" />
+          <ScalarProperty Name="SOL_TelefonoReclamante" ColumnName="SOL_TelefonoReclamante" />
+          <ScalarProperty Name="SOL_NombreReclamante" ColumnName="SOL_NombreReclamante" />
+          <ScalarProperty Name="SOL_Descripcion" ColumnName="SOL_Descripcion" />
+          <ScalarProperty Name="SOL_IdSubtipoSolicitud" ColumnName="SOL_IdSubtipoSolicitud" />
+          <ScalarProperty Name="SOL_IdTipoSolicitud" ColumnName="SOL_IdTipoSolicitud" />
+          <ScalarProperty Name="SOL_IdMedioRecepSolicitud" ColumnName="SOL_IdMedioRecepSolicitud" />
+          <ScalarProperty Name="SOL_IdLocalidad" ColumnName="SOL_IdLocalidad" />
+          <ScalarProperty Name="SOL_NumeroGuia" ColumnName="SOL_NumeroGuia" />
+          <ScalarProperty Name="SOL_IdSolicitud" ColumnName="SOL_IdSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

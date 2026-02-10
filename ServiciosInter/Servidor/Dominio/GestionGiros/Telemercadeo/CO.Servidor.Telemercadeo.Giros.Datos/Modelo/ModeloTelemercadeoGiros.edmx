@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloTelemercadeoGiros1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModeloTelemercadeoGiros1StoreContainer">
+          <EntitySet Name="GestionGiroTelemercadeo_GIR" EntityType="ModeloTelemercadeoGiros1.Store.GestionGiroTelemercadeo_GIR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ParametrosGiros_GIR" EntityType="ModeloTelemercadeoGiros1.Store.ParametrosGiros_GIR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ResultadoTelemercadeoGiro_GIR" EntityType="ModeloTelemercadeoGiros1.Store.ResultadoTelemercadeoGiro_GIR" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" Association="ModeloTelemercadeoGiros1.Store.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR">
+            <End Role="ResultadoTelemercadeoGiro_GIR" EntitySet="ResultadoTelemercadeoGiro_GIR" />
+            <End Role="GestionGiroTelemercadeo_GIR" EntitySet="GestionGiroTelemercadeo_GIR" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="GestionGiroTelemercadeo_GIR">
+          <Key>
+            <PropertyRef Name="GTE_IdTelemercadeoGiro" />
+          </Key>
+          <Property Name="GTE_IdTelemercadeoGiro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GTE_IdAdmisionGiro" Type="bigint" Nullable="false" />
+          <Property Name="GTE_NumeroGiro" Type="bigint" Nullable="false" />
+          <Property Name="GTE_IdResultadoTelemercadeoGiro" Type="smallint" Nullable="false" />
+          <Property Name="GTE_TelefonoMarcado" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="GTE_NuevoTelefono" Type="varchar" MaxLength="25" />
+          <Property Name="GTE_PersonaContesta" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="GTE_TipoCliente" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="GTE_Observacion" Type="varchar" MaxLength="250" />
+          <Property Name="GTE_IdParentesco" Type="smallint" Nullable="false" />
+          <Property Name="GTE_DescripcionParentesco" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="GTE_EnviarEmailRemitente" Type="bit" Nullable="false" />
+          <Property Name="GTE_EnviarEmailDestinatario" Type="bit" Nullable="false" />
+          <Property Name="GTE_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="GTE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ParametrosGiros_GIR">
+          <Key>
+            <PropertyRef Name="PAG_IdParametro" />
+          </Key>
+          <Property Name="PAG_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PAG_ValorParametro" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PAG_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="PAG_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="PAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ResultadoTelemercadeoGiro_GIR">
+          <Key>
+            <PropertyRef Name="RTG_IdResultadoTelemercadeoGiro" />
+          </Key>
+          <Property Name="RTG_IdResultadoTelemercadeoGiro" Type="smallint" Nullable="false" />
+          <Property Name="RTG_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RTG_Estado" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="RTG_FechaGrabacion" Type="datetime" Nullable="false" />
+          <Property Name="RTG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR">
+          <End Role="ResultadoTelemercadeoGiro_GIR" Type="ModeloTelemercadeoGiros1.Store.ResultadoTelemercadeoGiro_GIR" Multiplicity="1" />
+          <End Role="GestionGiroTelemercadeo_GIR" Type="ModeloTelemercadeoGiros1.Store.GestionGiroTelemercadeo_GIR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ResultadoTelemercadeoGiro_GIR">
+              <PropertyRef Name="RTG_IdResultadoTelemercadeoGiro" />
+            </Principal>
+            <Dependent Role="GestionGiroTelemercadeo_GIR">
+              <PropertyRef Name="GTE_IdResultadoTelemercadeoGiro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="paActualizarTelemercadeoAdmGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numeroGiro" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="paObtenerGirosTelemercadeo_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numeroGiro" Type="bigint" Mode="In" />
+          <Parameter Name="fechaInicial" Type="date" Mode="In" />
+          <Parameter Name="fechaFinal" Type="date" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="idRacol" Type="bigint" Mode="In" />
+          <Parameter Name="idCentroServicio" Type="bigint" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModeloTelemercadeoGiros1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModeloTelemercadeoGiros" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="ResultadoTelemercadeoGiro_GIR" EntityType="ModeloTelemercadeoGiros1.ResultadoTelemercadeoGiro_GIR" />
+          <EntitySet Name="ParametrosGiros_GIR" EntityType="ModeloTelemercadeoGiros1.ParametrosGiros_GIR" />
+          <EntitySet Name="GestionGiroTelemercadeo_GIR" EntityType="ModeloTelemercadeoGiros1.GestionGiroTelemercadeo_GIR" />
+          <AssociationSet Name="FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" Association="ModeloTelemercadeoGiros1.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR">
+            <End Role="ResultadoTelemercadeoGiro_GIR" EntitySet="ResultadoTelemercadeoGiro_GIR" />
+            <End Role="GestionGiroTelemercadeo_GIR" EntitySet="GestionGiroTelemercadeo_GIR" />
+          </AssociationSet>
+          <FunctionImport Name="paActualizarTelemercadeoAdmGiro_GIR">
+          <Parameter Name="numeroGiro" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="paObtenerGirosTelemercadeo_GIR" ReturnType="Collection(ModeloTelemercadeoGiros1.GIpaObtenerGirosTelemercadeo)">
+            <Parameter Name="numeroGiro" Mode="In" Type="Int64" />
+            <Parameter Name="fechaInicial" Mode="In" Type="DateTime" />
+            <Parameter Name="fechaFinal" Mode="In" Type="DateTime" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="idRacol" Mode="In" Type="Int64" />
+            <Parameter Name="idCentroServicio" Mode="In" Type="Int64" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="ResultadoTelemercadeoGiro_GIR">
+          <Key>
+            <PropertyRef Name="RTG_IdResultadoTelemercadeoGiro" />
+          </Key>
+          <Property Type="Int16" Name="RTG_IdResultadoTelemercadeoGiro" Nullable="false" />
+          <Property Type="String" Name="RTG_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RTG_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="RTG_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="RTG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="GestionGiroTelemercadeo_GIR" Relationship="ModeloTelemercadeoGiros1.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" FromRole="ResultadoTelemercadeoGiro_GIR" ToRole="GestionGiroTelemercadeo_GIR" />
+        </EntityType>
+        <EntityType Name="ParametrosGiros_GIR">
+          <Key>
+            <PropertyRef Name="PAG_IdParametro" />
+          </Key>
+          <Property Type="String" Name="PAG_IdParametro" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAG_ValorParametro" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAG_Descripcion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PAG_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="PAG_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GestionGiroTelemercadeo_GIR">
+          <Key>
+            <PropertyRef Name="GTE_IdTelemercadeoGiro" />
+          </Key>
+          <Property Type="Int64" Name="GTE_IdTelemercadeoGiro" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="GTE_IdAdmisionGiro" Nullable="false" />
+          <Property Type="Int64" Name="GTE_NumeroGiro" Nullable="false" />
+          <Property Type="Int16" Name="GTE_IdResultadoTelemercadeoGiro" Nullable="false" />
+          <Property Type="String" Name="GTE_TelefonoMarcado" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GTE_NuevoTelefono" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GTE_PersonaContesta" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GTE_TipoCliente" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="GTE_Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="GTE_IdParentesco" Nullable="false" />
+          <Property Type="String" Name="GTE_DescripcionParentesco" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="GTE_EnviarEmailRemitente" Nullable="false" />
+          <Property Type="Boolean" Name="GTE_EnviarEmailDestinatario" Nullable="false" />
+          <Property Type="DateTime" Name="GTE_FechaGrabacion" Nullable="false" />
+          <Property Type="String" Name="GTE_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ResultadoTelemercadeoGiro_GIR" Relationship="ModeloTelemercadeoGiros1.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" FromRole="GestionGiroTelemercadeo_GIR" ToRole="ResultadoTelemercadeoGiro_GIR" />
+        </EntityType>
+        <Association Name="FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR">
+          <End Type="ModeloTelemercadeoGiros1.ResultadoTelemercadeoGiro_GIR" Role="ResultadoTelemercadeoGiro_GIR" Multiplicity="1" />
+          <End Type="ModeloTelemercadeoGiros1.GestionGiroTelemercadeo_GIR" Role="GestionGiroTelemercadeo_GIR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ResultadoTelemercadeoGiro_GIR">
+              <PropertyRef Name="RTG_IdResultadoTelemercadeoGiro" />
+            </Principal>
+            <Dependent Role="GestionGiroTelemercadeo_GIR">
+              <PropertyRef Name="GTE_IdResultadoTelemercadeoGiro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GIpaObtenerGirosTelemercadeo">
+          <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_PrefijoIdGiro" Nullable="true" MaxLength="8" />
+          <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+          <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" />
+          <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+          <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+          <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+          <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+          <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+          <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+          <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+          <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+          <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+          <Property Type="Boolean" Name="ADG_Transmitido" Nullable="false" />
+          <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+          <Property Type="String" Name="ADG_CreadoPor" Nullable="false" MaxLength="20" />
+          <Property Type="Boolean" Name="ADG_NotificarPagoPorEmail" Nullable="true" />
+          <Property Type="Boolean" Name="ADG_EstaPagado" Nullable="false" />
+          <Property Type="String" Name="ADG_TelefonoRemitente" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_TelefonoDestinatario" Nullable="false" MaxLength="25" />
+          <Property Type="String" Name="ADG_DireccionRemitente" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_DireccionDestinatario" Nullable="false" MaxLength="250" />
+          <Property Type="String" Name="ADG_EmailRemitente" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ADG_EmailDestinatario" Nullable="false" MaxLength="50" />
+          <Property Type="Int64" Name="REA_IdRegionalAdm" Nullable="false" />
+          <Property Type="String" Name="REA_Descripcion" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="UltimoEstadoGiro" Nullable="false" MaxLength="3" />
+          <Property Type="Boolean" Name="ADG_TieneTelemercadeo" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModeloTelemercadeoGiros1StoreContainer" CdmEntityContainer="ModeloTelemercadeoGiros" >
+          <EntitySetMapping Name="ResultadoTelemercadeoGiro_GIR">
+            <EntityTypeMapping TypeName="ModeloTelemercadeoGiros1.ResultadoTelemercadeoGiro_GIR">
+              <MappingFragment StoreEntitySet="ResultadoTelemercadeoGiro_GIR">
+                <ScalarProperty Name="RTG_CreadoPor" ColumnName="RTG_CreadoPor" />
+                <ScalarProperty Name="RTG_FechaGrabacion" ColumnName="RTG_FechaGrabacion" />
+                <ScalarProperty Name="RTG_Estado" ColumnName="RTG_Estado" />
+                <ScalarProperty Name="RTG_Descripcion" ColumnName="RTG_Descripcion" />
+                <ScalarProperty Name="RTG_IdResultadoTelemercadeoGiro" ColumnName="RTG_IdResultadoTelemercadeoGiro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ParametrosGiros_GIR">
+            <EntityTypeMapping TypeName="ModeloTelemercadeoGiros1.ParametrosGiros_GIR">
+              <MappingFragment StoreEntitySet="ParametrosGiros_GIR">
+                <ScalarProperty Name="PAG_CreadoPor" ColumnName="PAG_CreadoPor" />
+                <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+                <ScalarProperty Name="PAG_Descripcion" ColumnName="PAG_Descripcion" />
+                <ScalarProperty Name="PAG_ValorParametro" ColumnName="PAG_ValorParametro" />
+                <ScalarProperty Name="PAG_IdParametro" ColumnName="PAG_IdParametro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GestionGiroTelemercadeo_GIR">
+            <EntityTypeMapping TypeName="ModeloTelemercadeoGiros1.GestionGiroTelemercadeo_GIR">
+              <MappingFragment StoreEntitySet="GestionGiroTelemercadeo_GIR">
+                <ScalarProperty Name="GTE_CreadoPor" ColumnName="GTE_CreadoPor" />
+                <ScalarProperty Name="GTE_FechaGrabacion" ColumnName="GTE_FechaGrabacion" />
+                <ScalarProperty Name="GTE_EnviarEmailDestinatario" ColumnName="GTE_EnviarEmailDestinatario" />
+                <ScalarProperty Name="GTE_EnviarEmailRemitente" ColumnName="GTE_EnviarEmailRemitente" />
+                <ScalarProperty Name="GTE_DescripcionParentesco" ColumnName="GTE_DescripcionParentesco" />
+                <ScalarProperty Name="GTE_IdParentesco" ColumnName="GTE_IdParentesco" />
+                <ScalarProperty Name="GTE_Observacion" ColumnName="GTE_Observacion" />
+                <ScalarProperty Name="GTE_TipoCliente" ColumnName="GTE_TipoCliente" />
+                <ScalarProperty Name="GTE_PersonaContesta" ColumnName="GTE_PersonaContesta" />
+                <ScalarProperty Name="GTE_NuevoTelefono" ColumnName="GTE_NuevoTelefono" />
+                <ScalarProperty Name="GTE_TelefonoMarcado" ColumnName="GTE_TelefonoMarcado" />
+                <ScalarProperty Name="GTE_IdResultadoTelemercadeoGiro" ColumnName="GTE_IdResultadoTelemercadeoGiro" />
+                <ScalarProperty Name="GTE_NumeroGiro" ColumnName="GTE_NumeroGiro" />
+                <ScalarProperty Name="GTE_IdAdmisionGiro" ColumnName="GTE_IdAdmisionGiro" />
+                <ScalarProperty Name="GTE_IdTelemercadeoGiro" ColumnName="GTE_IdTelemercadeoGiro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="paActualizarTelemercadeoAdmGiro_GIR" FunctionName="ModeloTelemercadeoGiros1.Store.paActualizarTelemercadeoAdmGiro_GIR" />
+          <FunctionImportMapping FunctionImportName="paObtenerGirosTelemercadeo_GIR" FunctionName="ModeloTelemercadeoGiros1.Store.paObtenerGirosTelemercadeo_GIR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ModeloTelemercadeoGiros1.GIpaObtenerGirosTelemercadeo">
+                <ScalarProperty Name="ADG_IdAdmisionGiro" ColumnName="ADG_IdAdmisionGiro" />
+                <ScalarProperty Name="ADG_PrefijoIdGiro" ColumnName="ADG_PrefijoIdGiro" />
+                <ScalarProperty Name="ADG_IdGiro" ColumnName="ADG_IdGiro" />
+                <ScalarProperty Name="ADG_DigitoVerificacion" ColumnName="ADG_DigitoVerificacion" />
+                <ScalarProperty Name="ADG_GuidDeChequeo" ColumnName="ADG_GuidDeChequeo" />
+                <ScalarProperty Name="ADG_AdmisionAutomatica" ColumnName="ADG_AdmisionAutomatica" />
+                <ScalarProperty Name="ADG_IdTipoGiro" ColumnName="ADG_IdTipoGiro" />
+                <ScalarProperty Name="ADG_IdCentroServicioOrigen" ColumnName="ADG_IdCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_NombreCentroServicioOrigen" ColumnName="ADG_NombreCentroServicioOrigen" />
+                <ScalarProperty Name="ADG_IdPaisOrigen" ColumnName="ADG_IdPaisOrigen" />
+                <ScalarProperty Name="ADG_DescPaisOrigen" ColumnName="ADG_DescPaisOrigen" />
+                <ScalarProperty Name="ADG_IdCiudadOrigen" ColumnName="ADG_IdCiudadOrigen" />
+                <ScalarProperty Name="ADG_DescCiudadOrigen" ColumnName="ADG_DescCiudadOrigen" />
+                <ScalarProperty Name="ADG_CodigoPostalOrigen" ColumnName="ADG_CodigoPostalOrigen" />
+                <ScalarProperty Name="ADG_IdCentroServicioDestino" ColumnName="ADG_IdCentroServicioDestino" />
+                <ScalarProperty Name="ADG_NombreCentroServicioDestino" ColumnName="ADG_NombreCentroServicioDestino" />
+                <ScalarProperty Name="ADG_IdPaisDestino" ColumnName="ADG_IdPaisDestino" />
+                <ScalarProperty Name="ADG_DescPaisDestino" ColumnName="ADG_DescPaisDestino" />
+                <ScalarProperty Name="ADG_IdCiudadDestino" ColumnName="ADG_IdCiudadDestino" />
+                <ScalarProperty Name="ADG_DescCiudadDestino" ColumnName="ADG_DescCiudadDestino" />
+                <ScalarProperty Name="ADG_CodigoPostalDestino" ColumnName="ADG_CodigoPostalDestino" />
+                <ScalarProperty Name="ADG_ValorGiro" ColumnName="ADG_ValorGiro" />
+                <ScalarProperty Name="ADG_TarifaPorcPorte" ColumnName="ADG_TarifaPorcPorte" />
+                <ScalarProperty Name="ADG_TarifaFijaPorte" ColumnName="ADG_TarifaFijaPorte" />
+                <ScalarProperty Name="ADG_ValorPorte" ColumnName="ADG_ValorPorte" />
+                <ScalarProperty Name="ADG_ValorAdicionales" ColumnName="ADG_ValorAdicionales" />
+                <ScalarProperty Name="ADG_ValorImpuestos" ColumnName="ADG_ValorImpuestos" />
+                <ScalarProperty Name="ADG_ValorTotal" ColumnName="ADG_ValorTotal" />
+                <ScalarProperty Name="ADG_DeclaracionVoluntariaOrigenes" ColumnName="ADG_DeclaracionVoluntariaOrigenes" />
+                <ScalarProperty Name="ADG_Observaciones" ColumnName="ADG_Observaciones" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionRemitente" ColumnName="ADG_IdTipoIdentificacionRemitente" />
+                <ScalarProperty Name="ADG_IdRemitente" ColumnName="ADG_IdRemitente" />
+                <ScalarProperty Name="ADG_NombreRemitente" ColumnName="ADG_NombreRemitente" />
+                <ScalarProperty Name="ADG_IdTipoIdentificacionDestinatario" ColumnName="ADG_IdTipoIdentificacionDestinatario" />
+                <ScalarProperty Name="ADG_IdDestinatario" ColumnName="ADG_IdDestinatario" />
+                <ScalarProperty Name="ADG_NombreDestinatario" ColumnName="ADG_NombreDestinatario" />
+                <ScalarProperty Name="ADG_Transmitido" ColumnName="ADG_Transmitido" />
+                <ScalarProperty Name="ADG_FechaGrabacion" ColumnName="ADG_FechaGrabacion" />
+                <ScalarProperty Name="ADG_CreadoPor" ColumnName="ADG_CreadoPor" />
+                <ScalarProperty Name="ADG_NotificarPagoPorEmail" ColumnName="ADG_NotificarPagoPorEmail" />
+                <ScalarProperty Name="ADG_EstaPagado" ColumnName="ADG_EstaPagado" />
+                <ScalarProperty Name="ADG_TelefonoRemitente" ColumnName="ADG_TelefonoRemitente" />
+                <ScalarProperty Name="ADG_TelefonoDestinatario" ColumnName="ADG_TelefonoDestinatario" />
+                <ScalarProperty Name="ADG_DireccionRemitente" ColumnName="ADG_DireccionRemitente" />
+                <ScalarProperty Name="ADG_DireccionDestinatario" ColumnName="ADG_DireccionDestinatario" />
+                <ScalarProperty Name="ADG_EmailRemitente" ColumnName="ADG_EmailRemitente" />
+                <ScalarProperty Name="ADG_EmailDestinatario" ColumnName="ADG_EmailDestinatario" />
+                <ScalarProperty Name="REA_IdRegionalAdm" ColumnName="REA_IdRegionalAdm" />
+                <ScalarProperty Name="REA_Descripcion" ColumnName="REA_Descripcion" />
+                <ScalarProperty Name="UltimoEstadoGiro" ColumnName="UltimoEstadoGiro" />
+                <ScalarProperty Name="ADG_TieneTelemercadeo" ColumnName="ADG_TieneTelemercadeo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="CopyToOutputDirectory" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloTelemercadeoGiros" >
+        <EntityTypeShape EntityType="ModeloTelemercadeoGiros1.ResultadoTelemercadeoGiro_GIR" Width="2.625" PointX="2.125" PointY="3.125" Height="1.9210009765624996" />
+        <EntityTypeShape EntityType="ModeloTelemercadeoGiros1.ParametrosGiros_GIR" Width="2.625" PointX="3.375" PointY="0.75" Height="1.7566536458333331" />
+        <EntityTypeShape EntityType="ModeloTelemercadeoGiros1.GestionGiroTelemercadeo_GIR" Width="2.875" PointX="5.5" PointY="4.125" Height="3.5644742838541656" />
+        <AssociationConnector Association="ModeloTelemercadeoGiros1.FK_GestionGiroTelemercadeo_GIR_ResultadoTelemercadeoGiro_GIR" >
+          <ConnectorPoint PointX="4.75" PointY="4.58550048828125" />
+          <ConnectorPoint PointX="5.5" PointY="4.58550048828125" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

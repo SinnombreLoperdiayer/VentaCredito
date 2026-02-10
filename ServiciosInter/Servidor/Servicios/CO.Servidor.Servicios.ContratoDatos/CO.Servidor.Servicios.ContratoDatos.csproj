@@ -1,0 +1,985 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E50A742B-E1EC-4C8A-9D74-CC52C11A4B12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CO.Servidor.Servicios.ContratoDatos</RootNamespace>
+    <AssemblyName>CO.Servidor.Servicios.ContratoDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admisiones\Giros\Almacen\AlmacenArchivoPagoGiro_LOI.cs" />
+    <Compile Include="Admisiones\Giros\Pagos\PGComprobantePagoDC.cs" />
+    <Compile Include="Admisiones\Giros\Pagos\PGPagoAdmisionGiroDC.cs" />
+    <Compile Include="Admisiones\Giros\Pagos\PGPagoPorDevolucionDC.cs" />
+    <Compile Include="Admisiones\Giros\Pagos\PGPagosGirosDC.cs" />
+    <Compile Include="Admisiones\Giros\Pagos\PGTotalPagosDC.cs" />
+    <Compile Include="Admisiones\Giros\Venta\GIAdmisionGirosDC.cs" />
+    <Compile Include="Admisiones\Giros\Venta\GIConvenioDC.cs" />
+    <Compile Include="Admisiones\Giros\Venta\GIEstadosGirosDC.cs" />
+    <Compile Include="Admisiones\Giros\Venta\GIGirosPeatonConvenioDC.cs" />
+    <Compile Include="Admisiones\Giros\Venta\GIGirosPeatonPeatonDC.cs" />
+    <Compile Include="Admisiones\Giros\Venta\GINumeroGiroDC.cs" />
+    <Compile Include="Admisiones\Giros\Venta\GIParametrosGirosDC.cs" />
+    <Compile Include="Admisiones\MensajeriaNN\ADEnvioNNFiltro.cs" />
+    <Compile Include="Admisiones\MensajeriaNN\ClasificacionEnvioNN.cs" />
+    <Compile Include="Admisiones\MensajeriaNN\RutasImagenesEnvioNN.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADAlCobrosSinCancelarDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADArchivoAlmacenGuia.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADArchivoRadicadoDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADConvenio.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADDestinoRadicado.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADDireccionDestinatarioDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEnumEstadoGuiaMasivos.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEnumEstadoGuia.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEnumResultadoEscaner.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEnumTipoCliente.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEnumTipoImpreso.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEnumTipoMotivoDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEstadoGuia.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEstadoGuiaMotivoDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADEstandarDireccionDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADGuia.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADGuiaAlCobro.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADGuiaFormaPago.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADGuiaInternaDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADGuiaSisPostal.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADGuiaUltEstadoDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADInfoClienteDestino.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADMensajeriaTipoCliente.cs" />
+    <Compile Include="Admisiones\Mensajeria\AdmMasiva\ADGuiaOSDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\AdmMasiva\ADDatosValidacionDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\AdmMasiva\ADDatosValidadosDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\AdmMasiva\ADOrdenServicioMasivoDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\AdmMasiva\EnumTipoServicio.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADMotivoAnulacionDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADMotivoGuiaDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADMotivoNoUsoBolsaSeguridad.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADNotificacion.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADNovedadBolsaSeguridad.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADNovedadGuiaDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADObjetosProhibidaCirculacion.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADParametrosAdmisiones.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADPeaton.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRangoCasillero.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRangoTrayecto.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRapiEnvioContraPagoDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRapiRadicado.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRastreoGuiaDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRecaudarDineroAlCobroDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRecaudoAlCobro.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADResultadoAdmision.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRetornoAdmision.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADRotulo.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADTiemposFechaEstimadaDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADTipoEntrega.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADTrazaGuia.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADTrazaGuiaAgencia.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADTrazaGuiaImpresoDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADUbicacionGuia.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADValidacionServicioTrayectoDestino.cs" />
+    <Compile Include="Admisiones\Mensajeria\ADGuiaInternacionalDC.cs" />
+    <Compile Include="Admisiones\Mensajeria\DatosAfectacionCaja.cs" />
+    <Compile Include="Area\ARCasaMatrizConTodo.cs" />
+    <Compile Include="Area\ARCasaMatrizCuentaBancoDC.cs" />
+    <Compile Include="Area\ARCasaMatrizDC.cs" />
+    <Compile Include="Area\ARCuentaCasaMatrizDC.cs" />
+    <Compile Include="Area\AREmpresaDC.cs" />
+    <Compile Include="Area\ARGestionDC.cs" />
+    <Compile Include="Area\ARMacroprocesoDC.cs" />
+    <Compile Include="Area\ARProcesoDC.cs" />
+    <Compile Include="Cajas\CAAjustesCajaNovedadesDC.cs" />
+    <Compile Include="Cajas\CAAperturaCajaCasaMatrizDC.cs" />
+    <Compile Include="Cajas\CAAperturaCajaCentroSvcDC.cs" />
+    <Compile Include="Cajas\CACierreAutomaticoDC.cs" />
+    <Compile Include="Cajas\CAConceptoCajaCategoriaDC.cs" />
+    <Compile Include="Cajas\CAConceptoCajaRetencionDC.cs" />
+    <Compile Include="Cajas\CACuentaExterna.cs" />
+    <Compile Include="Cajas\CAEnumTipoApertura.cs" />
+    <Compile Include="Cajas\CAInfoComplementariaCierreCajaDC.cs" />
+    <Compile Include="Cajas\CAMovimientoCajaDC.cs" />
+    <Compile Include="Cajas\CAOperacionDeClienteDC.cs" />
+    <Compile Include="Cajas\CAParametroCaja.cs" />
+    <Compile Include="Cajas\CARecoleccionDinPuntoDC.cs" />
+    <Compile Include="Cajas\CARegistrarEnvioAgenciaDC.cs" />
+    <Compile Include="Cajas\CARegistroDineroAgenciaDC.cs" />
+    <Compile Include="Cajas\CARegistroTransacCajaDetallAdicionalDC.cs" />
+    <Compile Include="Cajas\CARegistroTranscDtllImpuestoDC.cs" />
+    <Compile Include="Cajas\CARegistroTranscDtllRetencionDC.cs" />
+    <Compile Include="Cajas\CADatosImpCompMensajeroDC.cs" />
+    <Compile Include="Cajas\Cierres\CAConsolidadoCierreDC.cs" />
+    <Compile Include="Cajas\Cierres\CAResumenCierreCajaPrincipalDC.cs" />
+    <Compile Include="Cajas\Cierres\CAResumenCierreCajaPrincipalFormaPagoDC.cs" />
+    <Compile Include="Cajas\Transacciones\CAResultadoRegistroTransaccionDC.cs" />
+    <Compile Include="Admisiones\MensajeriaNN\ADEnvioNN.cs" />
+    <Compile Include="CentroAcopio\AdjuntoConsolidado.cs" />
+    <Compile Include="CentroAcopio\CAAsignacionGuiaDC.cs" />
+    <Compile Include="CentroAcopio\CACEnumTipoConsolidado.cs" />
+    <Compile Include="CentroAcopio\CAManifiestoREO.cs" />
+    <Compile Include="CentroAcopio\CAManifiestoREOguia.cs" />
+    <Compile Include="CentroAcopio\MovimientoConsolidado.cs" />
+    <Compile Include="CentroAcopio\NovedadConsolidado.cs" />
+    <Compile Include="CentroAcopio\CATipoConsolidado.cs" />
+    <Compile Include="CentroAcopio\TipoConsolidado.cs" />
+    <Compile Include="CentroServicios\PUAdjuntoMovimientoInventario.cs" />
+    <Compile Include="CentroServicios\PUCentroServicioInfoGeneral.cs" />
+    <Compile Include="CentroServicios\PUCentroServicioReporte.cs" />
+    <Compile Include="CentroServicios\PUClasificacionPorIngresosDC.cs" />
+    <Compile Include="CentroServicios\PUClasificadorCanalVenta.cs" />
+    <Compile Include="CentroServicios\PUCustodia.cs" />
+    <Compile Include="CentroServicios\PUEnumAccionSalidaCustodia.cs" />
+    <Compile Include="CentroServicios\PUEnumTipoCentroServicioDC.cs" />
+    <Compile Include="CentroServicios\PUEnumTipoMovimientoInventario.cs" />
+    <Compile Include="CentroServicios\PUEnumTipoUbicacion.cs" />
+    <Compile Include="CentroServicios\PUHorarioRecogidaCentroSvcDC.cs" />
+    <Compile Include="CentroServicios\PUMovimientoInventario.cs" />
+    <Compile Include="CentroServicios\PUMunicipioCentroLogisticoDC.cs" />
+    <Compile Include="CentroServicios\PUMunicipiosSinAlCobro.cs" />
+    <Compile Include="CentroServicios\PUObservacionCentroServicioDC.cs" />
+    <Compile Include="CentroServicios\PUTerritorialDC.cs" />
+    <Compile Include="CentroServicios\PUTipoCiudad.cs" />
+    <Compile Include="CentroServicios\PUTipoZona.cs" />
+    <Compile Include="Clientes\CLClienteCondicionGiroDC.cs" />
+    <Compile Include="Clientes\CLCupoDispersionClienteDC.cs" />
+    <Compile Include="Clientes\CLEnumFormaPagoFactura.cs" />
+    <Compile Include="Clientes\CLClienteSucConvenioNal.cs" />
+    <Compile Include="Clientes\CLConvenioLocalidadDC.cs" />
+    <Compile Include="Clientes\CLEnumTipoClienteCredito.cs" />
+    <Compile Include="Clientes\CLReferenciaUsoGuiaDC.cs" />
+    <Compile Include="Clientes\CLReferenciaUsoGuiaSucursal.cs" />
+    <Compile Include="Clientes\CLTipoClienteCreditoDC.cs" />
+    <Compile Include="Comun\COCambioFechaEntregaDC.cs" />
+    <Compile Include="Comun\CODatosCambioFechasDC.cs" />
+    <Compile Include="Comun\COEnumIdentificadorAplicacion.cs" />
+    <Compile Include="Comun\COEnumMotivoGuiaDevolucionAgencias.cs" />
+    <Compile Include="Comun\CONovedadGuiaDC.cs" />
+    <Compile Include="Comun\COTipoNovedadGuiaDC.cs" />
+    <Compile Include="Comun\COEnumTipoNovedad.cs" />
+    <Compile Include="ControlCuentas\CCBolsaNovedadesReliquidacionDC.cs" />
+    <Compile Include="ControlCuentas\CCDetalladoArchivoAjusteGuiaDC.cs" />
+    <Compile Include="ControlCuentas\CCEncabezadoArchivoAjusteGuiaDC.cs" />
+    <Compile Include="ControlCuentas\CCEnumEstadoNovedadCtrlLiquidacionDC.cs" />
+    <Compile Include="ControlCuentas\CCEnumNovedadRealizada.cs" />
+    <Compile Include="ControlCuentas\CCEnumTipoNovedadCtrLiquidacionDC.cs" />
+    <Compile Include="ControlCuentas\CCEnumTipoNovedadGuia.cs" />
+    <Compile Include="ControlCuentas\CCAnulacionGuiaMensajeriaDC.cs" />
+    <Compile Include="ControlCuentas\CCGuiaDC.cs" />
+    <Compile Include="ControlCuentas\CCGuiaIdAuditoria.cs" />
+    <Compile Include="ControlCuentas\CCGuiaValidacion.cs" />
+    <Compile Include="ControlCuentas\CCNovedadCambioDestinoDC.cs" />
+    <Compile Include="ControlCuentas\CCNovedadCambioFormaPagoDC.cs" />
+    <Compile Include="ControlCuentas\CCNovedadCambioPesoDC.cs" />
+    <Compile Include="ControlCuentas\CCNovedadCambioRemitenteDC.cs" />
+    <Compile Include="ControlCuentas\CCNovedadCambioTipoServicio.cs" />
+    <Compile Include="ControlCuentas\CCNovedadCambioValorTotal.cs" />
+    <Compile Include="ControlCuentas\CCNovedadFPAlCobroCreditoDC.cs" />
+    <Compile Include="ControlCuentas\CCReliquidacionDC.cs" />
+    <Compile Include="ControlCuentas\CCResponsableCambioDC.cs" />
+    <Compile Include="ControlCuentas\CCRespuestaAuditoriaDC.cs" />
+    <Compile Include="ControlCuentas\CCResultadoAnulacionGuia.cs" />
+    <Compile Include="ControlCuentas\CCTipoResponsableDC.cs" />
+    <Compile Include="ControlCuentas\EnumTipoReporteAuditoriaPeso.cs" />
+    <Compile Include="ControlCuentas\PesoVolGuiaDC.cs" />
+    <Compile Include="Etiquetas.Designer.cs" />
+    <Compile Include="Facturacion\FAAsociacionGuiasFacturaDC.cs" />
+    <Compile Include="Facturacion\FADescripcionNotaDC.cs" />
+    <Compile Include="Facturacion\FAEnumEstadoFactura.cs" />
+    <Compile Include="Facturacion\FAEstadoNotaDC.cs" />
+    <Compile Include="Facturacion\FAOperacionFacturadaDC.cs" />
+    <Compile Include="Facturacion\FAResponsableDC.cs" />
+    <Compile Include="Facturacion\FARetencionFacturaDC.cs" />
+    <Compile Include="Facturacion\FATipoNotaDC.cs" />
+    <Compile Include="GestionCajas\CAAjusteCajaBancoDC.cs" />
+    <Compile Include="GestionCajas\CABaseGestionCajasDC.cs" />
+    <Compile Include="GestionCajas\CACajaBancoDC.cs" />
+    <Compile Include="GestionCajas\CACajaEmpresaDC.cs" />
+    <Compile Include="Cajas\CACierreCentroServicioDC.cs" />
+    <Compile Include="Cajas\CACuentaMensajeroDC.cs" />
+    <Compile Include="Cajas\CAEnumConceptosCaja.cs" />
+    <Compile Include="Cajas\CAEnumEstadoFacturacion.cs" />
+    <Compile Include="Cajas\CAEnumTipoDatosAdicionales.cs" />
+    <Compile Include="Cajas\CAEnumCategoriasConceptoCaja.cs" />
+    <Compile Include="Cajas\CAIdTransaccionesCajaDC.cs" />
+    <Compile Include="Cajas\CAPinPrepagoDC.cs" />
+    <Compile Include="Cajas\CAPinPrepagoDtllCompraDC.cs" />
+    <Compile Include="Cajas\CARecibirDineroMensajeroDC.cs" />
+    <Compile Include="Cajas\CARecoleccionDineroPuntoDC.cs" />
+    <Compile Include="Cajas\CARegistroOperacionesPuntoDC.cs" />
+    <Compile Include="Cajas\CAReporteDineroAgenciaDC.cs" />
+    <Compile Include="Cajas\CAReporteMensajeroCajaDC.cs" />
+    <Compile Include="Cajas\CAResumeCierrePuntoDC.cs" />
+    <Compile Include="Cajas\CAResumenCierreCajaDC.cs" />
+    <Compile Include="Cajas\CAResumenFormasPagoDC.cs" />
+    <Compile Include="Cajas\CASaldosFinalesDC.cs" />
+    <Compile Include="Cajas\CATipoObsPuntoAgenciaDC.cs" />
+    <Compile Include="Cajas\CAVenderPinPrepagoDC.cs" />
+    <Compile Include="Clientes\CLClienteCreditoSucursalContrato.cs" />
+    <Compile Include="Comisiones\CMEnumTipoComision.cs" />
+    <Compile Include="ControlCuentas\CCAlmacenDC.cs" />
+    <Compile Include="ControlCuentas\CCEmpleadoNovaSoftDC.cs" />
+    <Compile Include="ControlCuentas\CCEnumOperacion.cs" />
+    <Compile Include="Facturacion\FAConceptoFacturaDC.cs" />
+    <Compile Include="Facturacion\FAConceptoProgramadoDC.cs" />
+    <Compile Include="Facturacion\FADeduccionFacturaDC.cs" />
+    <Compile Include="Facturacion\FADescuentoFacturaDC.cs" />
+    <Compile Include="Facturacion\FAEstadoFacturaDC.cs" />
+    <Compile Include="Facturacion\FAExclusionProgramacionDC.cs" />
+    <Compile Include="Facturacion\FAFacturaClienteAutDC.cs" />
+    <Compile Include="Facturacion\FAFacturaClienteDC.cs" />
+    <Compile Include="Facturacion\FAImpuestoConceptoDC.cs" />
+    <Compile Include="Facturacion\FAMotivoAnulacionDC.cs" />
+    <Compile Include="Facturacion\FANotaFacturaDC.cs" />
+    <Compile Include="Facturacion\FAProgramacionFacturaDC.cs" />
+    <Compile Include="Facturacion\FAImpConceptoProgramado.cs" />
+    <Compile Include="GestionCajas\CADocumentoBancarioDC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestionCajas\CAEnumConceptoCajaEmpBanRacol.cs" />
+    <Compile Include="GestionCajas\CAEnumMovTransaccionCaja.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestionCajas\CAEnumOperRacolBancoEmpresa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestionCajas\CAMovBancoCentroSvcDC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestionCajas\CAMovCentroSvcCentroSvcDC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestionCajas\CAMovEmpresaBancoDC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestionCajas\CAMovEmpresaCentroSvcDC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestionCajas\CAOperaRacolCasaMatrizDC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GestionCajas\CAOperacionesTransacDC.cs" />
+    <Compile Include="GestionCajas\CAEFormaPagoOperacionGestionCaja.cs" />
+    <Compile Include="GestionCajas\CARegistroOperacionOpnDC.cs" />
+    <Compile Include="GestionCajas\Cierres\CACierreCajaGestionDC.cs" />
+    <Compile Include="GestionCajas\Impresion\CADatosImpresionGirR10DC.cs" />
+    <Compile Include="GestionCajas\Novasoft\CAServiciosFormaPagoDC.cs" />
+    <Compile Include="GestionCajas\Novasoft\CATipoCuentaDC.cs" />
+    <Compile Include="GestionGiros\ExploradorGiros\GIExploradorGirosWebDC.cs" />
+    <Compile Include="GestionGiros\ExploradorGiros\GIArchivosControlCtasExploradorDC.cs" />
+    <Compile Include="GestionGiros\ExploradorGiros\GIMotivosBloqueoDesbloqueo.cs" />
+    <Compile Include="GestionGiros\ExploradorGiros\GIMotivosInactivacion.cs" />
+    <Compile Include="GestionGiros\PagosManuales\GIEnumTipoPlanillaTrasmisionDC.cs" />
+    <Compile Include="GestionGiros\PagosManuales\GIEnumTipoTransmisionDC.cs" />
+    <Compile Include="GestionGiros\PagosManuales\GIIntentosTransmisionGiroDC.cs" />
+    <Compile Include="GestionGiros\Telemercadeo\GIResultadoGestionTelemercadeoDC.cs" />
+    <Compile Include="GestionGiros\Telemercadeo\GITelemercadeoGiroDC.cs" />
+    <Compile Include="GestionGiros\Telemercadeo\GITipoClienteDC.cs" />
+    <Compile Include="Integraciones\ADEstadoHomologacionYanbal.cs" />
+    <Compile Include="Integraciones\ArchivoGuia.cs" />
+    <Compile Include="Integraciones\ArchivoVolante.cs" />
+    <Compile Include="Integraciones\credencialDTO.cs" />
+    <Compile Include="Integraciones\EnumOrigenGuia.cs" />
+    <Compile Include="Integraciones\GirosRest\ResultadoBiometrico.cs" />
+    <Compile Include="Integraciones\GirosRest\Tercero.cs" />
+    <Compile Include="Integraciones\GuiasClaro.cs" />
+    <Compile Include="Integraciones\HorarioMensajesTextoDC.cs" />
+    <Compile Include="Integraciones\INEnumSispostalGuia.cs" />
+    <Compile Include="Integraciones\INEstadosSWSispostal.cs" />
+    <Compile Include="Integraciones\Satrack\INCanbusDC.cs" />
+    <Compile Include="Integraciones\INTMensajeTextoDC.cs" />
+    <Compile Include="Integraciones\Satrack\INDatosEnvioSatrack.cs" />
+    <Compile Include="Integraciones\Satrack\INItinerarioDC.cs" />
+    <Compile Include="Integraciones\INTrackingGuiaDC.cs" />
+    <Compile Include="Integraciones\INTRespuestaProceso.cs" />
+    <Compile Include="Integraciones\INTArchivoPruebaEntrega.cs" />
+    <Compile Include="Integraciones\Satrack\INParametrosDC.cs" />
+    <Compile Include="Integraciones\Satrack\INRegionescargueDC.cs" />
+    <Compile Include="Integraciones\Satrack\INRespuestaDC.cs" />
+    <Compile Include="Integraciones\MensajeTextoDC.cs" />
+    <Compile Include="Integraciones\puntoDeAtencionDTO.cs" />
+    <Compile Include="Integraciones\respuestaWSRiesgoLiquidezDTO.cs" />
+    <Compile Include="Integraciones\Satrack\INTraficoDC.cs" />
+    <Compile Include="LogisticaInversa\AdmisionGuiaFlujo.cs" />
+    <Compile Include="LogisticaInversa\EnumTipoArchivo.cs" />
+    <Compile Include="LogisticaInversa\InformacionECAPTURE.cs" />
+    <Compile Include="LogisticaInversa\LIArchivoComprobantePagoDC.cs" />
+    <Compile Include="LogisticaInversa\LIArchivoEntragaDC.cs" />
+    <Compile Include="LogisticaInversa\LIArchivoGiroDC.cs" />
+    <Compile Include="LogisticaInversa\LIArchivoGuiaMensajeriaDC.cs" />
+    <Compile Include="LogisticaInversa\LIArchivoGuiaMensajeriaFachadaDC.cs" />
+    <Compile Include="LogisticaInversa\LIArchivosDC.cs" />
+    <Compile Include="LogisticaInversa\LIAsignacionMensajero.cs" />
+    <Compile Include="LogisticaInversa\LICambioEstadoCustodia.cs" />
+    <Compile Include="LogisticaInversa\LICentroAcopioNacionalDC.cs" />
+    <Compile Include="LogisticaInversa\LICentroAcopioUrbanoDC.cs" />
+    <Compile Include="LogisticaInversa\LICertificacionWebDC.cs" />
+    <Compile Include="LogisticaInversa\LIConsecutivoCajaColDC.cs" />
+    <Compile Include="LogisticaInversa\LIDescargueControllerAppDC.cs" />
+    <Compile Include="LogisticaInversa\LIDescargueGuiaAgenciaDC.cs" />
+    <Compile Include="LogisticaInversa\LIDescargueGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIDetalleMotivoGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIDetalleTelemercadeoDC.cs" />
+    <Compile Include="LogisticaInversa\LIDigitalizacionGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIEnumEstadoDatosGuia.cs" />
+    <Compile Include="LogisticaInversa\LIEnumEstadoFisicoGuia.cs" />
+    <Compile Include="LogisticaInversa\LIEnumOrigenAplicacion.cs" />
+    <Compile Include="LogisticaInversa\LIEnumPendientesAgencia.cs" />
+    <Compile Include="LogisticaInversa\LIEnumSaleParaPendientesAgencia.cs" />
+    <Compile Include="LogisticaInversa\LIEnumTipoEvidenciaDC.cs" />
+    <Compile Include="LogisticaInversa\LIEnumTipoNovedadGuia.cs" />
+    <Compile Include="LogisticaInversa\LIEnumTipoPlanillaNotificacion.cs" />
+    <Compile Include="LogisticaInversa\LIEnumTipoGestionTelemercadeo.cs" />
+    <Compile Include="LogisticaInversa\LIEnumTipoTapaLogisticaDC.cs" />
+    <Compile Include="LogisticaInversa\LIEstadisticaTelemercadeoDC.cs" />
+    <Compile Include="LogisticaInversa\LIEstadoDatosGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIEstadoDescargueControllerAppDC.cs" />
+    <Compile Include="LogisticaInversa\LIEstadoYMotivoGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIEstadoFisicoGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIFlujoGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIGestionAuditorDC.cs" />
+    <Compile Include="LogisticaInversa\LIGestionesDC.cs" />
+    <Compile Include="LogisticaInversa\LIGestionesGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIGestionMotivoBorradoDC.cs" />
+    <Compile Include="LogisticaInversa\LIGestionTelemercadeoDC.cs" />
+    <Compile Include="LogisticaInversa\LIGuiaCustodiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIHistorialEntregaDC.cs" />
+    <Compile Include="LogisticaInversa\LIManifiestoMercadeoDC.cs" />
+    <Compile Include="LogisticaInversa\LIMotivoEvidenciaGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIMensajeroResponsableDC.cs" />
+    <Compile Include="LogisticaInversa\LINotificacionDC.cs" />
+    <Compile Include="LogisticaInversa\LIParametrizacionIntegracionRAPSDC.cs" />
+    <Compile Include="LogisticaInversa\LIPlanillaCertificacionesDC.cs" />
+    <Compile Include="LogisticaInversa\LIPlanillaDC.cs" />
+    <Compile Include="LogisticaInversa\LIPlanillaGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIRecibidoGuia.cs" />
+    <Compile Include="LogisticaInversa\LIReclamacionesGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LIReclameEnOficinaDC.cs" />
+    <Compile Include="LogisticaInversa\LIReexpedicionEnvioDC.cs" />
+    <Compile Include="LogisticaInversa\LIReimpresionCertificacionDC.cs" />
+    <Compile Include="LogisticaInversa\LIResultadoTelemercadeoDC.cs" />
+    <Compile Include="LogisticaInversa\LIEvidenciaDevolucionDC.cs" />
+    <Compile Include="LogisticaInversa\LISalidaCustodia.cs" />
+    <Compile Include="LogisticaInversa\LITapaLogisticaDC.cs" />
+    <Compile Include="LogisticaInversa\LITipoEvidenciaControllerAppDC.cs" />
+    <Compile Include="LogisticaInversa\LITipoEvidenciaDevolucionDC.cs" />
+    <Compile Include="LogisticaInversa\LIEnumTipoCertificacion.cs" />
+    <Compile Include="Mensajero\MEBasicoLiquidacion.cs" />
+    <Compile Include="Mensajero\MEConfigComisiones.cs" />
+    <Compile Include="Mensajero\MEEstadoMensajero.cs" />
+    <Compile Include="Mensajero\MEGrupoBasico.cs" />
+    <Compile Include="Mensajero\MEGrupoRodamiento.cs" />
+    <Compile Include="Mensajero\METipoAccion.cs" />
+    <Compile Include="Mensajero\METipoCuenta.cs" />
+    <Compile Include="Mensajero\METipoMensajero.cs" />
+    <Compile Include="Mensajero\MECargo.cs" />
+    <Compile Include="Mensajero\MEMensajero.cs" />
+    <Compile Include="Mensajero\METipoContrato.cs" />
+    <Compile Include="Mensajero\METipoPAM.cs" />
+    <Compile Include="Mensajero\METipoPenalidad.cs" />
+    <Compile Include="Mensajero\METipoRodamiento.cs" />
+    <Compile Include="Mensajero\MEGruposLiquidacion.cs" />
+    <Compile Include="Mensajero\METiposLiquidacion.cs" />
+    <Compile Include="Mensajero\METipoTransporte.cs" />
+    <Compile Include="Mensajero\METipoUsuario.cs" />
+    <Compile Include="Mensajero\MEUnidadNegocioFormaPago.cs" />
+    <Compile Include="OperacionNacional\ONEnumGuiaIndvNovedadRuta.cs" />
+    <Compile Include="OperacionNacional\ONEnumTipoAfectaNovGuia.cs" />
+    <Compile Include="OperacionNacional\ONHorarioRutaDC.cs" />
+    <Compile Include="OperacionNacional\ONNovedadEstacionRutaxGuia.cs" />
+    <Compile Include="OperacionNacional\ONNovedadesTransporteDC.cs" />
+    <Compile Include="OperacionNacional\ONParametrosGuiaInvNovedadRuta.cs" />
+    <Compile Include="OperacionNacional\ONRangoPesoCasilleroDC.cs" />
+    <Compile Include="OperacionNacional\ONTipoNovedadEstacionRutaDC.cs" />
+    <Compile Include="OperacionNacional\ONNovedadEstacionRutaDC.cs" />
+    <Compile Include="OperacionNacional\ONImpresionManifiestoDC.cs" />
+    <Compile Include="OperacionNacional\ONCantEnviosManXEstacionDC.cs" />
+    <Compile Include="OperacionNacional\ONCierreDescargueManifiestoDC.cs" />
+    <Compile Include="OperacionNacional\ONDescargueConsolidadosInfoInicialDC.cs" />
+    <Compile Include="OperacionNacional\ONDescargueConsolidadosUrbRegNalDC.cs" />
+    <Compile Include="OperacionNacional\OnDescargueEnvioSueltoDC.cs" />
+    <Compile Include="OperacionNacional\ONIngresoOperativoCiudadDC.cs" />
+    <Compile Include="OperacionNacional\ONConsolidado.cs" />
+    <Compile Include="OperacionNacional\ONConsolidadoDetalle.cs" />
+    <Compile Include="OperacionNacional\ONEnviosDescargueRutaDC.cs" />
+    <Compile Include="OperacionNacional\ONFiltroTransportadorDC.cs" />
+    <Compile Include="OperacionNacional\ONIngresoOperativoDC.cs" />
+    <Compile Include="OperacionNacional\ONIngresoSalidaTransportadorDC.cs" />
+    <Compile Include="OperacionNacional\ONManifiestoGuia.cs" />
+    <Compile Include="OperacionNacional\ONManifiestoOperacionNacional.cs" />
+    <Compile Include="OperacionNacional\ONManifiestoOperacionNalTerrestre.cs" />
+    <Compile Include="OperacionNacional\ONMotivoElimGuiaMani.cs" />
+    <Compile Include="OperacionNacional\ONNovedadesConsolidadoDC.cs" />
+    <Compile Include="OperacionNacional\ONNovedadesEnvioDC.cs" />
+    <Compile Include="OperacionNacional\ONNovedadOperativoDC.cs" />
+    <Compile Include="OperacionNacional\ONReporteManifiestoCarga.cs" />
+    <Compile Include="OperacionNacional\ONRutaConductorDC.cs" />
+    <Compile Include="OperacionNacional\ONTipoConsolidado.cs" />
+    <Compile Include="OperacionNacional\ONTipoConsolidadoDetalle.cs" />
+    <Compile Include="OperacionNacional\ONTipoMotivoElimGuiaMani.cs" />
+    <Compile Include="OperacionNacional\ONTrayectoCasilleroDC.cs" />
+    <Compile Include="OperacionNacional\ONTrayectoCasilleroPesoDC.cs" />
+    <Compile Include="OperacionUrbana\OUAperturaRecogidaDC.cs" />
+    <Compile Include="OperacionUrbana\OUAsignacionDC.cs" />
+    <Compile Include="OperacionUrbana\OUAsignacionRecogidaMensajeroDC.cs" />
+    <Compile Include="OperacionUrbana\OUColorTipoConsolidadoDetalleDC.cs" />
+    <Compile Include="OperacionUrbana\OUDatosMensajeroDC.cs" />
+    <Compile Include="OperacionUrbana\OUDescargueRecogidaMensajeroDC.cs" />
+    <Compile Include="OperacionUrbana\OUEnumEstadoSolicitudRecogida.cs" />
+    <Compile Include="OperacionUrbana\OUEnumTipoClienteRecogidaDC.cs" />
+    <Compile Include="OperacionUrbana\OUEnumTipoEnvioPlanilla.cs" />
+    <Compile Include="OperacionUrbana\OUEnumValidacionDescargue.cs" />
+    <Compile Include="OperacionUrbana\OUEnviosPendMensajerosDC.cs" />
+    <Compile Include="OperacionUrbana\OUEnviosRecogidaPeatonDC.cs" />
+    <Compile Include="OperacionUrbana\OUEstadosSolicitudRecogidaDC.cs" />
+    <Compile Include="OperacionUrbana\OUGuiaIngresadaAppDC.cs" />
+    <Compile Include="OperacionUrbana\OUImpresionPlanillaVentasDC.cs" />
+    <Compile Include="OperacionUrbana\OUMensajeroPamDC.cs" />
+    <Compile Include="OperacionUrbana\OUMotivoAperturaDC.cs" />
+    <Compile Include="OperacionUrbana\OUMotivoDescargueRecogidasDC.cs" />
+    <Compile Include="OperacionUrbana\OUMotivosDevolucionMensajeDC.cs" />
+    <Compile Include="OperacionUrbana\OUMotivosReprogramacionDC.cs" />
+    <Compile Include="OperacionUrbana\OUNovedadIngresoDC.cs" />
+    <Compile Include="OperacionUrbana\OUParametrosDC.cs" />
+    <Compile Include="OperacionUrbana\OUPlanillaAsignacionMensajero.cs" />
+    <Compile Include="OperacionUrbana\OUProgramacionSolicitudRecogidaDC.cs" />
+    <Compile Include="OperacionUrbana\OURecogidaPeatonDC.cs" />
+    <Compile Include="OperacionUrbana\OURecogidasDC.cs" />
+    <Compile Include="OperacionUrbana\OUTipoAsignacionDC.cs" />
+    <Compile Include="OperacionUrbana\OUTipoConsolidadoDC.cs" />
+    <Compile Include="OperacionUrbana\OUTipoConsolidadoDetalleDC.cs" />
+    <Compile Include="OperacionUrbana\OUEnumTipoOrigenRecogida.cs" />
+    <Compile Include="ParametrosOperacion\POPersonaExterna.cs" />
+    <Compile Include="ParametrosOperacion\POTerritorial.cs" />
+    <Compile Include="ParametrosOperacion\POTipoCombustibleDC.cs" />
+    <Compile Include="ParametrosOperacion\POUbicacionMensajero.cs" />
+    <Compile Include="Produccion\Deprecated\PANovedadCentroServicioDCDeprecated.cs" />
+    <Compile Include="Produccion\PRCiudadDC.cs" />
+    <Compile Include="Produccion\Deprecated\PRComisionConceptoDCDeprecated.cs" />
+    <Compile Include="Produccion\Deprecated\PRComisionPuntosDCDeprecated.cs" />
+    <Compile Include="Produccion\Deprecated\PRDetalleNovedadDCDeprecated.cs" />
+    <Compile Include="Produccion\Deprecated\PRDetalleRetencionesDCDeprecated.cs" />
+    <Compile Include="Produccion\Deprecated\PREnumNovedadMotivoDeprecated.cs" />
+    <Compile Include="Produccion\Deprecated\PRLiquidacionManualDCDeprecated.cs" />
+    <Compile Include="Produccion\PREnumTipoConcepRetencionDC.cs" />
+    <Compile Include="Produccion\PRLiquidacionProduccionDC.cs" />
+    <Compile Include="Produccion\PRMotivoNovedadDC.cs" />
+    <Compile Include="Produccion\Deprecated\PRMotivoNovedadDCDeprecated.cs" />
+    <Compile Include="Produccion\Deprecated\PRProgramacionLiquidacionDCDeprecated.cs" />
+    <Compile Include="Produccion\PRConceptoRetencionDC.cs" />
+    <Compile Include="Produccion\PRNovedadProduccionDC.cs" />
+    <Compile Include="Produccion\PRRetencionDC.cs" />
+    <Compile Include="Produccion\Deprecated\PRRetencionMotivoNovedadDCDeprecated.cs" />
+    <Compile Include="Produccion\PREnumTipoNovedadDC.cs" />
+    <Compile Include="Produccion\PRRetencionProduccionDC.cs" />
+    <Compile Include="Produccion\PRRetencionXCiudadDC.cs" />
+    <Compile Include="Produccion\Deprecated\PRTipoNovedadDCDeprecated.cs" />
+    <Compile Include="Raps\Citas\RAAgrupamientoRapsDC.cs" />
+    <Compile Include="Raps\Citas\RAAsistenciaCita.cs" />
+    <Compile Include="Raps\Citas\RACitaDC.cs" />
+    <Compile Include="Raps\Citas\RACompromisoDC.cs" />
+    <Compile Include="Raps\Citas\RAEnumEstadoCita.cs" />
+    <Compile Include="Raps\Citas\RAEnumEstadoCompromiso.cs" />
+    <Compile Include="Raps\Citas\RAEnumTipoAgrupamiento.cs" />
+    <Compile Include="Raps\Citas\RAEnumTipoEliminacion.cs" />
+    <Compile Include="Raps\Citas\RAEnumTipoIntegrante.cs" />
+    <Compile Include="Raps\Citas\RAEnumTipoPeriodo.cs" />
+    <Compile Include="Raps\Citas\RAFormatoCalendarioDC.cs" />
+    <Compile Include="Raps\Citas\RAInfoCitasDC.cs" />
+    <Compile Include="Raps\Citas\RAIntegranteCitaDC.cs" />
+    <Compile Include="Raps\Citas\RANotificacionCitaDC.cs" />
+    <Compile Include="Raps\Citas\RANotificacionCitaMotorDC.cs" />
+    <Compile Include="Raps\Citas\RAParametrizacionCitaDC.cs" />
+    <Compile Include="Raps\Citas\RAPeriodoRepeticionDC.cs" />
+    <Compile Include="Raps\Configuracion\RAEnumFuncionesReglasParametrizacionRaps.cs" />
+    <Compile Include="Raps\Configuracion\RAEnumSistemaOrigen.cs" />
+    <Compile Include="Raps\Configuracion\RAParametrosSolicitudAcumulativaDC.cs" />
+    <Compile Include="Raps\Escalonamiento\RATipoEscalonamientoDC.cs" />
+    <Compile Include="Raps\ParametrosReglasEstadosRaps.cs" />
+    <Compile Include="Raps\Configuracion\RAFiltroCargoPersonaNovaRapDC.cs" />
+    <Compile Include="Raps\Configuracion\RACargoPersonaNovaRapDC.cs" />
+    <Compile Include="Raps\Configuracion\RACargoGrupoAgregarDC.cs" />
+    <Compile Include="Raps\Configuracion\RACargoGrupoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAInsertarParametrizacionDC.cs" />
+    <Compile Include="Raps\Configuracion\RAAccionDC.cs" />
+    <Compile Include="Raps\Configuracion\RAAccionPlantillaParametrizacionRapsDC.cs" />
+    <Compile Include="Raps\Configuracion\RACargoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAClasificacionDC.cs" />
+    <Compile Include="Raps\Configuracion\RAEscalonamientoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAEstadosDC.cs" />
+    <Compile Include="Raps\Configuracion\RAFlujoAccionEstadoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAFormatoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAGrupoUsuarioDC.cs" />
+    <Compile Include="Raps\Configuracion\RAHoraEscalarDC.cs" />
+    <Compile Include="Raps\Configuracion\RAListarCargoEscalonamientoParametrizacionRapsDC.cs" />
+    <Compile Include="Raps\Configuracion\RAListarCargoEscalonamientoRapsDC.cs" />
+    <Compile Include="Raps\Configuracion\RAMacroprocesoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAMenuDC.cs" />
+    <Compile Include="Raps\Configuracion\RAMenuEstructuradoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAMenusPermitidosDC.cs" />
+    <Compile Include="Raps\Configuracion\RAModulosDC.cs" />
+    <Compile Include="Raps\Configuracion\RANivelFallaDC.cs" />
+    <Compile Include="Raps\Configuracion\RANotificacionDC.cs" />
+    <Compile Include="Raps\Configuracion\RAObtenerDetalleSolicitud.cs" />
+    <Compile Include="Raps\Configuracion\RAPantillaAccionCorreoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAParametrizacionRapsDC.cs" />
+    <Compile Include="Raps\Configuracion\RAParametrosParametrizacionDC.cs" />
+    <Compile Include="Raps\Configuracion\RAParametrosPersonalizacionRapsDC.cs" />
+    <Compile Include="Raps\Configuracion\RAPersonaDC.cs" />
+    <Compile Include="Raps\Configuracion\RAProcedimeintoDC.cs" />
+    <Compile Include="Raps\Configuracion\RAProcesoDC.cs" />
+    <Compile Include="Raps\Configuracion\RARegionalSucursalDC.cs" />
+    <Compile Include="Raps\Configuracion\RASistemaFormatoDC.cs" />
+    <Compile Include="Raps\Configuracion\RASubClasificacionDC.cs" />
+    <Compile Include="Raps\Configuracion\RATerritorialDC.cs" />
+    <Compile Include="Raps\Configuracion\RATiempoEjecucionRapsDC.cs" />
+    <Compile Include="Raps\Configuracion\RATipoCierreDC.cs" />
+    <Compile Include="Raps\Configuracion\RATipoDatoDC.cs" />
+    <Compile Include="Raps\Configuracion\RATipoHoraDC.cs" />
+    <Compile Include="Raps\Configuracion\RATipoIncumplimientoDC.cs" />
+    <Compile Include="Raps\Configuracion\RATipoPeriodoDC.cs" />
+    <Compile Include="Raps\Configuracion\RATipoRapDC.cs" />
+    <Compile Include="Raps\Configuracion\RAUsuarioDeGrupoDC.cs" />
+    <Compile Include="Raps\Consultas\RAConteoEstadosSolicitante.cs" />
+    <Compile Include="Raps\Consultas\RAFallaMensajeroDC.cs" />
+    <Compile Include="Raps\Consultas\RAObtenerListaSolicitudesRaps.cs" />
+    <Compile Include="Raps\Consultas\RAPaginaParametrizacionRapsDC.cs" />
+    <Compile Include="Raps\Escalonamiento\RACargoEscalarDC.cs" />
+    <Compile Include="Raps\Escalonamiento\RACargoEscalonamientoDC.cs" />
+    <Compile Include="Raps\Escalonamiento\RAGestionNotificacionMotorDC.cs" />
+    <Compile Include="Raps\Escalonamiento\RAHorarioEmpleadoDC.cs" />
+    <Compile Include="Raps\Escalonamiento\RASolicitudesVencidasDC.cs" />
+    <Compile Include="Raps\Solicitudes\EnumEstadosAplicacion.cs" />
+    <Compile Include="Raps\Solicitudes\MapperAccion.cs" />
+    <Compile Include="Raps\Solicitudes\MapperEstado.cs" />
+    <Compile Include="Raps\Solicitudes\MapperEstadoAplicacion.cs" />
+    <Compile Include="Raps\Solicitudes\RAAdjuntoDC.cs" />
+    <Compile Include="Raps\Configuracion\RADatosFallaDC.cs" />
+    <Compile Include="Raps\Solicitudes\RADetalleFallasMensajeroDC.cs" />
+    <Compile Include="Raps\Solicitudes\RADetalleParametrosAcumulativasDC.cs" />
+    <Compile Include="Raps\Solicitudes\RAEnumAccion.cs" />
+    <Compile Include="Raps\Solicitudes\RAEnumEstados.cs" />
+    <Compile Include="Raps\Configuracion\RAEnumOrigenRaps.cs" />
+    <Compile Include="Raps\Solicitudes\RAIdentificaEmpleadoDC.cs" />
+    <Compile Include="Raps\Solicitudes\RAInformacionUsuarioRAP.cs" />
+    <Compile Include="Raps\Solicitudes\RAInsertarSolicitudDC.cs" />
+    <Compile Include="Raps\Solicitudes\RAListaParametrosAcumulativasDC.cs" />
+    <Compile Include="Raps\Solicitudes\RANovedadDC.cs" />
+    <Compile Include="Raps\Solicitudes\RAObtenerDetalleSolicitudDC.cs" />
+    <Compile Include="Raps\Solicitudes\RAOrigenRapDC.cs" />
+    <Compile Include="Raps\Solicitudes\RaParametrosConsultaSolicitudesDC.cs" />
+    <Compile Include="Raps\Solicitudes\RAGestionDC.cs" />
+    <Compile Include="Raps\Configuracion\RAReglasIngrecionesManualDC.cs" />
+    <Compile Include="Raps\Configuracion\RAResponsableDC.cs" />
+    <Compile Include="Raps\Configuracion\RAResponsableTipoNovedadDC.cs" />
+    <Compile Include="Raps\Solicitudes\RAResultadoConsultaSolicitudesDC.cs" />
+    <Compile Include="Raps\Solicitudes\RASolicitudConsultaDC.cs" />
+    <Compile Include="Raps\Solicitudes\RASolicitudDC.cs" />
+    <Compile Include="Raps\Solicitudes\RASolicitudItemDC.cs" />
+    <Compile Include="Raps\Solicitudes\RASolucitudesAutomaticasDC.cs" />
+    <Compile Include="Raps\Solicitudes\RATiposDatosParametrizacionDC.cs" />
+    <Compile Include="Raps\Solicitudes\RegistroGestionDC.cs" />
+    <Compile Include="Raps\Solicitudes\RegistroSolicitudAppDC.cs" />
+    <Compile Include="Recogidas\EnumAccionMotor.cs" />
+    <Compile Include="Recogidas\EnumActorMotivoSolRecogida.cs" />
+    <Compile Include="Recogidas\EnumEstadoSolicitudRecogida.cs" />
+    <Compile Include="Recogidas\EnumOrigenSolicitud.cs" />
+    <Compile Include="Recogidas\RGAgenciaDC.cs" />
+    <Compile Include="Recogidas\RGAsignacionSolicitudRecogidaDC.cs" />
+    <Compile Include="Recogidas\RGAsignarRecogidaDC.cs" />
+    <Compile Include="Recogidas\RGConteoRecogidasDC.cs" />
+    <Compile Include="Recogidas\RGDetalleConteoAdminRecogidasDC.cs" />
+    <Compile Include="Recogidas\RGDetalleMensajeroBalance.cs" />
+    <Compile Include="Recogidas\RGDetalleSolicitudRecogidaDC.cs" />
+    <Compile Include="Recogidas\RGDetalleyConteoRecogidasDC.cs" />
+    <Compile Include="Recogidas\RGDispositivoMensajeroDC.cs" />
+    <Compile Include="Recogidas\RGEmpleadoDC.cs" />
+    <Compile Include="Recogidas\RGEnumClaseSolicitud.cs" />
+    <Compile Include="Recogidas\RGEnumTipoRecogidaDC.cs" />
+    <Compile Include="Recogidas\RGEstadisticas.cs" />
+    <Compile Include="Recogidas\RGMensajeroLocalidadDC.cs" />
+    <Compile Include="Recogidas\RGMotivoEstadoSolRecogidaDC.cs" />
+    <Compile Include="Recogidas\RGProgramacionRecogidaFijaDC.cs" />
+    <Compile Include="Recogidas\RGRecogidaEsporadicaDC.cs" />
+    <Compile Include="Recogidas\RGRecogidaMotorDC.cs" />
+    <Compile Include="Recogidas\RGRecogidasDC.cs" />
+    <Compile Include="Recogidas\RGTelemercadeo.cs" />
+    <Compile Include="Recogidas\RGTerritorialDC.cs" />
+    <Compile Include="ReversionEstados\DatosPersonaNovasoftDC.cs" />
+    <Compile Include="ReversionEstados\ParametrizacionBorradoTablasPorEstado.cs" />
+    <Compile Include="ReversionEstados\DatosGuiaHistorico.cs" />
+    <Compile Include="ReversionEstados\ReversionEstado.cs" />
+    <Compile Include="Rutas\Optimizacion\Arista.cs" />
+    <Compile Include="Cajas\CAAperturaCajaDC.cs" />
+    <Compile Include="Cajas\CACajasDC.cs" />
+    <Compile Include="Cajas\CACierreCajaDC.cs" />
+    <Compile Include="Cajas\CAConceptoCajaDC.cs" />
+    <Compile Include="Cajas\CARegistroVentaClienteCreditoDC.cs" />
+    <Compile Include="Cajas\CARegistroTransacCajaDC.cs" />
+    <Compile Include="Cajas\CARegistroTransacCajaDetalleDC.cs" />
+    <Compile Include="Cajas\CARegistroVentaFormaPagoDC.cs" />
+    <Compile Include="CentroServicios\PUAgencia.cs" />
+    <Compile Include="CentroServicios\PUAgenciaDeRacolDC.cs" />
+    <Compile Include="CentroServicios\PUArchivoCentroServicios.cs" />
+    <Compile Include="CentroServicios\PUArchivosPersonas.cs" />
+    <Compile Include="CentroServicios\PUArchivosPropietario.cs" />
+    <Compile Include="CentroServicios\PUCentroLogistico.cs" />
+    <Compile Include="CentroServicios\PUCentroServicioApoyo.cs" />
+    <Compile Include="CentroServicios\PUCentroServiciosDC.cs" />
+    <Compile Include="CentroServicios\PUCentroServiciosSuministro.cs" />
+    <Compile Include="CentroServicios\PUCodeudor.cs" />
+    <Compile Include="CentroServicios\PUDocuCentroServicio.cs" />
+    <Compile Include="CentroServicios\PUEstadoDC.cs" />
+    <Compile Include="CentroServicios\PUHorariosCentroServicios.cs" />
+    <Compile Include="CentroServicios\PUHorariosServiciosCentroServicios.cs" />
+    <Compile Include="CentroServicios\PUListasCentrosServicio.cs" />
+    <Compile Include="CentroServicios\PUPropietario.cs" />
+    <Compile Include="CentroServicios\PUPropietarioBanco.cs" />
+    <Compile Include="CentroServicios\PURegionalAdministrativa.cs" />
+    <Compile Include="CentroServicios\PUServicio.cs" />
+    <Compile Include="CentroServicios\PUServicioComisionRef.cs" />
+    <Compile Include="CentroServicios\PUServicioDescuentoRef.cs" />
+    <Compile Include="CentroServicios\PUSuministro.cs" />
+    <Compile Include="CentroServicios\PUTipoAgencia.cs" />
+    <Compile Include="CentroServicios\PUTipoCentroServicio.cs" />
+    <Compile Include="CentroServicios\PUTipoComisionFija.cs" />
+    <Compile Include="CentroServicios\PUTipoCuenta.cs" />
+    <Compile Include="CentroServicios\PUTipoDocumentosCentrosServicios.cs" />
+    <Compile Include="CentroServicios\PUTipoPropiedad.cs" />
+    <Compile Include="CentroServicios\PUTipoRegimen.cs" />
+    <Compile Include="CentroServicios\PUTiposComision.cs" />
+    <Compile Include="CentroServicios\PUTiposDescuento.cs" />
+    <Compile Include="CentroServicios\PUTipoSociedad.cs" />
+    <Compile Include="Clientes\CLArchivosDC.cs" />
+    <Compile Include="Clientes\CLClienteContadoDC.cs" />
+    <Compile Include="Clientes\CLClientesDC.cs" />
+    <Compile Include="Clientes\CLContactosDC.cs" />
+    <Compile Include="Clientes\CLContratosArchivosDC.cs" />
+    <Compile Include="Clientes\CLContratosDC.cs" />
+    <Compile Include="Clientes\CLEstadosClienteDC.cs" />
+    <Compile Include="Clientes\CLFacturaDC.cs" />
+    <Compile Include="Clientes\CLDeduccionesContratoDC.cs" />
+    <Compile Include="Clientes\CLFacturaDescuentoDC.cs" />
+    <Compile Include="Clientes\CLFacturaNotacionDC.cs" />
+    <Compile Include="Clientes\CLFacturaRequisitosDC.cs" />
+    <Compile Include="Clientes\CLFacturaServiciosDC.cs" />
+    <Compile Include="Clientes\CLMotivoEstadosDC.cs" />
+    <Compile Include="Clientes\CLOrigenTipoDC.cs" />
+    <Compile Include="Clientes\CLOtroSiDC.cs" />
+    <Compile Include="Clientes\CLServiciosSucursal.cs" />
+    <Compile Include="Clientes\CLSucursalContratoDC.cs" />
+    <Compile Include="Clientes\CLSucursalDC.cs" />
+    <Compile Include="Clientes\CLDestinatarioFrecuenteDC.cs" />
+    <Compile Include="Clientes\CLSucursalEstadosDC.cs" />
+    <Compile Include="Clientes\CLSucursalGuiasDC.cs" />
+    <Compile Include="Clientes\CLSucursalHorarioDC.cs" />
+    <Compile Include="Clientes\CLSucursalServicioDC.cs" />
+    <Compile Include="Clientes\CLSucursalSuministroDC.cs" />
+    <Compile Include="Clientes\CLTipoNotacionDC.cs" />
+    <Compile Include="Clientes\CLTipoOtroSiDC.cs" />
+    <Compile Include="Comisiones\CMCentroServicioAdministrado.cs" />
+    <Compile Include="Comisiones\CMCentroServicioServicioComi.cs" />
+    <Compile Include="Comisiones\CMCentroServiciosServicioDescuento.cs" />
+    <Compile Include="Comisiones\CMComisionesConceptosAdicionales.cs" />
+    <Compile Include="Comisiones\CMComisionXVentaCalculadaDC.cs" />
+    <Compile Include="Comisiones\CMConsultaComisionVenta.cs" />
+    <Compile Include="Comisiones\CMServiciosCentroServicios.cs" />
+    <Compile Include="Comisiones\CMComisionesServiciosCentroServiciosAdmin.cs" />
+    <Compile Include="Rutas\Optimizacion\CostoArista.cs" />
+    <Compile Include="GestionGiros\ExploradorGiros\GITipoGiroDC.cs" />
+    <Compile Include="GestionGiros\ExploradorGiros\GITipoRemitenteDestinatarioDC.cs" />
+    <Compile Include="LogisticaInversa\LIGuiaDC.cs" />
+    <Compile Include="LogisticaInversa\LILocalidadColDC.cs" />
+    <Compile Include="LogisticaInversa\LIManifiestoDC.cs" />
+    <Compile Include="LogisticaInversa\LITipoManifiestoDC.cs" />
+    <Compile Include="OperacionUrbana\OUDetalleGuiaDC.cs" />
+    <Compile Include="OperacionUrbana\OUEstadosEmpaqueDC.cs" />
+    <Compile Include="OperacionUrbana\OUEstadosMensajeroDC.cs" />
+    <Compile Include="OperacionUrbana\OUEstadosPlanillaAsignacionDC.cs" />
+    <Compile Include="OperacionUrbana\OUGuiaIngresadaDC.cs" />
+    <Compile Include="OperacionUrbana\OUGuiasPendientesDC.cs" />
+    <Compile Include="OperacionUrbana\OUNombresMensajeroDC.cs" />
+    <Compile Include="OperacionUrbana\OUPersonaInternaDC.cs" />
+    <Compile Include="OperacionUrbana\OUPlanillaAsignacionDC.cs" />
+    <Compile Include="OperacionUrbana\OUPlanillaVentaDC.cs" />
+    <Compile Include="OperacionUrbana\OUPlanillaVentaGuiasDC.cs" />
+    <Compile Include="OperacionUrbana\OUTipoMensajeroDC.cs" />
+    <Compile Include="ParametrosOperacion\POAseguradora.cs" />
+    <Compile Include="ParametrosOperacion\POCategoriaLicencia.cs" />
+    <Compile Include="ParametrosOperacion\POColor.cs" />
+    <Compile Include="ParametrosOperacion\POConductores.cs" />
+    <Compile Include="ParametrosOperacion\POConfiguracionVehiculo.cs" />
+    <Compile Include="ParametrosOperacion\POEstado.cs" />
+    <Compile Include="ParametrosOperacion\POLinea.cs" />
+    <Compile Include="ParametrosOperacion\POListasDatosVehiculos.cs" />
+    <Compile Include="ParametrosOperacion\POMarca.cs" />
+    <Compile Include="ParametrosOperacion\POMensajero.cs" />
+    <Compile Include="ParametrosOperacion\POTipoMensajero.cs" />
+    <Compile Include="ParametrosOperacion\POMensajeroVehiculo.cs" />
+    <Compile Include="ParametrosOperacion\POPolizaSeguroVehiculo.cs" />
+    <Compile Include="ParametrosOperacion\PORacolVehiculo.cs" />
+    <Compile Include="ParametrosOperacion\PORevisionMecanica.cs" />
+    <Compile Include="ParametrosOperacion\POTenedorVehiculo.cs" />
+    <Compile Include="ParametrosOperacion\POTipoCarroceria.cs" />
+    <Compile Include="ParametrosOperacion\POTipoContrato.cs" />
+    <Compile Include="ParametrosOperacion\POTipoPolizaSeguro.cs" />
+    <Compile Include="ParametrosOperacion\POVehiculo.cs" />
+    <Compile Include="ParametrosOperacion\POPropietarioVehiculo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rutas\Optimizacion\Camino.cs" />
+    <Compile Include="Rutas\Optimizacion\Frecuencia.cs" />
+    <Compile Include="Rutas\Optimizacion\RutaArista.cs" />
+    <Compile Include="Rutas\Optimizacion\Vertice.cs" />
+    <Compile Include="Rutas\PtoRuta.cs" />
+    <Compile Include="Rutas\RUCiudadManifestadaEnRuta.cs" />
+    <Compile Include="Rutas\RUCoberturaCiudadManifiestaPorRuta.cs" />
+    <Compile Include="Rutas\RUCoberturaEstacion.cs" />
+    <Compile Include="Rutas\RUEmpresaTransportadora.cs" />
+    <Compile Include="Rutas\RUEmpresaTransporteInfoInicialDC.cs" />
+    <Compile Include="Rutas\RUEnumTipoRutaDC.cs" />
+    <Compile Include="Rutas\RUEnumTipoTransporte.cs" />
+    <Compile Include="Rutas\RUEstacionRuta.cs" />
+    <Compile Include="Rutas\RUFrecuenciaParadaEstacion.cs" />
+    <Compile Include="Rutas\RUFrecuenciaRuta.cs" />
+    <Compile Include="Rutas\RUMedioTransporte.cs" />
+    <Compile Include="Rutas\RURutaCWebDetalleCentrosServicios.cs" />
+    <Compile Include="Rutas\RURutaDC.cs" />
+    <Compile Include="Rutas\Optimizacion\RURutaOptimaCalculada.cs" />
+    <Compile Include="Rutas\RURutaICWebDetalle.cs" />
+    <Compile Include="Rutas\RUTipoRuta.cs" />
+    <Compile Include="Rutas\RUTipoTransporte.cs" />
+    <Compile Include="ParametrosOperacion\POTipoVehiculo.cs" />
+    <Compile Include="Rutas\RUTipoVehiculo.cs" />
+    <Compile Include="Seguridad\SEGUsuario.cs" />
+    <Compile Include="ServicioalCliente\SACEstadosSolicitudDC.cs" />
+    <Compile Include="ServicioalCliente\SACMedioRecepcionDC.cs" />
+    <Compile Include="ServicioalCliente\SACSeguimientoSolicitudDC.cs" />
+    <Compile Include="ServicioalCliente\SACSolicitudDC.cs" />
+    <Compile Include="ServicioalCliente\SACSolicitudEstadosDC.cs" />
+    <Compile Include="ServicioalCliente\SACSubTipoSolicitudDC.cs" />
+    <Compile Include="ServicioalCliente\SACTipoSeguimientoDC.cs" />
+    <Compile Include="ServicioalCliente\SACTipoSolicitudDC.cs" />
+    <Compile Include="Solicitudes\GIArchivosAdjuntosDC.cs" />
+    <Compile Include="Solicitudes\GIArchSolicitudDC.cs" />
+    <Compile Include="Solicitudes\GIDocsCambDestDC.cs" />
+    <Compile Include="Solicitudes\GIEnumEstadosGirosDC.cs" />
+    <Compile Include="Solicitudes\GIEnumEstadosSolGirosDC.cs" />
+    <Compile Include="Solicitudes\GIEnumMotivoSolicitudDC.cs" />
+    <Compile Include="Solicitudes\GIEnumTipoSolicitud.cs" />
+    <Compile Include="Solicitudes\GIInfoCargaInicialSolicitudDC.cs" />
+    <Compile Include="Solicitudes\GIMotivoSolicitudDC.cs" />
+    <Compile Include="Solicitudes\GISolAtendidasDC.cs" />
+    <Compile Include="Solicitudes\GISolCambioDestDC.cs" />
+    <Compile Include="Solicitudes\GISolCambioValorDC.cs" />
+    <Compile Include="Solicitudes\GISolicitdPagoDC.cs" />
+    <Compile Include="Solicitudes\GISolicitudGiroDC.cs" />
+    <Compile Include="Solicitudes\GITipoSolicitudDC.cs" />
+    <Compile Include="OperacionUrbana\OUMensajeroDC.cs" />
+    <Compile Include="Suministros\SUConsolidadoDC.cs" />
+    <Compile Include="Suministros\SUCorreoNotificacionesSumDC.cs" />
+    <Compile Include="Suministros\SUDatosResponsableSuministroDC.cs" />
+    <Compile Include="Suministros\SUEnumEstadoConsumo.cs" />
+    <Compile Include="Suministros\SUCategoriaSuministro.cs" />
+    <Compile Include="Suministros\SUConsumoSuministroDC.cs" />
+    <Compile Include="Suministros\SUEnumCategoria.cs" />
+    <Compile Include="Suministros\SUEnumGrupoSuministroDC.cs" />
+    <Compile Include="Suministros\SUEnumPropietarioGuia.cs" />
+    <Compile Include="Suministros\SUEnumSuministro.cs" />
+    <Compile Include="Suministros\SUFiltroSuministroPorRangoDC.cs" />
+    <Compile Include="Suministros\SUFiltroSuministroPorRemisionDC.cs" />
+    <Compile Include="Suministros\SUFiltroSuministroPorUsuarioDC.cs" />
+    <Compile Include="Suministros\SUGrupoSuministrosDC.cs" />
+    <Compile Include="Suministros\SUImpresionSumCentroServicioDC.cs" />
+    <Compile Include="Suministros\SUImpresionSumGestionDC.cs" />
+    <Compile Include="Suministros\SUImpresionSuministrosDC.cs" />
+    <Compile Include="Suministros\SUImpresionSumMensajeroDC.cs" />
+    <Compile Include="Suministros\SUImpresionSumPadreDC.cs" />
+    <Compile Include="Suministros\SUImpresionSumSucursalDC.cs" />
+    <Compile Include="Suministros\SUModificacionConsolidadoDC.cs" />
+    <Compile Include="Suministros\SUMotivoCambioDC.cs" />
+    <Compile Include="Suministros\SUNumeradorAutomatico.cs" />
+    <Compile Include="Suministros\SUNumeradorPrefijo.cs" />
+    <Compile Include="Suministros\SUPropietarioGuia.cs" />
+    <Compile Include="Suministros\SURango.cs" />
+    <Compile Include="Suministros\SURemisionSuministroDC.cs" />
+    <Compile Include="Suministros\SUSuministro.cs" />
+    <Compile Include="Suministros\SUSuministroCentroServicioDC.cs" />
+    <Compile Include="Suministros\SUSuministrosProcesoDC.cs" />
+    <Compile Include="Suministros\SUSuministroSucursalDC.cs" />
+    <Compile Include="Suministros\SUTamanoTulaDC.cs" />
+    <Compile Include="Suministros\SUTrasladoSuministroDC.cs" />
+    <Compile Include="Tarifas\Adicionales\TACampoTipoValorAdicionalDC.cs" />
+    <Compile Include="Tarifas\Adicionales\TAValorAdicionalValorDC.cs" />
+    <Compile Include="Tarifas\ListaPrecios\TAPrecioMensajariaExpresaDC.cs" />
+    <Compile Include="Tarifas\Precios\TAEnumFormaPago.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioCargaDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioExcepcionDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioMensajeriaDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioRangoDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioRangoImpuestosDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioCentroCorrespondenciaDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPreciosAgrupadosDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioServicioDC.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioTipoEntrega.cs" />
+    <Compile Include="Tarifas\Precios\TAPrecioTramiteDC.cs" />
+    <Compile Include="Tarifas\Servicios\TAEnumServiciosDC.cs" />
+    <Compile Include="Tarifas\Servicios\TARequisitoTramiteDC.cs" />
+    <Compile Include="Tarifas\Servicios\TAServicioCentroDeCorrespondenciaDC.cs" />
+    <Compile Include="Tarifas\Servicios\TAServicioRapiPromocionalDC.cs" />
+    <Compile Include="Tarifas\Servicios\TAServicioTramiteDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaCentroDeCorrespondenciaDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaGirosDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaMensajeriaDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaNotificacionesDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaRapiEnviosContraPagoDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaRapiPromocionalDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaTramitesDC.cs" />
+    <Compile Include="Tarifas\TAHorarioRecogidaCsvDC.cs" />
+    <Compile Include="Tarifas\TAPrecioTarifaMensajeria.cs" />
+    <Compile Include="Tarifas\TATiempoDigitalizacionArchivo.cs" />
+    <Compile Include="Tarifas\TATipoDestino.cs" />
+    <Compile Include="Tarifas\TATipoEntrega.cs" />
+    <Compile Include="Tarifas\TAValorPesoDeclaradoDC.cs" />
+    <Compile Include="Tarifas\Trayectos\TAPrecioTrayectoDC.cs" />
+    <Compile Include="Tarifas\TACuentaExternaDC.cs" />
+    <Compile Include="Tarifas\TAImpuestoDelServicio.cs" />
+    <Compile Include="Tarifas\Impuestos\TAImpuestosDC.cs" />
+    <Compile Include="Tarifas\TAEstadoActivoInactivo.cs" />
+    <Compile Include="Tarifas\TAFormaPago.cs" />
+    <Compile Include="Tarifas\TAFormaPagoServicio.cs" />
+    <Compile Include="Tarifas\Precios\TAListaPrecioDC.cs" />
+    <Compile Include="Tarifas\Precios\TAListaPrecioServicio.cs" />
+    <Compile Include="Tarifas\Precios\TAListaPrecioServicioParametrosDC.cs" />
+    <Compile Include="Tarifas\Precios\TAMonedaDC.cs" />
+    <Compile Include="Tarifas\TAOperadorPostalDC.cs" />
+    <Compile Include="Tarifas\Trayectos\TAPrecioTrayectoMensajeriaDC.cs" />
+    <Compile Include="Tarifas\Trayectos\TAPrecioTrayectoRangoDC.cs" />
+    <Compile Include="Tarifas\Servicios\TARequisitoServicioDC.cs" />
+    <Compile Include="Tarifas\Servicios\TAServicioDC.cs" />
+    <Compile Include="Tarifas\Impuestos\TAServicioImpuestosDC.cs" />
+    <Compile Include="Tarifas\Servicios\TAServicioInternacionalPrecioDC.cs" />
+    <Compile Include="Tarifas\Servicios\TAServicioPesoDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaInternacionalDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaRapiCargaContraPagoDC.cs" />
+    <Compile Include="Tarifas\Servicios\TATarifaRapiCargaDC.cs" />
+    <Compile Include="Tarifas\TATipoEmpaque.cs" />
+    <Compile Include="Tarifas\TATipoEnvio.cs" />
+    <Compile Include="Tarifas\Trayectos\TATipoSubTrayecto.cs" />
+    <Compile Include="Tarifas\Servicios\TATipoTramite.cs" />
+    <Compile Include="Tarifas\Trayectos\TATipoTrayecto.cs" />
+    <Compile Include="Tarifas\Trayectos\TATrayectoDC.cs" />
+    <Compile Include="Tarifas\Trayectos\TATrayectoExcepcionDC.cs" />
+    <Compile Include="Tarifas\Trayectos\TATrayectoMensajeriaDC.cs" />
+    <Compile Include="Tarifas\Trayectos\TATrayectoExcepcionServicioDC.cs" />
+    <Compile Include="Tarifas\Trayectos\TATrayectoSubTrayectoDC.cs" />
+    <Compile Include="Tarifas\Servicios\TAUnidadNegocio.cs" />
+    <Compile Include="Tarifas\Adicionales\TAValorAdicional.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tarifas\Rangos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Servidor\Framework.Servidor.Comun\Framework.Servidor.Comun.csproj">
+      <Project>{AC447191-69A9-4649-AE64-BBCEC693C3DF}</Project>
+      <Name>Framework.Servidor.Comun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Servidor\Framework.Servidor.Servicios.ContratoDatos\Framework.Servidor.Servicios.ContratoDatos.csproj">
+      <Project>{E9D4DC9F-7DFC-4EE7-88EF-78F5688AED71}</Project>
+      <Name>Framework.Servidor.Servicios.ContratoDatos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cajas\CDCajas.cd" />
+    <None Include="Cajas\CDCierrePunto.cd" />
+    <None Include="Facturacion\CDFacturacion.cd" />
+    <None Include="Rutas\Optimizacion\DiagramaOptRutas.cd" />
+    <None Include="Suministros\diagramaSuministros.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Etiquetas.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

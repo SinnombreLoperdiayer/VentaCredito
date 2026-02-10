@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.LogisticaInversa.PruebasEntrega.LIAdministradorPruebasEntrega" Collapsed="true">
+    <Position X="1" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAAIIAAAIAAAAAQQQCAAEAAAAAAAUMAAEUiAA=</HashCode>
+      <FileName>LIAdministradorPruebasEntrega.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.LogisticaInversa.PruebasEntrega.LIConfiguradorPruebasEntrega" Collapsed="true">
+    <Position X="1" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CASAAAABAIIgCAYCAAAAQQQCAAUIAAAAAA1MAAUUiAI=</HashCode>
+      <FileName>LIConfiguradorPruebasEntrega.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.LogisticaInversa.PruebasEntrega.LIFachadaPruebasEntrega" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LIFachadaPruebasEntrega.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CO.Servidor.LogisticaInversa.PruebasEntrega.LIManejadorFallasPruebasEntrega" Collapsed="true">
+    <Position X="4" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQA=</HashCode>
+      <FileName>LIManejadorFallasPruebasEntrega.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

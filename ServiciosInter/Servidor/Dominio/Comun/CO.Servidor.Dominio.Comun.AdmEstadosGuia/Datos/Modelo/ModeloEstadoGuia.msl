@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EstadosGuiaModeloStoreContainer" CdmEntityContainer="EstadosGuiaEntities">
+    <EntitySetMapping Name="PredecesoresEstadoGuia_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.PredecesoresEstadoGuia_MEN">
+        <MappingFragment StoreEntitySet="PredecesoresEstadoGuia_MEN">
+          <ScalarProperty Name="PEG_IdEstadoGuia" ColumnName="PEG_IdEstadoGuia" />
+          <ScalarProperty Name="PEG_IdEstadoGuiaPredecesor" ColumnName="PEG_IdEstadoGuiaPredecesor" />
+          <ScalarProperty Name="PEG_FechaGrabacion" ColumnName="PEG_FechaGrabacion" />
+          <ScalarProperty Name="PEG_CreadoPor" ColumnName="PEG_CreadoPor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoGuia_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.EstadoGuia_MEN">
+        <MappingFragment StoreEntitySet="EstadoGuia_MEN">
+          <ScalarProperty Name="ESG_PermiteDevolver" ColumnName="ESG_PermiteDevolver" />
+          <ScalarProperty Name="ESG_CreadoPor" ColumnName="ESG_CreadoPor" />
+          <ScalarProperty Name="ESG_FechaGrabacion" ColumnName="ESG_FechaGrabacion" />
+          <ScalarProperty Name="ESG_EsVisible" ColumnName="ESG_EsVisible" />
+          <ScalarProperty Name="ESG_Descripcion" ColumnName="ESG_Descripcion" />
+          <ScalarProperty Name="ESG_IdEstadoGuia" ColumnName="ESG_IdEstadoGuia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoGuiaTransicionEstado_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.MotivoGuiaTransicionEstado_MEN">
+        <MappingFragment StoreEntitySet="MotivoGuiaTransicionEstado_MEN">
+          <ScalarProperty Name="MGT_CreadoPor" ColumnName="MGT_CreadoPor" />
+          <ScalarProperty Name="MGT_FechaGrabacion" ColumnName="MGT_FechaGrabacion" />
+          <ScalarProperty Name="MGT_IdEstadoGuiaHasta" ColumnName="MGT_IdEstadoGuiaHasta" />
+          <ScalarProperty Name="MGT_IdEstadoGuiaDesde" ColumnName="MGT_IdEstadoGuiaDesde" />
+          <ScalarProperty Name="MGT_IdMotivoGuia" ColumnName="MGT_IdMotivoGuia" />
+          <ScalarProperty Name="MGT_IdMotivoGuiaTransicionEsta" ColumnName="MGT_IdMotivoGuiaTransicionEsta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoGuiaTraza_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.EstadoGuiaTraza_MEN">
+        <MappingFragment StoreEntitySet="EstadoGuiaTraza_MEN">
+          <ScalarProperty Name="EGT_CreadoPor" ColumnName="EGT_CreadoPor" />
+          <ScalarProperty Name="EGT_FechaGrabacion" ColumnName="EGT_FechaGrabacion" />
+          <ScalarProperty Name="EGT_IdModulo" ColumnName="EGT_IdModulo" />
+          <ScalarProperty Name="EGT_NombreLocalidad" ColumnName="EGT_NombreLocalidad" />
+          <ScalarProperty Name="EGT_IdLocalidad" ColumnName="EGT_IdLocalidad" />
+          <ScalarProperty Name="EGT_Observacion" ColumnName="EGT_Observacion" />
+          <ScalarProperty Name="EGT_EsVisible" ColumnName="EGT_EsVisible" />
+          <ScalarProperty Name="EGT_DescripcionEstado" ColumnName="EGT_DescripcionEstado" />
+          <ScalarProperty Name="EGT_IdEstadoGuia" ColumnName="EGT_IdEstadoGuia" />
+          <ScalarProperty Name="EGT_NumeroGuia" ColumnName="EGT_NumeroGuia" />
+          <ScalarProperty Name="EGT_IdAdminisionMensajeria" ColumnName="EGT_IdAdminisionMensajeria" />
+          <ScalarProperty Name="EGT_IdEstadoGuiaLog" ColumnName="EGT_IdEstadoGuiaLog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoNovedad_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.TipoNovedad_MEN">
+        <MappingFragment StoreEntitySet="TipoNovedad_MEN">
+          <ScalarProperty Name="TNV_FechaGrabacion" ColumnName="TNV_FechaGrabacion" />
+          <ScalarProperty Name="TNV_CreadoPor" ColumnName="TNV_CreadoPor" />
+          <ScalarProperty Name="TNV_Descripcion" ColumnName="TNV_Descripcion" />
+          <ScalarProperty Name="TNV_IdTipoNovedad" ColumnName="TNV_IdTipoNovedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoNovedadGuia_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.TipoNovedadGuia_MEN">
+        <MappingFragment StoreEntitySet="TipoNovedadGuia_MEN">
+          <ScalarProperty Name="TNG_CreadoPor" ColumnName="TNG_CreadoPor" />
+          <ScalarProperty Name="TNG_FechaGrabacion" ColumnName="TNG_FechaGrabacion" />
+          <ScalarProperty Name="TNG_TiempoAfectacion" ColumnName="TNG_TiempoAfectacion" />
+          <ScalarProperty Name="TNG_IdModulo" ColumnName="TNG_IdModulo" />
+          <ScalarProperty Name="TNG_Estado" ColumnName="TNG_Estado" />
+          <ScalarProperty Name="TNG_Descripcion" ColumnName="TNG_Descripcion" />
+          <ScalarProperty Name="TNG_IdTipoNovedad" ColumnName="TNG_IdTipoNovedad" />
+          <ScalarProperty Name="TNG_IdTipoNovedadGuia" ColumnName="TNG_IdTipoNovedadGuia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CambioFechaEntrega_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.CambioFechaEntrega_MEN">
+        <MappingFragment StoreEntitySet="CambioFechaEntrega_MEN">
+          <ScalarProperty Name="CFE_FechaGrabacion" ColumnName="CFE_FechaGrabacion" />
+          <ScalarProperty Name="CFE_CreadoPor" ColumnName="CFE_CreadoPor" />
+          <ScalarProperty Name="CFE_FechaEntregaFinal" ColumnName="CFE_FechaEntregaFinal" />
+          <ScalarProperty Name="CFE_FechaEntregaInicial" ColumnName="CFE_FechaEntregaInicial" />
+          <ScalarProperty Name="CFE_TiempoAfectacion" ColumnName="CFE_TiempoAfectacion" />
+          <ScalarProperty Name="CFE_NumeroGuia" ColumnName="CFE_NumeroGuia" />
+          <ScalarProperty Name="CFE_IdCambioFechaEntrega" ColumnName="CFE_IdCambioFechaEntrega" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoGuia_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.MotivoGuia_MEN">
+        <MappingFragment StoreEntitySet="MotivoGuia_MEN">
+          <ScalarProperty Name="MOG_TiempoAfectacion" ColumnName="MOG_TiempoAfectacion" />
+          <ScalarProperty Name="MOG_NombreClase" ColumnName="MOG_NombreClase" />
+          <ScalarProperty Name="MOG_Namespace" ColumnName="MOG_Namespace" />
+          <ScalarProperty Name="MOG_NombreAssembly" ColumnName="MOG_NombreAssembly" />
+          <ScalarProperty Name="MOG_CausaSupervision" ColumnName="MOG_CausaSupervision" />
+          <ScalarProperty Name="MOG_IdMotivoGuiaCRC" ColumnName="MOG_IdMotivoGuiaCRC" />
+          <ScalarProperty Name="MOG_CreadoPor" ColumnName="MOG_CreadoPor" />
+          <ScalarProperty Name="MOG_FechaGrabacion" ColumnName="MOG_FechaGrabacion" />
+          <ScalarProperty Name="MOG_SolicitaEscaneo" ColumnName="MOG_SolicitaEscaneo" />
+          <ScalarProperty Name="MOG_SeReporta" ColumnName="MOG_SeReporta" />
+          <ScalarProperty Name="MOG_EsVisible" ColumnName="MOG_EsVisible" />
+          <ScalarProperty Name="MOG_IdTipoMotivoGuia" ColumnName="MOG_IdTipoMotivoGuia" />
+          <ScalarProperty Name="MOG_Descripcion" ColumnName="MOG_Descripcion" />
+          <ScalarProperty Name="MOG_IdMotivoGuia" ColumnName="MOG_IdMotivoGuia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoGuiaCRC_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.MotivoGuiaCRC_MEN">
+        <MappingFragment StoreEntitySet="MotivoGuiaCRC_MEN">
+          <ScalarProperty Name="MGC_CreadoPor" ColumnName="MGC_CreadoPor" />
+          <ScalarProperty Name="MGC_FechaGrabacion" ColumnName="MGC_FechaGrabacion" />
+          <ScalarProperty Name="MGC_Descripcion" ColumnName="MGC_Descripcion" />
+          <ScalarProperty Name="MGC_IdMotivoGuiaCRC" ColumnName="MGC_IdMotivoGuiaCRC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoMotivoGuia_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.TipoMotivoGuia_MEN">
+        <MappingFragment StoreEntitySet="TipoMotivoGuia_MEN">
+          <ScalarProperty Name="TMG_CreadoPor" ColumnName="TMG_CreadoPor" />
+          <ScalarProperty Name="TMG_FechaGrabacion" ColumnName="TMG_FechaGrabacion" />
+          <ScalarProperty Name="TMG_Descripcion" ColumnName="TMG_Descripcion" />
+          <ScalarProperty Name="TMG_IdTipoMotivoGuia" ColumnName="TMG_IdTipoMotivoGuia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoEvidenciaDevolucion_MEN">
+      <EntityTypeMapping TypeName="EstadosGuiaModelo.TipoEvidenciaDevolucion_MEN">
+        <MappingFragment StoreEntitySet="TipoEvidenciaDevolucion_MEN">
+          <ScalarProperty Name="TIV_CreadoPor" ColumnName="TIV_CreadoPor" />
+          <ScalarProperty Name="TIV_FechaGrabacion" ColumnName="TIV_FechaGrabacion" />
+          <ScalarProperty Name="TIV_IdSuministro" ColumnName="TIV_IdSuministro" />
+          <ScalarProperty Name="TIV_Descripcion" ColumnName="TIV_Descripcion" />
+          <ScalarProperty Name="TIV_IdTipoEvidenciaDevolucion" ColumnName="TIV_IdTipoEvidenciaDevolucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

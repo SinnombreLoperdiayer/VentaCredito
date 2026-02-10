@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CO.Servidor.OperacionUrbana.OUAdministradorOperacionUrbana" Collapsed="true">
+    <Position X="1.25" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>Ti0IARgEkYACDFgBC0UIwAiCAJARAIEiAAQEEYQkpBA=</HashCode>
+      <FileName>OUAdministradorOperacionUrbana.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionUrbana.OUManejadorIngreso" Collapsed="true">
+    <Position X="1.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAAAACAAAgEAAACAAAACAAAAAAAAAYAEAAA=</HashCode>
+      <FileName>OUManejadorIngreso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionUrbana.OUPlanillaVentas" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAQEIAA=</HashCode>
+      <FileName>OUPlanillaVentas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionUrbana.OUFachadaOperacionUrbana" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>RAQAAAAAAAIAAAAAAAAAQAAAAAAAAAAAAAQAAAEUCAA=</HashCode>
+      <FileName>OUFachadaOperacionUrbana.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CO.Servidor.OperacionUrbana.OUManejadorFallas" Collapsed="true">
+    <Position X="7" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAABAAAAAACAAAAAIAAAAABAAAEAA=</HashCode>
+      <FileName>OUManejadorFallas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionUrbana.OUMensajero" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAIAABAAAAAAAAAAAAAAAAAACAAAAAAAEAAA=</HashCode>
+      <FileName>OUMensajero.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionUrbana.OURecogidas" Collapsed="true">
+    <Position X="1.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQIAQAEkAAAABAACUQAAAAAAIARAIAgAAAEEAAkoAA=</HashCode>
+      <FileName>OURecogidas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CO.Servidor.OperacionUrbana.PruebaEntrega.OUPruebasEntrega" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAIAAAACAAAAAAAAAAQAAAAAAAQAAAEUCAI=</HashCode>
+      <FileName>PruebaEntrega\OUPruebasEntrega.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CO.Servidor.Dominio.Comun.OperacionUrbana.IOUFachadaOperacionUrbana" Collapsed="true">
+    <Position X="1.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

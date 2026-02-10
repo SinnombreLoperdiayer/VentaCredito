@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloAreas.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloAreasStoreContainer">
+    <EntitySet Name="Banco_PAR" EntityType="ModeloAreas.Store.Banco_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BancoCasaMatriz_ARE" EntityType="ModeloAreas.Store.BancoCasaMatriz_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CasaMatriz_ARE" EntityType="ModeloAreas.Store.CasaMatriz_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CuentaBancoCasaMatriz_ARE" EntityType="ModeloAreas.Store.CuentaBancoCasaMatriz_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Gestion_ARE" EntityType="ModeloAreas.Store.Gestion_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MacroProceso_ARE" EntityType="ModeloAreas.Store.MacroProceso_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proceso_ARE" EntityType="ModeloAreas.Store.Proceso_ARE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoCuentaBanco_PAR" EntityType="ModeloAreas.Store.TipoCuentaBanco_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CasaMatriz_VARE" EntityType="ModeloAreas.Store.CasaMatriz_VARE" store:Type="Views" store:Schema="dbo" store:Name="CasaMatriz_VARE">
+      <DefiningQuery>SELECT 
+      [CasaMatriz_VARE].[CAM_IdCasaMatriz] AS [CAM_IdCasaMatriz], 
+      [CasaMatriz_VARE].[CAM_Nombre] AS [CAM_Nombre], 
+      [CasaMatriz_VARE].[CAM_Nit] AS [CAM_Nit], 
+      [CasaMatriz_VARE].[CAM_DigitoVerificacion] AS [CAM_DigitoVerificacion], 
+      [CasaMatriz_VARE].[CAM_CodigoSucursalERP] AS [CAM_CodigoSucursalERP], 
+      [CasaMatriz_VARE].[CAM_Sigla] AS [CAM_Sigla], 
+      [CasaMatriz_VARE].[CAM_Direccion] AS [CAM_Direccion], 
+      [CasaMatriz_VARE].[CAM_Telefono] AS [CAM_Telefono], 
+      [CasaMatriz_VARE].[CAM_IdLocalidad] AS [CAM_IdLocalidad], 
+      [CasaMatriz_VARE].[CAM_CentroCostos] AS [CAM_CentroCostos], 
+      [CasaMatriz_VARE].[CAM_CodigoMinisterio] AS [CAM_CodigoMinisterio], 
+      [CasaMatriz_VARE].[CAM_Estado] AS [CAM_Estado], 
+      [CasaMatriz_VARE].[NombreCompletoLocalidad] AS [NombreCompletoLocalidad]
+      FROM [dbo].[CasaMatriz_VARE] AS [CasaMatriz_VARE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CasaMatrizCuentaBanco_VARE" EntityType="ModeloAreas.Store.CasaMatrizCuentaBanco_VARE" store:Type="Views" store:Schema="dbo" store:Name="CasaMatrizCuentaBanco_VARE">
+      <DefiningQuery>SELECT 
+      [CasaMatrizCuentaBanco_VARE].[CAM_IdCasaMatriz] AS [CAM_IdCasaMatriz], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_Nombre] AS [CAM_Nombre], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_Nit] AS [CAM_Nit], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_DigitoVerificacion] AS [CAM_DigitoVerificacion], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_CodigoSucursalERP] AS [CAM_CodigoSucursalERP], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_Sigla] AS [CAM_Sigla], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_Direccion] AS [CAM_Direccion], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_Telefono] AS [CAM_Telefono], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_IdLocalidad] AS [CAM_IdLocalidad], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_CentroCostos] AS [CAM_CentroCostos], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_CodigoMinisterio] AS [CAM_CodigoMinisterio], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_Estado] AS [CAM_Estado], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_FechaGrabacion] AS [CAM_FechaGrabacion], 
+      [CasaMatrizCuentaBanco_VARE].[CAM_CreadoPor] AS [CAM_CreadoPor], 
+      [CasaMatrizCuentaBanco_VARE].[BAE_IdBanco] AS [BAE_IdBanco], 
+      [CasaMatrizCuentaBanco_VARE].[BAN_Descripcion] AS [BAN_Descripcion], 
+      [CasaMatrizCuentaBanco_VARE].[CBE_IdCuentaBanco] AS [CBE_IdCuentaBanco], 
+      [CasaMatrizCuentaBanco_VARE].[CBE_IdBancoEmpresa] AS [CBE_IdBancoEmpresa], 
+      [CasaMatrizCuentaBanco_VARE].[CBE_NumeroCuenta] AS [CBE_NumeroCuenta], 
+      [CasaMatrizCuentaBanco_VARE].[CBE_TipoCuenta] AS [CBE_TipoCuenta], 
+      [CasaMatrizCuentaBanco_VARE].[CBE_FechaGrabacion] AS [CBE_FechaGrabacion], 
+      [CasaMatrizCuentaBanco_VARE].[CBE_CreadoPor] AS [CBE_CreadoPor], 
+      [CasaMatrizCuentaBanco_VARE].[TCB_Descripcion] AS [TCB_Descripcion]
+      FROM [dbo].[CasaMatrizCuentaBanco_VARE] AS [CasaMatrizCuentaBanco_VARE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="GestionesCasaMatriz_VARE" EntityType="ModeloAreas.Store.GestionesCasaMatriz_VARE" store:Type="Views" store:Schema="dbo" store:Name="GestionesCasaMatriz_VARE">
+      <DefiningQuery>SELECT 
+      [GestionesCasaMatriz_VARE].[CAM_IdCasaMatriz] AS [CAM_IdCasaMatriz], 
+      [GestionesCasaMatriz_VARE].[CAM_Nombre] AS [CAM_Nombre], 
+      [GestionesCasaMatriz_VARE].[MAP_IdMacroProceso] AS [MAP_IdMacroProceso], 
+      [GestionesCasaMatriz_VARE].[MAP_Descripcion] AS [MAP_Descripcion], 
+      [GestionesCasaMatriz_VARE].[GES_CodigoGestion] AS [GES_CodigoGestion], 
+      [GestionesCasaMatriz_VARE].[GES_IdGestion] AS [GES_IdGestion], 
+      [GestionesCasaMatriz_VARE].[GES_Descripcion] AS [GES_Descripcion], 
+      [GestionesCasaMatriz_VARE].[GES_CentroCostos] AS [GES_CentroCostos], 
+      [GestionesCasaMatriz_VARE].[GES_CodigoBodegaERP] AS [GES_CodigoBodegaERP]
+      FROM [dbo].[GestionesCasaMatriz_VARE] AS [GestionesCasaMatriz_VARE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ProcesosCasaMatriz_VARE" EntityType="ModeloAreas.Store.ProcesosCasaMatriz_VARE" store:Type="Views" store:Schema="dbo" store:Name="ProcesosCasaMatriz_VARE">
+      <DefiningQuery>SELECT 
+      [ProcesosCasaMatriz_VARE].[CAM_IdCasaMatriz] AS [CAM_IdCasaMatriz], 
+      [ProcesosCasaMatriz_VARE].[CAM_Nombre] AS [CAM_Nombre], 
+      [ProcesosCasaMatriz_VARE].[MAP_IdMacroProceso] AS [MAP_IdMacroProceso], 
+      [ProcesosCasaMatriz_VARE].[MAP_Descripcion] AS [MAP_Descripcion], 
+      [ProcesosCasaMatriz_VARE].[GES_CodigoGestion] AS [GES_CodigoGestion], 
+      [ProcesosCasaMatriz_VARE].[GES_IdGestion] AS [GES_IdGestion], 
+      [ProcesosCasaMatriz_VARE].[GES_Descripcion] AS [GES_Descripcion], 
+      [ProcesosCasaMatriz_VARE].[GES_CentroCostos] AS [GES_CentroCostos], 
+      [ProcesosCasaMatriz_VARE].[GES_CodigoBodegaERP] AS [GES_CodigoBodegaERP], 
+      [ProcesosCasaMatriz_VARE].[PRO_IdProceso] AS [PRO_IdProceso], 
+      [ProcesosCasaMatriz_VARE].[PRO_IdCodigoProceso] AS [PRO_IdCodigoProceso], 
+      [ProcesosCasaMatriz_VARE].[PRO_Descripcion] AS [PRO_Descripcion], 
+      [ProcesosCasaMatriz_VARE].[PRO_CodigoGestion] AS [PRO_CodigoGestion], 
+      [ProcesosCasaMatriz_VARE].[PRO_CentroCostos] AS [PRO_CentroCostos], 
+      [ProcesosCasaMatriz_VARE].[PRO_CodigoBodegaERP] AS [PRO_CodigoBodegaERP], 
+      [ProcesosCasaMatriz_VARE].[CAM_Nit] AS [CAM_Nit], 
+      [ProcesosCasaMatriz_VARE].[CAM_DigitoVerificacion] AS [CAM_DigitoVerificacion], 
+      [ProcesosCasaMatriz_VARE].[CAM_CodigoSucursalERP] AS [CAM_CodigoSucursalERP], 
+      [ProcesosCasaMatriz_VARE].[CAM_Sigla] AS [CAM_Sigla], 
+      [ProcesosCasaMatriz_VARE].[CAM_Direccion] AS [CAM_Direccion], 
+      [ProcesosCasaMatriz_VARE].[CAM_Telefono] AS [CAM_Telefono], 
+      [ProcesosCasaMatriz_VARE].[CAM_IdLocalidad] AS [CAM_IdLocalidad], 
+      [ProcesosCasaMatriz_VARE].[CAM_CentroCostos] AS [CAM_CentroCostos], 
+      [ProcesosCasaMatriz_VARE].[CAM_CodigoMinisterio] AS [CAM_CodigoMinisterio], 
+      [ProcesosCasaMatriz_VARE].[CAM_Estado] AS [CAM_Estado], 
+      [ProcesosCasaMatriz_VARE].[LOC_Nombre] AS [LOC_Nombre], 
+      [ProcesosCasaMatriz_VARE].[LOC_NombreCorto] AS [LOC_NombreCorto], 
+      [ProcesosCasaMatriz_VARE].[NombreCompleto] AS [NombreCompleto]
+      FROM [dbo].[ProcesosCasaMatriz_VARE] AS [ProcesosCasaMatriz_VARE]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_BancoEmpresa_PAR_Banco_PAR" Association="ModeloAreas.Store.FK_BancoEmpresa_PAR_Banco_PAR">
+      <End Role="Banco_PAR" EntitySet="Banco_PAR" />
+      <End Role="BancoCasaMatriz_ARE" EntitySet="BancoCasaMatriz_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BancoEmpresa_PAR_Empresa_PAR" Association="ModeloAreas.Store.FK_BancoEmpresa_PAR_Empresa_PAR">
+      <End Role="CasaMatriz_ARE" EntitySet="CasaMatriz_ARE" />
+      <End Role="BancoCasaMatriz_ARE" EntitySet="BancoCasaMatriz_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaBancoEmpresa_PAR_BancoEmpresa_PAR" Association="ModeloAreas.Store.FK_CuentaBancoEmpresa_PAR_BancoEmpresa_PAR">
+      <End Role="BancoCasaMatriz_ARE" EntitySet="BancoCasaMatriz_ARE" />
+      <End Role="CuentaBancoCasaMatriz_ARE" EntitySet="CuentaBancoCasaMatriz_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaBancoEmpresa_PAR_TipoCuentaBanco_PAR" Association="ModeloAreas.Store.FK_CuentaBancoEmpresa_PAR_TipoCuentaBanco_PAR">
+      <End Role="TipoCuentaBanco_PAR" EntitySet="TipoCuentaBanco_PAR" />
+      <End Role="CuentaBancoCasaMatriz_ARE" EntitySet="CuentaBancoCasaMatriz_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gestion_ARE_MacroProceso_ARE" Association="ModeloAreas.Store.FK_Gestion_ARE_MacroProceso_ARE">
+      <End Role="MacroProceso_ARE" EntitySet="MacroProceso_ARE" />
+      <End Role="Gestion_ARE" EntitySet="Gestion_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MacroProceso_ARE_CasaMatriz_ARE" Association="ModeloAreas.Store.FK_MacroProceso_ARE_CasaMatriz_ARE">
+      <End Role="CasaMatriz_ARE" EntitySet="CasaMatriz_ARE" />
+      <End Role="MacroProceso_ARE" EntitySet="MacroProceso_ARE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proceso_ARE_Gestion_ARE" Association="ModeloAreas.Store.FK_Proceso_ARE_Gestion_ARE">
+      <End Role="Gestion_ARE" EntitySet="Gestion_ARE" />
+      <End Role="Proceso_ARE" EntitySet="Proceso_ARE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Banco_PAR">
+    <Key>
+      <PropertyRef Name="BAN_IdBanco" />
+    </Key>
+    <Property Name="BAN_IdBanco" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="BAN_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BAN_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="BAN_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BancoCasaMatriz_ARE">
+    <Key>
+      <PropertyRef Name="BAE_IdBancoCasaMatriz" />
+    </Key>
+    <Property Name="BAE_IdBancoCasaMatriz" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BAE_IdBanco" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="BAE_IdEmpresa" Type="smallint" Nullable="false" />
+    <Property Name="BAE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="BAE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CasaMatriz_ARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+    </Key>
+    <Property Name="CAM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAM_Nit" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CAM_CodigoSucursalERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Sigla" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CAM_Telefono" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CAM_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CAM_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_CodigoMinisterio" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CAM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CuentaBancoCasaMatriz_ARE">
+    <Key>
+      <PropertyRef Name="CBE_IdCuentaBanco" />
+    </Key>
+    <Property Name="CBE_IdCuentaBanco" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CBE_IdBancoEmpresa" Type="smallint" Nullable="false" />
+    <Property Name="CBE_NumeroCuenta" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CBE_TipoCuenta" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CBE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CBE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Gestion_ARE">
+    <Key>
+      <PropertyRef Name="GES_CodigoGestion" />
+    </Key>
+    <Property Name="GES_CodigoGestion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GES_IdGestion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="GES_IdMacroProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_CodigoBodegaERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="GES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="MacroProceso_ARE">
+    <Key>
+      <PropertyRef Name="MAP_IdMacroProceso" />
+    </Key>
+    <Property Name="MAP_IdMacroProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MAP_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAP_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="MAP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="MAP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Proceso_ARE">
+    <Key>
+      <PropertyRef Name="PRO_IdProceso" />
+    </Key>
+    <Property Name="PRO_IdProceso" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PRO_IdCodigoProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PRO_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PRO_CodigoGestion" Type="bigint" Nullable="false" />
+    <Property Name="PRO_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PRO_CodigoBodegaERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PRO_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PRO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TipoCuentaBanco_PAR">
+    <Key>
+      <PropertyRef Name="TCB_IdTipoCuenta" />
+    </Key>
+    <Property Name="TCB_IdTipoCuenta" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TCB_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="TCB_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TCB_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.CasaMatriz_VARE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CasaMatriz_VARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="CAM_Nit" />
+      <PropertyRef Name="CAM_DigitoVerificacion" />
+      <PropertyRef Name="CAM_CodigoSucursalERP" />
+      <PropertyRef Name="CAM_Sigla" />
+      <PropertyRef Name="CAM_Direccion" />
+      <PropertyRef Name="CAM_Telefono" />
+      <PropertyRef Name="CAM_IdLocalidad" />
+      <PropertyRef Name="CAM_CentroCostos" />
+      <PropertyRef Name="CAM_CodigoMinisterio" />
+      <PropertyRef Name="CAM_Estado" />
+    </Key>
+    <Property Name="CAM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAM_Nit" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CAM_CodigoSucursalERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Sigla" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CAM_Telefono" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CAM_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CAM_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_CodigoMinisterio" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="NombreCompletoLocalidad" Type="varchar" MaxLength="110" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.CasaMatrizCuentaBanco_VARE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CasaMatrizCuentaBanco_VARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="CAM_Nit" />
+      <PropertyRef Name="CAM_DigitoVerificacion" />
+      <PropertyRef Name="CAM_CodigoSucursalERP" />
+      <PropertyRef Name="CAM_Sigla" />
+      <PropertyRef Name="CAM_Direccion" />
+      <PropertyRef Name="CAM_Telefono" />
+      <PropertyRef Name="CAM_IdLocalidad" />
+      <PropertyRef Name="CAM_CentroCostos" />
+      <PropertyRef Name="CAM_CodigoMinisterio" />
+      <PropertyRef Name="CAM_Estado" />
+      <PropertyRef Name="CAM_FechaGrabacion" />
+      <PropertyRef Name="CAM_CreadoPor" />
+      <PropertyRef Name="BAE_IdBanco" />
+      <PropertyRef Name="BAN_Descripcion" />
+      <PropertyRef Name="CBE_IdCuentaBanco" />
+      <PropertyRef Name="CBE_IdBancoEmpresa" />
+      <PropertyRef Name="CBE_NumeroCuenta" />
+      <PropertyRef Name="CBE_TipoCuenta" />
+      <PropertyRef Name="CBE_FechaGrabacion" />
+      <PropertyRef Name="CBE_CreadoPor" />
+      <PropertyRef Name="TCB_Descripcion" />
+    </Key>
+    <Property Name="CAM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAM_Nit" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CAM_CodigoSucursalERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Sigla" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CAM_Telefono" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CAM_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CAM_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_CodigoMinisterio" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CAM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="BAE_IdBanco" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="BAN_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CBE_IdCuentaBanco" Type="smallint" Nullable="false" />
+    <Property Name="CBE_IdBancoEmpresa" Type="smallint" Nullable="false" />
+    <Property Name="CBE_NumeroCuenta" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CBE_TipoCuenta" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CBE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CBE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="TCB_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.GestionesCasaMatriz_VARE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="GestionesCasaMatriz_VARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="MAP_IdMacroProceso" />
+      <PropertyRef Name="MAP_Descripcion" />
+      <PropertyRef Name="GES_CodigoGestion" />
+      <PropertyRef Name="GES_IdGestion" />
+      <PropertyRef Name="GES_Descripcion" />
+      <PropertyRef Name="GES_CentroCostos" />
+      <PropertyRef Name="GES_CodigoBodegaERP" />
+    </Key>
+    <Property Name="CAM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAP_IdMacroProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MAP_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="GES_CodigoGestion" Type="bigint" Nullable="false" />
+    <Property Name="GES_IdGestion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="GES_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_CodigoBodegaERP" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'DESARROLLO.dbo.ProcesosCasaMatriz_VARE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ProcesosCasaMatriz_VARE">
+    <Key>
+      <PropertyRef Name="CAM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="MAP_IdMacroProceso" />
+      <PropertyRef Name="MAP_Descripcion" />
+      <PropertyRef Name="GES_CodigoGestion" />
+      <PropertyRef Name="GES_IdGestion" />
+      <PropertyRef Name="GES_Descripcion" />
+      <PropertyRef Name="GES_CentroCostos" />
+      <PropertyRef Name="GES_CodigoBodegaERP" />
+      <PropertyRef Name="PRO_IdProceso" />
+      <PropertyRef Name="PRO_IdCodigoProceso" />
+      <PropertyRef Name="PRO_Descripcion" />
+      <PropertyRef Name="PRO_CodigoGestion" />
+      <PropertyRef Name="PRO_CentroCostos" />
+      <PropertyRef Name="PRO_CodigoBodegaERP" />
+      <PropertyRef Name="CAM_Nit" />
+      <PropertyRef Name="CAM_DigitoVerificacion" />
+      <PropertyRef Name="CAM_CodigoSucursalERP" />
+      <PropertyRef Name="CAM_Sigla" />
+      <PropertyRef Name="CAM_Direccion" />
+      <PropertyRef Name="CAM_Telefono" />
+      <PropertyRef Name="CAM_IdLocalidad" />
+      <PropertyRef Name="CAM_CentroCostos" />
+      <PropertyRef Name="CAM_CodigoMinisterio" />
+      <PropertyRef Name="CAM_Estado" />
+      <PropertyRef Name="LOC_Nombre" />
+      <PropertyRef Name="LOC_NombreCorto" />
+    </Key>
+    <Property Name="CAM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MAP_IdMacroProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="MAP_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="GES_CodigoGestion" Type="bigint" Nullable="false" />
+    <Property Name="GES_IdGestion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="GES_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GES_CodigoBodegaERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PRO_IdProceso" Type="bigint" Nullable="false" />
+    <Property Name="PRO_IdCodigoProceso" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PRO_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PRO_CodigoGestion" Type="bigint" Nullable="false" />
+    <Property Name="PRO_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PRO_CodigoBodegaERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Nit" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CAM_CodigoSucursalERP" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Sigla" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CAM_Telefono" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="CAM_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CAM_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_CodigoMinisterio" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="LOC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="LOC_NombreCorto" Type="varchar" Nullable="false" MaxLength="4" />
+    <Property Name="NombreCompleto" Type="varchar" MaxLength="110" />
+  </EntityType>
+  <Association Name="FK_BancoEmpresa_PAR_Banco_PAR">
+    <End Role="Banco_PAR" Type="ModeloAreas.Store.Banco_PAR" Multiplicity="1" />
+    <End Role="BancoCasaMatriz_ARE" Type="ModeloAreas.Store.BancoCasaMatriz_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco_PAR">
+        <PropertyRef Name="BAN_IdBanco" />
+      </Principal>
+      <Dependent Role="BancoCasaMatriz_ARE">
+        <PropertyRef Name="BAE_IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BancoEmpresa_PAR_Empresa_PAR">
+    <End Role="CasaMatriz_ARE" Type="ModeloAreas.Store.CasaMatriz_ARE" Multiplicity="1" />
+    <End Role="BancoCasaMatriz_ARE" Type="ModeloAreas.Store.BancoCasaMatriz_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasaMatriz_ARE">
+        <PropertyRef Name="CAM_IdCasaMatriz" />
+      </Principal>
+      <Dependent Role="BancoCasaMatriz_ARE">
+        <PropertyRef Name="BAE_IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaBancoEmpresa_PAR_BancoEmpresa_PAR">
+    <End Role="BancoCasaMatriz_ARE" Type="ModeloAreas.Store.BancoCasaMatriz_ARE" Multiplicity="1" />
+    <End Role="CuentaBancoCasaMatriz_ARE" Type="ModeloAreas.Store.CuentaBancoCasaMatriz_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BancoCasaMatriz_ARE">
+        <PropertyRef Name="BAE_IdBancoCasaMatriz" />
+      </Principal>
+      <Dependent Role="CuentaBancoCasaMatriz_ARE">
+        <PropertyRef Name="CBE_IdBancoEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaBancoEmpresa_PAR_TipoCuentaBanco_PAR">
+    <End Role="TipoCuentaBanco_PAR" Type="ModeloAreas.Store.TipoCuentaBanco_PAR" Multiplicity="1" />
+    <End Role="CuentaBancoCasaMatriz_ARE" Type="ModeloAreas.Store.CuentaBancoCasaMatriz_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCuentaBanco_PAR">
+        <PropertyRef Name="TCB_IdTipoCuenta" />
+      </Principal>
+      <Dependent Role="CuentaBancoCasaMatriz_ARE">
+        <PropertyRef Name="CBE_TipoCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gestion_ARE_MacroProceso_ARE">
+    <End Role="MacroProceso_ARE" Type="ModeloAreas.Store.MacroProceso_ARE" Multiplicity="1" />
+    <End Role="Gestion_ARE" Type="ModeloAreas.Store.Gestion_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MacroProceso_ARE">
+        <PropertyRef Name="MAP_IdMacroProceso" />
+      </Principal>
+      <Dependent Role="Gestion_ARE">
+        <PropertyRef Name="GES_IdMacroProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MacroProceso_ARE_CasaMatriz_ARE">
+    <End Role="CasaMatriz_ARE" Type="ModeloAreas.Store.CasaMatriz_ARE" Multiplicity="1" />
+    <End Role="MacroProceso_ARE" Type="ModeloAreas.Store.MacroProceso_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CasaMatriz_ARE">
+        <PropertyRef Name="CAM_IdCasaMatriz" />
+      </Principal>
+      <Dependent Role="MacroProceso_ARE">
+        <PropertyRef Name="MAP_IdCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proceso_ARE_Gestion_ARE">
+    <End Role="Gestion_ARE" Type="ModeloAreas.Store.Gestion_ARE" Multiplicity="1" />
+    <End Role="Proceso_ARE" Type="ModeloAreas.Store.Proceso_ARE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gestion_ARE">
+        <PropertyRef Name="GES_CodigoGestion" />
+      </Principal>
+      <Dependent Role="Proceso_ARE">
+        <PropertyRef Name="PRO_CodigoGestion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

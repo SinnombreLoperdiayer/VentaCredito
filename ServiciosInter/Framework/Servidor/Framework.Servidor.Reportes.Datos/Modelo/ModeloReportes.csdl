@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloReportes" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EntidadesReportes" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdministradorReportes_REP" EntityType="ModeloReportes.AdministradorReportes_REP" />
+    <EntitySet Name="ReportesRol_REP" EntityType="ModeloReportes.ReportesRol_REP" />
+    <AssociationSet Name="FK_ReportesRol_REP_AdministradorReportes_REP" Association="ModeloReportes.FK_ReportesRol_REP_AdministradorReportes_REP">
+      <End Role="AdministradorReportes_REP" EntitySet="AdministradorReportes_REP" />
+      <End Role="ReportesRol_REP" EntitySet="ReportesRol_REP" />
+    </AssociationSet>
+    <EntitySet Name="Rol_SEG" EntityType="ModeloReportes.Rol_SEG" />
+    <EntitySet Name="Usuario_SEG" EntityType="ModeloReportes.Usuario_SEG" />
+    <EntitySet Name="UsuarioRol_SEG" EntityType="ModeloReportes.UsuarioRol_SEG" />
+    <AssociationSet Name="FK_ReportesRol_REP_Rol_SEG" Association="ModeloReportes.FK_ReportesRol_REP_Rol_SEG">
+      <End Role="Rol_SEG" EntitySet="Rol_SEG" />
+      <End Role="ReportesRol_REP" EntitySet="ReportesRol_REP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioRol_SEG_Rol_SEG" Association="ModeloReportes.FK_UsuarioRol_SEG_Rol_SEG">
+      <End Role="Rol_SEG" EntitySet="Rol_SEG" />
+      <End Role="UsuarioRol_SEG" EntitySet="UsuarioRol_SEG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuarioRol_SEG_Usuario_SEG" Association="ModeloReportes.FK_UsuarioRol_SEG_Usuario_SEG">
+      <End Role="Usuario_SEG" EntitySet="Usuario_SEG" />
+      <End Role="UsuarioRol_SEG" EntitySet="UsuarioRol_SEG" />
+    </AssociationSet>
+    <EntitySet Name="ParametrosFramework" EntityType="ModeloReportes.ParametrosFramework" />
+  </EntityContainer>
+  <EntityType Name="AdministradorReportes_REP">
+    <Key>
+      <PropertyRef Name="ADR_IdReporte" />
+    </Key>
+    <Property Type="Int32" Name="ADR_IdReporte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ADR_IdModulo" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ADR_NombreReporte" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADR_ReportPath" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ADR_ReportServerUrl" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ADR_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="ADR_CreadoPor" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="ReportesRol_REP" Relationship="ModeloReportes.FK_ReportesRol_REP_AdministradorReportes_REP" FromRole="AdministradorReportes_REP" ToRole="ReportesRol_REP" />
+  </EntityType>
+  <EntityType Name="ReportesRol_REP">
+    <Key>
+      <PropertyRef Name="RER_IdReporte" />
+      <PropertyRef Name="RER_IdRol" />
+    </Key>
+    <Property Type="Int32" Name="RER_IdReporte" Nullable="false" />
+    <Property Type="String" Name="RER_IdRol" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="RER_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="RER_CreadoPor" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="AdministradorReportes_REP" Relationship="ModeloReportes.FK_ReportesRol_REP_AdministradorReportes_REP" FromRole="ReportesRol_REP" ToRole="AdministradorReportes_REP" />
+    <NavigationProperty Name="Rol_SEG" Relationship="ModeloReportes.FK_ReportesRol_REP_Rol_SEG" FromRole="ReportesRol_REP" ToRole="Rol_SEG" />
+  </EntityType>
+  <Association Name="FK_ReportesRol_REP_AdministradorReportes_REP">
+    <End Type="ModeloReportes.AdministradorReportes_REP" Role="AdministradorReportes_REP" Multiplicity="1" />
+    <End Type="ModeloReportes.ReportesRol_REP" Role="ReportesRol_REP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdministradorReportes_REP">
+        <PropertyRef Name="ADR_IdReporte" />
+      </Principal>
+      <Dependent Role="ReportesRol_REP">
+        <PropertyRef Name="RER_IdReporte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Rol_SEG">
+    <Key>
+      <PropertyRef Name="ROL_IdRol" />
+    </Key>
+    <Property Type="String" Name="ROL_IdRol" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ROL_Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ROL_RequiereIdMaquina" Nullable="false" />
+    <Property Type="DateTime" Name="ROL_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="ROL_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ReportesRol_REP" Relationship="ModeloReportes.FK_ReportesRol_REP_Rol_SEG" FromRole="Rol_SEG" ToRole="ReportesRol_REP" />
+    <NavigationProperty Name="UsuarioRol_SEG" Relationship="ModeloReportes.FK_UsuarioRol_SEG_Rol_SEG" FromRole="Rol_SEG" ToRole="UsuarioRol_SEG" />
+  </EntityType>
+  <EntityType Name="Usuario_SEG">
+    <Key>
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+    </Key>
+    <Property Type="Int64" Name="USU_IdCodigoUsuario" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="USU_IdUsuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="USU_Estado" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USU_TipoUsuario" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Boolean" Name="USU_RequiereIdMaquina" Nullable="false" />
+    <Property Type="String" Name="USU_Comentarios" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="USU_EsUsuarioInterno" Nullable="false" />
+    <Property Type="DateTime" Name="USU_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="USU_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UsuarioRol_SEG" Relationship="ModeloReportes.FK_UsuarioRol_SEG_Usuario_SEG" FromRole="Usuario_SEG" ToRole="UsuarioRol_SEG" />
+  </EntityType>
+  <EntityType Name="UsuarioRol_SEG">
+    <Key>
+      <PropertyRef Name="USR_IdCodigoUsuario" />
+      <PropertyRef Name="USR_IdRol" />
+    </Key>
+    <Property Type="Int64" Name="USR_IdCodigoUsuario" Nullable="false" />
+    <Property Type="String" Name="USR_IdRol" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="USR_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="USR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Rol_SEG" Relationship="ModeloReportes.FK_UsuarioRol_SEG_Rol_SEG" FromRole="UsuarioRol_SEG" ToRole="Rol_SEG" />
+    <NavigationProperty Name="Usuario_SEG" Relationship="ModeloReportes.FK_UsuarioRol_SEG_Usuario_SEG" FromRole="UsuarioRol_SEG" ToRole="Usuario_SEG" />
+  </EntityType>
+  <Association Name="FK_ReportesRol_REP_Rol_SEG">
+    <End Type="ModeloReportes.Rol_SEG" Role="Rol_SEG" Multiplicity="1" />
+    <End Type="ModeloReportes.ReportesRol_REP" Role="ReportesRol_REP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol_SEG">
+        <PropertyRef Name="ROL_IdRol" />
+      </Principal>
+      <Dependent Role="ReportesRol_REP">
+        <PropertyRef Name="RER_IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioRol_SEG_Rol_SEG">
+    <End Type="ModeloReportes.Rol_SEG" Role="Rol_SEG" Multiplicity="1" />
+    <End Type="ModeloReportes.UsuarioRol_SEG" Role="UsuarioRol_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol_SEG">
+        <PropertyRef Name="ROL_IdRol" />
+      </Principal>
+      <Dependent Role="UsuarioRol_SEG">
+        <PropertyRef Name="USR_IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuarioRol_SEG_Usuario_SEG">
+    <End Type="ModeloReportes.Usuario_SEG" Role="Usuario_SEG" Multiplicity="1" />
+    <End Type="ModeloReportes.UsuarioRol_SEG" Role="UsuarioRol_SEG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_SEG">
+        <PropertyRef Name="USU_IdCodigoUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioRol_SEG">
+        <PropertyRef Name="USR_IdCodigoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ParametrosFramework">
+    <Key>
+      <PropertyRef Name="PAR_IdParametro" />
+    </Key>
+    <Property Type="String" Name="PAR_IdParametro" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAR_ValorParametro" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAR_ModuloFR" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PAR_Descripcion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="PAR_FechaGrabacion" Nullable="false" />
+    <Property Type="String" Name="PAR_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

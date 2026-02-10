@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloControlCuentas" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DesModeloControlCuentas" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TipoOperacion_CCU" EntityType="ModeloControlCuentas.TipoOperacion_CCU" />
+    <FunctionImport Name="paObtenerGiroAlmacen_CCU" ReturnType="Collection(ModeloControlCuentas.paObtenerGiroAlmacen)">
+      <Parameter Name="IdAgencia" Mode="In" Type="Int64" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerMovCajaAlmacen_CCU" ReturnType="Collection(ModeloControlCuentas.paObtenerMovCajaAlmacen)">
+      <Parameter Name="IdAgencia" Mode="In" Type="Int64" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+      <Parameter Name="IdConceptoCaja" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerPagoGiroAlmacen_CCU" ReturnType="Collection(ModeloControlCuentas.paObtenerPagoGiroAlmacen)">
+      <Parameter Name="IdAgencia" Mode="In" Type="Int64" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerOtrosMovCaja_CCU" ReturnType="Collection(ModeloControlCuentas.paObtenerOtrosMovCaja_CCU_Result)">
+      <Parameter Name="IdAgencia" Mode="In" Type="Int64" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="AlmacenControlCuentas_CCU" EntityType="ModeloControlCuentas.AlmacenControlCuentas_CCU" />
+    <AssociationSet Name="FK_AlmacenControlCuentas_CCU_TipoOperacion_CCU" Association="ModeloControlCuentas.FK_AlmacenControlCuentas_CCU_TipoOperacion_CCU">
+      <End Role="TipoOperacion_CCU" EntitySet="TipoOperacion_CCU" />
+      <End Role="AlmacenControlCuentas_CCU" EntitySet="AlmacenControlCuentas_CCU" />
+    </AssociationSet>
+    <FunctionImport Name="paObtenerGuiaMenAlmacen_CCU" ReturnType="Collection(ModeloControlCuentas.paObtenerGuiaMenAlmacen_CCU_Result)">
+      <Parameter Name="IdAgencia" Mode="In" Type="Int64" />
+      <Parameter Name="IdMensajero" Mode="In" Type="Int64" />
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+      <Parameter Name="IncluyeMensajero" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="paObtenerGuiaMenAlmacenCliente_CCU" ReturnType="Collection(ModeloControlCuentas.paObtenerGuiaMenAlmacenCliente_CCU_Result)">
+      <Parameter Name="FechaInicial" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFinal" Mode="In" Type="DateTime" />
+      <Parameter Name="IdCliente" Mode="In" Type="Int32" />
+      <Parameter Name="IdSucursal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="paCambioFPAlCobroCredito_CCU">
+      <Parameter Name="NumeroFactura" Mode="In" Type="Int64" />
+      <Parameter Name="IdCliente" Mode="In" Type="Int64" />
+      <Parameter Name="IdContrato" Mode="In" Type="Int32" />
+      <Parameter Name="IdSucursal" Mode="In" Type="Int32" />
+      <Parameter Name="QuienSolicita" Mode="In" Type="String" />
+      <Parameter Name="Observacion" Mode="In" Type="String" />
+      <Parameter Name="CreadoPor" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="TipoOperacion_CCU">
+    <Key>
+      <PropertyRef Name="TOP_IdTipoOperacion" />
+    </Key>
+    <Property Name="TOP_IdTipoOperacion" Type="Int16" Nullable="false" />
+    <Property Name="TOP_Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TOP_FechaGrabacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TOP_CreadoPor" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="AlmacenControlCuentas_CCU" Relationship="ModeloControlCuentas.FK_AlmacenControlCuentas_CCU_TipoOperacion_CCU" FromRole="TipoOperacion_CCU" ToRole="AlmacenControlCuentas_CCU" />
+  </EntityType>
+  <ComplexType Name="paObtenerGuiaMenAgencia">
+    <Property Type="Int64" Name="ADM_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="ADM_IdMensajero" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaAdmision" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="Int64" Name="ADM_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="ADM_Peso" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="FOP_Descripcion" Nullable="false" MaxLength="25" />
+    <Property Type="Boolean" Name="ADM_EsPesoVolumetrico" Nullable="false" />
+    <Property Type="Decimal" Name="ADM_PesoLiqMasa" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_PesoLiqVolumetrico" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="ADM_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="Decimal" Name="ADM_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorPrimaSeguro" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorEmpaque" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorDeclarado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorAdmision" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="AAC_IdOperacion" Nullable="true" />
+    <Property Type="String" Name="AAC_IdAlmacenControCuentas" Nullable="true" MaxLength="10" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Caja" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="true" />
+    <Property Type="String" Name="TOP_Descripcion" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGiroAlmacen">
+    <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+    <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+    <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+    <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+    <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+    <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="DateTime" Name="ADG_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="ADG_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="Int64" Name="AAC_IdAlmacenControCuentas" Nullable="true" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_Caja" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="true" />
+    <Property Type="String" Name="ESG_Estado" Nullable="false" MaxLength="3" />
+    <Property Type="Int64" Name="ADG_IdEstadosGiro" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="paObtenerMovCajaAlmacen">
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+    <Property Type="String" Name="RVF_DescripcionFormaPago" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="RVF_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="RVF_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="COC_Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="Int64" Name="AAC_IdAlmacenControCuentas" Nullable="true" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_Caja" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_IdOperacion" Nullable="true" />
+    <Property Type="Int64" Name="RTC_IdCentroServiciosVenta" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCentroServiciosVenta" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="paObtenerPagoGiroAlmacen">
+    <Property Type="Int64" Name="PAG_IdAdmisionGiro" Nullable="false" />
+    <Property Type="Int64" Name="PAG_IdComprobantePago" Nullable="false" />
+    <Property Type="Boolean" Name="PAG_PagoAutorizadoPeaton" Nullable="false" />
+    <Property Type="Boolean" Name="PAG_PagoAutorizadoEmpresarial" Nullable="false" />
+    <Property Type="Boolean" Name="PAG_PagoAutomatico" Nullable="false" />
+    <Property Type="Int64" Name="PAG_IdCentroServiciosPagador" Nullable="false" />
+    <Property Type="String" Name="PAG_NombreCentroServicios" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="PAG_ValorPagado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="PAG_IdCobrador" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="PAG_TipoIdCobrador" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="PAG_NombreCobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_Apellido1Cobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_Apellido2Cobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_TelefonoCobrador" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="PAG_DireccionCobrador" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="PAG_EmailCobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_OcupacionCobrador" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="PAG_Observaciones" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="PAG_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="PAG_CreadoPor" Nullable="false" MaxLength="20" />
+    <Property Type="Int64" Name="ADG_IdAdmisionGiro" Nullable="false" />
+    <Property Type="Int64" Name="AAC_IdAlmacenControCuentas" Nullable="true" />
+    <Property Type="Int64" Name="AAC_IdOperacion" Nullable="true" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_Caja" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="true" />
+    <Property Type="String" Name="ADG_PrefijoIdGiro" Nullable="true" MaxLength="8" />
+    <Property Type="Int64" Name="ADG_IdGiro" Nullable="false" />
+    <Property Type="String" Name="ADG_DigitoVerificacion" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_GuidDeChequeo" Nullable="false" MaxLength="100" />
+    <Property Type="Boolean" Name="ADG_AdmisionAutomatica" Nullable="false" />
+    <Property Type="String" Name="ADG_IdTipoGiro" Nullable="false" MaxLength="2" />
+    <Property Type="Int64" Name="ADG_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="String" Name="ADG_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdPaisOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_DescPaisOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdCiudadOrigen" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_DescCiudadOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_CodigoPostalOrigen" Nullable="false" MaxLength="12" />
+    <Property Type="Int64" Name="ADG_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADG_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdPaisDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_DescPaisDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_IdCiudadDestino" Nullable="false" MaxLength="8" />
+    <Property Type="String" Name="ADG_DescCiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADG_CodigoPostalDestino" Nullable="false" MaxLength="12" />
+    <Property Type="Decimal" Name="ADG_ValorGiro" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_TarifaPorcPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_TarifaFijaPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorPorte" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADG_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="ADG_DeclaracionVoluntariaOrigenes" Nullable="true" />
+    <Property Type="String" Name="ADG_IdTipoIdentificacionRemitente" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADG_Observaciones" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="ADG_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADG_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADG_IdTipoIdentificacionDestinatario" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="ADG_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADG_NombreDestinatario" Nullable="false" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="CCGuiaMenAlmacen">
+    <Property Type="Int64" Name="ADM_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="ADM_IdMensajero" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaAdmision" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="Int64" Name="ADM_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="ADM_Peso" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ADM_EsPesoVolumetrico" Nullable="false" />
+    <Property Type="Decimal" Name="ADM_PesoLiqMasa" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_PesoLiqVolumetrico" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="ADM_IdRemitente" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_IdDestinatario" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="Decimal" Name="ADM_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorPrimaSeguro" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorEmpaque" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorDeclarado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorAdmision" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="AAC_IdOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_IdAlmacenControCuentas" Nullable="true" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_Caja" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="true" />
+    <Property Type="String" Name="TOP_Descripcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FormasPago" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="paObtenerOtrosMovCaja_CCU_Result">
+    <Property Type="Int64" Name="RTD_IdRegistroTransDetalleCaja" Nullable="false" />
+    <Property Type="String" Name="RVF_DescripcionFormaPago" Nullable="false" MaxLength="25" />
+    <Property Type="Decimal" Name="RVF_Valor" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="DateTime" Name="RVF_FechaGrabacion" Nullable="false" Precision="23" />
+    <Property Type="String" Name="COC_Nombre" Nullable="false" MaxLength="100" />
+    <Property Type="Int64" Name="AAC_IdAlmacenControCuentas" Nullable="true" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_Caja" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_IdOperacion" Nullable="true" />
+    <Property Type="Int64" Name="RTC_IdCentroServiciosVenta" Nullable="false" />
+    <Property Type="String" Name="RTC_NombreCentroServiciosVenta" Nullable="false" MaxLength="250" />
+  </ComplexType>
+  <EntityType Name="AlmacenControlCuentas_CCU">
+    <Key>
+      <PropertyRef Name="AAC_IdAlmacenControCuentas" />
+    </Key>
+    <Property Type="Int64" Name="AAC_IdAlmacenControCuentas" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="AAC_IdRacol" Nullable="false" />
+    <Property Type="Int64" Name="AAC_IdOperacion" Nullable="false" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="false" />
+    <Property Type="Int64" Name="AAC_Caja" Nullable="false" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="false" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="false" />
+    <Property Type="DateTime" Name="AAC_FechaGrabacion" Nullable="false" Precision="3" />
+    <Property Type="String" Name="AAC_CreadoPor" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TipoOperacion_CCU" Relationship="ModeloControlCuentas.FK_AlmacenControlCuentas_CCU_TipoOperacion_CCU" FromRole="AlmacenControlCuentas_CCU" ToRole="TipoOperacion_CCU" />
+  </EntityType>
+  <Association Name="FK_AlmacenControlCuentas_CCU_TipoOperacion_CCU">
+    <End Type="ModeloControlCuentas.TipoOperacion_CCU" Role="TipoOperacion_CCU" Multiplicity="1" />
+    <End Type="ModeloControlCuentas.AlmacenControlCuentas_CCU" Role="AlmacenControlCuentas_CCU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoOperacion_CCU">
+        <PropertyRef Name="TOP_IdTipoOperacion" />
+      </Principal>
+      <Dependent Role="AlmacenControlCuentas_CCU">
+        <PropertyRef Name="AAC_IdTipoOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="paObtenerGuiaMenAlmacen_CCU_Result">
+    <Property Type="Int64" Name="ADM_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="ADM_IdMensajero" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaAdmision" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="Int64" Name="ADM_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="ADM_Peso" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ADM_EsPesoVolumetrico" Nullable="false" />
+    <Property Type="Decimal" Name="ADM_PesoLiqMasa" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_PesoLiqVolumetrico" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="ADM_IdRemitente" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_IdDestinatario" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="Decimal" Name="ADM_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorPrimaSeguro" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorEmpaque" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorDeclarado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorAdmision" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="AAC_IdOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_IdAlmacenControCuentas" Nullable="true" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_Caja" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="true" />
+    <Property Type="String" Name="TOP_Descripcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FormasPago" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="IdsFormasPago" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_NombreServicio" Nullable="false" MaxLength="25" />
+  </ComplexType>
+  <ComplexType Name="paObtenerGuiaMenAlmacenCliente_CCU_Result">
+    <Property Type="Int64" Name="ADM_IdAdminisionMensajeria" Nullable="false" />
+    <Property Type="Int64" Name="ADM_IdMensajero" Nullable="false" />
+    <Property Type="DateTime" Name="ADM_FechaAdmision" Nullable="false" Precision="23" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioOrigen" Nullable="false" />
+    <Property Type="Int64" Name="ADM_NumeroGuia" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioOrigen" Nullable="false" MaxLength="250" />
+    <Property Type="Int64" Name="ADM_IdCentroServicioDestino" Nullable="false" />
+    <Property Type="String" Name="ADM_NombreCentroServicioDestino" Nullable="false" MaxLength="250" />
+    <Property Type="Decimal" Name="ADM_Peso" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Boolean" Name="ADM_EsPesoVolumetrico" Nullable="false" />
+    <Property Type="Decimal" Name="ADM_PesoLiqMasa" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_PesoLiqVolumetrico" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="String" Name="ADM_IdRemitente" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreRemitente" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="ADM_IdDestinatario" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="ADM_NombreDestinatario" Nullable="false" MaxLength="150" />
+    <Property Type="Decimal" Name="ADM_ValorTotal" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalImpuestos" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorTotalRetenciones" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorPrimaSeguro" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorEmpaque" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorAdicionales" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorDeclarado" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Decimal" Name="ADM_ValorAdmision" Nullable="false" Precision="16" Scale="4" />
+    <Property Type="Int64" Name="AAC_IdOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_IdAlmacenControCuentas" Nullable="true" />
+    <Property Type="Int16" Name="AAC_IdTipoOperacion" Nullable="true" />
+    <Property Type="Int64" Name="AAC_Caja" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Lote" Nullable="true" />
+    <Property Type="Int32" Name="AAC_Posicion" Nullable="true" />
+    <Property Type="String" Name="TOP_Descripcion" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FormasPago" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="IdsFormasPago" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="CiudadDestino" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="ADM_NombreServicio" Nullable="false" MaxLength="25" />
+  </ComplexType>
+</Schema>

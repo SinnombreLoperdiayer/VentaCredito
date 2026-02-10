@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://to.gsegtknint.ws.corp.yanbal.com" xmlns:tns3="http://to.entity.ws.corp.yanbal.com" xmlns:tns="http://to.comun.ws.corp.yanbal.com" xmlns:tns2="http://to.gsegtknint.ws.corp.yanbal.com" targetNamespace="http://to.gsegtknint.ws.corp.yanbal.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="IntegrationYanbal.xsd" namespace="http://to.comun.ws.corp.yanbal.com" />
+  <xsd:import schemaLocation="Seguridad.xsd" namespace="http://to.entity.ws.corp.yanbal.com" />
+  <xsd:annotation>
+    <xsd:documentation xml:lang="en">
+			SolicitarToken
+		</xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="solicitarToken">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="tns2:solicitarTokenRequest" />
+        <xsd:element ref="tns2:solicitarTokenResponse" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="solicitarTokenRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="tns2:integracionWSReq" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="solicitarTokenResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="tns2:integracionWSResp" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="IntegracionWSReq">
+    <xsd:sequence>
+      <xsd:element ref="tns2:cabecera" />
+      <xsd:element name="detalle" type="tns2:Detalle" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="IntegracionWSResp">
+    <xsd:sequence>
+      <xsd:element ref="tns2:cabecera" />
+      <xsd:element name="detalle" type="tns2:DetalleSalida" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Detalle">
+    <xsd:sequence>
+      <xsd:element ref="tns2:parametros" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DetalleSalida">
+    <xsd:sequence>
+      <xsd:element ref="tns2:respuesta" />
+      <xsd:element ref="tns2:datos" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="cabecera" type="tns:Cabecera" />
+  <xsd:element name="respuesta" type="tns:Respuesta" />
+  <xsd:element name="integracionWSReq" type="tns2:IntegracionWSReq" />
+  <xsd:element name="integracionWSResp" type="tns2:IntegracionWSResp" />
+  <xsd:element name="detalle" type="tns2:Detalle" />
+  <xsd:element name="detalleSalida" type="tns2:DetalleSalida" />
+  <xsd:element name="parametros" type="tns3:SolicitarTokenEnvType" />
+  <xsd:element name="datos" type="tns3:SolicitarTokenRtaType" />
+</xsd:schema>

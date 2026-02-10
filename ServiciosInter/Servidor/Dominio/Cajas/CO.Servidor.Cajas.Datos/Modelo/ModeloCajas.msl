@@ -1,0 +1,1135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloCajaStoreContainer" CdmEntityContainer="ModeloCajas">
+    <EntitySetMapping Name="CategoriaConceptoCaja_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CategoriaConceptoCaja_CAJ">
+        <MappingFragment StoreEntitySet="CategoriaConceptoCaja_CAJ">
+          <ScalarProperty Name="CCC_CreadoPor" ColumnName="CCC_CreadoPor" />
+          <ScalarProperty Name="CCC_FechaGrabacion" ColumnName="CCC_FechaGrabacion" />
+          <ScalarProperty Name="CCC_Descripcion" ColumnName="CCC_Descripcion" />
+          <ScalarProperty Name="CCC_IdCategoria" ColumnName="CCC_IdCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConceptoCajaImpuesto_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ConceptoCajaImpuesto_CAJ">
+        <MappingFragment StoreEntitySet="ConceptoCajaImpuesto_CAJ">
+          <ScalarProperty Name="COC_CreadoPor" ColumnName="COC_CreadoPor" />
+          <ScalarProperty Name="COC_FechaGrabacion" ColumnName="COC_FechaGrabacion" />
+          <ScalarProperty Name="COC_IdImpuesto" ColumnName="COC_IdImpuesto" />
+          <ScalarProperty Name="COC_IdConceptoCaja" ColumnName="COC_IdConceptoCaja" />
+          <ScalarProperty Name="CCI_IdConceptoCajaImpuesto" ColumnName="CCI_IdConceptoCajaImpuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroTrasnClienteCredit_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.RegistroTrasnClienteCredit_CAJ">
+        <MappingFragment StoreEntitySet="RegistroTrasnClienteCredit_CAJ">
+          <ScalarProperty Name="RTC_CreadoPor" ColumnName="RTC_CreadoPor" />
+          <ScalarProperty Name="RTC_FechaGrabacion" ColumnName="RTC_FechaGrabacion" />
+          <ScalarProperty Name="RTC_NombreSucursal" ColumnName="RTC_NombreSucursal" />
+          <ScalarProperty Name="RTC_IdSucursal" ColumnName="RTC_IdSucursal" />
+          <ScalarProperty Name="RTC_NumeroContrato" ColumnName="RTC_NumeroContrato" />
+          <ScalarProperty Name="RTC_IdContrato" ColumnName="RTC_IdContrato" />
+          <ScalarProperty Name="RTC_Nit" ColumnName="RTC_Nit" />
+          <ScalarProperty Name="RTC_NombreCliente" ColumnName="RTC_NombreCliente" />
+          <ScalarProperty Name="RTC_IdCliente" ColumnName="RTC_IdCliente" />
+          <ScalarProperty Name="RTC_IdRegistroVenta" ColumnName="RTC_IdRegistroVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroVentaFormaPago_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.RegistroVentaFormaPago_CAJ">
+        <MappingFragment StoreEntitySet="RegistroVentaFormaPago_CAJ">
+          <ScalarProperty Name="RVF_CreadoPor" ColumnName="RVF_CreadoPor" />
+          <ScalarProperty Name="RVF_FechaGrabacion" ColumnName="RVF_FechaGrabacion" />
+          <ScalarProperty Name="RVF_Campo2" ColumnName="RVF_Campo2" />
+          <ScalarProperty Name="RVF_Campo1" ColumnName="RVF_Campo1" />
+          <ScalarProperty Name="RVF_NumeroAsociado" ColumnName="RVF_NumeroAsociado" />
+          <ScalarProperty Name="RVF_Valor" ColumnName="RVF_Valor" />
+          <ScalarProperty Name="RVF_DescripcionFormaPago" ColumnName="RVF_DescripcionFormaPago" />
+          <ScalarProperty Name="RVF_IdFormaPago" ColumnName="RVF_IdFormaPago" />
+          <ScalarProperty Name="RVF_IdRegistroVenta" ColumnName="RVF_IdRegistroVenta" />
+          <ScalarProperty Name="RVF_IdRegistroVentaFormaPago" ColumnName="RVF_IdRegistroVentaFormaPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paCrearRegClienteCredito_CAJ" FunctionName="ModeloCaja.Store.paCrearRegClienteCredito_CAJ" />
+    <FunctionImportMapping FunctionImportName="paCrearRegTransFormasPago_CAJ" FunctionName="ModeloCaja.Store.paCrearRegTransFormasPago_CAJ" />
+    <EntitySetMapping Name="ReporteDineroPuntoAgencia_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ReporteDineroPuntoAgencia_CAJ">
+        <MappingFragment StoreEntitySet="ReporteDineroPuntoAgencia_CAJ">
+          <ScalarProperty Name="RDP_CreadoPor" ColumnName="RDP_CreadoPor" />
+          <ScalarProperty Name="RDP_FechaGrabacion" ColumnName="RDP_FechaGrabacion" />
+          <ScalarProperty Name="RDP_Observaciones" ColumnName="RDP_Observaciones" />
+          <ScalarProperty Name="RDP_TipoObservacion" ColumnName="RDP_TipoObservacion" />
+          <ScalarProperty Name="RDP_Manual" ColumnName="RDP_Manual" />
+          <ScalarProperty Name="RDP_ValorReportado" ColumnName="RDP_ValorReportado" />
+          <ScalarProperty Name="RDP_IdRecoleccion" ColumnName="RDP_IdRecoleccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoObsPuntoAgencia_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.TipoObsPuntoAgencia_CAJ">
+        <MappingFragment StoreEntitySet="TipoObsPuntoAgencia_CAJ">
+          <ScalarProperty Name="TOP_CreadoPor" ColumnName="TOP_CreadoPor" />
+          <ScalarProperty Name="TOP_FechaGrabacion" ColumnName="TOP_FechaGrabacion" />
+          <ScalarProperty Name="TOP_Descripcion" ColumnName="TOP_Descripcion" />
+          <ScalarProperty Name="TOP_IdTipoObservacion" ColumnName="TOP_IdTipoObservacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PinPrepago_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.PinPrepago_CAJ">
+        <MappingFragment StoreEntitySet="PinPrepago_CAJ">
+          <ScalarProperty Name="PIP_CreadoPor" ColumnName="PIP_CreadoPor" />
+          <ScalarProperty Name="PIP_FechaGrabacion" ColumnName="PIP_FechaGrabacion" />
+          <ScalarProperty Name="PIP_IdCentroServiciosVende" ColumnName="PIP_IdCentroServiciosVende" />
+          <ScalarProperty Name="PIP_IdLocalidad" ColumnName="PIP_IdLocalidad" />
+          <ScalarProperty Name="PIP_Direccion" ColumnName="PIP_Direccion" />
+          <ScalarProperty Name="PIP_Identificacion" ColumnName="PIP_Identificacion" />
+          <ScalarProperty Name="PIP_IdTipoIdentificacion" ColumnName="PIP_IdTipoIdentificacion" />
+          <ScalarProperty Name="PIP_NombreComprador" ColumnName="PIP_NombreComprador" />
+          <ScalarProperty Name="PIP_FechaActualizacion" ColumnName="PIP_FechaActualizacion" />
+          <ScalarProperty Name="PIP_Saldo" ColumnName="PIP_Saldo" />
+          <ScalarProperty Name="PIP_Valor" ColumnName="PIP_Valor" />
+          <ScalarProperty Name="PIP_Pin" ColumnName="PIP_Pin" />
+          <ScalarProperty Name="PIP_IdPinPrepago" ColumnName="PIP_IdPinPrepago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroTransaccionesCaja_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.RegistroTransaccionesCaja_CAJ">
+        <MappingFragment StoreEntitySet="RegistroTransaccionesCaja_CAJ">
+          <ScalarProperty Name="RTC_CreadoPor" ColumnName="RTC_CreadoPor" />
+          <ScalarProperty Name="RTC_FechaGrabacion" ColumnName="RTC_FechaGrabacion" />
+          <ScalarProperty Name="RTC_TipoDatosAdicionales" ColumnName="RTC_TipoDatosAdicionales" />
+          <ScalarProperty Name="RTC_TotalRetenciones" ColumnName="RTC_TotalRetenciones" />
+          <ScalarProperty Name="RTC_TotalImpuestos" ColumnName="RTC_TotalImpuestos" />
+          <ScalarProperty Name="RTC_ValorTotal" ColumnName="RTC_ValorTotal" />
+          <ScalarProperty Name="RTC_NombreCtroSvcsResponsable" ColumnName="RTC_NombreCtroSvcsResponsable" />
+          <ScalarProperty Name="RTC_IdCentroServiosResponsable" ColumnName="RTC_IdCentroServiosResponsable" />
+          <ScalarProperty Name="RTC_NombreCentroServiciosVenta" ColumnName="RTC_NombreCentroServiciosVenta" />
+          <ScalarProperty Name="RTC_IdCentroServiciosVenta" ColumnName="RTC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="RTC_IdAperturaCaja" ColumnName="RTC_IdAperturaCaja" />
+          <ScalarProperty Name="RTC_IdRegistroTranscaccion" ColumnName="RTC_IdRegistroTranscaccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroSvcCentroSvcMov_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CentroSvcCentroSvcMov_CAJ">
+        <MappingFragment StoreEntitySet="CentroSvcCentroSvcMov_CAJ">
+          <ScalarProperty Name="CSM_NumeroGuia" ColumnName="CSM_NumeroGuia" />
+          <ScalarProperty Name="CSM_NumeroBolsaSeguridad" ColumnName="CSM_NumeroBolsaSeguridad" />
+          <ScalarProperty Name="CSM_NumeroPrecinto" ColumnName="CSM_NumeroPrecinto" />
+          <ScalarProperty Name="CSM_CreadoPor" ColumnName="CSM_CreadoPor" />
+          <ScalarProperty Name="CSM_FechaGrabacion" ColumnName="CSM_FechaGrabacion" />
+          <ScalarProperty Name="CSM_IdRegistroTxDestino" ColumnName="CSM_IdRegistroTxDestino" />
+          <ScalarProperty Name="CSM_IdRegistroTxOrigen" ColumnName="CSM_IdRegistroTxOrigen" />
+          <ScalarProperty Name="CSM_NombreCentroSvcDestino" ColumnName="CSM_NombreCentroSvcDestino" />
+          <ScalarProperty Name="CSM_IdCentroServiciosDestino" ColumnName="CSM_IdCentroServiciosDestino" />
+          <ScalarProperty Name="CSM_NombreCentroSvcOrigen" ColumnName="CSM_NombreCentroSvcOrigen" />
+          <ScalarProperty Name="CSM_IdCentroServiciosOrigen" ColumnName="CSM_IdCentroServiciosOrigen" />
+          <ScalarProperty Name="CSM_IdCentroSvcCentroSvcMov" ColumnName="CSM_IdCentroSvcCentroSvcMov" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResumenCajaCentroServ_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ResumenCajaCentroServ_CAJ">
+        <MappingFragment StoreEntitySet="ResumenCajaCentroServ_CAJ">
+          <ScalarProperty Name="RC_CreadoPor" ColumnName="RC_CreadoPor" />
+          <ScalarProperty Name="RCC_FechaGrabacion" ColumnName="RCC_FechaGrabacion" />
+          <ScalarProperty Name="RCC_TotalSaldoCaja" ColumnName="RCC_TotalSaldoCaja" />
+          <ScalarProperty Name="RCC_TotalEgresos" ColumnName="RCC_TotalEgresos" />
+          <ScalarProperty Name="RCC_TotalIngresos" ColumnName="RCC_TotalIngresos" />
+          <ScalarProperty Name="RCC_IdCentroServicios" ColumnName="RCC_IdCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConceptoCajaCategoria_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ConceptoCajaCategoria_CAJ">
+        <MappingFragment StoreEntitySet="ConceptoCajaCategoria_CAJ">
+          <ScalarProperty Name="CCA_CreadoPor" ColumnName="CCA_CreadoPor" />
+          <ScalarProperty Name="CCA_FechaGrabacion" ColumnName="CCA_FechaGrabacion" />
+          <ScalarProperty Name="CCA_IdConceptoCaja" ColumnName="CCA_IdConceptoCaja" />
+          <ScalarProperty Name="CCA_IdCategoria" ColumnName="CCA_IdCategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DuplaConceptoCaja_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.DuplaConceptoCaja_CAJ">
+        <MappingFragment StoreEntitySet="DuplaConceptoCaja_CAJ">
+          <ScalarProperty Name="DCC_CreadoPor" ColumnName="DCC_CreadoPor" />
+          <ScalarProperty Name="DCC_FechaGrabacion" ColumnName="DCC_FechaGrabacion" />
+          <ScalarProperty Name="DCC_IdConceptoCajaSecundario" ColumnName="DCC_IdConceptoCajaSecundario" />
+          <ScalarProperty Name="DCC_IdConceptoCajaPrimario" ColumnName="DCC_IdConceptoCajaPrimario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParametrosCajas_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ParametrosCajas_CAJ">
+        <MappingFragment StoreEntitySet="ParametrosCajas_CAJ">
+          <ScalarProperty Name="PAC_CreadoPor" ColumnName="PAC_CreadoPor" />
+          <ScalarProperty Name="PAC_FechaGrabacion" ColumnName="PAC_FechaGrabacion" />
+          <ScalarProperty Name="PAC_Descripcion" ColumnName="PAC_Descripcion" />
+          <ScalarProperty Name="PAC_ValorParametro" ColumnName="PAC_ValorParametro" />
+          <ScalarProperty Name="PAC_IdParametro" ColumnName="PAC_IdParametro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRegVentaPinPrepag_CAJ" FunctionName="ModeloCaja.Store.paObtenerRegVentaPinPrepag_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.RegVentaPinPrepag_CAJ">
+          <ScalarProperty Name="PIP_Pin" ColumnName="PIP_Pin" />
+          <ScalarProperty Name="RTD_Numero" ColumnName="RTD_Numero" />
+          <ScalarProperty Name="RTD_NombreConcepto" ColumnName="RTD_NombreConcepto" />
+          <ScalarProperty Name="RTD_Cantidad" ColumnName="RTD_Cantidad" />
+          <ScalarProperty Name="RVF_Valor" ColumnName="RVF_Valor" />
+          <ScalarProperty Name="PIP_Saldo" ColumnName="PIP_Saldo" />
+          <ScalarProperty Name="RTD_FechaGrabacion" ColumnName="RTD_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="RegistroTransacDetalleImpuesto_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.RegistroTransacDetalleImpuesto_CAJ">
+        <MappingFragment StoreEntitySet="RegistroTransacDetalleImpuesto_CAJ">
+          <ScalarProperty Name="RTI_CreadoPor" ColumnName="RTI_CreadoPor" />
+          <ScalarProperty Name="RTI_FechaGrabacion" ColumnName="RTI_FechaGrabacion" />
+          <ScalarProperty Name="RTI_Valor" ColumnName="RTI_Valor" />
+          <ScalarProperty Name="RTI_IdCuentaExterna" ColumnName="RTI_IdCuentaExterna" />
+          <ScalarProperty Name="RTI_ValorConfigurado" ColumnName="RTI_ValorConfigurado" />
+          <ScalarProperty Name="RTI_DescripcionImpuesto" ColumnName="RTI_DescripcionImpuesto" />
+          <ScalarProperty Name="RTI_IdImpuesto" ColumnName="RTI_IdImpuesto" />
+          <ScalarProperty Name="RTI_IdRegistroTransDetalleCaja" ColumnName="RTI_IdRegistroTransDetalleCaja" />
+          <ScalarProperty Name="RTI_IdRegsitroTransacDetalleImpuesto" ColumnName="RTI_IdRegsitroTransacDetalleImpuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerSaldoActualCaja_CAJ" FunctionName="ModeloCaja.Store.paObtenerSaldoActualCaja_CAJ" />
+    <EntitySetMapping Name="ConceptoCajaRetencion_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ConceptoCajaRetencion_CAJ">
+        <MappingFragment StoreEntitySet="ConceptoCajaRetencion_CAJ">
+          <ScalarProperty Name="CCR_CreadoPor" ColumnName="CCR_CreadoPor" />
+          <ScalarProperty Name="CCR_FechaGrabacion" ColumnName="CCR_FechaGrabacion" />
+          <ScalarProperty Name="CCR_Base" ColumnName="CCR_Base" />
+          <ScalarProperty Name="CCR_TarifaPorcentual" ColumnName="CCR_TarifaPorcentual" />
+          <ScalarProperty Name="CCR_ValorFijo" ColumnName="CCR_ValorFijo" />
+          <ScalarProperty Name="CCR_IdRetencion" ColumnName="CCR_IdRetencion" />
+          <ScalarProperty Name="CCR_IdConceptoCaja" ColumnName="CCR_IdConceptoCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegistroTranscDetalleRetencion_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.RegistroTranscDetalleRetencion_CAJ">
+        <MappingFragment StoreEntitySet="RegistroTranscDetalleRetencion_CAJ">
+          <ScalarProperty Name="RTR_CreadoPor" ColumnName="RTR_CreadoPor" />
+          <ScalarProperty Name="RTR_FechaGrabacion" ColumnName="RTR_FechaGrabacion" />
+          <ScalarProperty Name="RTI_Valor" ColumnName="RTI_Valor" />
+          <ScalarProperty Name="RTR_Base" ColumnName="RTR_Base" />
+          <ScalarProperty Name="RTR_TarifaPorcentual" ColumnName="RTR_TarifaPorcentual" />
+          <ScalarProperty Name="RTR_ValorFijo" ColumnName="RTR_ValorFijo" />
+          <ScalarProperty Name="RTR_DescripcionRetencion" ColumnName="RTR_DescripcionRetencion" />
+          <ScalarProperty Name="RTR_IdRetencion" ColumnName="RTR_IdRetencion" />
+          <ScalarProperty Name="RTR_IdRegistroTransDetalleCaja" ColumnName="RTR_IdRegistroTransDetalleCaja" />
+          <ScalarProperty Name="RTR_IdRegistroTransacDetalleRetencion" ColumnName="RTR_IdRegistroTransacDetalleRetencion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paCrearRegTransRetenciones_CAJ" FunctionName="ModeloCaja.Store.paCrearRegTransRetenciones_CAJ" />
+    <FunctionImportMapping FunctionImportName="paCrearRegTransImpuestos_CAJ" FunctionName="ModeloCaja.Store.paCrearRegTransImpuestos_CAJ" />
+    <FunctionImportMapping FunctionImportName="paObtenerRegFormaPago_CAJ" FunctionName="ModeloCaja.Store.paObtenerRegFormaPago_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerRegFormaPagoRS_CAJ">
+          <ScalarProperty Name="RVF_IdRegistroVentaFormaPago" ColumnName="RVF_IdRegistroVentaFormaPago" />
+          <ScalarProperty Name="RVF_IdRegistroVenta" ColumnName="RVF_IdRegistroVenta" />
+          <ScalarProperty Name="RVF_IdFormaPago" ColumnName="RVF_IdFormaPago" />
+          <ScalarProperty Name="RVF_DescripcionFormaPago" ColumnName="RVF_DescripcionFormaPago" />
+          <ScalarProperty Name="RVF_Valor" ColumnName="RVF_Valor" />
+          <ScalarProperty Name="RVF_NumeroAsociado" ColumnName="RVF_NumeroAsociado" />
+          <ScalarProperty Name="RVF_Campo1" ColumnName="RVF_Campo1" />
+          <ScalarProperty Name="RVF_Campo2" ColumnName="RVF_Campo2" />
+          <ScalarProperty Name="RVF_FechaGrabacion" ColumnName="RVF_FechaGrabacion" />
+          <ScalarProperty Name="RVF_CreadoPor" ColumnName="RVF_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRegistroTrans_CAJ" FunctionName="ModeloCaja.Store.paObtenerRegistroTrans_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerRegistroTransRS_CAJ">
+          <ScalarProperty Name="RTC_IdRegistroTranscaccion" ColumnName="RTC_IdRegistroTranscaccion" />
+          <ScalarProperty Name="RTC_IdAperturaCaja" ColumnName="RTC_IdAperturaCaja" />
+          <ScalarProperty Name="RTC_IdCentroServiciosVenta" ColumnName="RTC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="RTC_NombreCentroServiciosVenta" ColumnName="RTC_NombreCentroServiciosVenta" />
+          <ScalarProperty Name="RTC_IdCentroServiosResponsable" ColumnName="RTC_IdCentroServiosResponsable" />
+          <ScalarProperty Name="RTC_NombreCtroSvcsResponsable" ColumnName="RTC_NombreCtroSvcsResponsable" />
+          <ScalarProperty Name="RTC_ValorTotal" ColumnName="RTC_ValorTotal" />
+          <ScalarProperty Name="RTC_TotalImpuestos" ColumnName="RTC_TotalImpuestos" />
+          <ScalarProperty Name="RTC_TotalRetenciones" ColumnName="RTC_TotalRetenciones" />
+          <ScalarProperty Name="RTC_TipoDatosAdicionales" ColumnName="RTC_TipoDatosAdicionales" />
+          <ScalarProperty Name="RTC_FechaGrabacion" ColumnName="RTC_FechaGrabacion" />
+          <ScalarProperty Name="RTC_CreadoPor" ColumnName="RTC_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AperturaCajaCasaMatriz_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.AperturaCajaCasaMatriz_CAJ">
+        <MappingFragment StoreEntitySet="AperturaCajaCasaMatriz_CAJ">
+          <ScalarProperty Name="ACM_CreadoPor" ColumnName="ACM_CreadoPor" />
+          <ScalarProperty Name="ACM_FechaGrabacion" ColumnName="ACM_FechaGrabacion" />
+          <ScalarProperty Name="ACM_IdCasaMatriz" ColumnName="ACM_IdCasaMatriz" />
+          <ScalarProperty Name="ACM_IdAperturaCaja" ColumnName="ACM_IdAperturaCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CierreCajaCasaMatriz_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CierreCajaCasaMatriz_CAJ">
+        <MappingFragment StoreEntitySet="CierreCajaCasaMatriz_CAJ">
+          <ScalarProperty Name="CCM_SaldoFinal" ColumnName="CCM_SaldoFinal" />
+          <ScalarProperty Name="CCM_SaldoAnterior" ColumnName="CCM_SaldoAnterior" />
+          <ScalarProperty Name="CCM_CreadoPor" ColumnName="CCM_CreadoPor" />
+          <ScalarProperty Name="CCM_FechaGrabacion" ColumnName="CCM_FechaGrabacion" />
+          <ScalarProperty Name="CCM_TotalEgresos" ColumnName="CCM_TotalEgresos" />
+          <ScalarProperty Name="CCM_TotalIngresos" ColumnName="CCM_TotalIngresos" />
+          <ScalarProperty Name="CCM_IdCierreCaja" ColumnName="CCM_IdCierreCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CajaBancoOperacionNacionalMov_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CajaBancoOperacionNacionalMov_CAJ">
+        <MappingFragment StoreEntitySet="CajaBancoOperacionNacionalMov_CAJ">
+          <ScalarProperty Name="CBO_CreadoPor" ColumnName="CBO_CreadoPor" />
+          <ScalarProperty Name="CBO_FechaGrabacion" ColumnName="CBO_FechaGrabacion" />
+          <ScalarProperty Name="CBO_IdOperacionCajaOperacionNacional" ColumnName="CBO_IdOperacionCajaOperacionNacional" />
+          <ScalarProperty Name="CBO_IdOperacionCajaBanco" ColumnName="CBO_IdOperacionCajaBanco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CajaCasaMatrizBancoMov_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CajaCasaMatrizBancoMov_CAJ">
+        <MappingFragment StoreEntitySet="CajaCasaMatrizBancoMov_CAJ">
+          <ScalarProperty Name="CBM_CreadoPor" ColumnName="CBM_CreadoPor" />
+          <ScalarProperty Name="CBM_FechaGrabacion" ColumnName="CBM_FechaGrabacion" />
+          <ScalarProperty Name="CBM_IdOperacionCajaBanco" ColumnName="CBM_IdOperacionCajaBanco" />
+          <ScalarProperty Name="CBM_IdOperacionCajaCasaMatriz" ColumnName="CBM_IdOperacionCajaCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CajaCasaMatrizCentroSvcMov_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CajaCasaMatrizCentroSvcMov_CAJ">
+        <MappingFragment StoreEntitySet="CajaCasaMatrizCentroSvcMov_CAJ">
+          <ScalarProperty Name="CEM_CreadoPor" ColumnName="CEM_CreadoPor" />
+          <ScalarProperty Name="CEM_FechaGrabacion" ColumnName="CEM_FechaGrabacion" />
+          <ScalarProperty Name="CEM_IdRegistroTranscaccion" ColumnName="CEM_IdRegistroTranscaccion" />
+          <ScalarProperty Name="CEM_NombreCentroServiciosMov" ColumnName="CEM_NombreCentroServiciosMov" />
+          <ScalarProperty Name="CEM_IdCentroServiciosMov" ColumnName="CEM_IdCentroServiciosMov" />
+          <ScalarProperty Name="CEM_IdOperacionCajaCasaMatriz" ColumnName="CEM_IdOperacionCajaCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CajaCasaMatrizOperacionNacionalMov_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CajaCasaMatrizOperacionNacionalMov_CAJ">
+        <MappingFragment StoreEntitySet="CajaCasaMatrizOperacionNacionalMov_CAJ">
+          <ScalarProperty Name="CMO_NumeroGuia" ColumnName="CMO_NumeroGuia" />
+          <ScalarProperty Name="CMO_NumeroBolsaSeguridad" ColumnName="CMO_NumeroBolsaSeguridad" />
+          <ScalarProperty Name="CMO_NumeroPrecinto" ColumnName="CMO_NumeroPrecinto" />
+          <ScalarProperty Name="CMO_CreadoPor" ColumnName="CMO_CreadoPor" />
+          <ScalarProperty Name="CMO_FechaGrabacion" ColumnName="CMO_FechaGrabacion" />
+          <ScalarProperty Name="CON_IdOperacionCajaOperacionNacional" ColumnName="CON_IdOperacionCajaOperacionNacional" />
+          <ScalarProperty Name="CMO_IdOperacionCajaCasaMatriz" ColumnName="CMO_IdOperacionCajaCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CajaCentroSvcOperacionNacionalMov_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CajaCentroSvcOperacionNacionalMov_CAJ">
+        <MappingFragment StoreEntitySet="CajaCentroSvcOperacionNacionalMov_CAJ">
+          <ScalarProperty Name="CCO_NumeroGuia" ColumnName="CCO_NumeroGuia" />
+          <ScalarProperty Name="CCO_NumeroBolsaSeguridad" ColumnName="CCO_NumeroBolsaSeguridad" />
+          <ScalarProperty Name="CCO_NumeroPrecinto" ColumnName="CCO_NumeroPrecinto" />
+          <ScalarProperty Name="CCO_CreadoPor" ColumnName="CCO_CreadoPor" />
+          <ScalarProperty Name="CCO_FechaGrabacion" ColumnName="CCO_FechaGrabacion" />
+          <ScalarProperty Name="CCO_IdRegistroTransaccionCaja" ColumnName="CCO_IdRegistroTransaccionCaja" />
+          <ScalarProperty Name="CCO_IdCentroServicios" ColumnName="CCO_IdCentroServicios" />
+          <ScalarProperty Name="CCO_IdOperacionCajaOperacionNacional" ColumnName="CCO_IdOperacionCajaOperacionNacional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BancoCentroServiciosMov_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.BancoCentroServiciosMov_CAJ">
+        <MappingFragment StoreEntitySet="BancoCentroServiciosMov_CAJ">
+          <ScalarProperty Name="BCM_CreadoPor" ColumnName="BCM_CreadoPor" />
+          <ScalarProperty Name="BCM_FechaGrabacion" ColumnName="BCM_FechaGrabacion" />
+          <ScalarProperty Name="BCM_IdRegistroTranscaccion" ColumnName="BCM_IdRegistroTranscaccion" />
+          <ScalarProperty Name="BCM_IdCentroServicios" ColumnName="BCM_IdCentroServicios" />
+          <ScalarProperty Name="BCM_IdCajaBanco" ColumnName="BCM_IdCajaBanco" />
+          <ScalarProperty Name="BCM_IdCentroServiciosMov" ColumnName="BCM_IdCentroServiciosMov" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerComisionesVentasApertura_CAJ" FunctionName="ModeloCaja.Store.paObtenerComisionesVentasApertura_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.ComisionesVentasApertura_CAJ">
+          <ScalarProperty Name="RTC_IdAperturaCaja" ColumnName="RTC_IdAperturaCaja" />
+          <ScalarProperty Name="TotalComisionVenta" ColumnName="TotalComisionVenta" />
+          <ScalarProperty Name="TotalComisionResponsable" ColumnName="TotalComisionResponsable" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerResumenCajas_CAJ" FunctionName="ModeloCaja.Store.paObtenerResumenCajas_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.ResumenCajas_CAJ">
+          <ScalarProperty Name="RVF_IdFormaPago" ColumnName="RVF_IdFormaPago" />
+          <ScalarProperty Name="RVF_DescripcionFormaPago" ColumnName="RVF_DescripcionFormaPago" />
+          <ScalarProperty Name="Ingresos" ColumnName="Ingresos" />
+          <ScalarProperty Name="Egresos" ColumnName="Egresos" />
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="APC_IdAperturaCaja" ColumnName="APC_IdAperturaCaja" />
+          <ScalarProperty Name="APC_FechaGrabacion" ColumnName="APC_FechaGrabacion" />
+          <ScalarProperty Name="APC_CreadoPor" ColumnName="APC_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paActualizarNumCompRegTransDet" FunctionName="ModeloCaja.Store.paActualizarNumCompRegTransDet" />
+    <FunctionImportMapping FunctionImportName="paObtenerRegTransDetallePorCentroServicio_CAJ" FunctionName="ModeloCaja.Store.paObtenerRegTransDetallePorCentroServicio_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.CARegTransDetallePorCentroServicio">
+          <ScalarProperty Name="RTC_IdRegistroTranscaccion" ColumnName="RTC_IdRegistroTranscaccion" />
+          <ScalarProperty Name="RTC_IdAperturaCaja" ColumnName="RTC_IdAperturaCaja" />
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CuentaExterna_PAR">
+      <EntityTypeMapping TypeName="ModeloCaja.CuentaExterna_PAR">
+        <MappingFragment StoreEntitySet="CuentaExterna_PAR">
+          <ScalarProperty Name="CEX_CreadoPor" ColumnName="CEX_CreadoPor" />
+          <ScalarProperty Name="CEX_FechaGrabacion" ColumnName="CEX_FechaGrabacion" />
+          <ScalarProperty Name="CEX_Codigo" ColumnName="CEX_Codigo" />
+          <ScalarProperty Name="CEX_IdNaturaleza" ColumnName="CEX_IdNaturaleza" />
+          <ScalarProperty Name="CEX_Descripcion" ColumnName="CEX_Descripcion" />
+          <ScalarProperty Name="CEX_IdCuentaExterna" ColumnName="CEX_IdCuentaExterna" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CentroServiciosReporteDinero_PUA">
+      <EntityTypeMapping TypeName="ModeloCaja.CentroServiciosReporteDinero_PUA">
+        <MappingFragment StoreEntitySet="CentroServiciosReporteDinero_PUA">
+          <ScalarProperty Name="CRD_CreadoPor" ColumnName="CRD_CreadoPor" />
+          <ScalarProperty Name="CRD_FechaGrabacion" ColumnName="CRD_FechaGrabacion" />
+          <ScalarProperty Name="CRD_IdCentroServiciosQueReporta" ColumnName="CRD_IdCentroServiciosQueReporta" />
+          <ScalarProperty Name="CRD_IdCentroServiciosAQuienReporta" ColumnName="CRD_IdCentroServiciosAQuienReporta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AperturaCaja_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.AperturaCaja_CAJ">
+        <MappingFragment StoreEntitySet="AperturaCaja_CAJ">
+          <ScalarProperty Name="APC_TipoApertura" ColumnName="APC_TipoApertura" />
+          <ScalarProperty Name="APC_IdCodigoUsuario" ColumnName="APC_IdCodigoUsuario" />
+          <ScalarProperty Name="APC_CreadoPor" ColumnName="APC_CreadoPor" />
+          <ScalarProperty Name="APC_FechaGrabacion" ColumnName="APC_FechaGrabacion" />
+          <ScalarProperty Name="APC_BaseInicialApertura" ColumnName="APC_BaseInicialApertura" />
+          <ScalarProperty Name="APC_EstaAbierta" ColumnName="APC_EstaAbierta" />
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="APC_IdAperturaCaja" ColumnName="APC_IdAperturaCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AperturaCajaCentroServicios_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.AperturaCajaCentroServicios_CAJ">
+        <MappingFragment StoreEntitySet="AperturaCajaCentroServicios_CAJ">
+          <ScalarProperty Name="ACS_CreadoPor" ColumnName="ACS_CreadoPor" />
+          <ScalarProperty Name="ACS_FechaGrabacion" ColumnName="ACS_FechaGrabacion" />
+          <ScalarProperty Name="ACS_NombreCentroServicios" ColumnName="ACS_NombreCentroServicios" />
+          <ScalarProperty Name="ACS_IdCentroServicios" ColumnName="ACS_IdCentroServicios" />
+          <ScalarProperty Name="ACS_IdAperturaCajaCentroServicios" ColumnName="ACS_IdAperturaCajaCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CierreCaja_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CierreCaja_CAJ">
+        <MappingFragment StoreEntitySet="CierreCaja_CAJ">
+          <ScalarProperty Name="CIC_EstaReportado" ColumnName="CIC_EstaReportado" />
+          <ScalarProperty Name="CIC_CreadoPor" ColumnName="CIC_CreadoPor" />
+          <ScalarProperty Name="CIC_FechaGrabacion" ColumnName="CIC_FechaGrabacion" />
+          <ScalarProperty Name="CIC_IdCierrepuntoAsociado" ColumnName="CIC_IdCierrepuntoAsociado" />
+          <ScalarProperty Name="CIC_TotalEgresosOtrasFormas" ColumnName="CIC_TotalEgresosOtrasFormas" />
+          <ScalarProperty Name="CIC_TotalIngresosOtrasFormas" ColumnName="CIC_TotalIngresosOtrasFormas" />
+          <ScalarProperty Name="CIC_TotalEgresosEfectivo" ColumnName="CIC_TotalEgresosEfectivo" />
+          <ScalarProperty Name="CIC_TotalIngresosEfectivo" ColumnName="CIC_TotalIngresosEfectivo" />
+          <ScalarProperty Name="CIC_IdCierreCaja" ColumnName="CIC_IdCierreCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CierreCajaGestion_VCAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CierreCajaGestion_VCAJ">
+        <MappingFragment StoreEntitySet="CierreCajaGestion_VCAJ">
+          <ScalarProperty Name="CAM_CentroCostos" ColumnName="CAM_CentroCostos" />
+          <ScalarProperty Name="CAM_Nombre" ColumnName="CAM_Nombre" />
+          <ScalarProperty Name="IdCasaMatrizOCS" ColumnName="IdCasaMatrizOCS" />
+          <ScalarProperty Name="CCM_FechaGrabacion" ColumnName="CCM_FechaGrabacion" />
+          <ScalarProperty Name="CCM_TotalEgresos" ColumnName="CCM_TotalEgresos" />
+          <ScalarProperty Name="CCM_TotalIngresos" ColumnName="CCM_TotalIngresos" />
+          <ScalarProperty Name="TipoAperturaDesc" ColumnName="TipoAperturaDesc" />
+          <ScalarProperty Name="APC_TipoApertura" ColumnName="APC_TipoApertura" />
+          <ScalarProperty Name="APC_IdCodigoUsuario" ColumnName="APC_IdCodigoUsuario" />
+          <ScalarProperty Name="APC_CreadoPor" ColumnName="APC_CreadoPor" />
+          <ScalarProperty Name="APC_FechaGrabacion" ColumnName="APC_FechaGrabacion" />
+          <ScalarProperty Name="APC_BaseInicialApertura" ColumnName="APC_BaseInicialApertura" />
+          <ScalarProperty Name="APC_EstaAbierta" ColumnName="APC_EstaAbierta" />
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="CCM_IdCierreCaja" ColumnName="CCM_IdCierreCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerCierreCajaCentroServicios_CAJ" FunctionName="ModeloCaja.Store.paObtenerCierreCajaCentroServicios_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerCierreCajaCentroServiciosRS_CAJ">
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="APC_EstaAbierta" ColumnName="APC_EstaAbierta" />
+          <ScalarProperty Name="APC_BaseInicialApertura" ColumnName="APC_BaseInicialApertura" />
+          <ScalarProperty Name="APC_FechaGrabacion" ColumnName="APC_FechaGrabacion" />
+          <ScalarProperty Name="APC_TipoApertura" ColumnName="APC_TipoApertura" />
+          <ScalarProperty Name="APC_IdCodigoUsuario" ColumnName="APC_IdCodigoUsuario" />
+          <ScalarProperty Name="APC_CreadoPor" ColumnName="APC_CreadoPor" />
+          <ScalarProperty Name="ACS_IdCentroServicios" ColumnName="ACS_IdCentroServicios" />
+          <ScalarProperty Name="ACS_NombreCentroServicios" ColumnName="ACS_NombreCentroServicios" />
+          <ScalarProperty Name="CIC_IdCierreCaja" ColumnName="CIC_IdCierreCaja" />
+          <ScalarProperty Name="CIC_TotalIngresosEfectivo" ColumnName="CIC_TotalIngresosEfectivo" />
+          <ScalarProperty Name="CIC_TotalEgresosEfectivo" ColumnName="CIC_TotalEgresosEfectivo" />
+          <ScalarProperty Name="CIC_TotalIngresosOtrasFormas" ColumnName="CIC_TotalIngresosOtrasFormas" />
+          <ScalarProperty Name="CIC_TotalEgresosOtrasFormas" ColumnName="CIC_TotalEgresosOtrasFormas" />
+          <ScalarProperty Name="CIC_IdCierrepuntoAsociado" ColumnName="CIC_IdCierrepuntoAsociado" />
+          <ScalarProperty Name="CIC_EstaReportado" ColumnName="CIC_EstaReportado" />
+          <ScalarProperty Name="CIC_FechaGrabacion" ColumnName="CIC_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="RegistroTransacDetalleCaja_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.RegistroTransacDetalleCaja_CAJ">
+        <MappingFragment StoreEntitySet="RegistroTransacDetalleCaja_CAJ">
+          <ScalarProperty Name="RTD_IdPersonaInterna" ColumnName="RTD_IdPersonaInterna" />
+          <ScalarProperty Name="RTD_NumeroComprobante" ColumnName="RTD_NumeroComprobante" />
+          <ScalarProperty Name="RTD_CreadoPor" ColumnName="RTD_CreadoPor" />
+          <ScalarProperty Name="RTD_FechaGrabacion" ColumnName="RTD_FechaGrabacion" />
+          <ScalarProperty Name="RTD_Descripcion" ColumnName="RTD_Descripcion" />
+          <ScalarProperty Name="RTD_Observacion" ColumnName="RTD_Observacion" />
+          <ScalarProperty Name="RTD_FechaFacturacion" ColumnName="RTD_FechaFacturacion" />
+          <ScalarProperty Name="RTD_EstadoFacturacion" ColumnName="RTD_EstadoFacturacion" />
+          <ScalarProperty Name="RTD_NumeroFactura" ColumnName="RTD_NumeroFactura" />
+          <ScalarProperty Name="RTD_IdCuentaExterna" ColumnName="RTD_IdCuentaExterna" />
+          <ScalarProperty Name="RTD_Numero" ColumnName="RTD_Numero" />
+          <ScalarProperty Name="RTD_ValorDeclarado" ColumnName="RTD_ValorDeclarado" />
+          <ScalarProperty Name="RTD_ValorPrimaSeguros" ColumnName="RTD_ValorPrimaSeguros" />
+          <ScalarProperty Name="RTD_ValorRetenciones" ColumnName="RTD_ValorRetenciones" />
+          <ScalarProperty Name="RTD_ValorImpuestos" ColumnName="RTD_ValorImpuestos" />
+          <ScalarProperty Name="RTD_ValorTercero" ColumnName="RTD_ValorTercero" />
+          <ScalarProperty Name="RTD_ValoresAdicionales" ColumnName="RTD_ValoresAdicionales" />
+          <ScalarProperty Name="RTD_ValorServicio" ColumnName="RTD_ValorServicio" />
+          <ScalarProperty Name="RTD_Cantidad" ColumnName="RTD_Cantidad" />
+          <ScalarProperty Name="RTD_ConceptoEsIngreso" ColumnName="RTD_ConceptoEsIngreso" />
+          <ScalarProperty Name="RTD_NombreConcepto" ColumnName="RTD_NombreConcepto" />
+          <ScalarProperty Name="RTD_IdConceptoCaja" ColumnName="RTD_IdConceptoCaja" />
+          <ScalarProperty Name="RTD_IdRegistroTranscaccion" ColumnName="RTD_IdRegistroTranscaccion" />
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paCerrarAperturasCasaMatriz_CAJ" FunctionName="ModeloCaja.Store.paCerrarAperturasCasaMatriz_CAJ" />
+    <FunctionImportMapping FunctionImportName="paObtenerResumeCierrePunto_CAJ" FunctionName="ModeloCaja.Store.paObtenerResumeCierrePunto_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.ResumeCierrePunto_CAJ">
+          <ScalarProperty Name="IdPunto" ColumnName="IdPunto" />
+          <ScalarProperty Name="IdCierreCaja" ColumnName="IdCierreCaja" />
+          <ScalarProperty Name="IdCierrePuntoAsociado" ColumnName="IdCierrePuntoAsociado" />
+          <ScalarProperty Name="EstaReportado" ColumnName="EstaReportado" />
+          <ScalarProperty Name="IdCaja" ColumnName="IdCaja" />
+          <ScalarProperty Name="RTD_IdConceptoCaja" ColumnName="RTD_IdConceptoCaja" />
+          <ScalarProperty Name="RTD_NombreConcepto" ColumnName="RTD_NombreConcepto" />
+          <ScalarProperty Name="RTD_ConceptoEsIngreso" ColumnName="RTD_ConceptoEsIngreso" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="BaseComision" ColumnName="BaseComision" />
+          <ScalarProperty Name="VrImpuestos" ColumnName="VrImpuestos" />
+          <ScalarProperty Name="VrAdicionales" ColumnName="VrAdicionales" />
+          <ScalarProperty Name="VrTercero" ColumnName="VrTercero" />
+          <ScalarProperty Name="VrRetenciones" ColumnName="VrRetenciones" />
+          <ScalarProperty Name="VrPrimaSeguros" ColumnName="VrPrimaSeguros" />
+          <ScalarProperty Name="RVF_IdFormaPago" ColumnName="RVF_IdFormaPago" />
+          <ScalarProperty Name="RVF_DescripcionFormaPago" ColumnName="RVF_DescripcionFormaPago" />
+          <ScalarProperty Name="VrFormaPago" ColumnName="VrFormaPago" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerDineroReportPunto_CAJ" FunctionName="ModeloCaja.Store.paObtenerDineroReportPunto_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.DineroReportPunto_CAJ">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="CRD_IdCentroServiciosAQuienReporta" ColumnName="CRD_IdCentroServiciosAQuienReporta" />
+          <ScalarProperty Name="RDP_IdPuntoServicio" ColumnName="RDP_IdPuntoServicio" />
+          <ScalarProperty Name="RDP_NombrePuntoServicio" ColumnName="RDP_NombrePuntoServicio" />
+          <ScalarProperty Name="RDP_IdMensajero" ColumnName="RDP_IdMensajero" />
+          <ScalarProperty Name="RDP_NombreMensajero" ColumnName="RDP_NombreMensajero" />
+          <ScalarProperty Name="RDP_NoBolsaSeguridad" ColumnName="RDP_NoBolsaSeguridad" />
+          <ScalarProperty Name="RDP_ValorTotalEnviado" ColumnName="RDP_ValorTotalEnviado" />
+          <ScalarProperty Name="RDP_FechaGrabacion" ColumnName="RDP_FechaGrabacion" />
+          <ScalarProperty Name="RDP_CreadoPor" ColumnName="RDP_CreadoPor" />
+          <ScalarProperty Name="RDP_IdRecoleccion" ColumnName="RDP_IdRecoleccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CierreCajaUsuarioCierre_VCAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CierreCajaUsuarioCierre_VCAJ">
+        <MappingFragment StoreEntitySet="CierreCajaUsuarioCierre_VCAJ">
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+          <ScalarProperty Name="FechaApertura" ColumnName="FechaApertura" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="USU_IdCodigoUsuario" ColumnName="USU_IdCodigoUsuario" />
+          <ScalarProperty Name="CIC_CreadoPor" ColumnName="CIC_CreadoPor" />
+          <ScalarProperty Name="CIC_EstaReportado" ColumnName="CIC_EstaReportado" />
+          <ScalarProperty Name="CIC_FechaGrabacion" ColumnName="CIC_FechaGrabacion" />
+          <ScalarProperty Name="CIC_IdCierrepuntoAsociado" ColumnName="CIC_IdCierrepuntoAsociado" />
+          <ScalarProperty Name="CIC_TotalEgresosOtrasFormas" ColumnName="CIC_TotalEgresosOtrasFormas" />
+          <ScalarProperty Name="CIC_TotalIngresosOtrasFormas" ColumnName="CIC_TotalIngresosOtrasFormas" />
+          <ScalarProperty Name="CIC_TotalEgresosEfectivo" ColumnName="CIC_TotalEgresosEfectivo" />
+          <ScalarProperty Name="CIC_TotalIngresosEfectivo" ColumnName="CIC_TotalIngresosEfectivo" />
+          <ScalarProperty Name="CIC_IdCierreCaja" ColumnName="CIC_IdCierreCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResumenRecoleccionDineroPuntos_VCAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ResumenRecoleccionDineroPuntos_VCAJ">
+        <MappingFragment StoreEntitySet="ResumenRecoleccionDineroPuntos_VCAJ">
+          <ScalarProperty Name="TotalValorPrimaSeguros" ColumnName="TotalValorPrimaSeguros" />
+          <ScalarProperty Name="TotalValorRetenciones" ColumnName="TotalValorRetenciones" />
+          <ScalarProperty Name="TotalValorImpuestos" ColumnName="TotalValorImpuestos" />
+          <ScalarProperty Name="TotalValorTercero" ColumnName="TotalValorTercero" />
+          <ScalarProperty Name="TotalValoresAdicionales" ColumnName="TotalValoresAdicionales" />
+          <ScalarProperty Name="TotalValorServicio" ColumnName="TotalValorServicio" />
+          <ScalarProperty Name="RDP_IdRecoleccion" ColumnName="RDP_IdRecoleccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerResumenCajaPorFormaPago_CAJ" FunctionName="ModeloCaja.Store.paObtenerResumenCajaPorFormaPago_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.ResumenCajaPorFormaPago_CAJ">
+          <ScalarProperty Name="IdFormaPago" ColumnName="IdFormaPago" />
+          <ScalarProperty Name="DescripcionFormaPago" ColumnName="DescripcionFormaPago" />
+          <ScalarProperty Name="CantidadRegistros" ColumnName="CantidadRegistros" />
+          <ScalarProperty Name="ValorTotalIngreso" ColumnName="ValorTotalIngreso" />
+          <ScalarProperty Name="ValorTotalEgreso" ColumnName="ValorTotalEgreso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerResumenTransccionesConcepto_CAJ" FunctionName="ModeloCaja.Store.paObtenerResumenTransccionesConcepto_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.CAResumenTransccionesConcepto_CAJ">
+          <ScalarProperty Name="IdConceptoCaja" ColumnName="IdConceptoCaja" />
+          <ScalarProperty Name="NombreConcepto" ColumnName="NombreConcepto" />
+          <ScalarProperty Name="TotalValorIngresoContado" ColumnName="TotalValorIngresoContado" />
+          <ScalarProperty Name="TotalValorEgresoContado" ColumnName="TotalValorEgresoContado" />
+          <ScalarProperty Name="CantidadTransacciones" ColumnName="CantidadTransacciones" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="BaseGestionCajas_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.BaseGestionCajas_CAJ">
+        <MappingFragment StoreEntitySet="BaseGestionCajas_CAJ">
+          <ScalarProperty Name="BGC_CreadoPor" ColumnName="BGC_CreadoPor" />
+          <ScalarProperty Name="BGC_FechaGrabacion" ColumnName="BGC_FechaGrabacion" />
+          <ScalarProperty Name="BGC_BaseCasaMatriz" ColumnName="BGC_BaseCasaMatriz" />
+          <ScalarProperty Name="BGC_BaseOperacionNacional" ColumnName="BGC_BaseOperacionNacional" />
+          <ScalarProperty Name="BGC_IdCasaMatriz" ColumnName="BGC_IdCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperacionCajaOperacionNacional_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.OperacionCajaOperacionNacional_CAJ">
+        <MappingFragment StoreEntitySet="OperacionCajaOperacionNacional_CAJ">
+          <ScalarProperty Name="CON_NombreConceptoCaja" ColumnName="CON_NombreConceptoCaja" />
+          <ScalarProperty Name="CON_CreadoPor" ColumnName="CON_CreadoPor" />
+          <ScalarProperty Name="CON_FechaGrabacion" ColumnName="CON_FechaGrabacion" />
+          <ScalarProperty Name="CON_Descripcion" ColumnName="CON_Descripcion" />
+          <ScalarProperty Name="CON_MovHechoPor" ColumnName="CON_MovHechoPor" />
+          <ScalarProperty Name="CON_FechaMovimiento" ColumnName="CON_FechaMovimiento" />
+          <ScalarProperty Name="CON_Observacion" ColumnName="CON_Observacion" />
+          <ScalarProperty Name="CON_NumeroDocumento" ColumnName="CON_NumeroDocumento" />
+          <ScalarProperty Name="CON_ConceptoEsIngreso" ColumnName="CON_ConceptoEsIngreso" />
+          <ScalarProperty Name="CON_Valor" ColumnName="CON_Valor" />
+          <ScalarProperty Name="CON_IdConceptoCaja" ColumnName="CON_IdConceptoCaja" />
+          <ScalarProperty Name="CON_IdAperturaCaja" ColumnName="CON_IdAperturaCaja" />
+          <ScalarProperty Name="CON_IdOperacionCajaOperacionNacional" ColumnName="CON_IdOperacionCajaOperacionNacional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperacionCajaCasaMatriz_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.OperacionCajaCasaMatriz_CAJ">
+        <MappingFragment StoreEntitySet="OperacionCajaCasaMatriz_CAJ">
+          <ScalarProperty Name="CAE_NombreConceptoCaja" ColumnName="CAE_NombreConceptoCaja" />
+          <ScalarProperty Name="CAE_CreadoPor" ColumnName="CAE_CreadoPor" />
+          <ScalarProperty Name="CAE_FechaGrabacion" ColumnName="CAE_FechaGrabacion" />
+          <ScalarProperty Name="CAE_Descripcion" ColumnName="CAE_Descripcion" />
+          <ScalarProperty Name="CAE_MovHechoPor" ColumnName="CAE_MovHechoPor" />
+          <ScalarProperty Name="CAE_FechaMovimiento" ColumnName="CAE_FechaMovimiento" />
+          <ScalarProperty Name="CAE_Observacion" ColumnName="CAE_Observacion" />
+          <ScalarProperty Name="CAE_NumeroDocumento" ColumnName="CAE_NumeroDocumento" />
+          <ScalarProperty Name="CAE_ConceptoEsIngreso" ColumnName="CAE_ConceptoEsIngreso" />
+          <ScalarProperty Name="CAE_Valor" ColumnName="CAE_Valor" />
+          <ScalarProperty Name="CAE_IdConceptoCaja" ColumnName="CAE_IdConceptoCaja" />
+          <ScalarProperty Name="CAE_IdAperturaCaja" ColumnName="CAE_IdAperturaCaja" />
+          <ScalarProperty Name="CAE_IdOperacionCajaCasaMatriz" ColumnName="CAE_IdOperacionCajaCasaMatriz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRegTransDetalle_CAJ" FunctionName="ModeloCaja.Store.paObtenerRegTransDetalle_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerRegTransDetalle_CAJ_Result">
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+          <ScalarProperty Name="RTD_IdRegistroTranscaccion" ColumnName="RTD_IdRegistroTranscaccion" />
+          <ScalarProperty Name="RTD_IdConceptoCaja" ColumnName="RTD_IdConceptoCaja" />
+          <ScalarProperty Name="RTD_NombreConcepto" ColumnName="RTD_NombreConcepto" />
+          <ScalarProperty Name="RTD_ConceptoEsIngreso" ColumnName="RTD_ConceptoEsIngreso" />
+          <ScalarProperty Name="RTD_Cantidad" ColumnName="RTD_Cantidad" />
+          <ScalarProperty Name="RTD_ValorServicio" ColumnName="RTD_ValorServicio" />
+          <ScalarProperty Name="RTD_ValoresAdicionales" ColumnName="RTD_ValoresAdicionales" />
+          <ScalarProperty Name="RTD_ValorTercero" ColumnName="RTD_ValorTercero" />
+          <ScalarProperty Name="RTD_ValorImpuestos" ColumnName="RTD_ValorImpuestos" />
+          <ScalarProperty Name="RTD_ValorRetenciones" ColumnName="RTD_ValorRetenciones" />
+          <ScalarProperty Name="RTD_ValorPrimaSeguros" ColumnName="RTD_ValorPrimaSeguros" />
+          <ScalarProperty Name="RTD_ValorDeclarado" ColumnName="RTD_ValorDeclarado" />
+          <ScalarProperty Name="RTD_Numero" ColumnName="RTD_Numero" />
+          <ScalarProperty Name="RTD_IdCuentaExterna" ColumnName="RTD_IdCuentaExterna" />
+          <ScalarProperty Name="RTD_NumeroFactura" ColumnName="RTD_NumeroFactura" />
+          <ScalarProperty Name="RTD_EstadoFacturacion" ColumnName="RTD_EstadoFacturacion" />
+          <ScalarProperty Name="RTD_FechaFacturacion" ColumnName="RTD_FechaFacturacion" />
+          <ScalarProperty Name="RTD_Observacion" ColumnName="RTD_Observacion" />
+          <ScalarProperty Name="RTD_Descripcion" ColumnName="RTD_Descripcion" />
+          <ScalarProperty Name="RTD_FechaGrabacion" ColumnName="RTD_FechaGrabacion" />
+          <ScalarProperty Name="RTD_CreadoPor" ColumnName="RTD_CreadoPor" />
+          <ScalarProperty Name="RTD_NumeroComprobante" ColumnName="RTD_NumeroComprobante" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerInfoCierreCaja_CAJ" FunctionName="ModeloCaja.Store.paObtenerInfoCierreCaja_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.ObtenerInfoCierreCaja_CAJ">
+          <ScalarProperty Name="RVF_IdFormaPago" ColumnName="RVF_IdFormaPago" />
+          <ScalarProperty Name="RVF_DescripcionFormaPago" ColumnName="RVF_DescripcionFormaPago" />
+          <ScalarProperty Name="Ingresos" ColumnName="Ingresos" />
+          <ScalarProperty Name="Egresos" ColumnName="Egresos" />
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="APC_IdAperturaCaja" ColumnName="APC_IdAperturaCaja" />
+          <ScalarProperty Name="APC_FechaGrabacion" ColumnName="APC_FechaGrabacion" />
+          <ScalarProperty Name="APC_CreadoPor" ColumnName="APC_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="RegTranDetCajaAdicional_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.RegTranDetCajaAdicional_CAJ">
+        <MappingFragment StoreEntitySet="RegTranDetCajaAdicional_CAJ">
+          <ScalarProperty Name="RTD_CreadoPor" ColumnName="RTD_CreadoPor" />
+          <ScalarProperty Name="RTD_FechaGrabacion" ColumnName="RTD_FechaGrabacion" />
+          <ScalarProperty Name="RTD_Adicional3" ColumnName="RTD_Adicional3" />
+          <ScalarProperty Name="RTD_Adicional2" ColumnName="RTD_Adicional2" />
+          <ScalarProperty Name="RTD_Adicional1" ColumnName="RTD_Adicional1" />
+          <ScalarProperty Name="RTD_IdSucursal" ColumnName="RTD_IdSucursal" />
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paCrearRegTransCajaDetlleAdicional_CAJ" FunctionName="ModeloCaja.Store.paCrearRegTransCajaDetlleAdicional_CAJ" />
+    <EntitySetMapping Name="CajasDisponibles_PUA">
+      <EntityTypeMapping TypeName="ModeloCaja.CajasDisponibles_PUA">
+        <MappingFragment StoreEntitySet="CajasDisponibles_PUA">
+          <ScalarProperty Name="CAD_CreadoPor" ColumnName="CAD_CreadoPor" />
+          <ScalarProperty Name="CAD_FechaGrabacion" ColumnName="CAD_FechaGrabacion" />
+          <ScalarProperty Name="CAD_IdCaja" ColumnName="CAD_IdCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CierreCentroServicios_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CierreCentroServicios_CAJ">
+        <MappingFragment StoreEntitySet="CierreCentroServicios_CAJ">
+          <ScalarProperty Name="CCS_EsCierreSistema" ColumnName="CCS_EsCierreSistema" />
+          <ScalarProperty Name="CCS_EstaReportado" ColumnName="CCS_EstaReportado" />
+          <ScalarProperty Name="CCS_ValorGirosNoPagados" ColumnName="CCS_ValorGirosNoPagados" />
+          <ScalarProperty Name="CCS_CantidadGirosNoPagados" ColumnName="CCS_CantidadGirosNoPagados" />
+          <ScalarProperty Name="CCS_CreadoPor" ColumnName="CCS_CreadoPor" />
+          <ScalarProperty Name="CCS_FechaGrabacion" ColumnName="CCS_FechaGrabacion" />
+          <ScalarProperty Name="CCS_SaldoFinalEfectivo" ColumnName="CCS_SaldoFinalEfectivo" />
+          <ScalarProperty Name="CCS_TotalEgresosOtrasFormas" ColumnName="CCS_TotalEgresosOtrasFormas" />
+          <ScalarProperty Name="CCS_TotalIngresosOtrasFormas" ColumnName="CCS_TotalIngresosOtrasFormas" />
+          <ScalarProperty Name="CCS_TotalEgresosEfectivo" ColumnName="CCS_TotalEgresosEfectivo" />
+          <ScalarProperty Name="CCS_TotalIngresosEfectivo" ColumnName="CCS_TotalIngresosEfectivo" />
+          <ScalarProperty Name="CCS_SaldoAnteriorEfectivo" ColumnName="CCS_SaldoAnteriorEfectivo" />
+          <ScalarProperty Name="CCS_BaseInicial" ColumnName="CCS_BaseInicial" />
+          <ScalarProperty Name="CCS_IdCentroServicios" ColumnName="CCS_IdCentroServicios" />
+          <ScalarProperty Name="CCS_IdCierreCSAMostrar" ColumnName="CCS_IdCierreCSAMostrar" />
+          <ScalarProperty Name="CCS_IdCierreCentroServicios" ColumnName="CCS_IdCierreCentroServicios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecoleccionDineroPuntos_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.RecoleccionDineroPuntos_CAJ">
+        <MappingFragment StoreEntitySet="RecoleccionDineroPuntos_CAJ">
+          <ScalarProperty Name="RDP_CreadoPor" ColumnName="RDP_CreadoPor" />
+          <ScalarProperty Name="RDP_FechaGrabacion" ColumnName="RDP_FechaGrabacion" />
+          <ScalarProperty Name="RDP_IdCierreCentroServicios" ColumnName="RDP_IdCierreCentroServicios" />
+          <ScalarProperty Name="RDP_ValorTotalEnviado" ColumnName="RDP_ValorTotalEnviado" />
+          <ScalarProperty Name="RDP_NoBolsaSeguridad" ColumnName="RDP_NoBolsaSeguridad" />
+          <ScalarProperty Name="RDP_NombreMensajero" ColumnName="RDP_NombreMensajero" />
+          <ScalarProperty Name="RDP_IdMensajero" ColumnName="RDP_IdMensajero" />
+          <ScalarProperty Name="RDP_NombrePuntoServicio" ColumnName="RDP_NombrePuntoServicio" />
+          <ScalarProperty Name="RDP_IdPuntoServicio" ColumnName="RDP_IdPuntoServicio" />
+          <ScalarProperty Name="RDP_IdRecoleccion" ColumnName="RDP_IdRecoleccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerAlCobrosSinCancelar_MEN" FunctionName="ModeloCaja.Store.paObtenerAlCobrosSinCancelar_MEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerAlCobrosSinCancelar_MEN">
+          <ScalarProperty Name="TotalAlCobroSinCancelar" ColumnName="TotalAlCobroSinCancelar" />
+          <ScalarProperty Name="VRAlCobroSinCancelar" ColumnName="VRAlCobroSinCancelar" />
+          <ScalarProperty Name="TotalAlCobroEnTransito" ColumnName="TotalAlCobroEnTransito" />
+          <ScalarProperty Name="VRAlCobroEnTransito" ColumnName="VRAlCobroEnTransito" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paAperturaCajasEnCero" FunctionName="ModeloCaja.Store.paAperturaCajasEnCero" />
+    <EntitySetMapping Name="CuentaMensajero_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CuentaMensajero_CAJ">
+        <MappingFragment StoreEntitySet="CuentaMensajero_CAJ">
+          <ScalarProperty Name="CUM_CreadoPor" ColumnName="CUM_CreadoPor" />
+          <ScalarProperty Name="CUM_FechaGrabacion" ColumnName="CUM_FechaGrabacion" />
+          <ScalarProperty Name="CUM_NoPlanillaVentas" ColumnName="CUM_NoPlanillaVentas" />
+          <ScalarProperty Name="CUM_NoPlanillaAlCobros" ColumnName="CUM_NoPlanillaAlCobros" />
+          <ScalarProperty Name="CUM_Observaciones" ColumnName="CUM_Observaciones" />
+          <ScalarProperty Name="CUM_SaldoAcumulado" ColumnName="CUM_SaldoAcumulado" />
+          <ScalarProperty Name="CUM_ConceptoEsIngreso" ColumnName="CUM_ConceptoEsIngreso" />
+          <ScalarProperty Name="CUM_Valor" ColumnName="CUM_Valor" />
+          <ScalarProperty Name="CUM_NumeroDocumento" ColumnName="CUM_NumeroDocumento" />
+          <ScalarProperty Name="CUM_IdConcepto" ColumnName="CUM_IdConcepto" />
+          <ScalarProperty Name="CUM_NombreMensajero" ColumnName="CUM_NombreMensajero" />
+          <ScalarProperty Name="CUM_IdMensajero" ColumnName="CUM_IdMensajero" />
+          <ScalarProperty Name="CUM_IdTransaccion" ColumnName="CUM_IdTransaccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtUltAperCaj0NoCerrada_CAJ" FunctionName="ModeloCaja.Store.paObtUltAperCaj0NoCerrada_CAJ" />
+    <FunctionImportMapping FunctionImportName="paCrearRegistroTransCaja_CAJ" FunctionName="ModeloCaja.Store.paCrearRegistroTransCaja_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paCrearRegistroTransCaja_CAJ_Result">
+          <ScalarProperty Name="idRegistroTransaccion" ColumnName="idRegistroTransaccion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearRegTransCajaDetalle_CAJ" FunctionName="ModeloCaja.Store.paCrearRegTransCajaDetalle_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paCrearRegTransCajaDetalle_CAJ_Result">
+          <ScalarProperty Name="IdDetalle" ColumnName="IdDetalle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerResumeCtaMensajer_CAJ" FunctionName="ModeloCaja.Store.paObtenerResumeCtaMensajer_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerResumeCtaMensajer_CAJ_Result">
+          <ScalarProperty Name="CUM_IdTransaccion" ColumnName="CUM_IdTransaccion" />
+          <ScalarProperty Name="COC_Nombre" ColumnName="COC_Nombre" />
+          <ScalarProperty Name="CUM_NumeroDocumento" ColumnName="CUM_NumeroDocumento" />
+          <ScalarProperty Name="Ingresos" ColumnName="Ingresos" />
+          <ScalarProperty Name="Egresos" ColumnName="Egresos" />
+          <ScalarProperty Name="CUM_SaldoAcumulado" ColumnName="CUM_SaldoAcumulado" />
+          <ScalarProperty Name="CUM_FechaGrabacion" ColumnName="CUM_FechaGrabacion" />
+          <ScalarProperty Name="CUM_Observaciones" ColumnName="CUM_Observaciones" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerReportesMensajero_CAJ" FunctionName="ModeloCaja.Store.paObtenerReportesMensajero_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerReportesMensajero_CAJ_Result">
+          <ScalarProperty Name="RMC_IdMensajero" ColumnName="RMC_IdMensajero" />
+          <ScalarProperty Name="RMC_NombreMensajero" ColumnName="RMC_NombreMensajero" />
+          <ScalarProperty Name="RMC_CreadoPor" ColumnName="RMC_CreadoPor" />
+          <ScalarProperty Name="RTD_NumeroComprobante" ColumnName="RTD_NumeroComprobante" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paRecalcularSaldosFinales_CAJ" FunctionName="ModeloCaja.Store.paRecalcularSaldosFinales_CAJ" />
+    <FunctionImportMapping FunctionImportName="paValidarCierreAutomatico_CAJ" FunctionName="ModeloCaja.Store.paValidarCierreAutomatico_CAJ" />
+    <FunctionImportMapping FunctionImportName="paCerrarCentroServicio_CAJ" FunctionName="ModeloCaja.Store.paCerrarCentroServicio_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paCerrarCentroServicio_CAJ_Result">
+          <ScalarProperty Name="IdCierreCentroServicios" ColumnName="IdCierreCentroServicios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerClientePropOper_CAJ" FunctionName="ModeloCaja.Store.paObtenerClientePropOper_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.ClienteOperacion_CAJ">
+          <ScalarProperty Name="IdMovimiento" ColumnName="IdMovimiento" />
+          <ScalarProperty Name="IdServicio" ColumnName="IdServicio" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="ValorOperacion" ColumnName="ValorOperacion" />
+          <ScalarProperty Name="NombreServicio" ColumnName="NombreServicio" />
+          <ScalarProperty Name="FechaGrabacion" ColumnName="FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AperturaCasaMatriz_VCAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.AperturaCasaMatriz_VCAJ">
+        <MappingFragment StoreEntitySet="AperturaCasaMatriz_VCAJ">
+          <ScalarProperty Name="CAM_Estado" ColumnName="CAM_Estado" />
+          <ScalarProperty Name="CAM_CentroCostos" ColumnName="CAM_CentroCostos" />
+          <ScalarProperty Name="CAM_Nit" ColumnName="CAM_Nit" />
+          <ScalarProperty Name="CAM_Nombre" ColumnName="CAM_Nombre" />
+          <ScalarProperty Name="ACM_IdCasaMatriz" ColumnName="ACM_IdCasaMatriz" />
+          <ScalarProperty Name="APC_TipoApertura" ColumnName="APC_TipoApertura" />
+          <ScalarProperty Name="APC_IdCodigoUsuario" ColumnName="APC_IdCodigoUsuario" />
+          <ScalarProperty Name="APC_CreadoPor" ColumnName="APC_CreadoPor" />
+          <ScalarProperty Name="APC_FechaGrabacion" ColumnName="APC_FechaGrabacion" />
+          <ScalarProperty Name="APC_BaseInicialApertura" ColumnName="APC_BaseInicialApertura" />
+          <ScalarProperty Name="APC_EstaAbierta" ColumnName="APC_EstaAbierta" />
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="APC_IdAperturaCaja" ColumnName="APC_IdAperturaCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AperturaCentroServicos_VCAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.AperturaCentroServicos_VCAJ">
+        <MappingFragment StoreEntitySet="AperturaCentroServicos_VCAJ">
+          <ScalarProperty Name="CES_IdClasificadorCanalVenta" ColumnName="CES_IdClasificadorCanalVenta" />
+          <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+          <ScalarProperty Name="CES_CreadoPor" ColumnName="CES_CreadoPor" />
+          <ScalarProperty Name="CES_FechaGrabacion" ColumnName="CES_FechaGrabacion" />
+          <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+          <ScalarProperty Name="CES_TopeMaximoPorPagos" ColumnName="CES_TopeMaximoPorPagos" />
+          <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+          <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+          <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+          <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+          <ScalarProperty Name="CES_VendePrepago" ColumnName="CES_VendePrepago" />
+          <ScalarProperty Name="CES_AdmiteFormaPagoAlCobro" ColumnName="CES_AdmiteFormaPagoAlCobro" />
+          <ScalarProperty Name="CES_VolumenMaximo" ColumnName="CES_VolumenMaximo" />
+          <ScalarProperty Name="CES_PesoMaximo" ColumnName="CES_PesoMaximo" />
+          <ScalarProperty Name="CES_IdTipoPropiedad" ColumnName="CES_IdTipoPropiedad" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+          <ScalarProperty Name="CES_Email" ColumnName="CES_Email" />
+          <ScalarProperty Name="CES_Longitud" ColumnName="CES_Longitud" />
+          <ScalarProperty Name="CES_Latitud" ColumnName="CES_Latitud" />
+          <ScalarProperty Name="CES_IdPersonaResponsable" ColumnName="CES_IdPersonaResponsable" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+          <ScalarProperty Name="CES_IdZona" ColumnName="CES_IdZona" />
+          <ScalarProperty Name="CES_Barrio" ColumnName="CES_Barrio" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_Fax" ColumnName="CES_Fax" />
+          <ScalarProperty Name="CES_Telefono2" ColumnName="CES_Telefono2" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_IdPropietario" ColumnName="CES_IdPropietario" />
+          <ScalarProperty Name="CES_DigitoVerificacion" ColumnName="CES_DigitoVerificacion" />
+          <ScalarProperty Name="CES_Tipo" ColumnName="CES_Tipo" />
+          <ScalarProperty Name="ACS_NombreCentroServicios" ColumnName="ACS_NombreCentroServicios" />
+          <ScalarProperty Name="ACS_IdCentroServicios" ColumnName="ACS_IdCentroServicios" />
+          <ScalarProperty Name="APC_TipoApertura" ColumnName="APC_TipoApertura" />
+          <ScalarProperty Name="APC_IdCodigoUsuario" ColumnName="APC_IdCodigoUsuario" />
+          <ScalarProperty Name="APC_CreadoPor" ColumnName="APC_CreadoPor" />
+          <ScalarProperty Name="APC_FechaGrabacion" ColumnName="APC_FechaGrabacion" />
+          <ScalarProperty Name="APC_BaseInicialApertura" ColumnName="APC_BaseInicialApertura" />
+          <ScalarProperty Name="APC_EstaAbierta" ColumnName="APC_EstaAbierta" />
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="APC_IdAperturaCaja" ColumnName="APC_IdAperturaCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerEnviMenjAlCobro_CAJ" FunctionName="ModeloCaja.Store.paObtenerEnviMenjAlCobro_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerEnviMenjAlCobro_CAJ_Result">
+          <ScalarProperty Name="ADM_NumeroGuia" ColumnName="ADM_NumeroGuia" />
+          <ScalarProperty Name="ADM_Peso" ColumnName="ADM_Peso" />
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAM_FechaGrabacion" ColumnName="PAM_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ConceptoCaja_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ConceptoCaja_CAJ">
+        <MappingFragment StoreEntitySet="ConceptoCaja_CAJ">
+          <ScalarProperty Name="COC_RequiereNoDocumento" ColumnName="COC_RequiereNoDocumento" />
+          <ScalarProperty Name="COC_ContrapartidaCS" ColumnName="COC_ContrapartidaCS" />
+          <ScalarProperty Name="COC_ContrapartidaCasaMatriz" ColumnName="COC_ContrapartidaCasaMatriz" />
+          <ScalarProperty Name="COC_CreadoPor" ColumnName="COC_CreadoPor" />
+          <ScalarProperty Name="COC_FechaGrabacion" ColumnName="COC_FechaGrabacion" />
+          <ScalarProperty Name="COC_VisibleRacol" ColumnName="COC_VisibleRacol" />
+          <ScalarProperty Name="COC_VisibleMensajero" ColumnName="COC_VisibleMensajero" />
+          <ScalarProperty Name="COC_VisibleAgenciaOPunto" ColumnName="COC_VisibleAgenciaOPunto" />
+          <ScalarProperty Name="COC_EsIngreso" ColumnName="COC_EsIngreso" />
+          <ScalarProperty Name="COC_IdCuentaExterna" ColumnName="COC_IdCuentaExterna" />
+          <ScalarProperty Name="COC_EsServicio" ColumnName="COC_EsServicio" />
+          <ScalarProperty Name="COC_Descripcion" ColumnName="COC_Descripcion" />
+          <ScalarProperty Name="COC_Nombre" ColumnName="COC_Nombre" />
+          <ScalarProperty Name="COC_IdConceptoCaja" ColumnName="COC_IdConceptoCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategConceptoCaja_VCAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.CategConceptoCaja_VCAJ">
+        <MappingFragment StoreEntitySet="CategConceptoCaja_VCAJ">
+          <ScalarProperty Name="COC_RequiereNoDocumento" ColumnName="COC_RequiereNoDocumento" />
+          <ScalarProperty Name="COC_ContrapartidaCS" ColumnName="COC_ContrapartidaCS" />
+          <ScalarProperty Name="COC_ContrapartidaCasaMatriz" ColumnName="COC_ContrapartidaCasaMatriz" />
+          <ScalarProperty Name="CCC_Descripcion" ColumnName="CCC_Descripcion" />
+          <ScalarProperty Name="CCC_IdCategoria" ColumnName="CCC_IdCategoria" />
+          <ScalarProperty Name="COC_CreadoPor" ColumnName="COC_CreadoPor" />
+          <ScalarProperty Name="COC_FechaGrabacion" ColumnName="COC_FechaGrabacion" />
+          <ScalarProperty Name="COC_VisibleRacol" ColumnName="COC_VisibleRacol" />
+          <ScalarProperty Name="COC_VisibleMensajero" ColumnName="COC_VisibleMensajero" />
+          <ScalarProperty Name="COC_VisibleAgenciaOPunto" ColumnName="COC_VisibleAgenciaOPunto" />
+          <ScalarProperty Name="COC_EsIngreso" ColumnName="COC_EsIngreso" />
+          <ScalarProperty Name="COC_IdCuentaExterna" ColumnName="COC_IdCuentaExterna" />
+          <ScalarProperty Name="COC_EsServicio" ColumnName="COC_EsServicio" />
+          <ScalarProperty Name="COC_Descripcion" ColumnName="COC_Descripcion" />
+          <ScalarProperty Name="COC_Nombre" ColumnName="COC_Nombre" />
+          <ScalarProperty Name="COC_IdConceptoCaja" ColumnName="COC_IdConceptoCaja" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConceptoCajaHist_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ConceptoCajaHist_CAJ">
+        <MappingFragment StoreEntitySet="ConceptoCajaHist_CAJ">
+          <ScalarProperty Name="COC_TipoCambio" ColumnName="COC_TipoCambio" />
+          <ScalarProperty Name="COC_CambiadoPor" ColumnName="COC_CambiadoPor" />
+          <ScalarProperty Name="COC_FechaCambio" ColumnName="COC_FechaCambio" />
+          <ScalarProperty Name="COC_RequiereNoDocumento" ColumnName="COC_RequiereNoDocumento" />
+          <ScalarProperty Name="COC_ContrapartidaCS" ColumnName="COC_ContrapartidaCS" />
+          <ScalarProperty Name="COC_ContrapartidaCasaMatriz" ColumnName="COC_ContrapartidaCasaMatriz" />
+          <ScalarProperty Name="COC_CreadoPor" ColumnName="COC_CreadoPor" />
+          <ScalarProperty Name="COC_FechaGrabacion" ColumnName="COC_FechaGrabacion" />
+          <ScalarProperty Name="COC_VisibleRacol" ColumnName="COC_VisibleRacol" />
+          <ScalarProperty Name="COC_VisibleMensajero" ColumnName="COC_VisibleMensajero" />
+          <ScalarProperty Name="COC_VisibleAgenciaOPunto" ColumnName="COC_VisibleAgenciaOPunto" />
+          <ScalarProperty Name="COC_EsIngreso" ColumnName="COC_EsIngreso" />
+          <ScalarProperty Name="COC_IdCuentaExterna" ColumnName="COC_IdCuentaExterna" />
+          <ScalarProperty Name="COC_EsServicio" ColumnName="COC_EsServicio" />
+          <ScalarProperty Name="COC_Descripcion" ColumnName="COC_Descripcion" />
+          <ScalarProperty Name="COC_Nombre" ColumnName="COC_Nombre" />
+          <ScalarProperty Name="COC_IdConceptoCaja" ColumnName="COC_IdConceptoCaja" />
+          <ScalarProperty Name="COC_IdAuditoria" ColumnName="COC_IdAuditoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerCajasCerradasXCSFecha_CAJ" FunctionName="ModeloCaja.Store.paObtenerCajasCerradasXCSFecha_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerCajasCerradasXCSFecha_CAJ_Result">
+          <ScalarProperty Name="CIC_IdCierreCaja" ColumnName="CIC_IdCierreCaja" />
+          <ScalarProperty Name="APC_IdCaja" ColumnName="APC_IdCaja" />
+          <ScalarProperty Name="CIC_TotalIngresosEfectivo" ColumnName="CIC_TotalIngresosEfectivo" />
+          <ScalarProperty Name="CIC_TotalEgresosEfectivo" ColumnName="CIC_TotalEgresosEfectivo" />
+          <ScalarProperty Name="CIC_TotalIngresosOtrasFormas" ColumnName="CIC_TotalIngresosOtrasFormas" />
+          <ScalarProperty Name="CIC_TotalEgresosOtrasFormas" ColumnName="CIC_TotalEgresosOtrasFormas" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="CIC_FechaGrabacion" ColumnName="CIC_FechaGrabacion" />
+          <ScalarProperty Name="ACS_IdCentroServicios" ColumnName="ACS_IdCentroServicios" />
+          <ScalarProperty Name="APC_FechaGrabacion" ColumnName="APC_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="OperacionCajaBanco_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.OperacionCajaBanco_CAJ">
+        <MappingFragment StoreEntitySet="OperacionCajaBanco_CAJ">
+          <ScalarProperty Name="CAB_NumeroComprobante" ColumnName="CAB_NumeroComprobante" />
+          <ScalarProperty Name="CAB_NombreConceptoCaja" ColumnName="CAB_NombreConceptoCaja" />
+          <ScalarProperty Name="CAB_CreadoPor" ColumnName="CAB_CreadoPor" />
+          <ScalarProperty Name="CAB_FechaGrabacion" ColumnName="CAB_FechaGrabacion" />
+          <ScalarProperty Name="CAB_MovHechoPor" ColumnName="CAB_MovHechoPor" />
+          <ScalarProperty Name="CAB_FechaMovimiento" ColumnName="CAB_FechaMovimiento" />
+          <ScalarProperty Name="CAB_Observacion" ColumnName="CAB_Observacion" />
+          <ScalarProperty Name="CAB_NumeroDocumento" ColumnName="CAB_NumeroDocumento" />
+          <ScalarProperty Name="CAB_DescripcionTipoDocumento" ColumnName="CAB_DescripcionTipoDocumento" />
+          <ScalarProperty Name="CAB_IdTipoDocumento" ColumnName="CAB_IdTipoDocumento" />
+          <ScalarProperty Name="CAB_ConceptoEsIngreso" ColumnName="CAB_ConceptoEsIngreso" />
+          <ScalarProperty Name="CAB_Valor" ColumnName="CAB_Valor" />
+          <ScalarProperty Name="CAB_IdConceptoCaja" ColumnName="CAB_IdConceptoCaja" />
+          <ScalarProperty Name="CAB_NumeroCuenta" ColumnName="CAB_NumeroCuenta" />
+          <ScalarProperty Name="CAB_DescripcionBanco" ColumnName="CAB_DescripcionBanco" />
+          <ScalarProperty Name="CAB_IdBanco" ColumnName="CAB_IdBanco" />
+          <ScalarProperty Name="CAB_IdAperturaCaja" ColumnName="CAB_IdAperturaCaja" />
+          <ScalarProperty Name="CAB_IdOperacionCajaBanco" ColumnName="CAB_IdOperacionCajaBanco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerCajaAfectadaAlCobro_CAJ" FunctionName="ModeloCaja.Store.paObtenerCajaAfectadaAlCobro_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerCajaAfectadaAlCobro_CAJ_Result">
+          <ScalarProperty Name="IdCS" ColumnName="IdCS" />
+          <ScalarProperty Name="NombreCS" ColumnName="NombreCS" />
+          <ScalarProperty Name="NoComprobante" ColumnName="NoComprobante" />
+          <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerRegitrosTranCajaCentroSvc_CAJ" FunctionName="ModeloCaja.Store.paObtenerRegitrosTranCajaCentroSvc_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerRegitrosTranCajaCentroSvc_CAJ_Result">
+          <ScalarProperty Name="RTC_IdCentroServiciosVenta" ColumnName="RTC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="RTC_NombreCentroServiciosVenta" ColumnName="RTC_NombreCentroServiciosVenta" />
+          <ScalarProperty Name="RTD_IdConceptoCaja" ColumnName="RTD_IdConceptoCaja" />
+          <ScalarProperty Name="RTD_NombreConcepto" ColumnName="RTD_NombreConcepto" />
+          <ScalarProperty Name="RTD_Descripcion" ColumnName="RTD_Descripcion" />
+          <ScalarProperty Name="RTD_ValorServicio" ColumnName="RTD_ValorServicio" />
+          <ScalarProperty Name="RTD_FechaGrabacion" ColumnName="RTD_FechaGrabacion" />
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerCSRecacudoAlcobro_CAJ" FunctionName="ModeloCaja.Store.paObtenerCSRecacudoAlcobro_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerCSRecacudoAlcobro_CAJ_Result">
+          <ScalarProperty Name="RTC_IdCentroServiciosVenta" ColumnName="RTC_IdCentroServiciosVenta" />
+          <ScalarProperty Name="RTC_NombreCentroServiciosVenta" ColumnName="RTC_NombreCentroServiciosVenta" />
+          <ScalarProperty Name="RTD_Numero" ColumnName="RTD_Numero" />
+          <ScalarProperty Name="ValorEnCaja" ColumnName="ValorEnCaja" />
+          <ScalarProperty Name="RTD_NumeroComprobante" ColumnName="RTD_NumeroComprobante" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="ReporteMensajeroCaja_CAJ">
+      <EntityTypeMapping TypeName="ModeloCaja.ReporteMensajeroCaja_CAJ">
+        <MappingFragment StoreEntitySet="ReporteMensajeroCaja_CAJ">
+          <ScalarProperty Name="RMC_NoComprobante" ColumnName="RMC_NoComprobante" />
+          <ScalarProperty Name="RMC_CreadoPor" ColumnName="RMC_CreadoPor" />
+          <ScalarProperty Name="RMC_FechaGrabacion" ColumnName="RMC_FechaGrabacion" />
+          <ScalarProperty Name="RMC_NombreMensajero" ColumnName="RMC_NombreMensajero" />
+          <ScalarProperty Name="RMC_IdMensajero" ColumnName="RMC_IdMensajero" />
+          <ScalarProperty Name="RMC_IdRegistroTransDetalleCaja" ColumnName="RMC_IdRegistroTransDetalleCaja" />
+          <ScalarProperty Name="RMC_IdRegistro" ColumnName="RMC_IdRegistro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerReporteMensajeroImprimir_CAJ" FunctionName="ModeloCaja.Store.paObtenerReporteMensajeroImprimir_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloCaja.paObtenerReporteMensajeroImprimir_CAJ_Result">
+          <ScalarProperty Name="COC_IdConceptoCaja" ColumnName="COC_IdConceptoCaja" />
+          <ScalarProperty Name="COC_Nombre" ColumnName="COC_Nombre" />
+          <ScalarProperty Name="RTD_ValorServicio" ColumnName="RTD_ValorServicio" />
+          <ScalarProperty Name="IdConceptoCajaMensajero" ColumnName="IdConceptoCajaMensajero" />
+          <ScalarProperty Name="NombConceptoCajaMensajero" ColumnName="NombConceptoCajaMensajero" />
+          <ScalarProperty Name="NumComprobante" ColumnName="NumComprobante" />
+          <ScalarProperty Name="RTD_Numero" ColumnName="RTD_Numero" />
+          <ScalarProperty Name="RTD_Observacion" ColumnName="RTD_Observacion" />
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+          <ScalarProperty Name="CUM_NombreMensajero" ColumnName="CUM_NombreMensajero" />
+          <ScalarProperty Name="CUM_NumeroDocumento" ColumnName="CUM_NumeroDocumento" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="RTD_FechaGrabacion" ColumnName="RTD_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

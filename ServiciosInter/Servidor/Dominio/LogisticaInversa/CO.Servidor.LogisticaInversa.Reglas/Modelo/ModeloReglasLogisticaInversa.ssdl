@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloReglasLogisticaInversa.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloReglasLogisticaInversaStoreContainer">
+    <EntitySet Name="GestionGuiaTelemercadeo_LOI" EntityType="ModeloReglasLogisticaInversa.Store.GestionGuiaTelemercadeo_LOI" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="GestionGuiaTelemercadeo_LOI">
+    <Key>
+      <PropertyRef Name="GGT_IdGestionGuiaTelemercadeo" />
+    </Key>
+    <Property Name="GGT_IdGestionGuiaTelemercadeo" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GGT_IdAdminisionMensajeria" Type="bigint" Nullable="false" />
+    <Property Name="GGT_NumeroGuia" Type="bigint" Nullable="false" />
+    <Property Name="GGT_IdResultadoTelemercadeo" Type="smallint" Nullable="false" />
+    <Property Name="GGT_TelefonoMarcado" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="GGT_PersonaContesta" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="GGT_IdParentestoConDestinatari" Type="smallint" Nullable="false" />
+    <Property Name="GGT_NuevoTelefono" Type="varchar" MaxLength="25" />
+    <Property Name="GGT_NuevoContaco" Type="varchar" MaxLength="150" />
+    <Property Name="GGT_NuevaDireccionEnvio" Type="varchar" MaxLength="250" />
+    <Property Name="GGT_Observacion" Type="varchar" MaxLength="250" />
+    <Property Name="GGT_IdEstadoGuiaLog" Type="bigint" Nullable="false" />
+    <Property Name="GGT_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="GGT_CreadoPor" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Function Name="paBuscarDireccionMensajeria_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="EsDestinatario" Type="bit" Mode="In" />
+    <Parameter Name="Localidad" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

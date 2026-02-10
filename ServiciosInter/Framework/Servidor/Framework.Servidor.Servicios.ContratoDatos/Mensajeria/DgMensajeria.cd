@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Framework.Servidor.Servicios.ContratoDatos.Mensajeria.MEAgencia">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Mensajeria\MEAgencia.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PuntosServicio" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Framework.Servidor.Servicios.ContratoDatos.Mensajeria.MECategoriaMensaje">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mensajeria\MECategoriaMensaje.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Framework.Servidor.Servicios.ContratoDatos.Mensajeria.MEMensajeEnviado">
+    <Position X="5.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAACAAAgAAAAAAAAAQAAAACAABggCAAAAAA=</HashCode>
+      <FileName>Mensajeria\MEMensajeEnviado.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MensajeOriginal" />
+      <Property Name="Categoria" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="RespuestasMensaje" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Framework.Servidor.Servicios.ContratoDatos.Mensajeria.MEPuntoServicio">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mensajeria\MEPuntoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Framework.Servidor.Servicios.ContratoDatos.Mensajeria.MERacol">
+    <Position X="1.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Mensajeria\MERacol.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Agencias" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Framework.Servidor.Servicios.ContratoDatos.Mensajeria.MERespuestaMensaje">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAEAAAAAAAAAAQAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Mensajeria\MERespuestaMensaje.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

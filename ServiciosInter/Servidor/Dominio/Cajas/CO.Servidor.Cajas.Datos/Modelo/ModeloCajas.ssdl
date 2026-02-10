@@ -1,0 +1,1941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloCaja.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModeloCajaStoreContainer">
+    <EntitySet Name="AperturaCaja_CAJ" EntityType="ModeloCaja.Store.AperturaCaja_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AperturaCajaCasaMatriz_CAJ" EntityType="ModeloCaja.Store.AperturaCajaCasaMatriz_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AperturaCajaCentroServicios_CAJ" EntityType="ModeloCaja.Store.AperturaCajaCentroServicios_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BancoCentroServiciosMov_CAJ" EntityType="ModeloCaja.Store.BancoCentroServiciosMov_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BaseGestionCajas_CAJ" EntityType="ModeloCaja.Store.BaseGestionCajas_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CajaBancoOperacionNacionalMov_CAJ" EntityType="ModeloCaja.Store.CajaBancoOperacionNacionalMov_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CajaCasaMatrizBancoMov_CAJ" EntityType="ModeloCaja.Store.CajaCasaMatrizBancoMov_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CajaCasaMatrizCentroSvcMov_CAJ" EntityType="ModeloCaja.Store.CajaCasaMatrizCentroSvcMov_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CajaCasaMatrizOperacionNacionalMov_CAJ" EntityType="ModeloCaja.Store.CajaCasaMatrizOperacionNacionalMov_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CajaCentroSvcOperacionNacionalMov_CAJ" EntityType="ModeloCaja.Store.CajaCentroSvcOperacionNacionalMov_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CajasDisponibles_PUA" EntityType="ModeloCaja.Store.CajasDisponibles_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CategoriaConceptoCaja_CAJ" EntityType="ModeloCaja.Store.CategoriaConceptoCaja_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroServiciosReporteDinero_PUA" EntityType="ModeloCaja.Store.CentroServiciosReporteDinero_PUA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CentroSvcCentroSvcMov_CAJ" EntityType="ModeloCaja.Store.CentroSvcCentroSvcMov_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CierreCaja_CAJ" EntityType="ModeloCaja.Store.CierreCaja_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CierreCajaCasaMatriz_CAJ" EntityType="ModeloCaja.Store.CierreCajaCasaMatriz_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CierreCentroServicios_CAJ" EntityType="ModeloCaja.Store.CierreCentroServicios_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConceptoCaja_CAJ" EntityType="ModeloCaja.Store.ConceptoCaja_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConceptoCajaCategoria_CAJ" EntityType="ModeloCaja.Store.ConceptoCajaCategoria_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConceptoCajaHist_CAJ" EntityType="ModeloCaja.Store.ConceptoCajaHist_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConceptoCajaImpuesto_CAJ" EntityType="ModeloCaja.Store.ConceptoCajaImpuesto_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConceptoCajaRetencion_CAJ" EntityType="ModeloCaja.Store.ConceptoCajaRetencion_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CuentaExterna_PAR" EntityType="ModeloCaja.Store.CuentaExterna_PAR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CuentaMensajero_CAJ" EntityType="ModeloCaja.Store.CuentaMensajero_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DuplaConceptoCaja_CAJ" EntityType="ModeloCaja.Store.DuplaConceptoCaja_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OperacionCajaBanco_CAJ" EntityType="ModeloCaja.Store.OperacionCajaBanco_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OperacionCajaCasaMatriz_CAJ" EntityType="ModeloCaja.Store.OperacionCajaCasaMatriz_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OperacionCajaOperacionNacional_CAJ" EntityType="ModeloCaja.Store.OperacionCajaOperacionNacional_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParametrosCajas_CAJ" EntityType="ModeloCaja.Store.ParametrosCajas_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PinPrepago_CAJ" EntityType="ModeloCaja.Store.PinPrepago_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RecoleccionDineroPuntos_CAJ" EntityType="ModeloCaja.Store.RecoleccionDineroPuntos_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistroTransaccionesCaja_CAJ" EntityType="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistroTransacDetalleCaja_CAJ" EntityType="ModeloCaja.Store.RegistroTransacDetalleCaja_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistroTransacDetalleImpuesto_CAJ" EntityType="ModeloCaja.Store.RegistroTransacDetalleImpuesto_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistroTranscDetalleRetencion_CAJ" EntityType="ModeloCaja.Store.RegistroTranscDetalleRetencion_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistroTrasnClienteCredit_CAJ" EntityType="ModeloCaja.Store.RegistroTrasnClienteCredit_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegistroVentaFormaPago_CAJ" EntityType="ModeloCaja.Store.RegistroVentaFormaPago_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegTranDetCajaAdicional_CAJ" EntityType="ModeloCaja.Store.RegTranDetCajaAdicional_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReporteDineroPuntoAgencia_CAJ" EntityType="ModeloCaja.Store.ReporteDineroPuntoAgencia_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReporteMensajeroCaja_CAJ" EntityType="ModeloCaja.Store.ReporteMensajeroCaja_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResumenCajaCentroServ_CAJ" EntityType="ModeloCaja.Store.ResumenCajaCentroServ_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoObsPuntoAgencia_CAJ" EntityType="ModeloCaja.Store.TipoObsPuntoAgencia_CAJ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AperturaCasaMatriz_VCAJ" EntityType="ModeloCaja.Store.AperturaCasaMatriz_VCAJ" store:Type="Views" store:Schema="dbo" store:Name="AperturaCasaMatriz_VCAJ">
+      <DefiningQuery>SELECT 
+      [AperturaCasaMatriz_VCAJ].[APC_IdAperturaCaja] AS [APC_IdAperturaCaja], 
+      [AperturaCasaMatriz_VCAJ].[APC_IdCaja] AS [APC_IdCaja], 
+      [AperturaCasaMatriz_VCAJ].[APC_EstaAbierta] AS [APC_EstaAbierta], 
+      [AperturaCasaMatriz_VCAJ].[APC_BaseInicialApertura] AS [APC_BaseInicialApertura], 
+      [AperturaCasaMatriz_VCAJ].[APC_FechaGrabacion] AS [APC_FechaGrabacion], 
+      [AperturaCasaMatriz_VCAJ].[APC_CreadoPor] AS [APC_CreadoPor], 
+      [AperturaCasaMatriz_VCAJ].[APC_IdCodigoUsuario] AS [APC_IdCodigoUsuario], 
+      [AperturaCasaMatriz_VCAJ].[APC_TipoApertura] AS [APC_TipoApertura], 
+      [AperturaCasaMatriz_VCAJ].[ACM_IdCasaMatriz] AS [ACM_IdCasaMatriz], 
+      [AperturaCasaMatriz_VCAJ].[CAM_Nombre] AS [CAM_Nombre], 
+      [AperturaCasaMatriz_VCAJ].[CAM_Nit] AS [CAM_Nit], 
+      [AperturaCasaMatriz_VCAJ].[CAM_CentroCostos] AS [CAM_CentroCostos], 
+      [AperturaCasaMatriz_VCAJ].[CAM_Estado] AS [CAM_Estado]
+      FROM [dbo].[AperturaCasaMatriz_VCAJ] AS [AperturaCasaMatriz_VCAJ]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AperturaCentroServicos_VCAJ" EntityType="ModeloCaja.Store.AperturaCentroServicos_VCAJ" store:Type="Views" store:Schema="dbo" store:Name="AperturaCentroServicos_VCAJ">
+      <DefiningQuery>SELECT 
+      [AperturaCentroServicos_VCAJ].[APC_IdAperturaCaja] AS [APC_IdAperturaCaja], 
+      [AperturaCentroServicos_VCAJ].[APC_IdCaja] AS [APC_IdCaja], 
+      [AperturaCentroServicos_VCAJ].[APC_EstaAbierta] AS [APC_EstaAbierta], 
+      [AperturaCentroServicos_VCAJ].[APC_BaseInicialApertura] AS [APC_BaseInicialApertura], 
+      [AperturaCentroServicos_VCAJ].[APC_FechaGrabacion] AS [APC_FechaGrabacion], 
+      [AperturaCentroServicos_VCAJ].[APC_CreadoPor] AS [APC_CreadoPor], 
+      [AperturaCentroServicos_VCAJ].[APC_IdCodigoUsuario] AS [APC_IdCodigoUsuario], 
+      [AperturaCentroServicos_VCAJ].[APC_TipoApertura] AS [APC_TipoApertura], 
+      [AperturaCentroServicos_VCAJ].[ACS_IdCentroServicios] AS [ACS_IdCentroServicios], 
+      [AperturaCentroServicos_VCAJ].[ACS_NombreCentroServicios] AS [ACS_NombreCentroServicios], 
+      [AperturaCentroServicos_VCAJ].[CES_Tipo] AS [CES_Tipo], 
+      [AperturaCentroServicos_VCAJ].[CES_DigitoVerificacion] AS [CES_DigitoVerificacion], 
+      [AperturaCentroServicos_VCAJ].[CES_IdPropietario] AS [CES_IdPropietario], 
+      [AperturaCentroServicos_VCAJ].[CES_Telefono1] AS [CES_Telefono1], 
+      [AperturaCentroServicos_VCAJ].[CES_Telefono2] AS [CES_Telefono2], 
+      [AperturaCentroServicos_VCAJ].[CES_Fax] AS [CES_Fax], 
+      [AperturaCentroServicos_VCAJ].[CES_Direccion] AS [CES_Direccion], 
+      [AperturaCentroServicos_VCAJ].[CES_Barrio] AS [CES_Barrio], 
+      [AperturaCentroServicos_VCAJ].[CES_IdZona] AS [CES_IdZona], 
+      [AperturaCentroServicos_VCAJ].[CES_IdMunicipio] AS [CES_IdMunicipio], 
+      [AperturaCentroServicos_VCAJ].[CES_Estado] AS [CES_Estado], 
+      [AperturaCentroServicos_VCAJ].[CES_IdPersonaResponsable] AS [CES_IdPersonaResponsable], 
+      [AperturaCentroServicos_VCAJ].[CES_Latitud] AS [CES_Latitud], 
+      [AperturaCentroServicos_VCAJ].[CES_Longitud] AS [CES_Longitud], 
+      [AperturaCentroServicos_VCAJ].[CES_Email] AS [CES_Email], 
+      [AperturaCentroServicos_VCAJ].[CES_Sistematizada] AS [CES_Sistematizada], 
+      [AperturaCentroServicos_VCAJ].[CES_IdCentroCostos] AS [CES_IdCentroCostos], 
+      [AperturaCentroServicos_VCAJ].[CES_IdTipoPropiedad] AS [CES_IdTipoPropiedad], 
+      [AperturaCentroServicos_VCAJ].[CES_PesoMaximo] AS [CES_PesoMaximo], 
+      [AperturaCentroServicos_VCAJ].[CES_VolumenMaximo] AS [CES_VolumenMaximo], 
+      [AperturaCentroServicos_VCAJ].[CES_AdmiteFormaPagoAlCobro] AS [CES_AdmiteFormaPagoAlCobro], 
+      [AperturaCentroServicos_VCAJ].[CES_VendePrepago] AS [CES_VendePrepago], 
+      [AperturaCentroServicos_VCAJ].[CES_ClasGirosPorIngresos] AS [CES_ClasGirosPorIngresos], 
+      [AperturaCentroServicos_VCAJ].[CES_PuedeRecibirGiros] AS [CES_PuedeRecibirGiros], 
+      [AperturaCentroServicos_VCAJ].[CES_PuedePagarGiros] AS [CES_PuedePagarGiros], 
+      [AperturaCentroServicos_VCAJ].[CES_TopeMaximoPorGiros] AS [CES_TopeMaximoPorGiros], 
+      [AperturaCentroServicos_VCAJ].[CES_TopeMaximoPorPagos] AS [CES_TopeMaximoPorPagos], 
+      [AperturaCentroServicos_VCAJ].[CES_BaseInicialCaja] AS [CES_BaseInicialCaja], 
+      [AperturaCentroServicos_VCAJ].[CES_FechaGrabacion] AS [CES_FechaGrabacion], 
+      [AperturaCentroServicos_VCAJ].[CES_CreadoPor] AS [CES_CreadoPor], 
+      [AperturaCentroServicos_VCAJ].[CES_CodigoBodega] AS [CES_CodigoBodega], 
+      [AperturaCentroServicos_VCAJ].[CES_IdClasificadorCanalVenta] AS [CES_IdClasificadorCanalVenta]
+      FROM [dbo].[AperturaCentroServicos_VCAJ] AS [AperturaCentroServicos_VCAJ]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CategConceptoCaja_VCAJ" EntityType="ModeloCaja.Store.CategConceptoCaja_VCAJ" store:Type="Views" store:Schema="dbo" store:Name="CategConceptoCaja_VCAJ">
+      <DefiningQuery>SELECT 
+      [CategConceptoCaja_VCAJ].[COC_IdConceptoCaja] AS [COC_IdConceptoCaja], 
+      [CategConceptoCaja_VCAJ].[COC_Nombre] AS [COC_Nombre], 
+      [CategConceptoCaja_VCAJ].[COC_Descripcion] AS [COC_Descripcion], 
+      [CategConceptoCaja_VCAJ].[COC_EsServicio] AS [COC_EsServicio], 
+      [CategConceptoCaja_VCAJ].[COC_IdCuentaExterna] AS [COC_IdCuentaExterna], 
+      [CategConceptoCaja_VCAJ].[COC_EsIngreso] AS [COC_EsIngreso], 
+      [CategConceptoCaja_VCAJ].[COC_VisibleAgenciaOPunto] AS [COC_VisibleAgenciaOPunto], 
+      [CategConceptoCaja_VCAJ].[COC_VisibleMensajero] AS [COC_VisibleMensajero], 
+      [CategConceptoCaja_VCAJ].[COC_VisibleRacol] AS [COC_VisibleRacol], 
+      [CategConceptoCaja_VCAJ].[COC_FechaGrabacion] AS [COC_FechaGrabacion], 
+      [CategConceptoCaja_VCAJ].[COC_CreadoPor] AS [COC_CreadoPor], 
+      [CategConceptoCaja_VCAJ].[CCC_IdCategoria] AS [CCC_IdCategoria], 
+      [CategConceptoCaja_VCAJ].[CCC_Descripcion] AS [CCC_Descripcion], 
+      [CategConceptoCaja_VCAJ].[COC_ContrapartidaCasaMatriz] AS [COC_ContrapartidaCasaMatriz], 
+      [CategConceptoCaja_VCAJ].[COC_ContrapartidaCS] AS [COC_ContrapartidaCS], 
+      [CategConceptoCaja_VCAJ].[COC_RequiereNoDocumento] AS [COC_RequiereNoDocumento]
+      FROM [dbo].[CategConceptoCaja_VCAJ] AS [CategConceptoCaja_VCAJ]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CierreCajaGestion_VCAJ" EntityType="ModeloCaja.Store.CierreCajaGestion_VCAJ" store:Type="Views" store:Schema="dbo" store:Name="CierreCajaGestion_VCAJ">
+      <DefiningQuery>SELECT 
+      [CierreCajaGestion_VCAJ].[CCM_IdCierreCaja] AS [CCM_IdCierreCaja], 
+      [CierreCajaGestion_VCAJ].[APC_IdCaja] AS [APC_IdCaja], 
+      [CierreCajaGestion_VCAJ].[APC_EstaAbierta] AS [APC_EstaAbierta], 
+      [CierreCajaGestion_VCAJ].[APC_BaseInicialApertura] AS [APC_BaseInicialApertura], 
+      [CierreCajaGestion_VCAJ].[APC_FechaGrabacion] AS [APC_FechaGrabacion], 
+      [CierreCajaGestion_VCAJ].[APC_CreadoPor] AS [APC_CreadoPor], 
+      [CierreCajaGestion_VCAJ].[APC_IdCodigoUsuario] AS [APC_IdCodigoUsuario], 
+      [CierreCajaGestion_VCAJ].[APC_TipoApertura] AS [APC_TipoApertura], 
+      [CierreCajaGestion_VCAJ].[TipoAperturaDesc] AS [TipoAperturaDesc], 
+      [CierreCajaGestion_VCAJ].[CCM_TotalIngresos] AS [CCM_TotalIngresos], 
+      [CierreCajaGestion_VCAJ].[CCM_TotalEgresos] AS [CCM_TotalEgresos], 
+      [CierreCajaGestion_VCAJ].[CCM_FechaGrabacion] AS [CCM_FechaGrabacion], 
+      [CierreCajaGestion_VCAJ].[IdCasaMatrizOCS] AS [IdCasaMatrizOCS], 
+      [CierreCajaGestion_VCAJ].[CAM_Nombre] AS [CAM_Nombre], 
+      [CierreCajaGestion_VCAJ].[CAM_CentroCostos] AS [CAM_CentroCostos]
+      FROM [dbo].[CierreCajaGestion_VCAJ] AS [CierreCajaGestion_VCAJ]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CierreCajaUsuarioCierre_VCAJ" EntityType="ModeloCaja.Store.CierreCajaUsuarioCierre_VCAJ" store:Type="Views" store:Schema="dbo" store:Name="CierreCajaUsuarioCierre_VCAJ">
+      <DefiningQuery>SELECT 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_IdCierreCaja] AS [CIC_IdCierreCaja], 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_TotalIngresosEfectivo] AS [CIC_TotalIngresosEfectivo], 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_TotalEgresosEfectivo] AS [CIC_TotalEgresosEfectivo], 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_TotalIngresosOtrasFormas] AS [CIC_TotalIngresosOtrasFormas], 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_TotalEgresosOtrasFormas] AS [CIC_TotalEgresosOtrasFormas], 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_IdCierrepuntoAsociado] AS [CIC_IdCierrepuntoAsociado], 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_FechaGrabacion] AS [CIC_FechaGrabacion], 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_EstaReportado] AS [CIC_EstaReportado], 
+      [CierreCajaUsuarioCierre_VCAJ].[CIC_CreadoPor] AS [CIC_CreadoPor], 
+      [CierreCajaUsuarioCierre_VCAJ].[USU_IdCodigoUsuario] AS [USU_IdCodigoUsuario], 
+      [CierreCajaUsuarioCierre_VCAJ].[PEI_Identificacion] AS [PEI_Identificacion], 
+      [CierreCajaUsuarioCierre_VCAJ].[PEI_Nombre] AS [PEI_Nombre], 
+      [CierreCajaUsuarioCierre_VCAJ].[PEI_PrimerApellido] AS [PEI_PrimerApellido], 
+      [CierreCajaUsuarioCierre_VCAJ].[PEI_SegundoApellido] AS [PEI_SegundoApellido], 
+      [CierreCajaUsuarioCierre_VCAJ].[NombreCompleto] AS [NombreCompleto], 
+      [CierreCajaUsuarioCierre_VCAJ].[APC_IdCaja] AS [APC_IdCaja], 
+      [CierreCajaUsuarioCierre_VCAJ].[FechaApertura] AS [FechaApertura], 
+      [CierreCajaUsuarioCierre_VCAJ].[CES_IdCentroServicios] AS [CES_IdCentroServicios], 
+      [CierreCajaUsuarioCierre_VCAJ].[CES_IdCentroCostos] AS [CES_IdCentroCostos], 
+      [CierreCajaUsuarioCierre_VCAJ].[CES_Nombre] AS [CES_Nombre]
+      FROM [dbo].[CierreCajaUsuarioCierre_VCAJ] AS [CierreCajaUsuarioCierre_VCAJ]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ResumenRecoleccionDineroPuntos_VCAJ" EntityType="ModeloCaja.Store.ResumenRecoleccionDineroPuntos_VCAJ" store:Type="Views" store:Schema="dbo" store:Name="ResumenRecoleccionDineroPuntos_VCAJ">
+      <DefiningQuery>SELECT 
+      [ResumenRecoleccionDineroPuntos_VCAJ].[RDP_IdRecoleccion] AS [RDP_IdRecoleccion], 
+      [ResumenRecoleccionDineroPuntos_VCAJ].[TotalValorServicio] AS [TotalValorServicio], 
+      [ResumenRecoleccionDineroPuntos_VCAJ].[TotalValoresAdicionales] AS [TotalValoresAdicionales], 
+      [ResumenRecoleccionDineroPuntos_VCAJ].[TotalValorTercero] AS [TotalValorTercero], 
+      [ResumenRecoleccionDineroPuntos_VCAJ].[TotalValorImpuestos] AS [TotalValorImpuestos], 
+      [ResumenRecoleccionDineroPuntos_VCAJ].[TotalValorRetenciones] AS [TotalValorRetenciones], 
+      [ResumenRecoleccionDineroPuntos_VCAJ].[TotalValorPrimaSeguros] AS [TotalValorPrimaSeguros]
+      FROM [dbo].[ResumenRecoleccionDineroPuntos_VCAJ] AS [ResumenRecoleccionDineroPuntos_VCAJ]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AperturaCajaCasaMatriz_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.Store.FK_AperturaCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="AperturaCajaCasaMatriz_CAJ" EntitySet="AperturaCajaCasaMatriz_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AperturaCajaCentroServicios_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.Store.FK_AperturaCajaCentroServicios_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="AperturaCajaCentroServicios_CAJ" EntitySet="AperturaCajaCentroServicios_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BancoCentroServiciosMov_CAJ_CajaBanco_CAJ" Association="ModeloCaja.Store.FK_BancoCentroServiciosMov_CAJ_CajaBanco_CAJ">
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+      <End Role="BancoCentroServiciosMov_CAJ" EntitySet="BancoCentroServiciosMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BancoCentroServiciosMov_CAJ_RegistroTransaccionesCaja_CAJ" Association="ModeloCaja.Store.FK_BancoCentroServiciosMov_CAJ_RegistroTransaccionesCaja_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="BancoCentroServiciosMov_CAJ" EntitySet="BancoCentroServiciosMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaBanco_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_CajaBanco_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaBanco_CAJ" Association="ModeloCaja.Store.FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaBanco_CAJ">
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+      <End Role="CajaBancoOperacionNacionalMov_CAJ" EntitySet="CajaBancoOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" Association="ModeloCaja.Store.FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+      <End Role="CajaBancoOperacionNacionalMov_CAJ" EntitySet="CajaBancoOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaCasaMatriz_CAJ" Association="ModeloCaja.Store.FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaCasaMatriz_CAJ">
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+      <End Role="CajaCasaMatrizOperacionNacionalMov_CAJ" EntitySet="CajaCasaMatrizOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" Association="ModeloCaja.Store.FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+      <End Role="CajaCasaMatrizOperacionNacionalMov_CAJ" EntitySet="CajaCasaMatrizOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaCentroSvcOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ" Association="ModeloCaja.Store.FK_CajaCentroSvcOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+      <End Role="CajaCentroSvcOperacionNacionalMov_CAJ" EntitySet="CajaCentroSvcOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaCentroSvcOperacionNacionalMov_CAJ_RegistroTransaccionesCaja_CAJ" Association="ModeloCaja.Store.FK_CajaCentroSvcOperacionNacionalMov_CAJ_RegistroTransaccionesCaja_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="CajaCentroSvcOperacionNacionalMov_CAJ" EntitySet="CajaCentroSvcOperacionNacionalMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaEmpresa_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_CajaEmpresa_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaEmpresaBancoMov_CAJ_CajaBanco_CAJ" Association="ModeloCaja.Store.FK_CajaEmpresaBancoMov_CAJ_CajaBanco_CAJ">
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+      <End Role="CajaCasaMatrizBancoMov_CAJ" EntitySet="CajaCasaMatrizBancoMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaEmpresaBancoMov_CAJ_CajaEmpresa_CAJ" Association="ModeloCaja.Store.FK_CajaEmpresaBancoMov_CAJ_CajaEmpresa_CAJ">
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+      <End Role="CajaCasaMatrizBancoMov_CAJ" EntitySet="CajaCasaMatrizBancoMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaEmpresaCentroSvcMov_CAJ_CajaEmpresa_CAJ" Association="ModeloCaja.Store.FK_CajaEmpresaCentroSvcMov_CAJ_CajaEmpresa_CAJ">
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+      <End Role="CajaCasaMatrizCentroSvcMov_CAJ" EntitySet="CajaCasaMatrizCentroSvcMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CajaEmpresaCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ" Association="ModeloCaja.Store.FK_CajaEmpresaCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="CajaCasaMatrizCentroSvcMov_CAJ" EntitySet="CajaCasaMatrizCentroSvcMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ" Association="ModeloCaja.Store.FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="CentroSvcCentroSvcMov_CAJ" EntitySet="CentroSvcCentroSvcMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1" Association="ModeloCaja.Store.FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="CentroSvcCentroSvcMov_CAJ" EntitySet="CentroSvcCentroSvcMov_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CierreCaja_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.Store.FK_CierreCaja_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="CierreCaja_CAJ" EntitySet="CierreCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CierreCajaCasaMatriz_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.Store.FK_CierreCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="CierreCajaCasaMatriz_CAJ" EntitySet="CierreCajaCasaMatriz_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCaja_CAJ_CuentaExterna_PAR" Association="ModeloCaja.Store.FK_ConceptoCaja_CAJ_CuentaExterna_PAR">
+      <End Role="CuentaExterna_PAR" EntitySet="CuentaExterna_PAR" />
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCajaCategoria_CAJ_CategoriaConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_ConceptoCajaCategoria_CAJ_CategoriaConceptoCaja_CAJ">
+      <End Role="CategoriaConceptoCaja_CAJ" EntitySet="CategoriaConceptoCaja_CAJ" />
+      <End Role="ConceptoCajaCategoria_CAJ" EntitySet="ConceptoCajaCategoria_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCajaCategoria_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_ConceptoCajaCategoria_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="ConceptoCajaCategoria_CAJ" EntitySet="ConceptoCajaCategoria_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCajaImpuesto_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_ConceptoCajaImpuesto_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="ConceptoCajaImpuesto_CAJ" EntitySet="ConceptoCajaImpuesto_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConceptoCajaRetencion_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_ConceptoCajaRetencion_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="ConceptoCajaRetencion_CAJ" EntitySet="ConceptoCajaRetencion_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaMensajero_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_CuentaMensajero_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="CuentaMensajero_CAJ" EntitySet="CuentaMensajero_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="DuplaConceptoCaja_CAJ" EntitySet="DuplaConceptoCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ1" Association="ModeloCaja.Store.FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ1">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="DuplaConceptoCaja_CAJ" EntitySet="DuplaConceptoCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionCajaBanco_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.Store.FK_OperacionCajaBanco_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="OperacionCajaBanco_CAJ" EntitySet="OperacionCajaBanco_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionCajaCasaMatriz_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.Store.FK_OperacionCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="OperacionCajaCasaMatriz_CAJ" EntitySet="OperacionCajaCasaMatriz_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionCajaOperacionNacional_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.Store.FK_OperacionCajaOperacionNacional_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperacionCajaOperacionNacional_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_OperacionCajaOperacionNacional_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="OperacionCajaOperacionNacional_CAJ" EntitySet="OperacionCajaOperacionNacional_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecoleccionDineroPuntos_CAJ_CierreCentroServicios_CAJ" Association="ModeloCaja.Store.FK_RecoleccionDineroPuntos_CAJ_CierreCentroServicios_CAJ">
+      <End Role="CierreCentroServicios_CAJ" EntitySet="CierreCentroServicios_CAJ" />
+      <End Role="RecoleccionDineroPuntos_CAJ" EntitySet="RecoleccionDineroPuntos_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroTransacDetalleImpuesto_CAJ_RegistroTransacDetalleCaja_CAJ" Association="ModeloCaja.Store.FK_RegistroTransacDetalleImpuesto_CAJ_RegistroTransacDetalleCaja_CAJ">
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+      <End Role="RegistroTransacDetalleImpuesto_CAJ" EntitySet="RegistroTransacDetalleImpuesto_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroTranscDetalleRetencion_CAJ_RegistroTransacDetalleCaja_CAJ" Association="ModeloCaja.Store.FK_RegistroTranscDetalleRetencion_CAJ_RegistroTransacDetalleCaja_CAJ">
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+      <End Role="RegistroTranscDetalleRetencion_CAJ" EntitySet="RegistroTranscDetalleRetencion_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroVenta_CAJ_AperturaCaja_CAJ" Association="ModeloCaja.Store.FK_RegistroVenta_CAJ_AperturaCaja_CAJ">
+      <End Role="AperturaCaja_CAJ" EntitySet="AperturaCaja_CAJ" />
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroVentaClienteCredit_CAJ_RegistroVenta_CAJ" Association="ModeloCaja.Store.FK_RegistroVentaClienteCredit_CAJ_RegistroVenta_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="RegistroTrasnClienteCredit_CAJ" EntitySet="RegistroTrasnClienteCredit_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroVentaDetalle_CAJ_ConceptoCaja_CAJ" Association="ModeloCaja.Store.FK_RegistroVentaDetalle_CAJ_ConceptoCaja_CAJ">
+      <End Role="ConceptoCaja_CAJ" EntitySet="ConceptoCaja_CAJ" />
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroVentaDetalle_CAJ_RegistroVenta_CAJ" Association="ModeloCaja.Store.FK_RegistroVentaDetalle_CAJ_RegistroVenta_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegistroVentaFormaPago_CAJ_RegistroVenta_CAJ" Association="ModeloCaja.Store.FK_RegistroVentaFormaPago_CAJ_RegistroVenta_CAJ">
+      <End Role="RegistroTransaccionesCaja_CAJ" EntitySet="RegistroTransaccionesCaja_CAJ" />
+      <End Role="RegistroVentaFormaPago_CAJ" EntitySet="RegistroVentaFormaPago_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RegTranDetCajaAdicional_CAJ_RegistroTransacDetalleCaja_CAJ" Association="ModeloCaja.Store.FK_RegTranDetCajaAdicional_CAJ_RegistroTransacDetalleCaja_CAJ">
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+      <End Role="RegTranDetCajaAdicional_CAJ" EntitySet="RegTranDetCajaAdicional_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReporteDineroPuntoAgencia_CAJ_RecoleccionDineroPuntos_CAJ" Association="ModeloCaja.Store.FK_ReporteDineroPuntoAgencia_CAJ_RecoleccionDineroPuntos_CAJ">
+      <End Role="RecoleccionDineroPuntos_CAJ" EntitySet="RecoleccionDineroPuntos_CAJ" />
+      <End Role="ReporteDineroPuntoAgencia_CAJ" EntitySet="ReporteDineroPuntoAgencia_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReporteDineroPuntoAgencia_CAJ_TipoObsPuntoAgencia_CAJ" Association="ModeloCaja.Store.FK_ReporteDineroPuntoAgencia_CAJ_TipoObsPuntoAgencia_CAJ">
+      <End Role="TipoObsPuntoAgencia_CAJ" EntitySet="TipoObsPuntoAgencia_CAJ" />
+      <End Role="ReporteDineroPuntoAgencia_CAJ" EntitySet="ReporteDineroPuntoAgencia_CAJ" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReporteMensajeroCaja_CAJ_RegistroTransacDetalleCaja_CAJ" Association="ModeloCaja.Store.FK_ReporteMensajeroCaja_CAJ_RegistroTransacDetalleCaja_CAJ">
+      <End Role="RegistroTransacDetalleCaja_CAJ" EntitySet="RegistroTransacDetalleCaja_CAJ" />
+      <End Role="ReporteMensajeroCaja_CAJ" EntitySet="ReporteMensajeroCaja_CAJ" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AperturaCaja_CAJ">
+    <Key>
+      <PropertyRef Name="APC_IdAperturaCaja" />
+    </Key>
+    <Property Name="APC_IdAperturaCaja" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="APC_IdCaja" Type="int" Nullable="false" />
+    <Property Name="APC_EstaAbierta" Type="bit" Nullable="false" />
+    <Property Name="APC_BaseInicialApertura" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="APC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="APC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="APC_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="APC_TipoApertura" Type="char" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="AperturaCajaCasaMatriz_CAJ">
+    <Key>
+      <PropertyRef Name="ACM_IdAperturaCaja" />
+    </Key>
+    <Property Name="ACM_IdAperturaCaja" Type="bigint" Nullable="false" />
+    <Property Name="ACM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="ACM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ACM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="AperturaCajaCentroServicios_CAJ">
+    <Key>
+      <PropertyRef Name="ACS_IdAperturaCajaCentroServicios" />
+    </Key>
+    <Property Name="ACS_IdAperturaCajaCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="ACS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="ACS_NombreCentroServicios" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ACS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ACS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BancoCentroServiciosMov_CAJ">
+    <Key>
+      <PropertyRef Name="BCM_IdCentroServiciosMov" />
+    </Key>
+    <Property Name="BCM_IdCentroServiciosMov" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BCM_IdCajaBanco" Type="bigint" Nullable="false" />
+    <Property Name="BCM_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="BCM_IdRegistroTranscaccion" Type="bigint" Nullable="false" />
+    <Property Name="BCM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="BCM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="BaseGestionCajas_CAJ">
+    <Key>
+      <PropertyRef Name="BGC_IdCasaMatriz" />
+    </Key>
+    <Property Name="BGC_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="BGC_BaseOperacionNacional" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="BGC_BaseCasaMatriz" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="BGC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="BGC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CajaBancoOperacionNacionalMov_CAJ">
+    <Key>
+      <PropertyRef Name="CBO_IdOperacionCajaBanco" />
+      <PropertyRef Name="CBO_IdOperacionCajaOperacionNacional" />
+    </Key>
+    <Property Name="CBO_IdOperacionCajaBanco" Type="bigint" Nullable="false" />
+    <Property Name="CBO_IdOperacionCajaOperacionNacional" Type="bigint" Nullable="false" />
+    <Property Name="CBO_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CBO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CajaCasaMatrizBancoMov_CAJ">
+    <Key>
+      <PropertyRef Name="CBM_IdOperacionCajaCasaMatriz" />
+      <PropertyRef Name="CBM_IdOperacionCajaBanco" />
+    </Key>
+    <Property Name="CBM_IdOperacionCajaCasaMatriz" Type="bigint" Nullable="false" />
+    <Property Name="CBM_IdOperacionCajaBanco" Type="bigint" Nullable="false" />
+    <Property Name="CBM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CBM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CajaCasaMatrizCentroSvcMov_CAJ">
+    <Key>
+      <PropertyRef Name="CEM_IdOperacionCajaCasaMatriz" />
+      <PropertyRef Name="CEM_IdCentroServiciosMov" />
+    </Key>
+    <Property Name="CEM_IdOperacionCajaCasaMatriz" Type="bigint" Nullable="false" />
+    <Property Name="CEM_IdCentroServiciosMov" Type="bigint" Nullable="false" />
+    <Property Name="CEM_NombreCentroServiciosMov" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CEM_IdRegistroTranscaccion" Type="bigint" Nullable="false" />
+    <Property Name="CEM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CEM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CajaCasaMatrizOperacionNacionalMov_CAJ">
+    <Key>
+      <PropertyRef Name="CMO_IdOperacionCajaCasaMatriz" />
+      <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+    </Key>
+    <Property Name="CMO_IdOperacionCajaCasaMatriz" Type="bigint" Nullable="false" />
+    <Property Name="CON_IdOperacionCajaOperacionNacional" Type="bigint" Nullable="false" />
+    <Property Name="CMO_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CMO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CMO_NumeroPrecinto" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CMO_NumeroBolsaSeguridad" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CMO_NumeroGuia" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CajaCentroSvcOperacionNacionalMov_CAJ">
+    <Key>
+      <PropertyRef Name="CCO_IdOperacionCajaOperacionNacional" />
+      <PropertyRef Name="CCO_IdCentroServicios" />
+    </Key>
+    <Property Name="CCO_IdOperacionCajaOperacionNacional" Type="bigint" Nullable="false" />
+    <Property Name="CCO_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CCO_IdRegistroTransaccionCaja" Type="bigint" Nullable="false" />
+    <Property Name="CCO_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCO_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CCO_NumeroPrecinto" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CCO_NumeroBolsaSeguridad" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CCO_NumeroGuia" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CajasDisponibles_PUA">
+    <Key>
+      <PropertyRef Name="CAD_IdCaja" />
+    </Key>
+    <Property Name="CAD_IdCaja" Type="int" Nullable="false" />
+    <Property Name="CAD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CategoriaConceptoCaja_CAJ">
+    <Key>
+      <PropertyRef Name="CCC_IdCategoria" />
+    </Key>
+    <Property Name="CCC_IdCategoria" Type="smallint" Nullable="false" />
+    <Property Name="CCC_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="CentroServiciosReporteDinero_PUA">
+    <Key>
+      <PropertyRef Name="CRD_IdCentroServiciosAQuienReporta" />
+      <PropertyRef Name="CRD_IdCentroServiciosQueReporta" />
+    </Key>
+    <Property Name="CRD_IdCentroServiciosAQuienReporta" Type="bigint" Nullable="false" />
+    <Property Name="CRD_IdCentroServiciosQueReporta" Type="bigint" Nullable="false" />
+    <Property Name="CRD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CRD_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CentroSvcCentroSvcMov_CAJ">
+    <Key>
+      <PropertyRef Name="CSM_IdCentroSvcCentroSvcMov" />
+    </Key>
+    <Property Name="CSM_IdCentroSvcCentroSvcMov" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CSM_IdCentroServiciosOrigen" Type="bigint" Nullable="false" />
+    <Property Name="CSM_NombreCentroSvcOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CSM_IdCentroServiciosDestino" Type="bigint" Nullable="false" />
+    <Property Name="CSM_NombreCentroSvcDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CSM_IdRegistroTxOrigen" Type="bigint" Nullable="false" />
+    <Property Name="CSM_IdRegistroTxDestino" Type="bigint" Nullable="false" />
+    <Property Name="CSM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CSM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CSM_NumeroPrecinto" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CSM_NumeroBolsaSeguridad" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CSM_NumeroGuia" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CierreCaja_CAJ">
+    <Key>
+      <PropertyRef Name="CIC_IdCierreCaja" />
+    </Key>
+    <Property Name="CIC_IdCierreCaja" Type="bigint" Nullable="false" />
+    <Property Name="CIC_TotalIngresosEfectivo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CIC_TotalEgresosEfectivo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CIC_TotalIngresosOtrasFormas" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CIC_TotalEgresosOtrasFormas" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CIC_IdCierrepuntoAsociado" Type="bigint" Nullable="false" />
+    <Property Name="CIC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CIC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CIC_EstaReportado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CierreCajaCasaMatriz_CAJ">
+    <Key>
+      <PropertyRef Name="CCM_IdCierreCaja" />
+    </Key>
+    <Property Name="CCM_IdCierreCaja" Type="bigint" Nullable="false" />
+    <Property Name="CCM_TotalIngresos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCM_TotalEgresos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CCM_SaldoAnterior" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCM_SaldoFinal" Type="numeric" Scale="4" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="CierreCentroServicios_CAJ">
+    <Key>
+      <PropertyRef Name="CCS_IdCierreCentroServicios" />
+    </Key>
+    <Property Name="CCS_IdCierreCentroServicios" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CCS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CCS_BaseInicial" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCS_SaldoAnteriorEfectivo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCS_TotalIngresosEfectivo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCS_TotalEgresosEfectivo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCS_TotalIngresosOtrasFormas" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCS_TotalEgresosOtrasFormas" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCS_SaldoFinalEfectivo" Type="numeric" Scale="4" StoreGeneratedPattern="Computed" />
+    <Property Name="CCS_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCS_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CCS_CantidadGirosNoPagados" Type="int" Nullable="false" />
+    <Property Name="CCS_ValorGirosNoPagados" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCS_EstaReportado" Type="bit" Nullable="false" />
+    <Property Name="CCS_IdCierreCSAMostrar" Type="varchar" MaxLength="20" />
+    <Property Name="CCS_EsCierreSistema" Type="bit" />
+  </EntityType>
+  <EntityType Name="ConceptoCaja_CAJ">
+    <Key>
+      <PropertyRef Name="COC_IdConceptoCaja" />
+    </Key>
+    <Property Name="COC_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="COC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="COC_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="COC_EsServicio" Type="bit" Nullable="false" />
+    <Property Name="COC_IdCuentaExterna" Type="smallint" />
+    <Property Name="COC_EsIngreso" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleAgenciaOPunto" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleMensajero" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleRacol" Type="bit" Nullable="false" />
+    <Property Name="COC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="COC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="COC_ContrapartidaCasaMatriz" Type="bit" Nullable="false" />
+    <Property Name="COC_ContrapartidaCS" Type="bit" Nullable="false" />
+    <Property Name="COC_RequiereNoDocumento" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConceptoCajaCategoria_CAJ">
+    <Key>
+      <PropertyRef Name="CCA_IdCategoria" />
+      <PropertyRef Name="CCA_IdConceptoCaja" />
+    </Key>
+    <Property Name="CCA_IdCategoria" Type="smallint" Nullable="false" />
+    <Property Name="CCA_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="CCA_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCA_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="ConceptoCajaHist_CAJ">
+    <Key>
+      <PropertyRef Name="COC_IdAuditoria" />
+    </Key>
+    <Property Name="COC_IdAuditoria" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="COC_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="COC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="COC_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="COC_EsServicio" Type="bit" Nullable="false" />
+    <Property Name="COC_IdCuentaExterna" Type="smallint" />
+    <Property Name="COC_EsIngreso" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleAgenciaOPunto" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleMensajero" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleRacol" Type="bit" Nullable="false" />
+    <Property Name="COC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="COC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="COC_ContrapartidaCasaMatriz" Type="bit" Nullable="false" />
+    <Property Name="COC_ContrapartidaCS" Type="bit" Nullable="false" />
+    <Property Name="COC_RequiereNoDocumento" Type="bit" Nullable="false" />
+    <Property Name="COC_FechaCambio" Type="datetime" Nullable="false" />
+    <Property Name="COC_CambiadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="COC_TipoCambio" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ConceptoCajaImpuesto_CAJ">
+    <Key>
+      <PropertyRef Name="CCI_IdConceptoCajaImpuesto" />
+    </Key>
+    <Property Name="CCI_IdConceptoCajaImpuesto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="COC_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="COC_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="COC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="COC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="ConceptoCajaRetencion_CAJ">
+    <Key>
+      <PropertyRef Name="CCR_IdConceptoCaja" />
+      <PropertyRef Name="CCR_IdRetencion" />
+    </Key>
+    <Property Name="CCR_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="CCR_IdRetencion" Type="smallint" Nullable="false" />
+    <Property Name="CCR_ValorFijo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCR_TarifaPorcentual" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCR_Base" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CCR_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="CuentaExterna_PAR">
+    <Key>
+      <PropertyRef Name="CEX_IdCuentaExterna" />
+    </Key>
+    <Property Name="CEX_IdCuentaExterna" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CEX_Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CEX_IdNaturaleza" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CEX_Codigo" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CEX_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CEX_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="CuentaMensajero_CAJ">
+    <Key>
+      <PropertyRef Name="CUM_IdTransaccion" />
+    </Key>
+    <Property Name="CUM_IdTransaccion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CUM_IdMensajero" Type="bigint" Nullable="false" />
+    <Property Name="CUM_NombreMensajero" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="CUM_IdConcepto" Type="int" Nullable="false" />
+    <Property Name="CUM_NumeroDocumento" Type="bigint" />
+    <Property Name="CUM_Valor" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CUM_SaldoAcumulado" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CUM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CUM_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CUM_ConceptoEsIngreso" Type="bit" Nullable="false" />
+    <Property Name="CUM_Observaciones" Type="varchar" MaxLength="250" />
+    <Property Name="CUM_NoPlanillaAlCobros" Type="bigint" Nullable="false" />
+    <Property Name="CUM_NoPlanillaVentas" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DuplaConceptoCaja_CAJ">
+    <Key>
+      <PropertyRef Name="DCC_IdConceptoCajaPrimario" />
+      <PropertyRef Name="DCC_IdConceptoCajaSecundario" />
+    </Key>
+    <Property Name="DCC_IdConceptoCajaPrimario" Type="int" Nullable="false" />
+    <Property Name="DCC_IdConceptoCajaSecundario" Type="int" Nullable="false" />
+    <Property Name="DCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="DCC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="OperacionCajaBanco_CAJ">
+    <Key>
+      <PropertyRef Name="CAB_IdOperacionCajaBanco" />
+    </Key>
+    <Property Name="CAB_IdOperacionCajaBanco" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CAB_IdAperturaCaja" Type="bigint" Nullable="false" />
+    <Property Name="CAB_IdBanco" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAB_DescripcionBanco" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CAB_NumeroCuenta" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CAB_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="CAB_Valor" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CAB_ConceptoEsIngreso" Type="bit" Nullable="false" />
+    <Property Name="CAB_IdTipoDocumento" Type="smallint" Nullable="false" />
+    <Property Name="CAB_DescripcionTipoDocumento" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAB_NumeroDocumento" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAB_Observacion" Type="varchar" MaxLength="250" />
+    <Property Name="CAB_FechaMovimiento" Type="datetime" Nullable="false" />
+    <Property Name="CAB_MovHechoPor" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CAB_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAB_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CAB_NombreConceptoCaja" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAB_NumeroComprobante" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="OperacionCajaCasaMatriz_CAJ">
+    <Key>
+      <PropertyRef Name="CAE_IdOperacionCajaCasaMatriz" />
+    </Key>
+    <Property Name="CAE_IdOperacionCajaCasaMatriz" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CAE_IdAperturaCaja" Type="bigint" Nullable="false" />
+    <Property Name="CAE_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="CAE_Valor" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CAE_ConceptoEsIngreso" Type="bit" Nullable="false" />
+    <Property Name="CAE_NumeroDocumento" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CAE_Observacion" Type="varchar" MaxLength="250" />
+    <Property Name="CAE_FechaMovimiento" Type="datetime" Nullable="false" />
+    <Property Name="CAE_MovHechoPor" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CAE_Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="CAE_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CAE_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CAE_NombreConceptoCaja" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="OperacionCajaOperacionNacional_CAJ">
+    <Key>
+      <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+    </Key>
+    <Property Name="CON_IdOperacionCajaOperacionNacional" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CON_IdAperturaCaja" Type="bigint" Nullable="false" />
+    <Property Name="CON_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="CON_Valor" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CON_ConceptoEsIngreso" Type="bit" Nullable="false" />
+    <Property Name="CON_NumeroDocumento" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="CON_Observacion" Type="varchar" MaxLength="250" />
+    <Property Name="CON_FechaMovimiento" Type="datetime" Nullable="false" />
+    <Property Name="CON_MovHechoPor" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CON_Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="CON_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CON_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CON_NombreConceptoCaja" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ParametrosCajas_CAJ">
+    <Key>
+      <PropertyRef Name="PAC_IdParametro" />
+    </Key>
+    <Property Name="PAC_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PAC_ValorParametro" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAC_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PinPrepago_CAJ">
+    <Key>
+      <PropertyRef Name="PIP_IdPinPrepago" />
+    </Key>
+    <Property Name="PIP_IdPinPrepago" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PIP_Pin" Type="bigint" Nullable="false" />
+    <Property Name="PIP_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PIP_Saldo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="PIP_FechaActualizacion" Type="datetime" Nullable="false" />
+    <Property Name="PIP_NombreComprador" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="PIP_IdTipoIdentificacion" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="PIP_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PIP_Direccion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PIP_IdLocalidad" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="PIP_IdCentroServiciosVende" Type="bigint" Nullable="false" />
+    <Property Name="PIP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PIP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RecoleccionDineroPuntos_CAJ">
+    <Key>
+      <PropertyRef Name="RDP_IdRecoleccion" />
+    </Key>
+    <Property Name="RDP_IdRecoleccion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RDP_IdPuntoServicio" Type="bigint" Nullable="false" />
+    <Property Name="RDP_NombrePuntoServicio" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="RDP_IdMensajero" Type="bigint" Nullable="false" />
+    <Property Name="RDP_NombreMensajero" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="RDP_NoBolsaSeguridad" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RDP_ValorTotalEnviado" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RDP_IdCierreCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="RDP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RDP_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="RegistroTransaccionesCaja_CAJ">
+    <Key>
+      <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+    </Key>
+    <Property Name="RTC_IdRegistroTranscaccion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RTC_IdAperturaCaja" Type="bigint" Nullable="false" />
+    <Property Name="RTC_IdCentroServiciosVenta" Type="bigint" Nullable="false" />
+    <Property Name="RTC_NombreCentroServiciosVenta" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="RTC_IdCentroServiosResponsable" Type="bigint" Nullable="false" />
+    <Property Name="RTC_NombreCtroSvcsResponsable" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="RTC_ValorTotal" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTC_TotalImpuestos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTC_TotalRetenciones" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTC_TipoDatosAdicionales" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="RTC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RTC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RegistroTransacDetalleCaja_CAJ">
+    <Key>
+      <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+    </Key>
+    <Property Name="RTD_IdRegistroTransDetalleCaja" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RTD_IdRegistroTranscaccion" Type="bigint" Nullable="false" />
+    <Property Name="RTD_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="RTD_NombreConcepto" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RTD_ConceptoEsIngreso" Type="bit" Nullable="false" />
+    <Property Name="RTD_Cantidad" Type="smallint" Nullable="false" />
+    <Property Name="RTD_ValorServicio" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTD_ValoresAdicionales" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTD_ValorTercero" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTD_ValorImpuestos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTD_ValorRetenciones" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTD_ValorPrimaSeguros" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTD_ValorDeclarado" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTD_Numero" Type="bigint" Nullable="false" />
+    <Property Name="RTD_IdCuentaExterna" Type="smallint" />
+    <Property Name="RTD_NumeroFactura" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RTD_EstadoFacturacion" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="RTD_FechaFacturacion" Type="datetime" Nullable="false" />
+    <Property Name="RTD_Observacion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="RTD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RTD_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="RTD_Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="RTD_NumeroComprobante" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="RTD_IdPersonaInterna" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegistroTransacDetalleImpuesto_CAJ">
+    <Key>
+      <PropertyRef Name="RTI_IdRegsitroTransacDetalleImpuesto" />
+    </Key>
+    <Property Name="RTI_IdRegsitroTransacDetalleImpuesto" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RTI_IdRegistroTransDetalleCaja" Type="bigint" Nullable="false" />
+    <Property Name="RTI_IdImpuesto" Type="smallint" Nullable="false" />
+    <Property Name="RTI_DescripcionImpuesto" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="RTI_ValorConfigurado" Type="numeric" Nullable="false" Precision="6" Scale="4" />
+    <Property Name="RTI_IdCuentaExterna" Type="smallint" />
+    <Property Name="RTI_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTI_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RTI_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RegistroTranscDetalleRetencion_CAJ">
+    <Key>
+      <PropertyRef Name="RTR_IdRegistroTransacDetalleRetencion" />
+    </Key>
+    <Property Name="RTR_IdRegistroTransacDetalleRetencion" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RTR_IdRegistroTransDetalleCaja" Type="bigint" Nullable="false" />
+    <Property Name="RTR_IdRetencion" Type="smallint" Nullable="false" />
+    <Property Name="RTR_DescripcionRetencion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RTR_ValorFijo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTR_TarifaPorcentual" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTR_Base" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTI_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RTR_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RTR_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RegistroTrasnClienteCredit_CAJ">
+    <Key>
+      <PropertyRef Name="RTC_IdRegistroVenta" />
+    </Key>
+    <Property Name="RTC_IdRegistroVenta" Type="bigint" Nullable="false" />
+    <Property Name="RTC_IdCliente" Type="int" Nullable="false" />
+    <Property Name="RTC_NombreCliente" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="RTC_Nit" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RTC_IdContrato" Type="int" Nullable="false" />
+    <Property Name="RTC_NumeroContrato" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="RTC_IdSucursal" Type="int" Nullable="false" />
+    <Property Name="RTC_NombreSucursal" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="RTC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RTC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RegistroVentaFormaPago_CAJ">
+    <Key>
+      <PropertyRef Name="RVF_IdRegistroVentaFormaPago" />
+    </Key>
+    <Property Name="RVF_IdRegistroVentaFormaPago" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RVF_IdRegistroVenta" Type="bigint" Nullable="false" />
+    <Property Name="RVF_IdFormaPago" Type="smallint" Nullable="false" />
+    <Property Name="RVF_DescripcionFormaPago" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="RVF_Valor" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RVF_NumeroAsociado" Type="varchar" MaxLength="50" />
+    <Property Name="RVF_Campo1" Type="varchar" MaxLength="50" />
+    <Property Name="RVF_Campo2" Type="varchar" MaxLength="50" />
+    <Property Name="RVF_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RVF_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="RegTranDetCajaAdicional_CAJ">
+    <Key>
+      <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+    </Key>
+    <Property Name="RTD_IdRegistroTransDetalleCaja" Type="bigint" Nullable="false" />
+    <Property Name="RTD_IdSucursal" Type="int" />
+    <Property Name="RTD_Adicional1" Type="varchar" MaxLength="50" />
+    <Property Name="RTD_Adicional2" Type="varchar" MaxLength="255" />
+    <Property Name="RTD_Adicional3" Type="varchar" MaxLength="255" />
+    <Property Name="RTD_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RTD_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="ReporteDineroPuntoAgencia_CAJ">
+    <Key>
+      <PropertyRef Name="RDP_IdRecoleccion" />
+    </Key>
+    <Property Name="RDP_IdRecoleccion" Type="int" Nullable="false" />
+    <Property Name="RDP_ValorReportado" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RDP_Manual" Type="bit" Nullable="false" />
+    <Property Name="RDP_TipoObservacion" Type="smallint" />
+    <Property Name="RDP_Observaciones" Type="varchar" MaxLength="100" />
+    <Property Name="RDP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RDP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ReporteMensajeroCaja_CAJ">
+    <Key>
+      <PropertyRef Name="RMC_IdRegistro" />
+    </Key>
+    <Property Name="RMC_IdRegistro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RMC_IdRegistroTransDetalleCaja" Type="bigint" />
+    <Property Name="RMC_IdMensajero" Type="bigint" Nullable="false" />
+    <Property Name="RMC_NombreMensajero" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="RMC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RMC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="RMC_NoComprobante" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="ResumenCajaCentroServ_CAJ">
+    <Key>
+      <PropertyRef Name="RCC_IdCentroServicios" />
+    </Key>
+    <Property Name="RCC_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="RCC_TotalIngresos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RCC_TotalEgresos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="RCC_TotalSaldoCaja" Type="decimal" Precision="17" Scale="4" StoreGeneratedPattern="Computed" />
+    <Property Name="RCC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="RC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="TipoObsPuntoAgencia_CAJ">
+    <Key>
+      <PropertyRef Name="TOP_IdTipoObservacion" />
+    </Key>
+    <Property Name="TOP_IdTipoObservacion" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TOP_Descripcion" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="TOP_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="TOP_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.AperturaCasaMatriz_VCAJ' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="AperturaCasaMatriz_VCAJ">
+    <Key>
+      <PropertyRef Name="APC_IdAperturaCaja" />
+      <PropertyRef Name="APC_IdCaja" />
+      <PropertyRef Name="APC_EstaAbierta" />
+      <PropertyRef Name="APC_BaseInicialApertura" />
+      <PropertyRef Name="APC_FechaGrabacion" />
+      <PropertyRef Name="APC_CreadoPor" />
+      <PropertyRef Name="APC_IdCodigoUsuario" />
+      <PropertyRef Name="APC_TipoApertura" />
+      <PropertyRef Name="ACM_IdCasaMatriz" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="CAM_Nit" />
+      <PropertyRef Name="CAM_CentroCostos" />
+      <PropertyRef Name="CAM_Estado" />
+    </Key>
+    <Property Name="APC_IdAperturaCaja" Type="bigint" Nullable="false" />
+    <Property Name="APC_IdCaja" Type="int" Nullable="false" />
+    <Property Name="APC_EstaAbierta" Type="bit" Nullable="false" />
+    <Property Name="APC_BaseInicialApertura" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="APC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="APC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="APC_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="APC_TipoApertura" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ACM_IdCasaMatriz" Type="smallint" Nullable="false" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CAM_Nit" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CAM_Estado" Type="char" Nullable="false" MaxLength="3" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.AperturaCentroServicos_VCAJ' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="AperturaCentroServicos_VCAJ">
+    <Key>
+      <PropertyRef Name="APC_IdAperturaCaja" />
+      <PropertyRef Name="APC_IdCaja" />
+      <PropertyRef Name="APC_EstaAbierta" />
+      <PropertyRef Name="APC_BaseInicialApertura" />
+      <PropertyRef Name="APC_FechaGrabacion" />
+      <PropertyRef Name="APC_CreadoPor" />
+      <PropertyRef Name="APC_IdCodigoUsuario" />
+      <PropertyRef Name="APC_TipoApertura" />
+      <PropertyRef Name="ACS_IdCentroServicios" />
+      <PropertyRef Name="ACS_NombreCentroServicios" />
+      <PropertyRef Name="CES_Tipo" />
+      <PropertyRef Name="CES_DigitoVerificacion" />
+      <PropertyRef Name="CES_IdPropietario" />
+      <PropertyRef Name="CES_Telefono1" />
+      <PropertyRef Name="CES_Direccion" />
+      <PropertyRef Name="CES_Barrio" />
+      <PropertyRef Name="CES_IdZona" />
+      <PropertyRef Name="CES_IdMunicipio" />
+      <PropertyRef Name="CES_Estado" />
+      <PropertyRef Name="CES_IdPersonaResponsable" />
+      <PropertyRef Name="CES_Email" />
+      <PropertyRef Name="CES_Sistematizada" />
+      <PropertyRef Name="CES_IdCentroCostos" />
+      <PropertyRef Name="CES_IdTipoPropiedad" />
+      <PropertyRef Name="CES_PesoMaximo" />
+      <PropertyRef Name="CES_VolumenMaximo" />
+      <PropertyRef Name="CES_AdmiteFormaPagoAlCobro" />
+      <PropertyRef Name="CES_VendePrepago" />
+      <PropertyRef Name="CES_ClasGirosPorIngresos" />
+      <PropertyRef Name="CES_PuedeRecibirGiros" />
+      <PropertyRef Name="CES_PuedePagarGiros" />
+      <PropertyRef Name="CES_TopeMaximoPorGiros" />
+      <PropertyRef Name="CES_TopeMaximoPorPagos" />
+      <PropertyRef Name="CES_BaseInicialCaja" />
+      <PropertyRef Name="CES_FechaGrabacion" />
+      <PropertyRef Name="CES_CreadoPor" />
+      <PropertyRef Name="CES_CodigoBodega" />
+      <PropertyRef Name="CES_IdClasificadorCanalVenta" />
+    </Key>
+    <Property Name="APC_IdAperturaCaja" Type="bigint" Nullable="false" />
+    <Property Name="APC_IdCaja" Type="int" Nullable="false" />
+    <Property Name="APC_EstaAbierta" Type="bit" Nullable="false" />
+    <Property Name="APC_BaseInicialApertura" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="APC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="APC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="APC_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="APC_TipoApertura" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ACS_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="ACS_NombreCentroServicios" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Tipo" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_DigitoVerificacion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="CES_IdPropietario" Type="int" Nullable="false" />
+    <Property Name="CES_Telefono1" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Telefono2" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Fax" Type="varchar" MaxLength="25" />
+    <Property Name="CES_Direccion" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CES_Barrio" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_IdZona" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdMunicipio" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="CES_Estado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_IdPersonaResponsable" Type="bigint" Nullable="false" />
+    <Property Name="CES_Latitud" Type="numeric" Scale="6" />
+    <Property Name="CES_Longitud" Type="numeric" Scale="6" />
+    <Property Name="CES_Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CES_Sistematizada" Type="bit" Nullable="false" />
+    <Property Name="CES_IdCentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdTipoPropiedad" Type="smallint" Nullable="false" />
+    <Property Name="CES_PesoMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_VolumenMaximo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_AdmiteFormaPagoAlCobro" Type="bit" Nullable="false" />
+    <Property Name="CES_VendePrepago" Type="bit" Nullable="false" />
+    <Property Name="CES_ClasGirosPorIngresos" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="CES_PuedeRecibirGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_PuedePagarGiros" Type="bit" Nullable="false" />
+    <Property Name="CES_TopeMaximoPorGiros" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_TopeMaximoPorPagos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_BaseInicialCaja" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CES_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CES_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CES_CodigoBodega" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_IdClasificadorCanalVenta" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.CategConceptoCaja_VCAJ' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="CategConceptoCaja_VCAJ">
+    <Key>
+      <PropertyRef Name="COC_IdConceptoCaja" />
+      <PropertyRef Name="COC_Nombre" />
+      <PropertyRef Name="COC_Descripcion" />
+      <PropertyRef Name="COC_EsServicio" />
+      <PropertyRef Name="COC_EsIngreso" />
+      <PropertyRef Name="COC_VisibleAgenciaOPunto" />
+      <PropertyRef Name="COC_VisibleMensajero" />
+      <PropertyRef Name="COC_VisibleRacol" />
+      <PropertyRef Name="COC_FechaGrabacion" />
+      <PropertyRef Name="COC_CreadoPor" />
+      <PropertyRef Name="CCC_IdCategoria" />
+      <PropertyRef Name="CCC_Descripcion" />
+      <PropertyRef Name="COC_ContrapartidaCasaMatriz" />
+      <PropertyRef Name="COC_ContrapartidaCS" />
+      <PropertyRef Name="COC_RequiereNoDocumento" />
+    </Key>
+    <Property Name="COC_IdConceptoCaja" Type="int" Nullable="false" />
+    <Property Name="COC_Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="COC_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="COC_EsServicio" Type="bit" Nullable="false" />
+    <Property Name="COC_IdCuentaExterna" Type="smallint" />
+    <Property Name="COC_EsIngreso" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleAgenciaOPunto" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleMensajero" Type="bit" Nullable="false" />
+    <Property Name="COC_VisibleRacol" Type="bit" Nullable="false" />
+    <Property Name="COC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="COC_CreadoPor" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CCC_IdCategoria" Type="smallint" Nullable="false" />
+    <Property Name="CCC_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="COC_ContrapartidaCasaMatriz" Type="bit" Nullable="false" />
+    <Property Name="COC_ContrapartidaCS" Type="bit" Nullable="false" />
+    <Property Name="COC_RequiereNoDocumento" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.CierreCajaGestion_VCAJ' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="CierreCajaGestion_VCAJ">
+    <Key>
+      <PropertyRef Name="CCM_IdCierreCaja" />
+      <PropertyRef Name="APC_IdCaja" />
+      <PropertyRef Name="APC_EstaAbierta" />
+      <PropertyRef Name="APC_BaseInicialApertura" />
+      <PropertyRef Name="APC_FechaGrabacion" />
+      <PropertyRef Name="APC_CreadoPor" />
+      <PropertyRef Name="APC_IdCodigoUsuario" />
+      <PropertyRef Name="APC_TipoApertura" />
+      <PropertyRef Name="CCM_TotalIngresos" />
+      <PropertyRef Name="CCM_TotalEgresos" />
+      <PropertyRef Name="CCM_FechaGrabacion" />
+      <PropertyRef Name="CAM_Nombre" />
+      <PropertyRef Name="CAM_CentroCostos" />
+    </Key>
+    <Property Name="CCM_IdCierreCaja" Type="bigint" Nullable="false" />
+    <Property Name="APC_IdCaja" Type="int" Nullable="false" />
+    <Property Name="APC_EstaAbierta" Type="bit" Nullable="false" />
+    <Property Name="APC_BaseInicialApertura" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="APC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="APC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="APC_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="APC_TipoApertura" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="TipoAperturaDesc" Type="varchar" MaxLength="18" />
+    <Property Name="CCM_TotalIngresos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCM_TotalEgresos" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CCM_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="IdCasaMatrizOCS" Type="bigint" />
+    <Property Name="CAM_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="CAM_CentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.CierreCajaUsuarioCierre_VCAJ' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="CierreCajaUsuarioCierre_VCAJ">
+    <Key>
+      <PropertyRef Name="CIC_IdCierreCaja" />
+      <PropertyRef Name="CIC_TotalIngresosEfectivo" />
+      <PropertyRef Name="CIC_TotalEgresosEfectivo" />
+      <PropertyRef Name="CIC_TotalIngresosOtrasFormas" />
+      <PropertyRef Name="CIC_TotalEgresosOtrasFormas" />
+      <PropertyRef Name="CIC_IdCierrepuntoAsociado" />
+      <PropertyRef Name="CIC_FechaGrabacion" />
+      <PropertyRef Name="CIC_EstaReportado" />
+      <PropertyRef Name="CIC_CreadoPor" />
+      <PropertyRef Name="USU_IdCodigoUsuario" />
+      <PropertyRef Name="PEI_Identificacion" />
+      <PropertyRef Name="PEI_Nombre" />
+      <PropertyRef Name="PEI_PrimerApellido" />
+      <PropertyRef Name="NombreCompleto" />
+      <PropertyRef Name="APC_IdCaja" />
+      <PropertyRef Name="FechaApertura" />
+      <PropertyRef Name="CES_IdCentroServicios" />
+      <PropertyRef Name="CES_IdCentroCostos" />
+      <PropertyRef Name="CES_Nombre" />
+    </Key>
+    <Property Name="CIC_IdCierreCaja" Type="bigint" Nullable="false" />
+    <Property Name="CIC_TotalIngresosEfectivo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CIC_TotalEgresosEfectivo" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CIC_TotalIngresosOtrasFormas" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CIC_TotalEgresosOtrasFormas" Type="numeric" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="CIC_IdCierrepuntoAsociado" Type="bigint" Nullable="false" />
+    <Property Name="CIC_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="CIC_EstaReportado" Type="bit" Nullable="false" />
+    <Property Name="CIC_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="USU_IdCodigoUsuario" Type="bigint" Nullable="false" />
+    <Property Name="PEI_Identificacion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="PEI_Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PEI_SegundoApellido" Type="varchar" MaxLength="50" />
+    <Property Name="NombreCompleto" Type="varchar" Nullable="false" MaxLength="152" />
+    <Property Name="APC_IdCaja" Type="int" Nullable="false" />
+    <Property Name="FechaApertura" Type="datetime" Nullable="false" />
+    <Property Name="CES_IdCentroServicios" Type="bigint" Nullable="false" />
+    <Property Name="CES_IdCentroCostos" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="CES_Nombre" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ICONTROLLER.dbo.ResumenRecoleccionDineroPuntos_VCAJ' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="ResumenRecoleccionDineroPuntos_VCAJ">
+    <Key>
+      <PropertyRef Name="RDP_IdRecoleccion" />
+    </Key>
+    <Property Name="RDP_IdRecoleccion" Type="int" Nullable="false" />
+    <Property Name="TotalValorServicio" Type="numeric" Precision="38" Scale="4" />
+    <Property Name="TotalValoresAdicionales" Type="numeric" Precision="38" Scale="4" />
+    <Property Name="TotalValorTercero" Type="numeric" Precision="38" Scale="4" />
+    <Property Name="TotalValorImpuestos" Type="numeric" Precision="38" Scale="4" />
+    <Property Name="TotalValorRetenciones" Type="numeric" Precision="38" Scale="4" />
+    <Property Name="TotalValorPrimaSeguros" Type="numeric" Precision="38" Scale="4" />
+  </EntityType>
+  <Association Name="FK_AperturaCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+    <End Role="AperturaCaja_CAJ" Type="ModeloCaja.Store.AperturaCaja_CAJ" Multiplicity="1" />
+    <End Role="AperturaCajaCasaMatriz_CAJ" Type="ModeloCaja.Store.AperturaCajaCasaMatriz_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="AperturaCajaCasaMatriz_CAJ">
+        <PropertyRef Name="ACM_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AperturaCajaCentroServicios_CAJ_AperturaCaja_CAJ">
+    <End Role="AperturaCaja_CAJ" Type="ModeloCaja.Store.AperturaCaja_CAJ" Multiplicity="1" />
+    <End Role="AperturaCajaCentroServicios_CAJ" Type="ModeloCaja.Store.AperturaCajaCentroServicios_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="AperturaCajaCentroServicios_CAJ">
+        <PropertyRef Name="ACS_IdAperturaCajaCentroServicios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BancoCentroServiciosMov_CAJ_CajaBanco_CAJ">
+    <End Role="OperacionCajaBanco_CAJ" Type="ModeloCaja.Store.OperacionCajaBanco_CAJ" Multiplicity="1" />
+    <End Role="BancoCentroServiciosMov_CAJ" Type="ModeloCaja.Store.BancoCentroServiciosMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdOperacionCajaBanco" />
+      </Principal>
+      <Dependent Role="BancoCentroServiciosMov_CAJ">
+        <PropertyRef Name="BCM_IdCajaBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BancoCentroServiciosMov_CAJ_RegistroTransaccionesCaja_CAJ">
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Role="BancoCentroServiciosMov_CAJ" Type="ModeloCaja.Store.BancoCentroServiciosMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="BancoCentroServiciosMov_CAJ">
+        <PropertyRef Name="BCM_IdRegistroTranscaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaBanco_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="OperacionCajaBanco_CAJ" Type="ModeloCaja.Store.OperacionCajaBanco_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaBanco_CAJ">
+    <End Role="OperacionCajaBanco_CAJ" Type="ModeloCaja.Store.OperacionCajaBanco_CAJ" Multiplicity="1" />
+    <End Role="CajaBancoOperacionNacionalMov_CAJ" Type="ModeloCaja.Store.CajaBancoOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdOperacionCajaBanco" />
+      </Principal>
+      <Dependent Role="CajaBancoOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CBO_IdOperacionCajaBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaBancoOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+    <End Role="OperacionCajaOperacionNacional_CAJ" Type="ModeloCaja.Store.OperacionCajaOperacionNacional_CAJ" Multiplicity="1" />
+    <End Role="CajaBancoOperacionNacionalMov_CAJ" Type="ModeloCaja.Store.CajaBancoOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+      </Principal>
+      <Dependent Role="CajaBancoOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CBO_IdOperacionCajaOperacionNacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaCasaMatriz_CAJ">
+    <End Role="OperacionCajaCasaMatriz_CAJ" Type="ModeloCaja.Store.OperacionCajaCasaMatriz_CAJ" Multiplicity="1" />
+    <End Role="CajaCasaMatrizOperacionNacionalMov_CAJ" Type="ModeloCaja.Store.CajaCasaMatrizOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdOperacionCajaCasaMatriz" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CMO_IdOperacionCajaCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaCasaMatrizOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+    <End Role="OperacionCajaOperacionNacional_CAJ" Type="ModeloCaja.Store.OperacionCajaOperacionNacional_CAJ" Multiplicity="1" />
+    <End Role="CajaCasaMatrizOperacionNacionalMov_CAJ" Type="ModeloCaja.Store.CajaCasaMatrizOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaCentroSvcOperacionNacionalMov_CAJ_OperacionCajaOperacionNacional_CAJ">
+    <End Role="OperacionCajaOperacionNacional_CAJ" Type="ModeloCaja.Store.OperacionCajaOperacionNacional_CAJ" Multiplicity="1" />
+    <End Role="CajaCentroSvcOperacionNacionalMov_CAJ" Type="ModeloCaja.Store.CajaCentroSvcOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdOperacionCajaOperacionNacional" />
+      </Principal>
+      <Dependent Role="CajaCentroSvcOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CCO_IdOperacionCajaOperacionNacional" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaCentroSvcOperacionNacionalMov_CAJ_RegistroTransaccionesCaja_CAJ">
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Role="CajaCentroSvcOperacionNacionalMov_CAJ" Type="ModeloCaja.Store.CajaCentroSvcOperacionNacionalMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="CajaCentroSvcOperacionNacionalMov_CAJ">
+        <PropertyRef Name="CCO_IdRegistroTransaccionCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaEmpresa_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="OperacionCajaCasaMatriz_CAJ" Type="ModeloCaja.Store.OperacionCajaCasaMatriz_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaEmpresaBancoMov_CAJ_CajaBanco_CAJ">
+    <End Role="OperacionCajaBanco_CAJ" Type="ModeloCaja.Store.OperacionCajaBanco_CAJ" Multiplicity="1" />
+    <End Role="CajaCasaMatrizBancoMov_CAJ" Type="ModeloCaja.Store.CajaCasaMatrizBancoMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdOperacionCajaBanco" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizBancoMov_CAJ">
+        <PropertyRef Name="CBM_IdOperacionCajaBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaEmpresaBancoMov_CAJ_CajaEmpresa_CAJ">
+    <End Role="OperacionCajaCasaMatriz_CAJ" Type="ModeloCaja.Store.OperacionCajaCasaMatriz_CAJ" Multiplicity="1" />
+    <End Role="CajaCasaMatrizBancoMov_CAJ" Type="ModeloCaja.Store.CajaCasaMatrizBancoMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdOperacionCajaCasaMatriz" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizBancoMov_CAJ">
+        <PropertyRef Name="CBM_IdOperacionCajaCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaEmpresaCentroSvcMov_CAJ_CajaEmpresa_CAJ">
+    <End Role="OperacionCajaCasaMatriz_CAJ" Type="ModeloCaja.Store.OperacionCajaCasaMatriz_CAJ" Multiplicity="1" />
+    <End Role="CajaCasaMatrizCentroSvcMov_CAJ" Type="ModeloCaja.Store.CajaCasaMatrizCentroSvcMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdOperacionCajaCasaMatriz" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizCentroSvcMov_CAJ">
+        <PropertyRef Name="CEM_IdOperacionCajaCasaMatriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CajaEmpresaCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ">
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Role="CajaCasaMatrizCentroSvcMov_CAJ" Type="ModeloCaja.Store.CajaCasaMatrizCentroSvcMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="CajaCasaMatrizCentroSvcMov_CAJ">
+        <PropertyRef Name="CEM_IdRegistroTranscaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ">
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Role="CentroSvcCentroSvcMov_CAJ" Type="ModeloCaja.Store.CentroSvcCentroSvcMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="CentroSvcCentroSvcMov_CAJ">
+        <PropertyRef Name="CSM_IdRegistroTxOrigen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CentroSvcCentroSvcMov_CAJ_RegistroTransaccionesCaja_CAJ1">
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Role="CentroSvcCentroSvcMov_CAJ" Type="ModeloCaja.Store.CentroSvcCentroSvcMov_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="CentroSvcCentroSvcMov_CAJ">
+        <PropertyRef Name="CSM_IdRegistroTxDestino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CierreCaja_CAJ_AperturaCaja_CAJ">
+    <End Role="AperturaCaja_CAJ" Type="ModeloCaja.Store.AperturaCaja_CAJ" Multiplicity="1" />
+    <End Role="CierreCaja_CAJ" Type="ModeloCaja.Store.CierreCaja_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="CierreCaja_CAJ">
+        <PropertyRef Name="CIC_IdCierreCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CierreCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+    <End Role="AperturaCaja_CAJ" Type="ModeloCaja.Store.AperturaCaja_CAJ" Multiplicity="1" />
+    <End Role="CierreCajaCasaMatriz_CAJ" Type="ModeloCaja.Store.CierreCajaCasaMatriz_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="CierreCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CCM_IdCierreCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCaja_CAJ_CuentaExterna_PAR">
+    <End Role="CuentaExterna_PAR" Type="ModeloCaja.Store.CuentaExterna_PAR" Multiplicity="0..1" />
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaExterna_PAR">
+        <PropertyRef Name="CEX_IdCuentaExterna" />
+      </Principal>
+      <Dependent Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdCuentaExterna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCajaCategoria_CAJ_CategoriaConceptoCaja_CAJ">
+    <End Role="CategoriaConceptoCaja_CAJ" Type="ModeloCaja.Store.CategoriaConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="ConceptoCajaCategoria_CAJ" Type="ModeloCaja.Store.ConceptoCajaCategoria_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoriaConceptoCaja_CAJ">
+        <PropertyRef Name="CCC_IdCategoria" />
+      </Principal>
+      <Dependent Role="ConceptoCajaCategoria_CAJ">
+        <PropertyRef Name="CCA_IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCajaCategoria_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="ConceptoCajaCategoria_CAJ" Type="ModeloCaja.Store.ConceptoCajaCategoria_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="ConceptoCajaCategoria_CAJ">
+        <PropertyRef Name="CCA_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCajaImpuesto_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="ConceptoCajaImpuesto_CAJ" Type="ModeloCaja.Store.ConceptoCajaImpuesto_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="ConceptoCajaImpuesto_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConceptoCajaRetencion_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="ConceptoCajaRetencion_CAJ" Type="ModeloCaja.Store.ConceptoCajaRetencion_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="ConceptoCajaRetencion_CAJ">
+        <PropertyRef Name="CCR_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaMensajero_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="CuentaMensajero_CAJ" Type="ModeloCaja.Store.CuentaMensajero_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="CuentaMensajero_CAJ">
+        <PropertyRef Name="CUM_IdConcepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="DuplaConceptoCaja_CAJ" Type="ModeloCaja.Store.DuplaConceptoCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="DuplaConceptoCaja_CAJ">
+        <PropertyRef Name="DCC_IdConceptoCajaPrimario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DuplaConceptoCaja_CAJ_ConceptoCaja_CAJ1">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="DuplaConceptoCaja_CAJ" Type="ModeloCaja.Store.DuplaConceptoCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="DuplaConceptoCaja_CAJ">
+        <PropertyRef Name="DCC_IdConceptoCajaSecundario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionCajaBanco_CAJ_AperturaCaja_CAJ">
+    <End Role="AperturaCaja_CAJ" Type="ModeloCaja.Store.AperturaCaja_CAJ" Multiplicity="1" />
+    <End Role="OperacionCajaBanco_CAJ" Type="ModeloCaja.Store.OperacionCajaBanco_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaBanco_CAJ">
+        <PropertyRef Name="CAB_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionCajaCasaMatriz_CAJ_AperturaCaja_CAJ">
+    <End Role="AperturaCaja_CAJ" Type="ModeloCaja.Store.AperturaCaja_CAJ" Multiplicity="1" />
+    <End Role="OperacionCajaCasaMatriz_CAJ" Type="ModeloCaja.Store.OperacionCajaCasaMatriz_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaCasaMatriz_CAJ">
+        <PropertyRef Name="CAE_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionCajaOperacionNacional_CAJ_AperturaCaja_CAJ">
+    <End Role="AperturaCaja_CAJ" Type="ModeloCaja.Store.AperturaCaja_CAJ" Multiplicity="1" />
+    <End Role="OperacionCajaOperacionNacional_CAJ" Type="ModeloCaja.Store.OperacionCajaOperacionNacional_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperacionCajaOperacionNacional_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="OperacionCajaOperacionNacional_CAJ" Type="ModeloCaja.Store.OperacionCajaOperacionNacional_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="OperacionCajaOperacionNacional_CAJ">
+        <PropertyRef Name="CON_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecoleccionDineroPuntos_CAJ_CierreCentroServicios_CAJ">
+    <End Role="CierreCentroServicios_CAJ" Type="ModeloCaja.Store.CierreCentroServicios_CAJ" Multiplicity="1" />
+    <End Role="RecoleccionDineroPuntos_CAJ" Type="ModeloCaja.Store.RecoleccionDineroPuntos_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CierreCentroServicios_CAJ">
+        <PropertyRef Name="CCS_IdCierreCentroServicios" />
+      </Principal>
+      <Dependent Role="RecoleccionDineroPuntos_CAJ">
+        <PropertyRef Name="RDP_IdCierreCentroServicios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroTransacDetalleImpuesto_CAJ_RegistroTransacDetalleCaja_CAJ">
+    <End Role="RegistroTransacDetalleCaja_CAJ" Type="ModeloCaja.Store.RegistroTransacDetalleCaja_CAJ" Multiplicity="1" />
+    <End Role="RegistroTransacDetalleImpuesto_CAJ" Type="ModeloCaja.Store.RegistroTransacDetalleImpuesto_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Principal>
+      <Dependent Role="RegistroTransacDetalleImpuesto_CAJ">
+        <PropertyRef Name="RTI_IdRegistroTransDetalleCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroTranscDetalleRetencion_CAJ_RegistroTransacDetalleCaja_CAJ">
+    <End Role="RegistroTransacDetalleCaja_CAJ" Type="ModeloCaja.Store.RegistroTransacDetalleCaja_CAJ" Multiplicity="1" />
+    <End Role="RegistroTranscDetalleRetencion_CAJ" Type="ModeloCaja.Store.RegistroTranscDetalleRetencion_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Principal>
+      <Dependent Role="RegistroTranscDetalleRetencion_CAJ">
+        <PropertyRef Name="RTR_IdRegistroTransDetalleCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroVenta_CAJ_AperturaCaja_CAJ">
+    <End Role="AperturaCaja_CAJ" Type="ModeloCaja.Store.AperturaCaja_CAJ" Multiplicity="1" />
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AperturaCaja_CAJ">
+        <PropertyRef Name="APC_IdAperturaCaja" />
+      </Principal>
+      <Dependent Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdAperturaCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroVentaClienteCredit_CAJ_RegistroVenta_CAJ">
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Role="RegistroTrasnClienteCredit_CAJ" Type="ModeloCaja.Store.RegistroTrasnClienteCredit_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="RegistroTrasnClienteCredit_CAJ">
+        <PropertyRef Name="RTC_IdRegistroVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroVentaDetalle_CAJ_ConceptoCaja_CAJ">
+    <End Role="ConceptoCaja_CAJ" Type="ModeloCaja.Store.ConceptoCaja_CAJ" Multiplicity="1" />
+    <End Role="RegistroTransacDetalleCaja_CAJ" Type="ModeloCaja.Store.RegistroTransacDetalleCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConceptoCaja_CAJ">
+        <PropertyRef Name="COC_IdConceptoCaja" />
+      </Principal>
+      <Dependent Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdConceptoCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroVentaDetalle_CAJ_RegistroVenta_CAJ">
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Role="RegistroTransacDetalleCaja_CAJ" Type="ModeloCaja.Store.RegistroTransacDetalleCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTranscaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegistroVentaFormaPago_CAJ_RegistroVenta_CAJ">
+    <End Role="RegistroTransaccionesCaja_CAJ" Type="ModeloCaja.Store.RegistroTransaccionesCaja_CAJ" Multiplicity="1" />
+    <End Role="RegistroVentaFormaPago_CAJ" Type="ModeloCaja.Store.RegistroVentaFormaPago_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransaccionesCaja_CAJ">
+        <PropertyRef Name="RTC_IdRegistroTranscaccion" />
+      </Principal>
+      <Dependent Role="RegistroVentaFormaPago_CAJ">
+        <PropertyRef Name="RVF_IdRegistroVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RegTranDetCajaAdicional_CAJ_RegistroTransacDetalleCaja_CAJ">
+    <End Role="RegistroTransacDetalleCaja_CAJ" Type="ModeloCaja.Store.RegistroTransacDetalleCaja_CAJ" Multiplicity="1" />
+    <End Role="RegTranDetCajaAdicional_CAJ" Type="ModeloCaja.Store.RegTranDetCajaAdicional_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Principal>
+      <Dependent Role="RegTranDetCajaAdicional_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReporteDineroPuntoAgencia_CAJ_RecoleccionDineroPuntos_CAJ">
+    <End Role="RecoleccionDineroPuntos_CAJ" Type="ModeloCaja.Store.RecoleccionDineroPuntos_CAJ" Multiplicity="1" />
+    <End Role="ReporteDineroPuntoAgencia_CAJ" Type="ModeloCaja.Store.ReporteDineroPuntoAgencia_CAJ" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="RecoleccionDineroPuntos_CAJ">
+        <PropertyRef Name="RDP_IdRecoleccion" />
+      </Principal>
+      <Dependent Role="ReporteDineroPuntoAgencia_CAJ">
+        <PropertyRef Name="RDP_IdRecoleccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReporteDineroPuntoAgencia_CAJ_TipoObsPuntoAgencia_CAJ">
+    <End Role="TipoObsPuntoAgencia_CAJ" Type="ModeloCaja.Store.TipoObsPuntoAgencia_CAJ" Multiplicity="0..1" />
+    <End Role="ReporteDineroPuntoAgencia_CAJ" Type="ModeloCaja.Store.ReporteDineroPuntoAgencia_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoObsPuntoAgencia_CAJ">
+        <PropertyRef Name="TOP_IdTipoObservacion" />
+      </Principal>
+      <Dependent Role="ReporteDineroPuntoAgencia_CAJ">
+        <PropertyRef Name="RDP_TipoObservacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReporteMensajeroCaja_CAJ_RegistroTransacDetalleCaja_CAJ">
+    <End Role="RegistroTransacDetalleCaja_CAJ" Type="ModeloCaja.Store.RegistroTransacDetalleCaja_CAJ" Multiplicity="0..1" />
+    <End Role="ReporteMensajeroCaja_CAJ" Type="ModeloCaja.Store.ReporteMensajeroCaja_CAJ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RegistroTransacDetalleCaja_CAJ">
+        <PropertyRef Name="RTD_IdRegistroTransDetalleCaja" />
+      </Principal>
+      <Dependent Role="ReporteMensajeroCaja_CAJ">
+        <PropertyRef Name="RMC_IdRegistroTransDetalleCaja" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paActualizarNumCompRegTransDet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RTD_IdRegistroTransDetalleCaja" Type="bigint" Mode="In" />
+    <Parameter Name="RTD_NumeroComprobante" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paAperturaCajasEnCero" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paCerrarAperturasCasaMatriz_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCasaMatriz" Type="smallint" Mode="In" />
+    <Parameter Name="CodigoUsuario" Type="bigint" Mode="In" />
+    <Parameter Name="CraeadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="IdRacol" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paCerrarCentroServicio_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCentroServicios" Type="bigint" Mode="In" />
+    <Parameter Name="Automatico" Type="bit" Mode="In" />
+    <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearRegClienteCredito_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idRegistroVenta" Type="bigint" Mode="In" />
+    <Parameter Name="idCliente" Type="int" Mode="In" />
+    <Parameter Name="nombreCliente" Type="varchar" Mode="In" />
+    <Parameter Name="nit" Type="varchar" Mode="In" />
+    <Parameter Name="idContrato" Type="int" Mode="In" />
+    <Parameter Name="numeroContrato" Type="varchar" Mode="In" />
+    <Parameter Name="idSucursal" Type="int" Mode="In" />
+    <Parameter Name="nombreSucursal" Type="varchar" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearRegistroTransCaja_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RTC_Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="RTC_IdAperturaCaja" Type="bigint" Mode="In" />
+    <Parameter Name="RTC_IdCentroServiciosVenta" Type="bigint" Mode="In" />
+    <Parameter Name="RTC_NombreCentroServiciosVenta" Type="varchar" Mode="In" />
+    <Parameter Name="RTC_IdCentroServiciosResponsable" Type="bigint" Mode="In" />
+    <Parameter Name="RTC_NombreCtroSvcsResponsable" Type="varchar" Mode="In" />
+    <Parameter Name="RTC_ValorTotal" Type="numeric" Mode="In" />
+    <Parameter Name="RTC_TotalImpuestos" Type="numeric" Mode="In" />
+    <Parameter Name="RTC_TotalRetenciones" Type="numeric" Mode="In" />
+    <Parameter Name="RTC_TipoDatosAdicionales" Type="char" Mode="In" />
+    <Parameter Name="RTC_CreadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="RTC_FechaGrabacion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paCrearRegTransCajaDetalle_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idRegistroTranscaccion" Type="bigint" Mode="In" />
+    <Parameter Name="idConceptoCaja" Type="int" Mode="In" />
+    <Parameter Name="nombreConcepto" Type="varchar" Mode="In" />
+    <Parameter Name="conceptoEsIngreso" Type="bit" Mode="In" />
+    <Parameter Name="cantidad" Type="smallint" Mode="In" />
+    <Parameter Name="valorServicio" Type="numeric" Mode="In" />
+    <Parameter Name="valoresAdicionales" Type="numeric" Mode="In" />
+    <Parameter Name="valorTercero" Type="numeric" Mode="In" />
+    <Parameter Name="valorImpuestos" Type="numeric" Mode="In" />
+    <Parameter Name="valorRetenciones" Type="numeric" Mode="In" />
+    <Parameter Name="valorPrimaSeguros" Type="numeric" Mode="In" />
+    <Parameter Name="valorDeclarado" Type="numeric" Mode="In" />
+    <Parameter Name="numero" Type="bigint" Mode="In" />
+    <Parameter Name="idCuentaExterna" Type="smallint" Mode="In" />
+    <Parameter Name="numeroFactura" Type="varchar" Mode="In" />
+    <Parameter Name="estadoFacturacion" Type="char" Mode="In" />
+    <Parameter Name="fechaFacturacion" Type="datetime" Mode="In" />
+    <Parameter Name="observacion" Type="varchar" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="numeroComprobante" Type="varchar" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="minDate" Type="datetime" Mode="In" />
+    <Parameter Name="CentroServicios" Type="bigint" Mode="In" />
+    <Parameter Name="ValorEfectivo" Type="decimal" Mode="In" />
+    <Parameter Name="RTC_FechaGrabacion" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paCrearRegTransCajaDetlleAdicional_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idRegistroDetalleTranscaccion" Type="bigint" Mode="In" />
+    <Parameter Name="idSucursal" Type="int" Mode="In" />
+    <Parameter Name="Adicional1" Type="varchar" Mode="In" />
+    <Parameter Name="Adicional2" Type="varchar" Mode="In" />
+    <Parameter Name="Adicional3" Type="varchar" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearRegTransFormasPago_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idRegistroVenta" Type="bigint" Mode="In" />
+    <Parameter Name="idFormaPago" Type="smallint" Mode="In" />
+    <Parameter Name="descripcionFormaPago" Type="varchar" Mode="In" />
+    <Parameter Name="valor" Type="numeric" Mode="In" />
+    <Parameter Name="numeroAsociado" Type="varchar" Mode="In" />
+    <Parameter Name="campo1" Type="varchar" Mode="In" />
+    <Parameter Name="campo2" Type="varchar" Mode="In" />
+    <Parameter Name="creadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearRegTransImpuestos_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RTI_IdRegTransDtllCaja" Type="bigint" Mode="In" />
+    <Parameter Name="RTI_IdImpuesto" Type="smallint" Mode="In" />
+    <Parameter Name="RTI_DescripcionImpuesto" Type="varchar" Mode="In" />
+    <Parameter Name="RTI_ValorConfigurado" Type="numeric" Mode="In" />
+    <Parameter Name="RTI_IdCuentaExterna" Type="smallint" Mode="In" />
+    <Parameter Name="RTI_Valor" Type="numeric" Mode="In" />
+    <Parameter Name="RTI_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paCrearRegTransRetenciones_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RTR_IdRegTransDtllCaja" Type="bigint" Mode="In" />
+    <Parameter Name="RTR_IdRetencion" Type="smallint" Mode="In" />
+    <Parameter Name="RTR_DescripcionRetencion" Type="varchar" Mode="In" />
+    <Parameter Name="RTR_ValorFijo" Type="numeric" Mode="In" />
+    <Parameter Name="RTR_TarifaPorcentual" Type="numeric" Mode="In" />
+    <Parameter Name="RTR_Base" Type="numeric" Mode="In" />
+    <Parameter Name="RTR_Valor" Type="numeric" Mode="In" />
+    <Parameter Name="RTR_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerAlCobrosSinCancelar_MEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCentroSvc" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerCajaAfectadaAlCobro_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroOperacion" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerCajasCerradasXCSFecha_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCS" Type="bigint" Mode="In" />
+    <Parameter Name="FechaDesde" Type="datetime" Mode="In" />
+    <Parameter Name="FechaHasta" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paObtenerCierreCajaCentroServicios_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodigoUsuario" Type="bigint" Mode="In" />
+    <Parameter Name="IdCentroServicio" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IncluirFiltroFecha" Type="bit" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerClientePropOper_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdOperacionDesde" Type="bigint" Mode="In" />
+    <Parameter Name="IdOperacionHasta" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerComisionesVentasApertura_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAperturaCaja" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerCSRecacudoAlcobro_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroGuia" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerDineroReportPunto_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAgencia" Type="bigint" Mode="In" />
+    <Parameter Name="FiltroCodPunto" Type="varchar" Mode="In" />
+    <Parameter Name="FiltroIdMensajero" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerEnviMenjAlCobro_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMensajero" Type="bigint" Mode="In" />
+    <Parameter Name="idComprobante" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerInfoCierreCaja_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAperturaCaja" Type="bigint" Mode="In" />
+    <Parameter Name="idFormaPago" Type="smallint" Mode="In" />
+    <Parameter Name="operadorFormaPago" Type="char" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRegFormaPago_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRegistroTransaccion" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRegistroTrans_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdRegistroTransaccion" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRegitrosTranCajaCentroSvc_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCentroServcio" Type="bigint" Mode="In" />
+    <Parameter Name="fechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="fechaFinal" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRegTransDetalle_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="IdConceptoCaja" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRegTransDetallePorCentroServicio_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroGuia" Type="bigint" Mode="In" />
+    <Parameter Name="IdConceptoCaja" Type="int" Mode="In" />
+    <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerRegVentaPinPrepag_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pinPrepago" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerReporteMensajeroImprimir_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdMensajero" Type="bigint" Mode="In" />
+    <Parameter Name="NumeroComprobante" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerReportesMensajero_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdMensajero" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerResumeCierrePunto_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPuntoCentro" Type="bigint" Mode="In" />
+    <Parameter Name="idCierrepuntoAsociado" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerResumeCtaMensajer_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idMensajero" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="paObtenerResumenCajaPorFormaPago_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idAperturaCaja" Type="bigint" Mode="In" />
+    <Parameter Name="idCierreAsociado" Type="bigint" Mode="In" />
+    <Parameter Name="idPuntoCentro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerResumenCajas_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPuntoAtencion" Type="bigint" Mode="In" />
+    <Parameter Name="idFormaPago" Type="smallint" Mode="In" />
+    <Parameter Name="operador" Type="char" Mode="In" />
+    <Parameter Name="idApertura" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerResumenTransccionesConcepto_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idApertura" Type="bigint" Mode="In" />
+    <Parameter Name="idCierreAsociado" Type="bigint" Mode="In" />
+    <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerSaldoActualCaja_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idCentroServicios" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtUltAperCaj0NoCerrada_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idPuntoCentro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paRecalcularSaldosFinales_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCierreCS" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paValidarCierreAutomatico_CAJ" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+  </Function>
+</Schema>

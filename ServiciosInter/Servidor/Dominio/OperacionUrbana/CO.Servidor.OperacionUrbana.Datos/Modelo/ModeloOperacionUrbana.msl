@@ -1,0 +1,2041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloOperacionUrbanaNSStoreContainer" CdmEntityContainer="ModeloOperacionUrbana">
+    <EntitySetMapping Name="Cargo_SEG">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.Cargo_SEG">
+        <MappingFragment StoreEntitySet="Cargo_SEG">
+          <ScalarProperty Name="CAR_CodigoNovasoft" ColumnName="CAR_CodigoNovasoft" />
+          <ScalarProperty Name="CAR_CreadoPor" ColumnName="CAR_CreadoPor" />
+          <ScalarProperty Name="CAR_FechaGrabacion" ColumnName="CAR_FechaGrabacion" />
+          <ScalarProperty Name="CAR_IdCargoReporta" ColumnName="CAR_IdCargoReporta" />
+          <ScalarProperty Name="CAR_Descripcion" ColumnName="CAR_Descripcion" />
+          <ScalarProperty Name="CAR_IdCargo" ColumnName="CAR_IdCargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadoEmpaque_PAR">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.EstadoEmpaque_PAR">
+        <MappingFragment StoreEntitySet="EstadoEmpaque_PAR">
+          <ScalarProperty Name="TEE_CreadoPor" ColumnName="TEE_CreadoPor" />
+          <ScalarProperty Name="TEE_FechaGrabacion" ColumnName="TEE_FechaGrabacion" />
+          <ScalarProperty Name="TEE_PesoFinal" ColumnName="TEE_PesoFinal" />
+          <ScalarProperty Name="TEE_PesoInicial" ColumnName="TEE_PesoInicial" />
+          <ScalarProperty Name="TEE_Descripcion" ColumnName="TEE_Descripcion" />
+          <ScalarProperty Name="TEE_IdEstadoEmpaque" ColumnName="TEE_IdEstadoEmpaque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerAdmisioConvPeaton_MEN" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerAdmisioConvPeaton_MEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerAdmisioConvPeaton">
+          <ScalarProperty Name="MCP_IdAdminisionMensajeria" ColumnName="MCP_IdAdminisionMensajeria" />
+          <ScalarProperty Name="MCP_IdConvenioRemitente" ColumnName="MCP_IdConvenioRemitente" />
+          <ScalarProperty Name="MCP_NitConvenioRemitente" ColumnName="MCP_NitConvenioRemitente" />
+          <ScalarProperty Name="MCP_RazonSocialConvenioRemitente" ColumnName="MCP_RazonSocialConvenioRemitente" />
+          <ScalarProperty Name="MCP_IdContratoConvenioRemite" ColumnName="MCP_IdContratoConvenioRemite" />
+          <ScalarProperty Name="MCP_IdTipoIdDestinatario" ColumnName="MCP_IdTipoIdDestinatario" />
+          <ScalarProperty Name="MCP_IdDestinatario" ColumnName="MCP_IdDestinatario" />
+          <ScalarProperty Name="MCP_NombreDestinatario" ColumnName="MCP_NombreDestinatario" />
+          <ScalarProperty Name="MCP_Apellido1Destinatario" ColumnName="MCP_Apellido1Destinatario" />
+          <ScalarProperty Name="MCP_Apellido2Destinatario" ColumnName="MCP_Apellido2Destinatario" />
+          <ScalarProperty Name="MCP_TelefonoDestinatario" ColumnName="MCP_TelefonoDestinatario" />
+          <ScalarProperty Name="MCP_DireccionDestinatario" ColumnName="MCP_DireccionDestinatario" />
+          <ScalarProperty Name="MCP_EmailDestinatario" ColumnName="MCP_EmailDestinatario" />
+          <ScalarProperty Name="MCP_IdSucursalRecogida" ColumnName="MCP_IdSucursalRecogida" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Agencia_PUA">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.Agencia_PUA">
+        <MappingFragment StoreEntitySet="Agencia_PUA">
+          <ScalarProperty Name="anchor" ColumnName="anchor" />
+          <ScalarProperty Name="AGE_CreadoPor" ColumnName="AGE_CreadoPor" />
+          <ScalarProperty Name="AGE_FechaGrabacion" ColumnName="AGE_FechaGrabacion" />
+          <ScalarProperty Name="AGE_IdTipoAgencia" ColumnName="AGE_IdTipoAgencia" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="AGE_IdAgencia" ColumnName="AGE_IdAgencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaVentasGuia_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaVentasGuia_OPU">
+        <MappingFragment StoreEntitySet="PlanillaVentasGuia_OPU">
+          <ScalarProperty Name="PVG_IdCiudadOrigenGuia" ColumnName="PVG_IdCiudadOrigenGuia" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_EsRecomendado" ColumnName="PVG_EsRecomendado" />
+          <ScalarProperty Name="PVG_Peso" ColumnName="PVG_Peso" />
+          <ScalarProperty Name="PVG_DiceContener" ColumnName="PVG_DiceContener" />
+          <ScalarProperty Name="PVG_NombreServicio" ColumnName="PVG_NombreServicio" />
+          <ScalarProperty Name="PVG_IdServicio" ColumnName="PVG_IdServicio" />
+          <ScalarProperty Name="PVG_IdUnidadNegocio" ColumnName="PVG_IdUnidadNegocio" />
+          <ScalarProperty Name="PVG_IdPuntoServicio" ColumnName="PVG_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_CreadoPor" ColumnName="PVG_CreadoPor" />
+          <ScalarProperty Name="PVG_FechaGrabacion" ColumnName="PVG_FechaGrabacion" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerIngrGuiaNoReAgencia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerIngrGuiaNoReAgencia_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerIngrGuiaNoReAgencia">
+          <ScalarProperty Name="IGN_NumeroGuia" ColumnName="IGN_NumeroGuia" />
+          <ScalarProperty Name="IGN_IdAgencia" ColumnName="IGN_IdAgencia" />
+          <ScalarProperty Name="IGN_IdMensajero" ColumnName="IGN_IdMensajero" />
+          <ScalarProperty Name="IGN_IdEstadoEmpaque" ColumnName="IGN_IdEstadoEmpaque" />
+          <ScalarProperty Name="IGN_PesoEnIngreso" ColumnName="IGN_PesoEnIngreso" />
+          <ScalarProperty Name="IGN_Estado" ColumnName="IGN_Estado" />
+          <ScalarProperty Name="IGN_FechaCaptura" ColumnName="IGN_FechaCaptura" />
+          <ScalarProperty Name="IGN_FechaGrabacion" ColumnName="IGN_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPlanillaVentaGuia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerPlanillaVentaGuia_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerPlanillaVentaGuia">
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_FechaGrabacion" ColumnName="PVG_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerAdmiMenCtrSvc_MEN" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerAdmiMenCtrSvc_MEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerAdmiMenCtrSvc">
+          <ScalarProperty Name="ADM_IdAdminisionMensajeria" ColumnName="ADM_IdAdminisionMensajeria" />
+          <ScalarProperty Name="ADM_NumeroGuia" ColumnName="ADM_NumeroGuia" />
+          <ScalarProperty Name="ADM_IdUnidadNegocio" ColumnName="ADM_IdUnidadNegocio" />
+          <ScalarProperty Name="ADM_IdServicio" ColumnName="ADM_IdServicio" />
+          <ScalarProperty Name="ADM_NombreServicio" ColumnName="ADM_NombreServicio" />
+          <ScalarProperty Name="ADM_IdCentroServicioOrigen" ColumnName="ADM_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_NombreCentroServicioOrigen" ColumnName="ADM_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_IdCiudadOrigen" ColumnName="ADM_IdCiudadOrigen" />
+          <ScalarProperty Name="ADM_NombreCiudadOrigen" ColumnName="ADM_NombreCiudadOrigen" />
+          <ScalarProperty Name="ADM_IdCiudadDestino" ColumnName="ADM_IdCiudadDestino" />
+          <ScalarProperty Name="ADM_NombreCiudadDestino" ColumnName="ADM_NombreCiudadDestino" />
+          <ScalarProperty Name="ADM_FechaAdmision" ColumnName="ADM_FechaAdmision" />
+          <ScalarProperty Name="ADM_IdCentroServicioDestino" ColumnName="ADM_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADM_NombreCentroServicioDestino" ColumnName="ADM_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADM_DiceContener" ColumnName="ADM_DiceContener" />
+          <ScalarProperty Name="ADM_Peso" ColumnName="ADM_Peso" />
+          <ScalarProperty Name="ADM_EsRecomendado" ColumnName="ADM_EsRecomendado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearPlanillaVentaGuia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearPlanillaVentaGuia_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerAdmiRapiRadicado_MEN" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerAdmiRapiRadicado_MEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerAdmiRapiRadicado">
+          <ScalarProperty Name="ARR_IdAdminisionRapiRadicado" ColumnName="ARR_IdAdminisionRapiRadicado" />
+          <ScalarProperty Name="ARR_IdAdminisionMensajeria" ColumnName="ARR_IdAdminisionMensajeria" />
+          <ScalarProperty Name="ARR_TipoIdDestinatario" ColumnName="ARR_TipoIdDestinatario" />
+          <ScalarProperty Name="ARR_IdDestinatario" ColumnName="ARR_IdDestinatario" />
+          <ScalarProperty Name="ARR_NombreDestinatario" ColumnName="ARR_NombreDestinatario" />
+          <ScalarProperty Name="ARR_Apellido1Destinatario" ColumnName="ARR_Apellido1Destinatario" />
+          <ScalarProperty Name="ARR_Apellido2Destinatario" ColumnName="ARR_Apellido2Destinatario" />
+          <ScalarProperty Name="ARR_TelefonoDestinatario" ColumnName="ARR_TelefonoDestinatario" />
+          <ScalarProperty Name="ARR_DireccionDestinatario" ColumnName="ARR_DireccionDestinatario" />
+          <ScalarProperty Name="ARR_EmailDestinatario" ColumnName="ARR_EmailDestinatario" />
+          <ScalarProperty Name="ARR_IdCiudadDestino" ColumnName="ARR_IdCiudadDestino" />
+          <ScalarProperty Name="ARR_NombreCiudadDestino" ColumnName="ARR_NombreCiudadDestino" />
+          <ScalarProperty Name="ARR_NumeroFolios" ColumnName="ARR_NumeroFolios" />
+          <ScalarProperty Name="ARR_ConsecutivoRadicado" ColumnName="ARR_ConsecutivoRadicado" />
+          <ScalarProperty Name="ARR_CodigoRapiRadicado" ColumnName="ARR_CodigoRapiRadicado" />
+          <ScalarProperty Name="ARR_ReclamaEnOficina" ColumnName="ARR_ReclamaEnOficina" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerUltimoEstadoGuia_MEN" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerUltimoEstadoGuia_MEN" />
+    <FunctionImportMapping FunctionImportName="paActualiEnvioPlanillaAsig_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualiEnvioPlanillaAsig_OPU" />
+    <FunctionImportMapping FunctionImportName="paActualizaPlanillaAsig_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizaPlanillaAsig_OPU" />
+    <FunctionImportMapping FunctionImportName="paCerrarPlanillaAsignacion_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCerrarPlanillaAsignacion_OPU" />
+    <FunctionImportMapping FunctionImportName="paAbrirPlanillaAsignacion_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paAbrirPlanillaAsignacion_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paAbrirPlanillaAsignacion_OPU_Result">
+          <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="EstadosPlanillaEnvios_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.EstadosPlanillaEnvios_OPU">
+        <MappingFragment StoreEntitySet="EstadosPlanillaEnvios_OPU">
+          <ScalarProperty Name="EPE_CreadoPor" ColumnName="EPE_CreadoPor" />
+          <ScalarProperty Name="EPE_FechaGrabacion" ColumnName="EPE_FechaGrabacion" />
+          <ScalarProperty Name="EPE_Descripcion" ColumnName="EPE_Descripcion" />
+          <ScalarProperty Name="EPE_IdEstadoPlanillaEnvios" ColumnName="EPE_IdEstadoPlanillaEnvios" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paAsignacionPlanillaMensaj_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paAsignacionPlanillaMensaj_OPU" />
+    <EntitySetMapping Name="ParametrosOperacionUrbana_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.ParametrosOperacionUrbana_OPU">
+        <MappingFragment StoreEntitySet="ParametrosOperacionUrbana_OPU">
+          <ScalarProperty Name="POU_CreadoPor" ColumnName="POU_CreadoPor" />
+          <ScalarProperty Name="POU_FechaGrabacion" ColumnName="POU_FechaGrabacion" />
+          <ScalarProperty Name="POU_Descripcion" ColumnName="POU_Descripcion" />
+          <ScalarProperty Name="POU_ValorParametro" ColumnName="POU_ValorParametro" />
+          <ScalarProperty Name="POU_IdParametro" ColumnName="POU_IdParametro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoMensajero_CPO">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.TipoMensajero_CPO">
+        <MappingFragment StoreEntitySet="TipoMensajero_CPO">
+          <ScalarProperty Name="TIM_CreadoPor" ColumnName="TIM_CreadoPor" />
+          <ScalarProperty Name="TIM_FechaGrabacion" ColumnName="TIM_FechaGrabacion" />
+          <ScalarProperty Name="TIM_EsVehicular" ColumnName="TIM_EsVehicular" />
+          <ScalarProperty Name="TIM_Descripcion" ColumnName="TIM_Descripcion" />
+          <ScalarProperty Name="TIM_IdTipoMensajero" ColumnName="TIM_IdTipoMensajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paCrearPlanillaAsignaGuia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearPlanillaAsignaGuia_OPU" />
+    <EntitySetMapping Name="EstadoSolicitudRecogida_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.EstadoSolicitudRecogida_OPU">
+        <MappingFragment StoreEntitySet="EstadoSolicitudRecogida_OPU">
+          <ScalarProperty Name="EPS_CreadoPor" ColumnName="EPS_CreadoPor" />
+          <ScalarProperty Name="EPS_FechaGrabacion" ColumnName="EPS_FechaGrabacion" />
+          <ScalarProperty Name="EPS_Descripcion" ColumnName="EPS_Descripcion" />
+          <ScalarProperty Name="EPS_IdEstadoSolicitudRecogida" ColumnName="EPS_IdEstadoSolicitudRecogida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paCrearSolRecoPuntoSvc_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearSolRecoPuntoSvc_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearSolRecoCliConvenio_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearSolRecoCliConvenio_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearSolRecogidaPeaton_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearSolRecogidaPeaton_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearTipEnvSolRecoPeaton_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearTipEnvSolRecoPeaton_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerEnvioPlanillaAsig_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerEnvioPlanillaAsig_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerEnvioPlanillaAsig">
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PAG_NumeroGuia" ColumnName="PAG_NumeroGuia" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAG_IdServicio" ColumnName="PAG_IdServicio" />
+          <ScalarProperty Name="PAG_NombreServicio" ColumnName="PAG_NombreServicio" />
+          <ScalarProperty Name="PAG_Consecutivo" ColumnName="PAG_Consecutivo" />
+          <ScalarProperty Name="PAG_EstaDescargada" ColumnName="PAG_EstaDescargada" />
+          <ScalarProperty Name="PAG_RecogeDinero" ColumnName="PAG_RecogeDinero" />
+          <ScalarProperty Name="PAG_CantidadRadicados" ColumnName="PAG_CantidadRadicados" />
+          <ScalarProperty Name="PAG_IdCiudadOrigen" ColumnName="PAG_IdCiudadOrigen" />
+          <ScalarProperty Name="PAG_NombreCiudadOrigen" ColumnName="PAG_NombreCiudadOrigen" />
+          <ScalarProperty Name="PAG_TotalPiezas" ColumnName="PAG_TotalPiezas" />
+          <ScalarProperty Name="PAG_EstaVerificada" ColumnName="PAG_EstaVerificada" />
+          <ScalarProperty Name="PAG_VerficadaPor" ColumnName="PAG_VerficadaPor" />
+          <ScalarProperty Name="PAG_FechaVerificacion" ColumnName="PAG_FechaVerificacion" />
+          <ScalarProperty Name="PAG_Peso" ColumnName="PAG_Peso" />
+          <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+          <ScalarProperty Name="PAG_CreadoPor" ColumnName="PAG_CreadoPor" />
+          <ScalarProperty Name="PAG_TelefonoDestinatario" ColumnName="PAG_TelefonoDestinatario" />
+          <ScalarProperty Name="PAG_DireccionDestinatario" ColumnName="PAG_DireccionDestinatario" />
+          <ScalarProperty Name="PAG_IdCiudadDestino" ColumnName="PAG_IdCiudadDestino" />
+          <ScalarProperty Name="PAG_NombreCiudadDestino" ColumnName="PAG_NombreCiudadDestino" />
+          <ScalarProperty Name="PAG_IdTipoEnvio" ColumnName="PAG_IdTipoEnvio" />
+          <ScalarProperty Name="PAG_NombreTipoEnvio" ColumnName="PAG_NombreTipoEnvio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGuiaPlanillaAsig_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerGuiaPlanillaAsig_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerGuiaPlanillaAsig">
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PAG_NumeroGuia" ColumnName="PAG_NumeroGuia" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAG_IdServicio" ColumnName="PAG_IdServicio" />
+          <ScalarProperty Name="PAG_NombreServicio" ColumnName="PAG_NombreServicio" />
+          <ScalarProperty Name="PAG_Consecutivo" ColumnName="PAG_Consecutivo" />
+          <ScalarProperty Name="PAG_EstaDescargada" ColumnName="PAG_EstaDescargada" />
+          <ScalarProperty Name="PAG_RecogeDinero" ColumnName="PAG_RecogeDinero" />
+          <ScalarProperty Name="PAG_CantidadRadicados" ColumnName="PAG_CantidadRadicados" />
+          <ScalarProperty Name="PAG_IdCiudadOrigen" ColumnName="PAG_IdCiudadOrigen" />
+          <ScalarProperty Name="PAG_NombreCiudadOrigen" ColumnName="PAG_NombreCiudadOrigen" />
+          <ScalarProperty Name="PAG_TotalPiezas" ColumnName="PAG_TotalPiezas" />
+          <ScalarProperty Name="PAG_EstaVerificada" ColumnName="PAG_EstaVerificada" />
+          <ScalarProperty Name="PAG_VerficadaPor" ColumnName="PAG_VerficadaPor" />
+          <ScalarProperty Name="PAG_FechaVerificacion" ColumnName="PAG_FechaVerificacion" />
+          <ScalarProperty Name="PAG_Peso" ColumnName="PAG_Peso" />
+          <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+          <ScalarProperty Name="PAG_CreadoPor" ColumnName="PAG_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MotivoReProgramacionRecogi_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.MotivoReProgramacionRecogi_OPU">
+        <MappingFragment StoreEntitySet="MotivoReProgramacionRecogi_OPU">
+          <ScalarProperty Name="MDR_CreadoPor" ColumnName="MDR_CreadoPor" />
+          <ScalarProperty Name="MDR_FechaGrabacion" ColumnName="MDR_FechaGrabacion" />
+          <ScalarProperty Name="MDR_Descripcion" ColumnName="MDR_Descripcion" />
+          <ScalarProperty Name="MDR_IdMotivoReProgramacionReco" ColumnName="MDR_IdMotivoReProgramacionReco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerSolRecogConvenio_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerSolRecogConvenio_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerSolRecogConvenio">
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_Observaciones" ColumnName="SOR_Observaciones" />
+          <ScalarProperty Name="SOR_IdMunicipio" ColumnName="SOR_IdMunicipio" />
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="PCL_IdCliente" ColumnName="PCL_IdCliente" />
+          <ScalarProperty Name="PCL_Nit" ColumnName="PCL_Nit" />
+          <ScalarProperty Name="PCL_RazonSocial" ColumnName="PCL_RazonSocial" />
+          <ScalarProperty Name="PCL_IdSucursal" ColumnName="PCL_IdSucursal" />
+          <ScalarProperty Name="PCL_NombreSucursal" ColumnName="PCL_NombreSucursal" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PaCrearEstadoGuiaTraza_MEN" FunctionName="ModeloOperacionUrbanaNS.Store.PaCrearEstadoGuiaTraza_MEN" />
+    <FunctionImportMapping FunctionImportName="paObtenerSolRecogPuntoSvc_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerSolRecogPuntoSvc_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerSolRecogPuntoSvc">
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_Observaciones" ColumnName="SOR_Observaciones" />
+          <ScalarProperty Name="SOR_IdMunicipio" ColumnName="SOR_IdMunicipio" />
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="SRP_IdPuntoServicio" ColumnName="SRP_IdPuntoServicio" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearProgramaSoliciReco_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearProgramaSoliciReco_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerSolRecogPeaton_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerSolRecogPeaton_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerSolRecogPeaton">
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_Observaciones" ColumnName="SOR_Observaciones" />
+          <ScalarProperty Name="SOR_IdMunicipio" ColumnName="SOR_IdMunicipio" />
+          <ScalarProperty Name="LocalidadSolicitud" ColumnName="LocalidadSolicitud" />
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="SRP_IdTipoIdentificacion" ColumnName="SRP_IdTipoIdentificacion" />
+          <ScalarProperty Name="SRP_Identificacion" ColumnName="SRP_Identificacion" />
+          <ScalarProperty Name="SRP_Nombre" ColumnName="SRP_Nombre" />
+          <ScalarProperty Name="SRT_IdMunicipioDestino" ColumnName="SRT_IdMunicipioDestino" />
+          <ScalarProperty Name="SRT_IdTipoEnvio" ColumnName="SRT_IdTipoEnvio" />
+          <ScalarProperty Name="SRT_NombreTipoEnvio" ColumnName="SRT_NombreTipoEnvio" />
+          <ScalarProperty Name="SRT_Cantidad" ColumnName="SRT_Cantidad" />
+          <ScalarProperty Name="SRT_PesoAproximado" ColumnName="SRT_PesoAproximado" />
+          <ScalarProperty Name="LocalidadEnvios" ColumnName="LocalidadEnvios" />
+          <ScalarProperty Name="SRT_IdSoliRecoPeatonTipEnvio" ColumnName="SRT_IdSoliRecoPeatonTipEnvio" />
+          <ScalarProperty Name="SRT_IdSolicitudRecogida" ColumnName="SRT_IdSolicitudRecogida" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paActualizarPrograRecogi_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarPrograRecogi_OPU" />
+    <FunctionImportMapping FunctionImportName="paActualizaEstadoSoliRecog_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizaEstadoSoliRecog_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerPlanillaSoliReco_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerPlanillaSoliReco_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerPlanillaSoliReco">
+          <ScalarProperty Name="SPP_IdPlanillaSolicitudRecogid" ColumnName="SPP_IdPlanillaSolicitudRecogid" />
+          <ScalarProperty Name="SPP_NombreMensajero" ColumnName="SPP_NombreMensajero" />
+          <ScalarProperty Name="SPP_IdMensajero" ColumnName="SPP_IdMensajero" />
+          <ScalarProperty Name="SPP_IdentificacionMensajero" ColumnName="SPP_IdentificacionMensajero" />
+          <ScalarProperty Name="PSR_IdZona" ColumnName="PSR_IdZona" />
+          <ScalarProperty Name="PSR_IdTipoMensajero" ColumnName="PSR_IdTipoMensajero" />
+          <ScalarProperty Name="PSR_DescripcionZona" ColumnName="PSR_DescripcionZona" />
+          <ScalarProperty Name="PSR_DescripcionTipoMensajero" ColumnName="PSR_DescripcionTipoMensajero" />
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="PSR_IdProgramacionSolicitudRecog" ColumnName="PSR_IdProgramacionSolicitudRecog" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearPlanillaSolicRecogi_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearPlanillaSolicRecogi_OPU" />
+    <FunctionImportMapping FunctionImportName="paActualizarProgRecoRepor_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarProgRecoRepor_OPU" />
+    <FunctionImportMapping FunctionImportName="paEliminarSoliPlaniRecogi_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paEliminarSoliPlaniRecogi_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearSolicitRecogidaFija_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearSolicitRecogidaFija_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerPrograSoliciRecog_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerPrograSoliciRecog_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerPrograSoliciRecog">
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="PSR_Estado" ColumnName="PSR_Estado" />
+          <ScalarProperty Name="fechaProgramacion" ColumnName="fechaProgramacion" />
+          <ScalarProperty Name="PSR_IdMotivoReProgramacionReco" ColumnName="PSR_IdMotivoReProgramacionReco" />
+          <ScalarProperty Name="PSR_DescripcionMotivo" ColumnName="PSR_DescripcionMotivo" />
+          <ScalarProperty Name="PSR_IdTipoMensajero" ColumnName="PSR_IdTipoMensajero" />
+          <ScalarProperty Name="PSR_DescripcionTipoMensajero" ColumnName="PSR_DescripcionTipoMensajero" />
+          <ScalarProperty Name="SPP_EstaReportadaMensajero" ColumnName="SPP_EstaReportadaMensajero" />
+          <ScalarProperty Name="SPP_IdMensajero" ColumnName="SPP_IdMensajero" />
+          <ScalarProperty Name="SPP_NombreMensajero" ColumnName="SPP_NombreMensajero" />
+          <ScalarProperty Name="SPP_IdSolicitudProgramadaPlanill" ColumnName="SPP_IdSolicitudProgramadaPlanill" />
+          <ScalarProperty Name="SPP_IdPlanillaSolicitudRecogid" ColumnName="SPP_IdPlanillaSolicitudRecogid" />
+          <ScalarProperty Name="SPP_IdAgenciaResponsable" ColumnName="SPP_IdAgenciaResponsable" />
+          <ScalarProperty Name="SPP_IdentificacionMensajero" ColumnName="SPP_IdentificacionMensajero" />
+          <ScalarProperty Name="SPP_CreadoPor" ColumnName="SPP_CreadoPor" />
+          <ScalarProperty Name="PSR_IdProgramacionSolicitudRecog" ColumnName="PSR_IdProgramacionSolicitudRecog" />
+          <ScalarProperty Name="fechaSolicitud" ColumnName="fechaSolicitud" />
+          <ScalarProperty Name="SPP_FechaReporteMensajero" ColumnName="SPP_FechaReporteMensajero" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPlaniSoliRecoCOL_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerPlaniSoliRecoCOL_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerPlaniSoliRecoCOL">
+          <ScalarProperty Name="SPP_IdPlanillaSolicitudRecogid" ColumnName="SPP_IdPlanillaSolicitudRecogid" />
+          <ScalarProperty Name="PSR_IdZona" ColumnName="PSR_IdZona" />
+          <ScalarProperty Name="PSR_IdTipoMensajero" ColumnName="PSR_IdTipoMensajero" />
+          <ScalarProperty Name="SPP_NombreMensajero" ColumnName="SPP_NombreMensajero" />
+          <ScalarProperty Name="PSR_DescripcionZona" ColumnName="PSR_DescripcionZona" />
+          <ScalarProperty Name="PSR_DescripcionTipoMensajero" ColumnName="PSR_DescripcionTipoMensajero" />
+          <ScalarProperty Name="SPP_IdMensajero" ColumnName="SPP_IdMensajero" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="SPP_IdentificacionMensajero" ColumnName="SPP_IdentificacionMensajero" />
+          <ScalarProperty Name="SPP_IdAgenciaResponsable" ColumnName="SPP_IdAgenciaResponsable" />
+          <ScalarProperty Name="PSR_IdSolicitudRecogida" ColumnName="PSR_IdSolicitudRecogida" />
+          <ScalarProperty Name="PSR_FechaDescarga" ColumnName="PSR_FechaDescarga" />
+          <ScalarProperty Name="PSR_EstaPlanillada" ColumnName="PSR_EstaPlanillada" />
+          <ScalarProperty Name="PSR_EstaDescargada" ColumnName="PSR_EstaDescargada" />
+          <ScalarProperty Name="PSR_IdProgramacionSolicitudRecog" ColumnName="PSR_IdProgramacionSolicitudRecog" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="MotivoDescargueSolicitud_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.MotivoDescargueSolicitud_OPU">
+        <MappingFragment StoreEntitySet="MotivoDescargueSolicitud_OPU">
+          <ScalarProperty Name="MOD_CreadoPor" ColumnName="MOD_CreadoPor" />
+          <ScalarProperty Name="MOD_FechaGrabacion" ColumnName="MOD_FechaGrabacion" />
+          <ScalarProperty Name="MOD_PermiteReprogramar" ColumnName="MOD_PermiteReprogramar" />
+          <ScalarProperty Name="MOD_Estado" ColumnName="MOD_Estado" />
+          <ScalarProperty Name="MOD_Descripcion" ColumnName="MOD_Descripcion" />
+          <ScalarProperty Name="MOD_IdMotivoDescargue" ColumnName="MOD_IdMotivoDescargue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerDescargaSolicReco_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerDescargaSolicReco_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerDescargaSolicReco">
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_Observaciones" ColumnName="SOR_Observaciones" />
+          <ScalarProperty Name="SOR_IdMunicipio" ColumnName="SOR_IdMunicipio" />
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="SOR_CreadoPor" ColumnName="SOR_CreadoPor" />
+          <ScalarProperty Name="SPP_IdMotivoDescargue" ColumnName="SPP_IdMotivoDescargue" />
+          <ScalarProperty Name="SPP_DescripcionMotivo" ColumnName="SPP_DescripcionMotivo" />
+          <ScalarProperty Name="SPP_Novedad" ColumnName="SPP_Novedad" />
+          <ScalarProperty Name="SPP_FechaGrabacion" ColumnName="SPP_FechaGrabacion" />
+          <ScalarProperty Name="SPP_CreadoPor" ColumnName="SPP_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearDescargueRecogida_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearDescargueRecogida_OPU" />
+    <FunctionImportMapping FunctionImportName="paActualizarDescargaRecogi_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarDescargaRecogi_OPU" />
+    <EntitySetMapping Name="PlanillaAsignaEnvioMensaj_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaAsignaEnvioMensaj_OPU">
+        <MappingFragment StoreEntitySet="PlanillaAsignaEnvioMensaj_OPU">
+          <ScalarProperty Name="PAM_CreadoPor" ColumnName="PAM_CreadoPor" />
+          <ScalarProperty Name="PAM_FechaGrabacion" ColumnName="PAM_FechaGrabacion" />
+          <ScalarProperty Name="PAM_FechaAutorizacion" ColumnName="PAM_FechaAutorizacion" />
+          <ScalarProperty Name="PAM_AutorizadoPor" ColumnName="PAM_AutorizadoPor" />
+          <ScalarProperty Name="PAM_IdMensajero" ColumnName="PAM_IdMensajero" />
+          <ScalarProperty Name="PAM_IdPlanillaAsignacionEnvio" ColumnName="PAM_IdPlanillaAsignacionEnvio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotivoAperturaRecogida_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.MotivoAperturaRecogida_OPU">
+        <MappingFragment StoreEntitySet="MotivoAperturaRecogida_OPU">
+          <ScalarProperty Name="MAR_CreadoPor" ColumnName="MAR_CreadoPor" />
+          <ScalarProperty Name="MAR_FechaGrabacion" ColumnName="MAR_FechaGrabacion" />
+          <ScalarProperty Name="MAR_Estado" ColumnName="MAR_Estado" />
+          <ScalarProperty Name="MAR_Descripcion" ColumnName="MAR_Descripcion" />
+          <ScalarProperty Name="MAR_IdMotivoAperturaRecogida" ColumnName="MAR_IdMotivoAperturaRecogida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paActualizarTotalPlaniMens_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarTotalPlaniMens_OPU" />
+    <FunctionImportMapping FunctionImportName="paCreaReaperturaRecogida_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCreaReaperturaRecogida_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerEnviosPendientes_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerEnviosPendientes_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerDesOriRutaEstaRut_OPN" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerDesOriRutaEstaRut_OPN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.ONpaObtenerDesOriRutaEstaRut_OPN">
+          <ScalarProperty Name="RUT_IdLocalidadDestino" ColumnName="RUT_IdLocalidadDestino" />
+          <ScalarProperty Name="RUT_IdLocalidadOrigen" ColumnName="RUT_IdLocalidadOrigen" />
+          <ScalarProperty Name="RUT_IdRuta" ColumnName="RUT_IdRuta" />
+          <ScalarProperty Name="UltimaRuta" ColumnName="UltimaRuta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paActualizarGuiaMensajero_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarGuiaMensajero_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearPlanillaAsignaEnvio_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearPlanillaAsignaEnvio_OPU" />
+    <FunctionImportMapping FunctionImportName="paReasignaPlanillaMensajer_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paReasignaPlanillaMensajer_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearPlanillaVenta_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearPlanillaVenta_OPU" />
+    <EntitySetMapping Name="EnviosPendientesMensajer_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.EnviosPendientesMensajer_VOPU">
+        <MappingFragment StoreEntitySet="EnviosPendientesMensajer_VOPU">
+          <ScalarProperty Name="PAE_CreadoPor" ColumnName="PAE_CreadoPor" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAG_EstadoEnPlanilla" ColumnName="PAG_EstadoEnPlanilla" />
+          <ScalarProperty Name="PAE_IdEstadoPlanillaEnvios" ColumnName="PAE_IdEstadoPlanillaEnvios" />
+          <ScalarProperty Name="PAE_FechaGrabacion" ColumnName="PAE_FechaGrabacion" />
+          <ScalarProperty Name="PAE_DescripcionTipoMensajero" ColumnName="PAE_DescripcionTipoMensajero" />
+          <ScalarProperty Name="PAE_IdTipoMensajero" ColumnName="PAE_IdTipoMensajero" />
+          <ScalarProperty Name="PAE_IdAgencia" ColumnName="PAE_IdAgencia" />
+          <ScalarProperty Name="PAE_IdCentroLogistico" ColumnName="PAE_IdCentroLogistico" />
+          <ScalarProperty Name="PAE_IdZona" ColumnName="PAE_IdZona" />
+          <ScalarProperty Name="PAE_DescripcionZona" ColumnName="PAE_DescripcionZona" />
+          <ScalarProperty Name="PAM_IdMensajero" ColumnName="PAM_IdMensajero" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PAG_NombreServicio" ColumnName="PAG_NombreServicio" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_CantidadRadicados" ColumnName="PAG_CantidadRadicados" />
+          <ScalarProperty Name="PAG_IdServicio" ColumnName="PAG_IdServicio" />
+          <ScalarProperty Name="PAG_NumeroGuia" ColumnName="PAG_NumeroGuia" />
+          <ScalarProperty Name="PAG_EstaDescargada" ColumnName="PAG_EstaDescargada" />
+          <ScalarProperty Name="PAG_RecogeDinero" ColumnName="PAG_RecogeDinero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paInsAlCobrosCuentaMensajero_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paInsAlCobrosCuentaMensajero_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerIngrGuiaAgencia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerIngrGuiaAgencia_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerIngrGuiaAgencia">
+          <ScalarProperty Name="IGA_IdAdminisionMensajeria" ColumnName="IGA_IdAdminisionMensajeria" />
+          <ScalarProperty Name="IGA_IdAdmisionCentroLogistico" ColumnName="IGA_IdAdmisionCentroLogistico" />
+          <ScalarProperty Name="IGA_IdAgencia" ColumnName="IGA_IdAgencia" />
+          <ScalarProperty Name="IGA_NumeroGuia" ColumnName="IGA_NumeroGuia" />
+          <ScalarProperty Name="IGA_NumeroPlanilla" ColumnName="IGA_NumeroPlanilla" />
+          <ScalarProperty Name="IGA_IdMensajero" ColumnName="IGA_IdMensajero" />
+          <ScalarProperty Name="IGA_IdEstadoEmpaque" ColumnName="IGA_IdEstadoEmpaque" />
+          <ScalarProperty Name="IGA_DescripcionEstadoEmpaque" ColumnName="IGA_DescripcionEstadoEmpaque" />
+          <ScalarProperty Name="IGA_PesoEnIngreso" ColumnName="IGA_PesoEnIngreso" />
+          <ScalarProperty Name="IGA_IngresoPorPlanilla" ColumnName="IGA_IngresoPorPlanilla" />
+          <ScalarProperty Name="IGA_IdTipoEnvio" ColumnName="IGA_IdTipoEnvio" />
+          <ScalarProperty Name="IGA_NombreTipoEnvio" ColumnName="IGA_NombreTipoEnvio" />
+          <ScalarProperty Name="IGA_IdCiudadOrigen" ColumnName="IGA_IdCiudadOrigen" />
+          <ScalarProperty Name="IGA_NombreCiudadOrigen" ColumnName="IGA_NombreCiudadOrigen" />
+          <ScalarProperty Name="IGA_IdCiudadDestino" ColumnName="IGA_IdCiudadDestino" />
+          <ScalarProperty Name="IGA_NombreCiudadDestino" ColumnName="IGA_NombreCiudadDestino" />
+          <ScalarProperty Name="IGA_IdRutaDestino" ColumnName="IGA_IdRutaDestino" />
+          <ScalarProperty Name="IGA_NombreRutaDestino" ColumnName="IGA_NombreRutaDestino" />
+          <ScalarProperty Name="IGA_FechaGrabacion" ColumnName="IGA_FechaGrabacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerAdmisionConvConv_MEN" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerAdmisionConvConv_MEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerAdmisionConvConv">
+          <ScalarProperty Name="MCC_IdAdminisionMensajeria" ColumnName="MCC_IdAdminisionMensajeria" />
+          <ScalarProperty Name="MCC_FacturaRemitente" ColumnName="MCC_FacturaRemitente" />
+          <ScalarProperty Name="MCC_IdConvenioRemitente" ColumnName="MCC_IdConvenioRemitente" />
+          <ScalarProperty Name="MCC_NitConvenioRemitente" ColumnName="MCC_NitConvenioRemitente" />
+          <ScalarProperty Name="MCC_RazonSocialConvenioRemitente" ColumnName="MCC_RazonSocialConvenioRemitente" />
+          <ScalarProperty Name="MCC_IdContratoConvenioRemite" ColumnName="MCC_IdContratoConvenioRemite" />
+          <ScalarProperty Name="MCC_IdConvenioDestinatario" ColumnName="MCC_IdConvenioDestinatario" />
+          <ScalarProperty Name="MCC_NitConvenioDestinatario" ColumnName="MCC_NitConvenioDestinatario" />
+          <ScalarProperty Name="MCC_RazonSocialConDestinatario" ColumnName="MCC_RazonSocialConDestinatario" />
+          <ScalarProperty Name="MCC_TelefonoDestinatario" ColumnName="MCC_TelefonoDestinatario" />
+          <ScalarProperty Name="MCC_DireccionDestinatario" ColumnName="MCC_DireccionDestinatario" />
+          <ScalarProperty Name="MCC_EmailDestinatario" ColumnName="MCC_EmailDestinatario" />
+          <ScalarProperty Name="MCC_IdSucursalRecogida" ColumnName="MCC_IdSucursalRecogida" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paReasignaEnvioPlanAsig_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paReasignaEnvioPlanAsig_OPU" />
+    <EntitySetMapping Name="GuiasNoIngresadasPorPlani_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.GuiasNoIngresadasPorPlani_VOPU">
+        <MappingFragment StoreEntitySet="GuiasNoIngresadasPorPlani_VOPU">
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PLA_FechaGrabacion" ColumnName="PLA_FechaGrabacion" />
+          <ScalarProperty Name="PLA_IdMensajero" ColumnName="PLA_IdMensajero" />
+          <ScalarProperty Name="PLA_NombrePuntoServicio" ColumnName="PLA_NombrePuntoServicio" />
+          <ScalarProperty Name="PLA_IdPuntoServicio" ColumnName="PLA_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paCrearSolicitudRecogida_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearSolicitudRecogida_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerSolicitudRecogida_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerSolicitudRecogida_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerSolicitudRecogida">
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="PSR_IdTipoMensajero" ColumnName="PSR_IdTipoMensajero" />
+          <ScalarProperty Name="PSR_Estado" ColumnName="PSR_Estado" />
+          <ScalarProperty Name="EPS_Descripcion" ColumnName="EPS_Descripcion" />
+          <ScalarProperty Name="SPP_EstaReportadaMensajero" ColumnName="SPP_EstaReportadaMensajero" />
+          <ScalarProperty Name="SPP_IdMensajero" ColumnName="SPP_IdMensajero" />
+          <ScalarProperty Name="SPP_NombreMensajero" ColumnName="SPP_NombreMensajero" />
+          <ScalarProperty Name="PSR_IdZona" ColumnName="PSR_IdZona" />
+          <ScalarProperty Name="PSR_DescripcionZona" ColumnName="PSR_DescripcionZona" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_NombreCliente" ColumnName="SOR_NombreCliente" />
+          <ScalarProperty Name="PSR_EstaDescargada" ColumnName="PSR_EstaDescargada" />
+          <ScalarProperty Name="SPP_IdSolicitudProgramadaPlanill" ColumnName="SPP_IdSolicitudProgramadaPlanill" />
+          <ScalarProperty Name="PSR_IdProgramacionSolicitudRecog" ColumnName="PSR_IdProgramacionSolicitudRecog" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerSolRecoSinFiltMen_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerSolRecoSinFiltMen_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerSolRecoSinFiltMen">
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="PSR_IdTipoMensajero" ColumnName="PSR_IdTipoMensajero" />
+          <ScalarProperty Name="PSR_Estado" ColumnName="PSR_Estado" />
+          <ScalarProperty Name="EPS_Descripcion" ColumnName="EPS_Descripcion" />
+          <ScalarProperty Name="SPP_EstaReportadaMensajero" ColumnName="SPP_EstaReportadaMensajero" />
+          <ScalarProperty Name="SPP_IdMensajero" ColumnName="SPP_IdMensajero" />
+          <ScalarProperty Name="SPP_NombreMensajero" ColumnName="SPP_NombreMensajero" />
+          <ScalarProperty Name="PSR_IdZona" ColumnName="PSR_IdZona" />
+          <ScalarProperty Name="PSR_DescripcionZona" ColumnName="PSR_DescripcionZona" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_NombreCliente" ColumnName="SOR_NombreCliente" />
+          <ScalarProperty Name="PSR_EstaDescargada" ColumnName="PSR_EstaDescargada" />
+          <ScalarProperty Name="PSR_IdProgramacionSolicitudRecog" ColumnName="PSR_IdProgramacionSolicitudRecog" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paBorrarEnvioPlanillaAsig_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paBorrarEnvioPlanillaAsig_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerAdmisionMensajeri_MEN" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerAdmisionMensajeri_MEN">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerAdmisionMensajeri">
+          <ScalarProperty Name="ADM_IdAdminisionMensajeria" ColumnName="ADM_IdAdminisionMensajeria" />
+          <ScalarProperty Name="ADM_PrefijoNumeroGuia" ColumnName="ADM_PrefijoNumeroGuia" />
+          <ScalarProperty Name="ADM_NumeroGuia" ColumnName="ADM_NumeroGuia" />
+          <ScalarProperty Name="ADM_DigitoVerificacion" ColumnName="ADM_DigitoVerificacion" />
+          <ScalarProperty Name="ADM_GuidDeChequeo" ColumnName="ADM_GuidDeChequeo" />
+          <ScalarProperty Name="ADM_EsAutomatico" ColumnName="ADM_EsAutomatico" />
+          <ScalarProperty Name="ADM_IdUnidadNegocio" ColumnName="ADM_IdUnidadNegocio" />
+          <ScalarProperty Name="ADM_IdServicio" ColumnName="ADM_IdServicio" />
+          <ScalarProperty Name="ADM_NombreServicio" ColumnName="ADM_NombreServicio" />
+          <ScalarProperty Name="ADM_IdTipoEntrega" ColumnName="ADM_IdTipoEntrega" />
+          <ScalarProperty Name="ADM_DescripcionTipoEntrega" ColumnName="ADM_DescripcionTipoEntrega" />
+          <ScalarProperty Name="ADM_IdCentroServicioOrigen" ColumnName="ADM_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_NombreCentroServicioOrigen" ColumnName="ADM_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_IdCentroServicioDestino" ColumnName="ADM_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADM_NombreCentroServicioDestino" ColumnName="ADM_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADM_IdPaisOrigen" ColumnName="ADM_IdPaisOrigen" />
+          <ScalarProperty Name="ADM_NombrePaisOrigen" ColumnName="ADM_NombrePaisOrigen" />
+          <ScalarProperty Name="ADM_IdCiudadOrigen" ColumnName="ADM_IdCiudadOrigen" />
+          <ScalarProperty Name="ADM_NombreCiudadOrigen" ColumnName="ADM_NombreCiudadOrigen" />
+          <ScalarProperty Name="ADM_CodigoPostalOrigen" ColumnName="ADM_CodigoPostalOrigen" />
+          <ScalarProperty Name="ADM_IdPaisDestino" ColumnName="ADM_IdPaisDestino" />
+          <ScalarProperty Name="ADM_NombrePaisDestino" ColumnName="ADM_NombrePaisDestino" />
+          <ScalarProperty Name="ADM_IdCiudadDestino" ColumnName="ADM_IdCiudadDestino" />
+          <ScalarProperty Name="ADM_NombreCiudadDestino" ColumnName="ADM_NombreCiudadDestino" />
+          <ScalarProperty Name="ADM_CodigoPostalDestino" ColumnName="ADM_CodigoPostalDestino" />
+          <ScalarProperty Name="ADM_TelefonoDestinatario" ColumnName="ADM_TelefonoDestinatario" />
+          <ScalarProperty Name="ADM_DireccionDestinatario" ColumnName="ADM_DireccionDestinatario" />
+          <ScalarProperty Name="ADM_TipoCliente" ColumnName="ADM_TipoCliente" />
+          <ScalarProperty Name="ADM_DiasDeEntrega" ColumnName="ADM_DiasDeEntrega" />
+          <ScalarProperty Name="ADM_FechaEstimadaEntrega" ColumnName="ADM_FechaEstimadaEntrega" />
+          <ScalarProperty Name="ADM_ValorAdmision" ColumnName="ADM_ValorAdmision" />
+          <ScalarProperty Name="ADM_ValorTotal" ColumnName="ADM_ValorTotal" />
+          <ScalarProperty Name="ADM_ValorTotalImpuestos" ColumnName="ADM_ValorTotalImpuestos" />
+          <ScalarProperty Name="ADM_ValorTotalRetenciones" ColumnName="ADM_ValorTotalRetenciones" />
+          <ScalarProperty Name="ADM_ValorPrimaSeguro" ColumnName="ADM_ValorPrimaSeguro" />
+          <ScalarProperty Name="ADM_ValorEmpaque" ColumnName="ADM_ValorEmpaque" />
+          <ScalarProperty Name="ADM_ValorAdicionales" ColumnName="ADM_ValorAdicionales" />
+          <ScalarProperty Name="ADM_ValorDeclarado" ColumnName="ADM_ValorDeclarado" />
+          <ScalarProperty Name="ADM_DiceContener" ColumnName="ADM_DiceContener" />
+          <ScalarProperty Name="ADM_Observaciones" ColumnName="ADM_Observaciones" />
+          <ScalarProperty Name="ADM_NumeroPieza" ColumnName="ADM_NumeroPieza" />
+          <ScalarProperty Name="ADM_TotalPiezas" ColumnName="ADM_TotalPiezas" />
+          <ScalarProperty Name="ADM_FechaAdmision" ColumnName="ADM_FechaAdmision" />
+          <ScalarProperty Name="ADM_Peso" ColumnName="ADM_Peso" />
+          <ScalarProperty Name="ADM_PesoLiqVolumetrico" ColumnName="ADM_PesoLiqVolumetrico" />
+          <ScalarProperty Name="ADM_PesoLiqMasa" ColumnName="ADM_PesoLiqMasa" />
+          <ScalarProperty Name="ADM_EsPesoVolumetrico" ColumnName="ADM_EsPesoVolumetrico" />
+          <ScalarProperty Name="ADM_NumeroBolsaSeguridad" ColumnName="ADM_NumeroBolsaSeguridad" />
+          <ScalarProperty Name="ADM_IdMotivoNoUsoBolsaSegurida" ColumnName="ADM_IdMotivoNoUsoBolsaSegurida" />
+          <ScalarProperty Name="ADM_MotivoNoUsoBolsaSeguriDesc" ColumnName="ADM_MotivoNoUsoBolsaSeguriDesc" />
+          <ScalarProperty Name="ADM_NoUsoaBolsaSeguridadObserv" ColumnName="ADM_NoUsoaBolsaSeguridadObserv" />
+          <ScalarProperty Name="ADM_IdUnidadMedida" ColumnName="ADM_IdUnidadMedida" />
+          <ScalarProperty Name="ADM_Largo" ColumnName="ADM_Largo" />
+          <ScalarProperty Name="ADM_Ancho" ColumnName="ADM_Ancho" />
+          <ScalarProperty Name="ADM_Alto" ColumnName="ADM_Alto" />
+          <ScalarProperty Name="ADM_EsRecomendado" ColumnName="ADM_EsRecomendado" />
+          <ScalarProperty Name="ADM_IdTipoEnvio" ColumnName="ADM_IdTipoEnvio" />
+          <ScalarProperty Name="ADM_NombreTipoEnvio" ColumnName="ADM_NombreTipoEnvio" />
+          <ScalarProperty Name="ADM_AdmisionSistemaMensajero" ColumnName="ADM_AdmisionSistemaMensajero" />
+          <ScalarProperty Name="ADM_EsAlCobro" ColumnName="ADM_EsAlCobro" />
+          <ScalarProperty Name="ADM_EstaPagada" ColumnName="ADM_EstaPagada" />
+          <ScalarProperty Name="ADM_FechaPago" ColumnName="ADM_FechaPago" />
+          <ScalarProperty Name="ADM_IdTipoIdentificacionRemitente" ColumnName="ADM_IdTipoIdentificacionRemitente" />
+          <ScalarProperty Name="ADM_IdRemitente" ColumnName="ADM_IdRemitente" />
+          <ScalarProperty Name="ADM_NombreRemitente" ColumnName="ADM_NombreRemitente" />
+          <ScalarProperty Name="ADM_TelefonoRemitente" ColumnName="ADM_TelefonoRemitente" />
+          <ScalarProperty Name="ADM_IdTipoIdentificacionDestinatario" ColumnName="ADM_IdTipoIdentificacionDestinatario" />
+          <ScalarProperty Name="ADM_IdDestinatario" ColumnName="ADM_IdDestinatario" />
+          <ScalarProperty Name="ADM_NombreDestinatario" ColumnName="ADM_NombreDestinatario" />
+          <ScalarProperty Name="ADM_IdMensajero" ColumnName="ADM_IdMensajero" />
+          <ScalarProperty Name="ADM_NombreMensajero" ColumnName="ADM_NombreMensajero" />
+          <ScalarProperty Name="ADM_FechaGrabacion" ColumnName="ADM_FechaGrabacion" />
+          <ScalarProperty Name="ADM_CreadoPor" ColumnName="ADM_CreadoPor" />
+          <ScalarProperty Name="ADM_DireccionRemitente" ColumnName="ADM_DireccionRemitente" />
+          <ScalarProperty Name="ADM_EsSupervisada" ColumnName="ADM_EsSupervisada" />
+          <ScalarProperty Name="ADM_FechaSupervision" ColumnName="ADM_FechaSupervision" />
+          <ScalarProperty Name="ADM_EmailRemitente" ColumnName="ADM_EmailRemitente" />
+          <ScalarProperty Name="ADM_EmailDestinatario" ColumnName="ADM_EmailDestinatario" />
+          <ScalarProperty Name="ADM_CantidadReintentosEntrega" ColumnName="ADM_CantidadReintentosEntrega" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paActualizarPlanSolicRecog_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarPlanSolicRecog_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerPrograSolicSinPla_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerPrograSolicSinPla_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerPrograSolicSinPla">
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_Observaciones" ColumnName="SOR_Observaciones" />
+          <ScalarProperty Name="SOR_IdMunicipio" ColumnName="SOR_IdMunicipio" />
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="SOR_CreadoPor" ColumnName="SOR_CreadoPor" />
+          <ScalarProperty Name="idPuntoOCliente" ColumnName="idPuntoOCliente" />
+          <ScalarProperty Name="PSR_IdZona" ColumnName="PSR_IdZona" />
+          <ScalarProperty Name="PSR_DescripcionZona" ColumnName="PSR_DescripcionZona" />
+          <ScalarProperty Name="PSR_IdTipoMensajero" ColumnName="PSR_IdTipoMensajero" />
+          <ScalarProperty Name="PSR_DescripcionTipoMensajero" ColumnName="PSR_DescripcionTipoMensajero" />
+          <ScalarProperty Name="PSR_UltimaFechaReprogramacion" ColumnName="PSR_UltimaFechaReprogramacion" />
+          <ScalarProperty Name="PSR_EstaPlanillada" ColumnName="PSR_EstaPlanillada" />
+          <ScalarProperty Name="PSR_EstaDescargada" ColumnName="PSR_EstaDescargada" />
+          <ScalarProperty Name="PSR_FechaDescarga" ColumnName="PSR_FechaDescarga" />
+          <ScalarProperty Name="PSR_IdSolicitudRecogida" ColumnName="PSR_IdSolicitudRecogida" />
+          <ScalarProperty Name="PSR_IdProgramacionSolicitudRecog" ColumnName="PSR_IdProgramacionSolicitudRecog" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SolicitudProgramadaPlanill_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.SolicitudProgramadaPlanill_OPU">
+        <MappingFragment StoreEntitySet="SolicitudProgramadaPlanill_OPU">
+          <ScalarProperty Name="SPP_CreadoPor" ColumnName="SPP_CreadoPor" />
+          <ScalarProperty Name="SPP_FechaGrabacion" ColumnName="SPP_FechaGrabacion" />
+          <ScalarProperty Name="SPP_IdentificacionMensajero" ColumnName="SPP_IdentificacionMensajero" />
+          <ScalarProperty Name="SPP_NombreMensajero" ColumnName="SPP_NombreMensajero" />
+          <ScalarProperty Name="SPP_IdMensajero" ColumnName="SPP_IdMensajero" />
+          <ScalarProperty Name="SPP_IdAgenciaResponsable" ColumnName="SPP_IdAgenciaResponsable" />
+          <ScalarProperty Name="SPP_FechaReporteMensajero" ColumnName="SPP_FechaReporteMensajero" />
+          <ScalarProperty Name="SPP_EstaReportadaMensajero" ColumnName="SPP_EstaReportadaMensajero" />
+          <ScalarProperty Name="SPP_IdPlanillaSolicitudRecogid" ColumnName="SPP_IdPlanillaSolicitudRecogid" />
+          <ScalarProperty Name="SPP_IdSolicitudProgramadaPlanill" ColumnName="SPP_IdSolicitudProgramadaPlanill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPlanilSoliciRecog_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerPlanilSoliciRecog_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.OUpaObtenerPlanilSoliciRecog">
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_Observaciones" ColumnName="SOR_Observaciones" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SPP_IdPlanillaSolicitudRecogid" ColumnName="SPP_IdPlanillaSolicitudRecogid" />
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SPP_IdMensajero" ColumnName="SPP_IdMensajero" />
+          <ScalarProperty Name="SPP_NombreMensajero" ColumnName="SPP_NombreMensajero" />
+          <ScalarProperty Name="SPP_IdentificacionMensajero" ColumnName="SPP_IdentificacionMensajero" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_IdMunicipio" ColumnName="SOR_IdMunicipio" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="EPS_Descripcion" ColumnName="EPS_Descripcion" />
+          <ScalarProperty Name="PSR_IdZona" ColumnName="PSR_IdZona" />
+          <ScalarProperty Name="PSR_DescripcionZona" ColumnName="PSR_DescripcionZona" />
+          <ScalarProperty Name="PSR_IdTipoMensajero" ColumnName="PSR_IdTipoMensajero" />
+          <ScalarProperty Name="PSR_DescripcionTipoMensajero" ColumnName="PSR_DescripcionTipoMensajero" />
+          <ScalarProperty Name="PSR_UltimaFechaReprogramacion" ColumnName="PSR_UltimaFechaReprogramacion" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="PSR_EstaPlanillada" ColumnName="PSR_EstaPlanillada" />
+          <ScalarProperty Name="PSR_EstaDescargada" ColumnName="PSR_EstaDescargada" />
+          <ScalarProperty Name="PSR_FechaDescarga" ColumnName="PSR_FechaDescarga" />
+          <ScalarProperty Name="PSR_IdSolicitudRecogida" ColumnName="PSR_IdSolicitudRecogida" />
+          <ScalarProperty Name="PSR_IdProgramacionSolicitudRecog" ColumnName="PSR_IdProgramacionSolicitudRecog" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="PlanillaAsignacionEnvios_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaAsignacionEnvios_OPU">
+        <MappingFragment StoreEntitySet="PlanillaAsignacionEnvios_OPU">
+          <ScalarProperty Name="PAE_RequiereAuditoria" ColumnName="PAE_RequiereAuditoria" />
+          <ScalarProperty Name="PAE_CreadoPor" ColumnName="PAE_CreadoPor" />
+          <ScalarProperty Name="PAE_FechaGrabacion" ColumnName="PAE_FechaGrabacion" />
+          <ScalarProperty Name="PAE_TotalGuiasAsignadas" ColumnName="PAE_TotalGuiasAsignadas" />
+          <ScalarProperty Name="PAE_IdEstadoPlanillaEnvios" ColumnName="PAE_IdEstadoPlanillaEnvios" />
+          <ScalarProperty Name="PAE_DescripcionTipoMensajero" ColumnName="PAE_DescripcionTipoMensajero" />
+          <ScalarProperty Name="PAE_IdTipoMensajero" ColumnName="PAE_IdTipoMensajero" />
+          <ScalarProperty Name="PAE_IdMunicipioAsignacion" ColumnName="PAE_IdMunicipioAsignacion" />
+          <ScalarProperty Name="PAE_DescripcionZona" ColumnName="PAE_DescripcionZona" />
+          <ScalarProperty Name="PAE_IdZona" ColumnName="PAE_IdZona" />
+          <ScalarProperty Name="PAE_IdCentroLogistico" ColumnName="PAE_IdCentroLogistico" />
+          <ScalarProperty Name="PAE_IdAgencia" ColumnName="PAE_IdAgencia" />
+          <ScalarProperty Name="PAE_IdPlanillaAsignacionEnvio" ColumnName="PAE_IdPlanillaAsignacionEnvio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MensajeroLocalidad_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.MensajeroLocalidad_VOPU">
+        <MappingFragment StoreEntitySet="MensajeroLocalidad_VOPU">
+          <ScalarProperty Name="MEN_EsMensajeroUrbano" ColumnName="MEN_EsMensajeroUrbano" />
+          <ScalarProperty Name="DescripTipoContrato" ColumnName="DescripTipoContrato" />
+          <ScalarProperty Name="CES_IdZona" ColumnName="CES_IdZona" />
+          <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="AGE_IdTipoAgencia" ColumnName="AGE_IdTipoAgencia" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="AGE_IdAgencia" ColumnName="AGE_IdAgencia" />
+          <ScalarProperty Name="CAR_Descripcion" ColumnName="CAR_Descripcion" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="LOC_IdLocalidad" ColumnName="LOC_IdLocalidad" />
+          <ScalarProperty Name="TIM_Descripcion" ColumnName="TIM_Descripcion" />
+          <ScalarProperty Name="MEN_TipoContrato" ColumnName="MEN_TipoContrato" />
+          <ScalarProperty Name="MEN_FechaVencimientoPase" ColumnName="MEN_FechaVencimientoPase" />
+          <ScalarProperty Name="MEN_EsContratista" ColumnName="MEN_EsContratista" />
+          <ScalarProperty Name="MEN_Estado" ColumnName="MEN_Estado" />
+          <ScalarProperty Name="MEN_NumeroPase" ColumnName="MEN_NumeroPase" />
+          <ScalarProperty Name="MEN_FechaTerminacionContrato" ColumnName="MEN_FechaTerminacionContrato" />
+          <ScalarProperty Name="MEN_FechaIngreso" ColumnName="MEN_FechaIngreso" />
+          <ScalarProperty Name="MEN_Telefono2" ColumnName="MEN_Telefono2" />
+          <ScalarProperty Name="MEN_IdTipoMensajero" ColumnName="MEN_IdTipoMensajero" />
+          <ScalarProperty Name="MEN_IdMensajero" ColumnName="MEN_IdMensajero" />
+          <ScalarProperty Name="PEI_IdRegionalAdm" ColumnName="PEI_IdRegionalAdm" />
+          <ScalarProperty Name="PEI_Email" ColumnName="PEI_Email" />
+          <ScalarProperty Name="PEI_Telefono" ColumnName="PEI_Telefono" />
+          <ScalarProperty Name="PEI_Municipio" ColumnName="PEI_Municipio" />
+          <ScalarProperty Name="PEI_Direccion" ColumnName="PEI_Direccion" />
+          <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PEI_IdCargo" ColumnName="PEI_IdCargo" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="PEI_IdTipoIdentificacion" ColumnName="PEI_IdTipoIdentificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MensajeroCentroLogistico_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.MensajeroCentroLogistico_VOPU">
+        <MappingFragment StoreEntitySet="MensajeroCentroLogistico_VOPU">
+          <ScalarProperty Name="MEN_IdPersonaInterna" ColumnName="MEN_IdPersonaInterna" />
+          <ScalarProperty Name="MEN_TipoContrato" ColumnName="MEN_TipoContrato" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="PEI_Municipio" ColumnName="PEI_Municipio" />
+          <ScalarProperty Name="MEN_FechaVencimientoPase" ColumnName="MEN_FechaVencimientoPase" />
+          <ScalarProperty Name="TIM_EsVehicular" ColumnName="TIM_EsVehicular" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="CEL_IdRegionalAdm" ColumnName="CEL_IdRegionalAdm" />
+          <ScalarProperty Name="AGE_IdTipoAgencia" ColumnName="AGE_IdTipoAgencia" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="PEI_IdCargo" ColumnName="PEI_IdCargo" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="PEI_IdTipoIdentificacion" ColumnName="PEI_IdTipoIdentificacion" />
+          <ScalarProperty Name="MEN_FechaTerminacionContrato" ColumnName="MEN_FechaTerminacionContrato" />
+          <ScalarProperty Name="MEN_EsContratista" ColumnName="MEN_EsContratista" />
+          <ScalarProperty Name="MEN_Estado" ColumnName="MEN_Estado" />
+          <ScalarProperty Name="MEN_IdAgencia" ColumnName="MEN_IdAgencia" />
+          <ScalarProperty Name="MEN_IdTipoMensajero" ColumnName="MEN_IdTipoMensajero" />
+          <ScalarProperty Name="MEN_IdMensajero" ColumnName="MEN_IdMensajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mensajeros_VCPO">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.Mensajeros_VCPO">
+        <MappingFragment StoreEntitySet="Mensajeros_VCPO">
+          <ScalarProperty Name="TIC_Descripcion" ColumnName="TIC_Descripcion" />
+          <ScalarProperty Name="MEN_TipoContrato" ColumnName="MEN_TipoContrato" />
+          <ScalarProperty Name="CES_IdClasificadorCanalVenta" ColumnName="CES_IdClasificadorCanalVenta" />
+          <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_Fax" ColumnName="CES_Fax" />
+          <ScalarProperty Name="CES_Email" ColumnName="CES_Email" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CAR_IdCargoReporta" ColumnName="CAR_IdCargoReporta" />
+          <ScalarProperty Name="CAR_Descripcion" ColumnName="CAR_Descripcion" />
+          <ScalarProperty Name="CAR_IdCargo" ColumnName="CAR_IdCargo" />
+          <ScalarProperty Name="PEI_Comentarios" ColumnName="PEI_Comentarios" />
+          <ScalarProperty Name="PEI_IdRegionalAdm" ColumnName="PEI_IdRegionalAdm" />
+          <ScalarProperty Name="PEI_Email" ColumnName="PEI_Email" />
+          <ScalarProperty Name="PEI_Telefono" ColumnName="PEI_Telefono" />
+          <ScalarProperty Name="PEI_Municipio" ColumnName="PEI_Municipio" />
+          <ScalarProperty Name="PEI_Direccion" ColumnName="PEI_Direccion" />
+          <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="PEI_IdCargo" ColumnName="PEI_IdCargo" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="PEI_IdTipoIdentificacion" ColumnName="PEI_IdTipoIdentificacion" />
+          <ScalarProperty Name="PEI_IdPersonaInterna" ColumnName="PEI_IdPersonaInterna" />
+          <ScalarProperty Name="TIM_EsVehicular" ColumnName="TIM_EsVehicular" />
+          <ScalarProperty Name="TIM_Descripcion" ColumnName="TIM_Descripcion" />
+          <ScalarProperty Name="TIM_IdTipoMensajero" ColumnName="TIM_IdTipoMensajero" />
+          <ScalarProperty Name="MEN_EsContratista" ColumnName="MEN_EsContratista" />
+          <ScalarProperty Name="MEN_Estado" ColumnName="MEN_Estado" />
+          <ScalarProperty Name="MEN_FechaVencimientoPase" ColumnName="MEN_FechaVencimientoPase" />
+          <ScalarProperty Name="MEN_NumeroPase" ColumnName="MEN_NumeroPase" />
+          <ScalarProperty Name="MEN_FechaTerminacionContrato" ColumnName="MEN_FechaTerminacionContrato" />
+          <ScalarProperty Name="MEN_FechaIngreso" ColumnName="MEN_FechaIngreso" />
+          <ScalarProperty Name="MEN_Telefono2" ColumnName="MEN_Telefono2" />
+          <ScalarProperty Name="MEN_IdAgencia" ColumnName="MEN_IdAgencia" />
+          <ScalarProperty Name="MEN_IdTipoMensajero" ColumnName="MEN_IdTipoMensajero" />
+          <ScalarProperty Name="MEN_IdMensajero" ColumnName="MEN_IdMensajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paModificarPlanillaAsignaEnvio_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paModificarPlanillaAsignaEnvio_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearHistoricoProgramaSoliciReco_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearHistoricoProgramaSoliciReco_OPU" />
+    <EntitySetMapping Name="ProgramacionSolicitudRecog_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.ProgramacionSolicitudRecog_OPU">
+        <MappingFragment StoreEntitySet="ProgramacionSolicitudRecog_OPU">
+          <ScalarProperty Name="PSR_EstaDescargada" ColumnName="PSR_EstaDescargada" />
+          <ScalarProperty Name="PSR_EstaPlanillada" ColumnName="PSR_EstaPlanillada" />
+          <ScalarProperty Name="PSR_FechaDescarga" ColumnName="PSR_FechaDescarga" />
+          <ScalarProperty Name="PSR_IdSolicitudRecogida" ColumnName="PSR_IdSolicitudRecogida" />
+          <ScalarProperty Name="PSR_CreadoPor" ColumnName="PSR_CreadoPor" />
+          <ScalarProperty Name="PSR_FechaGrabacion" ColumnName="PSR_FechaGrabacion" />
+          <ScalarProperty Name="PSR_UltimaFechaReprogramacion" ColumnName="PSR_UltimaFechaReprogramacion" />
+          <ScalarProperty Name="PSR_Estado" ColumnName="PSR_Estado" />
+          <ScalarProperty Name="PSR_DescripcionTipoMensajero" ColumnName="PSR_DescripcionTipoMensajero" />
+          <ScalarProperty Name="PSR_IdTipoMensajero" ColumnName="PSR_IdTipoMensajero" />
+          <ScalarProperty Name="PSR_DescripcionZona" ColumnName="PSR_DescripcionZona" />
+          <ScalarProperty Name="PSR_IdZona" ColumnName="PSR_IdZona" />
+          <ScalarProperty Name="PSR_DescripcionMotivo" ColumnName="PSR_DescripcionMotivo" />
+          <ScalarProperty Name="PSR_IdMotivoReProgramacionReco" ColumnName="PSR_IdMotivoReProgramacionReco" />
+          <ScalarProperty Name="PSR_IdProgramacionSolicitudRecog" ColumnName="PSR_IdProgramacionSolicitudRecog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudRecogidas_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.SolicitudRecogidas_VOPU">
+        <MappingFragment StoreEntitySet="SolicitudRecogidas_VOPU">
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="SRP_IdTipoIdentificacion" ColumnName="SRP_IdTipoIdentificacion" />
+          <ScalarProperty Name="SRP_Nombre" ColumnName="SRP_Nombre" />
+          <ScalarProperty Name="SOR_FechaGrabacion" ColumnName="SOR_FechaGrabacion" />
+          <ScalarProperty Name="SOR_NombrePersonaCreaSolicitud" ColumnName="SOR_NombrePersonaCreaSolicitud" />
+          <ScalarProperty Name="SOR_Telefono" ColumnName="SOR_Telefono" />
+          <ScalarProperty Name="SOR_Direccion" ColumnName="SOR_Direccion" />
+          <ScalarProperty Name="SOR_IdMunicipio" ColumnName="SOR_IdMunicipio" />
+          <ScalarProperty Name="SOR_Observaciones" ColumnName="SOR_Observaciones" />
+          <ScalarProperty Name="SOR_PesoAproximado" ColumnName="SOR_PesoAproximado" />
+          <ScalarProperty Name="SOR_CantidadEnvios" ColumnName="SOR_CantidadEnvios" />
+          <ScalarProperty Name="SOR_PersonaContacto" ColumnName="SOR_PersonaContacto" />
+          <ScalarProperty Name="SOR_PersonaQueSolicita" ColumnName="SOR_PersonaQueSolicita" />
+          <ScalarProperty Name="SOR_FechaRecogida" ColumnName="SOR_FechaRecogida" />
+          <ScalarProperty Name="SOR_IdEstadoSolicitudRecogida" ColumnName="SOR_IdEstadoSolicitudRecogida" />
+          <ScalarProperty Name="SOR_TipoRecogida" ColumnName="SOR_TipoRecogida" />
+          <ScalarProperty Name="SOR_TipoClienteRecogida" ColumnName="SOR_TipoClienteRecogida" />
+          <ScalarProperty Name="SOR_IdAgenciaResponsable" ColumnName="SOR_IdAgenciaResponsable" />
+          <ScalarProperty Name="SOR_IdSolicitudRecogida" ColumnName="SOR_IdSolicitudRecogida" />
+          <ScalarProperty Name="SRP_Identificacion" ColumnName="SRP_Identificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paActualizaEstadoProgramacionSoliRecog_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizaEstadoProgramacionSoliRecog_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerMensajerosLocalidad_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerMensajerosLocalidad_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerMensajerosLocalidad_OPU_Result">
+          <ScalarProperty Name="AGE_IdAgencia" ColumnName="AGE_IdAgencia" />
+          <ScalarProperty Name="MEN_IdMensajero" ColumnName="MEN_IdMensajero" />
+          <ScalarProperty Name="MEN_IdTipoMensajero" ColumnName="MEN_IdTipoMensajero" />
+          <ScalarProperty Name="MEN_IdAgencia" ColumnName="MEN_IdAgencia" />
+          <ScalarProperty Name="MEN_FechaIngreso" ColumnName="MEN_FechaIngreso" />
+          <ScalarProperty Name="MEN_Telefono2" ColumnName="MEN_Telefono2" />
+          <ScalarProperty Name="MEN_FechaTerminacionContrato" ColumnName="MEN_FechaTerminacionContrato" />
+          <ScalarProperty Name="MEN_FechaVencimientoPase" ColumnName="MEN_FechaVencimientoPase" />
+          <ScalarProperty Name="MEN_Estado" ColumnName="MEN_Estado" />
+          <ScalarProperty Name="MEN_EsContratista" ColumnName="MEN_EsContratista" />
+          <ScalarProperty Name="MEN_TipoContrato" ColumnName="MEN_TipoContrato" />
+          <ScalarProperty Name="AGE_IdTipoAgencia" ColumnName="AGE_IdTipoAgencia" />
+          <ScalarProperty Name="CES_IdCentroServicios" ColumnName="CES_IdCentroServicios" />
+          <ScalarProperty Name="CES_DigitoVerificacion" ColumnName="CES_DigitoVerificacion" />
+          <ScalarProperty Name="CES_IdPropietario" ColumnName="CES_IdPropietario" />
+          <ScalarProperty Name="CES_Nombre" ColumnName="CES_Nombre" />
+          <ScalarProperty Name="CES_Telefono1" ColumnName="CES_Telefono1" />
+          <ScalarProperty Name="CES_Telefono2" ColumnName="CES_Telefono2" />
+          <ScalarProperty Name="CES_Fax" ColumnName="CES_Fax" />
+          <ScalarProperty Name="CES_Direccion" ColumnName="CES_Direccion" />
+          <ScalarProperty Name="CES_IdMunicipio" ColumnName="CES_IdMunicipio" />
+          <ScalarProperty Name="CES_Estado" ColumnName="CES_Estado" />
+          <ScalarProperty Name="CES_IdPersonaResponsable" ColumnName="CES_IdPersonaResponsable" />
+          <ScalarProperty Name="CES_IdZona" ColumnName="CES_IdZona" />
+          <ScalarProperty Name="CES_Barrio" ColumnName="CES_Barrio" />
+          <ScalarProperty Name="CES_Latitud" ColumnName="CES_Latitud" />
+          <ScalarProperty Name="CES_Longitud" ColumnName="CES_Longitud" />
+          <ScalarProperty Name="CES_Sistematizada" ColumnName="CES_Sistematizada" />
+          <ScalarProperty Name="CES_Email" ColumnName="CES_Email" />
+          <ScalarProperty Name="CES_IdCentroCostos" ColumnName="CES_IdCentroCostos" />
+          <ScalarProperty Name="CES_IdTipoPropiedad" ColumnName="CES_IdTipoPropiedad" />
+          <ScalarProperty Name="CES_PesoMaximo" ColumnName="CES_PesoMaximo" />
+          <ScalarProperty Name="CES_VolumenMaximo" ColumnName="CES_VolumenMaximo" />
+          <ScalarProperty Name="CES_AdmiteFormaPagoAlCobro" ColumnName="CES_AdmiteFormaPagoAlCobro" />
+          <ScalarProperty Name="CES_VendePrepago" ColumnName="CES_VendePrepago" />
+          <ScalarProperty Name="CES_ClasGirosPorIngresos" ColumnName="CES_ClasGirosPorIngresos" />
+          <ScalarProperty Name="CES_PuedeRecibirGiros" ColumnName="CES_PuedeRecibirGiros" />
+          <ScalarProperty Name="CES_IdClasificadorCanalVenta" ColumnName="CES_IdClasificadorCanalVenta" />
+          <ScalarProperty Name="CES_CodigoBodega" ColumnName="CES_CodigoBodega" />
+          <ScalarProperty Name="CES_BaseInicialCaja" ColumnName="CES_BaseInicialCaja" />
+          <ScalarProperty Name="CES_TopeMaximoPorPagos" ColumnName="CES_TopeMaximoPorPagos" />
+          <ScalarProperty Name="CES_TopeMaximoPorGiros" ColumnName="CES_TopeMaximoPorGiros" />
+          <ScalarProperty Name="CES_PuedePagarGiros" ColumnName="CES_PuedePagarGiros" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_Direccion" ColumnName="PEI_Direccion" />
+          <ScalarProperty Name="PEI_Telefono" ColumnName="PEI_Telefono" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Mensajero_CPO">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.Mensajero_CPO">
+        <MappingFragment StoreEntitySet="Mensajero_CPO">
+          <ScalarProperty Name="MEN_EsMensajeroUrbano" ColumnName="MEN_EsMensajeroUrbano" />
+          <ScalarProperty Name="MEN_IdPersonaInterna" ColumnName="MEN_IdPersonaInterna" />
+          <ScalarProperty Name="MEN_CreadoPor" ColumnName="MEN_CreadoPor" />
+          <ScalarProperty Name="MEN_FechaGrabacion" ColumnName="MEN_FechaGrabacion" />
+          <ScalarProperty Name="MEN_TipoContrato" ColumnName="MEN_TipoContrato" />
+          <ScalarProperty Name="MEN_EsContratista" ColumnName="MEN_EsContratista" />
+          <ScalarProperty Name="MEN_Estado" ColumnName="MEN_Estado" />
+          <ScalarProperty Name="MEN_FechaVencimientoPase" ColumnName="MEN_FechaVencimientoPase" />
+          <ScalarProperty Name="MEN_NumeroPase" ColumnName="MEN_NumeroPase" />
+          <ScalarProperty Name="MEN_FechaTerminacionContrato" ColumnName="MEN_FechaTerminacionContrato" />
+          <ScalarProperty Name="MEN_FechaIngreso" ColumnName="MEN_FechaIngreso" />
+          <ScalarProperty Name="MEN_Telefono2" ColumnName="MEN_Telefono2" />
+          <ScalarProperty Name="MEN_IdAgencia" ColumnName="MEN_IdAgencia" />
+          <ScalarProperty Name="MEN_IdTipoMensajero" ColumnName="MEN_IdTipoMensajero" />
+          <ScalarProperty Name="MEN_IdMensajero" ColumnName="MEN_IdMensajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonaInterna_PAR">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PersonaInterna_PAR">
+        <MappingFragment StoreEntitySet="PersonaInterna_PAR">
+          <ScalarProperty Name="PEI_CreadoPor" ColumnName="PEI_CreadoPor" />
+          <ScalarProperty Name="PEI_FechaGrabacion" ColumnName="PEI_FechaGrabacion" />
+          <ScalarProperty Name="PEI_Comentarios" ColumnName="PEI_Comentarios" />
+          <ScalarProperty Name="PEI_IdRegionalAdm" ColumnName="PEI_IdRegionalAdm" />
+          <ScalarProperty Name="PEI_Email" ColumnName="PEI_Email" />
+          <ScalarProperty Name="PEI_Telefono" ColumnName="PEI_Telefono" />
+          <ScalarProperty Name="PEI_Municipio" ColumnName="PEI_Municipio" />
+          <ScalarProperty Name="PEI_Direccion" ColumnName="PEI_Direccion" />
+          <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="PEI_IdCargo" ColumnName="PEI_IdCargo" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="PEI_IdTipoIdentificacion" ColumnName="PEI_IdTipoIdentificacion" />
+          <ScalarProperty Name="PEI_IdPersonaInterna" ColumnName="PEI_IdPersonaInterna" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MensajerosAgenciaCol_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.MensajerosAgenciaCol_VOPU">
+        <MappingFragment StoreEntitySet="MensajerosAgenciaCol_VOPU">
+          <ScalarProperty Name="MEN_IdMensajero" ColumnName="MEN_IdMensajero" />
+          <ScalarProperty Name="MEN_EsMensajeroUrbano" ColumnName="MEN_EsMensajeroUrbano" />
+          <ScalarProperty Name="CAR_Descripcion" ColumnName="CAR_Descripcion" />
+          <ScalarProperty Name="CAR_IdCargo" ColumnName="CAR_IdCargo" />
+          <ScalarProperty Name="MEN_CreadoPor" ColumnName="MEN_CreadoPor" />
+          <ScalarProperty Name="MEN_FechaGrabacion" ColumnName="MEN_FechaGrabacion" />
+          <ScalarProperty Name="MEN_TipoContrato" ColumnName="MEN_TipoContrato" />
+          <ScalarProperty Name="MEN_EsContratista" ColumnName="MEN_EsContratista" />
+          <ScalarProperty Name="MEN_Estado" ColumnName="MEN_Estado" />
+          <ScalarProperty Name="MEN_FechaVencimientoPase" ColumnName="MEN_FechaVencimientoPase" />
+          <ScalarProperty Name="MEN_NumeroPase" ColumnName="MEN_NumeroPase" />
+          <ScalarProperty Name="MEN_FechaTerminacionContrato" ColumnName="MEN_FechaTerminacionContrato" />
+          <ScalarProperty Name="MEN_FechaIngreso" ColumnName="MEN_FechaIngreso" />
+          <ScalarProperty Name="MEN_IdTipoMensajero" ColumnName="MEN_IdTipoMensajero" />
+          <ScalarProperty Name="TIM_Descripcion" ColumnName="TIM_Descripcion" />
+          <ScalarProperty Name="AGE_IdCentroLogistico" ColumnName="AGE_IdCentroLogistico" />
+          <ScalarProperty Name="AGE_IdAgencia" ColumnName="AGE_IdAgencia" />
+          <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PEI_IdPersonaInterna" ColumnName="PEI_IdPersonaInterna" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoAsignacionTula_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.TipoAsignacionTula_OPU">
+        <MappingFragment StoreEntitySet="TipoAsignacionTula_OPU">
+          <ScalarProperty Name="TAS_CreadoPor" ColumnName="TAS_CreadoPor" />
+          <ScalarProperty Name="TAS_FechaGrabacion" ColumnName="TAS_FechaGrabacion" />
+          <ScalarProperty Name="TAS_Descripcion" ColumnName="TAS_Descripcion" />
+          <ScalarProperty Name="TAS_IdTipoAsignacion" ColumnName="TAS_IdTipoAsignacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaVentas_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaVentas_OPU">
+        <MappingFragment StoreEntitySet="PlanillaVentas_OPU">
+          <ScalarProperty Name="PLA_IdAsignacionTula" ColumnName="PLA_IdAsignacionTula" />
+          <ScalarProperty Name="PLA_IdVehiculo" ColumnName="PLA_IdVehiculo" />
+          <ScalarProperty Name="PLA_NombreMensajero" ColumnName="PLA_NombreMensajero" />
+          <ScalarProperty Name="PLA_CreadoPor" ColumnName="PLA_CreadoPor" />
+          <ScalarProperty Name="PLA_FechaGrabacion" ColumnName="PLA_FechaGrabacion" />
+          <ScalarProperty Name="PLA_FechaCierrePlanilla" ColumnName="PLA_FechaCierrePlanilla" />
+          <ScalarProperty Name="PLA_EstaCerrada" ColumnName="PLA_EstaCerrada" />
+          <ScalarProperty Name="PLA_TotalEnvios" ColumnName="PLA_TotalEnvios" />
+          <ScalarProperty Name="PLA_IdMensajero" ColumnName="PLA_IdMensajero" />
+          <ScalarProperty Name="PLA_DireccionPuntoServicio" ColumnName="PLA_DireccionPuntoServicio" />
+          <ScalarProperty Name="PLA_NombrePuntoServicio" ColumnName="PLA_NombrePuntoServicio" />
+          <ScalarProperty Name="PLA_IdPuntoServicio" ColumnName="PLA_IdPuntoServicio" />
+          <ScalarProperty Name="PLA_IdPlanilla" ColumnName="PLA_IdPlanilla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsignacionTulaPuntoServicio_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.AsignacionTulaPuntoServicio_OPU">
+        <MappingFragment StoreEntitySet="AsignacionTulaPuntoServicio_OPU">
+          <ScalarProperty Name="ATP_NumContTransRetorno" ColumnName="ATP_NumContTransRetorno" />
+          <ScalarProperty Name="ATP_NumContTransDespacho" ColumnName="ATP_NumContTransDespacho" />
+          <ScalarProperty Name="ATP_CreadoPor" ColumnName="ATP_CreadoPor" />
+          <ScalarProperty Name="ATP_FechaGrabacion" ColumnName="ATP_FechaGrabacion" />
+          <ScalarProperty Name="ATP_IdTipoAsignacion" ColumnName="ATP_IdTipoAsignacion" />
+          <ScalarProperty Name="ATP_Estado" ColumnName="ATP_Estado" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_IdCentroServicioDestino" ColumnName="ATP_IdCentroServicioDestino" />
+          <ScalarProperty Name="ATP_IdCentroServicioOrigen" ColumnName="ATP_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ATP_IdAsignacionTula" ColumnName="ATP_IdAsignacionTula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaVentasMensajero_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaVentasMensajero_VOPU">
+        <MappingFragment StoreEntitySet="PlanillaVentasMensajero_VOPU">
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_IdAsignacionTula" ColumnName="ATP_IdAsignacionTula" />
+          <ScalarProperty Name="VEH_Placa" ColumnName="VEH_Placa" />
+          <ScalarProperty Name="PLA_IdVehiculo" ColumnName="PLA_IdVehiculo" />
+          <ScalarProperty Name="PLA_NombreMensajero" ColumnName="PLA_NombreMensajero" />
+          <ScalarProperty Name="PLA_FechaCierrePlanilla" ColumnName="PLA_FechaCierrePlanilla" />
+          <ScalarProperty Name="PLA_EstaCerrada" ColumnName="PLA_EstaCerrada" />
+          <ScalarProperty Name="PLA_IdMensajero" ColumnName="PLA_IdMensajero" />
+          <ScalarProperty Name="PLA_DireccionPuntoServicio" ColumnName="PLA_DireccionPuntoServicio" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="MEN_IdPersonaInterna" ColumnName="MEN_IdPersonaInterna" />
+          <ScalarProperty Name="PLA_FechaGrabacion" ColumnName="PLA_FechaGrabacion" />
+          <ScalarProperty Name="PLA_TotalEnvios" ColumnName="PLA_TotalEnvios" />
+          <ScalarProperty Name="PLA_NombrePuntoServicio" ColumnName="PLA_NombrePuntoServicio" />
+          <ScalarProperty Name="PLA_IdPuntoServicio" ColumnName="PLA_IdPuntoServicio" />
+          <ScalarProperty Name="PLA_IdPlanilla" ColumnName="PLA_IdPlanilla" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="TIM_Descripcion" ColumnName="TIM_Descripcion" />
+          <ScalarProperty Name="MEN_IdTipoMensajero" ColumnName="MEN_IdTipoMensajero" />
+          <ScalarProperty Name="MEN_IdMensajero" ColumnName="MEN_IdMensajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaAsignacionGuia_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaAsignacionGuia_OPU">
+        <MappingFragment StoreEntitySet="PlanillaAsignacionGuia_OPU">
+          <ScalarProperty Name="PAG_ReportadoACaja" ColumnName="PAG_ReportadoACaja" />
+          <ScalarProperty Name="PAG_GuiaDeUnaReasignacion" ColumnName="PAG_GuiaDeUnaReasignacion" />
+          <ScalarProperty Name="PAG_CreadoPor" ColumnName="PAG_CreadoPor" />
+          <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+          <ScalarProperty Name="PAG_FuePlanillada" ColumnName="PAG_FuePlanillada" />
+          <ScalarProperty Name="PAG_EstadoEnPlanilla" ColumnName="PAG_EstadoEnPlanilla" />
+          <ScalarProperty Name="PAG_DescargadaPor" ColumnName="PAG_DescargadaPor" />
+          <ScalarProperty Name="PAG_FechaDescargue" ColumnName="PAG_FechaDescargue" />
+          <ScalarProperty Name="PAG_NombreTipoEnvio" ColumnName="PAG_NombreTipoEnvio" />
+          <ScalarProperty Name="PAG_IdTipoEnvio" ColumnName="PAG_IdTipoEnvio" />
+          <ScalarProperty Name="PAG_NombreCiudadDestino" ColumnName="PAG_NombreCiudadDestino" />
+          <ScalarProperty Name="PAG_IdCiudadDestino" ColumnName="PAG_IdCiudadDestino" />
+          <ScalarProperty Name="PAG_DireccionDestinatario" ColumnName="PAG_DireccionDestinatario" />
+          <ScalarProperty Name="PAG_TelefonoDestinatario" ColumnName="PAG_TelefonoDestinatario" />
+          <ScalarProperty Name="PAG_Peso" ColumnName="PAG_Peso" />
+          <ScalarProperty Name="PAG_FechaVerificacion" ColumnName="PAG_FechaVerificacion" />
+          <ScalarProperty Name="PAG_VerficadaPor" ColumnName="PAG_VerficadaPor" />
+          <ScalarProperty Name="PAG_EstaVerificada" ColumnName="PAG_EstaVerificada" />
+          <ScalarProperty Name="PAG_TotalPiezas" ColumnName="PAG_TotalPiezas" />
+          <ScalarProperty Name="PAG_NombreCiudadOrigen" ColumnName="PAG_NombreCiudadOrigen" />
+          <ScalarProperty Name="PAG_IdCiudadOrigen" ColumnName="PAG_IdCiudadOrigen" />
+          <ScalarProperty Name="PAG_CantidadRadicadosReportado" ColumnName="PAG_CantidadRadicadosReportado" />
+          <ScalarProperty Name="PAG_CantidadRadicados" ColumnName="PAG_CantidadRadicados" />
+          <ScalarProperty Name="PAG_RecogeDinero" ColumnName="PAG_RecogeDinero" />
+          <ScalarProperty Name="PAG_EstaDescargada" ColumnName="PAG_EstaDescargada" />
+          <ScalarProperty Name="PAG_Consecutivo" ColumnName="PAG_Consecutivo" />
+          <ScalarProperty Name="PAG_NombreServicio" ColumnName="PAG_NombreServicio" />
+          <ScalarProperty Name="PAG_IdServicio" ColumnName="PAG_IdServicio" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAG_NumeroGuia" ColumnName="PAG_NumeroGuia" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerAsigTulaPrecinPtnServicioDest_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerAsigTulaPrecinPtnServicioDest_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerAsigTulaPrecinPtnServicioDest_OPU_Result">
+          <ScalarProperty Name="ATP_IdAsignacionTula" ColumnName="ATP_IdAsignacionTula" />
+          <ScalarProperty Name="ATP_IdCentroServicioOrigen" ColumnName="ATP_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ATP_IdCentroServicioDestino" ColumnName="ATP_IdCentroServicioDestino" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_Estado" ColumnName="ATP_Estado" />
+          <ScalarProperty Name="ATP_IdTipoAsignacion" ColumnName="ATP_IdTipoAsignacion" />
+          <ScalarProperty Name="ATP_FechaGrabacion" ColumnName="ATP_FechaGrabacion" />
+          <ScalarProperty Name="ATP_CreadoPor" ColumnName="ATP_CreadoPor" />
+          <ScalarProperty Name="ATP_NumContTransDespacho" ColumnName="ATP_NumContTransDespacho" />
+          <ScalarProperty Name="ATP_NumContTransRetorno" ColumnName="ATP_NumContTransRetorno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AsignaTulaPuntoServicioHist_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.AsignaTulaPuntoServicioHist_OPU">
+        <MappingFragment StoreEntitySet="AsignaTulaPuntoServicioHist_OPU">
+          <ScalarProperty Name="ATP_TipoCambio" ColumnName="ATP_TipoCambio" />
+          <ScalarProperty Name="ATP_CambiadoPor" ColumnName="ATP_CambiadoPor" />
+          <ScalarProperty Name="ATP_FechaCambio" ColumnName="ATP_FechaCambio" />
+          <ScalarProperty Name="ATP_NumContTransRetorno" ColumnName="ATP_NumContTransRetorno" />
+          <ScalarProperty Name="ATP_NumContTransDespacho" ColumnName="ATP_NumContTransDespacho" />
+          <ScalarProperty Name="ATP_CreadoPor" ColumnName="ATP_CreadoPor" />
+          <ScalarProperty Name="ATP_FechaGrabacion" ColumnName="ATP_FechaGrabacion" />
+          <ScalarProperty Name="ATP_IdTipoAsignacion" ColumnName="ATP_IdTipoAsignacion" />
+          <ScalarProperty Name="ATP_Estado" ColumnName="ATP_Estado" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_IdCentroServicioDestino" ColumnName="ATP_IdCentroServicioDestino" />
+          <ScalarProperty Name="ATP_IdCentroServicioOrigen" ColumnName="ATP_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ATP_IdAsignacionTula" ColumnName="ATP_IdAsignacionTula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGuiasPlanVentaAsigTula_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerGuiasPlanVentaAsigTula_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerGuiasPlanVentaAsigTula_OPU_Result">
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_IdPuntoServicio" ColumnName="PVG_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_IdUnidadNegocio" ColumnName="PVG_IdUnidadNegocio" />
+          <ScalarProperty Name="PVG_IdServicio" ColumnName="PVG_IdServicio" />
+          <ScalarProperty Name="PVG_NombreServicio" ColumnName="PVG_NombreServicio" />
+          <ScalarProperty Name="PVG_DiceContener" ColumnName="PVG_DiceContener" />
+          <ScalarProperty Name="PVG_Peso" ColumnName="PVG_Peso" />
+          <ScalarProperty Name="PVG_EsRecomendado" ColumnName="PVG_EsRecomendado" />
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_FechaGrabacion" ColumnName="PVG_FechaGrabacion" />
+          <ScalarProperty Name="PVG_CreadoPor" ColumnName="PVG_CreadoPor" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_Estado" ColumnName="ATP_Estado" />
+          <ScalarProperty Name="PVR_NumeroPieza" ColumnName="PVR_NumeroPieza" />
+          <ScalarProperty Name="PVR_TotalPiezas" ColumnName="PVR_TotalPiezas" />
+          <ScalarProperty Name="PVR_NumContTransRetorno" ColumnName="PVR_NumContTransRetorno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paValidaGuiaIngresadaPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paValidaGuiaIngresadaPlanillaVentas_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paValidaGuiaIngresadaPlanillaVentas_OPU_Result">
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_IdPuntoServicio" ColumnName="PVG_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_IdUnidadNegocio" ColumnName="PVG_IdUnidadNegocio" />
+          <ScalarProperty Name="PVG_IdServicio" ColumnName="PVG_IdServicio" />
+          <ScalarProperty Name="PVG_NombreServicio" ColumnName="PVG_NombreServicio" />
+          <ScalarProperty Name="PVG_DiceContener" ColumnName="PVG_DiceContener" />
+          <ScalarProperty Name="PVG_Peso" ColumnName="PVG_Peso" />
+          <ScalarProperty Name="PVG_EsRecomendado" ColumnName="PVG_EsRecomendado" />
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_FechaGrabacion" ColumnName="PVG_FechaGrabacion" />
+          <ScalarProperty Name="PVG_CreadoPor" ColumnName="PVG_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCambiarEstadoAsigTulaPunto_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCambiarEstadoAsigTulaPunto_OPU" />
+    <FunctionImportMapping FunctionImportName="paGuardarRotuloGuiaPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paGuardarRotuloGuiaPlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paValidarRotuloIngresadoPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paValidarRotuloIngresadoPlanillaVentas_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paValidarRotuloIngresadoPlanillaVentas_OPU_Result">
+          <ScalarProperty Name="PVR_IdPlanilla" ColumnName="PVR_IdPlanilla" />
+          <ScalarProperty Name="PVR_IdAdminisionMensajeria" ColumnName="PVR_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVR_NumeroPieza" ColumnName="PVR_NumeroPieza" />
+          <ScalarProperty Name="PVR_TotalPiezas" ColumnName="PVR_TotalPiezas" />
+          <ScalarProperty Name="PVR_IdAsignacionTula" ColumnName="PVR_IdAsignacionTula" />
+          <ScalarProperty Name="PVR_NumContTransRetorno" ColumnName="PVR_NumContTransRetorno" />
+          <ScalarProperty Name="PVR_FechaGrabacion" ColumnName="PVR_FechaGrabacion" />
+          <ScalarProperty Name="PVR_CreadoPor" ColumnName="PVR_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paEliminarGuiaDeConsolidadoPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paEliminarGuiaDeConsolidadoPlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paEliminarGuiaDePlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paEliminarGuiaDePlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paEliminarRotuloDeConsolidadoPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paEliminarRotuloDeConsolidadoPlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paEliminarRotuloDePlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paEliminarRotuloDePlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerRotulosDePlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerRotulosDePlanillaVentas_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerRotulosDePlanillaVentas_OPU_Result">
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_IdPuntoServicio" ColumnName="PVG_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_IdUnidadNegocio" ColumnName="PVG_IdUnidadNegocio" />
+          <ScalarProperty Name="PVG_IdServicio" ColumnName="PVG_IdServicio" />
+          <ScalarProperty Name="PVG_NombreServicio" ColumnName="PVG_NombreServicio" />
+          <ScalarProperty Name="PVG_DiceContener" ColumnName="PVG_DiceContener" />
+          <ScalarProperty Name="PVG_Peso" ColumnName="PVG_Peso" />
+          <ScalarProperty Name="PVG_EsRecomendado" ColumnName="PVG_EsRecomendado" />
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_FechaGrabacion" ColumnName="PVG_FechaGrabacion" />
+          <ScalarProperty Name="PVG_CreadoPor" ColumnName="PVG_CreadoPor" />
+          <ScalarProperty Name="PVR_NumeroPieza" ColumnName="PVR_NumeroPieza" />
+          <ScalarProperty Name="PVR_TotalPiezas" ColumnName="PVR_TotalPiezas" />
+          <ScalarProperty Name="PVR_NumContTransRetorno" ColumnName="PVR_NumContTransRetorno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="IngGuiaAgeNovedades_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.IngGuiaAgeNovedades_OPU">
+        <MappingFragment StoreEntitySet="IngGuiaAgeNovedades_OPU">
+          <ScalarProperty Name="IGN_CreadoPor" ColumnName="IGN_CreadoPor" />
+          <ScalarProperty Name="IGN_FechaGrabacion" ColumnName="IGN_FechaGrabacion" />
+          <ScalarProperty Name="IGN_IdIngresoGuiaAgencia" ColumnName="IGN_IdIngresoGuiaAgencia" />
+          <ScalarProperty Name="IGN_IdNovedad" ColumnName="IGN_IdNovedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngresoConsolidadoAgencia_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.IngresoConsolidadoAgencia_OPU">
+        <MappingFragment StoreEntitySet="IngresoConsolidadoAgencia_OPU">
+          <ScalarProperty Name="IGA_CreadoPor" ColumnName="IGA_CreadoPor" />
+          <ScalarProperty Name="IGA_FechaGrabacion" ColumnName="IGA_FechaGrabacion" />
+          <ScalarProperty Name="IGA_IdAgencia" ColumnName="IGA_IdAgencia" />
+          <ScalarProperty Name="IGA_IdMensajero" ColumnName="IGA_IdMensajero" />
+          <ScalarProperty Name="IGA_IdAsignacionTula" ColumnName="IGA_IdAsignacionTula" />
+          <ScalarProperty Name="ICA_IdIngConsolidado" ColumnName="ICA_IdIngConsolidado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngresoPlaniVentaAgencia_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.IngresoPlaniVentaAgencia_OPU">
+        <MappingFragment StoreEntitySet="IngresoPlaniVentaAgencia_OPU">
+          <ScalarProperty Name="IPV_CreadoPor" ColumnName="IPV_CreadoPor" />
+          <ScalarProperty Name="IPV_FechaGrabacion" ColumnName="IPV_FechaGrabacion" />
+          <ScalarProperty Name="IPV_IdAgencia" ColumnName="IPV_IdAgencia" />
+          <ScalarProperty Name="IPV_IdPlanilla" ColumnName="IPV_IdPlanilla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NovedadesEnviosSueltos_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.NovedadesEnviosSueltos_OPU">
+        <MappingFragment StoreEntitySet="NovedadesEnviosSueltos_OPU">
+          <ScalarProperty Name="NES_CreadoPor" ColumnName="NES_CreadoPor" />
+          <ScalarProperty Name="NES_FechaGrabacion" ColumnName="NES_FechaGrabacion" />
+          <ScalarProperty Name="NES_Descripcion" ColumnName="NES_Descripcion" />
+          <ScalarProperty Name="NES_IdNovedad" ColumnName="NES_IdNovedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaEnviosAperturas_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaEnviosAperturas_OPU">
+        <MappingFragment StoreEntitySet="PlanillaEnviosAperturas_OPU">
+          <ScalarProperty Name="PEA_CreadoPor" ColumnName="PEA_CreadoPor" />
+          <ScalarProperty Name="PEA_FechaGrabacion" ColumnName="PEA_FechaGrabacion" />
+          <ScalarProperty Name="PEA_IdEstadoPlanillaEnvios" ColumnName="PEA_IdEstadoPlanillaEnvios" />
+          <ScalarProperty Name="PEA_IdPlanillaAsignacionEnvio" ColumnName="PEA_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PEA_IdPlanillaEnviosAperturas" ColumnName="PEA_IdPlanillaEnviosAperturas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaVentasRotuloGuia_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaVentasRotuloGuia_OPU">
+        <MappingFragment StoreEntitySet="PlanillaVentasRotuloGuia_OPU">
+          <ScalarProperty Name="PVR_CreadoPor" ColumnName="PVR_CreadoPor" />
+          <ScalarProperty Name="PVR_FechaGrabacion" ColumnName="PVR_FechaGrabacion" />
+          <ScalarProperty Name="PVR_NumContTransRetorno" ColumnName="PVR_NumContTransRetorno" />
+          <ScalarProperty Name="PVR_IdAsignacionTula" ColumnName="PVR_IdAsignacionTula" />
+          <ScalarProperty Name="PVR_TotalPiezas" ColumnName="PVR_TotalPiezas" />
+          <ScalarProperty Name="PVR_NumeroPieza" ColumnName="PVR_NumeroPieza" />
+          <ScalarProperty Name="PVR_IdAdminisionMensajeria" ColumnName="PVR_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVR_IdPlanilla" ColumnName="PVR_IdPlanilla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngresoGuiaNoRegAgencia_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.IngresoGuiaNoRegAgencia_OPU">
+        <MappingFragment StoreEntitySet="IngresoGuiaNoRegAgencia_OPU">
+          <ScalarProperty Name="IGN_CreadoPor" ColumnName="IGN_CreadoPor" />
+          <ScalarProperty Name="IGN_FechaGrabacion" ColumnName="IGN_FechaGrabacion" />
+          <ScalarProperty Name="IGN_FechaCaptura" ColumnName="IGN_FechaCaptura" />
+          <ScalarProperty Name="IGN_IdMensajero" ColumnName="IGN_IdMensajero" />
+          <ScalarProperty Name="IGN_IdAgencia" ColumnName="IGN_IdAgencia" />
+          <ScalarProperty Name="IGN_NumeroGuia" ColumnName="IGN_NumeroGuia" />
+          <ScalarProperty Name="IGN_IdIngresoGuiaNoRegAgencia" ColumnName="IGN_IdIngresoGuiaNoRegAgencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGuiasPlanVentaAsigTulaImpresion_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerGuiasPlanVentaAsigTulaImpresion_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerGuiasPlanVentaAsigTulaImpresion_OPU_Result">
+          <ScalarProperty Name="ATP_IdAsignacionTula" ColumnName="ATP_IdAsignacionTula" />
+          <ScalarProperty Name="ATP_IdCentroServicioOrigen" ColumnName="ATP_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ATP_IdCentroServicioDestino" ColumnName="ATP_IdCentroServicioDestino" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_Estado" ColumnName="ATP_Estado" />
+          <ScalarProperty Name="ATP_IdTipoAsignacion" ColumnName="ATP_IdTipoAsignacion" />
+          <ScalarProperty Name="ATP_FechaGrabacion" ColumnName="ATP_FechaGrabacion" />
+          <ScalarProperty Name="ATP_CreadoPor" ColumnName="ATP_CreadoPor" />
+          <ScalarProperty Name="ATP_NumContTransDespacho" ColumnName="ATP_NumContTransDespacho" />
+          <ScalarProperty Name="ATP_NumContTransRetorno" ColumnName="ATP_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+          <ScalarProperty Name="CES_NombreDestino" ColumnName="CES_NombreDestino" />
+          <ScalarProperty Name="CES_DireccionDestino" ColumnName="CES_DireccionDestino" />
+          <ScalarProperty Name="CES_Telefono1Destino" ColumnName="CES_Telefono1Destino" />
+          <ScalarProperty Name="LOC_NombreCompletoDestino" ColumnName="LOC_NombreCompletoDestino" />
+          <ScalarProperty Name="CES_NombreOrigen" ColumnName="CES_NombreOrigen" />
+          <ScalarProperty Name="CES_DireccionOrigen" ColumnName="CES_DireccionOrigen" />
+          <ScalarProperty Name="CES_Telefono1Origen" ColumnName="CES_Telefono1Origen" />
+          <ScalarProperty Name="NombreCompletoOrigen" ColumnName="NombreCompletoOrigen" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVR_TotalPiezas" ColumnName="PVR_TotalPiezas" />
+          <ScalarProperty Name="PVR_NumContTransRetorno" ColumnName="PVR_NumContTransRetorno" />
+          <ScalarProperty Name="TAS_Descripcion" ColumnName="TAS_Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paActualizarConsTransRetornoPlanillaVentasGuia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarConsTransRetornoPlanillaVentasGuia_OPU" />
+    <FunctionImportMapping FunctionImportName="paActualizarConsTransRetornoPlanillaVentasRotuloGuia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarConsTransRetornoPlanillaVentasRotuloGuia_OPU" />
+    <FunctionImportMapping FunctionImportName="paCierraPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCierraPlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paActualizarConsTransRetornoPlanillaVentasAsignacionTula_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarConsTransRetornoPlanillaVentasAsignacionTula_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerTotalPiezasPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerTotalPiezasPlanillaVentas_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerTotalPiezasPlanillaVentas_OPU_Result">
+          <ScalarProperty Name="TotalEnvios" ColumnName="TotalEnvios" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerTotalEnviosSueltosPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerTotalEnviosSueltosPlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paActualizarTotalEnviosPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarTotalEnviosPlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerEnviosSueltosPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerEnviosSueltosPlanillaVentas_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerEnviosSueltosPlanillaVentas_OPU_Result">
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_IdPuntoServicio" ColumnName="PVG_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_IdUnidadNegocio" ColumnName="PVG_IdUnidadNegocio" />
+          <ScalarProperty Name="PVG_IdServicio" ColumnName="PVG_IdServicio" />
+          <ScalarProperty Name="PVG_NombreServicio" ColumnName="PVG_NombreServicio" />
+          <ScalarProperty Name="PVG_DiceContener" ColumnName="PVG_DiceContener" />
+          <ScalarProperty Name="PVG_Peso" ColumnName="PVG_Peso" />
+          <ScalarProperty Name="PVG_EsRecomendado" ColumnName="PVG_EsRecomendado" />
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_IdCiudadOrigenGuia" ColumnName="PVG_IdCiudadOrigenGuia" />
+          <ScalarProperty Name="PVG_FechaGrabacion" ColumnName="PVG_FechaGrabacion" />
+          <ScalarProperty Name="PVG_CreadoPor" ColumnName="PVG_CreadoPor" />
+          <ScalarProperty Name="PVR_NumeroPieza" ColumnName="PVR_NumeroPieza" />
+          <ScalarProperty Name="PVR_TotalPiezas" ColumnName="PVR_TotalPiezas" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerTotalEnviosSueltosPlanillaVentasNumConTransRetorno_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerTotalEnviosSueltosPlanillaVentasNumConTransRetorno_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerTotalPiezasPlanillaVentasNumConTransRetorno_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerTotalPiezasPlanillaVentasNumConTransRetorno_OPU" />
+    <EntitySetMapping Name="IngNoRegNovedades_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.IngNoRegNovedades_OPU">
+        <MappingFragment StoreEntitySet="IngNoRegNovedades_OPU">
+          <ScalarProperty Name="NES_CreadoPor" ColumnName="NES_CreadoPor" />
+          <ScalarProperty Name="NES_FechaGrabacion" ColumnName="NES_FechaGrabacion" />
+          <ScalarProperty Name="NES_IdNovedad" ColumnName="NES_IdNovedad" />
+          <ScalarProperty Name="NES_IdIngGuiaNoRegAgencia" ColumnName="NES_IdIngGuiaNoRegAgencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaVentaGuiasMen_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaVentaGuiasMen_VOPU">
+        <MappingFragment StoreEntitySet="PlanillaVentaGuiasMen_VOPU">
+          <ScalarProperty Name="TAS_CreadoPor" ColumnName="TAS_CreadoPor" />
+          <ScalarProperty Name="TAS_FechaGrabacion" ColumnName="TAS_FechaGrabacion" />
+          <ScalarProperty Name="TAS_IdTipoAsignacion" ColumnName="TAS_IdTipoAsignacion" />
+          <ScalarProperty Name="TAS_Descripcion" ColumnName="TAS_Descripcion" />
+          <ScalarProperty Name="ATP_NumContTransRetorno" ColumnName="ATP_NumContTransRetorno" />
+          <ScalarProperty Name="ATP_NumContTransDespacho" ColumnName="ATP_NumContTransDespacho" />
+          <ScalarProperty Name="ATP_CreadoPor" ColumnName="ATP_CreadoPor" />
+          <ScalarProperty Name="ATP_FechaGrabacion" ColumnName="ATP_FechaGrabacion" />
+          <ScalarProperty Name="ATP_IdTipoAsignacion" ColumnName="ATP_IdTipoAsignacion" />
+          <ScalarProperty Name="ATP_Estado" ColumnName="ATP_Estado" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_IdCentroServicioDestino" ColumnName="ATP_IdCentroServicioDestino" />
+          <ScalarProperty Name="ATP_IdCentroServicioOrigen" ColumnName="ATP_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ATP_IdAsignacionTula" ColumnName="ATP_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_IdPuntoServicio" ColumnName="PVG_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_IdCiudadOrigenGuia" ColumnName="PVG_IdCiudadOrigenGuia" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_NombreServicio" ColumnName="PVG_NombreServicio" />
+          <ScalarProperty Name="PVG_IdServicio" ColumnName="PVG_IdServicio" />
+          <ScalarProperty Name="PLA_FechaCierrePlanilla" ColumnName="PLA_FechaCierrePlanilla" />
+          <ScalarProperty Name="PLA_IdMensajero" ColumnName="PLA_IdMensajero" />
+          <ScalarProperty Name="PLA_EstaCerrada" ColumnName="PLA_EstaCerrada" />
+          <ScalarProperty Name="PLA_IdVehiculo" ColumnName="PLA_IdVehiculo" />
+          <ScalarProperty Name="PLA_NombreMensajero" ColumnName="PLA_NombreMensajero" />
+          <ScalarProperty Name="AGF_Valor" ColumnName="AGF_Valor" />
+          <ScalarProperty Name="ADM_FechaGrabacion" ColumnName="ADM_FechaGrabacion" />
+          <ScalarProperty Name="ADM_ValorTotal" ColumnName="ADM_ValorTotal" />
+          <ScalarProperty Name="ADM_ValorAdmision" ColumnName="ADM_ValorAdmision" />
+          <ScalarProperty Name="ADM_ValorPrimaSeguro" ColumnName="ADM_ValorPrimaSeguro" />
+          <ScalarProperty Name="ADM_NombreCiudadDestino" ColumnName="ADM_NombreCiudadDestino" />
+          <ScalarProperty Name="ADM_IdCiudadDestino" ColumnName="ADM_IdCiudadDestino" />
+          <ScalarProperty Name="ADM_IdAdminisionMensajeria" ColumnName="ADM_IdAdminisionMensajeria" />
+          <ScalarProperty Name="FOP_Descripcion" ColumnName="FOP_Descripcion" />
+          <ScalarProperty Name="PEI_IdPersonaInterna" ColumnName="PEI_IdPersonaInterna" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PVG_DiceContener" ColumnName="PVG_DiceContener" />
+          <ScalarProperty Name="PVG_IdUnidadNegocio" ColumnName="PVG_IdUnidadNegocio" />
+          <ScalarProperty Name="PVG_EsRecomendado" ColumnName="PVG_EsRecomendado" />
+          <ScalarProperty Name="PVG_Peso" ColumnName="PVG_Peso" />
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PLA_DireccionPuntoServicio" ColumnName="PLA_DireccionPuntoServicio" />
+          <ScalarProperty Name="PLA_FechaGrabacion" ColumnName="PLA_FechaGrabacion" />
+          <ScalarProperty Name="PLA_TotalEnvios" ColumnName="PLA_TotalEnvios" />
+          <ScalarProperty Name="PLA_NombrePuntoServicio" ColumnName="PLA_NombrePuntoServicio" />
+          <ScalarProperty Name="PLA_IdPuntoServicio" ColumnName="PLA_IdPuntoServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanillaVentasGuia_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaVentasGuia_VOPU">
+        <MappingFragment StoreEntitySet="PlanillaVentasGuia_VOPU">
+          <ScalarProperty Name="PLA_CreadoPor" ColumnName="PLA_CreadoPor" />
+          <ScalarProperty Name="PLA_FechaGrabacion" ColumnName="PLA_FechaGrabacion" />
+          <ScalarProperty Name="PLA_IdVehiculo" ColumnName="PLA_IdVehiculo" />
+          <ScalarProperty Name="PLA_NombreMensajero" ColumnName="PLA_NombreMensajero" />
+          <ScalarProperty Name="PLA_FechaCierrePlanilla" ColumnName="PLA_FechaCierrePlanilla" />
+          <ScalarProperty Name="PLA_EstaCerrada" ColumnName="PLA_EstaCerrada" />
+          <ScalarProperty Name="PLA_TotalEnvios" ColumnName="PLA_TotalEnvios" />
+          <ScalarProperty Name="PLA_IdMensajero" ColumnName="PLA_IdMensajero" />
+          <ScalarProperty Name="PLA_DireccionPuntoServicio" ColumnName="PLA_DireccionPuntoServicio" />
+          <ScalarProperty Name="PLA_NombrePuntoServicio" ColumnName="PLA_NombrePuntoServicio" />
+          <ScalarProperty Name="PLA_IdPuntoServicio" ColumnName="PLA_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_CreadoPor" ColumnName="PVG_CreadoPor" />
+          <ScalarProperty Name="PVG_FechaGrabacion" ColumnName="PVG_FechaGrabacion" />
+          <ScalarProperty Name="PVG_IdCiudadOrigenGuia" ColumnName="PVG_IdCiudadOrigenGuia" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_EsRecomendado" ColumnName="PVG_EsRecomendado" />
+          <ScalarProperty Name="PVG_Peso" ColumnName="PVG_Peso" />
+          <ScalarProperty Name="PVG_DiceContener" ColumnName="PVG_DiceContener" />
+          <ScalarProperty Name="PVG_NombreServicio" ColumnName="PVG_NombreServicio" />
+          <ScalarProperty Name="PVG_IdServicio" ColumnName="PVG_IdServicio" />
+          <ScalarProperty Name="PVG_IdUnidadNegocio" ColumnName="PVG_IdUnidadNegocio" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_IdPuntoServicio" ColumnName="PVG_IdPuntoServicio" />
+          <ScalarProperty Name="PVG_IdAdminisionMensajeria" ColumnName="PVG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PVG_IdPlanilla" ColumnName="PVG_IdPlanilla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerTotalPiezasConsolidadoPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerTotalPiezasConsolidadoPlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerAsignacionesUtilizadasPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerAsignacionesUtilizadasPlanillaVentas_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerGuiasAsignacionPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerGuiasAsignacionPlanillaVentas_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerGuiasAsignacionPlanillaVentas_OPU_Result">
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGuiasSueltasPlanillaVentas_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerGuiasSueltasPlanillaVentas_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerGuiasSueltasPlanillaVentas_OPU">
+          <ScalarProperty Name="PVG_NumeroGuia" ColumnName="PVG_NumeroGuia" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AsignacionTulaPuntoServicio_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.AsignacionTulaPuntoServicio_VOPU">
+        <MappingFragment StoreEntitySet="AsignacionTulaPuntoServicio_VOPU">
+          <ScalarProperty Name="ATP_CentroServicioDestino" ColumnName="ATP_CentroServicioDestino" />
+          <ScalarProperty Name="dir_destino" ColumnName="dir_destino" />
+          <ScalarProperty Name="tel_destino" ColumnName="tel_destino" />
+          <ScalarProperty Name="dir_origen" ColumnName="dir_origen" />
+          <ScalarProperty Name="tel_origen" ColumnName="tel_origen" />
+          <ScalarProperty Name="nom_loc_destino" ColumnName="nom_loc_destino" />
+          <ScalarProperty Name="id_loc_detino" ColumnName="id_loc_detino" />
+          <ScalarProperty Name="nom_loc_prigen" ColumnName="nom_loc_prigen" />
+          <ScalarProperty Name="id_loc_origen" ColumnName="id_loc_origen" />
+          <ScalarProperty Name="Ces_Nombre_Origen" ColumnName="Ces_Nombre_Origen" />
+          <ScalarProperty Name="TAS_Descripcion" ColumnName="TAS_Descripcion" />
+          <ScalarProperty Name="Ces_Nombre_Destino" ColumnName="Ces_Nombre_Destino" />
+          <ScalarProperty Name="ATP_NumContTransRetorno" ColumnName="ATP_NumContTransRetorno" />
+          <ScalarProperty Name="ATP_NumContTransDespacho" ColumnName="ATP_NumContTransDespacho" />
+          <ScalarProperty Name="ATP_CreadoPor" ColumnName="ATP_CreadoPor" />
+          <ScalarProperty Name="ATP_FechaGrabacion" ColumnName="ATP_FechaGrabacion" />
+          <ScalarProperty Name="ATP_IdTipoAsignacion" ColumnName="ATP_IdTipoAsignacion" />
+          <ScalarProperty Name="ATP_Estado" ColumnName="ATP_Estado" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_IdCentroServicioDestino" ColumnName="ATP_IdCentroServicioDestino" />
+          <ScalarProperty Name="ATP_IdCentroServicioOrigen" ColumnName="ATP_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ATP_IdAsignacionTula" ColumnName="ATP_IdAsignacionTula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsignacionConsolidado_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.AsignacionConsolidado_VOPU">
+        <MappingFragment StoreEntitySet="AsignacionConsolidado_VOPU">
+          <ScalarProperty Name="PLA_EstaCerrada" ColumnName="PLA_EstaCerrada" />
+          <ScalarProperty Name="TAS_Descripcion" ColumnName="TAS_Descripcion" />
+          <ScalarProperty Name="ATP_NumContTransRetorno" ColumnName="ATP_NumContTransRetorno" />
+          <ScalarProperty Name="ATP_NumContTransDespacho" ColumnName="ATP_NumContTransDespacho" />
+          <ScalarProperty Name="ATP_IdTipoAsignacion" ColumnName="ATP_IdTipoAsignacion" />
+          <ScalarProperty Name="ATP_Estado" ColumnName="ATP_Estado" />
+          <ScalarProperty Name="ATP_NoPrecinto" ColumnName="ATP_NoPrecinto" />
+          <ScalarProperty Name="ATP_NoTula" ColumnName="ATP_NoTula" />
+          <ScalarProperty Name="ATP_IdCentroServicioDestino" ColumnName="ATP_IdCentroServicioDestino" />
+          <ScalarProperty Name="ATP_IdCentroServicioOrigen" ColumnName="ATP_IdCentroServicioOrigen" />
+          <ScalarProperty Name="PVG_NumContTransRetorno" ColumnName="PVG_NumContTransRetorno" />
+          <ScalarProperty Name="PVG_IdAsignacionTula" ColumnName="PVG_IdAsignacionTula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngresoGuiaAgencia_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.IngresoGuiaAgencia_OPU">
+        <MappingFragment StoreEntitySet="IngresoGuiaAgencia_OPU">
+          <ScalarProperty Name="IGA_CreadoPor" ColumnName="IGA_CreadoPor" />
+          <ScalarProperty Name="IGA_FechaGrabacion" ColumnName="IGA_FechaGrabacion" />
+          <ScalarProperty Name="IGA_TotalPiezas" ColumnName="IGA_TotalPiezas" />
+          <ScalarProperty Name="IGA_NumeroPieza" ColumnName="IGA_NumeroPieza" />
+          <ScalarProperty Name="IGA_IngresoPorPlanilla" ColumnName="IGA_IngresoPorPlanilla" />
+          <ScalarProperty Name="IGA_IdMensajero" ColumnName="IGA_IdMensajero" />
+          <ScalarProperty Name="IGA_NumeroPlanilla" ColumnName="IGA_NumeroPlanilla" />
+          <ScalarProperty Name="IGA_NumeroGuia" ColumnName="IGA_NumeroGuia" />
+          <ScalarProperty Name="IGA_IdAgencia" ColumnName="IGA_IdAgencia" />
+          <ScalarProperty Name="IGA_IdAdminisionMensajeria" ColumnName="IGA_IdAdminisionMensajeria" />
+          <ScalarProperty Name="IGA_IdIngresoGuiaAgencia" ColumnName="IGA_IdIngresoGuiaAgencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPlaAsiEnSinFilMen_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerPlaAsiEnSinFilMen_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerPlaAsiEnSinFilMen_OPU_Result">
+          <ScalarProperty Name="PAE_IdPlanillaAsignacionEnvio" ColumnName="PAE_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAE_FechaGrabacion" ColumnName="PAE_FechaGrabacion" />
+          <ScalarProperty Name="PAE_IdAgencia" ColumnName="PAE_IdAgencia" />
+          <ScalarProperty Name="PAE_IdMunicipioAsignacion" ColumnName="PAE_IdMunicipioAsignacion" />
+          <ScalarProperty Name="PAE_IdTipoMensajero" ColumnName="PAE_IdTipoMensajero" />
+          <ScalarProperty Name="PAE_DescripcionTipoMensajero" ColumnName="PAE_DescripcionTipoMensajero" />
+          <ScalarProperty Name="PAE_TotalGuiasAsignadas" ColumnName="PAE_TotalGuiasAsignadas" />
+          <ScalarProperty Name="PAE_IdEstadoPlanillaEnvios" ColumnName="PAE_IdEstadoPlanillaEnvios" />
+          <ScalarProperty Name="PAE_IdZona" ColumnName="PAE_IdZona" />
+          <ScalarProperty Name="PAM_IdMensajero" ColumnName="PAM_IdMensajero" />
+          <ScalarProperty Name="PAE_DescripcionZona" ColumnName="PAE_DescripcionZona" />
+          <ScalarProperty Name="PAE_IdCentroLogistico" ColumnName="PAE_IdCentroLogistico" />
+          <ScalarProperty Name="EPE_Descripcion" ColumnName="EPE_Descripcion" />
+          <ScalarProperty Name="PAE_RequiereAuditoria" ColumnName="PAE_RequiereAuditoria" />
+          <ScalarProperty Name="PEI_IdTipoIdentificacion" ColumnName="PEI_IdTipoIdentificacion" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PAE_CreadoPor" ColumnName="PAE_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paValidarGuiaCentroAcopio_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paValidarGuiaCentroAcopio_OPU" />
+    <EntitySetMapping Name="PlanillaAsignacionEnvios_VOPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.PlanillaAsignacionEnvios_VOPU">
+        <MappingFragment StoreEntitySet="PlanillaAsignacionEnvios_VOPU">
+          <ScalarProperty Name="PAG_EstaDescargada" ColumnName="PAG_EstaDescargada" />
+          <ScalarProperty Name="PAG_EstadoEnPlanilla" ColumnName="PAG_EstadoEnPlanilla" />
+          <ScalarProperty Name="TIM_Descripcion" ColumnName="TIM_Descripcion" />
+          <ScalarProperty Name="TIM_IdTipoMensajero" ColumnName="TIM_IdTipoMensajero" />
+          <ScalarProperty Name="PAG_GuiaDeUnaReasignacion" ColumnName="PAG_GuiaDeUnaReasignacion" />
+          <ScalarProperty Name="ADM_EsSupervisada" ColumnName="ADM_EsSupervisada" />
+          <ScalarProperty Name="ADM_CantidadReintentosEntrega" ColumnName="ADM_CantidadReintentosEntrega" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+          <ScalarProperty Name="PAE_IdMunicipioAsignacion" ColumnName="PAE_IdMunicipioAsignacion" />
+          <ScalarProperty Name="PAE_IdCentroLogistico" ColumnName="PAE_IdCentroLogistico" />
+          <ScalarProperty Name="PAE_IdAgencia" ColumnName="PAE_IdAgencia" />
+          <ScalarProperty Name="PAE_DescripcionZona" ColumnName="PAE_DescripcionZona" />
+          <ScalarProperty Name="PAE_IdZona" ColumnName="PAE_IdZona" />
+          <ScalarProperty Name="PAM_FechaAutorizacion" ColumnName="PAM_FechaAutorizacion" />
+          <ScalarProperty Name="PAM_AutorizadoPor" ColumnName="PAM_AutorizadoPor" />
+          <ScalarProperty Name="AGF_IdFormaPago" ColumnName="AGF_IdFormaPago" />
+          <ScalarProperty Name="AGF_Valor" ColumnName="AGF_Valor" />
+          <ScalarProperty Name="FOP_Descripcion" ColumnName="FOP_Descripcion" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAG_Consecutivo" ColumnName="PAG_Consecutivo" />
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_NombreCiudadDestino" ColumnName="PAG_NombreCiudadDestino" />
+          <ScalarProperty Name="PAG_IdCiudadDestino" ColumnName="PAG_IdCiudadDestino" />
+          <ScalarProperty Name="PAG_IdCiudadOrigen" ColumnName="PAG_IdCiudadOrigen" />
+          <ScalarProperty Name="PAG_NombreCiudadOrigen" ColumnName="PAG_NombreCiudadOrigen" />
+          <ScalarProperty Name="PAG_FechaVerificacion" ColumnName="PAG_FechaVerificacion" />
+          <ScalarProperty Name="PAG_VerficadaPor" ColumnName="PAG_VerficadaPor" />
+          <ScalarProperty Name="PAG_CreadoPor" ColumnName="PAG_CreadoPor" />
+          <ScalarProperty Name="PAM_IdMensajero" ColumnName="PAM_IdMensajero" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PAG_RecogeDinero" ColumnName="PAG_RecogeDinero" />
+          <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+          <ScalarProperty Name="PAG_DireccionDestinatario" ColumnName="PAG_DireccionDestinatario" />
+          <ScalarProperty Name="PAG_TelefonoDestinatario" ColumnName="PAG_TelefonoDestinatario" />
+          <ScalarProperty Name="PAG_TotalPiezas" ColumnName="PAG_TotalPiezas" />
+          <ScalarProperty Name="PAG_NumeroGuia" ColumnName="PAG_NumeroGuia" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerGuiasMensajero_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerGuiasMensajero_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerGuiasMensajero_OPU_Result1">
+          <ScalarProperty Name="PAM_IdPlanillaAsignacionEnvio" ColumnName="PAM_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAM_IdMensajero" ColumnName="PAM_IdMensajero" />
+          <ScalarProperty Name="PAE_IdAgencia" ColumnName="PAE_IdAgencia" />
+          <ScalarProperty Name="PAE_IdCentroLogistico" ColumnName="PAE_IdCentroLogistico" />
+          <ScalarProperty Name="PAE_IdTipoMensajero" ColumnName="PAE_IdTipoMensajero" />
+          <ScalarProperty Name="PAE_DescripcionTipoMensajero" ColumnName="PAE_DescripcionTipoMensajero" />
+          <ScalarProperty Name="PAE_IdEstadoPlanillaEnvios" ColumnName="PAE_IdEstadoPlanillaEnvios" />
+          <ScalarProperty Name="PAE_TotalGuiasAsignadas" ColumnName="PAE_TotalGuiasAsignadas" />
+          <ScalarProperty Name="PAE_FechaGrabacion" ColumnName="PAE_FechaGrabacion" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PAG_NumeroGuia" ColumnName="PAG_NumeroGuia" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAG_IdServicio" ColumnName="PAG_IdServicio" />
+          <ScalarProperty Name="PAG_NombreServicio" ColumnName="PAG_NombreServicio" />
+          <ScalarProperty Name="PAG_EstaDescargada" ColumnName="PAG_EstaDescargada" />
+          <ScalarProperty Name="PAG_RecogeDinero" ColumnName="PAG_RecogeDinero" />
+          <ScalarProperty Name="PAG_CantidadRadicados" ColumnName="PAG_CantidadRadicados" />
+          <ScalarProperty Name="PAG_CantidadRadicadosReportado" ColumnName="PAG_CantidadRadicadosReportado" />
+          <ScalarProperty Name="PAG_FechaDescargue" ColumnName="PAG_FechaDescargue" />
+          <ScalarProperty Name="PAG_DescargadaPor" ColumnName="PAG_DescargadaPor" />
+          <ScalarProperty Name="PAG_EstadoEnPlanilla" ColumnName="PAG_EstadoEnPlanilla" />
+          <ScalarProperty Name="DescripcionEstadoManifiesto" ColumnName="DescripcionEstadoManifiesto" />
+          <ScalarProperty Name="PAG_FuePlanillada" ColumnName="PAG_FuePlanillada" />
+          <ScalarProperty Name="PAE_IdMunicipioAsignacion" ColumnName="PAE_IdMunicipioAsignacion" />
+          <ScalarProperty Name="LOC_Nombre" ColumnName="LOC_Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paActualizarEnviMenjAlCobro_CAJ" FunctionName="ModeloOperacionUrbanaNS.Store.paActualizarEnviMenjAlCobro_CAJ" />
+    <FunctionImportMapping FunctionImportName="paObtenerEnvioPlaniAsiGuia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerEnvioPlaniAsiGuia_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerEnvioPlaniAsiGuia_OPU_Result">
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PAG_NumeroGuia" ColumnName="PAG_NumeroGuia" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAG_IdServicio" ColumnName="PAG_IdServicio" />
+          <ScalarProperty Name="PAG_NombreServicio" ColumnName="PAG_NombreServicio" />
+          <ScalarProperty Name="PAG_Consecutivo" ColumnName="PAG_Consecutivo" />
+          <ScalarProperty Name="PAG_EstaDescargada" ColumnName="PAG_EstaDescargada" />
+          <ScalarProperty Name="PAG_RecogeDinero" ColumnName="PAG_RecogeDinero" />
+          <ScalarProperty Name="PAG_CantidadRadicados" ColumnName="PAG_CantidadRadicados" />
+          <ScalarProperty Name="PAG_IdCiudadOrigen" ColumnName="PAG_IdCiudadOrigen" />
+          <ScalarProperty Name="PAG_NombreCiudadOrigen" ColumnName="PAG_NombreCiudadOrigen" />
+          <ScalarProperty Name="PAG_TotalPiezas" ColumnName="PAG_TotalPiezas" />
+          <ScalarProperty Name="PAG_EstaVerificada" ColumnName="PAG_EstaVerificada" />
+          <ScalarProperty Name="PAG_VerficadaPor" ColumnName="PAG_VerficadaPor" />
+          <ScalarProperty Name="PAG_FechaVerificacion" ColumnName="PAG_FechaVerificacion" />
+          <ScalarProperty Name="PAG_Peso" ColumnName="PAG_Peso" />
+          <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+          <ScalarProperty Name="PAG_CreadoPor" ColumnName="PAG_CreadoPor" />
+          <ScalarProperty Name="PAG_CantidadRadicadosReportado" ColumnName="PAG_CantidadRadicadosReportado" />
+          <ScalarProperty Name="PAG_EstadoEnPlanilla" ColumnName="PAG_EstadoEnPlanilla" />
+          <ScalarProperty Name="PAG_FuePlanillada" ColumnName="PAG_FuePlanillada" />
+          <ScalarProperty Name="PAM_IdMensajero" ColumnName="PAM_IdMensajero" />
+          <ScalarProperty Name="PAG_ReportadoACaja" ColumnName="PAG_ReportadoACaja" />
+          <ScalarProperty Name="NombreMensajero" ColumnName="NombreMensajero" />
+          <ScalarProperty Name="PAE_IdAgencia" ColumnName="PAE_IdAgencia" />
+          <ScalarProperty Name="NombreAgencia" ColumnName="NombreAgencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerPlanMenPorNumGuia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerPlanMenPorNumGuia_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerPlanMenPorNumGuia_OPU_Result">
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PAG_NumeroGuia" ColumnName="PAG_NumeroGuia" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAG_IdServicio" ColumnName="PAG_IdServicio" />
+          <ScalarProperty Name="PAG_FechaGrabacion" ColumnName="PAG_FechaGrabacion" />
+          <ScalarProperty Name="PAE_FechaGrabacion" ColumnName="PAE_FechaGrabacion" />
+          <ScalarProperty Name="PAM_IdMensajero" ColumnName="PAM_IdMensajero" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="PAG_EstadoEnPlanilla" ColumnName="PAG_EstadoEnPlanilla" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paPlanillaAsignacionEnvios_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paPlanillaAsignacionEnvios_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paPlanillaAsignacionEnvios_OPU_Result">
+          <ScalarProperty Name="PAE_IdPlanillaAsignacionEnvio" ColumnName="PAE_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAE_FechaGrabacion" ColumnName="PAE_FechaGrabacion" />
+          <ScalarProperty Name="PAE_IdAgencia" ColumnName="PAE_IdAgencia" />
+          <ScalarProperty Name="PAE_IdMunicipioAsignacion" ColumnName="PAE_IdMunicipioAsignacion" />
+          <ScalarProperty Name="PAE_IdTipoMensajero" ColumnName="PAE_IdTipoMensajero" />
+          <ScalarProperty Name="PAE_DescripcionTipoMensajero" ColumnName="PAE_DescripcionTipoMensajero" />
+          <ScalarProperty Name="PAE_TotalGuiasAsignadas" ColumnName="PAE_TotalGuiasAsignadas" />
+          <ScalarProperty Name="PAE_IdEstadoPlanillaEnvios" ColumnName="PAE_IdEstadoPlanillaEnvios" />
+          <ScalarProperty Name="PAE_IdZona" ColumnName="PAE_IdZona" />
+          <ScalarProperty Name="PAM_IdMensajero" ColumnName="PAM_IdMensajero" />
+          <ScalarProperty Name="PAE_DescripcionZona" ColumnName="PAE_DescripcionZona" />
+          <ScalarProperty Name="PAE_IdCentroLogistico" ColumnName="PAE_IdCentroLogistico" />
+          <ScalarProperty Name="EPE_Descripcion" ColumnName="EPE_Descripcion" />
+          <ScalarProperty Name="PAE_RequiereAuditoria" ColumnName="PAE_RequiereAuditoria" />
+          <ScalarProperty Name="PEI_IdTipoIdentificacion" ColumnName="PEI_IdTipoIdentificacion" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PAE_CreadoPor" ColumnName="PAE_CreadoPor" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paCrearIngGuiaAgeNovedades_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearIngGuiaAgeNovedades_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearIngresoGuiaNoRegAgencia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearIngresoGuiaNoRegAgencia_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearIngNoRegNovedades_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearIngNoRegNovedades_OPU" />
+    <FunctionImportMapping FunctionImportName="paCrearIngresoGuiaAgencia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paCrearIngresoGuiaAgencia_OPU" />
+    <FunctionImportMapping FunctionImportName="paNivelarCuentaMensajero_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paNivelarCuentaMensajero_OPU" />
+    <FunctionImportMapping FunctionImportName="paNivelarCuentaMensajeroXFac_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paNivelarCuentaMensajeroXFac_OPU" />
+    <FunctionImportMapping FunctionImportName="paObtenerEnviosEstadoAdmitidoNoPlanilladosPuntoServicio_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerEnviosEstadoAdmitidoNoPlanilladosPuntoServicio_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerEnviosEstadoAdmitidoNoPlanilladosPuntoServicio_OPU_Result">
+          <ScalarProperty Name="ADM_IdAdminisionMensajeria" ColumnName="ADM_IdAdminisionMensajeria" />
+          <ScalarProperty Name="ADM_PrefijoNumeroGuia" ColumnName="ADM_PrefijoNumeroGuia" />
+          <ScalarProperty Name="ADM_NumeroGuia" ColumnName="ADM_NumeroGuia" />
+          <ScalarProperty Name="ADM_DigitoVerificacion" ColumnName="ADM_DigitoVerificacion" />
+          <ScalarProperty Name="ADM_GuidDeChequeo" ColumnName="ADM_GuidDeChequeo" />
+          <ScalarProperty Name="ADM_EsAutomatico" ColumnName="ADM_EsAutomatico" />
+          <ScalarProperty Name="ADM_IdUnidadNegocio" ColumnName="ADM_IdUnidadNegocio" />
+          <ScalarProperty Name="ADM_IdServicio" ColumnName="ADM_IdServicio" />
+          <ScalarProperty Name="ADM_NombreServicio" ColumnName="ADM_NombreServicio" />
+          <ScalarProperty Name="ADM_IdTipoEntrega" ColumnName="ADM_IdTipoEntrega" />
+          <ScalarProperty Name="ADM_DescripcionTipoEntrega" ColumnName="ADM_DescripcionTipoEntrega" />
+          <ScalarProperty Name="ADM_IdCentroServicioOrigen" ColumnName="ADM_IdCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_NombreCentroServicioOrigen" ColumnName="ADM_NombreCentroServicioOrigen" />
+          <ScalarProperty Name="ADM_IdCentroServicioDestino" ColumnName="ADM_IdCentroServicioDestino" />
+          <ScalarProperty Name="ADM_NombreCentroServicioDestino" ColumnName="ADM_NombreCentroServicioDestino" />
+          <ScalarProperty Name="ADM_IdPaisOrigen" ColumnName="ADM_IdPaisOrigen" />
+          <ScalarProperty Name="ADM_NombrePaisOrigen" ColumnName="ADM_NombrePaisOrigen" />
+          <ScalarProperty Name="ADM_IdCiudadOrigen" ColumnName="ADM_IdCiudadOrigen" />
+          <ScalarProperty Name="ADM_NombreCiudadOrigen" ColumnName="ADM_NombreCiudadOrigen" />
+          <ScalarProperty Name="ADM_CodigoPostalOrigen" ColumnName="ADM_CodigoPostalOrigen" />
+          <ScalarProperty Name="ADM_IdPaisDestino" ColumnName="ADM_IdPaisDestino" />
+          <ScalarProperty Name="ADM_NombrePaisDestino" ColumnName="ADM_NombrePaisDestino" />
+          <ScalarProperty Name="ADM_IdCiudadDestino" ColumnName="ADM_IdCiudadDestino" />
+          <ScalarProperty Name="ADM_NombreCiudadDestino" ColumnName="ADM_NombreCiudadDestino" />
+          <ScalarProperty Name="ADM_CodigoPostalDestino" ColumnName="ADM_CodigoPostalDestino" />
+          <ScalarProperty Name="ADM_TelefonoDestinatario" ColumnName="ADM_TelefonoDestinatario" />
+          <ScalarProperty Name="ADM_DireccionDestinatario" ColumnName="ADM_DireccionDestinatario" />
+          <ScalarProperty Name="ADM_TipoCliente" ColumnName="ADM_TipoCliente" />
+          <ScalarProperty Name="ADM_DiasDeEntrega" ColumnName="ADM_DiasDeEntrega" />
+          <ScalarProperty Name="ADM_FechaEstimadaEntrega" ColumnName="ADM_FechaEstimadaEntrega" />
+          <ScalarProperty Name="ADM_ValorAdmision" ColumnName="ADM_ValorAdmision" />
+          <ScalarProperty Name="ADM_ValorTotal" ColumnName="ADM_ValorTotal" />
+          <ScalarProperty Name="ADM_ValorTotalImpuestos" ColumnName="ADM_ValorTotalImpuestos" />
+          <ScalarProperty Name="ADM_ValorTotalRetenciones" ColumnName="ADM_ValorTotalRetenciones" />
+          <ScalarProperty Name="ADM_ValorPrimaSeguro" ColumnName="ADM_ValorPrimaSeguro" />
+          <ScalarProperty Name="ADM_ValorEmpaque" ColumnName="ADM_ValorEmpaque" />
+          <ScalarProperty Name="ADM_ValorAdicionales" ColumnName="ADM_ValorAdicionales" />
+          <ScalarProperty Name="ADM_ValorDeclarado" ColumnName="ADM_ValorDeclarado" />
+          <ScalarProperty Name="ADM_DiceContener" ColumnName="ADM_DiceContener" />
+          <ScalarProperty Name="ADM_Observaciones" ColumnName="ADM_Observaciones" />
+          <ScalarProperty Name="ADM_NumeroPieza" ColumnName="ADM_NumeroPieza" />
+          <ScalarProperty Name="ADM_TotalPiezas" ColumnName="ADM_TotalPiezas" />
+          <ScalarProperty Name="ADM_FechaAdmision" ColumnName="ADM_FechaAdmision" />
+          <ScalarProperty Name="ADM_Peso" ColumnName="ADM_Peso" />
+          <ScalarProperty Name="ADM_PesoLiqVolumetrico" ColumnName="ADM_PesoLiqVolumetrico" />
+          <ScalarProperty Name="ADM_PesoLiqMasa" ColumnName="ADM_PesoLiqMasa" />
+          <ScalarProperty Name="ADM_EsPesoVolumetrico" ColumnName="ADM_EsPesoVolumetrico" />
+          <ScalarProperty Name="ADM_NumeroBolsaSeguridad" ColumnName="ADM_NumeroBolsaSeguridad" />
+          <ScalarProperty Name="ADM_IdMotivoNoUsoBolsaSegurida" ColumnName="ADM_IdMotivoNoUsoBolsaSegurida" />
+          <ScalarProperty Name="ADM_MotivoNoUsoBolsaSeguriDesc" ColumnName="ADM_MotivoNoUsoBolsaSeguriDesc" />
+          <ScalarProperty Name="ADM_NoUsoaBolsaSeguridadObserv" ColumnName="ADM_NoUsoaBolsaSeguridadObserv" />
+          <ScalarProperty Name="ADM_IdUnidadMedida" ColumnName="ADM_IdUnidadMedida" />
+          <ScalarProperty Name="ADM_Largo" ColumnName="ADM_Largo" />
+          <ScalarProperty Name="ADM_Ancho" ColumnName="ADM_Ancho" />
+          <ScalarProperty Name="ADM_Alto" ColumnName="ADM_Alto" />
+          <ScalarProperty Name="ADM_EsRecomendado" ColumnName="ADM_EsRecomendado" />
+          <ScalarProperty Name="ADM_IdTipoEnvio" ColumnName="ADM_IdTipoEnvio" />
+          <ScalarProperty Name="ADM_NombreTipoEnvio" ColumnName="ADM_NombreTipoEnvio" />
+          <ScalarProperty Name="ADM_AdmisionSistemaMensajero" ColumnName="ADM_AdmisionSistemaMensajero" />
+          <ScalarProperty Name="ADM_EsAlCobro" ColumnName="ADM_EsAlCobro" />
+          <ScalarProperty Name="ADM_EstaPagada" ColumnName="ADM_EstaPagada" />
+          <ScalarProperty Name="ADM_FechaPago" ColumnName="ADM_FechaPago" />
+          <ScalarProperty Name="ADM_IdTipoIdentificacionRemitente" ColumnName="ADM_IdTipoIdentificacionRemitente" />
+          <ScalarProperty Name="ADM_IdRemitente" ColumnName="ADM_IdRemitente" />
+          <ScalarProperty Name="ADM_NombreRemitente" ColumnName="ADM_NombreRemitente" />
+          <ScalarProperty Name="ADM_TelefonoRemitente" ColumnName="ADM_TelefonoRemitente" />
+          <ScalarProperty Name="ADM_DireccionRemitente" ColumnName="ADM_DireccionRemitente" />
+          <ScalarProperty Name="ADM_IdTipoIdentificacionDestinatario" ColumnName="ADM_IdTipoIdentificacionDestinatario" />
+          <ScalarProperty Name="ADM_IdDestinatario" ColumnName="ADM_IdDestinatario" />
+          <ScalarProperty Name="ADM_NombreDestinatario" ColumnName="ADM_NombreDestinatario" />
+          <ScalarProperty Name="ADM_IdMensajero" ColumnName="ADM_IdMensajero" />
+          <ScalarProperty Name="ADM_NombreMensajero" ColumnName="ADM_NombreMensajero" />
+          <ScalarProperty Name="ADM_FechaGrabacion" ColumnName="ADM_FechaGrabacion" />
+          <ScalarProperty Name="ADM_CreadoPor" ColumnName="ADM_CreadoPor" />
+          <ScalarProperty Name="ADM_EsSupervisada" ColumnName="ADM_EsSupervisada" />
+          <ScalarProperty Name="ADM_FechaSupervision" ColumnName="ADM_FechaSupervision" />
+          <ScalarProperty Name="ADM_EmailRemitente" ColumnName="ADM_EmailRemitente" />
+          <ScalarProperty Name="ADM_EmailDestinatario" ColumnName="ADM_EmailDestinatario" />
+          <ScalarProperty Name="ADM_CantidadReintentosEntrega" ColumnName="ADM_CantidadReintentosEntrega" />
+          <ScalarProperty Name="ADM_NotificarEntregaPorEmail" ColumnName="ADM_NotificarEntregaPorEmail" />
+          <ScalarProperty Name="ADM_IdEstadoGuiaLog" ColumnName="ADM_IdEstadoGuiaLog" />
+          <ScalarProperty Name="ADM_EstaEntregada" ColumnName="ADM_EstaEntregada" />
+          <ScalarProperty Name="ADM_FechaEntrega" ColumnName="ADM_FechaEntrega" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerEnviMenjAlCobro_CAJ" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerEnviMenjAlCobro_CAJ">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerEnviMenjAlCobro_CAJ_Result">
+          <ScalarProperty Name="ADM_NumeroGuia" ColumnName="ADM_NumeroGuia" />
+          <ScalarProperty Name="ADM_Peso" ColumnName="ADM_Peso" />
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_ValorTotalGuia" ColumnName="PAG_ValorTotalGuia" />
+          <ScalarProperty Name="PAM_FechaGrabacion" ColumnName="PAM_FechaGrabacion" />
+          <ScalarProperty Name="RTD_NumeroComprobante" ColumnName="RTD_NumeroComprobante" />
+          <ScalarProperty Name="RTD_IdRegistroTransDetalleCaja" ColumnName="RTD_IdRegistroTransDetalleCaja" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="GuiaMensajerosAsignados_OPU">
+      <EntityTypeMapping TypeName="ModeloOperacionUrbanaNS.GuiaMensajerosAsignados_OPU">
+        <MappingFragment StoreEntitySet="GuiaMensajerosAsignados_OPU">
+          <ScalarProperty Name="PAG_IdPlanillaAsignacionEnvio" ColumnName="PAG_IdPlanillaAsignacionEnvio" />
+          <ScalarProperty Name="PAG_IdAdminisionMensajeria" ColumnName="PAG_IdAdminisionMensajeria" />
+          <ScalarProperty Name="PAM_AutorizadoPor" ColumnName="PAM_AutorizadoPor" />
+          <ScalarProperty Name="PAM_FechaAutorizacion" ColumnName="PAM_FechaAutorizacion" />
+          <ScalarProperty Name="PEI_SegundoApellido" ColumnName="PEI_SegundoApellido" />
+          <ScalarProperty Name="PEI_PrimerApellido" ColumnName="PEI_PrimerApellido" />
+          <ScalarProperty Name="PEI_Identificacion" ColumnName="PEI_Identificacion" />
+          <ScalarProperty Name="PEI_Nombre" ColumnName="PEI_Nombre" />
+          <ScalarProperty Name="MEN_IdMensajero" ColumnName="MEN_IdMensajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="paObtenerNumeroDeMotivosDevolucion_MEN" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerNumeroDeMotivosDevolucion_MEN" />
+    <FunctionImportMapping FunctionImportName="paObtenerGuiasPlanilladasPorDia_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paObtenerGuiasPlanilladasPorDia_OPU">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ModeloOperacionUrbanaNS.paObtenerGuiasPlanilladasPorDia_OPU_Result">
+          <ScalarProperty Name="PAG_NUMEROGUIA" ColumnName="PAG_NUMEROGUIA" />
+          <ScalarProperty Name="PAG_CREADOPOR" ColumnName="PAG_CREADOPOR" />
+          <ScalarProperty Name="PAG_IDPLANILLAASIGNACIONENVIO" ColumnName="PAG_IDPLANILLAASIGNACIONENVIO" />
+          <ScalarProperty Name="PAG_Peso" ColumnName="PAG_Peso" />
+          <ScalarProperty Name="PAG_DireccionDestinatario" ColumnName="PAG_DireccionDestinatario" />
+          <ScalarProperty Name="PAG_NOMBRETIPOENVIO" ColumnName="PAG_NOMBRETIPOENVIO" />
+          <ScalarProperty Name="PAG_EstaVerificada" ColumnName="PAG_EstaVerificada" />
+          <ScalarProperty Name="ADM_DiceContener" ColumnName="ADM_DiceContener" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="paConsultarGuiaSobrante_OPU" FunctionName="ModeloOperacionUrbanaNS.Store.paConsultarGuiaSobrante_OPU" />
+  </EntityContainerMapping>
+</Mapping>

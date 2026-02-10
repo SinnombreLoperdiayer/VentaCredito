@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DESARROLLOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DESARROLLOModelStoreContainer">
+    <EntitySet Name="AdmisionGiros_GIR" EntityType="DESARROLLOModel.Store.AdmisionGiros_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IntentosTransmisionGiro_GIR" EntityType="DESARROLLOModel.Store.IntentosTransmisionGiro_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParametrosGiros_GIR" EntityType="DESARROLLOModel.Store.ParametrosGiros_GIR" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlanillaTransmisionGiros_VGIR" EntityType="DESARROLLOModel.Store.PlanillaTransmisionGiros_VGIR" store:Type="Views" store:Schema="dbo" store:Name="PlanillaTransmisionGiros_VGIR">
+      <DefiningQuery>SELECT 
+      [PlanillaTransmisionGiros_VGIR].[ITG_NoPlanillaTransmision] AS [ITG_NoPlanillaTransmision], 
+      [PlanillaTransmisionGiros_VGIR].[FechaPlanilla] AS [FechaPlanilla], 
+      [PlanillaTransmisionGiros_VGIR].[ADG_IdCentroServicioDestino] AS [ADG_IdCentroServicioDestino], 
+      [PlanillaTransmisionGiros_VGIR].[ADG_NombreCentroServicioDestino] AS [ADG_NombreCentroServicioDestino], 
+      [PlanillaTransmisionGiros_VGIR].[ADG_IdCiudadDestino] AS [ADG_IdCiudadDestino], 
+      [PlanillaTransmisionGiros_VGIR].[ADG_DescCiudadDestino] AS [ADG_DescCiudadDestino], 
+      [PlanillaTransmisionGiros_VGIR].[ITG_IdTipoPlanillaIntentosTrasnmision] AS [ITG_IdTipoPlanillaIntentosTrasnmision], 
+      [PlanillaTransmisionGiros_VGIR].[TPI_Descripcion] AS [TPI_Descripcion]
+      FROM [dbo].[PlanillaTransmisionGiros_VGIR] AS [PlanillaTransmisionGiros_VGIR]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR" Association="DESARROLLOModel.Store.FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR">
+      <End Role="AdmisionGiros_GIR" EntitySet="AdmisionGiros_GIR" />
+      <End Role="IntentosTransmisionGiro_GIR" EntitySet="IntentosTransmisionGiro_GIR" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AdmisionGiros_GIR">
+    <Key>
+      <PropertyRef Name="ADG_IdAdmisionGiro" />
+    </Key>
+    <Property Name="ADG_IdAdmisionGiro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ADG_PrefijoIdGiro" Type="varchar" MaxLength="8" />
+    <Property Name="ADG_IdGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_DigitoVerificacion" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_GuidDeChequeo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ADG_AdmisionAutomatica" Type="bit" Nullable="false" />
+    <Property Name="ADG_IdTipoGiro" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="ADG_IdCentroServicioOrigen" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdPaisOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescPaisOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadOrigen" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadOrigen" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_CodigoPostalOrigen" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdPaisDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescPaisDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_CodigoPostalDestino" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="ADG_ValorGiro" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_TarifaPorcPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_TarifaFijaPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorPorte" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorAdicionales" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorImpuestos" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_ValorTotal" Type="decimal" Nullable="false" Precision="16" Scale="4" />
+    <Property Name="ADG_DeclaracionVoluntariaOrigenes" Type="bigint" />
+    <Property Name="ADG_Observaciones" Type="varchar" MaxLength="200" />
+    <Property Name="ADG_IdTipoIdentificacionRemitente" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADG_IdRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_NombreRemitente" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="ADG_IdTipoIdentificacionDestinatario" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ADG_IdDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_NombreDestinatario" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="ADG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ADG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ADG_Transmitido" Type="bit" Nullable="false" />
+    <Property Name="ADG_NotificarPagoPorEmail" Type="bit" />
+    <Property Name="ADG_EstaPagado" Type="bit" Nullable="false" />
+    <Property Name="ADG_TelefonoRemitente" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_TelefonoDestinatario" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="ADG_DireccionRemitente" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_DireccionDestinatario" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_EmailRemitente" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADG_EmailDestinatario" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADG_TieneTelemercadeo" Type="bit" Nullable="false" />
+    <Property Name="ADG_IdEstadosGiro" Type="bigint" Nullable="false" />
+    <Property Name="ADG_EsProduccion" Type="bit" Nullable="false" />
+    <Property Name="ADG_ObservacionesSolicitudes" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="IntentosTransmisionGiro_GIR">
+    <Key>
+      <PropertyRef Name="ITG_IdIntentoTransGiro" />
+    </Key>
+    <Property Name="ITG_IdIntentoTransGiro" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ITG_IdAdmisionGiro" Type="bigint" Nullable="false" />
+    <Property Name="ITG_NoPlanillaTransmision" Type="bigint" Nullable="false" />
+    <Property Name="ITG_Resultado" Type="char" Nullable="false" MaxLength="3" />
+    <Property Name="ITG_Observaciones" Type="varchar" MaxLength="100" />
+    <Property Name="ITG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="ITG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ITG_NombreContactoTransmision" Type="varchar" MaxLength="150" />
+    <Property Name="ITG_IdentificacionContactoTransmision" Type="varchar" MaxLength="25" />
+    <Property Name="ITG_IdCentroServiciosTransmision" Type="bigint" Nullable="false" />
+    <Property Name="ITG_IdTipoPlanillaIntentosTrasnmision" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParametrosGiros_GIR">
+    <Key>
+      <PropertyRef Name="PAG_IdParametro" />
+    </Key>
+    <Property Name="PAG_IdParametro" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="PAG_ValorParametro" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PAG_Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="PAG_FechaGrabacion" Type="datetime" Nullable="false" />
+    <Property Name="PAG_CreadoPor" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ICONTROLLERX15.dbo.PlanillaTransmisionGiros_VGIR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PlanillaTransmisionGiros_VGIR">
+    <Key>
+      <PropertyRef Name="ITG_NoPlanillaTransmision" />
+      <PropertyRef Name="ADG_IdCentroServicioDestino" />
+      <PropertyRef Name="ADG_NombreCentroServicioDestino" />
+      <PropertyRef Name="ADG_IdCiudadDestino" />
+      <PropertyRef Name="ADG_DescCiudadDestino" />
+      <PropertyRef Name="ITG_IdTipoPlanillaIntentosTrasnmision" />
+      <PropertyRef Name="TPI_Descripcion" />
+    </Key>
+    <Property Name="ITG_NoPlanillaTransmision" Type="bigint" Nullable="false" />
+    <Property Name="FechaPlanilla" Type="date" />
+    <Property Name="ADG_IdCentroServicioDestino" Type="bigint" Nullable="false" />
+    <Property Name="ADG_NombreCentroServicioDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ADG_IdCiudadDestino" Type="varchar" Nullable="false" MaxLength="8" />
+    <Property Name="ADG_DescCiudadDestino" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="ITG_IdTipoPlanillaIntentosTrasnmision" Type="smallint" Nullable="false" />
+    <Property Name="TPI_Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_IntentosTransmisionGiro_GIR_AdmisionGiros_GIR">
+    <End Role="AdmisionGiros_GIR" Type="DESARROLLOModel.Store.AdmisionGiros_GIR" Multiplicity="1" />
+    <End Role="IntentosTransmisionGiro_GIR" Type="DESARROLLOModel.Store.IntentosTransmisionGiro_GIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdmisionGiros_GIR">
+        <PropertyRef Name="ADG_IdAdmisionGiro" />
+      </Principal>
+      <Dependent Role="IntentosTransmisionGiro_GIR">
+        <PropertyRef Name="ITG_IdAdmisionGiro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="paActualizarGiroTransmiti_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paCrearIntentoTransmiGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="ITG_Resultado" Type="char" Mode="In" />
+    <Parameter Name="ITG_Observaciones" Type="varchar" Mode="In" />
+    <Parameter Name="ITG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="ITG_CreadoPor" Type="varchar" Mode="In" />
+    <Parameter Name="ITG_NombreContactoTransmision" Type="varchar" Mode="In" />
+    <Parameter Name="ITG_IdentificacionContactoTransmision" Type="varchar" Mode="In" />
+    <Parameter Name="ITG_NoPlanillaTransmision" Type="bigint" Mode="In" />
+    <Parameter Name="ITG_IdCentroServicioTransmision" Type="bigint" Mode="In" />
+    <Parameter Name="ITG_IdTipoPlanillaIntentosTrasnmision" Type="int" Mode="In" />
+  </Function>
+  <Function Name="paInsertarEstadoGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAdmisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="EstadoGiro" Type="char" Mode="In" />
+    <Parameter Name="FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paInsertarPagoGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PAG_IdAdmisionGiro" Type="bigint" Mode="In" />
+    <Parameter Name="PAG_IdComprobantePago" Type="bigint" Mode="In" />
+    <Parameter Name="PAG_PagoAutorizadoPeaton" Type="bit" Mode="In" />
+    <Parameter Name="PAG_PagoAutorizadoEmpresarial" Type="bit" Mode="In" />
+    <Parameter Name="PAG_PagoAutomatico" Type="bit" Mode="In" />
+    <Parameter Name="PAG_IdCentroServiciosPagador" Type="bigint" Mode="In" />
+    <Parameter Name="PAG_NombreCentroServicios" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_ValorPagado" Type="decimal" Mode="In" />
+    <Parameter Name="PAG_IdCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_TipoIdCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_NombreCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_Apellido1Cobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_Apellido2Cobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_TelefonoCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_DireccionCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_EmailCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_OcupacionCobrador" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_Observaciones" Type="varchar" Mode="In" />
+    <Parameter Name="PAG_FechaGrabacion" Type="datetime" Mode="In" />
+    <Parameter Name="PAG_CreadoPor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroAdicionales_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroIdGiro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroImpuestos_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroNoTransmitido_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="UltimoEstadoGiro" Type="char" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGiroNoTransmitidoAgencia_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGirosDescargaManu_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="UltimoEstadoGiro" Type="char" Mode="In" />
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerGirosFiltro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="IdCentroServicioOrigen" Type="bigint" Mode="In" />
+    <Parameter Name="IdCentroServicioDestino" Type="bigint" Mode="In" />
+    <Parameter Name="FechaInicial" Type="datetime" Mode="In" />
+    <Parameter Name="FechaFinal" Type="datetime" Mode="In" />
+    <Parameter Name="IdGiro" Type="bigint" Mode="In" />
+    <Parameter Name="TipoIdRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="IdentificacionRemitente" Type="varchar" Mode="In" />
+    <Parameter Name="TipoIdDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdentificacionDestinatario" Type="varchar" Mode="In" />
+    <Parameter Name="IdTipoGiro" Type="varchar" Mode="In" />
+    <Parameter Name="idRegional" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="paObtenerSolicitudesDevolucionApro_GIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroGiro" Type="bigint" Mode="In" />
+  </Function>
+</Schema>
