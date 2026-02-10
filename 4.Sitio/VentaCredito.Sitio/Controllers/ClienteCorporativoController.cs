@@ -1,7 +1,9 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Web.Http;
 using VentaCredito.Sitio.Dominio;
 using VentaCredito.Sitio.Seguridad;
 using VentaCredito.Transversal.Entidades;
+using VentaCredito.Transversal.Entidades.AdmisionPreenvio;
 using VentaCredito.Clientes.Comun;
 using VentaCredito.Negocio.VentaCredito;
 using VentaCredito.Negocio.Interface;
@@ -49,6 +51,16 @@ namespace VentaCredito.Sitio.Controllers
         public AdmisionEnvioResponse RegistrarVentaConGuiaRetorno([FromBody]AdmisionEnvioRequest admisionEnvio)
         {
             return ApiNegocio.Instancia.RegistrarEnvioAutomatico(admisionEnvio, true);
+        }
+
+
+        [HttpGet]
+        [AdministradorSeguridad]
+        [Route("ObtenerHorariosServiciosAgiles")]
+        [LogExceptionFilter]
+        public IEnumerable<ServicioAgilFranjaDC> ObtenerHorariosServiciosAgiles([FromUri]int? idServicio = null)
+        {
+            return Negocio.Parametros.Instancia.ObtenerHorariosServiciosAgiles(idServicio);
         }
 
         [HttpGet]

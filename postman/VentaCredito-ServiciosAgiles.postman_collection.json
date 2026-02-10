@@ -1,0 +1,206 @@
+{
+  "info": {
+    "name": "VentaCredito - Servicios Ágiles HU",
+    "description": "Colección de pruebas para HU de Servicios Ágiles en ApiVentaCredito. Incluye parametría (nombre/alias/franja), admisión feliz, regresión por contrato y restricción por tipo de entrega.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 - Parametría",
+      "item": [
+        {
+          "name": "GET Parametría completa servicios ágiles",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/ClienteCorporativo/ObtenerHorariosServiciosAgiles",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ClienteCorporativo", "ObtenerHorariosServiciosAgiles"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var json = pm.response.json();",
+                  "pm.test('Respuesta es arreglo', function () { pm.expect(Array.isArray(json)).to.be.true; });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET Parametría por idServicio (válido)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/ClienteCorporativo/ObtenerHorariosServiciosAgiles?idServicio={{idServicioAgilHabilitado}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ClienteCorporativo", "ObtenerHorariosServiciosAgiles"],
+              "query": [
+                { "key": "idServicio", "value": "{{idServicioAgilHabilitado}}" }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+                  "var json = pm.response.json();",
+                  "pm.test('Devuelve al menos un registro', function () { pm.expect(json.length).to.be.greaterThan(0); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "GET Parametría por idServicio (sin parametría)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/ClienteCorporativo/ObtenerHorariosServiciosAgiles?idServicio={{idServicioAgilSinParametria}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ClienteCorporativo", "ObtenerHorariosServiciosAgiles"],
+              "query": [
+                { "key": "idServicio", "value": "{{idServicioAgilSinParametria}}" }
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 409', function () { pm.response.to.have.status(409); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "02 - InsertarAdmision",
+      "item": [
+        {
+          "name": "POST InsertarAdmision - Happy path (contrato + servicio ágil habilitado)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"IdClienteCredito\": \"{{idClienteCredito}}\",\n  \"CodigoConvenioRemitente\": \"{{codigoConvenioRemitente}}\",\n  \"IdTipoEntrega\": \"{{idTipoEntregaDireccion}}\",\n  \"AplicaContrapago\": false,\n  \"IdServicio\": \"{{idServicioAgilHabilitado}}\",\n  \"Peso\": 1,\n  \"Largo\": 10,\n  \"Ancho\": 10,\n  \"Alto\": 10,\n  \"DiceContener\": \"prueba contenido\",\n  \"ValorDeclarado\": 200000,\n  \"IdTipoEnvio\": \"3\",\n  \"IdFormaPago\": \"2\",\n  \"NumeroPieza\": \"1\",\n  \"remitente\": null,\n  \"Destinatario\": {\n    \"tipoDocumento\": \"CC\",\n    \"numeroDocumento\": \"123456789\",\n    \"nombre\": \"prueba nombre\",\n    \"primerApellido\": \"prueba apellido\",\n    \"segundoApellido\": null,\n    \"telefono\": \"3003000000\",\n    \"direccion\": \"CL 95 # 13 - 15\",\n    \"complemento\": \"apto 404\",\n    \"barrio\": \"Chico Norte\",\n    \"idRemitente\": 0,\n    \"idDestinatario\": 0,\n    \"idLocalidad\": \"{{idLocalidadDestino}}\",\n    \"CodigoConvenio\": 0,\n    \"ConvenioDestinatario\": 0,\n    \"correo\": \"prueba@correo.com\"\n  },\n  \"DescripcionTipoEntrega\": \"\",\n  \"NombreTipoEnvio\": \"\",\n  \"CodigoConvenio\": \"0\",\n  \"IdSucursal\": \"0\",\n  \"IdCliente\": \"0\",\n  \"RapiRadicado\": {\n    \"numerodeFolios\": 0,\n    \"CodigoRapiRadicado\": 0\n  },\n  \"Observaciones\": \"Prueba\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/Admision/InsertarAdmision",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "Admision", "InsertarAdmision"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status exitoso (200/201)', function () { pm.expect([200,201]).to.include(pm.response.code); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST InsertarAdmision - Regresión (servicio ágil NO habilitado en contrato)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"IdClienteCredito\": \"{{idClienteCredito}}\",\n  \"CodigoConvenioRemitente\": \"{{codigoConvenioRemitente}}\",\n  \"IdTipoEntrega\": \"{{idTipoEntregaDireccion}}\",\n  \"AplicaContrapago\": false,\n  \"IdServicio\": \"{{idServicioAgilNoHabilitado}}\",\n  \"Peso\": 1,\n  \"Largo\": 10,\n  \"Ancho\": 10,\n  \"Alto\": 10,\n  \"DiceContener\": \"prueba contenido\",\n  \"ValorDeclarado\": 200000,\n  \"IdTipoEnvio\": \"3\",\n  \"IdFormaPago\": \"2\",\n  \"NumeroPieza\": \"1\",\n  \"remitente\": null,\n  \"Destinatario\": {\n    \"tipoDocumento\": \"CC\",\n    \"numeroDocumento\": \"123456789\",\n    \"nombre\": \"prueba nombre\",\n    \"primerApellido\": \"prueba apellido\",\n    \"segundoApellido\": null,\n    \"telefono\": \"3003000000\",\n    \"direccion\": \"CL 95 # 13 - 15\",\n    \"complemento\": \"apto 404\",\n    \"barrio\": \"Chico Norte\",\n    \"idRemitente\": 0,\n    \"idDestinatario\": 0,\n    \"idLocalidad\": \"{{idLocalidadDestino}}\",\n    \"CodigoConvenio\": 0,\n    \"ConvenioDestinatario\": 0,\n    \"correo\": \"prueba@correo.com\"\n  },\n  \"DescripcionTipoEntrega\": \"\",\n  \"NombreTipoEnvio\": \"\",\n  \"CodigoConvenio\": \"0\",\n  \"IdSucursal\": \"0\",\n  \"IdCliente\": \"0\",\n  \"RapiRadicado\": {\n    \"numerodeFolios\": 0,\n    \"CodigoRapiRadicado\": 0\n  },\n  \"Observaciones\": \"Prueba\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/Admision/InsertarAdmision",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "Admision", "InsertarAdmision"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status de rechazo esperado (>=400)', function () { pm.expect(pm.response.code).to.be.greaterThan(399); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "POST InsertarAdmision - Restricción tipo entrega para servicio ágil",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"IdClienteCredito\": \"{{idClienteCredito}}\",\n  \"CodigoConvenioRemitente\": \"{{codigoConvenioRemitente}}\",\n  \"IdTipoEntrega\": \"{{idTipoEntregaNoDireccion}}\",\n  \"AplicaContrapago\": false,\n  \"IdServicio\": \"{{idServicioAgilHabilitado}}\",\n  \"Peso\": 1,\n  \"Largo\": 10,\n  \"Ancho\": 10,\n  \"Alto\": 10,\n  \"DiceContener\": \"prueba contenido\",\n  \"ValorDeclarado\": 200000,\n  \"IdTipoEnvio\": \"3\",\n  \"IdFormaPago\": \"2\",\n  \"NumeroPieza\": \"1\",\n  \"remitente\": null,\n  \"Destinatario\": {\n    \"tipoDocumento\": \"CC\",\n    \"numeroDocumento\": \"123456789\",\n    \"nombre\": \"prueba nombre\",\n    \"primerApellido\": \"prueba apellido\",\n    \"segundoApellido\": null,\n    \"telefono\": \"3003000000\",\n    \"direccion\": \"CL 95 # 13 - 15\",\n    \"complemento\": \"apto 404\",\n    \"barrio\": \"Chico Norte\",\n    \"idRemitente\": 0,\n    \"idDestinatario\": 0,\n    \"idLocalidad\": \"{{idLocalidadDestino}}\",\n    \"CodigoConvenio\": 0,\n    \"ConvenioDestinatario\": 0,\n    \"correo\": \"prueba@correo.com\"\n  },\n  \"DescripcionTipoEntrega\": \"\",\n  \"NombreTipoEnvio\": \"\",\n  \"CodigoConvenio\": \"0\",\n  \"IdSucursal\": \"0\",\n  \"IdCliente\": \"0\",\n  \"RapiRadicado\": {\n    \"numerodeFolios\": 0,\n    \"CodigoRapiRadicado\": 0\n  },\n  \"Observaciones\": \"Prueba\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/Admision/InsertarAdmision",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "Admision", "InsertarAdmision"]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 412 esperado por restricción', function () { pm.expect([412,400,409]).to.include(pm.response.code); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "https://tu-host-api" },
+    { "key": "token", "value": "" },
+    { "key": "idClienteCredito", "value": "2617" },
+    { "key": "codigoConvenioRemitente", "value": "13440" },
+    { "key": "idLocalidadDestino", "value": "11001000" },
+    { "key": "idTipoEntregaDireccion", "value": "1" },
+    { "key": "idTipoEntregaNoDireccion", "value": "2" },
+    { "key": "idServicioAgilHabilitado", "value": "3" },
+    { "key": "idServicioAgilNoHabilitado", "value": "9999" },
+    { "key": "idServicioAgilSinParametria", "value": "9998" }
+  ]
+}

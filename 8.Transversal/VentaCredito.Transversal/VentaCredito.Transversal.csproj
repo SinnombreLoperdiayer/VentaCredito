@@ -140,6 +140,7 @@
     <Compile Include="Entidades\AdmisionPreenvio\ResponseImpresionPreguia.cs" />
     <Compile Include="Entidades\AdmisionPreenvio\ResponsePreAdmisionWrapper.cs" />
     <Compile Include="Entidades\AdmisionPreenvio\ResponseRecogidas.cs" />
+    <Compile Include="Entidades\AdmisionPreenvio\ServicioAgilFranjaDC.cs" />
     <Compile Include="Entidades\AdmisionPreenvio\RGRecogidasCL.cs" />
     <Compile Include="Entidades\AdmisionPreenvio\TAFormaPago.cs" />
     <Compile Include="Entidades\AdmisionPreenvio\TAFormaPagoServicio.cs" />

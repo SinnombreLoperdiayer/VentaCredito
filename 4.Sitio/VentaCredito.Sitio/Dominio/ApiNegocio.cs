@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using Newtonsoft.Json;
 using RestSharp;
 using Servicio.Entidades.Admisiones.Mensajeria;
@@ -34,6 +35,7 @@ namespace VentaCredito.Sitio.Dominio
 
         internal AdmisionEnvioResponse RegistrarEnvioAutomatico(AdmisionEnvioRequest admisionEnvio, bool imprimeGuia = false)
         {
+            VentaCredito.Negocio.Parametros.Instancia.ValidarRestriccionTipoEntregaServicioAgil(admisionEnvio.IdServicio, admisionEnvio.IdTipoEntrega.ToString());
 
             admisionEnvio.IdCliente = admisionEnvio.IdCliente; //Convert.ToInt32(Resources.IdClienteDirectTv);
             var guia = new ADGuia();
